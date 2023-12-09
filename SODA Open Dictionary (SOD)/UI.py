@@ -12,9 +12,13 @@ except:
     pass
 
 import eng_to_ipa
+import os
 import random
 import threading 
 import pyttsx3
+import subprocess
+import signal
+from notifypy import Notify
 from kivymd.app import MDApp
 from kivymd.uix.dialog import MDDialog
 from kivymd.uix.boxlayout import MDBoxLayout
@@ -40,7 +44,7 @@ engine = pyttsx3.init()
 Window.minimum_width, Window.minimum_height= 406, 374
 Window.softinput_mode='pan'
 translator = Translator()
-LabelBase.register(name="main", fn_regular=f"func/setting/fonts/{settings['fonts']}")
+LabelBase.register(name="main", fn_regular=f"func/setting/fonts/{settings['fonts']}.ttf")
 
 def set_new_config():
     with open("func/setting/setting.txt", "w", encoding="utf-8") as fo:
@@ -48,30 +52,32 @@ def set_new_config():
             fo.write(f"{i}: {settings[i]}\n")
 
 def config():
-    global boost_performance_require, bg, boxbg, menubg, btn, primarycolor, secondprimarycolor, colors, recent_search
+    global boost_performance_require, bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, noti_require
 
     if settings["boost performance"]=="True": boost_performance_require=True
     else: boost_performance_require=False
 
-    color=settings["current theme"].split("; ")
+    if settings["notification"]=="True": noti_require=True
+    else: noti_require=False
+
+    color=settings["current palette"].split("; ")
     bg=[int(i)/255 for i in color[0].split(", ")]+[1]
     boxbg=[int(i)/255 for i in color[1].split(", ")]+[1]
     menubg=[int(i)/255 for i in color[2].split(", ")]+[1]
     btn=[int(i)/255 for i in color[3].split(", ")]+[1]
     primarycolor=[int(i)/255 for i in color[4].split(", ")]+[1]
-    secondprimarycolor=[int(i)/255 for i in color[5].split(", ")]+[1]
-
-    with open("func/setting/theme.txt", encoding="utf-8") as theme:
-        if theme.readline().replace("\n","")=="Light":
-            with open("func/setting/light_colors.txt", "r", encoding="utf-8") as fi:
-                lines=fi.readlines()
-        else:
-            with open("func/setting/dark_colors.txt", "r", encoding="utf-8") as fi:
-                lines=fi.readlines()
+    secondarycolor=[int(i)/255 for i in color[5].split(", ")]+[1]
+    
+    if settings["theme"]=="Light":
+        with open("func/setting/light_colors.txt", "r", encoding="utf-8") as fi:
+            lines=fi.readlines()
+    else:
+        with open("func/setting/dark_colors.txt", "r", encoding="utf-8") as fi:
+            lines=fi.readlines()
 
     colors=[]
     for i in lines:
-        colors.append([k.split(", ") for k in i.split("; ")])
+        colors.append([k.split(", ") for k in i.strip().split("; ")])
 
     with open("func/setting/recent.txt", "r", encoding="utf-8") as f:
         lines = f.readlines()
@@ -80,6 +86,13 @@ def config():
     for line in lines:
         word, wordtype, definition, translation = line.strip().split(": ")
         recent_search.append({"word": word, "type": wordtype, "definition": definition, "translation": translation})
+
+    font_dir = "func/setting/fonts"
+    fonts_name=[]
+    for root, dirs, files in os.walk(font_dir):
+        for file in files:
+            if file.endswith(".ttf"):
+                fonts_name.append(file[:file.find(".ttf")])
 
 class MyScrollView(ScrollView):
     def __init__(self, **kwargs):
@@ -106,6 +119,13 @@ class SettingLayout(MDBoxLayout):
         self.personalize.bind(minimum_height=self.personalize.setter('height'))
         self.scrollview.add_widget(self.personalize)
 
+        self.noti_check_title=MDLabel(text="Gợi ý từ mới qua thông báo", font_style="H6", size_hint=(1, None), height=30, pos_hint={'center_x': 0.5, 'center_y': 0.5}, theme_text_color="Custom", text_color=primarycolor)
+        self.noti_check=MDSwitch(icon_inactive="close", icon_active="check", thumb_color_inactive=boxbg, thumb_color_active=boxbg, track_color_inactive=(155/255, 155/255, 155/255, 1), track_color_active=btn)
+        self.noti_check.active=noti_require
+        self.noti_check.bind(active=self.noti)
+        self.personalize.add_widget(self.noti_check_title)
+        self.personalize.add_widget(self.noti_check)
+
         self.internet_required_check_title=MDLabel(text="Chế độ Tối ưu hiệu suất", font_style="H6", size_hint=(1, None), height=30, pos_hint={'center_x': 0.5, 'center_y': 0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.internet_required_check=MDSwitch(icon_inactive="close", icon_active="check", thumb_color_inactive=boxbg, thumb_color_active=boxbg, track_color_inactive=(155/255, 155/255, 155/255, 1), track_color_active=btn)
         self.internet_required_check.active=boost_performance_require 
@@ -113,19 +133,31 @@ class SettingLayout(MDBoxLayout):
         self.personalize.add_widget(self.internet_required_check_title)
         self.personalize.add_widget(self.internet_required_check)
 
-        self.changecolor=MDLabel(text="Cá nhân hóa", font_style="H6", halign="left", size_hint=(1,None), height=30, pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
+        self.changecolor=MDLabel(text="Cá nhân hóa với bảng màu", font_style="H6", halign="left", size_hint=(1,None), height=30, pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.color_palette_list=MDBoxLayout(size_hint=(None, 1), pos_hint={"center_x": 0.5}, spacing=20, padding=[10,10,10,10])
         self.color_palette_list.bind(minimum_width=self.color_palette_list.setter('width'))
         self.color_palette_scroll=ScrollView(do_scroll_y=False, size_hint=(1, None), height=250)
+        self.color_palette_scroll.add_widget(self.color_palette_list)
+        self.change_fonts=MDLabel(text="Fonts", font_style="H6", halign="left", size_hint=(1,None), height=30, pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
+        self.font_list=MDBoxLayout(size_hint=(None, 1), pos_hint={"center_x": 0.5}, spacing=20, padding=[10,10,10,10])
+        self.font_list.bind(minimum_width=self.font_list.setter('width'))
+        self.font_scroll=ScrollView(do_scroll_y=False, size_hint=(1, None), height=50)
         if (Window.width == Window.minimum_width) and (Window.height == Window.minimum_height):
             self.color_palette_scroll.pos_hint={"center_x": 0.5}
+            self.font_scroll.pos_hint={"center_x": 0.5}
         else:
             self.color_palette_scroll.pos_hint={"x": 0}
-        self.color_palette_scroll.add_widget(self.color_palette_list)
+            self.font_scroll.pos_hint={"x": 0}
+        self.font_scroll.add_widget(self.font_list)
         self.personalize.add_widget(self.changecolor)
         self.personalize.add_widget(self.color_palette_scroll)
+        self.personalize.add_widget(self.change_fonts)
+        self.personalize.add_widget(self.font_scroll)
         for i in colors:
             self.color_palette_list.add_widget(self.create_palette(i))
+
+        for i in fonts_name:
+            self.font_list.add_widget(self.create_preview(i))
 
         '''self.notification=MDLabel(text="Bạn không thể thay đổi bất cứ cài đặt nào của ứng dụng trong phiên bản này. Vui lòng chờ phiên bản cập nhật tiếp theo.", font_style="H6", halign="center", size_hint=(0.75,1), pos_hint={"center_x": 0.5})
         self.add_widget(self.notification)'''
@@ -134,20 +166,45 @@ class SettingLayout(MDBoxLayout):
         self.add_widget(self.info)
 
         self.dialog = MDDialog(
-            title="Bảng màu sẽ được áp dụng khi bạn khởi động lại ứng dụng",
+            title="Cài đặt liên quan đến cá nhân hóa sẽ được áp dụng khi bạn khởi động lại ứng dụng",
             type="alert",
             buttons=[
                 MDFillRoundFlatButton(
                     text="Đóng",
                     md_bg_color=btn,
                     theme_text_color="Custom",
-                    text_color=secondprimarycolor
+                    text_color=secondarycolor
                 )
             ],
             md_bg_color=boxbg
         )
         self.dialog.buttons[0].bind(on_release=self.dialog.dismiss)
 
+    def noti(self, instance, value):
+        global noti_require
+        noti_require= not noti_require
+        settings["notification"]=str(noti_require)
+        if noti_require: 
+            status='bật'
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            file_path = os.path.join(current_dir, "func/noti.py")
+            self.process = subprocess.Popen(["python", file_path], start_new_session=True)
+            with open('func/pid.txt', 'w') as f:
+                f.write(str(self.process.pid))
+        else: 
+            status='tắt'
+            if os.path.exists('func/pid.txt'):
+                with open('func/pid.txt', 'r') as f:
+                    pid = int(f.read())
+                    os.kill(pid, signal.SIGTERM)
+                os.remove('func/pid.txt')
+        notification = Notify(default_notification_message="Chế độ này sẽ gợi ý từ mới qua thông báo mỗi ngày để giúp bạn học từ tốt hơn",
+                              default_notification_application_name="SODA Open Dictionary",
+                              default_notification_icon='func/Logo.png',
+                              default_notification_audio='func/setting/sound_effect/noti.wav')
+        notification.title = f"Gợi ý từ qua thông báo đã {status}"
+        notification.send()
+        
     def create_palette(self, i):
         self.color=MDCard(md_bg_color=(1,1,1,1), orientation="vertical", size_hint=(None, None), width=50, height=200, pos_hint={"center_x": 0.5}, padding=[10, 10, 10, 10], ripple_behavior=True)
         theme=[]
@@ -159,9 +216,21 @@ class SettingLayout(MDBoxLayout):
         self.color.bind(on_press=lambda instance: self.change_color_theme(instance, theme[0], theme[1], theme[2], theme[3], theme[4], theme[5]))
 
         return self.color
+    
 
-    def change_color_theme(self, instance, new_bg, new_boxbg, new_menubg, new_btn, new_primarycolor, new_secondprimarycolor):
-        settings["current theme"]="; ".join([", ".join([str(int(i*255)) for i in new_bg][:-1]),", ".join([str(int(i*255)) for i in new_boxbg][:-1]),", ".join([str(int(i*255)) for i in new_menubg][:-1]),", ".join([str(int(i*255)) for i in new_btn][:-1]), ", ".join([str(int(i*255)) for i in new_primarycolor][:-1]), ", ".join([str(int(i*255)) for i in new_secondprimarycolor][:-1])])
+    def change_color_theme(self, instance, new_bg, new_boxbg, new_menubg, new_btn, new_primarycolor, new_secondarycolor):
+        settings["current palette"]="; ".join([", ".join([str(int(i*255)) for i in new_bg][:-1]),", ".join([str(int(i*255)) for i in new_boxbg][:-1]),", ".join([str(int(i*255)) for i in new_menubg][:-1]),", ".join([str(int(i*255)) for i in new_btn][:-1]), ", ".join([str(int(i*255)) for i in new_primarycolor][:-1]), ", ".join([str(int(i*255)) for i in new_secondarycolor][:-1])])
+        set_new_config()
+        self.dialog.open()
+
+    def create_preview(self, i):
+        self.font=MDFillRoundFlatButton(text=i, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, font_name=f"func/setting/fonts/{i}.ttf", font_size=17)
+        self.font.bind(on_press=lambda instance: self.change_font(self, i))
+
+        return self.font
+    
+    def change_font(self, instance, i):
+        settings["fonts"]=i
         set_new_config()
         self.dialog.open()
 
@@ -192,7 +261,6 @@ class MyLayout(MDBoxLayout, TouchBehavior):
         self.text=""
 
         theme_font_styles.append('main')
-        theme_font_styles.append('main')
         self.theme_cls.font_styles["main"] = ["main", 16, False, 0.15]
 
         self.temp_box=MDBoxLayout(orientation="vertical",size_hint_y=None, padding=[10,10,10,10], spacing=20, pos_hint={"center_x": 0.5})
@@ -200,70 +268,21 @@ class MyLayout(MDBoxLayout, TouchBehavior):
         for i in recent_search:
             self.temp_box.add_widget(self.create_content_box(i))
 
-        self.label = MDLabel(text='SODA Open Dictionary',
-                             font_style="H6",
-                             halign='center',
-                             valign='top',
-                             size_hint=(0.9, 0.02),
-                             pos_hint={'center_x': 0.5, 'center_y': 0.5},
-                             height=30,
-                             theme_text_color="Custom",
-                             text_color=primarycolor)
+        self.label = MDLabel(text='SODA Open Dictionary', font_style="H6", halign='center', valign='top', size_hint=(0.9, 0.02), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=30, theme_text_color="Custom", text_color=primarycolor)
         
-        self.cautionlabel = MDLabel(text="(Kết quả có thể sai do bộ dữ liệu chưa qua kiểm tra sàng lọc)",
-                             font_style="Caption",
-                             halign='center',
-                             size_hint=(0.75, None),
-                             pos_hint={'center_x': 0.5, 'center_y': 0.5},
-                             height=30,
-                             theme_text_color="Custom",
-                             text_color=primarycolor)
+        self.cautionlabel = MDLabel(text="(Kết quả có thể sai do bộ dữ liệu chưa qua kiểm tra sàng lọc)", font_style="Caption", halign='center', size_hint=(0.75, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=30, theme_text_color="Custom", text_color=primarycolor)
 
-        self.resultlabel = MDLabel(text='',
-                             font_style="H6",
-                             halign='center',
-                             valign='middle',
-                             size_hint=(1, None),
-                             pos_hint={'center_x': 0.5, 'center_y': 0.5},
-                             height=30)
+        self.resultlabel = MDLabel(text='', font_style="H6", halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=30)
 
-        self.caplabel = MDLabel(text="Không nhập cả câu vì đây không phải là trình dịch như Google Translate",
-                             font_style="Caption",
-                             halign="center",
-                             size_hint=(0.75, None),
-                             pos_hint={'center_x': 0.5, 'center_y': 0.5},
-                             height=30,
-                             theme_text_color="Custom",
-                             text_color=primarycolor)
+        self.caplabel = MDLabel(text="Không nhập cả câu vì đây không phải là trình dịch như Google Translate", font_style="Caption", halign="center", size_hint=(0.75, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=30, theme_text_color="Custom", text_color=primarycolor)
         
-        self.text_input = MDTextField(hint_text="Nhập từ cần tìm",
-                                      line_color_normal=(115, 115, 115, 1),
-                                      line_color_focus=(0, 0, 0, 1),
-                                      hint_text_color=(115, 115, 115, 1),
-                                      hint_text_color_focus=(0, 0, 0, 1),
-                                      text_color_focus=(0, 0, 0, 1),
-                                      fill_color_normal=(1, 1, 1, 1),
-                                      mode="round",
-                                      size_hint=(0.75, None),
-                                      pos_hint={'center_x': 0.5},
-                                      height=30,
-                                      multiline=False)
+        self.text_input = MDTextField(hint_text="Nhập từ cần tìm", line_color_normal=(115, 115, 115, 1), line_color_focus=(0, 0, 0, 1), hint_text_color=(115, 115, 115, 1), hint_text_color_focus=(0, 0, 0, 1), text_color_focus=(0, 0, 0, 1), fill_color_normal=(1, 1, 1, 1), mode="round", size_hint=(0.75, None), pos_hint={'center_x': 0.5}, height=30, multiline=False)
         
-        self.button = MDIconButton(icon='magnify',
-                                    theme_icon_color="Custom",
-                                    icon_color=secondprimarycolor,
-                                    size_hint=(1, None),
-                                    pos_hint={"center_x":0.5})
-        self.homebutton = MDIconButton(icon='home',
-                                    theme_icon_color="Custom",
-                                    icon_color=secondprimarycolor,
-                                    size_hint=(1, None),
-                                    pos_hint={"x":0})
-        self.menubutton = MDIconButton(icon='menu',
-                                    theme_icon_color="Custom",
-                                    icon_color=secondprimarycolor,
-                                    size_hint=(1, None),
-                                    pos_hint={"x":1})
+        self.button = MDIconButton(icon='magnify', theme_icon_color="Custom", icon_color=secondarycolor, size_hint=(1, None), pos_hint={"center_x":0.5})
+        
+        self.homebutton = MDIconButton(icon='home', theme_icon_color="Custom", icon_color=secondarycolor, size_hint=(1, None), pos_hint={"x":0})
+        
+        self.menubutton = MDIconButton(icon='menu', theme_icon_color="Custom", icon_color=secondarycolor, size_hint=(1, None), pos_hint={"x":1})
         
         self.progress_box=MDBoxLayout(orientation='vertical', size_hint=(0.95,None), height=5, pos_hint={"center_x":0.5})
 
@@ -283,7 +302,7 @@ class MyLayout(MDBoxLayout, TouchBehavior):
         self.recent_label=MDLabel(text="Gần đây", font_style="H6", halign="center", size_hint=(1,None), height=25, pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.recent_scrollview = MyScrollView(size_hint=(1, 1), pos_hint={'center_x': 0.5, 'center_y': 0.5})
         self.action_box=MDBoxLayout(size_hint=(1, None), height=20, spacing=20, pos_hint={"center_x":0.5})
-        self.clear_action=MDFillRoundFlatButton(text="Clear", md_bg_color=btn, pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=secondprimarycolor)
+        self.clear_action=MDFillRoundFlatButton(text="Clear", md_bg_color=btn, pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=secondarycolor)
         self.recent_scrollview_box=MDBoxLayout(orientation='vertical', size_hint=(1, None), spacing=20)
         self.recent_scrollview_box.bind(minimum_height=self.recent_scrollview_box.setter('height'))
         self.recent.add_widget(self.recent_label)
@@ -307,7 +326,7 @@ class MyLayout(MDBoxLayout, TouchBehavior):
         for i in range(10):
             self.homebox.add_widget(self.create_content_box(random.choice(SOD_word_list())))
         self.scrollview.add_widget(self.homebox)
-        self.refreshbutton=MDFillRoundFlatButton(text="Làm mới",size_hint=(None, None), pos_hint={"center_x":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondprimarycolor)
+        self.refreshbutton=MDFillRoundFlatButton(text="Làm mới",size_hint=(None, None), pos_hint={"center_x":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
         self.refreshbutton.bind(on_press=lambda instance: self.refresh(instance, None))
         self.homebox.add_widget(self.refreshbutton)
         
@@ -366,13 +385,13 @@ class MyLayout(MDBoxLayout, TouchBehavior):
                     text="Xóa",
                     md_bg_color=btn,
                     theme_text_color="Custom",
-                    text_color=secondprimarycolor
+                    text_color=secondarycolor
                 ),
                 MDFillRoundFlatButton(
                     text="Đóng",
                     md_bg_color=btn,
                     theme_text_color="Custom",
-                    text_color=secondprimarycolor
+                    text_color=secondarycolor
                 )
             ],
             md_bg_color=boxbg
@@ -415,7 +434,7 @@ class MyLayout(MDBoxLayout, TouchBehavior):
                 self.result_label.text=text["definition"]
             self.result_label.bind(texture_size=self.result_label.setter('text_size'))
             self.result_label.bind(texture_size=self.result_label.setter('size'))
-            self.morebutton=MDFillRoundFlatButton(text="Xem thêm", size_hint=(None, None), pos_hint={"center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondprimarycolor)
+            self.morebutton=MDFillRoundFlatButton(text="Xem thêm", size_hint=(None, None), pos_hint={"center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
             self.tilte_and_description_box.add_widget(self.result_head_label)
             self.tilte_and_description_box.add_widget(self.result_label)
             self.content_box.add_widget(self.tilte_and_description_box)
@@ -486,20 +505,7 @@ class MyLayout(MDBoxLayout, TouchBehavior):
 
     def show_input(self, instance):
         self.box.clear_widgets()
-        self.text_input = MDTextField(icon_left="magnify",
-                                      icon_left_color_focus=btn,
-                                      hint_text="Nhập từ cần tìm",
-                                      line_color_normal=boxbg,
-                                      line_color_focus=btn,
-                                      hint_text_color=(115, 115, 115, 1),
-                                      hint_text_color_focus=(0, 0, 0, 1),
-                                      fill_color_normal=boxbg,
-                                      text_color_focus=primarycolor,
-                                      mode="round",
-                                      size_hint=(0.75, None),
-                                      pos_hint={'center_x': 0.5, 'center_y': 0.25},
-                                      height=30,
-                                      multiline=False)
+        self.text_input = MDTextField(icon_left="magnify", icon_left_color_focus=btn, hint_text="Nhập từ cần tìm", line_color_normal=boxbg, line_color_focus=btn, hint_text_color=(115, 115, 115, 1), hint_text_color_focus=(0, 0, 0, 1), fill_color_normal=boxbg, text_color_focus=primarycolor, mode="round", size_hint=(0.75, None), pos_hint={'center_x': 0.5, 'center_y': 0.25}, height=30, multiline=False)
         self.box.add_widget(self.text_input)
         self.text_input.text=self.text
         self.text_input.bind(focus=self.hide_input)
@@ -713,7 +719,7 @@ class SecondScreen(Screen):
 
 class MyApp(MDApp):
     def build(self):
-        self.icon="func/Logo.png"
+        self.icon="func/Logo.ico"
         self.title="SODA Open Dictionary"
         sm.add_widget(FirstScreen(name='first'))
         sm.add_widget(SecondScreen(name='second'))
