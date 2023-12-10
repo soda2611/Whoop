@@ -1,13 +1,21 @@
 import socket
 
 def get_config():
-    with open("func/setting/setting.txt", "r", encoding="utf-8") as fi:
-        setting=fi.readlines()
-    settings={}
-    for index in setting:
-        option, properties=index.strip().split(": ")
-        settings[option]=properties
-    
+    try:
+        with open("func/setting/setting.txt", "r", encoding="utf-8") as fi:
+            setting=fi.readlines()
+        settings={}
+        for index in setting:
+            option, properties=index.strip().split(": ")
+            settings[option]=properties
+    except:
+        with open("setting/setting.txt", "r", encoding="utf-8") as fi:
+            setting=fi.readlines()
+        settings={}
+        for index in setting:
+            option, properties=index.strip().split(": ")
+            settings[option]=properties
+        
     return settings
 
 def check_connection(host="8.8.8.8", port=53, timeout=3):
