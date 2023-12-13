@@ -189,8 +189,6 @@ class SettingLayout(MDBoxLayout):
             current_dir = os.path.dirname(os.path.abspath(__file__))
             file_path = os.path.join(current_dir, "func/noti.py")
             self.process = subprocess.Popen(["python", file_path], start_new_session=True)
-            with open('func/pid.txt', 'w') as f:
-                f.write(str(self.process.pid))
         else: 
             status='tắt'
             if os.path.exists('func/pid.txt'):
