@@ -211,7 +211,7 @@ class SettingLayout(MDBoxLayout):
                 os.remove(shortcut)
         notification = Notify(default_notification_message="Chế độ này sẽ gợi ý từ mới qua thông báo mỗi ngày để giúp bạn học từ tốt hơn",
                               default_notification_application_name="SODA Open Dictionary",
-                              default_notification_icon='func/Logo.png',
+                              default_notification_icon='func/Logo.ico',
                               default_notification_audio='func/setting/sound_effect/noti.wav')
         notification.title = f"Gợi ý từ qua thông báo đã {status}"
         notification.send()
