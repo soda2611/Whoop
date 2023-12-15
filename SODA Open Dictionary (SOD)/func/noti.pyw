@@ -2,6 +2,10 @@ from time import sleep
 from SOpenDict import SOD_word_list
 from notifypy import Notify
 import random
+import os
+
+with open('func/pid.txt', 'w', encoding="utf-8") as f:
+    f.write(str(os.getpid()))
 
 while True:
     sleep(10)
