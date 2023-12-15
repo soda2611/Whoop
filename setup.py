@@ -38,17 +38,6 @@ else:
             link.arguments = python_file
             link.icon_location = (icon_file, 0)
             link.working_directory = os.path.abspath(sod_dir)
-
-        shortcut_name = "SODA Open Dictionary"
-
-        shortcut = os.path.join(r'C:/Users/%s/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup' %getpass.getuser() , shortcut_name + ".lnk")
-
-        with winshell.shortcut(shortcut) as link:
-            link.path = os.path.abspath(f"{sod_dir}func/run.bat")
-            link.description = "Noti"
-            link.arguments = os.path.abspath(f"{sod_dir}func/run.bat")
-            link.icon_location = (icon_file, 0)
-            link.working_directory = os.path.abspath(sod_dir)
         
     except Exception as ex:
         print("Error occured")
