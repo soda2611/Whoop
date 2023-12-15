@@ -32,9 +32,6 @@ else:
 
         shortcut = os.path.join(desktop, shortcut_name + ".lnk")
 
-        with open("shortcut_path.txt", "w", encoding="utf-8") as fo:
-            fo.write(shortcut)
-
         with winshell.shortcut(shortcut) as link:
             link.path = python_file
             link.description = "An open dictionary for everyone"
