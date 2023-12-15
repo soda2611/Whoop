@@ -18,6 +18,8 @@ import threading
 import pyttsx3
 import subprocess
 import signal
+import winshell
+import getpass
 from notifypy import Notify
 from kivymd.app import MDApp
 from kivymd.uix.dialog import MDDialog
@@ -184,11 +186,21 @@ class SettingLayout(MDBoxLayout):
         global noti_require
         noti_require= not noti_require
         settings["notification"]=str(noti_require)
+        sod_dir = "SODA Open Dictionary (SOD)"
+        icon_file = os.path.abspath(f"{sod_dir}/func/Logo.ico")
+        shortcut_name = "SODA Open Dictionary"
+        shortcut = os.path.join(r'C:/Users/%s/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup' %getpass.getuser() , shortcut_name + ".lnk")
         if noti_require: 
             status='bật'
             current_dir = os.path.dirname(os.path.abspath(__file__))
-            file_path = os.path.join(current_dir, "func/noti.py")
-            self.process = subprocess.Popen(["python", file_path], start_new_session=True)
+            file_path = os.path.join(current_dir, "func/noti.pyw")
+            self.process = subprocess.Popen(["pythonw", file_path], start_new_session=True, shell=True)
+            with winshell.shortcut(shortcut) as link:
+                link.path = os.path.abspath("func/run.bat")
+                link.description = "run.bat"
+                link.arguments = os.path.abspath("func/run.bat")
+                link.icon_location = (icon_file, 0)
+                link.working_directory = current_dir+r"\func"
         else: 
             status='tắt'
             if os.path.exists('func/pid.txt'):
@@ -196,9 +208,10 @@ class SettingLayout(MDBoxLayout):
                     pid = int(f.read())
                     os.kill(pid, signal.SIGTERM)
                 os.remove('func/pid.txt')
+                os.remove(shortcut)
         notification = Notify(default_notification_message="Chế độ này sẽ gợi ý từ mới qua thông báo mỗi ngày để giúp bạn học từ tốt hơn",
                               default_notification_application_name="SODA Open Dictionary",
-                              default_notification_icon='func/Logo.ico',
+                              default_notification_icon='func/Logo.png',
                               default_notification_audio='func/setting/sound_effect/noti.wav')
         notification.title = f"Gợi ý từ qua thông báo đã {status}"
         notification.send()
