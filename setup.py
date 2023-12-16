@@ -5,6 +5,7 @@ try:
     import winshell
 except:
     os.system("pip install winshell")
+    os.system("pip install pywin32")
     os.system("setup.py")
 else:
     os.system("pip install https://github.com/KivyMD/kivymd/archive/master.zip kivy googletrans==4.0.0rc1 eng-to-ipa pyttsx3 notify-py")
