@@ -1,11 +1,10 @@
 import os
 import shutil
-import getpass
 try:
     import winshell
+    from git import Repo
 except:
-    os.system("pip install winshell")
-    os.system("pip install pywin32")
+    os.system("pip install pywin32 winshell gitpython")
     os.system("setup.py")
 else:
     os.system("pip install https://github.com/KivyMD/kivymd/archive/master.zip kivy googletrans==4.0.0rc1 eng-to-ipa pyttsx3 notify-py")
@@ -17,7 +16,7 @@ else:
 
         sod_dir = "SODA Open Dictionary (SOD)"
 
-        os.system(f"git clone {repo_url}")
+        Repo.clone_from(repo_url, repo_dir)
 
         shutil.move(os.path.join(repo_dir, sod_dir), sod_dir)
 
