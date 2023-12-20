@@ -13,6 +13,7 @@ except:
 
 import eng_to_ipa
 import os
+import time
 import random
 import threading 
 import pyttsx3
@@ -121,12 +122,22 @@ class SettingLayout(MDBoxLayout):
         self.personalize.bind(minimum_height=self.personalize.setter('height'))
         self.scrollview.add_widget(self.personalize)
 
+        self.noti_box=MDBoxLayout(size_hint=(1, None), height=50, pos_hint={'center_x': 0.5, 'center_y': 0.5}, spacing = 20)
+        self.noti_box.switch_box=MDBoxLayout(size_hint=(0.25, None), height=50, pos_hint={'center_x': 0.5, 'center_y': 0.5}, spacing = 20)
+        self.noti_box.time_value_box=MDBoxLayout(size_hint=(0.75, None), height=50, pos_hint={'left': 0.9, 'center_y': 0.8}, spacing = 20)
         self.noti_check_title=MDLabel(text="Gợi ý từ mới qua thông báo", font_style="H6", size_hint=(1, None), height=30, pos_hint={'center_x': 0.5, 'center_y': 0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.noti_check=MDSwitch(icon_inactive="close", icon_active="check", thumb_color_inactive=boxbg, thumb_color_active=boxbg, track_color_inactive=(155/255, 155/255, 155/255, 1), track_color_active=btn)
         self.noti_check.active=noti_require
         self.noti_check.bind(active=self.noti)
+        self.noti_time_title=MDLabel(text="Thời gian chờ thông báo", font_style="Body2", halign="right", size_hint=(0.5, None), pos_hint={"right": 0.7}, height=30, theme_text_color="Custom", text_color=primarycolor)        
+        self.noti_time=MDTextField(icon_left="clock", icon_left_color_focus=btn, text='1', line_color_normal=(115, 115, 115, 1), line_color_focus=(0, 0, 0, 1), hint_text_color=(115, 115, 115, 1), hint_text_color_focus=(0, 0, 0, 1), text_color_focus=(0, 0, 0, 1), fill_color_normal=(1, 1, 1, 1), mode="round", size_hint=(None, None), pos_hint={"right": 0.75}, width=100, height=30, multiline=False, disabled=not noti_require)
         self.personalize.add_widget(self.noti_check_title)
-        self.personalize.add_widget(self.noti_check)
+        self.personalize.add_widget(self.noti_box)
+        self.noti_box.add_widget(self.noti_box.switch_box)
+        self.noti_box.switch_box.add_widget(self.noti_check)
+        self.noti_box.add_widget(self.noti_box.time_value_box)
+        self.noti_box.time_value_box.add_widget(self.noti_time_title)
+        self.noti_box.time_value_box.add_widget(self.noti_time)
 
         self.internet_required_check_title=MDLabel(text="Chế độ Tối ưu hiệu suất", font_style="H6", size_hint=(1, None), height=30, pos_hint={'center_x': 0.5, 'center_y': 0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.internet_required_check=MDSwitch(icon_inactive="close", icon_active="check", thumb_color_inactive=boxbg, thumb_color_active=boxbg, track_color_inactive=(155/255, 155/255, 155/255, 1), track_color_active=btn)
@@ -182,6 +193,9 @@ class SettingLayout(MDBoxLayout):
         )
         self.dialog.buttons[0].bind(on_release=self.dialog.dismiss)
 
+    def set_noti_time(self, time, ):
+        pass
+
     def noti(self, instance, value):
         global noti_require
         noti_require= not noti_require
@@ -191,6 +205,11 @@ class SettingLayout(MDBoxLayout):
         shortcut_name = "SODA Open Dictionary"
         shortcut = os.path.join(r'C:/Users/%s/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup' %getpass.getuser() , shortcut_name + ".lnk")
         if noti_require: 
+            self.noti_time.disabled=False
+            settings["waiting time"]=self.noti_time.text
+            with open("func/setting/setting.txt", "w", encoding="utf-8") as fo:
+                for i in settings:
+                    fo.write(f"{i}: {settings[i]}\n")
             status='bật'
             current_dir = os.path.dirname(os.path.abspath(__file__))
             file_path = os.path.join(current_dir, "func/noti.pyw")
@@ -201,14 +220,18 @@ class SettingLayout(MDBoxLayout):
                 link.arguments = os.path.abspath("func/run.bat")
                 link.icon_location = (icon_file, 0)
                 link.working_directory = current_dir+r"\func"
-        else: 
+        else:
+            self.noti_time.disabled=True
             status='tắt'
             if os.path.exists('func/pid.txt'):
                 with open('func/pid.txt', 'r') as f:
                     pid = int(f.read())
                     os.kill(pid, signal.SIGTERM)
-                os.remove('func/pid.txt')
-                os.remove(shortcut)
+                try:
+                    os.remove('func/pid.txt')
+                except:
+                    pass
+            os.remove(shortcut)
         notification = Notify(default_notification_message="Chế độ này sẽ gợi ý từ mới qua thông báo mỗi ngày để giúp bạn học từ tốt hơn",
                               default_notification_application_name="SODA Open Dictionary",
                               default_notification_icon='func/Logo.ico',
@@ -227,7 +250,6 @@ class SettingLayout(MDBoxLayout):
         self.color.bind(on_press=lambda instance: self.change_color_theme(instance, theme[0], theme[1], theme[2], theme[3], theme[4], theme[5]))
 
         return self.color
-    
 
     def change_color_theme(self, instance, new_bg, new_boxbg, new_menubg, new_btn, new_primarycolor, new_secondarycolor):
         settings["current palette"]="; ".join([", ".join([str(int(i*255)) for i in new_bg][:-1]),", ".join([str(int(i*255)) for i in new_boxbg][:-1]),", ".join([str(int(i*255)) for i in new_menubg][:-1]),", ".join([str(int(i*255)) for i in new_btn][:-1]), ", ".join([str(int(i*255)) for i in new_primarycolor][:-1]), ", ".join([str(int(i*255)) for i in new_secondarycolor][:-1])])
@@ -270,6 +292,7 @@ class MyLayout(MDBoxLayout, TouchBehavior):
 
         self.md_bg_color=bg
         self.text=""
+        self.search_thread = None
 
         theme_font_styles.append('main')
         self.theme_cls.font_styles["main"] = ["main", 16, False, 0.15]
@@ -506,7 +529,7 @@ class MyLayout(MDBoxLayout, TouchBehavior):
         )
         self.menu.open()
 
-    def home(self,instance):
+    def home(self, instance):
         self.progress_bar.back_color=bg
         self.progress_bar.color=self.progress_bar.back_color
         self.noname.md_bg_color=bg
@@ -520,6 +543,7 @@ class MyLayout(MDBoxLayout, TouchBehavior):
         self.box.add_widget(self.text_input)
         self.text_input.text=self.text
         self.text_input.bind(focus=self.hide_input)
+        self.text_input.bind(text=self.quick_search)
         self.text_input.bind(on_text_validate=lambda instance: self.search_button_pressed(instance, self.text_input.text))
         
     def hide_input(self, instance, value):
@@ -534,8 +558,14 @@ class MyLayout(MDBoxLayout, TouchBehavior):
             self.menubutton.bind(on_press=self.menu_open)
             self.box.add_widget(self.taskbar)
 
-    def quick_search(self, instance):
-        self.search_button_pressed(instance, self.text_input.text)
+    def quick_search(self, instance, value):
+        if self.search_thread:
+            self.search_thread.cancel()
+        if self.text_input.text!="":
+            self.search_thread = threading.Timer(0.5, self.search_button_pressed, args=(instance, self.text_input.text))
+            self.search_thread.start()
+        else:
+            self.home(instance)
 
     def update_resultlabel(self, *args):
         self.result_box.remove_widget(self.resultlabel)
