@@ -110,6 +110,8 @@ class SettingLayout(MDBoxLayout):
         self.spacing = 20
         self.md_bg_color=bg
         Window.bind(on_resize=self.on_window_resize)
+
+        self.search_thread=None
         
         self.back_button=MDIconButton(icon="arrow-left", size_hint=(None, None), pos_hint={"left": 0})
         self.add_widget(self.back_button)
@@ -130,7 +132,8 @@ class SettingLayout(MDBoxLayout):
         self.noti_check.active=noti_require
         self.noti_check.bind(active=self.noti)
         self.noti_time_title=MDLabel(text="Thời gian chờ thông báo", font_style="Body2", halign="right", size_hint=(0.5, None), pos_hint={"right": 0.7}, height=30, theme_text_color="Custom", text_color=primarycolor)        
-        self.noti_time=MDTextField(icon_left="clock", icon_left_color_focus=btn, text='1', line_color_normal=(115, 115, 115, 1), line_color_focus=(0, 0, 0, 1), hint_text_color=(115, 115, 115, 1), hint_text_color_focus=(0, 0, 0, 1), text_color_focus=(0, 0, 0, 1), fill_color_normal=(1, 1, 1, 1), mode="round", size_hint=(None, None), pos_hint={"right": 0.75}, width=100, height=30, multiline=False, disabled=not noti_require)
+        self.noti_time=MDTextField(icon_left="clock", icon_left_color_focus=btn, text=settings["waiting time"], line_color_normal=(115, 115, 115, 1), line_color_focus=(0, 0, 0, 1), hint_text_color=(115, 115, 115, 1), hint_text_color_focus=(0, 0, 0, 1), text_color_focus=(0, 0, 0, 1), fill_color_normal=(1, 1, 1, 1), mode="round", size_hint=(None, None), pos_hint={"right": 0.75}, width=100, height=30, multiline=False, disabled=not noti_require)
+        self.noti_time.bind(text=self.set_noti_time)
         self.personalize.add_widget(self.noti_check_title)
         self.personalize.add_widget(self.noti_box)
         self.noti_box.add_widget(self.noti_box.switch_box)
@@ -193,8 +196,28 @@ class SettingLayout(MDBoxLayout):
         )
         self.dialog.buttons[0].bind(on_release=self.dialog.dismiss)
 
-    def set_noti_time(self, time, ):
-        pass
+    def run_noti(self, instance):
+        if os.path.exists('func/pid.txt'):
+            with open('func/pid.txt', 'r') as f:
+                pid = int(f.read())
+                os.kill(pid, signal.SIGTERM)
+            try:
+                os.remove('func/pid.txt')
+            except:
+                pass
+        settings["waiting time"]=self.noti_time.text
+        with open("func/setting/setting.txt", "w", encoding="utf-8") as fo:
+            for i in settings:
+                fo.write(f"{i}: {settings[i]}\n")
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        file_path = os.path.join(current_dir, "func/noti.pyw")
+        self.process = subprocess.Popen(["pythonw", file_path], start_new_session=True, shell=True)
+
+    def set_noti_time(self, instance, time):
+        if self.search_thread:
+            self.search_thread.cancel()
+        self.search_thread = threading.Timer(0.5, self.run_noti, args=(instance,))
+        self.search_thread.start()
 
     def noti(self, instance, value):
         global noti_require
