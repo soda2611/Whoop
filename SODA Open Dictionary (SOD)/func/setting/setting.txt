@@ -4,3 +4,4 @@ notification: False
 theme: Light
 current palette: 247, 251, 252; 214, 230, 242; 185, 215, 234; 118, 159, 205; 0, 0, 0; 255, 255, 255
 fonts: segoeuib
+waiting time: 1
