@@ -1,15 +1,16 @@
 # -*- mode: python ; coding: utf-8 -*-
 
 from kivymd import hooks_path as kivymd_hooks_path
+import getpass
 
 a = Analysis(
     ['Ui.py'],
     pathex=[],
     binaries=[],
     datas=[
-        ('C:\\Users\\a3601\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\eng_to_ipa\\resources\\phones.json', 'eng_to_ipa\\resources'),
-        ('C:\\Users\\a3601\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\eng_to_ipa\\resources\\CMU_dict.db', 'eng_to_ipa\\resources'),
-        ('C:\\Users\\a3601\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\eng_to_ipa\\resources\\CMU_dict.json', 'eng_to_ipa\\resources')
+        (f'C:\\Users\\{getpass.getuser()}\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\eng_to_ipa\\resources\\phones.json', 'eng_to_ipa\\resources'),
+        (f'C:\\Users\\{getpass.getuser()}\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\eng_to_ipa\\resources\\CMU_dict.db', 'eng_to_ipa\\resources'),
+        (f'C:\\Users\\{getpass.getuser()}\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\eng_to_ipa\\resources\\CMU_dict.json', 'eng_to_ipa\\resources')
     ],
     hiddenimports=['kivymd.icon_definitions.md_icons'],
     hookspath=[kivymd_hooks_path],
