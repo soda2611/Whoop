@@ -32,7 +32,6 @@ def data():
         with open("func/data/tu_dien_nguon.txt", "r", encoding="utf-8") as f:
             lines = f.readlines()
 
-    tu_dien = []
     for line in lines:
         word, wordtype, definition, translation, synonyms, level = line.strip().split(" % ")
         temp={"word": word, "type": wordtype, "definition": definition, "translation": translation, "level": level}
@@ -40,9 +39,7 @@ def data():
             temp["synonyms"]=synonyms.split(", ")
         else:
             temp["synonyms"]=synonyms
-        tu_dien.append(temp)
-    
-    return tu_dien
+        yield temp
 
 def SOD(inp, internet_required=True, boost_performance=False, tu_dien=data(), word=word_data()):
     if not boost_performance and internet_required and check_connection():
@@ -51,18 +48,27 @@ def SOD(inp, internet_required=True, boost_performance=False, tu_dien=data(), wo
                 inp=spelling_checker_for_SOD(" ".join(inp.split()), word=word)
             else:
                 inp=translator.translate(text=inp).text.lower()
-            for words in tu_dien:
-                if (words["word"]==inp) or (words["definition"]==inp):
-                    return words
         except:
             return "Không tìm thấy từ"
     else:
         if internet_required:
             inp=spelling_checker_for_SOD(" ".join(inp.split()), word=word)
-        for words in tu_dien:
-            if (words["word"]==inp):
-                return words
-    return "Không tìm thấy từ"
+    
+    def generate_matches():
+        try:
+            for words in tu_dien:
+                if (words["word"]==inp) or (words["definition"]==inp):
+                    yield words
+        except:
+            pass
+
+    matches = generate_matches()
+
+    try:
+        return next(matches)
+    except StopIteration:
+        return "Không tìm thấy từ"
+
     
 def rewrite(filepath):
     try:
