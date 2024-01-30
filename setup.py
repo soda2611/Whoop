@@ -9,7 +9,7 @@ except:
     os.system("pip install pywin32 winshell requests")
     os.system("setup.py")
 else:
-    os.system("pip install https://github.com/KivyMD/kivymd/archive/master.zip kivy googletrans==4.0.0rc1 eng-to-ipa pyttsx3 notify-py")
+    os.system("pip install kivy googletrans==4.0.0rc1 eng-to-ipa pyttsx3 notify-py")
 
     try:
         repo_url = "https://github.com/soda2611/SODA_Open_Dictionary/archive/refs/heads/main.zip"
