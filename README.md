@@ -7,7 +7,8 @@
 ## Cài đặt
 
 Để cài đặt dự án này, hãy tải xuống file setup.py, sau đó chạy file để tiến hành thiết lập cho nhà phát triển. 
-##Lưu ý:
+
+## Lưu ý:
 Hãy đảm bảo bạn đã cài đặt Python 3.10 trở lên trên thiết bị và tốt nhất hãy sử dụng các phiên bản của Python 3.11.
 Không sử dụng phiên bản Python 3.12 cho việc phát triển vì có thể gây xung đột trực tiếp đến file UI.py của dự án. Nếu có thể điều chỉnh, sửa đổi file UI.py thì toàn bộ dự án có thể hoạt động bình thường trên mọi phiên bản Python từ 3.9.0 trở lên
 
