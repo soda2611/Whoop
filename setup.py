@@ -16,7 +16,7 @@ else:
 
         repo_dir = "SODA_Open_Dictionary-main"
 
-        sod_dir = "SODA Open Dictionary"
+        sod_dir = "SODA Open Dictionary (SOD)"
 
         response = requests.get(repo_url)
 
