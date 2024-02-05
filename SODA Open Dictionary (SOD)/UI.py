@@ -25,21 +25,21 @@ import signal
 import winshell
 import getpass
 from notifypy import Notify
-from func.sub_module_backup.kivymd.app import MDApp
-from func.sub_module_backup.kivymd.uix.dialog import MDDialog
-from func.sub_module_backup.kivymd.uix.boxlayout import MDBoxLayout
+from kivymd.app import MDApp
+from kivymd.uix.dialog import MDDialog
+from kivymd.uix.boxlayout import MDBoxLayout
 from kivy.uix.scrollview import ScrollView
-from func.sub_module_backup.kivymd.uix.textfield import MDTextField
-from func.sub_module_backup.kivymd.uix.button import MDIconButton, MDFillRoundFlatButton, MDFillRoundFlatIconButton
+from kivymd.uix.textfield import MDTextField
+from kivymd.uix.button import MDIconButton, MDFillRoundFlatButton, MDFillRoundFlatIconButton
 from kivy.core.text import LabelBase
-from func.sub_module_backup.kivymd.font_definitions import theme_font_styles
-from func.sub_module_backup.kivymd.uix.label import MDLabel
+from kivymd.font_definitions import theme_font_styles
+from kivymd.uix.label import MDLabel
 from kivy.uix.screenmanager import ScreenManager, Screen
-from func.sub_module_backup.kivymd.uix.behaviors import TouchBehavior
-from func.sub_module_backup.kivymd.uix.menu import MDDropdownMenu
-from func.sub_module_backup.kivymd.uix.card import MDCard
-from func.sub_module_backup.kivymd.uix.selectioncontrol import MDSwitch
-from func.sub_module_backup.kivymd.uix.progressbar import MDProgressBar
+from kivymd.uix.behaviors import TouchBehavior
+from uix.menu import MDDropdownMenu
+from kivymd.uix.card import MDCard
+from kivymd.uix.selectioncontrol import MDSwitch
+from kivymd.uix.progressbar import MDProgressBar
 from kivy.clock import Clock
 from kivy.core.window import Window
 from func.SOD import SOD,grammar_structure_detector,SOD_word_list,word_detector, SOD_word_list, word_data
