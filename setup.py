@@ -2,18 +2,18 @@ import os
 import zipfile
 import io
 import shutil
+import sys
+print(f"Python {sys.version_info.major}.{sys.version_info.minor}")
 
 try:
     import requests
     import winshell
 except:
-    os.system("pip install pywin32 winshell requests")
-    os.system("setup.py")
+    os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} -m pip install pywin32 winshell requests")
+    os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} setup.py")
 else:
-
     try:
-        os.system("pip install kivymd==1.2.0 kivy googletrans==4.0.0rc1 eng-to-ipa pyttsx3 notify-py")
-        os.system("python.exe -m pip install --upgrade pip")
+        os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} -m pip install kivymd==1.2.0 kivy googletrans==4.0.0rc1 eng-to-ipa pyttsx3 notify-py --upgrade pip")
 
         repo_url = "https://github.com/soda2611/SODA_Open_Dictionary/archive/refs/heads/main.zip"
 
