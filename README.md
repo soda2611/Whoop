@@ -8,7 +8,7 @@
 
 Để cài đặt dự án này, hãy tải xuống file setup.py, sau đó chạy file để tiến hành thiết lập cho nhà phát triển. 
 
-##Yêu cầu hệ thống:
+## Yêu cầu hệ thống:
 - Phiên bản Python: 3.9.0 trở lên (khuyến nghị 3.11)
 - Phiên bản hệ điều hành:
   + Windows: Windows 7 trở lên (khuyến nghị Windows 10)
