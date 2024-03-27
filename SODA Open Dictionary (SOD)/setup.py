@@ -9,7 +9,7 @@ try:
     import requests
     import winshell
 except:
-    os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} -m pip install pywin32 winshell requests")
+    os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} -m pip install pywin32 winshell requests pyinstaller")
     os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} setup.py")
 else:
     try:
