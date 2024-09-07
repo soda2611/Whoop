@@ -15,11 +15,11 @@ else:
     try:
         os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} -m pip install kivymd==1.2.0 kivy googletrans==4.0.0rc1 eng-to-ipa pyttsx3 notify-py psutil --upgrade pip")
 
-        repo_url = "https://github.com/soda2611/SODA_Open_Dictionary/archive/refs/heads/main.zip"
+        repo_url = "https://github.com/soda2611/Whoop/archive/refs/heads/main.zip"
 
-        repo_dir = "SODA_Open_Dictionary-main"
+        repo_dir = "Whoop-main"
 
-        sod_dir = "SODA Open Dictionary (SOD)"
+        sod_dir = "Whoop"
 
         response = requests.get(repo_url)
 
@@ -37,7 +37,7 @@ else:
 
         desktop = winshell.desktop()
 
-        shortcut_name = "SODA Open Dictionary"
+        shortcut_name = "Whoop"
 
         shortcut = os.path.join(desktop, shortcut_name + ".lnk")
 
@@ -50,4 +50,3 @@ else:
         
     except Exception as ex:
         print(ex)
-
