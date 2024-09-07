@@ -15,7 +15,7 @@ else:
     try:
         os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} -m pip install kivymd==1.2.0 kivy googletrans==4.0.0rc1 eng-to-ipa pyttsx3 notify-py psutil --upgrade pip")
 
-        repo_url = "https://github.com/soda2611/SODA_Open_Dictionary/archive/refs/heads/main.zip"
+        repo_url = "https://github.com/soda2611/Whoop/archive/refs/heads/main.zip"
 
         repo_dir = "SODA_Open_Dictionary-main"
 
