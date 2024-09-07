@@ -1,0 +1,9 @@
+size: 822 648
+boost performance: True
+theme: Light
+current palette: 238, 241, 255; 210, 218, 255; 170, 196, 255; 177, 178, 255; 0, 0, 0; 0, 0, 0
+fonts: segoeuib
+version: 1.0.0dev
+banner: func/setting/img/Logo.png
+icon: func/setting/img/Icon.png
+title: Whoop
