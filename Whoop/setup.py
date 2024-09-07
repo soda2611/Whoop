@@ -33,7 +33,7 @@ else:
 
         python_file = os.path.abspath(f"{sod_dir}/UI.py")
 
-        icon_file = os.path.abspath(f"{sod_dir}/func/Logo.ico")
+        icon_file = os.path.abspath(f"{sod_dir}/func/setting/img/Logo.ico")
 
         desktop = winshell.desktop()
 
