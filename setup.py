@@ -17,9 +17,9 @@ else:
 
         repo_url = "https://github.com/soda2611/Whoop/archive/refs/heads/main.zip"
 
-        repo_dir = "SODA_Open_Dictionary-main"
+        repo_dir = "Whoop-main"
 
-        sod_dir = "SODA Open Dictionary (SOD)"
+        sod_dir = "Whoop"
 
         response = requests.get(repo_url)
 
@@ -37,7 +37,7 @@ else:
 
         desktop = winshell.desktop()
 
-        shortcut_name = "SODA Open Dictionary"
+        shortcut_name = "Whoop"
 
         shortcut = os.path.join(desktop, shortcut_name + ".lnk")
 
