@@ -26,7 +26,7 @@ class home(MDBoxLayout, TouchBehavior):
 
         self.label = Image(source=settings["banner"], size_hint=(0.9, None), pos_hint={'center_x': 0.5}, height=50*scale)
         
-        self.cautionlabel = MDLabel(text="(Kết quả có thể sai do bộ dữ liệu chưa qua kiểm tra sàng lọc)", font_style="Caption", halign='center', size_hint=(0.75, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=30*scale, theme_text_color="Custom", text_color=primarycolor)
+        self.cautionlabel = MDLabel(text="Kết quả có thể sai do bộ dữ liệu chưa qua kiểm tra sàng lọc", font_style="Caption", halign='center', size_hint=(0.75, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=30*scale, theme_text_color="Custom", text_color=primarycolor)
 
         self.resultlabel = MDLabel(text='', font_style="H6", halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=30)
 
