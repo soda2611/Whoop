@@ -99,7 +99,6 @@ class home(MDBoxLayout, TouchBehavior):
 
         self.text_input.bind(focus=self.hide_input)
         self.text_input.bind(text=self.quick_search)
-        self.text_input.bind(on_text_validate=lambda instance: self.search_button_pressed(instance, self.text_input.text))
         self.hide_input(1,False)
         self.add_widget(self.caplabel)
 
