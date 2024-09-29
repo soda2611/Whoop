@@ -190,6 +190,14 @@ class home(MDBoxLayout, TouchBehavior):
             pass
 
         return self.content_box
+
+    def add_data(self):
+        self.menu.dismiss()
+        self.progress_bar.back_color=bg
+        self.progress_bar.color=self.progress_bar.back_color
+        self.noname.md_bg_color=bg
+        self.scrollview.clear_widgets()
+        self.scrollview.add_widget(add_data())
      
     def refresh(self, instance, dict_):
         self.scrollview.scroll_to(home__[0])
@@ -214,6 +222,14 @@ class home(MDBoxLayout, TouchBehavior):
                 "theme_trailing_icon_color": "Custom",
                 "trailing_icon_color": primarycolor,
                 "on_release": lambda x="Setting": self.go_to_page_2(x)
+            },
+            {
+                "text": "Thêm từ vựng",
+                "text_color": primarycolor,
+                "trailing_icon": "plus-circle",
+                "theme_trailing_icon_color": "Custom",
+                "trailing_icon_color": primarycolor,
+                "on_release": self.add_data
             }
         ]
         if Window.width<900:
