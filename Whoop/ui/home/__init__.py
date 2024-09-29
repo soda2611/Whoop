@@ -234,7 +234,7 @@ class home(MDBoxLayout, TouchBehavior):
             }
         ]
         if Window.width<900:
-            menu_items.insert(0,{"text": "Gần đây",
+            menu_items.insert(2,{"text": "Gần đây",
                                 "text_color": primarycolor,
                                 "trailing_icon": "history",
                                 "theme_trailing_icon_color": "Custom",
