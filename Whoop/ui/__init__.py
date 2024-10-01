@@ -1,5 +1,8 @@
-from func.necessary_function import get_config, get_scaling_factor, calculate_next_notification_time
+from func.necessary_function import get_config, get_scaling_factor, calculate_next_notification_timefrom, check_connection
+from func.data_manager import *
 from kivy.config import Config
+
+if check_connection(): download_file("Whoop/func/data/tu_dien_nguon.txt", "func/data/tu_dien_nguon.txt")
 
 settings=get_config()
 
