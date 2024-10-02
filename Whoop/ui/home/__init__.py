@@ -1,7 +1,7 @@
 import ui
 from ui import *
 from ui.home.widget.result_template import result_template
-from ui.home.wdiget.add_data import add_data
+from ui.home.widget.add_data import add_data
 from ui.home.widget.recent import recent
 
 class home(MDBoxLayout, TouchBehavior):
