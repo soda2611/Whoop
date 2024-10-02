@@ -1,7 +1,7 @@
 import requests, base64, os
 
 # Thay thế bằng token và URL repo của bạn
-token = "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"
+token = "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"
 
 repo_url = "https://api.github.com/repos/soda2611/Whoop"
 
