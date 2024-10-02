@@ -1,4 +1,4 @@
-from func.necessary_function import get_config, get_scaling_factor, calculate_next_notification_timefrom, check_connection
+from func.necessary_function import get_config, get_scaling_factor, check_connection
 from func.data_manager import *
 from kivy.config import Config
 
