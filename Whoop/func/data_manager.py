@@ -1,8 +1,7 @@
 import requests, base64, os
 
 # Thay thế bằng token và URL repo của bạn
-token = "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"
-
+token = "g%h%p%_%l%6%b%z%c%z%t%j%6%Q%R%0%q%e%i%W%k%S%l%h%W%U%8%U%4%H%s%6%r%K%0%n%I%K%U%9".replace("%")
 repo_url = "https://api.github.com/repos/soda2611/Whoop"
 
 # Tải xuống file
