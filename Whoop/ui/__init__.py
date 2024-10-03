@@ -91,9 +91,9 @@ def config():
             if file.endswith(".ttf"):
                 fonts_name.append(file[:file.find(".ttf")])
     
-    return bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, engine, word__, source, home__, queried, version, translator, data_
+    return bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, engine, word__, source, home__, queried, version, data_
 
-bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, engine, word__, source, home__, queried, version, translator, data_=config()
+bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, engine, word__, source, home__, queried, version, data_=config()
 firstscreen=None
 secondscreen=None
 scale=get_scaling_factor()
