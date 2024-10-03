@@ -34,7 +34,7 @@ from kivymd.uix.selectioncontrol import MDSwitch
 from kivymd.uix.progressbar import MDProgressBar
 from kivy.clock import Clock
 from kivy.core.window import Window
-from func.SOD import SOD,grammar_structure_detector,SOD_word_list,word_detector, SOD_word_list, word_data
+from func.SOD import SOD, grammar_structure_detector, SOD_word_list,word_detector, SOD_word_list, word_data
 from googletrans import Translator
 
 def set_new_config():
