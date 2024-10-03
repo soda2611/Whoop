@@ -32,3 +32,28 @@ class result_template(MDBoxLayout):
         self.pronunciation_template.add_widget(self.pronunciation_button)
         self.add_widget(self.pronunciation_template)
         self.add_widget(self.definition)
+
+class translate_result_template(MDBoxLayout):
+    def __init__(self, **kwargs):
+        super(translate_result_template, self).__init__(**kwargs)
+        self.orientation='vertical'
+        self.size_hint_y=None
+        self.spacing=20
+        self.padding=[10,10,10,10]
+        self.bind(minimum_height=self.setter('height'))
+        self.src_text=MDLabel(text="", font_style="H6", halign="center", valign='middle', size_hint=(1, None), theme_text_color="Custom", text_color=primarycolor)
+        self.src=MDLabel(text="Anh", font_style="Body2", halign="center", size_hint=(1, None), theme_text_color="Custom", text_color=primarycolor)
+        self.dest=MDLabel(text="Việt", font_style="Body2", halign="center", size_hint=(1, None), theme_text_color="Custom", text_color=primarycolor)
+        self.dest_text=MDLabel(text="", font_style="H6", halign="center", valign='middle', size_hint=(1, None), theme_text_color="Custom", text_color=primarycolor)
+        self.src_text.bind(texture_size=self.src_text.setter('text_size'))
+        self.src_text.bind(texture_size=self.src_text.setter('size'))
+        self.dest.bind(texture_size=self.dest.setter('text_size'))
+        self.dest.bind(texture_size=self.dest.setter('size'))
+        self.dest_text.bind(texture_size=self.dest_text.setter('text_size'))
+        self.dest_text.bind(texture_size=self.dest_text.setter('size'))
+        self.src.bind(texture_size=self.src.setter('text_size'))
+        self.src.bind(texture_size=self.src.setter('size'))      
+        self.add_widget(self.src)
+        self.add_widget(self.src_text)
+        self.add_widget(self.dest)
+        self.add_widget(self.dest_text)
