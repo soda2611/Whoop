@@ -75,25 +75,6 @@ class setting(MDBoxLayout):
         set_new_config()
         subprocess.Popen(["py", "UI.py"], start_new_session=True)
         os.kill(pid, signal.SIGTERM)
-    
-    def create_layout_preview(self, i):
-        self.temp_box=MDCard(md_bg_color=(1,1,1,1), size_hint=(None, None), width=100*scale, height=100*scale, padding=[10*scale, 10*scale, 10*scale, 10*scale], spacing=20*scale, ripple_behavior=True, on_press=lambda instance: self.change_homepage_layout(instance, "box"))
-        self.temp_box.radius=[i*scale for i in self.temp_box.radius]
-        if i=="box":
-            self.temp_box.orientation="vertical"
-        for j in range(2):
-            box=MDCard(width=75*scale, height=22.5*scale, pos_hint={'center_x': 0.5}, md_bg_color=boxbg)
-            box.radius=[i*scale for i in box.radius]
-            if i=="flashcard":
-                box.orientation="vertical"
-            self.temp_box.add_widget(box)
-        self.temp_box.bind(on_press=lambda instance: self.change_homepage_layout(instance, i))
-        
-        return self.temp_box
-
-    def change_homepage_layout(self, instance, style):
-        ui.settings["homepage style"]=style
-        self.dialog.open()
         
     def create_palette(self, i):
         self.color=MDCard(md_bg_color=(1,1,1,1), orientation="vertical", size_hint=(None, None), width=50*scale, height=200*scale, pos_hint={"center_x": 0.5}, padding=[10*scale, 10*scale, 10*scale, 10*scale], ripple_behavior=True)
