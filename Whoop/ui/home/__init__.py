@@ -308,13 +308,6 @@ class home(MDBoxLayout, TouchBehavior):
 
     def translate(self, instance):
         if check_connection():
-            self.scrollview.clear_widgets()
-            self.scrollview.add_widget(self.translate_result_template)
-            self.translate_result_template.src_text.text=self.text_input.input.text
-            self.translate_result_template.dest_text.text=translator.translate(self.text_input.input.text, src='en', dest='vi').text
-
-    def translate(self, instance):
-        if check_connection():
             try:
                 self.translate_result_template.src_text.text=self.text_input.input.text
                 self.translate_result_template.dest_text.text=translator.translate(self.text_input.input.text, src='en', dest='vi').text
@@ -327,6 +320,15 @@ class home(MDBoxLayout, TouchBehavior):
             		self.alert.open()
         else:
          	self.no_internet_alert.open()
+
+    def search_button_pressed(self, instance, input_text):
+        try:
+            self.dialog.dismiss()
+        except:
+            pass
+        threading.Thread(target=self.search, args=(instance, input_text)).start()
+        self.progress_bar.color=btn
+        self.progress_bar.start()
 
     def search(self, instance, input_text):
         global result, dict_
