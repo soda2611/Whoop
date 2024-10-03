@@ -1,6 +1,5 @@
 import socket
 import ctypes
-from datetime import datetime, timedelta
 
 def get_scaling_factor():
     scaleFactor = ctypes.windll.shcore.GetScaleFactorForDevice(0) / 100
@@ -23,18 +22,6 @@ def check_connection(host="8.8.8.8", port=53, timeout=3):
         return True
     except:
         return False
-
-def calculate_next_notification_time(saved_time, n):
-    saved_time_obj = datetime.strptime(saved_time, '%H:%M:%S')
-    
-    current_time_obj = datetime.now()
-    
-    while saved_time_obj <= current_time_obj:
-        saved_time_obj += timedelta(seconds=n*3600)
-    
-    next_notification_time_str = saved_time_obj.strftime('%H:%M:%S')
-    
-    return next_notification_time_str
 
 def data():
     try:
@@ -87,4 +74,4 @@ def spelling_checker_for_SOD(you, word=data()):
     return " ".join(result)
 
 if __name__=="__main__":
-    print(calculate_next_notification_time("10:30:00", 1))
+    pass
