@@ -27,6 +27,5 @@ class MyApp(MDApp):
 
 if __name__ == '__main__':
     open("func/main_pid.txt", "w", encoding="utf-8").write(str(os.getpid()))
-    subprocess.Popen("func/crash_handle.exe", start_new_session=True)
     MyApp().run()
     set_new_config()
