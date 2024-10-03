@@ -1,6 +1,6 @@
 import ui
 from ui import *
-from ui.home.widget.result_template import result_template
+from ui.home.widget.result_template import *
 from ui.home.widget.add_data import add_data
 from ui.home.widget.recent import recent
 
@@ -33,8 +33,12 @@ class home(MDBoxLayout, TouchBehavior):
 
         self.caplabel = MDLabel(text="Không nhập cả câu vì đây không phải là trình dịch như Google Translate", font_style="Caption", halign="center", size_hint=(0.75, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=30*scale, theme_text_color="Custom", text_color=primarycolor)
         
-        self.text_input=MDTextField(icon_left="magnify", icon_left_color_focus=btn, hint_text="Nhập từ cần tìm", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(0.75, None), pos_hint={'center_x': 0.5}, height=30*scale, multiline=False)        
-        
+        self.text_input=MDRelativeLayout(size_hint=(0.75, None), height=30*scale)
+        self.text_input.input=MDTextField(icon_left="magnify", icon_left_color_focus=btn, hint_text="Nhập từ cần tìm", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_x': 0.5}, height=30*scale, multiline=False)        
+        self.text_input.button=MDIconButton(icon='translate', theme_icon_color="Custom", icon_color=btn, size_hint=(None, None), pos_hint={"right": 1, "center_y":0.6}, on_press=self.translate)
+        self.text_input.add_widget(self.text_input.input)
+        self.text_input.add_widget(self.text_input.button)
+
         self.button = MDIconButton(icon='magnify', theme_icon_color="Custom", icon_color=secondarycolor, size_hint=(1, None), pos_hint={"center_x":0.5})
         
         self.homebutton = MDIconButton(icon='home', theme_icon_color="Custom", icon_color=secondarycolor, size_hint=(1, None), pos_hint={"x":0})
@@ -98,12 +102,13 @@ class home(MDBoxLayout, TouchBehavior):
         self.taskbar.add_widget(self.menubutton)
         self.box.add_widget(self.taskbar)
 
-        self.text_input.bind(focus=self.hide_input)
-        self.text_input.bind(text=self.quick_search)
+        self.text_input.input.bind(focus=self.hide_input)
+        self.text_input.input.bind(text=self.quick_search)
         self.hide_input(1,False)
         self.add_widget(self.caplabel)
 
         self.result_template=result_template()
+        self.translate_result_template=translate_result_template()
 
         self.synonyms_box=MDBoxLayout(size_hint_x=None, spacing=20*scale, padding=[10*scale,10*scale,10*scale,10*scale], pos_hint={'center_y': 0.5})
         self.synonyms=ScrollView(do_scroll_y=False, size_hint=(1,None), height=50*scale)
@@ -258,7 +263,7 @@ class home(MDBoxLayout, TouchBehavior):
 
     def show_input(self, instance):
         self.box.clear_widgets()
-        if self.text_input.text.split()!=[]: 
+        if self.text_input.input.text.split()!=[]: 
             self.scrollview.scroll_y=1
             self.progress_bar.back_color=(boxbg)
             self.noname.md_bg_color=boxbg
@@ -268,7 +273,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.box.add_widget(self.text_input)
         
     def hide_input(self, instance, value):
-        if ((len(self.text_input.text)==0) and (not value)) or self.signal:
+        if ((len(self.text_input.input.text)==0) and (not value)) or self.signal:
             self.box.clear_widgets()
             self.box.add_widget(self.taskbar)
         self.signal=False
@@ -276,12 +281,19 @@ class home(MDBoxLayout, TouchBehavior):
     def quick_search(self, instance, value):
         if self.search_thread:
             self.search_thread.cancel()
-        if self.text_input.text!="":
-            self.search_thread = threading.Timer(0.5, self.search_button_pressed, args=(instance, self.text_input.text))
+        if self.text_input.input.text!="":
+            self.search_thread = threading.Timer(0.5, self.search_button_pressed, args=(instance, self.text_input.input.text))
             self.search_thread.start()
         else:
             self.home(instance)
-        self.text=self.text_input.text
+        self.text=self.text_input.input.text
+
+    def translate(self, instance):
+        if check_connection():
+            self.scrollview.clear_widgets()
+            self.scrollview.add_widget(self.translate_result_template)
+            self.translate_result_template.src_text.text=self.text_input.input.text
+            self.translate_result_template.dest_text.text=translator.translate(self.text_input.input.text, src='en', dest='vi').text
 
     def search_button_pressed(self, instance, input_text):
         try:
@@ -351,8 +363,8 @@ class home(MDBoxLayout, TouchBehavior):
             self.resultlabel.text = "".join(result)
             self.result_box.add_widget(self.resultlabel)
         if result!="Không tìm thấy từ":
-            if grammar_structure_detector(self.text_input.text,"func/data/grammar.txt"):
-                self.structure=MDLabel(text="Cấu trúc ngữ pháp đã nhận dạng:\n"+"\n".join(grammar_structure_detector(self.text_input.text,"func/data/grammar.txt")), font_style="H6", halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, theme_text_color="Custom", text_color=primarycolor)
+            if grammar_structure_detector(self.text_input.input.text,"func/data/grammar.txt"):
+                self.structure=MDLabel(text="Cấu trúc ngữ pháp đã nhận dạng:\n"+"\n".join(grammar_structure_detector(self.text_input.input.text,"func/data/grammar.txt")), font_style="H6", halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, theme_text_color="Custom", text_color=primarycolor)
                 self.structure.bind(texture_size=self.resultlabel.setter('size'))
                 self.structure_box.add_widget(self.structure)
 
@@ -379,7 +391,7 @@ class home(MDBoxLayout, TouchBehavior):
         sm.current = 'second'
 
     def on_double_tap(self, instance, *args):
-        self.text=self.text_input.text
+        self.text=self.text_input.input.text
         self.signal=True
         self.hide_input(instance, False)
 
