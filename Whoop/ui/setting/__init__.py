@@ -117,7 +117,7 @@ class setting(MDBoxLayout):
         self.got_font_check.icon=''
         self.got_font_check=instance
         instance.icon='check-circle'
-        instance.icon_color=primarycolor
+        instance.icon_color=secondarycolor
         self.font_scroll.scroll_to(self.got_font_check)
         ui.settings["fonts"]=i
         self.dialog.open()
