@@ -27,6 +27,8 @@ else:
 
         zip_file.extractall()
 
+        os.system(f"rmdir /S /Q {sod_dir}")
+
         shutil.move(os.path.join(repo_dir, sod_dir), sod_dir)
 
         os.system(f"rmdir /S /Q {repo_dir}")
