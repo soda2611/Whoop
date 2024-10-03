@@ -20,6 +20,24 @@ class home(MDBoxLayout, TouchBehavior):
         theme_font_styles.append('main')
         self.theme_cls.font_styles["main"] = ["main", 16, False, 0.15]
 
+        self.alert=MDDialog(
+            title="Lỗi trong khi dịch",
+            type="alert",
+            md_bg_color=boxbg
+        )
+        
+        self.empty_alert=MDDialog(
+            title="Không có đầu vào để dịch",
+            type="alert",
+            md_bg_color=boxbg
+        )
+        
+        self.no_internet_alert=self.alert=MDDialog(
+            title="Không có kết nối internet",
+            type="alert",
+            md_bg_color=boxbg
+        )
+
         self.temp_box=MDBoxLayout(orientation="vertical",size_hint_y=None, padding=[10*scale, 10*scale, 10*scale, 10*scale], spacing=20, pos_hint={"center_x": 0.5})
         self.temp_box.bind(minimum_height=self.temp_box.setter('height'))
         for i in recent_search:
@@ -295,14 +313,20 @@ class home(MDBoxLayout, TouchBehavior):
             self.translate_result_template.src_text.text=self.text_input.input.text
             self.translate_result_template.dest_text.text=translator.translate(self.text_input.input.text, src='en', dest='vi').text
 
-    def search_button_pressed(self, instance, input_text):
-        try:
-            self.dialog.dismiss()
-        except:
-            pass
-        threading.Thread(target=self.search, args=(instance, input_text)).start()
-        self.progress_bar.color=btn
-        self.progress_bar.start()
+    def translate(self, instance):
+        if check_connection():
+            try:
+                self.translate_result_template.src_text.text=self.text_input.input.text
+                self.translate_result_template.dest_text.text=translator.translate(self.text_input.input.text, src='en', dest='vi').text
+                self.scrollview.clear_widgets()
+                self.scrollview.add_widget(self.translate_result_template)
+            except:
+            	if len(self.text_input.input.text.replace(" ",""))==0:
+            		self.empty_alert.open()
+            	else:
+            		self.alert.open()
+        else:
+         	self.no_internet_alert.open()
 
     def search(self, instance, input_text):
         global result, dict_
