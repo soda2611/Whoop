@@ -15,10 +15,10 @@ except:
     pass
 
 import eng_to_ipa, os, random, threading , pyttsx3, subprocess, signal, winshell, getpass, sys, psutil
-from datetime import datetime
 from kivymd.app import MDApp
 from kivymd.uix.dialog import MDDialog
 from kivymd.uix.boxlayout import MDBoxLayout
+from kivymd.uix.relativelayout import MDRelativeLayout
 from kivy.uix.scrollview import ScrollView
 from kivymd.uix.textfield import MDTextField
 from kivymd.uix.button import MDIconButton, MDFillRoundFlatButton, MDFillRoundFlatIconButton
@@ -34,7 +34,7 @@ from kivymd.uix.selectioncontrol import MDSwitch
 from kivymd.uix.progressbar import MDProgressBar
 from kivy.clock import Clock
 from kivy.core.window import Window
-from func.SOD import SOD, grammar_structure_detector, SOD_word_list,word_detector, SOD_word_list, word_data
+from func.SOD import *
 from googletrans import Translator
 
 def set_new_config():
@@ -55,7 +55,6 @@ def config():
 
     Window.minimum_width, Window.minimum_height= 406, 374
     Window.softinput_mode='pan'
-    translator = Translator()
     LabelBase.register(name="main", fn_regular=f"func/setting/fonts/{settings['fonts']}.ttf")
 
     if settings["boost performance"]=="True": settings["boost performance"]=True
