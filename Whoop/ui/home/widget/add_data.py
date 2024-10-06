@@ -68,7 +68,6 @@ class add_data(MDBoxLayout):
         self.add__.dismiss()
         
     def remove(self, instance):
-        print(instance)
         list_.remove(instance.text)
         self.add_synonyms.synonyms_list.remove_widget(instance)
         
