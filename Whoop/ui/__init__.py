@@ -98,3 +98,4 @@ firstscreen=None
 secondscreen=None
 scale=get_scaling_factor()
 sm = ScreenManager()
+admin_code="nah bro"
