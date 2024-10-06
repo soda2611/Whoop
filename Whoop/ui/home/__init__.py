@@ -174,7 +174,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.dialog.open()
 
     def clear_history(self, instance):
-        ui.recent_search=[]
+        recent_search=[]
         self.temp_box.clear_widgets()
         self.recent.recent_scrollview_box.clear_widgets()
         with open("func/data/recent.txt", "w", encoding="utf-8"):
@@ -368,7 +368,7 @@ class home(MDBoxLayout, TouchBehavior):
                 if result["word"] not in recent_search:
                     self.temp_box.add_widget(self.create_content_box(result), index=0)
                     self.recent.recent_scrollview_box.add_widget(self.create_content_box(result), index=0)
-                    ui.recent_search=[result["word"]]+recent_search
+                    recent_search=[result["word"]]+recent_search
             
                 self.synonyms_box.clear_widgets()
                 head=MDLabel(text="Từ đồng nghĩa", halign="center", font_style="main", size_hint=(1,None), height=25*scale, pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
@@ -384,7 +384,7 @@ class home(MDBoxLayout, TouchBehavior):
                     if i["word"] not in recent_search:
                         self.recent.recent_scrollview_box.add_widget(self.create_content_box(i), index=0)
                         self.temp_box.add_widget(self.create_content_box(i), index=0)
-                        ui.recent_search=[i["word"]]+recent_search
+                        recent_search=[i["word"]]+recent_search
                 self.result_box.add_widget(self.structure_box)
         else:
             self.resultlabel.text = "".join(result)
