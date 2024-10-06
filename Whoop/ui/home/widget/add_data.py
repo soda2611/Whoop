@@ -32,6 +32,7 @@ class add_data(MDBoxLayout):
                 )],
             md_bg_color=boxbg
         )
+        self.add__.content_cls.bind(on_text_validate=self.add_)
         self.add__.buttons[0].bind(on_release=self.add_)
         self.add__.buttons[1].bind(on_release=self.add__.dismiss)
         
