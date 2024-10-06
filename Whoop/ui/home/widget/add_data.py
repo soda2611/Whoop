@@ -41,7 +41,7 @@ class add_data(MDBoxLayout):
         self.cefr_level=MDTextField(hint_text="CEFR level", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=30*scale, multiline=False)
         self.definition=MDTextField(hint_text="Definition", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=30*scale, multiline=False)
         self.add_synonyms=add_synonyms()
-        self.add=MDFillRoundFlatIconButton(text="Add synonym", icon="plus-circle", theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, on_press=self.add__.open)
+        self.add=MDFillRoundFlatIconButton(text="Add synonym", icon="plus-circle", theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", icon_color=secondarycolor,  text_color=secondarycolor, on_press=self.add__.open)
         self.add_synonyms.synonyms_list.add_widget(self.add)
         
         self.admin_code=MDTextField(hint_text="Administrator code", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=30*scale, multiline=False)
@@ -60,7 +60,7 @@ class add_data(MDBoxLayout):
         while "  " in self.container.text:
             self.container.text=self.container.text.replace("  "," ")
         self.container.text=self.container.text.strip()
-        if self.container.text not in list_:
+        if self.container.text not in list_ and self.container.text!="":
             list_.append(self.container.text)
             self.add_synonyms.synonyms_list.add_widget(self.create_chips(self.container.text, on_press=self.remove))
           
@@ -73,6 +73,7 @@ class add_data(MDBoxLayout):
         self.add_synonyms.synonyms_list.remove_widget(instance)
         
     def add_data(self, instance):
+    	global list_
     	if self.word.text and self.type.text and self.definition.text and self.cefr_level.text:
     	    if self.admin_code.text==admin_code:
                 with open("func/data/tu_dien_nguon.txt", "a", encoding="utf-8") as f:
@@ -83,6 +84,9 @@ class add_data(MDBoxLayout):
                     f.write(f"{self.word.text} % {self.type.text} % {self.definition.text}% none % {', '.join(list_)} % {self.cefr_level.text}\n")
     		
     	    self.word.text=self.type.text=self.definition.text=self.cefr_level.text=""
+    	    self.add_synonyms.synonyms_list.clear_widgets()
+    	    self.add_synonyms.synonyms_list.add_widget(self.add)
+    	    list_=[]
     	    
     def create_chips(self, text, on_press):
         return MDFillRoundFlatButton(text=text, theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, on_press=on_press)
