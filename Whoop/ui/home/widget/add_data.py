@@ -81,7 +81,7 @@ class add_data(MDBoxLayout):
                 upload_file("Whoop/func/data/tu_dien_nguon.txt", "func/data/tu_dien_nguon.txt")
     	    else:
                 with open("func/data/unverified.txt", "a", encoding="utf-8") as f:
-                    f.write(f"{self.word.text} % {self.type.text} % {self.definition.text}% none % {', '.join(list_)} % {self.cefr_level.text}\n")
+                    f.write(f"{self.word.text} % {self.type.text} % {self.definition.text} % none % {', '.join(list_)} % {self.cefr_level.text}\n")
     		
     	    self.word.text=self.type.text=self.definition.text=self.cefr_level.text=""
     	    self.add_synonyms.synonyms_list.clear_widgets()
