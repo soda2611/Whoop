@@ -1,7 +1,7 @@
 size: 822 648
 boost performance: True
 theme: Light
-current palette: 238, 241, 255; 210, 218, 255; 170, 196, 255; 177, 178, 255; 0, 0, 0; 0, 0, 0
+current palette: 255, 255, 255; 245, 245, 245; 230, 230, 230; 0, 0, 0; 0, 0, 0; 255, 255, 255
 fonts: segoeuib
 version: 1.0.0dev
 banner: func/setting/img/Logo.png
