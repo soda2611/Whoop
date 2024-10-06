@@ -73,21 +73,21 @@ class add_data(MDBoxLayout):
         self.add_synonyms.synonyms_list.remove_widget(instance)
         
     def add_data(self, instance):
-    	global list_
-    	if self.word.text and self.type.text and self.definition.text and self.cefr_level.text:
-    	    if self.admin_code.text==admin_code:
+        global list_
+        if self.word.text and self.type.text and self.definition.text and self.cefr_level.text:
+            if self.admin_code.text==admin_code:
                 with open("func/data/tu_dien_nguon.txt", "a", encoding="utf-8") as f:
                     f.write(f"{self.word.text} % {self.type.text} % {self.definition.text} % none % none % {self.cefr_level.text}\n")
                 upload_file("Whoop/func/data/tu_dien_nguon.txt", "func/data/tu_dien_nguon.txt")
-    	    else:
+            else:
                 with open("func/data/unverified.txt", "a", encoding="utf-8") as f:
                     f.write(f"{self.word.text} % {self.type.text} % {self.definition.text} % none % {', '.join(list_)} % {self.cefr_level.text}\n")
-    		
-    	    self.word.text=self.type.text=self.definition.text=self.cefr_level.text=""
-    	    self.add_synonyms.synonyms_list.clear_widgets()
-    	    self.add_synonyms.synonyms_list.add_widget(self.add)
-    	    list_=[]
-    	    
+            
+            self.word.text=self.type.text=self.definition.text=self.cefr_level.text=""
+            self.add_synonyms.synonyms_list.clear_widgets()
+            self.add_synonyms.synonyms_list.add_widget(self.add)
+            list_=[]
+            
     def create_chips(self, text, on_press):
         return MDFillRoundFlatButton(text=text, theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, on_press=on_press)
         
