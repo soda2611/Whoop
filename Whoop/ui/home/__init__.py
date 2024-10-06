@@ -174,6 +174,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.dialog.open()
 
     def clear_history(self, instance):
+        global recent_search
         recent_search=[]
         self.temp_box.clear_widgets()
         self.recent.recent_scrollview_box.clear_widgets()
@@ -341,7 +342,7 @@ class home(MDBoxLayout, TouchBehavior):
         Clock.schedule_once(self.update_UI)
 
     def update_UI(self, instance):
-        global result
+        global result, recent_search
         self.scrollview.scroll_y=1
         self.progress_bar.back_color=(boxbg)
         self.noname.md_bg_color=boxbg
