@@ -1,8 +1,9 @@
-import ui
 from ui import *
 from ui.home.widget.result_template import *
 from ui.home.widget.add_data import add_data
 from ui.home.widget.recent import recent
+
+recent_search=recent_search
 
 class home(MDBoxLayout, TouchBehavior):
     def __init__(self, **kwargs):
