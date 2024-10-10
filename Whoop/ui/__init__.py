@@ -37,6 +37,27 @@ from kivy.core.window import Window
 from func.SOD import *
 from googletrans import Translator
 
+class MDIconButton(MagicBehavior, MDIconButton):
+    def __init__(self, **kwargs):
+        super(MDIconButton, self).__init__(**kwargs)
+        
+    def on_release(self, *args):
+        self.grow()
+        
+class MDFillRoundFlatButton(MagicBehavior, MDFillRoundFlatButton):
+    def __init__(self, **kwargs):
+        super(MDFillRoundFlatButton, self).__init__(**kwargs)
+        
+    def on_release(self, *args):
+        self.grow()
+        
+class MDFillRoundFlatIconButton(MagicBehavior, MDFillRoundFlatIconButton):
+    def __init__(self, **kwargs):
+        super(MDFillRoundFlatIconButton, self).__init__(**kwargs)
+        
+    def on_release(self, *args):
+        self.grow()
+
 def set_new_config():
     with open("func/setting/setting.txt", "w", encoding="utf-8") as fo:
         for i in settings:
