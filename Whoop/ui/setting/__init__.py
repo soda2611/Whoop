@@ -10,6 +10,21 @@ class setting(MDBoxLayout):
         self.padding = [10, 10, 10, 10]
         self.spacing=20*scale
         self.md_bg_color=bg
+        
+        self.overlay=MDCard(size_hint=(1, 1), md_bg_color=bg)
+        self.overlay.bind(on_touch=self.touch_ignore)
+        self.overlay.add_widget(MDLabel(text="Đang cập nhật...", font_style="H6", halign="center", valign="middle", pos_hint={"center_x": 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=primarycolor))
+
+        self.success=MDDialog(
+            title="Cập nhật thành công.\nKhởi động lại để áp dụng dữ liệu mới",
+            type="alert",
+            md_bg_color=boxbg
+        )
+        self.failed=MDDialog(
+            title="Cập nhật thất bại",
+            type="alert",
+            md_bg_color=boxbg
+        )
 
         self.search_thread=None
         self.icon=MDIconButton(icon="check-circle", theme_icon_color="Custom", icon_color=primarycolor, size_hint=(None, None), pos_hint={"center_x": 0.5})
@@ -164,13 +179,48 @@ Nhật
         content_cls=self.container,
         buttons=[
             MDFillRoundFlatButton(
+                text="Cập nhật dữ liệu",
+                md_bg_color=btn,
+                theme_text_color="Custom",
+                text_color=secondarycolor
+            ),
+            MDFillRoundFlatButton(
                 text="Đóng",
                 md_bg_color=btn,
                 theme_text_color="Custom",
                 text_color=secondarycolor
-            )
+            )            
         ],
         md_bg_color=boxbg
         )
-        self.credit.buttons[0].bind(on_release=self.credit.dismiss)
+        self.credit.buttons[0].bind(on_release=self.update_trigger)
+        self.credit.buttons[1].bind(on_release=self.credit.dismiss)
         self.credit.open()
+        
+    def update_trigger(self, instance):
+        self.credit.dismiss()
+        self.screen=sm.get_screen('second')
+        self.screen.add_widget(self.overlay)
+        threading.Thread(target=self.update_).start()
+        
+    def touch_ignore():
+        pass
+    
+    def update_(self):
+        try:
+            if check_connection():
+                download_file("Whoop/func/data/tu_dien_nguon.txt", "func/data/tu_dien_nguon.txt")
+                download_file("Whoop/func/data/word.txt", "func/data/word.txt")
+                download_file("Whoop/func/data/grammar.txt", "func/data/grammar.txt")
+        except:
+            Clock.schedule_once(self.failed_)
+        else:
+            Clock.schedule_once(self.success_)
+            
+    def success_(self, instance):
+        self.screen.remove_widget(self.overlay)
+        self.success.open()
+        
+    def failed_(self, instance):
+        self.screen.remove_widget(self.overlay)
+        self.failed.open()
