@@ -26,6 +26,5 @@ class MyApp(MDApp):
         return sm
 
 if __name__ == '__main__':
-    open("func/main_pid.txt", "w", encoding="utf-8").write(str(os.getpid()))
     MyApp().run()
     set_new_config()
