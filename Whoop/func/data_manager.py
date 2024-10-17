@@ -19,15 +19,26 @@ def download_file(file_path, name):
 
 def upload_file(file_path, name):
     url = f"{repo_url}/contents/{file_path}"
+    headers = {"Authorization": f"token {token}"}
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code == 200:
+        file_info = response.json()
+        sha = file_info['sha']
+    else:
+        print(f"Error retrieving file SHA: {response.status_code} - {response.text}")
+        return
+
     with open(name, 'rb') as f:
         content = f.read()
     encoded_content = base64.b64encode(content).decode('utf-8')
     
-    headers = {"Authorization": f"token {token}"}
     data = {
         'message': 'Update file',
-        'content': encoded_content
+        'content': encoded_content,
+        'sha': sha
     }
+    
     response = requests.put(url, headers=headers, json=data)
     if response.status_code == 201:
         print("File uploaded successfully")
