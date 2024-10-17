@@ -58,6 +58,7 @@ class add_data(MDBoxLayout):
         self.add_widget(self.button)
         
     def add_(self, instance):
+        global list_
         while "  " in self.container.text:
             self.container.text=self.container.text.replace("  "," ")
         self.container.text=self.container.text.strip()
@@ -69,19 +70,25 @@ class add_data(MDBoxLayout):
         self.add__.dismiss()
         
     def remove(self, instance):
+        global list_
         list_.remove(instance.text)
         self.add_synonyms.synonyms_list.remove_widget(instance)
         
     def add_data(self, instance):
         global list_
         if self.word.text and self.type.text and self.definition.text and self.cefr_level.text:
+            self.synonyms=', '.join(list_) if len(list_)>0 else 'none'
             if self.admin_code.text==admin_code:
-                with open("func/data/tu_dien_nguon.txt", "a", encoding="utf-8") as f:
-                    f.write(f"{self.word.text} % {self.type.text} % {self.definition.text} % none % none % {self.cefr_level.text}\n")
+                with open("func/data/tu_dien_nguon.txt", "a", encoding="utf-8") as f, open("func/data/word.txt", "r", encoding="utf-8") as f_:
+                    f.write(f"{self.word.text} % {self.type.text} % {self.definition.text} % none % {self.synonyms} % {self.cefr_level.text}\n")
+                    line=f_.read()
+                with open("func/data/word.txt", "w", encoding="utf-8") as f:
+                    f.write(line+f" {self.word.text}")
                 upload_file("Whoop/func/data/tu_dien_nguon.txt", "func/data/tu_dien_nguon.txt")
+                upload_file("Whoop/func/data/word.txt", "func/data/word.txt")
             else:
                 with open("func/data/unverified.txt", "a", encoding="utf-8") as f:
-                    f.write(f"{self.word.text} % {self.type.text} % {self.definition.text} % none % {', '.join(list_)} % {self.cefr_level.text}\n")
+                    f.write(f"{self.word.text} % {self.type.text} % {self.definition.text} % none % {self.synonyms} % {self.cefr_level.text}\n")
             
             self.word.text=self.type.text=self.definition.text=self.cefr_level.text=""
             self.add_synonyms.synonyms_list.clear_widgets()
