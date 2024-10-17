@@ -62,8 +62,6 @@ def set_new_config():
         for i in settings:
             fo.write(f"{i}: {str(settings[i])}\n")
 
-    os.remove("func/main_pid.txt")
-
 def config():
     engine = pyttsx3.init()
     data_=SOD_word_list()
