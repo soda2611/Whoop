@@ -80,10 +80,9 @@ class setting(MDBoxLayout):
         self.add_widget(self.info)
 
     def restart(self, instance):
-        pid=int(open("func/main_pid.txt", encoding="utf-8").read())
         set_new_config()
         subprocess.Popen(["py", "UI.py"], start_new_session=True)
-        os.kill(pid, signal.SIGTERM)
+        os.kill(os.getpid(), signal.SIGTERM)
         
     def create_palette(self, i):
         self.color=MDCard(md_bg_color=(1,1,1,1), orientation="vertical", size_hint=(None, None), width=50*scale, height=200*scale, pos_hint={"center_x": 0.5}, padding=[10*scale, 10*scale, 10*scale, 10*scale], ripple_behavior=True)
