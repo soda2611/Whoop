@@ -49,6 +49,6 @@ try:
         link.icon_location = (icon_file, 0)
         link.working_directory = os.path.abspath(sod_dir)
      
-    except Exception as ex:
-        print(ex)
+except Exception as ex:
+    print(ex)
 
