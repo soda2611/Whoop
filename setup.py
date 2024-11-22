@@ -9,47 +9,46 @@ try:
     import requests
     import winshell
 except:
-    os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} -m pip install pywin32 winshell requests pyinstaller")
+    os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} -m pip install pywin32 winshell requests pyinstaller kivymd==1.2.0 kivy googletrans==4.0.0rc1 eng-to-ipa pyttsx3 psutil --upgrade pip")
     os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} setup.py")
 else:
-    try:
-        os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} -m pip install kivymd==1.2.0 kivy googletrans==4.0.0rc1 eng-to-ipa pyttsx3 psutil --upgrade pip")
+    os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} -m pip install kivymd==1.2.0 kivy googletrans==4.0.0rc1 eng-to-ipa pyttsx3 psutil --upgrade pip")
+try:
+    repo_url = "https://github.com/soda2611/Whoop/archive/refs/heads/main.zip"
 
-        repo_url = "https://github.com/soda2611/Whoop/archive/refs/heads/main.zip"
+    repo_dir = "Whoop-main"
 
-        repo_dir = "Whoop-main"
+    sod_dir = "Whoop"
 
-        sod_dir = "Whoop"
+    response = requests.get(repo_url)
 
-        response = requests.get(repo_url)
+    zip_file = zipfile.ZipFile(io.BytesIO(response.content))
 
-        zip_file = zipfile.ZipFile(io.BytesIO(response.content))
+    zip_file.extractall()
 
-        zip_file.extractall()
+    os.system(f"rmdir /S /Q {sod_dir}")
 
-        os.system(f"rmdir /S /Q {sod_dir}")
+    shutil.move(os.path.join(repo_dir, sod_dir), sod_dir)
 
-        shutil.move(os.path.join(repo_dir, sod_dir), sod_dir)
+    os.system(f"rmdir /S /Q {repo_dir}")
 
-        os.system(f"rmdir /S /Q {repo_dir}")
+    python_file = os.path.abspath(f"{sod_dir}/UI.py")
 
-        python_file = os.path.abspath(f"{sod_dir}/UI.py")
+    icon_file = os.path.abspath(f"{sod_dir}/func/setting/img/Logo.ico")
 
-        icon_file = os.path.abspath(f"{sod_dir}/func/setting/img/Logo.ico")
+    desktop = winshell.desktop()
 
-        desktop = winshell.desktop()
+    shortcut_name = "Whoop"
 
-        shortcut_name = "Whoop"
+    shortcut = os.path.join(desktop, shortcut_name + ".lnk")
 
-        shortcut = os.path.join(desktop, shortcut_name + ".lnk")
-
-        with winshell.shortcut(shortcut) as link:
-            link.path = python_file
-            link.description = "An open dictionary for everyone"
-            link.arguments = python_file
-            link.icon_location = (icon_file, 0)
-            link.working_directory = os.path.abspath(sod_dir)
-        
+    with winshell.shortcut(shortcut) as link:
+        link.path = python_file
+        link.description = "An open dictionary for everyone"
+        link.arguments = python_file
+        link.icon_location = (icon_file, 0)
+        link.working_directory = os.path.abspath(sod_dir)
+     
     except Exception as ex:
         print(ex)
 
