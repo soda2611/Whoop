@@ -26,9 +26,8 @@ try:
     import requests
     import winshell
 except:
-    os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} -m pip install pywin32 winshell requests pyinstaller kivymd==1.2.0 kivy googletrans==4.0.0rc1 eng-to-ipa pyttsx3 psutil --upgrade pip")
-    import requests
-    import winshell
+    os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} -m pip install pywin32 winshell requests pyinstaller")
+    os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} setup.py")
 else:
     os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} -m pip install kivymd==1.2.0 kivy googletrans==4.0.0rc1 eng-to-ipa pyttsx3 psutil --upgrade pip")
 try:
