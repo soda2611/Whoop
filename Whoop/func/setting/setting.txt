@@ -6,4 +6,4 @@ version: 1.0.0dev
 banner: func/setting/img/Logo.png
 icon: func/setting/img/Icon.png
 title: Whoop
-uid: 20241121145832
+uid: none
