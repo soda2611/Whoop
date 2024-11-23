@@ -188,7 +188,7 @@ class home(MDBoxLayout, TouchBehavior):
         recent_search=[]
         self.temp_box.clear_widgets()
         self.recent.recent_scrollview_box.clear_widgets()
-        with open(f"func/data/{settings["uid"]}.txt", "w", encoding="utf-8") as fo:
+        with open(f"func/data/{settings['uid']}.txt", "w", encoding="utf-8") as fo:
             fo.write("{}")
 
     def morebutton(self, text):
@@ -416,7 +416,7 @@ class home(MDBoxLayout, TouchBehavior):
                 self.structure.bind(texture_size=self.resultlabel.setter('size'))
                 self.structure_box.add_widget(self.structure)
 
-        with open(f"func/data/{settings["uid"]}.txt", "w", encoding="utf-8") as fo:
+        with open(f"func/data/{settings['uid']}.txt", "w", encoding="utf-8") as fo:
             fo.write(json.dumps(recent_search, ensure_ascii=False, indent=4))
         self.progress_bar.color=self.progress_bar.back_color
         self.progress_bar.stop()
