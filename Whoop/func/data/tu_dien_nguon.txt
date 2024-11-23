@@ -1,0 +1,17 @@
+{
+    "art": {
+        "noun": {
+            "definition": "- The conscious production or arrangement of sounds, colours, forms, movements, or other elements in a manner that affects the senses and emotions, usually specifically the production of the beautiful in a graphic or plastic medium.\nVí dụ: There is a debate as to whether graffiti is art or vandalism.\n\n- The creative and emotional expression of mental imagery, such as visual, auditory, social, etc.\n\n- Skillful creative activity, usually with an aesthetic focus.\nVí dụ: She's mastered the art of programming.\n\n- The study and the product of these processes.\nVí dụ: He's at university to study art.\n\n- Aesthetic value.\nVí dụ: Her photographs are nice, but there's no art in them.\n\n- Artwork.\nVí dụ: Sotheby's regularly auctions art for millions.\n\n- A field or category of art, such as painting, sculpture, music, ballet, or literature.\nVí dụ: I'm a great supporter of the arts.\n\n- A nonscientific branch of learning; one of the liberal arts.\n\n- Skill that is attained by study, practice, or observation.\n\n- Contrivance, scheming, manipulation.\n\n",
+            "synonyms": [
+                "craft"
+            ],
+            "antonyms": [
+                "mundacity",
+                "nature",
+                "subsistence"
+            ],
+            "word": "art",
+            "type": "noun"
+        }
+    }
+}
