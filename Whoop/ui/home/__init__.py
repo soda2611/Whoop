@@ -312,7 +312,7 @@ class home(MDBoxLayout, TouchBehavior):
         if self.search_thread:
             self.search_thread.cancel()
         if self.text_input.input.text!="":
-            self.search_thread = threading.Timer(0.5, self.search_button_pressed, args=(instance, self.text_input.input.text))
+            self.search_thread = threading.Timer(1, self.search_button_pressed, args=(instance, self.text_input.input.text))
             self.search_thread.start()
         else:
             self.home(instance)
