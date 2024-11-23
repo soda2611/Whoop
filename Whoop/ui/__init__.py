@@ -74,8 +74,8 @@ def track_user_queries():
     os.remove(f"func/data/temp_{settings['uid']}.txt")
 
 def config():
-    if settings["uid"]=="none":
-        settings["uid"]=datetime.datetime.now().strftime(f"%Y%m%d%H%M%S")
+    if settings['uid']=="none":
+        settings['uid']=datetime.datetime.now().strftime(f"%Y%m%d%H%M%S")
         with open(f"func/data/{settings['uid']}.txt", "w", encoding="utf-8") as fo: fo.write("{}")
         upload_file("whoop_database", f"users/{settings['uid']}.txt", f"func/data/{settings['uid']}.txt")
     engine = pyttsx3.init()
@@ -105,7 +105,7 @@ def config():
     for i in lines:
         colors.append([k.split(", ") for k in i.strip().split("; ")])
 
-    with open(f"func/data/{settings["uid"]}.txt", "r", encoding="utf-8") as f:
+    with open(f"func/data/{settings['uid']}.txt", "r", encoding="utf-8") as f:
         lines = f.read()
         recent_search = eval(lines)
 
