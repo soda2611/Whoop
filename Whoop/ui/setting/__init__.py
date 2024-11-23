@@ -44,7 +44,7 @@ class setting(MDBoxLayout):
         self.font_scroll=change_fonts(self.create_preview)
         self.color_palette_scroll.scroll_to(self.got_check)
         self.font_scroll.scroll_to(self.got_font_check)
-        self.info=MDFillRoundFlatButton(text=f"Phiên bản: SOD {version}\nNgày phát hành: Unknown    UID: {settings["uid"]}", font_style="Caption", halign="center", size_hint=(0.75,None), height=35*scale, pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=bg)
+        self.info=MDFillRoundFlatButton(text=f"Phiên bản: SOD {version}\nNgày phát hành: Unknown    UID: {settings['uid']}", font_style="Caption", halign="center", size_hint=(0.75,None), height=35*scale, pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=bg)
         self.info.bind(on_release=self.on_touch)
         self.dialog = MDDialog(
             title="Cài đặt liên quan đến cá nhân hóa sẽ được áp dụng khi bạn khởi động lại ứng dụng",
