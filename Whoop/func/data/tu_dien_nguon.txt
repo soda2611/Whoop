@@ -15,22 +15,6 @@
         }
     },
     "hello": {
-        "noun": {
-            "definition": "- \"Hello!\" or an equivalent greeting.\n\n",
-            "synonyms": [
-                "greeting"
-            ],
-            "antonyms": [],
-            "word": "hello",
-            "type": "noun"
-        },
-        "verb": {
-            "definition": "- To greet with \"hello\".\n\n",
-            "synonyms": [],
-            "antonyms": [],
-            "word": "hello",
-            "type": "verb"
-        },
         "interjection": {
             "definition": "- A greeting (salutation) said when meeting someone or acknowledging someone’s arrival or presence.\nVí dụ: Hello, everyone.\n\n- A greeting used when answering the telephone.\nVí dụ: Hello? How may I help you?\n\n- A call for response if it is not clear if anyone is present or listening, or if a telephone conversation may have been disconnected.\nVí dụ: Hello? Is anyone there?\n\n- Used sarcastically to imply that the person addressed or referred to has done something the speaker or writer considers to be foolish.\nVí dụ: You just tried to start your car with your cell phone. Hello?\n\n- An expression of puzzlement or discovery.\nVí dụ: Hello! What’s going on here?\n\n",
             "synonyms": [],
@@ -113,6 +97,106 @@
             "antonyms": [],
             "word": "good",
             "type": "interjection"
+        }
+    },
+    "to": {
+        "adverb": {
+            "definition": "- Toward a closed, touching or engaging position.\nVí dụ: Please push the door to.\n\n- Into the wind.\n\n",
+            "synonyms": [
+                "closed",
+                "shut"
+            ],
+            "antonyms": [
+                "ajar",
+                "open"
+            ],
+            "word": "to",
+            "type": "adverb"
+        },
+        "preposition": {
+            "definition": "- Indicating destination: In the direction of, and arriving at.\nVí dụ: We are walking to the shop.\n\n- Used to indicate the target or recipient of an action.\nVí dụ: He devoted himself to education.\n\n- Used to indicate result of action.\nVí dụ: His face was beaten to a pulp.\n\n- Used to indicate a resulting feeling or emotion.\nVí dụ: To everyone's great relief, the tuneless carol singers finally ceased their warbling.\n\n- Used after an adjective to indicate its application.\nVí dụ: similar to ..., relevant to ..., pertinent to ..., I was nice to him, he was cruel to her, I am used to walking.\n\n- Denotes the end of a range.\nVí dụ: It takes 2 to 4 weeks to process typical applications.\n\n- As a.\nVí dụ: With God to friend (with God as a friend);   with The Devil to fiend (with the Devil as a foe);   lambs slaughtered to lake (lambs slaughtered as a sacrifice);   took her to wife (took her as a wife);   was sold to slave (was sold as a slave).\n\n- Used to indicate a ratio or comparison.\nVí dụ: I have ten dollars to your four.\n\n- Used to indicate that the preceding term is to be raised to the power of the following value; indicates exponentiation.\nVí dụ: Three squared or three to the second power is nine.\n\n- (time) Preceding.\nVí dụ: ten to ten = 9:50; We're going to leave at ten to (the hour).\n\n- Used to describe what something consists of or contains.\nVí dụ: Anyone could do this job; there's nothing to it.\n\n- At.\nVí dụ: Stay where you're to and I'll come find you, b'y.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "to",
+            "type": "preposition"
+        }
+    },
+    "biro": {
+        "noun": {
+            "definition": "- A BIRO brand ballpoint pen.\n\n- (by extension) Any ballpoint pen.\n\n- (by extension) Ink from a ballpoint pen.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "biro",
+            "type": "noun"
+        }
+    },
+    "brother": {
+        "noun": {
+            "definition": "- Son of the same parents as another person.\n\n- A male having at least one parent in common with another (see half-brother, stepbrother).\n\n- A male fellow member of a religious community, church, trades union etc.\nVí dụ: I would like to thank the brother who just spoke.\n\n- A form of address to a man.\nVí dụ: Listen, brother, I don't know what you want, but I'm not interested.\n\n- A black male.\n\n- Somebody, usually male, connected by a common cause or situation.\n\n- Someone who is a peer, whether male or female.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "brother",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To treat as a brother.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "brother",
+            "type": "verb"
+        },
+        "interjection": {
+            "definition": "- Expressing exasperation.\nVí dụ: We're being forced to work overtime? Oh, brother!\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "brother",
+            "type": "interjection"
+        }
+    },
+    "gravity": {
+        "noun": {
+            "definition": "- An achromatic colour intermediate between black and white.\n\n- An animal or thing of grey colour, such as a horse, badger, or salmon.\n\n- An extraterrestrial humanoid with grayish skin, bulbous black eyes, and an enlarged head.\n\n- A penny with a tail on both sides, used for cheating.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gray",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To become gray.\nVí dụ: My hair is beginning to gray.\n\n- To cause to become gray.\n\n- To turn progressively older, alluding to graying of hair through aging (used in context of the population of a geographic region)\nVí dụ: the graying of America\n\n- To give a soft effect to (a photograph) by covering the negative while printing with a ground-glass plate.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gray",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Having a color somewhere between white and black, as the ash of an ember.\n\n- Dreary, gloomy.\n\n- Having an indistinct, disputed or uncertain quality.\n\n- Relating to older people.\nVí dụ: the gray dollar, i.e. the purchasing power of the elderly\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gravity",
+            "type": "adjective"
+        }
+    },
+    "gray": {
+        "noun": {
+            "definition": "- An achromatic colour intermediate between black and white.\n\n- An animal or thing of grey colour, such as a horse, badger, or salmon.\n\n- An extraterrestrial humanoid with grayish skin, bulbous black eyes, and an enlarged head.\n\n- A penny with a tail on both sides, used for cheating.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gray",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To become gray.\nVí dụ: My hair is beginning to gray.\n\n- To cause to become gray.\n\n- To turn progressively older, alluding to graying of hair through aging (used in context of the population of a geographic region)\nVí dụ: the graying of America\n\n- To give a soft effect to (a photograph) by covering the negative while printing with a ground-glass plate.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gray",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Having a color somewhere between white and black, as the ash of an ember.\n\n- Dreary, gloomy.\n\n- Having an indistinct, disputed or uncertain quality.\n\n- Relating to older people.\nVí dụ: the gray dollar, i.e. the purchasing power of the elderly\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gray",
+            "type": "adjective"
         }
     }
 }
