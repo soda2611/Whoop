@@ -21,6 +21,4 @@ class recent(MDCard):
         self.add_widget(self.recent_scrollview)
         self.add_widget(self.clear_action)
         self.recent_scrollview.add_widget(self.recent_scrollview_box)
-        for i in recent_search:
-            self.recent_scrollview_box.add_widget(create_content_box(i))
         self.clear_action.bind(on_release=clear_history)
