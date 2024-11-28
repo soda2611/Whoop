@@ -186,7 +186,7 @@ class home(MDBoxLayout, TouchBehavior):
 
     def clear_history(self, instance):
         global recent_search
-        recent_search=[]
+        recent_search={}
         self.temp_box.clear_widgets()
         self.recent.recent_scrollview_box.clear_widgets()
         with open(f"func/setting/{settings['uid']}.txt", "w", encoding="utf-8") as fo:
