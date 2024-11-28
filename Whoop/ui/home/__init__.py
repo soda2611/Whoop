@@ -40,12 +40,6 @@ class home(MDBoxLayout, TouchBehavior):
             md_bg_color=boxbg
         )
 
-        self.temp_box=MDBoxLayout(orientation="vertical",size_hint_y=None, padding=[10*scale, 10*scale, 10*scale, 10*scale], spacing=20, pos_hint={"center_x": 0.5})
-        self.temp_box.bind(minimum_height=self.temp_box.setter('height'))
-        for i in recent_search:
-            for j in recent_search[i]:
-                self.temp_box.add_widget(self.create_content_box(recent_search[i][j]), index=0)
-
         self.label = Image(source=settings["banner"], size_hint=(0.9, None), pos_hint={'center_x': 0.5}, height=50*scale)
         
         self.cautionlabel = MDLabel(text="Kết quả có thể sai do bộ dữ liệu chưa qua kiểm tra sàng lọc", font_style="Caption", halign='center', size_hint=(0.75, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=30*scale, theme_text_color="Custom", text_color=primarycolor)
@@ -147,36 +141,13 @@ class home(MDBoxLayout, TouchBehavior):
         self.antonyms_box.bind(minimum_width=self.antonyms_box.setter('width'))
         self.antonyms.add_widget(self.antonyms_box)
 
-        temp_scroll_box=ScrollView(size_hint=(1, 1), pos_hint={"center_x": 0.5}, do_scroll_x=False)
-        temp_scroll_box.add_widget(self.temp_box)
-        container=MDCard(orientation="vertical", spacing=20, size_hint=(1,None), height=200)
-        container.radius=[i*scale for i in container.radius]
-        container.add_widget(temp_scroll_box)
-        self.dialog = MDDialog(
-            title="Gần đây",
-            type="custom",
-            content_cls=container,
-            buttons=[
-                MDFillRoundFlatButton(
-                    text="Xóa",
-                    md_bg_color=btn,
-                    theme_text_color="Custom",
-                    text_color=secondarycolor
-                ),
-                MDFillRoundFlatButton(
-                    text="Đóng",
-                    md_bg_color=btn,
-                    theme_text_color="Custom",
-                    text_color=secondarycolor
-                )
-            ],
-            md_bg_color=boxbg
-        )
-        self.dialog.buttons[0].bind(on_release=self.clear_history)
-        self.dialog.buttons[1].bind(on_release=self.dialog.dismiss)
+        self.dialog = recent_(self.create_content_box, self.clear_history, self.noname.radius)
+        for i in recent_search:
+            for j in recent_search[i]:
+                self.dialog.recent_scrollview_box.add_widget(self.create_content_box(recent_search[i][j]), index=0)
 
         try:
-            if int(width)>=900:
+            if int(width)>=900*scale:
                 self.noname.size_hint=(0.75, 1)
                 self.one_box.add_widget(self.recent)
         except:
@@ -184,12 +155,16 @@ class home(MDBoxLayout, TouchBehavior):
 
     def show_recent(self, *args):
         self.menu.dismiss()
-        self.dialog.open()
+        self.progress_bar.back_color=bg
+        self.progress_bar.color=self.progress_bar.back_color
+        self.noname.md_bg_color=bg
+        self.scrollview.clear_widgets()
+        self.scrollview.add_widget(self.dialog)
 
     def clear_history(self, instance):
         global recent_search
         recent_search={}
-        self.temp_box.clear_widgets()
+        self.dialog.recent_scrollview_box.clear_widgets()
         self.recent.recent_scrollview_box.clear_widgets()
         with open(f"func/setting/{settings['uid']}.txt", "w", encoding="utf-8") as fo:
             fo.write("{}")
@@ -408,7 +383,7 @@ class home(MDBoxLayout, TouchBehavior):
                     result[i]["word"]=self.input_text[0]
                     result[i]["type"]=i
                     self.recent.recent_scrollview_box.add_widget(self.create_content_box(result[i]), index=0)
-                    self.temp_box.add_widget(self.create_content_box(result[i]), index=0)
+                    self.dialog.recent_scrollview_box.add_widget(self.create_content_box(result[i]), index=0)
                 recent_search[self.input_text[0]]=result
         else:
             self.resultlabel.text = "".join(result)
