@@ -2,7 +2,7 @@ import ui
 from ui import *
 from ui.home.widget.result_template import *
 from ui.home.widget.add_data import add_data
-from ui.home.widget.recent import recent
+from ui.home.widget.recent import *
 
 recent_search=recent_search
 
