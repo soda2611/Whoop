@@ -5,7 +5,7 @@ import shutil
 import sys
 print(f"Python {sys.version_info.major}.{sys.version_info.minor}")
 
-def backup_user_data(data_dir, setting_dir, backup_dir):
+def backup_user_data(setting_dir, backup_dir):
     if os.path.exists(setting_dir):
         shutil.copytree(setting_dir, os.path.join(backup_dir, 'setting'))
 
@@ -33,7 +33,7 @@ try:
     setting_dir = os.path.join(sod_dir, 'func', 'setting')
     backup_dir = os.path.expanduser('~/.whoop_backup')
     
-    backup_user_data(data_dir, setting_dir, backup_dir)
+    backup_user_data(setting_dir, backup_dir)
 
     response = requests.get(repo_url)
 
@@ -47,7 +47,7 @@ try:
 
     os.system(f"rmdir /S /Q {repo_dir}")
 
-    restore_user_data(data_dir, setting_dir, backup_dir)
+    restore_user_data(setting_dir, backup_dir)
 
     python_file = os.path.abspath(f"{sod_dir}/UI.py")
 
