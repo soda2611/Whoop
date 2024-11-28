@@ -13,5 +13,106 @@
             "word": "art",
             "type": "noun"
         }
+    },
+    "hello": {
+        "noun": {
+            "definition": "- \"Hello!\" or an equivalent greeting.\n\n",
+            "synonyms": [
+                "greeting"
+            ],
+            "antonyms": [],
+            "word": "hello",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To greet with \"hello\".\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "hello",
+            "type": "verb"
+        },
+        "interjection": {
+            "definition": "- A greeting (salutation) said when meeting someone or acknowledging someone’s arrival or presence.\nVí dụ: Hello, everyone.\n\n- A greeting used when answering the telephone.\nVí dụ: Hello? How may I help you?\n\n- A call for response if it is not clear if anyone is present or listening, or if a telephone conversation may have been disconnected.\nVí dụ: Hello? Is anyone there?\n\n- Used sarcastically to imply that the person addressed or referred to has done something the speaker or writer considers to be foolish.\nVí dụ: You just tried to start your car with your cell phone. Hello?\n\n- An expression of puzzlement or discovery.\nVí dụ: Hello! What’s going on here?\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "bye",
+                "goodbye"
+            ],
+            "word": "hello",
+            "type": "interjection"
+        }
+    },
+    "hi": {
+        "noun": {
+            "definition": "- The word \"hi\" used as a greeting.\nVí dụ: I didn't even get a hi.\n\n",
+            "synonyms": [
+                "greeting",
+                "hello"
+            ],
+            "antonyms": [],
+            "word": "hi",
+            "type": "noun"
+        },
+        "interjection": {
+            "definition": "- A friendly, informal, casual greeting said when meeting someone.\nVí dụ: Hi, how are you?\n\n- An exclamation to call attention.\n\n- Expressing wonder or derision.\n\n",
+            "synonyms": [
+                "greetings",
+                "hello"
+            ],
+            "antonyms": [],
+            "word": "hi",
+            "type": "interjection"
+        }
+    },
+    "god": {
+        "noun": {
+            "definition": "- A deity or supreme being; a supernatural, typically immortal, being with superior powers, to which personhood is attributed.\nVí dụ: The most frequently used name for the Islamic god is Allah.\n\n- An idol.\nVí dụ: Leo Messi is my god!\n\n- A person in a high position of authority, importance or influence.\n\n- A powerful ruler or tyrant.\n\n- An exceedingly handsome man.\nVí dụ: Lounging on the beach were several Greek gods.\n\n- The person who owns and runs a multi-user dungeon.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "god",
+            "type": "noun"
+        },
+        "proper noun": {
+            "definition": "- The single deity of various monotheistic religions, especially the deity of Judaism, Christianity, and Islam.\nVí dụ: Dawn believes in God, but Willow believes in multiple gods and goddesses.\n\n- The single male deity of various bitheistic or duotheistic religions.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "god",
+            "type": "proper noun"
+        },
+        "verb": {
+            "definition": "- To idolize.\n\n- To deify.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "god",
+            "type": "verb"
+        }
+    },
+    "good": {
+        "adjective": {
+            "definition": "- (of people)\n\n- (of capabilities)\n\n- (properties and qualities)\n\n- (when with and) Very, extremely. See good and.\nVí dụ: The soup is good and hot.\n\n- Holy (especially when capitalized) .\nVí dụ: Good Friday\n\n- (of quantities)\n\n",
+            "synonyms": [
+                "accomplished",
+                "all right",
+                "decent",
+                "not bad",
+                "satisfactory",
+                "well"
+            ],
+            "antonyms": [
+                "bad",
+                "evil",
+                "bad",
+                "poor"
+            ],
+            "word": "good",
+            "type": "adjective"
+        },
+        "interjection": {
+            "definition": "- That is good; an elliptical exclamation of satisfaction or commendation.\nVí dụ: Good! I can leave now.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "good",
+            "type": "interjection"
+        }
     }
 }
