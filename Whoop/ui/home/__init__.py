@@ -98,11 +98,13 @@ class home(MDBoxLayout, TouchBehavior):
         self.homebox.orientation="vertical"
         self.homebox.size_hint_y=None
         self.homebox.bind(minimum_height=self.homebox.setter('height'))
-        for i in range(10):
-            word=random.choice(word__)
-            box__=self.create_content_box(data_[word][random.choice([i for i in data_[word].keys()])])
-            home__[i]=box__
-            self.homebox.add_widget(box__)
+        try:
+            for i in range(10):
+                word=random.choice(word__)
+                box__=self.create_content_box(data_[word][random.choice([i for i in data_[word].keys()])])
+                home__[i]=box__
+                self.homebox.add_widget(box__)
+        except: pass
         
         self.noname.add_widget(self.scrollview)
         self.scrollview.add_widget(self.homebox)
@@ -238,7 +240,7 @@ class home(MDBoxLayout, TouchBehavior):
      
     def refresh(self, instance, dict_):
         self.scrollview.scroll_to(home__[0])
-        if dict_==None:
+        if dict_:
             for i in range(10):
                 text=data_[random.choice(word__)]
                 home__[i].result_head_label.text=text["word"]+" ("+text["type"].lower()+")"+f'\n/{eng_to_ipa.convert(text["word"])}/'
