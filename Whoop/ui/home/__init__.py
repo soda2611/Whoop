@@ -419,7 +419,7 @@ class home(MDBoxLayout, TouchBehavior):
 
         with open(f"func/setting/{settings['uid']}.txt", "w", encoding="utf-8") as fo:
             fo.write(json.dumps(recent_search, ensure_ascii=False, indent=4))
-        if _value_: threading.Thread(target=track_user_queries).start()
+        if _value_: threading.Thread(target=track_user_queries, args=({self.input_text[0]: result},)).start()
         else: _value_=not _value_
         self.progress_bar.color=self.progress_bar.back_color
         self.progress_bar.stop()
