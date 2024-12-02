@@ -323,10 +323,9 @@ class home(MDBoxLayout, TouchBehavior):
 
     def back(self, instance):
         global _back_
-        self.search_button_pressed(instance, _back_[-2]['type'], value=False, callback=True, temp=_back_[-2])
-        _back_=_back_[:-1]
-        if len(_back_)==1:
-            self.nav_bar.clear_widgets()
+        if len(_back_)>=2: self.search_button_pressed(None, _back_[-2]["type"], callback=True, temp=_back_[-2])
+        _back_=_back_[::-1][1:][::-1]
+        if len(_back_)<2: self.nav_bar.clear_widgets()
 
     def search_button_pressed(self, instance, input_text, value=True, callback=False, temp=False):
         global _value_, _callback_
