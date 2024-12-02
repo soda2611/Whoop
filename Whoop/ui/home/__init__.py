@@ -249,7 +249,7 @@ class home(MDBoxLayout, TouchBehavior):
                 "on_release": self.add_data
             }
         ]
-        if Window.width<900:
+        if Window.width<900*scale:
             menu_items.insert(2,{"text": "Gần đây",
                                 "text_color": primarycolor,
                                 "trailing_icon": "history",
