@@ -62,12 +62,11 @@ def set_new_config():
         for i in settings:
             fo.write(f"{i}: {str(settings[i])}\n")
 
-def track_user_queries():
+def track_user_queries(data):
     download_file("whoop_database", f"users/{settings['uid']}.txt", f"func/data/temp_{settings['uid']}.txt")
-    with open(f"func/setting/{settings['uid']}.txt", encoding="utf-8") as fi: _in_=eval(fi.read())
     with open(f"func/data/temp_{settings['uid']}.txt", encoding="utf-8") as fo:
         _out_=eval(fo.read())
-        _out_.update(_in_)
+        _out_.update(data)
     with open(f"func/data/temp_{settings['uid']}.txt", "w", encoding="utf-8") as fo:
         fo.write(json.dumps(_out_, ensure_ascii=False, indent=4))
     upload_file("whoop_database", f"users/{settings['uid']}.txt", f"func/data/temp_{settings['uid']}.txt")
