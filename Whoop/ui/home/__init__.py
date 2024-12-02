@@ -447,8 +447,8 @@ class home(MDBoxLayout, TouchBehavior):
 
     def on_window_resize(self, window, width, height):
         last_width = int(settings["size"].split()[0])
-        is_large_screen = width >= 900
-        was_large_screen = last_width >= 900
+        is_large_screen = width >= 900*scale
+        was_large_screen = last_width >= 900*scale
         recent_in_children = self.recent in self.one_box.children
 
         if is_large_screen != was_large_screen:
