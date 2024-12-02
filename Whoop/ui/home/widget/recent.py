@@ -8,8 +8,8 @@ class recent(MDCard):
         self.size_hint=(0.5, 1)
         self.width=250*scale
         self.pos_hint={'center_x': 0.5, 'center_y': 0.5}
-        self.padding=[10,10,10,10]
-        self.spacing=20
+        self.padding=[10*scale,10*scale,10*scale,10*scale]
+        self.spacing=20*scale
         self.radius=[i*scale for i in radius]
         self.recent_label=MDLabel(text="Gần đây", font_style="H6", halign="center", size_hint=(1,None), height=25*scale, pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.recent_scrollview = ScrollView(size_hint=(1, 1), pos_hint={'center_x': 0.5, 'center_y': 0.5}, do_scroll_x=False)
