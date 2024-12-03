@@ -22,12 +22,12 @@ def SOD_word_list(path="data/tu_dien_nguon.txt", sub_path="func/data/tu_dien_ngu
 with open("func/data/source.txt", encoding="utf-8") as f: 
     source=eval(f.read())
 
-def SOD(inp, database='default', internet=check_connection()):
-    if database!='default':
-        with open(database, encoding="utf-8") as f:
+def SOD(inp, database_path='default', internet=check_connection()):
+    if database_path!='default':
+        with open(database_path, encoding="utf-8") as f:
             database=eval(f.read())
     for word in inp:
-        if database!="default" and word in database:
+        if database_path!="default" and word in database:
             data_=database[word]
         elif internet:
             url = f"https://api.dictionaryapi.dev/api/v2/entries/en/{word}"
@@ -51,6 +51,10 @@ def SOD(inp, database='default', internet=check_connection()):
                             if example==[]: example=2*"\n"
                             else: example=f"\nVí dụ: {example}\n\n"
                             data_[part_of_speech]["definition"]=data_[part_of_speech]["definition"]+f"- {definition_text}{example}"
+                            data_[part_of_speech]["word"]=word
+                            data_[part_of_speech]["type"]=part_of_speech
+            database.update({word: data_})
+            with open(database_path, "w", encoding="utf-8") as fo: fo.write(json.dumps(database, ensure_ascii=False, indent=4))
         elif not internet:
             data_="Không có kết nối mạng và không có sẵn trong bộ dữ liệu offline"
     return data_ if data_ else "Không tìm thấy từ"
