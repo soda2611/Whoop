@@ -331,6 +331,30 @@ class home(MDBoxLayout, TouchBehavior):
             self.progress_box.remove_widget(self.nav_bar)
 
     def search_button_pressed(self, instance, input_text, value=True, callback=False, temp=False):
+        global _value_, _callback_
+        if not value: _value_=value
+        if callback: _callback_=callback
+        try: self.dialog.dismiss()
+        except: pass
+        threading.Thread(target=self.search, args=(instance, input_text, temp)).start()
+        self.progress_bar.color=btn
+        self.progress_bar.start()
+
+    def search(self, instance, input_text, temp):
+        global result
+        self.scrollview.do_scroll_x, self.scrollview.do_scroll_y=False, True
+        if not temp:
+            self.input_text=word_detector(spelling_checker_for_SOD(" ".join(input_text.lower().split())))
+            if len(self.input_text)==1:
+                result=SOD(self.input_text, database_path="func/data/tu_dien_nguon.txt")
+                Clock.schedule_once(self.update_UI)
+            else: Clock.schedule_once(self.translate)
+        else:
+            self.input_text=[temp["word"]]
+            result={input_text: temp}
+            Clock.schedule_once(self.update_UI)
+
+    def update_UI(self, instance):
         global result, recent_search, _value_, _callback_
         self.scrollview.scroll_y=1
         self.progress_bar.back_color=(boxbg)
