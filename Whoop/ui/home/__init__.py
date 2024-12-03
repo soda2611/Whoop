@@ -74,8 +74,8 @@ class home(MDBoxLayout, TouchBehavior):
         self.add_widget(self.one_box)
 
         self.nav_bar=MDBoxLayout(size_hint=(1, None), height=50*scale)
-        self.back_button=MDIconButton(icon="arrow-left", on_press=self.back)
-
+        self.back_button=MDIconButton(icon="arrow-left", theme_icon_color="Custom", icon_color=primarycolor, md_bg_color=(1,1,1,0), on_press=self.back)
+        self.nav_bar.add_widget(self.back_button)
         self.noname=MDCard(orientation='vertical',md_bg_color=bg, size_hint=(1, 1), pos_hint={'center_x': 0.5, 'center_y': 0.5})
         self.noname.radius=[i*scale for i in self.noname.radius]
         self.one_box.add_widget(self.noname)
@@ -161,6 +161,8 @@ class home(MDBoxLayout, TouchBehavior):
         self.progress_bar.back_color=bg
         self.progress_bar.color=self.progress_bar.back_color
         self.noname.md_bg_color=bg
+        self.progress_box.height=5*scale
+        self.progress_box.remove_widget(self.nav_bar)
         self.scrollview.clear_widgets()
         self.scrollview.add_widget(self.dialog)
 
@@ -267,12 +269,11 @@ class home(MDBoxLayout, TouchBehavior):
 
     def home(self, instance):
         global _back_
-        _back_=[]
+        self.progress_box.height=5*scale
         self.progress_bar.back_color=bg
         self.progress_bar.color=self.progress_bar.back_color
         self.noname.md_bg_color=bg
-        self.noname.clear_widgets()
-        self.noname.add_widget(self.scrollview)
+        self.progress_box.remove_widget(self.nav_bar)
         self.scrollview.clear_widgets()
         self.scrollview.add_widget(self.homebox)
 
@@ -325,41 +326,16 @@ class home(MDBoxLayout, TouchBehavior):
         global _back_
         if len(_back_)>=2: self.search_button_pressed(None, _back_[-2]["type"], callback=True, temp=_back_[-2])
         _back_=_back_[::-1][1:][::-1]
-        if len(_back_)<2: self.nav_bar.clear_widgets()
+        if len(_back_)<2: 
+            self.progress_box.height=5*scale
+            self.progress_box.remove_widget(self.nav_bar)
 
     def search_button_pressed(self, instance, input_text, value=True, callback=False, temp=False):
-        global _value_, _callback_
-        if not value: _value_=value
-        if callback: _callback_=callback
-        try: self.dialog.dismiss()
-        except: pass
-        threading.Thread(target=self.search, args=(instance, input_text, temp)).start()
-        self.progress_bar.color=btn
-        self.progress_bar.start()
-
-    def search(self, instance, input_text, temp):
-        global result
-        self.scrollview.do_scroll_x, self.scrollview.do_scroll_y=False, True
-        if not temp:
-            self.input_text=word_detector(spelling_checker_for_SOD(" ".join(input_text.lower().split())))
-            if len(self.input_text)==1:
-                result=SOD(self.input_text)
-                Clock.schedule_once(self.update_UI)
-            else: Clock.schedule_once(self.translate)
-        else:
-            self.input_text=[temp["word"]]
-            result={input_text: temp}
-            Clock.schedule_once(self.update_UI)
-
-    def update_UI(self, instance):
         global result, recent_search, _value_, _callback_
         self.scrollview.scroll_y=1
         self.progress_bar.back_color=(boxbg)
         self.noname.md_bg_color=boxbg
         self.scrollview.do_scroll_x, self.scrollview.do_scroll_y=False, True
-        self.noname.clear_widgets()
-        self.noname.add_widget(self.nav_bar)
-        self.noname.add_widget(self.scrollview)
         self.scrollview.clear_widgets()
         self.scrollview.add_widget(self.result_box)
         self.result_box.clear_widgets()
@@ -392,19 +368,16 @@ class home(MDBoxLayout, TouchBehavior):
                         else: _callback_=not _callback_
                         try:
                             if len(_back_)>1:
-                                self.nav_bar.add_widget(self.back_button)
+                                self.progress_box.height=55*scale
+                                self.progress_box.add_widget(self.nav_bar)
                         except: pass
             else:
                 self.structure_box=MDBoxLayout(size_hint=(1, None))
                 for i in result:
-                    result[i]["word"]=self.input_text[0]
-                    result[i]["type"]=i
                     self.result_box.add_widget(self.create_content_box(result[i]))
                 self.result_box.add_widget(self.structure_box)
             if self.input_text[0] not in recent_search:
                 for i in result:
-                    result[i]["word"]=self.input_text[0]
-                    result[i]["type"]=i
                     self.recent.recent_scrollview_box.add_widget(self.create_content_box(result[i]), index=0)
                     self.dialog.recent_scrollview_box.add_widget(self.create_content_box(result[i]), index=0)
                 recent_search[self.input_text[0]]=result
