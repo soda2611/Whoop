@@ -7,7 +7,7 @@ class setting(MDBoxLayout):
     def __init__(self, **kwargs):
         super(setting, self).__init__(**kwargs)
         self.orientation = 'vertical'
-        self.padding = [10, 10, 10, 10]
+        self.padding = [10*scale, 10*scale, 10*scale, 10*scale]
         self.spacing=20*scale
         self.md_bg_color=bg
         
