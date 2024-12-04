@@ -3,7 +3,7 @@ try:
 except:
     from func.necessary_function import spelling_checker_for_SOD, check_connection, data as word_data
 from googletrans import Translator
-import re, requests
+import re, requests, json
 
 translator=Translator()
 
