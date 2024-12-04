@@ -9,11 +9,18 @@ def download_file(repo, file_path, name):
     headers = {"Authorization": f"token {token}"}
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
-        content = response.json()
-        download_url = content["download_url"]
-        response = requests.get(download_url)
-        with open(name, 'wb') as f:
-            f.write(response.content)
+        contents = response.json()
+        if str(type(contents))!="<class 'list'>":
+            download_url = contents["download_url"]
+            response = requests.get(download_url)
+            with open(name, 'wb') as f:
+                f.write(response.content)
+        else:
+            for content in contents:
+                download_url = content["download_url"]
+                response = requests.get(download_url)
+                with open(f'{name}/{content["name"]}', 'wb') as f:
+                    f.write(response.content)
     else:
         print(f"Error downloading file: {response.text}")
 
