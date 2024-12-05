@@ -97,13 +97,13 @@ class home(MDBoxLayout, TouchBehavior):
         self.homebox.orientation="vertical"
         self.homebox.size_hint_y=None
         self.homebox.bind(minimum_height=self.homebox.setter('height'))
-        try:
-            for i in range(10):
+        for i in range(10):
+            try:
                 word=random.choice(word__)
                 box__=self.create_content_box(data_[word][random.choice([i for i in data_[word].keys()])])
-                home__[i]=box__
+                home__.append(box__)
                 self.homebox.add_widget(box__)
-        except: pass
+            except: pass
         
         self.noname.add_widget(self.scrollview)
         self.scrollview.add_widget(self.homebox)
@@ -220,9 +220,10 @@ class home(MDBoxLayout, TouchBehavior):
      
     def refresh(self, instance, dict_):
         self.scrollview.scroll_to(home__[0])
-        if dict_:
-            for i in range(10):
-                text=data_[random.choice(word__)]
+        for i in range(len(home__)):
+            try:
+                word=random.choice(word__)
+                text=data_[word][random.choice([i for i in data_[word].keys()])]
                 home__[i].result_head_label.text=text["word"]+" ("+text["type"].lower()+")"+f'\n/{eng_to_ipa.convert(text["word"])}/'
                 if len(text["definition"])>50:
                     home__[i].result_label.text=text["definition"][:50]+"..."
@@ -231,6 +232,7 @@ class home(MDBoxLayout, TouchBehavior):
                 home__[i].remove_widget(home__[i].morebutton)
                 home__[i].morebutton=self.morebutton(text["word"])
                 home__[i].add_widget(home__[i].morebutton)
+            except: pass
     
     def menu_open(self, instance):
         menu_items = [
