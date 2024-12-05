@@ -1,0 +1,898 @@
+{
+    "hello": {
+        "noun": {
+            "definition": "- \"Hello!\" or an equivalent greeting.\n\n",
+            "synonyms": [
+                "greeting"
+            ],
+            "antonyms": [],
+            "word": "hello",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To greet with \"hello\".\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "hello",
+            "type": "verb"
+        },
+        "interjection": {
+            "definition": "- A greeting (salutation) said when meeting someone or acknowledging someone’s arrival or presence.\nVí dụ: Hello, everyone.\n\n- A greeting used when answering the telephone.\nVí dụ: Hello? How may I help you?\n\n- A call for response if it is not clear if anyone is present or listening, or if a telephone conversation may have been disconnected.\nVí dụ: Hello? Is anyone there?\n\n- Used sarcastically to imply that the person addressed or referred to has done something the speaker or writer considers to be foolish.\nVí dụ: You just tried to start your car with your cell phone. Hello?\n\n- An expression of puzzlement or discovery.\nVí dụ: Hello! What’s going on here?\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "bye",
+                "goodbye"
+            ],
+            "word": "hello",
+            "type": "interjection"
+        }
+    },
+    "pol": {
+        "noun": {
+            "definition": "- A politician.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "pol",
+            "type": "noun"
+        }
+    },
+    "gay": {
+        "noun": {
+            "definition": "- (chiefly in plural or attributive) A homosexual, especially a male homosexual; see also lesbian.\n\n- Something which is bright or colorful, such as a picture or a flower.\n\n- An ornament, a knick-knack.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To make happy or cheerful.\n\n- To cause (something, e.g. AIDS) to be associated with homosexual people.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- (possibly obsolete) Happy, joyful, and lively.\nVí dụ: The Gay Science\n\n- Quick, fast.\n\n- (possibly obsolete) Festive, bright, or colourful.\nVí dụ: Pennsylvania Dutch include the plain folk and the gay folk.\n\n- Sexually promiscuous (of any gender), (sometimes particularly) engaged in prostitution.\n\n- Homosexual:\n\n- A pejorative:\n\n- (of a dog's tail) Upright or curved over the back.\n\n- (possibly obsolete) Considerable, great, large in number, size, or degree.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "adjective"
+        },
+        "adverb": {
+            "definition": "- (possibly obsolete) Considerably, very.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "adverb"
+        }
+    },
+    "harmony": {
+        "noun": {
+            "definition": "- Physical injury; hurt; damage\nVí dụ: No harm came to my possessions.\n\n- Emotional or figurative hurt\nVí dụ: Although not physically injured in the car accident, she received some psychological harm.\n\n- Detriment; misfortune.\nVí dụ: I wish him no harm.\n\n- That which causes injury, damage, or loss.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "harmony",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To cause injury to another; to hurt; to cause damage to something.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "harmony",
+            "type": "verb"
+        }
+    },
+    "gravity": {
+        "adjective": {
+            "definition": "- Having a color somewhere between white and black, as the ash of an ember.\n\n- Dreary, gloomy.\n\n- Having an indistinct, disputed or uncertain quality.\n\n- Relating to older people.\nVí dụ: the gray dollar, i.e. the purchasing power of the elderly\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gravity",
+            "type": "adjective"
+        }
+    },
+    "flower": {
+        "noun": {
+            "definition": "- A colorful, conspicuous structure associated with angiosperms, frequently scented and attracting various insects, and which may or may not be used for sexual reproduction.\n\n- A reproductive structure in angiosperms (flowering plants), often conspicuously colourful and typically including sepals, petals, and either or both stamens and/or a pistil.\n\n- A plant that bears flowers, especially a plant that is small and lacks wood.\nVí dụ: We transplanted the flowers to a larger pot.\n\n- (usually with in) Of plants, a state of bearing blooms.\nVí dụ: The dogwoods are in flower this week.\n\n- (hypocoristic) The vulva, especially the labia majora.\n\n- The best examples or representatives of a group.\nVí dụ: We selected the flower of the applicants.\n\n- The best state of things; the prime.\nVí dụ: She was in the flower of her life.\n\n- Flour.\n\n- (in the plural) A substance in the form of a powder, especially when condensed from sublimation.\nVí dụ: the flowers of sulphur\n\n- A figure of speech; an ornament of style.\n\n- Ornamental type used chiefly for borders around pages, cards, etc.\n\n- (in the plural) Menstrual discharges.\n\n",
+            "synonyms": [
+                "cream",
+                "prime",
+                "head",
+                "pseudanthium"
+            ],
+            "antonyms": [],
+            "word": "flower",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To put forth blooms.\nVí dụ: This plant flowers in June.\n\n- To decorate with pictures of flowers.\n\n- To reach a state of full development or achievement.\n\n- To froth; to ferment gently, as new beer.\n\n- To come off as flowers by sublimation.\n\n",
+            "synonyms": [
+                "flourish",
+                "bloom",
+                "blossom"
+            ],
+            "antonyms": [],
+            "word": "flower",
+            "type": "verb"
+        }
+    },
+    "pillow": {
+        "noun": {
+            "definition": "- The part of the body of an animal or human which contains the brain, mouth and main sense organs.\nVí dụ: Be careful when you pet that dog on the head; it may bite.\n\n- The topmost, foremost, or leading part.\nVí dụ: What does it say at the head of the page?\n\n- (social, metonymy) A leader or expert.\n\n- A significant or important part.\n\n- Headway; progress.\nVí dụ: We are having a difficult time making head against this wind.\n\n- Topic; subject.\nVí dụ: We will consider performance issues under the head of future improvements.\n\n- Denouement; crisis.\nVí dụ: These isses are going to come to a head today.\n\n- (fluid dynamics) Pressure and energy.\n\n- Fellatio or cunnilingus; oral sex.\nVí dụ: She gave great head.\n\n- The glans penis.\n\n- A heavy or habitual user of illicit drugs.\n\n- Power; armed force.\n\n",
+            "synonyms": [
+                "blow job",
+                "blowjob",
+                "fellatio",
+                "oral sex",
+                "headmaster",
+                "headmistress",
+                "principal",
+                "boss",
+                "chief",
+                "leader",
+                "mind",
+                "composure",
+                "poise",
+                "bonce",
+                "caput",
+                "loaf",
+                "noggin",
+                "noodle",
+                "nut",
+                "pate",
+                "top"
+            ],
+            "antonyms": [
+                "point",
+                "sharp",
+                "tip",
+                "subordinate",
+                "underling",
+                "base",
+                "bottom",
+                "foot",
+                "tail",
+                "underside"
+            ],
+            "word": "pillow",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To be in command of. (See also head up.)\nVí dụ: Who heads the board of trustees?\n\n- To come at the beginning of; to commence.\nVí dụ: A group of clowns headed the procession.\n\n- To strike with the head; as in soccer, to head the ball\n\n- To move in a specified direction.\nVí dụ: How does the ship head?\n\n- To remove the head from a fish.\nVí dụ: The salmon are first headed and then scaled.\n\n- To originate; to spring; to have its course, as a river.\n\n- To form a head.\nVí dụ: This kind of cabbage heads early.\n\n- To form a head to; to fit or furnish with a head.\nVí dụ: to head a nail\n\n- To cut off the top of; to lop off.\nVí dụ: to head trees\n\n- To behead; to decapitate.\n\n- To go in front of.\nVí dụ: to head a drove of cattle\n\n- To get in the front of, so as to hinder or stop; to oppose.\nVí dụ: The wind headed the ship and made progress difficult.\n\n- (by extension) To check or restrain.\n\n- To set on the head.\nVí dụ: to head a cask\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "pillow",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Of, relating to, or intended for the head.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "pillow",
+            "type": "adjective"
+        }
+    },
+    "bed": {
+        "noun": {
+            "definition": "- A piece of furniture, usually flat and soft, on which to rest or sleep.\nVí dụ: My cat often sleeps on my bed.\nI keep a glass of water next to my bed when I sleep.\n\n- A place, or flat surface or layer, on which something else rests or is laid.\nVí dụ: The meats and cheeses lay on a bed of lettuce.\n\n- (heading) A layer or surface.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "bed",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- Senses relating to a bed as a place for resting or sleeping.\n\n- Senses relating to a bed as a place or layer on which something else rests or is laid.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "bed",
+            "type": "verb"
+        }
+    },
+    "blanket": {
+        "noun": {
+            "definition": "- A board on which messages may be posted, especially one in a public space.\n\n- A system in which users may send, read and reply to public messages; an electronic message board or forum.\n\n",
+            "synonyms": [
+                "notice board"
+            ],
+            "antonyms": [],
+            "word": "blanket",
+            "type": "noun"
+        }
+    },
+    "art": {
+        "noun": {
+            "definition": "- The conscious production or arrangement of sounds, colours, forms, movements, or other elements in a manner that affects the senses and emotions, usually specifically the production of the beautiful in a graphic or plastic medium.\nVí dụ: There is a debate as to whether graffiti is art or vandalism.\n\n- The creative and emotional expression of mental imagery, such as visual, auditory, social, etc.\n\n- Skillful creative activity, usually with an aesthetic focus.\nVí dụ: She's mastered the art of programming.\n\n- The study and the product of these processes.\nVí dụ: He's at university to study art.\n\n- Aesthetic value.\nVí dụ: Her photographs are nice, but there's no art in them.\n\n- Artwork.\nVí dụ: Sotheby's regularly auctions art for millions.\n\n- A field or category of art, such as painting, sculpture, music, ballet, or literature.\nVí dụ: I'm a great supporter of the arts.\n\n- A nonscientific branch of learning; one of the liberal arts.\n\n- Skill that is attained by study, practice, or observation.\n\n- Contrivance, scheming, manipulation.\n\n",
+            "synonyms": [
+                "craft"
+            ],
+            "antonyms": [
+                "mundacity",
+                "nature",
+                "subsistence"
+            ],
+            "word": "art",
+            "type": "noun"
+        }
+    },
+    "god": {
+        "verb": {
+            "definition": "- To idolize.\n\n- To deify.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "god",
+            "type": "verb"
+        }
+    },
+    "bungalow": {
+        "noun": {
+            "definition": "- A single-storey house, typically with rooms all on one level, or sometimes also with upper rooms set into the roof space.\nVí dụ: My aunt can't manage the stairs any more, so she's moving to a bungalow.\n\n- A thatched or tiled one-story house in India surrounded by a wide verandah\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "bungalow",
+            "type": "noun"
+        }
+    },
+    "hi": {
+        "interjection": {
+            "definition": "- A friendly, informal, casual greeting said when meeting someone.\nVí dụ: Hi, how are you?\n\n- An exclamation to call attention.\n\n- Expressing wonder or derision.\n\n",
+            "synonyms": [
+                "greetings",
+                "hello"
+            ],
+            "antonyms": [],
+            "word": "hi",
+            "type": "interjection"
+        }
+    },
+    "greeting": {
+        "verb": {
+            "definition": "- To weep; to cry.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "greeting",
+            "type": "verb"
+        },
+        "noun": {
+            "definition": "- A conventional phrase used to start a letter or conversation or otherwise to acknowledge a person's arrival or presence.\nVí dụ: It's polite to begin a letter with a greeting, but this practice is less common in email.\n\n- The action of the verb to greet.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "greeting",
+            "type": "noun"
+        }
+    },
+    "to": {
+        "adverb": {
+            "definition": "- Toward a closed, touching or engaging position.\nVí dụ: Please push the door to.\n\n- Into the wind.\n\n",
+            "synonyms": [
+                "closed",
+                "shut"
+            ],
+            "antonyms": [
+                "ajar",
+                "open"
+            ],
+            "word": "to",
+            "type": "adverb"
+        }
+    },
+    "good": {
+        "adjective": {
+            "definition": "- (of people)\n\n- (of capabilities)\n\n- (properties and qualities)\n\n- (when with and) Very, extremely. See good and.\nVí dụ: The soup is good and hot.\n\n- Holy (especially when capitalized) .\nVí dụ: Good Friday\n\n- (of quantities)\n\n",
+            "synonyms": [
+                "accomplished",
+                "all right",
+                "decent",
+                "not bad",
+                "satisfactory",
+                "well"
+            ],
+            "antonyms": [
+                "bad",
+                "evil",
+                "bad",
+                "poor"
+            ],
+            "word": "good",
+            "type": "adjective"
+        }
+    },
+    "gray": {
+        "verb": {
+            "definition": "- To become gray.\nVí dụ: My hair is beginning to gray.\n\n- To cause to become gray.\n\n- To turn progressively older, alluding to graying of hair through aging (used in context of the population of a geographic region)\nVí dụ: the graying of America\n\n- To give a soft effect to (a photograph) by covering the negative while printing with a ground-glass plate.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gray",
+            "type": "verb"
+        }
+    },
+    "biro": {
+        "noun": {
+            "definition": "- A BIRO brand ballpoint pen.\n\n- (by extension) Any ballpoint pen.\n\n- (by extension) Ink from a ballpoint pen.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "biro",
+            "type": "noun"
+        }
+    },
+    "brother": {
+        "interjection": {
+            "definition": "- Expressing exasperation.\nVí dụ: We're being forced to work overtime? Oh, brother!\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "brother",
+            "type": "interjection"
+        }
+    },
+    "craft": {
+        "noun": {
+            "definition": "- Strength; power; might; force .\n\n- Intellectual power; skill; art.\n\n- (obsolete in the general sense) A work or product of art .\n\n- A device, a means; a magical device, spell or enchantment .\n\n- Learning of the schools, scholarship; a branch of learning or knowledge, a science, especially one of the ‘seven liberal arts’ of the medieval universities .\n\n- Skill, skilfulness, art, especially the skill needed for a particular profession .\nVí dụ: The craft of writing plays.\n\n- (plural crafts) A branch of skilled work or trade, especially one requiring manual dexterity or artistic skill, but sometimes applied equally to any business, calling or profession; the skilled practice of a practical occupation .\nVí dụ: He learned his craft as an apprentice.\n\n- A trade or profession as embodied in its practitioners collectively; the members of a trade or handicraft as a body; an association of these; a trade's union, guild, or ‘company’ .\nVí dụ: She represented the craft of brewers.\n\n- (plural craft) A vehicle designed for navigation in or on water or air or through outer space .\n\n- Implements used in catching fish, such as net, line, or hook. Modern use primarily in whaling, as in harpoons, hand-lances, etc. .\n\n",
+            "synonyms": [
+                "art",
+                "business",
+                "handicraft",
+                "profession",
+                "trade",
+                "craftsmanship",
+                "workmanship"
+            ],
+            "antonyms": [],
+            "word": "craft",
+            "type": "noun"
+        }
+    },
+    "open": {
+        "adjective": {
+            "definition": "- Not closed\n\n- Not physically drawn together, closed, folded or contracted; extended\nVí dụ: an open hand; an open flower\n\n- Actively conducting or prepared to conduct business.\nVí dụ: Banks are not open on bank holidays.\n\n- Receptive.\nVí dụ: I am open to new ideas.\n\n- Public\nVí dụ: He published an open letter to the governor on a full page of the New York Times.\n\n- Candid, ingenuous, not subtle in character.\nVí dụ: The man is an open book.\n\n- (of a formula) Having a free variable.\n\n- (of a set) Which is part of a predefined collection of subsets of X, that defines a topological space on X.\n\n- (of a walk) Whose first and last vertices are different.\n\n- (of a file, document, etc.) In current use; mapped to part of memory.\nVí dụ: I couldn't save my changes because another user had the same file open.\n\n- Not fulfilled.\nVí dụ: I've got open orders for as many containers of red durum as you can get me.\n\n- Not settled or adjusted; not decided or determined; not closed or withdrawn from consideration.\nVí dụ: an open question\n\n- (stringed instruments) Of a note, played without pressing the string against the fingerboard.\n\n- (wind instruments) Of a note, played without closing any finger-hole, key or valve.\n\n- Not of a quality to prevent communication, as by closing waterways, blocking roads, etc.; hence, not frosty or inclement; mild; used of the weather or the climate.\nVí dụ: an open winter\n\n- (Of correspondence) Written or sent with the intention that it may made public or referred to at any trial, rather than by way of confidential private negotiation for a settlement. (Opposite of \"without prejudice\")\nVí dụ: You will observe that this is an open letter and we reserve the right to mention it to the judge should the matter come to trial.\n\n- Uttered with a relatively wide opening of the articulating organs; said of vowels.\n\n- Uttered, as a consonant, with the oral passage simply narrowed without closure.\n\n- (of a syllable) That ends in a vowel; not having a coda.\n\n- Made public, usable with a free licence and without proprietary components.\n\n- Resulting from an incision, puncture or any other process by which the skin no longer protects an internal part of the body.\n\n",
+            "synonyms": [
+                "free",
+                "accessible",
+                "unimpeded",
+                "free"
+            ],
+            "antonyms": [
+                "closed",
+                "shut",
+                "checked",
+                "closed",
+                "closed-source",
+                "proprietary"
+            ],
+            "word": "open",
+            "type": "adjective"
+        }
+    },
+    "closed": {
+        "adjective": {
+            "definition": "- Sealed, made inaccessible or impassable; not open.\n\n- (of a store or business) Not operating or conducting trade.\n\n- Not public.\nVí dụ: closed source  a closed committee\n\n- (of a set) Having an open complement.\n\n- (of a set) Such that its image under the specified operation is contained in it.\nVí dụ: The set of integers is closed under addition: \\forall x,y\\in\\mathbb{Z}\\,x+y\\in\\mathbb{Z}.\n\n- (of a formula) Lacking a free variable.\n\n- (of a walk) Whose first and last vertices are the same, forming a closed loop.\n\n- Formed by closing the mouth and nose passages completely, like the consonants /t/, /d/ and /p/.\n\n- Having the sound cut off sharply by a following consonant, like the /ɪ/ in pin.\n\n",
+            "synonyms": [
+                "shut"
+            ],
+            "antonyms": [
+                "open"
+            ],
+            "word": "closed",
+            "type": "adjective"
+        }
+    },
+    "shut": {
+        "adjective": {
+            "definition": "- Closed.\nVí dụ: A shut door barred our way into the house.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "shut",
+            "type": "adjective"
+        },
+        "noun": {
+            "definition": "- The act or time of shutting; close.\nVí dụ: the shut of a door\n\n- A door or cover; a shutter.\n\n- The line or place where two pieces of metal are welded together.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "shut",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To close, to stop from being open.\nVí dụ: Please shut the door.\n\n- To close, to stop being open.\nVí dụ: If you wait too long, the automatic door will shut.\n\n- To close a business temporarily, or (of a business) to be closed.\nVí dụ: The pharmacy is shut on Sunday.\n\n- To confine in an enclosed area.\nVí dụ: I shut the cat in the kitchen before going out.\n\n- To catch or snag in the act of shutting something.\nVí dụ: He's just shut his finger in the door.\n\n- To preclude; to exclude; to bar out.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "shut",
+            "type": "verb"
+        }
+    },
+    "all right": {
+        "adjective": {
+            "definition": "- Good; in acceptable, if not excellent condition.\nVí dụ: The car is all right. It gets me there, anyway.\n\n- In good health, unharmed.\nVí dụ: I had a headache earlier, but now I'm all right.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "all right",
+            "type": "adjective"
+        },
+        "adverb": {
+            "definition": "- Fairly well.\nVí dụ: That went all right, I suppose.\n\n- Most certainly; for sure.\nVí dụ: You taught them a lesson all right! They won't be back.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "all right",
+            "type": "adverb"
+        },
+        "interjection": {
+            "definition": "- Used to affirm, indicate agreement, or consent.\nVí dụ: All right, let's go then.\n\n- Used to indicate support, favor or encouragement.\nVí dụ: All right! They scored!\n\n- Used to fill space or pauses.\nVí dụ: All right, so what you suggest we do next?\n\n- Used as a general lead-in or beginning.\nVí dụ: All right, let's get started.\n\n- Used to express exasperation or frustration, often with already.\nVí dụ: All right, already! Let me finish what I was doing first, and then we can talk.\n\n- Term of greeting, equivalent to how are you or hello.\nVí dụ: All right, mate, how are things with you and the missus?\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "all right",
+            "type": "interjection"
+        }
+    },
+    "subsistence": {
+        "noun": {
+            "definition": "- Strength; power; might; force .\n\n- Intellectual power; skill; art.\n\n- (obsolete in the general sense) A work or product of art .\n\n- A device, a means; a magical device, spell or enchantment .\n\n- Learning of the schools, scholarship; a branch of learning or knowledge, a science, especially one of the ‘seven liberal arts’ of the medieval universities .\n\n- Skill, skilfulness, art, especially the skill needed for a particular profession .\nVí dụ: The craft of writing plays.\n\n- (plural crafts) A branch of skilled work or trade, especially one requiring manual dexterity or artistic skill, but sometimes applied equally to any business, calling or profession; the skilled practice of a practical occupation .\nVí dụ: He learned his craft as an apprentice.\n\n- A trade or profession as embodied in its practitioners collectively; the members of a trade or handicraft as a body; an association of these; a trade's union, guild, or ‘company’ .\nVí dụ: She represented the craft of brewers.\n\n- (plural craft) A vehicle designed for navigation in or on water or air or through outer space .\n\n- Implements used in catching fish, such as net, line, or hook. Modern use primarily in whaling, as in harpoons, hand-lances, etc. .\n\n",
+            "synonyms": [
+                "art",
+                "business",
+                "handicraft",
+                "profession",
+                "trade",
+                "craftsmanship",
+                "workmanship"
+            ],
+            "antonyms": [],
+            "word": "subsistence",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To make by hand and with much skill.\n\n- To construct, develop something (like a skilled craftsman).\nVí dụ: state crafting; the process of crafting global policing\n\n- To combine multiple items to form a new item, such as armour or medicine.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "subsistence",
+            "type": "verb"
+        }
+    },
+    "politician": {
+        "verb": {
+            "definition": "- To polish; to refine; to render polite.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "politician",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Well-mannered, civilized.\nVí dụ: It's not polite to use a mobile phone in a restaurant.\n\n- Smooth, polished, burnished.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "impolite",
+                "rude"
+            ],
+            "word": "politician",
+            "type": "adjective"
+        }
+    },
+    "handicraft": {
+        "noun": {
+            "definition": "- A trade requiring skill of hand; manual occupation; handcraft.\n\n- An artifact produced by handicraft.\n\n- A man who earns his living by handicraft; a handicraftsman.\n\n",
+            "synonyms": [
+                "handcraft"
+            ],
+            "antonyms": [],
+            "word": "handicraft",
+            "type": "noun"
+        }
+    },
+    "handcraft": {
+        "noun": {
+            "definition": "- Handicraft\n\n- The class of subjects for study that rely upon experimentation and observation.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "handcraft",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To engage in handcraft or handicraft.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "handcraft",
+            "type": "verb"
+        }
+    },
+    "bruch": {},
+    "fuck": {
+        "noun": {
+            "definition": "- An act of sexual intercourse.\n\n- A sexual partner, especially a casual one.\n\n- A highly contemptible person.\n\n- A thing of no value, a small amount.\nVí dụ: I don't give a fuck.\n\n",
+            "synonyms": [
+                "dickhead",
+                "shit"
+            ],
+            "antonyms": [],
+            "word": "fuck",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To have sexual intercourse, to copulate.\nVí dụ: Fighting for peace is like fucking for virginity.\n\n- To have sexual intercourse with.\n\n- To insert one’s penis, a dildo or other phallic object, into a specified orifice or cleft.\n\n- To put in an extremely difficult or impossible situation.\nVí dụ: I'm afraid they're gonna fuck you on this one.\n\n- To defraud, deface or otherwise treat badly.\nVí dụ: I got fucked at the used car lot.\n\n- Used to express great displeasure with someone or something.\nVí dụ: Fuck those jerks, and fuck their stupid rules!\n\n- (usually followed by up) To break, to destroy.\n\n- To make a joke at one's expense; to make fun of in an embarrassing manner.\n\n- To throw, to lob something. (angrily)\nVí dụ: He fucked the dirty cloth out the window.\n\n- To scold\nVí dụ: The sergeant fucked me upside down.\n\n",
+            "synonyms": [
+                "annihilate",
+                "obliterate",
+                "ruin",
+                "bang",
+                "do it",
+                "eff",
+                "have sex",
+                "hump",
+                "screw",
+                "shag",
+                "bang",
+                "eff",
+                "give someone one",
+                "hump",
+                "ream",
+                "screw",
+                "shag",
+                "bugger",
+                "eff",
+                "feck"
+            ],
+            "antonyms": [],
+            "word": "fuck",
+            "type": "verb"
+        },
+        "adverb": {
+            "definition": "- Used as an intensifier for the words \"yes\" and \"no\".\nVí dụ: Do you censor your swearing? – Fuck no.\n\n",
+            "synonyms": [
+                "god",
+                "heck",
+                "hell",
+                "shit"
+            ],
+            "antonyms": [],
+            "word": "fuck",
+            "type": "adverb"
+        },
+        "interjection": {
+            "definition": "- Expressing dismay or discontent.\nVí dụ: Fuck! Why do you have to be so difficult all the time?\n\n- Expressing surprise.\nVí dụ: Fuck! That movie was good.\n\n",
+            "synonyms": [
+                "fark",
+                "feck",
+                "fook",
+                "frick"
+            ],
+            "antonyms": [],
+            "word": "fuck",
+            "type": "interjection"
+        }
+    },
+    "pill": {
+        "noun": {
+            "definition": "- A small, usually round or cylindrical object designed for easy swallowing, usually containing some sort of medication.\n\n- (definite, i.e. used with \"the\") Contraceptive medication, usually in the form of a pill to be taken by a woman; an oral contraceptive pill.\nVí dụ: Jane went on the pill when she left for college.\n\n- A comical or entertaining person.\n\n- A contemptible, annoying, or unpleasant person.\n\n- A small piece of any substance, for example a ball of fibres formed on the surface of a textile by rubbing.\n\n- A baseball.\n\n- A bullet (projectile).\n\n- A rounded rectangle indicating the tag or category that an item belongs to.\n\n",
+            "synonyms": [
+                "cap",
+                "tablet"
+            ],
+            "antonyms": [],
+            "word": "pill",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- Of a woven fabric surface, to form small matted balls of fiber.\n\n- To form into the shape of a pill.\nVí dụ: Pilling is a skill rarely used by modern pharmacists.\n\n- To medicate with pills.\nVí dụ: She pills herself with all sorts of herbal medicines.\n\n- To persuade or convince someone of something.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "pill",
+            "type": "verb"
+        }
+    },
+    "nature": {
+        "noun": {
+            "definition": "- The natural world; that which consists of all things unaffected by or predating human technology, production, and design. (Compare ecosystem.)\nVí dụ: Nature never lies (i.e. tells untruths).\n\n- The innate characteristics of a thing. What something will tend by its own constitution, to be or do. Distinct from what might be expected or intended.\n\n- The summary of everything that has to do with biological, chemical and physical states and events in the physical universe.\n\n- Conformity to that which is natural, as distinguished from that which is artificial, or forced, or remote from actual experience.\n\n- Kind, sort; character; quality.\n\n- Physical constitution or existence; the vital powers; the natural life.\n\n- Natural affection or reverence.\n\n",
+            "synonyms": [
+                "quintessence",
+                "whatness"
+            ],
+            "antonyms": [],
+            "word": "nature",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To endow with natural qualities.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "nature",
+            "type": "verb"
+        }
+    },
+    "quintessence": {
+        "noun": {
+            "definition": "- A thing that is the most perfect example of its type; the most perfect embodiment of something; epitome, prototype.\n\n- A pure substance.\n\n- The essence of a thing in its purest and most concentrated form.\n\n- The fifth alchemical element, or essence, after earth, air, fire, and water\n\n- A hypothetical form of dark energy postulated to explain observations of an accelerating universe.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "quintessence",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To reduce to its purest and most concentrated essence.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "quintessence",
+            "type": "verb"
+        }
+    },
+    "accessible": {
+        "adjective": {
+            "definition": "- Easy of access or approach.\nVí dụ: an accessible town or mountain\n\n- (specifically) Built or designed as to be usable by people with disabilities.\nVí dụ: accessible public transport\n\n- (of a person) Easy to get along with.\n\n- (followed by to) Open to the influence of.\n\n- Obtainable; to be got at.\n\n- Easily understood or appreciated.\n\n- Capable of being used or seen.\n\n",
+            "synonyms": [
+                "approachable",
+                "easy-going",
+                "friendly",
+                "welcoming"
+            ],
+            "antonyms": [
+                "inaccessible"
+            ],
+            "word": "accessible",
+            "type": "adjective"
+        }
+    },
+    "approachable": {
+        "adjective": {
+            "definition": "- Easily approached; easy to talk to.\nVí dụ: Her boss was very approachable.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "approachable",
+            "type": "adjective"
+        }
+    },
+    "sort": {
+        "noun": {
+            "definition": "- A general type.\n\n- Manner; form of being or acting.\n\n- Condition above the vulgar; rank.\n\n- A person evaluated in a certain way (bad, good, strange, etc.).\n\n- Group, company.\n\n- A good-looking woman.\n\n- An act of sorting.\nVí dụ: I had a sort of my cupboard.\n\n- An algorithm for sorting a list of items into a particular sequence.\nVí dụ: Popular algorithms for sorts include quicksort and heapsort.\n\n- A piece of metal type used to print one letter, character, or symbol in a particular size and style.\n\n- A type.\n\n- Chance; lot; destiny.\n\n- A full set of anything, such as a pair of shoes, or a suit of clothes.\n\n",
+            "synonyms": [
+                "sort-out",
+                "algorithm",
+                "character",
+                "individual",
+                "person",
+                "type",
+                "genre",
+                "genus",
+                "kind",
+                "type",
+                "variety",
+                "glyph",
+                "type"
+            ],
+            "antonyms": [],
+            "word": "sort",
+            "type": "noun"
+        }
+    },
+    "workmanship": {
+        "noun": {
+            "definition": "- The skill of an artisan or craftsman.\n\n- The quality of something made by an artisan or craftsman.\n\n",
+            "synonyms": [
+                "craftsmanship"
+            ],
+            "antonyms": [],
+            "word": "workmanship",
+            "type": "noun"
+        }
+    },
+    "craftsmanship": {
+        "noun": {
+            "definition": "- The quality of being a craftsman.\n\n- An example of a craftsman's work.\nVí dụ: The craftsmanship on the antique chair was exquisite.\n\n",
+            "synonyms": [
+                "craftwork",
+                "workmanship"
+            ],
+            "antonyms": [],
+            "word": "craftsmanship",
+            "type": "noun"
+        }
+    },
+    "trade": {
+        "noun": {
+            "definition": "- Buying and selling of goods and services on a market.\n\n- A particular instance of buying or selling.\nVí dụ: I did no trades with them once the rumors started.\n\n- An instance of bartering items in exchange for one another.\n\n- Those who perform a particular kind of skilled work.\nVí dụ: The skilled trades were the first to organize modern labor unions.\n\n- Those engaged in an industry or group of related industries.\nVí dụ: It is not a retail showroom. It is only for the trade.\n\n- The skilled practice of a practical occupation.\nVí dụ: He learned his trade as an apprentice.\n\n- An occupation in the secondary sector, as opposed to an agricultural, professional or military one.\nVí dụ: After failing his entrance exams, he decided to go into a trade.\n\n- The business given to a commercial establishment by its customers.\nVí dụ: Even before noon there was considerable trade.\n\n- (chiefly in the plural) Steady winds blowing from east to west above and below the equator.\nVí dụ: They rode the trades going west.\n\n- (only as plural) A publication intended for participants in an industry or related group of industries.\nVí dụ: Rumors about layoffs are all over the trades.\n\n- A brief sexual encounter.\nVí dụ: Josh picked up some trade last night.\n\n- Instruments of any occupation.\n\n- Refuse or rubbish from a mine.\n\n- A track or trail; a way; a path; passage.\n\n- Course; custom; practice; occupation.\n\n",
+            "synonyms": [
+                "barter",
+                "deal",
+                "business",
+                "commerce",
+                "craft",
+                "patronage"
+            ],
+            "antonyms": [],
+            "word": "trade",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To engage in trade.\nVí dụ: This company trades (in) precious metal.\n\n- To be traded at a certain price or under certain conditions.\nVí dụ: Apple is trading at $200.\n\n- To give (something) in exchange for.\nVí dụ: Will you trade your precious watch for my earring?\n\n- To give someone a plant and receive a different one in return.\n\n- To do business; offer for sale as for one's livelihood.\n\n- To have dealings; to be concerned or associated (with).\n\n",
+            "synonyms": [
+                "deal",
+                "do business",
+                "exchange",
+                "swap",
+                "switch",
+                "truck"
+            ],
+            "antonyms": [],
+            "word": "trade",
+            "type": "verb"
+        }
+    },
+    "commerce": {
+        "noun": {
+            "definition": "- The exchange or buying and selling of commodities; especially the exchange of merchandise, on a large scale, between different places or communities; extended trade or traffic.\n\n- Social intercourse; the dealings of one person or class in society with another; familiarity.\n\n- Sexual intercourse.\n\n- An 18th-century French card game in which the cards are subject to exchange, barter, or trade.\n\n",
+            "synonyms": [
+                "communication",
+                "communion",
+                "dealings",
+                "interchange",
+                "intercourse",
+                "trade",
+                "traffic"
+            ],
+            "antonyms": [],
+            "word": "commerce",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To carry on trade; to traffic.\n\n- To hold intercourse; to commune.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "commerce",
+            "type": "verb"
+        }
+    },
+    "craftwork": {
+        "noun": {
+            "definition": "- Handicraft\n\n- An item produced by handicraft.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "craftwork",
+            "type": "noun"
+        }
+    },
+    "mundacity": {},
+    "audacity": {
+        "noun": {
+            "definition": "- Insolent boldness, especially when imprudent or unconventional.\nVí dụ: Somebody never pays his loans, yet he has the audacity to ask the bank for money.\n\n- Fearlessness, intrepidity or daring, especially with confident disregard for personal safety, conventional thought, or other restrictions.\n\n",
+            "synonyms": [
+                "audaciousness",
+                "outdaciousness",
+                "temerity"
+            ],
+            "antonyms": [],
+            "word": "audacity",
+            "type": "noun"
+        }
+    },
+    "a2": {},
+    "a": {
+        "noun": {
+            "definition": "- The name of the Latin script letter A/a.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "a",
+            "type": "noun"
+        }
+    },
+    "aaa": {
+        "noun": {
+            "definition": "- An alloy containing mercury.\n\n- A combination of different things.\n\n- One of the ingredients in an alloy.\n\n",
+            "synonyms": [
+                "alloy",
+                "blend",
+                "combo",
+                "compound",
+                "conglomerate",
+                "mixture"
+            ],
+            "antonyms": [],
+            "word": "aaa",
+            "type": "noun"
+        }
+    },
+    "goodbye": {
+        "noun": {
+            "definition": "- An utterance of goodbye, the wishing of farewell to someone.\nVí dụ: They made their good-byes.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "goodbye",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To say goodbye; to wish somebody farewell on parting.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "goodbye",
+            "type": "verb"
+        },
+        "interjection": {
+            "definition": "- Farewell; a formula used to another person or persons when the speaker, writer, or person addressed is departing.\n\n",
+            "synonyms": [
+                "cheerio",
+                "cheers",
+                "cheery-bye",
+                "toodle pip",
+                "adieu",
+                "farewell",
+                "TTFN",
+                "bye",
+                "bye-bye",
+                "catch you later",
+                "mind how you go",
+                "see ya",
+                "see you",
+                "so long",
+                "ta ta",
+                "tatty bye",
+                "toodeloo",
+                "toodles",
+                "ttyl",
+                "buh-bye",
+                "cya",
+                "hasta la vista",
+                "keep it real",
+                "later",
+                "laters",
+                "peace",
+                "peace out",
+                "take it easy",
+                "adios",
+                "arrivederci",
+                "au revoir",
+                "do svidaniya",
+                "do svidanya",
+                "sayonara"
+            ],
+            "antonyms": [],
+            "word": "goodbye",
+            "type": "interjection"
+        }
+    },
+    "cheery-bye": {},
+    "cheers": {
+        "noun": {
+            "definition": "- A cheerful attitude; happiness; a good, happy, or positive mood.\n\n- That which promotes good spirits or cheerfulness; provisions prepared for a feast; entertainment.\nVí dụ: a table loaded with good cheer\n\n- A cry expressing joy, approval or support such as \"hurray\".\nVí dụ: A cheer rose from the crowd.\n\n- A chant made in support of a team at a sports event.\n\n- One's facial expression or countenance.\n\n- One's attitude, mood.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "cheers",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To gladden; to make cheerful; often with up.\nVí dụ: We were cheered by the offer of a cup of tea.\n\n- To infuse life, courage, animation, or hope, into; to inspirit; to solace or comfort.\n\n- To applaud or encourage with cheers or shouts.\nVí dụ: The crowd cheered in support of the athletes.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "boo"
+            ],
+            "word": "cheers",
+            "type": "verb"
+        },
+        "interjection": {
+            "definition": "- A common toast used when drinking in company.\n\n- Goodbye, especially as a sign-off in an email or after writing a comment.\n\n- Thank you\n\n",
+            "synonyms": [
+                "bottoms up",
+                "chin chin",
+                "down the hatch",
+                "here’s mud in your eye",
+                "skoal",
+                "bye",
+                "catch you later",
+                "cheerio",
+                "laters",
+                "see you",
+                "see you after",
+                "see you later",
+                "see you later alligator",
+                "so long",
+                "ta-ta",
+                "ta",
+                "thanks"
+            ],
+            "antonyms": [],
+            "word": "cheers",
+            "type": "interjection"
+        }
+    },
+    "a2 level": {},
+    "next to": {
+        "preposition": {
+            "definition": "- Beside, alongside, by, adjacent to, or near.\nVí dụ: Cleanliness is next to godliness.\n\n- Immediately after, in choice or consideration; aside from.\n\n- Compared to, in comparison with.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "next to",
+            "type": "preposition"
+        }
+    }
+}
