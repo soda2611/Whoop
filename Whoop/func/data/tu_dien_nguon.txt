@@ -37,33 +37,12 @@
         }
     },
     "gay": {
-        "noun": {
-            "definition": "- (chiefly in plural or attributive) A homosexual, especially a male homosexual; see also lesbian.\n\n- Something which is bright or colorful, such as a picture or a flower.\n\n- An ornament, a knick-knack.\n\n",
-            "synonyms": [],
-            "antonyms": [],
-            "word": "gay",
-            "type": "noun"
-        },
-        "verb": {
-            "definition": "- To make happy or cheerful.\n\n- To cause (something, e.g. AIDS) to be associated with homosexual people.\n\n",
-            "synonyms": [],
-            "antonyms": [],
-            "word": "gay",
-            "type": "verb"
-        },
         "adjective": {
             "definition": "- (possibly obsolete) Happy, joyful, and lively.\nVí dụ: The Gay Science\n\n- Quick, fast.\n\n- (possibly obsolete) Festive, bright, or colourful.\nVí dụ: Pennsylvania Dutch include the plain folk and the gay folk.\n\n- Sexually promiscuous (of any gender), (sometimes particularly) engaged in prostitution.\n\n- Homosexual:\n\n- A pejorative:\n\n- (of a dog's tail) Upright or curved over the back.\n\n- (possibly obsolete) Considerable, great, large in number, size, or degree.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "gay",
             "type": "adjective"
-        },
-        "adverb": {
-            "definition": "- (possibly obsolete) Considerably, very.\n\n",
-            "synonyms": [],
-            "antonyms": [],
-            "word": "gay",
-            "type": "adverb"
         }
     },
     "harmony": {
@@ -490,7 +469,7 @@
             "type": "verb"
         }
     },
-    "bruch": {},
+    "bruch": "Không tìm thấy từ",
     "fuck": {
         "noun": {
             "definition": "- An act of sexual intercourse.\n\n- A sexual partner, especially a casual one.\n\n- A highly contemptible person.\n\n- A thing of no value, a small amount.\nVí dụ: I don't give a fuck.\n\n",
@@ -743,7 +722,7 @@
             "type": "noun"
         }
     },
-    "mundacity": {},
+    "mundacity": "Không tìm thấy từ",
     "audacity": {
         "noun": {
             "definition": "- Insolent boldness, especially when imprudent or unconventional.\nVí dụ: Somebody never pays his loans, yet he has the audacity to ask the bank for money.\n\n- Fearlessness, intrepidity or daring, especially with confident disregard for personal safety, conventional thought, or other restrictions.\n\n",
@@ -757,7 +736,7 @@
             "type": "noun"
         }
     },
-    "a2": {},
+    "a2": "Không tìm thấy từ",
     "a": {
         "noun": {
             "definition": "- The name of the Latin script letter A/a.\n\n",
@@ -841,7 +820,7 @@
             "type": "interjection"
         }
     },
-    "cheery-bye": {},
+    "cheery-bye": "Không tìm thấy từ",
     "cheers": {
         "noun": {
             "definition": "- A cheerful attitude; happiness; a good, happy, or positive mood.\n\n- That which promotes good spirits or cheerfulness; provisions prepared for a feast; entertainment.\nVí dụ: a table loaded with good cheer\n\n- A cry expressing joy, approval or support such as \"hurray\".\nVí dụ: A cheer rose from the crowd.\n\n- A chant made in support of a team at a sports event.\n\n- One's facial expression or countenance.\n\n- One's attitude, mood.\n\n",
@@ -885,7 +864,7 @@
             "type": "interjection"
         }
     },
-    "a2 level": {},
+    "a2 level": "Không tìm thấy từ",
     "next to": {
         "preposition": {
             "definition": "- Beside, alongside, by, adjacent to, or near.\nVí dụ: Cleanliness is next to godliness.\n\n- Immediately after, in choice or consideration; aside from.\n\n- Compared to, in comparison with.\n\n",
@@ -893,6 +872,15 @@
             "antonyms": [],
             "word": "next to",
             "type": "preposition"
+        }
+    },
+    "pilose": {
+        "adjective": {
+            "definition": "- Covered with fine hair.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "pilose",
+            "type": "adjective"
         }
     }
 }
