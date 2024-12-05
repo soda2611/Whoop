@@ -633,5 +633,266 @@
             "word": "approachable",
             "type": "adjective"
         }
+    },
+    "sort": {
+        "noun": {
+            "definition": "- A general type.\n\n- Manner; form of being or acting.\n\n- Condition above the vulgar; rank.\n\n- A person evaluated in a certain way (bad, good, strange, etc.).\n\n- Group, company.\n\n- A good-looking woman.\n\n- An act of sorting.\nVí dụ: I had a sort of my cupboard.\n\n- An algorithm for sorting a list of items into a particular sequence.\nVí dụ: Popular algorithms for sorts include quicksort and heapsort.\n\n- A piece of metal type used to print one letter, character, or symbol in a particular size and style.\n\n- A type.\n\n- Chance; lot; destiny.\n\n- A full set of anything, such as a pair of shoes, or a suit of clothes.\n\n",
+            "synonyms": [
+                "sort-out",
+                "algorithm",
+                "character",
+                "individual",
+                "person",
+                "type",
+                "genre",
+                "genus",
+                "kind",
+                "type",
+                "variety",
+                "glyph",
+                "type"
+            ],
+            "antonyms": [],
+            "word": "sort",
+            "type": "noun"
+        }
+    },
+    "workmanship": {
+        "noun": {
+            "definition": "- The skill of an artisan or craftsman.\n\n- The quality of something made by an artisan or craftsman.\n\n",
+            "synonyms": [
+                "craftsmanship"
+            ],
+            "antonyms": [],
+            "word": "workmanship",
+            "type": "noun"
+        }
+    },
+    "craftsmanship": {
+        "noun": {
+            "definition": "- The quality of being a craftsman.\n\n- An example of a craftsman's work.\nVí dụ: The craftsmanship on the antique chair was exquisite.\n\n",
+            "synonyms": [
+                "craftwork",
+                "workmanship"
+            ],
+            "antonyms": [],
+            "word": "craftsmanship",
+            "type": "noun"
+        }
+    },
+    "trade": {
+        "noun": {
+            "definition": "- Buying and selling of goods and services on a market.\n\n- A particular instance of buying or selling.\nVí dụ: I did no trades with them once the rumors started.\n\n- An instance of bartering items in exchange for one another.\n\n- Those who perform a particular kind of skilled work.\nVí dụ: The skilled trades were the first to organize modern labor unions.\n\n- Those engaged in an industry or group of related industries.\nVí dụ: It is not a retail showroom. It is only for the trade.\n\n- The skilled practice of a practical occupation.\nVí dụ: He learned his trade as an apprentice.\n\n- An occupation in the secondary sector, as opposed to an agricultural, professional or military one.\nVí dụ: After failing his entrance exams, he decided to go into a trade.\n\n- The business given to a commercial establishment by its customers.\nVí dụ: Even before noon there was considerable trade.\n\n- (chiefly in the plural) Steady winds blowing from east to west above and below the equator.\nVí dụ: They rode the trades going west.\n\n- (only as plural) A publication intended for participants in an industry or related group of industries.\nVí dụ: Rumors about layoffs are all over the trades.\n\n- A brief sexual encounter.\nVí dụ: Josh picked up some trade last night.\n\n- Instruments of any occupation.\n\n- Refuse or rubbish from a mine.\n\n- A track or trail; a way; a path; passage.\n\n- Course; custom; practice; occupation.\n\n",
+            "synonyms": [
+                "barter",
+                "deal",
+                "business",
+                "commerce",
+                "craft",
+                "patronage"
+            ],
+            "antonyms": [],
+            "word": "trade",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To engage in trade.\nVí dụ: This company trades (in) precious metal.\n\n- To be traded at a certain price or under certain conditions.\nVí dụ: Apple is trading at $200.\n\n- To give (something) in exchange for.\nVí dụ: Will you trade your precious watch for my earring?\n\n- To give someone a plant and receive a different one in return.\n\n- To do business; offer for sale as for one's livelihood.\n\n- To have dealings; to be concerned or associated (with).\n\n",
+            "synonyms": [
+                "deal",
+                "do business",
+                "exchange",
+                "swap",
+                "switch",
+                "truck"
+            ],
+            "antonyms": [],
+            "word": "trade",
+            "type": "verb"
+        }
+    },
+    "commerce": {
+        "noun": {
+            "definition": "- The exchange or buying and selling of commodities; especially the exchange of merchandise, on a large scale, between different places or communities; extended trade or traffic.\n\n- Social intercourse; the dealings of one person or class in society with another; familiarity.\n\n- Sexual intercourse.\n\n- An 18th-century French card game in which the cards are subject to exchange, barter, or trade.\n\n",
+            "synonyms": [
+                "communication",
+                "communion",
+                "dealings",
+                "interchange",
+                "intercourse",
+                "trade",
+                "traffic"
+            ],
+            "antonyms": [],
+            "word": "commerce",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To carry on trade; to traffic.\n\n- To hold intercourse; to commune.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "commerce",
+            "type": "verb"
+        }
+    },
+    "craftwork": {
+        "noun": {
+            "definition": "- Handicraft\n\n- An item produced by handicraft.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "craftwork",
+            "type": "noun"
+        }
+    },
+    "mundacity": {},
+    "audacity": {
+        "noun": {
+            "definition": "- Insolent boldness, especially when imprudent or unconventional.\nVí dụ: Somebody never pays his loans, yet he has the audacity to ask the bank for money.\n\n- Fearlessness, intrepidity or daring, especially with confident disregard for personal safety, conventional thought, or other restrictions.\n\n",
+            "synonyms": [
+                "audaciousness",
+                "outdaciousness",
+                "temerity"
+            ],
+            "antonyms": [],
+            "word": "audacity",
+            "type": "noun"
+        }
+    },
+    "a2": {},
+    "a": {
+        "noun": {
+            "definition": "- The name of the Latin script letter A/a.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "a",
+            "type": "noun"
+        }
+    },
+    "aaa": {
+        "noun": {
+            "definition": "- An alloy containing mercury.\n\n- A combination of different things.\n\n- One of the ingredients in an alloy.\n\n",
+            "synonyms": [
+                "alloy",
+                "blend",
+                "combo",
+                "compound",
+                "conglomerate",
+                "mixture"
+            ],
+            "antonyms": [],
+            "word": "aaa",
+            "type": "noun"
+        }
+    },
+    "goodbye": {
+        "noun": {
+            "definition": "- An utterance of goodbye, the wishing of farewell to someone.\nVí dụ: They made their good-byes.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "goodbye",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To say goodbye; to wish somebody farewell on parting.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "goodbye",
+            "type": "verb"
+        },
+        "interjection": {
+            "definition": "- Farewell; a formula used to another person or persons when the speaker, writer, or person addressed is departing.\n\n",
+            "synonyms": [
+                "cheerio",
+                "cheers",
+                "cheery-bye",
+                "toodle pip",
+                "adieu",
+                "farewell",
+                "TTFN",
+                "bye",
+                "bye-bye",
+                "catch you later",
+                "mind how you go",
+                "see ya",
+                "see you",
+                "so long",
+                "ta ta",
+                "tatty bye",
+                "toodeloo",
+                "toodles",
+                "ttyl",
+                "buh-bye",
+                "cya",
+                "hasta la vista",
+                "keep it real",
+                "later",
+                "laters",
+                "peace",
+                "peace out",
+                "take it easy",
+                "adios",
+                "arrivederci",
+                "au revoir",
+                "do svidaniya",
+                "do svidanya",
+                "sayonara"
+            ],
+            "antonyms": [],
+            "word": "goodbye",
+            "type": "interjection"
+        }
+    },
+    "cheery-bye": {},
+    "cheers": {
+        "noun": {
+            "definition": "- A cheerful attitude; happiness; a good, happy, or positive mood.\n\n- That which promotes good spirits or cheerfulness; provisions prepared for a feast; entertainment.\nVí dụ: a table loaded with good cheer\n\n- A cry expressing joy, approval or support such as \"hurray\".\nVí dụ: A cheer rose from the crowd.\n\n- A chant made in support of a team at a sports event.\n\n- One's facial expression or countenance.\n\n- One's attitude, mood.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "cheers",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To gladden; to make cheerful; often with up.\nVí dụ: We were cheered by the offer of a cup of tea.\n\n- To infuse life, courage, animation, or hope, into; to inspirit; to solace or comfort.\n\n- To applaud or encourage with cheers or shouts.\nVí dụ: The crowd cheered in support of the athletes.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "boo"
+            ],
+            "word": "cheers",
+            "type": "verb"
+        },
+        "interjection": {
+            "definition": "- A common toast used when drinking in company.\n\n- Goodbye, especially as a sign-off in an email or after writing a comment.\n\n- Thank you\n\n",
+            "synonyms": [
+                "bottoms up",
+                "chin chin",
+                "down the hatch",
+                "here’s mud in your eye",
+                "skoal",
+                "bye",
+                "catch you later",
+                "cheerio",
+                "laters",
+                "see you",
+                "see you after",
+                "see you later",
+                "see you later alligator",
+                "so long",
+                "ta-ta",
+                "ta",
+                "thanks"
+            ],
+            "antonyms": [],
+            "word": "cheers",
+            "type": "interjection"
+        }
+    },
+    "a2 level": {},
+    "next to": {
+        "preposition": {
+            "definition": "- Beside, alongside, by, adjacent to, or near.\nVí dụ: Cleanliness is next to godliness.\n\n- Immediately after, in choice or consideration; aside from.\n\n- Compared to, in comparison with.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "next to",
+            "type": "preposition"
+        }
     }
 }
