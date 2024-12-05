@@ -180,7 +180,7 @@ class home(MDBoxLayout, TouchBehavior):
         return morebutton
 
     def create_chips(self, text):
-        return MDFillRoundFlatButton(text=text, theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=15*scale, on_press=lambda instance: self.search_button_pressed(instance, text))
+        return MDFillRoundFlatButton(text=text, theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=15*scale, on_press=lambda instance: self.search_button_pressed(instance, [text]))
 
     def create_content_box(self, text):
         try:
@@ -219,7 +219,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.scrollview.add_widget(add_data())
      
     def refresh(self, instance, dict_):
-        self.scrollview.scroll_to(home__[0])
+        if home__: self.scrollview.scroll_to(home__[0])
         for i in range(len(home__)):
             try:
                 word=random.choice(word__)
@@ -300,7 +300,7 @@ class home(MDBoxLayout, TouchBehavior):
         if self.search_thread:
             self.search_thread.cancel()
         if self.text_input.input.text!="":
-            self.search_thread = threading.Timer(0.5, self.search_button_pressed, args=(instance, self.text_input.input.text))
+            self.search_thread = threading.Timer(0.5, self.search_button_pressed, args=(instance, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split())))))
             self.search_thread.start()
         else:
             self.home(instance)
@@ -326,7 +326,7 @@ class home(MDBoxLayout, TouchBehavior):
 
     def back(self, instance):
         global _back_
-        if len(_back_)>=2: self.search_button_pressed(None, _back_[-2]["type"], callback=True, temp=_back_[-2])
+        if len(_back_)>=2: self.search_button_pressed(None, _back_[-2]["type"], value=False, callback=True, temp=_back_[-2])
         _back_=_back_[::-1][1:][::-1]
         if len(_back_)<2: 
             self.progress_box.height=5*scale
@@ -346,7 +346,7 @@ class home(MDBoxLayout, TouchBehavior):
         global result
         self.scrollview.do_scroll_x, self.scrollview.do_scroll_y=False, True
         if not temp:
-            self.input_text=word_detector(spelling_checker_for_SOD(" ".join(input_text.lower().split())))
+            self.input_text=input_text
             if len(self.input_text)==1:
                 result=SOD(self.input_text, database_path="func/data/tu_dien_nguon.txt")
                 Clock.schedule_once(self.update_UI)
@@ -376,6 +376,7 @@ class home(MDBoxLayout, TouchBehavior):
                         self.result_box.add_widget(self.result_template)
                     
                         self.synonyms_box.clear_widgets()
+                        self.synonyms.scroll_x=0
                         head=MDLabel(text="Từ đồng nghĩa", halign="center", font_style="main", size_hint=(1,None), height=25*scale, pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
                         if result[i]["synonyms"]!=[]:
                             self.result_box.add_widget(head)
@@ -384,6 +385,7 @@ class home(MDBoxLayout, TouchBehavior):
                                 self.synonyms_box.add_widget(self.create_chips(j))
 
                         self.antonyms_box.clear_widgets()
+                        self.antonyms.scroll_x=0
                         head=MDLabel(text="Từ trái nghĩa", halign="center", font_style="main", size_hint=(1,None), height=25*scale, pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
                         if result[i]["antonyms"]!=[]:
                             self.result_box.add_widget(head)
