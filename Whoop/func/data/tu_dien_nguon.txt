@@ -469,7 +469,6 @@
             "type": "verb"
         }
     },
-    "bruch": "Không tìm thấy từ",
     "fuck": {
         "noun": {
             "definition": "- An act of sexual intercourse.\n\n- A sexual partner, especially a casual one.\n\n- A highly contemptible person.\n\n- A thing of no value, a small amount.\nVí dụ: I don't give a fuck.\n\n",
@@ -722,7 +721,6 @@
             "type": "noun"
         }
     },
-    "mundacity": "Không tìm thấy từ",
     "audacity": {
         "noun": {
             "definition": "- Insolent boldness, especially when imprudent or unconventional.\nVí dụ: Somebody never pays his loans, yet he has the audacity to ask the bank for money.\n\n- Fearlessness, intrepidity or daring, especially with confident disregard for personal safety, conventional thought, or other restrictions.\n\n",
@@ -736,7 +734,6 @@
             "type": "noun"
         }
     },
-    "a2": "Không tìm thấy từ",
     "a": {
         "noun": {
             "definition": "- The name of the Latin script letter A/a.\n\n",
@@ -820,7 +817,6 @@
             "type": "interjection"
         }
     },
-    "cheery-bye": "Không tìm thấy từ",
     "cheers": {
         "noun": {
             "definition": "- A cheerful attitude; happiness; a good, happy, or positive mood.\n\n- That which promotes good spirits or cheerfulness; provisions prepared for a feast; entertainment.\nVí dụ: a table loaded with good cheer\n\n- A cry expressing joy, approval or support such as \"hurray\".\nVí dụ: A cheer rose from the crowd.\n\n- A chant made in support of a team at a sports event.\n\n- One's facial expression or countenance.\n\n- One's attitude, mood.\n\n",
@@ -864,7 +860,6 @@
             "type": "interjection"
         }
     },
-    "a2 level": "Không tìm thấy từ",
     "next to": {
         "preposition": {
             "definition": "- Beside, alongside, by, adjacent to, or near.\nVí dụ: Cleanliness is next to godliness.\n\n- Immediately after, in choice or consideration; aside from.\n\n- Compared to, in comparison with.\n\n",
