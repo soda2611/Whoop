@@ -82,7 +82,7 @@ def config():
     data_=SOD_word_list()
     word__=[i for i in data_]
     source=word_data()
-    home__={}
+    home__=[]
     queried={}
     version=settings["version"]
 
