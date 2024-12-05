@@ -27,9 +27,6 @@ class setting(MDBoxLayout):
         )
 
         self.search_thread=None
-        self.icon=MDIconButton(icon="check-circle", theme_icon_color="Custom", icon_color=primarycolor, size_hint=(None, None), pos_hint={"center_x": 0.5})
-        self.got_check=None
-        self.got_font_check=None
         self.touch_count=0
         self.timer = None
         self.back_button=MDIconButton(icon="arrow-left", size_hint=(None, None), pos_hint={"left": 0})
@@ -39,34 +36,11 @@ class setting(MDBoxLayout):
         self.personalize.bind(minimum_height=self.personalize.setter('height'))
         self.scrollview.add_widget(self.personalize)
         self.changecolor=MDLabel(text="Cá nhân hóa với bảng màu", font_style="H6", halign="left", size_hint=(1,None), height=30*scale, pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
-        self.color_palette_scroll=change_palette(self.create_palette)
+        self.color_palette_scroll=change_palette()
         self.change_fonts=MDLabel(text="Fonts", font_style="H6", halign="left", size_hint=(1,None), height=30*scale, pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
-        self.font_scroll=change_fonts(self.create_preview)
-        self.color_palette_scroll.scroll_to(self.got_check)
-        self.font_scroll.scroll_to(self.got_font_check)
+        self.font_scroll=change_fonts()
         self.info=MDFillRoundFlatButton(text=f"Phiên bản: SOD {version}\nNgày phát hành: Unknown    UID: {settings['uid']}", font_style="Caption", halign="center", size_hint=(0.75,None), height=35*scale, pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=bg)
         self.info.bind(on_release=self.on_touch)
-        self.dialog = MDDialog(
-            title="Cài đặt liên quan đến cá nhân hóa sẽ được áp dụng khi bạn khởi động lại ứng dụng",
-            type="alert",
-            buttons=[
-                MDFillRoundFlatButton(
-                    text="Khởi động lại",
-                    md_bg_color=btn,
-                    theme_text_color="Custom",
-                    text_color=secondarycolor,
-                    on_press=self.restart
-                ),
-                MDFillRoundFlatButton(
-                    text="Đóng",
-                    md_bg_color=btn,
-                    theme_text_color="Custom",
-                    text_color=secondarycolor
-                )
-            ],
-            md_bg_color=boxbg
-        )
-        self.dialog.buttons[1].bind(on_release=self.dialog.dismiss)
 
         '''self.notification=MDLabel(text="Bạn không thể thay đổi bất cứ cài đặt nào của ứng dụng trong phiên bản này. Vui lòng chờ phiên bản cập nhật tiếp theo.", font_style="H6", halign="center", size_hint=(0.75,1), pos_hint={"center_x": 0.5})
         self.add_widget(self.notification)'''
@@ -78,57 +52,6 @@ class setting(MDBoxLayout):
         self.personalize.add_widget(self.change_fonts)
         self.personalize.add_widget(self.font_scroll)
         self.add_widget(self.info)
-
-    def restart(self, instance):
-        set_new_config()
-        subprocess.Popen(["py", "UI.py"], start_new_session=True)
-        os.kill(os.getpid(), signal.SIGTERM)
-        
-    def create_palette(self, i):
-        self.color=MDCard(md_bg_color=(1,1,1,1), orientation="vertical", size_hint=(None, None), width=50*scale, height=200*scale, pos_hint={"center_x": 0.5}, padding=[10*scale, 10*scale, 10*scale, 10*scale], ripple_behavior=True)
-        self.color.radius=[i*scale for i in self.color.radius]
-        theme=[]
-        for j in i:
-            theme.append([int(j[0])/255,int(j[1])/255,int(j[2])/255, 1])
-        for j in i[:4]:
-            self.color1=MDBoxLayout(md_bg_color=(int(j[0])/255,int(j[1])/255,int(j[2])/255, 1),size_hint=(1,0.25), pos_hint={"center_x":0.5})
-            self.color.add_widget(self.color1)
-        if [[str(int(i*255)) for i in bg[:-1]], [str(int(i*255)) for i in boxbg[:-1]], [str(int(i*255)) for i in menubg[:-1]], [str(int(i*255)) for i in btn[:-1]]]==i[:4]:
-            self.color.height=250*scale
-            self.color.add_widget(self.icon)
-            self.got_check=self.color
-        self.color.bind(on_press=lambda instance: self.change_color_theme(instance, theme[0], theme[1], theme[2], theme[3], theme[4], theme[5]))
-
-        return self.color
-
-    def change_color_theme(self, instance, new_bg, new_boxbg, new_menubg, new_btn, new_primarycolor, new_secondarycolor):
-        self.got_check.remove_widget(self.icon)
-        self.got_check.height=200*scale
-        self.got_check=instance
-        instance.height=250*scale
-        instance.add_widget(self.icon)
-        self.color_palette_scroll.scroll_to(self.got_check)
-        ui.settings["current palette"]="; ".join([", ".join([str(int(i*255)) for i in new_bg][:-1]),", ".join([str(int(i*255)) for i in new_boxbg][:-1]),", ".join([str(int(i*255)) for i in new_menubg][:-1]),", ".join([str(int(i*255)) for i in new_btn][:-1]), ", ".join([str(int(i*255)) for i in new_primarycolor][:-1]), ", ".join([str(int(i*255)) for i in new_secondarycolor][:-1])])
-        self.dialog.open()
-
-    def create_preview(self, i):
-        self.font=MDFillRoundFlatIconButton(text=i, theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, font_name=f"func/setting/fonts/{i}.ttf", font_size=17*scale)
-        if i==settings["fonts"]:
-            self.font.icon='check-circle'
-            self.font.icon_color=secondarycolor
-            self.got_font_check=self.font
-        self.font.bind(on_press=lambda instance: self.change_font(instance, i))
-
-        return self.font
-    
-    def change_font(self, instance, i):
-        self.got_font_check.icon=''
-        self.got_font_check=instance
-        instance.icon='check-circle'
-        instance.icon_color=secondarycolor
-        self.font_scroll.scroll_to(self.got_font_check)
-        ui.settings["fonts"]=i
-        self.dialog.open()
 
     def back(self, instance):
         sm.transition.direction = "right"

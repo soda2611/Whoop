@@ -489,5 +489,149 @@
             "word": "handcraft",
             "type": "verb"
         }
+    },
+    "bruch": {},
+    "fuck": {
+        "noun": {
+            "definition": "- An act of sexual intercourse.\n\n- A sexual partner, especially a casual one.\n\n- A highly contemptible person.\n\n- A thing of no value, a small amount.\nVí dụ: I don't give a fuck.\n\n",
+            "synonyms": [
+                "dickhead",
+                "shit"
+            ],
+            "antonyms": [],
+            "word": "fuck",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To have sexual intercourse, to copulate.\nVí dụ: Fighting for peace is like fucking for virginity.\n\n- To have sexual intercourse with.\n\n- To insert one’s penis, a dildo or other phallic object, into a specified orifice or cleft.\n\n- To put in an extremely difficult or impossible situation.\nVí dụ: I'm afraid they're gonna fuck you on this one.\n\n- To defraud, deface or otherwise treat badly.\nVí dụ: I got fucked at the used car lot.\n\n- Used to express great displeasure with someone or something.\nVí dụ: Fuck those jerks, and fuck their stupid rules!\n\n- (usually followed by up) To break, to destroy.\n\n- To make a joke at one's expense; to make fun of in an embarrassing manner.\n\n- To throw, to lob something. (angrily)\nVí dụ: He fucked the dirty cloth out the window.\n\n- To scold\nVí dụ: The sergeant fucked me upside down.\n\n",
+            "synonyms": [
+                "annihilate",
+                "obliterate",
+                "ruin",
+                "bang",
+                "do it",
+                "eff",
+                "have sex",
+                "hump",
+                "screw",
+                "shag",
+                "bang",
+                "eff",
+                "give someone one",
+                "hump",
+                "ream",
+                "screw",
+                "shag",
+                "bugger",
+                "eff",
+                "feck"
+            ],
+            "antonyms": [],
+            "word": "fuck",
+            "type": "verb"
+        },
+        "adverb": {
+            "definition": "- Used as an intensifier for the words \"yes\" and \"no\".\nVí dụ: Do you censor your swearing? – Fuck no.\n\n",
+            "synonyms": [
+                "god",
+                "heck",
+                "hell",
+                "shit"
+            ],
+            "antonyms": [],
+            "word": "fuck",
+            "type": "adverb"
+        },
+        "interjection": {
+            "definition": "- Expressing dismay or discontent.\nVí dụ: Fuck! Why do you have to be so difficult all the time?\n\n- Expressing surprise.\nVí dụ: Fuck! That movie was good.\n\n",
+            "synonyms": [
+                "fark",
+                "feck",
+                "fook",
+                "frick"
+            ],
+            "antonyms": [],
+            "word": "fuck",
+            "type": "interjection"
+        }
+    },
+    "pill": {
+        "noun": {
+            "definition": "- A small, usually round or cylindrical object designed for easy swallowing, usually containing some sort of medication.\n\n- (definite, i.e. used with \"the\") Contraceptive medication, usually in the form of a pill to be taken by a woman; an oral contraceptive pill.\nVí dụ: Jane went on the pill when she left for college.\n\n- A comical or entertaining person.\n\n- A contemptible, annoying, or unpleasant person.\n\n- A small piece of any substance, for example a ball of fibres formed on the surface of a textile by rubbing.\n\n- A baseball.\n\n- A bullet (projectile).\n\n- A rounded rectangle indicating the tag or category that an item belongs to.\n\n",
+            "synonyms": [
+                "cap",
+                "tablet"
+            ],
+            "antonyms": [],
+            "word": "pill",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- Of a woven fabric surface, to form small matted balls of fiber.\n\n- To form into the shape of a pill.\nVí dụ: Pilling is a skill rarely used by modern pharmacists.\n\n- To medicate with pills.\nVí dụ: She pills herself with all sorts of herbal medicines.\n\n- To persuade or convince someone of something.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "pill",
+            "type": "verb"
+        }
+    },
+    "nature": {
+        "noun": {
+            "definition": "- The natural world; that which consists of all things unaffected by or predating human technology, production, and design. (Compare ecosystem.)\nVí dụ: Nature never lies (i.e. tells untruths).\n\n- The innate characteristics of a thing. What something will tend by its own constitution, to be or do. Distinct from what might be expected or intended.\n\n- The summary of everything that has to do with biological, chemical and physical states and events in the physical universe.\n\n- Conformity to that which is natural, as distinguished from that which is artificial, or forced, or remote from actual experience.\n\n- Kind, sort; character; quality.\n\n- Physical constitution or existence; the vital powers; the natural life.\n\n- Natural affection or reverence.\n\n",
+            "synonyms": [
+                "quintessence",
+                "whatness"
+            ],
+            "antonyms": [],
+            "word": "nature",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To endow with natural qualities.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "nature",
+            "type": "verb"
+        }
+    },
+    "quintessence": {
+        "noun": {
+            "definition": "- A thing that is the most perfect example of its type; the most perfect embodiment of something; epitome, prototype.\n\n- A pure substance.\n\n- The essence of a thing in its purest and most concentrated form.\n\n- The fifth alchemical element, or essence, after earth, air, fire, and water\n\n- A hypothetical form of dark energy postulated to explain observations of an accelerating universe.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "quintessence",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To reduce to its purest and most concentrated essence.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "quintessence",
+            "type": "verb"
+        }
+    },
+    "accessible": {
+        "adjective": {
+            "definition": "- Easy of access or approach.\nVí dụ: an accessible town or mountain\n\n- (specifically) Built or designed as to be usable by people with disabilities.\nVí dụ: accessible public transport\n\n- (of a person) Easy to get along with.\n\n- (followed by to) Open to the influence of.\n\n- Obtainable; to be got at.\n\n- Easily understood or appreciated.\n\n- Capable of being used or seen.\n\n",
+            "synonyms": [
+                "approachable",
+                "easy-going",
+                "friendly",
+                "welcoming"
+            ],
+            "antonyms": [
+                "inaccessible"
+            ],
+            "word": "accessible",
+            "type": "adjective"
+        }
+    },
+    "approachable": {
+        "adjective": {
+            "definition": "- Easily approached; easy to talk to.\nVí dụ: Her boss was very approachable.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "approachable",
+            "type": "adjective"
+        }
     }
 }

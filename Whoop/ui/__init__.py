@@ -118,6 +118,11 @@ def config():
     
     return bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, engine, word__, source, home__, queried, version, data_
 
+def restart(instance):
+    set_new_config()
+    subprocess.Popen(["py", "UI.py"], start_new_session=True)
+    os.kill(os.getpid(), signal.SIGTERM)
+
 bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, engine, word__, source, home__, queried, version, data_=config()
 firstscreen=None
 secondscreen=None
