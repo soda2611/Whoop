@@ -1,4 +1,3 @@
-import ui as ui
 from ui import *
 from ui.setting.widget.change_palette import change_palette
 from ui.setting.widget.change_fonts import change_fonts
@@ -16,15 +15,42 @@ class setting(MDBoxLayout):
         self.overlay.add_widget(MDLabel(text="Đang cập nhật...", font_style="H6", halign="center", valign="middle", pos_hint={"center_x": 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=primarycolor))
 
         self.success=MDDialog(
-            title="Cập nhật thành công.\nKhởi động lại để áp dụng dữ liệu mới",
+            title="Cập nhật thành công.",
             type="alert",
+            text="Khởi động lại để áp dụng dữ liệu mới.",
+            buttons=[
+                MDFillRoundFlatButton(
+                    text="Khởi động lại",
+                    md_bg_color=btn,
+                    theme_text_color="Custom",
+                    text_color=secondarycolor,
+                    on_press=restart
+                ),
+                MDFillRoundFlatButton(
+                    text="Đóng",
+                    md_bg_color=btn,
+                    theme_text_color="Custom",
+                    text_color=secondarycolor
+                )
+            ],
             md_bg_color=boxbg
         )
+        self.success.buttons[1].bind(on_release=self.success.dismiss)
+
         self.failed=MDDialog(
             title="Cập nhật thất bại",
             type="alert",
+            buttons=[
+                MDFillRoundFlatButton(
+                    text="Đóng",
+                    md_bg_color=btn,
+                    theme_text_color="Custom",
+                    text_color=secondarycolor
+                )
+            ],
             md_bg_color=boxbg
         )
+        self.failed.buttons[0].bind(on_release=self.failed.dismiss)
 
         self.search_thread=None
         self.touch_count=0
@@ -125,6 +151,7 @@ Nhật
                 download_file("Whoop", "Whoop/func/data/tu_dien_nguon.txt", "func/data/tu_dien_nguon.txt")
                 download_file("Whoop", "Whoop/func/data/word.txt", "func/data/word.txt")
                 download_file("Whoop", "Whoop/func/data/grammar.txt", "func/data/grammar.txt")
+
         except:
             Clock.schedule_once(self.failed_)
         else:
