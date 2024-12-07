@@ -4,6 +4,8 @@ from ui.home.widget.result_template import *
 from ui.home.widget.add_data import add_data
 from ui.home.widget.recent import *
 
+current_page="home"
+_temp_=[]
 _back_=[]
 _value_=True
 _callback_=False
@@ -87,7 +89,7 @@ class home(MDBoxLayout, TouchBehavior):
 
         self.noname.add_widget(self.progress_box)
 
-        self.scrollview = ScrollView(size_hint=(1, 1), pos_hint={'center_x': 0.5, 'center_y': 0.5})
+        self.scrollview = ScrollView(size_hint=(1, 1), pos_hint={'center_x': 0.5, 'center_y': 0.5}, on_scroll_stop=self.infinite_homepage)
 
         self.result_box=MDBoxLayout(orientation='vertical', size_hint=(1,None), spacing=20, padding=[10,10,10,10])
         self.result_box.bind(minimum_height=self.result_box.setter('height'))
@@ -108,7 +110,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.noname.add_widget(self.scrollview)
         self.scrollview.add_widget(self.homebox)
         self.refreshbutton=MDFillRoundFlatButton(text="Làm mới",size_hint=(None, None), pos_hint={"center_x":0.5, "center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
-        self.refreshbutton.bind(on_press=lambda instance: self.refresh(instance, None))
+        self.refreshbutton.bind(on_press=self.refresh)
         self.homebox.add_widget(self.refreshbutton)
         
         self.resultlabel.bind(texture_size=self.resultlabel.setter('text_size'))
@@ -217,10 +219,25 @@ class home(MDBoxLayout, TouchBehavior):
         self.noname.md_bg_color=bg
         self.scrollview.clear_widgets()
         self.scrollview.add_widget(add_data())
-     
-    def refresh(self, instance, dict_):
+
+    def infinite_homepage(self, instance, unknown):
+        if current_page=="home":
+            global _temp_
+            if self.scrollview.scroll_y<0:
+                self.homebox.remove_widget(self.refreshbutton)
+                for i in range(10):
+                    word=random.choice(word__)
+                    box=self.create_content_box(data_[word][random.choice([i for i in data_[word].keys()])])
+                    home__.append(box)
+                    self.homebox.add_widget(box)
+                self.homebox.add_widget(self.refreshbutton)
+            elif self.scrollview.scroll_y>1:
+                self.refresh(None)
+            
+    def refresh(self, instance):
+        global home__
         if home__: self.scrollview.scroll_to(home__[0])
-        for i in range(len(home__)):
+        for i in range(len(home__[:10])):
             try:
                 word=random.choice(word__)
                 text=data_[word][random.choice([i for i in data_[word].keys()])]
@@ -233,6 +250,9 @@ class home(MDBoxLayout, TouchBehavior):
                 home__[i].morebutton=self.morebutton(text["word"])
                 home__[i].add_widget(home__[i].morebutton)
             except: pass
+        for i in range(len(home__[10:])):
+            self.homebox.remove_widget(home__[10:][i])
+        home__=home__[:10]
     
     def menu_open(self, instance):
         menu_items = [
@@ -270,7 +290,8 @@ class home(MDBoxLayout, TouchBehavior):
         self.menu.open()
 
     def home(self, instance):
-        global _back_
+        global _back_, current_page
+        current_page="home"
         self.progress_box.height=5*scale
         self.progress_bar.back_color=bg
         self.progress_bar.color=self.progress_bar.back_color
@@ -357,7 +378,8 @@ class home(MDBoxLayout, TouchBehavior):
             Clock.schedule_once(self.update_UI)
 
     def update_UI(self, instance):
-        global result, recent_search, _value_, _callback_
+        global result, recent_search, _value_, _callback_, current_page
+        current_page="search"
         self.scrollview.scroll_y=1
         self.progress_bar.back_color=(boxbg)
         self.noname.md_bg_color=boxbg
