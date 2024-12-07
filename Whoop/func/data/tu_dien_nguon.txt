@@ -211,18 +211,6 @@
             "type": "noun"
         }
     },
-    "hi": {
-        "interjection": {
-            "definition": "- A friendly, informal, casual greeting said when meeting someone.\nVí dụ: Hi, how are you?\n\n- An exclamation to call attention.\n\n- Expressing wonder or derision.\n\n",
-            "synonyms": [
-                "greetings",
-                "hello"
-            ],
-            "antonyms": [],
-            "word": "hi",
-            "type": "interjection"
-        }
-    },
     "greeting": {
         "verb": {
             "definition": "- To weep; to cry.\n\n",
