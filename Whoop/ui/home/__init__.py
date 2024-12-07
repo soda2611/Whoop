@@ -247,7 +247,7 @@ class home(MDBoxLayout, TouchBehavior):
                 else:
                     home__[i].result_label.text=text["definition"]
                 home__[i].remove_widget(home__[i].morebutton)
-                home__[i].morebutton=self.morebutton(text["word"])
+                home__[i].morebutton=self.morebutton([text["word"]])
                 home__[i].add_widget(home__[i].morebutton)
             except: pass
         for i in range(len(home__[10:])):
