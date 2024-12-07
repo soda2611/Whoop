@@ -159,6 +159,8 @@ class home(MDBoxLayout, TouchBehavior):
         except: pass
 
     def show_recent(self, *args):
+        global current_page
+        current_page="recent"
         self.menu.dismiss()
         self.progress_bar.back_color=bg
         self.progress_bar.color=self.progress_bar.back_color
@@ -213,6 +215,8 @@ class home(MDBoxLayout, TouchBehavior):
         return self.content_box
 
     def add_data(self):
+        global current_page
+        current_page="add_data"
         self.menu.dismiss()
         self.progress_bar.back_color=bg
         self.progress_bar.color=self.progress_bar.back_color
@@ -328,6 +332,8 @@ class home(MDBoxLayout, TouchBehavior):
         self.text=self.text_input.input.text
 
     def translate(self, instance):
+        global current_page
+        current_page="translate"8
         if check_connection():
             try:
                 self.translate_result_template.src_text.text=self.text_input.input.text
