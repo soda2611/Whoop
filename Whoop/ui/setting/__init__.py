@@ -10,7 +10,7 @@ class setting(MDBoxLayout):
         self.spacing=20*scale
         self.md_bg_color=bg
         
-        self.overlay=MDCard(size_hint=(1, 1), orientation='vertical', md_bg_color=bg)
+        self.overlay=MDCard(padding=[10*scale, 10*scale, 10*scale, 10*scale], size_hint=(1, 1), orientation='vertical', md_bg_color=bg)
         self.overlay.bind(on_touch=self.touch_ignore)
         self.overlay.add_widget(Image(source=settings["banner"], size_hint=(0.9, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, height=50*scale))
         self.overlay.add_widget(MDLabel(text="Đang cập nhật...", font_style="H6", halign="center", valign="middle", pos_hint={"center_x": 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=primarycolor))
