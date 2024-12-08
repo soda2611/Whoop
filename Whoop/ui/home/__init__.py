@@ -333,7 +333,7 @@ class home(MDBoxLayout, TouchBehavior):
 
     def translate(self, instance):
         global current_page
-        current_page="translate"8
+        current_page="translate"
         if check_connection():
             try:
                 self.translate_result_template.src_text.text=self.text_input.input.text
