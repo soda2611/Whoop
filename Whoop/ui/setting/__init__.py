@@ -2,6 +2,8 @@ from ui import *
 from ui.setting.widget.change_palette import change_palette
 from ui.setting.widget.change_fonts import change_fonts
 
+update_thread=None
+
 class setting(MDBoxLayout):
     def __init__(self, **kwargs):
         super(setting, self).__init__(**kwargs)
@@ -12,8 +14,10 @@ class setting(MDBoxLayout):
         
         self.overlay=MDCard(padding=[10*scale, 10*scale, 10*scale, 10*scale], size_hint=(1, 1), orientation='vertical', md_bg_color=bg)
         self.overlay.bind(on_touch=self.touch_ignore)
+        self.overlay.cancel_button=MDFillRoundFlatButton(text="Huỷ", pos_hint={"center_x": 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=secondarycolor, md_bg_color=btn, on_press=self.cancel_update)
         self.overlay.add_widget(Image(source=settings["banner"], size_hint=(0.9, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, height=50*scale))
         self.overlay.add_widget(MDLabel(text="Đang cập nhật...", font_style="H6", halign="center", valign="middle", pos_hint={"center_x": 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=primarycolor))
+        self.overlay.add_widget(self.overlay.cancel_button)
 
         self.success=MDDialog(
             title="Cập nhật thành công.",
@@ -138,30 +142,39 @@ Nhật
         self.credit.open()
         
     def update_trigger(self, instance):
+        global update_thread
         self.credit.dismiss()
         self.screen=sm.get_screen('second')
         self.screen.add_widget(self.overlay)
-        threading.Thread(target=self.update_).start()
+        update_thread=threading.Timer(1, self.update_)
+        update_thread.start()
         
     def touch_ignore():
         pass
+
+    def cancel_update(self, instance):
+        global update_thread
+        sm.get_screen('second').remove_widget(self.overlay)
+        update_thread.cancel()
     
     def update_(self):
+        self.overlay.cancel_button.disabled=True
         try:
             if check_connection():
                 download_file("Whoop", "Whoop/func/data/tu_dien_nguon.txt", "func/data/tu_dien_nguon.txt")
                 download_file("Whoop", "Whoop/func/data/word.txt", "func/data/word.txt")
                 download_file("Whoop", "Whoop/func/data/grammar.txt", "func/data/grammar.txt")
-
         except:
             Clock.schedule_once(self.failed_)
         else:
             Clock.schedule_once(self.success_)
             
     def success_(self, instance):
+        self.overlay.cancel_button.disabled=False
         self.screen.remove_widget(self.overlay)
         self.success.open()
         
     def failed_(self, instance):
+        self.overlay.cancel_button.disabled=False
         self.screen.remove_widget(self.overlay)
         self.failed.open()
