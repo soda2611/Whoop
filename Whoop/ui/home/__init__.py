@@ -77,6 +77,7 @@ class home(MDBoxLayout, TouchBehavior):
 
         self.nav_bar=MDBoxLayout(size_hint=(1, None), height=50*scale)
         self.back_button=MDIconButton(icon="arrow-left", theme_icon_color="Custom", icon_color=primarycolor, md_bg_color=(1,1,1,0), disabled=True, on_press=self.back)
+        self.copy_button=MDIconButton(icon="content-copy", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"x": 1}, on_press=lambda instance: self.copy(instance, result[i]))
         self.noname=MDCard(orientation='vertical',md_bg_color=bg, size_hint=(1, 1), pos_hint={'center_x': 0.5, 'center_y': 0.5})
         self.noname.radius=[i*scale for i in self.noname.radius]
         self.one_box.add_widget(self.noname)
@@ -413,7 +414,6 @@ class home(MDBoxLayout, TouchBehavior):
                         self.progress_box.add_widget(self.nav_bar)
                         self.result_template.word.text=self.input_text[0].capitalize()+f' ({i.lower()})'
                         self.nav_bar.clear_widgets()
-                        self.copy_button=MDIconButton(icon="content-copy", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"x": 1}, on_press=lambda instance: self.copy(instance, result[i]))
                         self.nav_bar.add_widget(self.back_button)
                         self.nav_bar.add_widget(self.result_template.word)
                         self.nav_bar.add_widget(self.copy_button)
