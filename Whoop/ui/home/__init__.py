@@ -54,6 +54,7 @@ class home(MDBoxLayout, TouchBehavior):
         
         self.text_input=MDRelativeLayout(size_hint=(0.75, None), height=30*scale)
         self.text_input.input=MDTextField(icon_left="magnify", icon_left_color_focus=btn, hint_text="Nhập từ cần tìm", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_x': 0.5}, height=30*scale, multiline=False)        
+        self.text_input.button=MDIconButton(icon='translate', theme_icon_color="Custom", icon_color=btn, size_hint=(None, None), pos_hint={"right": 1, "center_y":0.6}, on_press=self.translate)
         self.text_input.add_widget(self.text_input.input)
         self.text_input.add_widget(self.text_input.button)
 
@@ -75,8 +76,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.add_widget(self.one_box)
 
         self.nav_bar=MDBoxLayout(size_hint=(1, None), height=50*scale)
-        self.back_button=MDIconButton(icon="arrow-left", theme_icon_color="Custom", icon_color=primarycolor, md_bg_color=(1,1,1,0), disabled=True, on_press=self.back)
-        self.copy_button=MDIconButton(icon="content-copy", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"x": 1}, on_press=lambda instance: self.copy(instance, result[i]))
+        self.back_button=MDIconButton(icon="arrow-left", theme_icon_color="Custom", pos_hint={"center_y": 0.5}, icon_color=primarycolor, md_bg_color=(1,1,1,0), disabled=True, on_press=self.back)
         self.noname=MDCard(orientation='vertical',md_bg_color=bg, size_hint=(1, 1), pos_hint={'center_x': 0.5, 'center_y': 0.5})
         self.noname.radius=[i*scale for i in self.noname.radius]
         self.one_box.add_widget(self.noname)
@@ -225,9 +225,9 @@ class home(MDBoxLayout, TouchBehavior):
 
     def add_data(self):
         global current_page
-        current_page="add_data
+        current_page="add_data"
         self.progress_box.height=5*scale
-        self.progress_box.remove_widget(self.nav_bar)"
+        self.progress_box.remove_widget(self.nav_bar)
         self.menu.dismiss()
         self.progress_bar.back_color=bg
         self.progress_bar.color=self.progress_bar.back_color
@@ -410,12 +410,13 @@ class home(MDBoxLayout, TouchBehavior):
                 for i in result:
                     if len(result)==1:
                         self.progress_box.clear_widgets()
-                        self.progress_box.height=55*scale
+                        self.progress_box.height=60*scale
                         self.progress_box.add_widget(self.progress_bar)
                         self.progress_box.add_widget(self.nav_bar)
                         self.result_template.word.text=self.input_text[0].capitalize()+f' ({i.lower()})'
                         self.nav_bar.clear_widgets()
-                        self.copy_button=MDIconButton(icon="content-copy", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"x": 1}, on_press=lambda instance: self.copy(instance, result[i]))self.nav_bar.add_widget(self.back_button)
+                        self.copy_button=MDIconButton(icon="content-copy", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"x": 1, "center_y": 0.5}, on_press=lambda instance: self.copy(instance, result[i]))
+                        self.nav_bar.add_widget(self.back_button)
                         self.nav_bar.add_widget(self.result_template.word)
                         self.nav_bar.add_widget(self.copy_button)
                         self.result_template.pronunciation_button.bind(on_release=lambda instance: self.pronounce(instance, self.input_text[0]))
@@ -450,6 +451,8 @@ class home(MDBoxLayout, TouchBehavior):
                                 self.back_button.disabled=False
                         except: pass
             else:
+                self.progress_box.height=5*scale
+                self.progress_box.remove_widget(self.nav_bar)
                 self.structure_box=MDBoxLayout(size_hint=(1, None))
                 for i in result:
                     self.result_box.add_widget(self.create_content_box(result[i]))
@@ -460,8 +463,23 @@ class home(MDBoxLayout, TouchBehavior):
                     self.dialog.recent_scrollview_box.add_widget(self.create_content_box(result[i]), index=0)
                 recent_search[self.input_text[0]]=result
         else:
+            self.nav_bar.clear_widgets()
+            self.copy_button=MDIconButton(icon="content-copy", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"x": 1, "center_y": 0.5}, disabled=True)
+            self.nav_bar.add_widget(self.back_button)
+            self.nav_bar.add_widget(MDLabel(text="", size_hint=(1, None)))
+            self.nav_bar.add_widget(self.copy_button)
             self.resultlabel.text = "".join(result)
             self.result_box.add_widget(self.resultlabel)
+            if not _callback_:
+                try:
+                    if result!=_back_[-1]: _back_.append(result)
+                except:
+                    _back_.append(result[i])
+            else: _callback_=not _callback_
+            try:
+                if len(_back_)>1:
+                    self.back_button.disabled=False
+            except: pass
         if result!="Không tìm thấy từ":
             if grammar_structure_detector(self.text_input.input.text,"func/data/grammar.txt"):
                 self.structure=MDLabel(text="Cấu trúc ngữ pháp đã nhận dạng:\n"+"\n".join(grammar_structure_detector(self.text_input.input.text,"func/data/grammar.txt")), font_style="H6", halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, theme_text_color="Custom", text_color=primarycolor)
