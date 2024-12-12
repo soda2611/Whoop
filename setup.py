@@ -1,8 +1,5 @@
-import os
-import zipfile
-import io
-import shutil
-import sys
+import os, zipfile, io, shutil, sys
+
 print(f"Python {sys.version_info.major}.{sys.version_info.minor}")
 
 def backup_user_data(setting_dir, backup_dir):
@@ -16,6 +13,20 @@ def restore_user_data(setting_dir, backup_dir):
             shutil.copytree(os.path.join(backup_dir, 'setting'), setting_dir)
             shutil.rmtree(backup_dir)
 
+def download_and_replace_setup(repo_url, local_setup_path):
+    response = requests.get(repo_url)
+    zip_file = zipfile.ZipFile(io.BytesIO(response.content))
+    
+    zip_file.extractall()
+    
+    repo_setup_path = os.path.join("Whoop-main", "setup.py")
+    
+    with open(repo_setup_path, 'r') as repo_setup_file:
+        repo_setup_content = repo_setup_file.read()
+    
+    with open(local_setup_path, 'w') as local_setup_file:
+        local_setup_file.write(repo_setup_content)
+
 try:
     import requests
     import winshell
@@ -24,6 +35,7 @@ except:
     os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} setup.py")
 else:
     os.system(f"py -{sys.version_info.major}.{sys.version_info.minor} -m pip install kivymd==1.2.0 kivy googletrans==4.0.0rc1 eng-to-ipa pyttsx3 psutil pyperclip --upgrade pip")
+
 try:
     repo_url = "https://github.com/soda2611/Whoop/archive/refs/heads/main.zip"
 
@@ -35,13 +47,7 @@ try:
     
     backup_user_data(setting_dir, backup_dir)
 
-    response = requests.get(repo_url)
-
-    zip_file = zipfile.ZipFile(io.BytesIO(response.content))
-
-    zip_file.extractall()
-
-    os.system(f"rmdir /S /Q {sod_dir}")
+    download_and_replace_setup(repo_url, "setup.py")
 
     shutil.move(os.path.join(repo_dir, sod_dir), sod_dir)
 
@@ -68,4 +74,3 @@ try:
      
 except Exception as ex:
     print(ex)
-
