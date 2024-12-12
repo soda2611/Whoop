@@ -8,7 +8,7 @@ class result_template(MDBoxLayout):
         self.spacing=20
         self.padding=[10,10,10,10]
         self.bind(minimum_height=self.setter('height'))
-        self.word=MDLabel(text="", font_style="main", font_size=20*scale, halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5}, theme_text_color="Custom", text_color=primarycolor)
+        self.word=MDLabel(text="", font_style="main", font_size=20*scale, halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.pronunciation_template=MDBoxLayout(size_hint_y=None, spacing=10, padding=[10,10,10,10], pos_hint={"center_x":0.5})
         self.pronunciation_template.bind(minimum_height=self.pronunciation_template.setter('height'))
         self.pronunciation=MDLabel(text="", font_style="main", font_size=18*scale, halign='center', size_hint=(1, None), pos_hint={'center_x': 0.5}, theme_text_color="Custom", text_color=primarycolor)
