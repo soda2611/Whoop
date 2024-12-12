@@ -54,7 +54,6 @@ class home(MDBoxLayout, TouchBehavior):
         
         self.text_input=MDRelativeLayout(size_hint=(0.75, None), height=30*scale)
         self.text_input.input=MDTextField(icon_left="magnify", icon_left_color_focus=btn, hint_text="Nhập từ cần tìm", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_x': 0.5}, height=30*scale, multiline=False)        
-        self.text_input.button=MDIconButton(icon='translate', theme_icon_color="Custom", icon_color=btn, size_hint=(None, None), pos_hint={"right": 1, "center_y":0.6}, on_press=self.translate)
         self.text_input.add_widget(self.text_input.input)
         self.text_input.add_widget(self.text_input.button)
 
@@ -414,7 +413,7 @@ class home(MDBoxLayout, TouchBehavior):
                         self.progress_box.add_widget(self.nav_bar)
                         self.result_template.word.text=self.input_text[0].capitalize()+f' ({i.lower()})'
                         self.nav_bar.clear_widgets()
-                        self.nav_bar.add_widget(self.back_button)
+                        self.copy_button=MDIconButton(icon="content-copy", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"x": 1}, on_press=lambda instance: self.copy(instance, result[i]))self.nav_bar.add_widget(self.back_button)
                         self.nav_bar.add_widget(self.result_template.word)
                         self.nav_bar.add_widget(self.copy_button)
                         self.result_template.pronunciation_button.bind(on_release=lambda instance: self.pronounce(instance, self.input_text[0]))
