@@ -12,7 +12,7 @@ try:
 except:
     pass
 
-import eng_to_ipa, os, random, threading , pyttsx3, subprocess, signal, winshell, getpass, sys, psutil, datetime, json
+import eng_to_ipa, os, random, threading , pyttsx3, subprocess, signal, getpass, sys, datetime, json, pyperclip
 from kivymd.app import MDApp
 from kivymd.uix.behaviors.magic_behavior import MagicBehavior
 from kivymd.uix.dialog import MDDialog
