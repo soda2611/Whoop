@@ -439,7 +439,11 @@ class home(MDBoxLayout, TouchBehavior):
                             self.result_box.add_widget(self.antonyms)
                             for j in result[i]["antonyms"]:
                                 self.antonyms_box.add_widget(self.create_chips(j))
-                        if not _callback_: _back_.append(result[i])
+                        if not _callback_:
+                            try:
+                                if result[i]!=_back_[-1]: _back_.append(result[i])
+                            except:
+                                _back_.append(result[i])
                         else: _callback_=not _callback_
                         try:
                             if len(_back_)>1:
