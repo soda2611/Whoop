@@ -20,7 +20,6 @@ class result_template(MDBoxLayout):
         self.pronunciation.bind(texture_size=self.pronunciation.setter('size'))
         self.definition.bind(texture_size=self.definition.setter('text_size'))
         self.definition.bind(texture_size=self.definition.setter('size'))
-        self.add_widget(self.word)
         self.pronunciation_template.add_widget(self.pronunciation)
         self.pronunciation_template.add_widget(self.pronunciation_button)
         self.add_widget(self.pronunciation_template)
