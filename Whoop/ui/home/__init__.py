@@ -76,8 +76,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.add_widget(self.one_box)
 
         self.nav_bar=MDBoxLayout(size_hint=(1, None), height=50*scale)
-        self.back_button=MDIconButton(icon="arrow-left", theme_icon_color="Custom", icon_color=primarycolor, md_bg_color=(1,1,1,0), on_press=self.back)
-        self.nav_bar.add_widget(self.back_button)
+        self.back_button=MDIconButton(icon="arrow-left", theme_icon_color="Custom", icon_color=primarycolor, md_bg_color=(1,1,1,0), disabled=True, on_press=self.back)
         self.noname=MDCard(orientation='vertical',md_bg_color=bg, size_hint=(1, 1), pos_hint={'center_x': 0.5, 'center_y': 0.5})
         self.noname.radius=[i*scale for i in self.noname.radius]
         self.one_box.add_widget(self.noname)
@@ -157,6 +156,16 @@ class home(MDBoxLayout, TouchBehavior):
             if int(width)>=900*scale:
                 self.one_box.add_widget(self.recent)
         except: pass
+        
+    def copy(self, instance, text: dict):
+        synonyms=', '.join(text['synonyms']) if text['synonyms'] else None
+        antonyms=', '.join(text['antonyms']) if text['antonyms'] else None
+        copy=f"""{text['word'].capitalize()} ({text['type']}): 
+{text["definition"][:1].upper()+text["definition"][1:]}
+*Từ đồng nghĩa: {f'{synonyms}' if synonyms else 'Không có từ đồng nghĩa'}
+
+*Từ trái nghĩa: {f'{antonyms}' if antonyms else 'Không có từ trái nghĩa'}"""
+        pyperclip.copy(copy)
 
     def show_recent(self, *args):
         global current_page
@@ -305,6 +314,8 @@ class home(MDBoxLayout, TouchBehavior):
         self.scrollview.add_widget(self.homebox)
 
     def show_input(self, instance):
+        global current_page
+        current_page="search"
         self.box.clear_widgets()
         if self.text_input.input.text.split()!=[]: 
             self.scrollview.scroll_y=1
@@ -325,7 +336,7 @@ class home(MDBoxLayout, TouchBehavior):
         if self.search_thread:
             self.search_thread.cancel()
         if self.text_input.input.text!="":
-            self.search_thread = threading.Timer(0.5, self.search_button_pressed, args=(instance, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split())))))
+            self.search_thread = threading.Timer(1, self.search_button_pressed, args=(instance, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split())))))
             self.search_thread.start()
         else:
             self.home(instance)
@@ -356,8 +367,7 @@ class home(MDBoxLayout, TouchBehavior):
         if len(_back_)>=2: self.search_button_pressed(None, _back_[-2]["type"], value=False, callback=True, temp=_back_[-2])
         _back_=_back_[::-1][1:][::-1]
         if len(_back_)<2: 
-            self.progress_box.height=5*scale
-            self.progress_box.remove_widget(self.nav_bar)
+            self.back_button.disabled=True
 
     def search_button_pressed(self, instance, input_text, value=True, callback=False, temp=False):
         global _value_, _callback_
@@ -397,12 +407,20 @@ class home(MDBoxLayout, TouchBehavior):
             if len(result)==1:
                 for i in result:
                     if len(result)==1:
+                        self.progress_box.clear_widgets()
+                        self.progress_box.height=55*scale
+                        self.progress_box.add_widget(self.progress_bar)
+                        self.progress_box.add_widget(self.nav_bar)
                         self.result_template.word.text=self.input_text[0].capitalize()+f' ({i.lower()})'
+                        self.nav_bar.clear_widgets()
+                        self.copy_button=MDIconButton(icon="content-copy", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"x": 1}, on_press=lambda instance: self.copy(instance, result[i]))
+                        self.nav_bar.add_widget(self.back_button)
+                        self.nav_bar.add_widget(self.result_template.word)
+                        self.nav_bar.add_widget(self.copy_button)
                         self.result_template.pronunciation_button.bind(on_release=lambda instance: self.pronounce(instance, self.input_text[0]))
                         self.result_template.pronunciation.text=f'/{eng_to_ipa.convert(self.input_text[0])}/'
                         self.result_template.definition.text=result[i]["definition"][:1].upper()+result[i]["definition"][1:]
                         self.result_box.add_widget(self.result_template)
-                    
                         self.synonyms_box.clear_widgets()
                         self.synonyms.scroll_x=0
                         head=MDLabel(text="Từ đồng nghĩa", halign="center", font_style="main", size_hint=(1,None), height=25*scale, pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
@@ -424,8 +442,7 @@ class home(MDBoxLayout, TouchBehavior):
                         else: _callback_=not _callback_
                         try:
                             if len(_back_)>1:
-                                self.progress_box.height=55*scale
-                                self.progress_box.add_widget(self.nav_bar)
+                                self.back_button.disabled=False
                         except: pass
             else:
                 self.structure_box=MDBoxLayout(size_hint=(1, None))
