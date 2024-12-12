@@ -13,20 +13,6 @@ def restore_user_data(setting_dir, backup_dir):
             shutil.copytree(os.path.join(backup_dir, 'setting'), setting_dir)
             shutil.rmtree(backup_dir)
 
-def download_and_replace_setup(repo_url, local_setup_path):
-    response = requests.get(repo_url)
-    zip_file = zipfile.ZipFile(io.BytesIO(response.content))
-    
-    zip_file.extractall()
-    
-    repo_setup_path = os.path.join("Whoop-main", "setup.py")
-    
-    with open(repo_setup_path, 'r') as repo_setup_file:
-        repo_setup_content = repo_setup_file.read()
-    
-    with open(local_setup_path, 'w') as local_setup_file:
-        local_setup_file.write(repo_setup_content)
-
 try:
     import requests
     import winshell
@@ -42,12 +28,25 @@ try:
     repo_dir = "Whoop-main"
 
     sod_dir = "Whoop"
+    repo_setup_path = os.path.join(repo_dir, "setup.py")
     setting_dir = os.path.join(sod_dir, 'func', 'setting')
     backup_dir = os.path.expanduser('~/.whoop_backup')
     
     backup_user_data(setting_dir, backup_dir)
 
-    download_and_replace_setup(repo_url, "setup.py")
+    response = requests.get(repo_url)
+
+    zip_file = zipfile.ZipFile(io.BytesIO(response.content))
+
+    zip_file.extractall()
+
+    os.system(f"rmdir /S /Q {sod_dir}")
+    
+    with open(repo_setup_path, 'r') as repo_setup_file:
+        repo_setup_content = repo_setup_file.read()
+    
+    with open("setup.py", 'w') as local_setup_file:
+        local_setup_file.write(repo_setup_content)
 
     shutil.move(os.path.join(repo_dir, sod_dir), sod_dir)
 
