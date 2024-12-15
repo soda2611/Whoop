@@ -119,7 +119,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.add_widget(self.box)
         self.box.add_widget(self.text_input)
 
-        self.taskbar=MDCard(md_bg_color=btn, radius=[dp(25), dp(25), dp(25), dp(25)], size_hint=(1, None), height=dp(50), pos_hint={"center_x":0.5, "center_y": 0.25})
+        self.taskbar=MDCard(md_bg_color=btn, radius=[25, 25, 25, 25], size_hint=(1, None), height=dp(50), pos_hint={"center_x":0.5, "center_y": 0.25})
         self.taskbar.radius=[dp(i) for i in self.taskbar.radius]
         self.button.bind(on_press=self.show_input)
         self.homebutton.bind(on_press=self.home)
