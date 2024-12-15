@@ -14,8 +14,8 @@ class home(MDBoxLayout, TouchBehavior):
     def __init__(self, **kwargs):
         super(home, self).__init__(**kwargs)
         self.orientation = 'vertical'
-        self.padding = [10*scale, 10*scale, 10*scale, 10*scale]
-        self.spacing = 25*scale
+        self.padding = [dp(10), dp(10), dp(10), dp(10)]
+        self.spacing = dp(25)
         Window.bind(on_resize=self.on_window_resize)
 
         self.md_bg_color=bg
@@ -31,40 +31,40 @@ class home(MDBoxLayout, TouchBehavior):
             type="alert",
             md_bg_color=boxbg
         )
-        
+
         self.empty_alert=MDDialog(
             title="Không có đầu vào để dịch",
             type="alert",
             md_bg_color=boxbg
         )
-        
+
         self.no_internet_alert=self.alert=MDDialog(
             title="Không có kết nối internet",
             type="alert",
             md_bg_color=boxbg
         )
 
-        self.label = Image(source=settings["banner"], size_hint=(0.9, None), pos_hint={'center_x': 0.5}, height=50*scale)
-        
-        self.cautionlabel = MDLabel(text="Kết quả có thể sai do bộ dữ liệu chưa qua kiểm tra sàng lọc", font_style="Caption", halign='center', size_hint=(0.75, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=30*scale, theme_text_color="Custom", text_color=primarycolor)
+        self.label = Image(source=settings["banner"], size_hint=(0.9, None), pos_hint={'center_x': 0.5}, height=dp(50))
+
+        self.cautionlabel = MDLabel(text="Kết quả có thể sai do bộ dữ liệu chưa qua kiểm tra sàng lọc", font_style="Caption", halign='center', size_hint=(0.75, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=dp(30), theme_text_color="Custom", text_color=primarycolor)
 
         self.resultlabel = MDLabel(text='', font_style="H6", halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=30)
 
-        self.caplabel = MDLabel(text='', font_style="Caption", halign="center", size_hint=(0.75, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=30*scale, theme_text_color="Custom", text_color=primarycolor)
-        
-        self.text_input=MDRelativeLayout(size_hint=(0.75, None), height=30*scale)
-        self.text_input.input=MDTextField(icon_left="magnify", icon_left_color_focus=btn, hint_text="Nhập từ cần tìm", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_x': 0.5}, height=30*scale, multiline=False)        
+        self.caplabel = MDLabel(text='', font_style="Caption", halign="center", size_hint=(0.75, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=dp(30), theme_text_color="Custom", text_color=primarycolor)
+
+        self.text_input=MDRelativeLayout(size_hint=(0.75, None), height=dp(30))
+        self.text_input.input=MDTextField(icon_left="magnify", icon_left_color_focus=btn, hint_text="Nhập từ cần tìm", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)        
         self.text_input.button=MDIconButton(icon='translate', theme_icon_color="Custom", icon_color=btn, size_hint=(None, None), pos_hint={"right": 1, "center_y":0.6}, on_press=self.translate)
         self.text_input.add_widget(self.text_input.input)
         self.text_input.add_widget(self.text_input.button)
 
         self.button = MDIconButton(icon='magnify', theme_icon_color="Custom", icon_color=secondarycolor, size_hint=(1, None), pos_hint={"center_x":0.5})
-        
+
         self.homebutton = MDIconButton(icon='home', theme_icon_color="Custom", icon_color=secondarycolor, size_hint=(1, None), pos_hint={"x":0})
-        
+
         self.menubutton = MDIconButton(icon='menu', theme_icon_color="Custom", icon_color=secondarycolor, size_hint=(1, None), pos_hint={"x":1})
-        
-        self.progress_box=MDBoxLayout(orientation='vertical', size_hint=(0.95,None), height=5*scale, pos_hint={"center_x":0.5})
+
+        self.progress_box=MDBoxLayout(orientation='vertical', size_hint=(0.95,None), height=dp(5), pos_hint={"center_x":0.5})
 
         self.progress_bar = MDProgressBar(radius=[5,5,5,5], type="indeterminate", pos_hint={"center_x":0.5}, running_duration=0.75, catching_duration=0.5, color=btn, back_color=bg)
         self.progress_box.add_widget(self.progress_bar)
@@ -75,10 +75,10 @@ class home(MDBoxLayout, TouchBehavior):
         self.one_box=MDBoxLayout(size_hint=(0.85, 0.25), pos_hint={'center_x': 0.5, 'center_y': 0.5}, spacing = 20)
         self.add_widget(self.one_box)
 
-        self.nav_bar=MDBoxLayout(size_hint=(1, None), height=50*scale)
+        self.nav_bar=MDBoxLayout(size_hint=(1, None), height=dp(50))
         self.back_button=MDIconButton(icon="arrow-left", theme_icon_color="Custom", pos_hint={"center_y": 0.5}, icon_color=primarycolor, md_bg_color=(1,1,1,0), disabled=True, on_press=self.back)
         self.noname=MDCard(orientation='vertical',md_bg_color=bg, size_hint=(1, 1), pos_hint={'center_x': 0.5, 'center_y': 0.5})
-        self.noname.radius=[i*scale for i in self.noname.radius]
+        self.noname.radius=[dp(i) for i in self.noname.radius]
         self.one_box.add_widget(self.noname)
 
         self.recent=recent(self.create_content_box, self.clear_history, self.noname.radius)
@@ -90,10 +90,10 @@ class home(MDBoxLayout, TouchBehavior):
 
         self.scrollview = ScrollView(size_hint=(1, 1), pos_hint={'center_x': 0.5, 'center_y': 0.5}, on_scroll_stop=self.infinite_homepage)
 
-        self.result_box=MDBoxLayout(orientation='vertical', size_hint=(1,None), spacing=20, padding=[10,10,10,10])
+        self.result_box=MDBoxLayout(orientation='vertical', size_hint=(1,None), spacing=dp(20), padding=[dp(10), dp(10), dp(10), dp(10)])
         self.result_box.bind(minimum_height=self.result_box.setter('height'))
 
-        self.homebox=MDBoxLayout(spacing=20)
+        self.homebox=MDBoxLayout(spacing=dp(20))
         self.scrollview.do_scroll_x=False
         self.homebox.orientation="vertical"
         self.homebox.size_hint_y=None
@@ -105,13 +105,13 @@ class home(MDBoxLayout, TouchBehavior):
                 home__.append(box__)
                 self.homebox.add_widget(box__)
             except: pass
-        
+
         self.noname.add_widget(self.scrollview)
         self.scrollview.add_widget(self.homebox)
         self.refreshbutton=MDFillRoundFlatButton(text="Làm mới",size_hint=(None, None), pos_hint={"center_x":0.5, "center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
         self.refreshbutton.bind(on_press=self.refresh)
         self.homebox.add_widget(self.refreshbutton)
-        
+
         self.resultlabel.bind(texture_size=self.resultlabel.setter('text_size'))
         self.resultlabel.bind(texture_size=self.resultlabel.setter('size'))
 
@@ -119,8 +119,8 @@ class home(MDBoxLayout, TouchBehavior):
         self.add_widget(self.box)
         self.box.add_widget(self.text_input)
 
-        self.taskbar=MDCard(md_bg_color=btn, radius=[25,25,25,25], size_hint=(1, None), height=50*scale, pos_hint={"center_x":0.5, "center_y": 0.25})
-        self.taskbar.radius=[i*scale for i in self.taskbar.radius]
+        self.taskbar=MDCard(md_bg_color=btn, radius=[dp(25), dp(25), dp(25), dp(25)], size_hint=(1, None), height=dp(50), pos_hint={"center_x":0.5, "center_y": 0.25})
+        self.taskbar.radius=[dp(i) for i in self.taskbar.radius]
         self.button.bind(on_press=self.show_input)
         self.homebutton.bind(on_press=self.home)
         self.menubutton.bind(on_press=self.menu_open)
@@ -137,13 +137,13 @@ class home(MDBoxLayout, TouchBehavior):
         self.result_template=result_template()
         self.translate_result_template=translate_result_template()
 
-        self.synonyms_box=MDBoxLayout(size_hint_x=None, spacing=20*scale, padding=[10*scale,10*scale,10*scale,10*scale], pos_hint={'center_y': 0.5})
-        self.synonyms=ScrollView(do_scroll_y=False, size_hint=(1,None), height=50*scale)
+        self.synonyms_box=MDBoxLayout(size_hint_x=None, spacing=dp(20), padding=[dp(10),dp(10),dp(10),dp(10)], pos_hint={'center_y': 0.5})
+        self.synonyms=ScrollView(do_scroll_y=False, size_hint=(1,None), height=dp(50))
         self.synonyms_box.bind(minimum_width=self.synonyms_box.setter('width'))
         self.synonyms.add_widget(self.synonyms_box)
 
-        self.antonyms_box=MDBoxLayout(size_hint_x=None, spacing=20*scale, padding=[10*scale,10*scale,10*scale,10*scale], pos_hint={'center_y': 0.5})
-        self.antonyms=ScrollView(do_scroll_y=False, size_hint=(1,None), height=50*scale)
+        self.antonyms_box=MDBoxLayout(size_hint_x=None, spacing=dp(20), padding=[dp(10),dp(10),dp(10),dp(10)], pos_hint={'center_y': 0.5})
+        self.antonyms=ScrollView(do_scroll_y=False, size_hint=(1,None), height=dp(50))
         self.antonyms_box.bind(minimum_width=self.antonyms_box.setter('width'))
         self.antonyms.add_widget(self.antonyms_box)
 
@@ -153,10 +153,10 @@ class home(MDBoxLayout, TouchBehavior):
                 self.dialog.recent_scrollview_box.add_widget(self.create_content_box(recent_search[i][j]), index=0)
 
         try:
-            if int(width)>=900*scale:
+            if int(width)>=dp(900):
                 self.one_box.add_widget(self.recent)
         except: pass
-        
+
     def copy(self, instance, text: dict):
         synonyms=', '.join(text['synonyms']) if text['synonyms'] else None
         antonyms=', '.join(text['antonyms']) if text['antonyms'] else None
@@ -174,7 +174,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.progress_bar.back_color=bg
         self.progress_bar.color=self.progress_bar.back_color
         self.noname.md_bg_color=bg
-        self.progress_box.height=5*scale
+        self.progress_box.height=dp(5)
         self.progress_box.remove_widget(self.nav_bar)
         self.scrollview.clear_widgets()
         self.scrollview.add_widget(self.dialog)
@@ -193,19 +193,19 @@ class home(MDBoxLayout, TouchBehavior):
         return morebutton
 
     def create_chips(self, text):
-        return MDFillRoundFlatButton(text=text, theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=15*scale, on_press=lambda instance: self.search_button_pressed(instance, [text]))
+        return MDFillRoundFlatButton(text=text, theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), on_press=lambda instance: self.search_button_pressed(instance, [text]))
 
     def create_content_box(self, text):
         try:
-            self.content_box=MDCard(md_bg_color=boxbg, padding=[10*scale,10*scale,10*scale,10*scale], size_hint=(1, None), pos_hint={"center_x":0.5})
-            self.content_box.radius=[i*scale for i in self.content_box.radius]
+            self.content_box=MDCard(md_bg_color=boxbg, padding=[dp(10),dp(10),dp(10),dp(10)], size_hint=(1, None), pos_hint={"center_x":0.5})
+            self.content_box.radius=[dp(i) for i in self.content_box.radius]
             self.content_box.bind(minimum_height=self.content_box.setter('height'))
             self.content_box.tilte_and_description_box=MDBoxLayout(orientation='vertical', size_hint=(0.8,None))
             self.content_box.tilte_and_description_box.bind(minimum_height=self.content_box.tilte_and_description_box.setter('height'))
-            self.content_box.result_head_label=MDLabel(text=text["word"]+" ("+text["type"].lower()+")"+f'\n/{eng_to_ipa.convert(text["word"])}/', font_style="main", font_size=18*scale, size_hint=(0.9,None), pos_hint={"left":0}, theme_text_color="Custom", text_color=primarycolor)
+            self.content_box.result_head_label=MDLabel(text=text["word"]+" ("+text["type"].lower()+")"+f'\n/{eng_to_ipa.convert(text["word"])}/', font_style="main", font_size=dp(18), size_hint=(0.9,None), pos_hint={"left":0}, theme_text_color="Custom", text_color=primarycolor)
             self.content_box.result_head_label.bind(texture_size=self.content_box.result_head_label.setter('text_size'))
             self.content_box.result_head_label.bind(texture_size=self.content_box.result_head_label.setter('size'))
-            self.content_box.result_label=MDLabel(font_size=25*scale, size_hint=(0.9,None), pos_hint={"left":1}, theme_text_color="Custom", text_color=primarycolor)
+            self.content_box.result_label=MDLabel(font_size=dp(25), size_hint=(0.9,None), pos_hint={"left":1}, theme_text_color="Custom", text_color=primarycolor)
             if len(text["definition"])>50:
                 self.content_box.result_label.text=text["definition"][:50]+"..."
             else:
@@ -226,7 +226,7 @@ class home(MDBoxLayout, TouchBehavior):
     def add_data(self):
         global current_page
         current_page="add_data"
-        self.progress_box.height=5*scale
+        self.progress_box.heightdp(5)
         self.progress_box.remove_widget(self.nav_bar)
         self.menu.dismiss()
         self.progress_bar.back_color=bg
@@ -248,7 +248,7 @@ class home(MDBoxLayout, TouchBehavior):
                 self.homebox.add_widget(self.refreshbutton)
             elif self.scrollview.scroll_y>1:
                 self.refresh(None)
-            
+
     def refresh(self, instance):
         global home__
         if home__: self.scrollview.scroll_to(home__[0])
@@ -268,7 +268,7 @@ class home(MDBoxLayout, TouchBehavior):
         for i in range(len(home__[10:])):
             self.homebox.remove_widget(home__[10:][i])
         home__=home__[:10]
-    
+
     def menu_open(self, instance):
         menu_items = [
             {
@@ -288,7 +288,7 @@ class home(MDBoxLayout, TouchBehavior):
                 "on_release": self.add_data
             }
         ]
-        if Window.width<900*scale:
+        if Window.width<dp(900):
             menu_items.insert(2,{"text": "Gần đây",
                                 "text_color": primarycolor,
                                 "trailing_icon": "history",
@@ -307,7 +307,7 @@ class home(MDBoxLayout, TouchBehavior):
     def home(self, instance):
         global _back_, current_page
         current_page="home"
-        self.progress_box.height=5*scale
+        self.progress_box.height=dp(5)
         self.progress_bar.back_color=bg
         self.progress_bar.color=self.progress_bar.back_color
         self.noname.md_bg_color=bg
@@ -321,7 +321,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.box.clear_widgets()
         if self.text_input.input.text.split()!=[]: 
             self.progress_box.clear_widgets()
-            self.progress_box.height=60*scale
+            self.progress_box.height=dp(60)
             self.progress_box.add_widget(self.progress_bar)
             self.progress_box.add_widget(self.nav_bar)
             self.scrollview.scroll_y=1
@@ -331,7 +331,7 @@ class home(MDBoxLayout, TouchBehavior):
             self.scrollview.clear_widgets()
             self.scrollview.add_widget(self.result_box)
         self.box.add_widget(self.text_input)
-        
+
     def hide_input(self, instance, value):
         if ((len(self.text_input.input.text)==0) and (not value)) or self.signal:
             self.box.clear_widgets()
@@ -414,7 +414,7 @@ class home(MDBoxLayout, TouchBehavior):
                 for i in result:
                     if len(result)==1:
                         self.progress_box.clear_widgets()
-                        self.progress_box.height=60*scale
+                        self.progress_box.height=dp(60)
                         self.progress_box.add_widget(self.progress_bar)
                         self.progress_box.add_widget(self.nav_bar)
                         self.result_template.word.text=self.input_text[0].capitalize()+f' ({i.lower()})'
@@ -429,7 +429,7 @@ class home(MDBoxLayout, TouchBehavior):
                         self.result_box.add_widget(self.result_template)
                         self.synonyms_box.clear_widgets()
                         self.synonyms.scroll_x=0
-                        head=MDLabel(text="Từ đồng nghĩa", halign="center", font_style="main", size_hint=(1,None), height=25*scale, pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
+                        head=MDLabel(text="Từ đồng nghĩa", halign="center", font_style="main", size_hint=(1,None), height=dp(25), pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
                         if result[i]["synonyms"]!=[]:
                             self.result_box.add_widget(head)
                             self.result_box.add_widget(self.synonyms)
@@ -438,7 +438,7 @@ class home(MDBoxLayout, TouchBehavior):
 
                         self.antonyms_box.clear_widgets()
                         self.antonyms.scroll_x=0
-                        head=MDLabel(text="Từ trái nghĩa", halign="center", font_style="main", size_hint=(1,None), height=25*scale, pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
+                        head=MDLabel(text="Từ trái nghĩa", halign="center", font_style="main", size_hint=(1,None), height=dp(25), pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
                         if result[i]["antonyms"]!=[]:
                             self.result_box.add_widget(head)
                             self.result_box.add_widget(self.antonyms)
@@ -455,7 +455,7 @@ class home(MDBoxLayout, TouchBehavior):
                                 self.back_button.disabled=False
                         except: pass
             else:
-                self.progress_box.height=5*scale
+                self.progress_box.height=dp(5)
                 self.progress_box.remove_widget(self.nav_bar)
                 self.structure_box=MDBoxLayout(size_hint=(1, None))
                 for i in result:
@@ -520,8 +520,8 @@ class home(MDBoxLayout, TouchBehavior):
 
     def on_window_resize(self, window, width, height):
         last_width = int(settings["size"].split()[0])
-        is_large_screen = width >= 900*scale
-        was_large_screen = last_width >= 900*scale
+        is_large_screen = width >= dp(900)
+        was_large_screen = last_width >= dp(900)
         recent_in_children = self.recent in self.one_box.children
 
         if is_large_screen != was_large_screen:
