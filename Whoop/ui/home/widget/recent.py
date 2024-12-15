@@ -6,16 +6,16 @@ class recent(MDCard):
         self.orientation='vertical'
         self.md_bg_color=boxbg
         self.size_hint=(0.5, 1)
-        self.width=250*scale
+        self.width=dp(250)
         self.pos_hint={'center_x': 0.5, 'center_y': 0.5}
-        self.padding=[10*scale,10*scale,10*scale,10*scale]
-        self.spacing=20*scale
-        self.radius=[i*scale for i in radius]
-        self.recent_label=MDLabel(text="Gần đây", font_style="H6", halign="center", size_hint=(1,None), height=25*scale, pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=primarycolor)
+        self.padding=[dp(10), dp(10), dp(10), dp(10)]
+        self.spacing=dp(20)
+        self.radius=[dp(i) for i in radius]
+        self.recent_label=MDLabel(text="Gần đây", font_style="H6", halign="center", size_hint=(1,None), height=dp(25), pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.recent_scrollview = ScrollView(size_hint=(1, 1), pos_hint={'center_x': 0.5, 'center_y': 0.5}, do_scroll_x=False)
-        self.action_box=MDBoxLayout(size_hint=(1, None), height=20*scale, spacing=20, pos_hint={"center_x":0.5})
+        self.action_box=MDBoxLayout(size_hint=(1, None), height=dp(20), spacing=20, pos_hint={"center_x":0.5})
         self.clear_action=MDFillRoundFlatButton(text="Clear", md_bg_color=btn, pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=secondarycolor)
-        self.recent_scrollview_box=MDBoxLayout(orientation='vertical', size_hint=(1, None), spacing=20)
+        self.recent_scrollview_box=MDBoxLayout(orientation='vertical', size_hint=(1, None), spacing=dp(20))
         self.recent_scrollview_box.bind(minimum_height=self.recent_scrollview_box.setter('height'))
         self.add_widget(self.recent_label)
         self.add_widget(self.recent_scrollview)
@@ -30,14 +30,14 @@ class recent_(MDCard):
         self.md_bg_color=boxbg
         self.size_hint=(1, 1)
         self.pos_hint={'center_x': 0.5, 'center_y': 0.5}
-        self.padding=[10*scale,10*scale,10*scale,10*scale]
-        self.spacing=20*scale
+        self.padding=[dp(10), dp(10), dp(10), dp(10)]
+        self.spacing=dp(20)
         self.radius=radius
-        self.recent_label=MDLabel(text="Gần đây", font_style="H6", halign="center", size_hint=(1,None), height=25*scale, pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=primarycolor)
+        self.recent_label=MDLabel(text="Gần đây", font_style="H6", halign="center", size_hint=(1,None), height=dp(25), pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.recent_scrollview = ScrollView(size_hint=(1, 1), pos_hint={'center_x': 0.5, 'center_y': 0.5}, do_scroll_x=False)
-        self.action_box=MDBoxLayout(size_hint=(1, None), height=20*scale, spacing=20, pos_hint={"center_x":0.5})
+        self.action_box=MDBoxLayout(size_hint=(1, None), height=dp(20), spacing=dp(20), pos_hint={"center_x":0.5})
         self.clear_action=MDFillRoundFlatButton(text="Clear", md_bg_color=btn, pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=secondarycolor)
-        self.recent_scrollview_box=MDBoxLayout(orientation='vertical', size_hint=(1, None), spacing=20)
+        self.recent_scrollview_box=MDBoxLayout(orientation='vertical', size_hint=(1, None), spacing=dp(20))
         self.recent_scrollview_box.bind(minimum_height=self.recent_scrollview_box.setter('height'))
         self.add_widget(self.recent_label)
         self.add_widget(self.recent_scrollview)
