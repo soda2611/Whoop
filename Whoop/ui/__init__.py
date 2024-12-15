@@ -1,4 +1,4 @@
-from func.necessary_function import get_config, get_scaling_factor, check_connection
+from func.necessary_function import get_config, check_connection
 from func.data_manager import *
 from kivy.config import Config
 
@@ -126,6 +126,5 @@ def restart(instance):
 bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, engine, word__, source, home__, queried, version, data_=config()
 firstscreen=None
 secondscreen=None
-scale=get_scaling_factor()
 sm = ScreenManager()
 admin_code="nah bro"
