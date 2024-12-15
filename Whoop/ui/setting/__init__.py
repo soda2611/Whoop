@@ -8,14 +8,14 @@ class setting(MDBoxLayout):
     def __init__(self, **kwargs):
         super(setting, self).__init__(**kwargs)
         self.orientation = 'vertical'
-        self.padding = [10*scale, 10*scale, 10*scale, 10*scale]
-        self.spacing=20*scale
+        self.padding = [dp(10), dp(10), dp(10), dp(10)]
+        self.spacing=dp(20)
         self.md_bg_color=bg
-        
-        self.overlay=MDCard(padding=[10*scale, 10*scale, 10*scale, 10*scale], size_hint=(1, 1), orientation='vertical', md_bg_color=bg)
+
+        self.overlay=MDCard(padding=[dp(10), dp(10), dp(10), dp(10)], size_hint=(1, 1), orientation='vertical', md_bg_color=bg)
         self.overlay.bind(on_touch=self.touch_ignore)
         self.overlay.cancel_button=MDFillRoundFlatButton(text="Huỷ", pos_hint={"center_x": 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=secondarycolor, md_bg_color=btn, on_press=self.cancel_update)
-        self.overlay.add_widget(Image(source=settings["banner"], size_hint=(0.9, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, height=50*scale))
+        self.overlay.add_widget(Image(source=settings["banner"], size_hint=(0.9, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, height=dp(50)))
         self.overlay.add_widget(MDLabel(text="Đang cập nhật...", font_style="H6", halign="center", valign="middle", pos_hint={"center_x": 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=primarycolor))
         self.overlay.add_widget(self.overlay.cancel_button)
 
@@ -63,14 +63,14 @@ class setting(MDBoxLayout):
         self.back_button=MDIconButton(icon="arrow-left", size_hint=(None, None), pos_hint={"left": 0})
         self.back_button.bind(on_press=self.back)
         self.scrollview=ScrollView(size_hint=(1,1), do_scroll_x=False)
-        self.personalize=MDBoxLayout(orientation="vertical", size_hint=(1,None), pos_hint={"center_x": 0.5}, spacing=20*scale)
+        self.personalize=MDBoxLayout(orientation="vertical", size_hint=(1,None), pos_hint={"center_x": 0.5}, spacing=dp(20))
         self.personalize.bind(minimum_height=self.personalize.setter('height'))
         self.scrollview.add_widget(self.personalize)
-        self.changecolor=MDLabel(text="Cá nhân hóa với bảng màu", font_style="H6", halign="left", size_hint=(1,None), height=30*scale, pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
+        self.changecolor=MDLabel(text="Cá nhân hóa với bảng màu", font_style="H6", halign="left", size_hint=(1,None), height=dp(30), pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.color_palette_scroll=change_palette()
-        self.change_fonts=MDLabel(text="Fonts", font_style="H6", halign="left", size_hint=(1,None), height=30*scale, pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
+        self.change_fonts=MDLabel(text="Fonts", font_style="H6", halign="left", size_hint=(1,None), height=dp(30), pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.font_scroll=change_fonts()
-        self.info=MDFillRoundFlatButton(text=f"Phiên bản: SOD {version}\nNgày phát hành: Unknown    UID: {settings['uid']}", font_style="Caption", halign="center", size_hint=(0.75,None), height=35*scale, pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=bg)
+        self.info=MDFillRoundFlatButton(text=f"Phiên bản: SOD {version}\nNgày phát hành: Unknown    UID: {settings['uid']}", font_style="Caption", halign="center", size_hint=(0.75,None), height=dp(35), pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=bg)
         self.info.bind(on_release=self.on_touch)
 
         '''self.notification=MDLabel(text="Bạn không thể thay đổi bất cứ cài đặt nào của ứng dụng trong phiên bản này. Vui lòng chờ phiên bản cập nhật tiếp theo.", font_style="H6", halign="center", size_hint=(0.75,1), pos_hint={"center_x": 0.5})
@@ -106,7 +106,7 @@ Nhật
                 """,
                   font_style="Body2",
                   size_hint=(1,None),
-                  height=25*scale,
+                  height=dp(25),
                   pos_hint={"center_x": 0.5},
                   theme_text_color="Custom",
                   text_color=primarycolor)
@@ -114,8 +114,8 @@ Nhật
         self.cre.bind(texture_size=self.cre.setter('size'))
         self.temp_scroll_box=ScrollView(size_hint=(1, 1), pos_hint={"center_x": 0.5}, do_scroll_x=False)
         self.temp_scroll_box.add_widget(self.cre)
-        self.container=MDCard(orientation="vertical", spacing=20*scale, size_hint=(1,None), height=200*scale, padding=[10*scale, 10*scale, 10*scale, 10*scale])
-        self.container.radius=[i*scale for i in self.container.radius]
+        self.container=MDCard(orientation="vertical", spacing=dp(20), size_hint=(1,None), height=dp(200), padding=[dp(10), dp(10), dp(10), dp(10)])
+        self.container.radius=[dp(i) for i in self.container.radius]
         self.container.add_widget(self.temp_scroll_box)
         self.credit=MDDialog(
         title=f"Thư cảm ơn từ Nhà phát triển {settings['title']}",
@@ -135,12 +135,12 @@ Nhật
                 text_color=secondarycolor
             )            
         ],
-        md_bg_color=boxbg
+        md_bg_color=boxbg,
         )
         self.credit.buttons[0].bind(on_release=self.update_trigger)
         self.credit.buttons[1].bind(on_release=self.credit.dismiss)
         self.credit.open()
-        
+
     def update_trigger(self, instance):
         global update_thread
         self.credit.dismiss()
@@ -148,7 +148,7 @@ Nhật
         self.screen.add_widget(self.overlay)
         update_thread=threading.Timer(1, self.update_)
         update_thread.start()
-        
+
     def touch_ignore():
         pass
 
@@ -156,7 +156,7 @@ Nhật
         global update_thread
         sm.get_screen('second').remove_widget(self.overlay)
         update_thread.cancel()
-    
+
     def update_(self):
         self.overlay.cancel_button.disabled=True
         try:
@@ -168,12 +168,12 @@ Nhật
             Clock.schedule_once(self.failed_)
         else:
             Clock.schedule_once(self.success_)
-            
+
     def success_(self, instance):
         self.overlay.cancel_button.disabled=False
         self.screen.remove_widget(self.overlay)
         self.success.open()
-        
+
     def failed_(self, instance):
         self.overlay.cancel_button.disabled=False
         self.screen.remove_widget(self.overlay)
