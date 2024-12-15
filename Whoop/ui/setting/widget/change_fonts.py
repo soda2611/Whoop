@@ -8,9 +8,9 @@ class change_fonts(ScrollView):
         self.got_font_check=None
         self.do_scroll_y=False
         self.size_hint=(1, None)
-        self.height=50*scale
-        self.font_list=MDBoxLayout(size_hint=(None, 1), pos_hint={"center_x": 0.5}, spacing=20*scale, padding=[10*scale, 10*scale, 10*scale, 10*scale])
-        self.font_list.height=self.font_list.height*scale
+        self.height=dp(50)
+        self.font_list=MDBoxLayout(size_hint=(None, 1), pos_hint={"center_x": 0.5}, spacing=dp(20), padding=[dp(10), dp(10), dp(10), dp(10)])
+        self.font_list.height=dp(self.font_list.height)
         self.font_list.bind(minimum_width=self.font_list.setter('width'))
         self.add_widget(self.font_list)
         for i in fonts_name:
@@ -39,7 +39,7 @@ class change_fonts(ScrollView):
         self.dialog.buttons[1].bind(on_release=self.dialog.dismiss)
 
     def create_preview(self, i):
-        self.font=MDFillRoundFlatIconButton(text=i, theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, font_name=f"func/setting/fonts/{i}.ttf", font_size=17*scale)
+        self.font=MDFillRoundFlatIconButton(text=i, theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, font_name=f"func/setting/fonts/{i}.ttf", font_size=dp(17))
         if i==settings["fonts"]:
             self.font.icon='check-circle'
             self.font.icon_color=secondarycolor
@@ -47,7 +47,7 @@ class change_fonts(ScrollView):
         self.font.bind(on_press=lambda instance: self.change_font(instance, i))
 
         return self.font
-    
+
     def change_font(self, instance, i):
         self.got_font_check.icon=''
         self.got_font_check=instance
@@ -56,4 +56,3 @@ class change_fonts(ScrollView):
         self.scroll_to(self.got_font_check)
         ui.settings["fonts"]=i
         self.dialog.open()
-    
