@@ -8,11 +8,11 @@ class add_data(MDBoxLayout):
         super(add_data, self).__init__(**kwargs)
         self.orientation='vertical'
         self.size_hint_y=None
-        self.spacing=20
-        self.padding=[10,10,10,10]
+        self.spacing=dp(20)
+        self.padding=[dp(10), dp(10), dp(10), dp(10)]
         self.bind(minimum_height=self.setter('height'))
         
-        self.container=MDTextField(hint_text="Type here", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_x': 0.5}, height=30*scale, multiline=False)
+        self.container=MDTextField(hint_text="Type here", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
         self.container.bind(on_text_validate=self.add_)
 
         self.add__=MDDialog(
@@ -38,21 +38,19 @@ class add_data(MDBoxLayout):
         self.add__.buttons[1].bind(on_release=self.add__.dismiss)
         
         self.label=MDLabel(text="Add data", font_style="H6", valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5}, theme_text_color="Custom", text_color=primarycolor, halign='center')
-        self.word=MDTextField(hint_text="Word", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=30*scale, multiline=False)
-        self.type=MDTextField(hint_text="Type", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=30*scale, multiline=False)
-        self.cefr_level=MDTextField(hint_text="CEFR level", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=30*scale, multiline=False)
-        self.definition=MDTextField(hint_text="Definition", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=30*scale, multiline=False)
+        self.word=MDTextField(hint_text="Word", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
+        self.type=MDTextField(hint_text="Type", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
+        self.definition=MDTextField(hint_text="Definition", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
         self.add_synonyms=add_synonyms()
         self.add=MDFillRoundFlatIconButton(text="Add synonym", icon="plus-circle", theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", icon_color=secondarycolor,  text_color=secondarycolor, on_press=self.add__.open)
         self.add_synonyms.synonyms_list.add_widget(self.add)
         
-        self.admin_code=MDTextField(hint_text="Administrator code", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=30*scale, multiline=False)
+        self.admin_code=MDTextField(hint_text="Administrator code", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
         self.button=MDFillRoundFlatButton(text="Apply",size_hint=(None, None), pos_hint={"center_x":0.5, "center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, on_press=self.add_data)
         
         self.add_widget(self.label)
         self.add_widget(self.word)
         self.add_widget(self.type)
-        self.add_widget(self.cefr_level)
         self.add_widget(self.definition)
         self.add_widget(self.add_synonyms)
         self.add_widget(self.admin_code)
@@ -99,9 +97,8 @@ class add_synonyms(ScrollView):
         super(add_synonyms, self).__init__(**kwargs)
         self.do_scroll_y=False
         self.size_hint=(1, None)
-        self.height=50*scale
-        self.synonyms_list=MDBoxLayout(size_hint=(None, 1), pos_hint={"center_x": 0.5}, spacing=20*scale, padding=[10*scale, 10*scale, 10*scale, 10*scale])
-        self.synonyms_list.height=self.synonyms_list.height*scale
+        self.height=dp(50)
+        self.synonyms_list=MDBoxLayout(size_hint=(None, 1), pos_hint={"center_x": 0.5}, spacing=dp(20), padding=[dp(10), dp(10), dp(10), dp(10)])
+        self.synonyms_list.height=dp(self.synonyms_list.height)
         self.synonyms_list.bind(minimum_width=self.synonyms_list.setter('width'))
         self.add_widget(self.synonyms_list)
-
