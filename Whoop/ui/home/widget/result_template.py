@@ -9,7 +9,7 @@ class result_template(MDBoxLayout):
         self.padding=[dp(10), dp(10), dp(10), dp(10)]
         self.bind(minimum_height=self.setter('height'))
         self.word=MDLabel(text="", font_style="main", font_size=dp(20), halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=primarycolor)
-        self.pronunciation_template=MDBoxLayout(size_hint_y=None, spacing=10, padding=[dp(10), dp(10), dp(10), dp(10)], pos_hint={"center_x":0.5})
+        self.pronunciation_template=MDBoxLayout(size_hint_y=None, spacing=dp(10), padding=[dp(10), dp(10), dp(10), dp(10)], pos_hint={"center_x":0.5})
         self.pronunciation_template.bind(minimum_height=self.pronunciation_template.setter('height'))
         self.pronunciation=MDLabel(text="", font_style="main", font_size=dp(18), halign='center', size_hint=(1, None), pos_hint={'center_x': 0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.pronunciation_button=MDIconButton(icon="volume-high", theme_icon_color="Custom", icon_color=primarycolor, size_hint=(1, None), pos_hint={"center_x":0.5, "center_y": 0.25})
