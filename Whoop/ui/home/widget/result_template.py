@@ -5,13 +5,13 @@ class result_template(MDBoxLayout):
         super(result_template, self).__init__(**kwargs)
         self.orientation='vertical'
         self.size_hint_y=None
-        self.spacing=20
-        self.padding=[10,10,10,10]
+        self.spacing=dp(20)
+        self.padding=[dp(10), dp(10), dp(10), dp(10)]
         self.bind(minimum_height=self.setter('height'))
-        self.word=MDLabel(text="", font_style="main", font_size=20*scale, halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=primarycolor)
-        self.pronunciation_template=MDBoxLayout(size_hint_y=None, spacing=10, padding=[10,10,10,10], pos_hint={"center_x":0.5})
+        self.word=MDLabel(text="", font_style="main", font_size=dp(20), halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=primarycolor)
+        self.pronunciation_template=MDBoxLayout(size_hint_y=None, spacing=10, padding=[dp(10), dp(10), dp(10), dp(10)], pos_hint={"center_x":0.5})
         self.pronunciation_template.bind(minimum_height=self.pronunciation_template.setter('height'))
-        self.pronunciation=MDLabel(text="", font_style="main", font_size=18*scale, halign='center', size_hint=(1, None), pos_hint={'center_x': 0.5}, theme_text_color="Custom", text_color=primarycolor)
+        self.pronunciation=MDLabel(text="", font_style="main", font_size=dp(18), halign='center', size_hint=(1, None), pos_hint={'center_x': 0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.pronunciation_button=MDIconButton(icon="volume-high", theme_icon_color="Custom", icon_color=primarycolor, size_hint=(1, None), pos_hint={"center_x":0.5, "center_y": 0.25})
         self.definition=MDLabel(text="", font_style="Body1", halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.word.bind(texture_size=self.word.setter('text_size'))
@@ -30,8 +30,8 @@ class translate_result_template(MDBoxLayout):
         super(translate_result_template, self).__init__(**kwargs)
         self.orientation='vertical'
         self.size_hint_y=None
-        self.spacing=20
-        self.padding=[10,10,10,10]
+        self.spacing=dp(20)
+        self.padding=[dp(10), dp(10), dp(10), dp(10)]
         self.bind(minimum_height=self.setter('height'))
         self.src_text=MDLabel(text="", font_style="H6", halign="center", valign='middle', size_hint=(1, None), theme_text_color="Custom", text_color=primarycolor)
         self.src=MDLabel(text="Anh", font_style="Body2", halign="center", size_hint=(1, None), theme_text_color="Custom", text_color=primarycolor)
