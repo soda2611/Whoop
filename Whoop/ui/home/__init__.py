@@ -431,7 +431,7 @@ class home(MDBoxLayout, TouchBehavior):
                         self.result_box.add_widget(self.result_template)
                         self.synonyms_box.clear_widgets()
                         self.synonyms.scroll_x=0
-                        head=MDLabel(text="Từ đồng nghĩa", halign="center", font_style="main", size_hint=(1,None), height=dp(25), pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
+                        head=MDFillRoundFlatButton(text="Từ đồng nghĩa", font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), size_hint=(None,None),  pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=boxbg, on_press=lambda instance: pyperclip.copy(", ".join(result[i]["synonyms"])))
                         if result[i]["synonyms"]!=[]:
                             self.result_box.add_widget(head)
                             self.result_box.add_widget(self.synonyms)
@@ -440,7 +440,7 @@ class home(MDBoxLayout, TouchBehavior):
 
                         self.antonyms_box.clear_widgets()
                         self.antonyms.scroll_x=0
-                        head=MDLabel(text="Từ trái nghĩa", halign="center", font_style="main", size_hint=(1,None), height=dp(25), pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
+                        head=MDFillRoundFlatButton(text="Từ trái nghĩa", font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), size_hint=(None,None),  pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=boxbg, on_press=lambda instance: pyperclip.copy(", ".join(result[i]["antonyms"])))
                         if result[i]["antonyms"]!=[]:
                             self.result_box.add_widget(head)
                             self.result_box.add_widget(self.antonyms)
