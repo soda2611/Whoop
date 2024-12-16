@@ -160,7 +160,9 @@ class home(MDBoxLayout, TouchBehavior):
     def copy(self, instance, text: dict):
         synonyms=', '.join(text['synonyms']) if text['synonyms'] else None
         antonyms=', '.join(text['antonyms']) if text['antonyms'] else None
-        copy=f"""{text['word'].capitalize()} ({text['type']}): 
+        copy=f"""{text['word'].capitalize()} ({text['type']}):
+{eng_to_ipa.convert(text['word'])}
+
 {text["definition"][:1].upper()+text["definition"][1:]}
 *Từ đồng nghĩa: {f'{synonyms}' if synonyms else 'Không có từ đồng nghĩa'}
 
