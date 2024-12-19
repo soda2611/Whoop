@@ -194,12 +194,12 @@
         }
     },
     "god": {
-        "verb": {
-            "definition": "- To idolize.\n\n- To deify.\n\n",
+        "proper noun": {
+            "definition": "- The single deity of various monotheistic religions, especially the deity of Judaism, Christianity, and Islam.\nVí dụ: Dawn believes in God, but Willow believes in multiple gods and goddesses.\n\n- The single male deity of various bitheistic or duotheistic religions.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "god",
-            "type": "verb"
+            "type": "proper noun"
         }
     },
     "bungalow": {
@@ -864,6 +864,604 @@
             "antonyms": [],
             "word": "pilose",
             "type": "adjective"
+        }
+    },
+    "mansion": {
+        "noun": {
+            "definition": "- A large house or building, usually built for the wealthy.\n\n- A luxurious flat (apartment).\n\n- A house provided for a clergyman; a manse.\n\n- A stopping-place during a journey; a stage.\n\n- An astrological house; a station of the moon.\n\n- One of twenty-eight sections of the sky.\n\n- (chiefly in the plural) An individual habitation or apartment within a large house or group of buildings. (Now chiefly in allusion to John 14:2.)\n\n- Any of the branches of the Rastafari movement.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "mansion",
+            "type": "noun"
+        }
+    },
+    "mobile home": {
+        "noun": {
+            "definition": "- A prefabricated home built in a factory, rather than on site, and then taken to the place where it will be occupied.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "mobile home",
+            "type": "noun"
+        }
+    },
+    "prefabs": {
+        "noun": {
+            "definition": "- A prefabricated building.\n\n- A prefabricated section of a building.\n\n- A single-storey prefabricated home built in many British cities immediately after World War II, intended to have a short life, but in a few cases still in use.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "prefabs",
+            "type": "noun"
+        }
+    },
+    "prefab": {
+        "noun": {
+            "definition": "- A prefabricated building.\n\n- A prefabricated section of a building.\n\n- A single-storey prefabricated home built in many British cities immediately after World War II, intended to have a short life, but in a few cases still in use.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "prefab",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To prefabricate.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "prefab",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Prefabricated\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "prefab",
+            "type": "adjective"
+        }
+    },
+    "prefabricate": {
+        "verb": {
+            "definition": "- To manufacture (a building, etc.) in standard components that can be fitted together on site.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "prefabricate",
+            "type": "verb"
+        }
+    },
+    "occupied": {
+        "adjective": {
+            "definition": "- Reserved, engaged.\nVí dụ: The stall on the left is occupied.\n\n- Busy, unavailable.\nVí dụ: She is occupied at the moment.\n\n- Subjugated, under the control of a foreign military presence.\nVí dụ: My father travelled to occupied Japan in December 1945.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "occupied",
+            "type": "adjective"
+        },
+        "verb": {
+            "definition": "- (of time) To take or use.\n\n- To take or use space.\n\n- To have sexual intercourse with.\n\n- To do business in; to busy oneself with.\n\n- To use; to expend; to make use of.\n\n",
+            "synonyms": [
+                "coitize",
+                "go to bed with",
+                "sleep with",
+                "busy",
+                "employ"
+            ],
+            "antonyms": [],
+            "word": "occupied",
+            "type": "verb"
+        }
+    },
+    "terraced house": {
+        "noun": {
+            "definition": "- A type of house which shares both sidewalls with the adjacent houses, typical of Victorian and Edwardian housing in English cities.\n\n",
+            "synonyms": [
+                "linked house",
+                "mid-terrace",
+                "rowhouse",
+                "townhouse"
+            ],
+            "antonyms": [],
+            "word": "terraced house",
+            "type": "noun"
+        }
+    },
+    "terraced": {
+        "verb": {
+            "definition": "- To provide something with a terrace.\n\n- To form something into a terrace.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "terraced",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Of, relating to, or being a terraced house.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "terraced",
+            "type": "adjective"
+        }
+    },
+    "hi": {
+        "noun": {
+            "definition": "- The word \"hi\" used as a greeting.\nVí dụ: I didn't even get a hi.\n\n",
+            "synonyms": [
+                "greeting",
+                "hello"
+            ],
+            "antonyms": [],
+            "word": "hi",
+            "type": "noun"
+        },
+        "interjection": {
+            "definition": "- A friendly, informal, casual greeting said when meeting someone.\nVí dụ: Hi, how are you?\n\n- An exclamation to call attention.\n\n- Expressing wonder or derision.\n\n",
+            "synonyms": [
+                "greetings",
+                "hello"
+            ],
+            "antonyms": [],
+            "word": "hi",
+            "type": "interjection"
+        }
+    },
+    "path": {
+        "noun": {
+            "definition": "- A trail for the use of, or worn by, pedestrians.\n\n- A course taken.\nVí dụ: the path of a meteor, of a caravan, or of a storm\n\n- A Pagan tradition, for example witchcraft, Wicca, druidism, Heathenry.\n\n- A metaphorical course.\n\n- A method or direction of proceeding.\n\n- A human-readable specification for a location within a hierarchical or tree-like structure, such as a file system or as part of a URL.\n\n- A sequence of vertices from one vertex to another using the arcs (edges). A path does not visit the same vertex more than once (unless it is a closed path, where only the first and the last vertex are the same).\n\n- A continuous map f from the unit interval I = [0,1] to a topological space X.\n\n- A slot available for allocation to a railway train over a given route in between other trains.\n\n",
+            "synonyms": [
+                "track",
+                "trail"
+            ],
+            "antonyms": [],
+            "word": "path",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To make a path in, or on (something), or for (someone).\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "path",
+            "type": "verb"
+        }
+    },
+    "heck": {
+        "noun": {
+            "definition": "- (dog-breeding) A female dog or other canine, particularly a recent mother.\nVí dụ: My bitch just had puppies; they're so cute!\n\n- A promiscuous woman, slut, whore.\n\n- A despicable or disagreeable, aggressive person, usually a woman.\nVí dụ: Ann gossiped about me and mocked my work; sometimes she can be a real bitch!\n\n- A woman.\n\n- A man considered weak, effeminate, timid or pathetic in some way\n\n- A submissive person who does what others want; a man forced or coerced into a homoerotic relationship.\nVí dụ: Dude, don't be such a bitch. Assert yourself.\n\n- (of a man) A playful variation on dog (sense \"man\").\n\n- (used with a possessive pronoun) Friend.\nVí dụ: How my bitches been doin'?\n\n- A complaint, especially when the complaint is unjustified.\n\n- (usually only used in the singular) A difficult or confounding problem.\nVí dụ: Level 5 was a real bitch, don’t you think?\n\n- A queen (playing card), particularly the queen of spades in the card game of hearts.\n\n- Something unforgiving and unpleasant.\nVí dụ: Karma's a bitch.\n\n- Place; situation\n\n",
+            "synonyms": [
+                "gripe",
+                "grumble",
+                "kvetch",
+                "moan",
+                "whinge",
+                "pain in the ass",
+                "stinker",
+                "toughie",
+                "female",
+                "she-dog",
+                "gunsel",
+                "punk",
+                "doormat",
+                "slave"
+            ],
+            "antonyms": [],
+            "word": "bitch",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To behave or act as a bitch.\n\n- To criticize spitefully, often for the sake of complaining rather than in order to have the problem corrected.\nVí dụ: All you ever do is bitch about the food I cook for you!\n\n- To spoil, to ruin.\n\n",
+            "synonyms": [
+                "badmouth",
+                "slag off",
+                "snipe"
+            ],
+            "antonyms": [],
+            "word": "bitch",
+            "type": "verb"
+        }
+    },
+    "bitch": {
+        "noun": {
+            "definition": "- (dog-breeding) A female dog or other canine, particularly a recent mother.\nVí dụ: My bitch just had puppies; they're so cute!\n\n- A promiscuous woman, slut, whore.\n\n- A despicable or disagreeable, aggressive person, usually a woman.\nVí dụ: Ann gossiped about me and mocked my work; sometimes she can be a real bitch!\n\n- A woman.\n\n- A man considered weak, effeminate, timid or pathetic in some way\n\n- A submissive person who does what others want; a man forced or coerced into a homoerotic relationship.\nVí dụ: Dude, don't be such a bitch. Assert yourself.\n\n- (of a man) A playful variation on dog (sense \"man\").\n\n- (used with a possessive pronoun) Friend.\nVí dụ: How my bitches been doin'?\n\n- A complaint, especially when the complaint is unjustified.\n\n- (usually only used in the singular) A difficult or confounding problem.\nVí dụ: Level 5 was a real bitch, don’t you think?\n\n- A queen (playing card), particularly the queen of spades in the card game of hearts.\n\n- Something unforgiving and unpleasant.\nVí dụ: Karma's a bitch.\n\n- Place; situation\n\n",
+            "synonyms": [
+                "gripe",
+                "grumble",
+                "kvetch",
+                "moan",
+                "whinge",
+                "pain in the ass",
+                "stinker",
+                "toughie",
+                "female",
+                "she-dog",
+                "gunsel",
+                "punk",
+                "doormat",
+                "slave"
+            ],
+            "antonyms": [],
+            "word": "bitch",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To behave or act as a bitch.\n\n- To criticize spitefully, often for the sake of complaining rather than in order to have the problem corrected.\nVí dụ: All you ever do is bitch about the food I cook for you!\n\n- To spoil, to ruin.\n\n",
+            "synonyms": [
+                "badmouth",
+                "slag off",
+                "snipe"
+            ],
+            "antonyms": [],
+            "word": "bitch",
+            "type": "verb"
+        }
+    },
+    "sayonara": {
+        "noun": {
+            "definition": "- An utterance of sayonara, the wishing of farewell to someone.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "sayonara",
+            "type": "noun"
+        },
+        "interjection": {
+            "definition": "- (especially used when referring to Japan) Goodbye, adieu.\n\n",
+            "synonyms": [
+                "adieu",
+                "adios",
+                "arrivederci",
+                "au revoir",
+                "auf Wiedersehen",
+                "bye",
+                "bye-bye",
+                "cheerio",
+                "cheers",
+                "ciao",
+                "farewell",
+                "good day",
+                "goodbye",
+                "shalom",
+                "so long",
+                "tot ziens"
+            ],
+            "antonyms": [],
+            "word": "sayonara",
+            "type": "interjection"
+        }
+    },
+    "mixture": {
+        "noun": {
+            "definition": "- The act of mixing.\n\n- Something produced by mixing.\n\n- Something that consists of diverse elements.\n\n- A medicinal compound, typically a suspension of a solid in a solution\nVí dụ: A teaspoonful of the mixture to be taken three times daily after meals\n\n- A compound organ stop.\n\n- A cloth of variegated colouring.\n\n- A mix of different dry foods as a snack, especially chevda or Bombay mix.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "mixture",
+            "type": "noun"
+        }
+    },
+    "alloy": {
+        "noun": {
+            "definition": "- A metal that is a combination of two or more elements, at least one of which is a metal.\n\n- A metal of lesser value, mixed with a metal of greater value.\nVí dụ: gold without alloy\n\n- An admixture; something added which stains, taints etc.\n\n- Fusion, marriage, combination.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "alloy",
+            "type": "noun"
+        }
+    },
+    "compound": {
+        "noun": {
+            "definition": "- An enclosure within which workers, prisoners, or soldiers are confined\n\n- A group of buildings situated close together, e.g. for a school or block of offices\n\n",
+            "synonyms": [
+                "gaol",
+                "jail",
+                "pen",
+                "pound",
+                "prison"
+            ],
+            "antonyms": [],
+            "word": "compound",
+            "type": "noun"
+        }
+    },
+    "pound": {
+        "noun": {
+            "definition": "- A unit of mass equal to 16 avoirdupois ounces (= 453.592 37 g). Today this value is the most common meaning of \"pound\" as a unit of weight.\n\n- A unit of mass equal to 12 troy ounces (≈ 373.242 g). Today, this is a common unit of weight when measuring precious metals, and is little used elsewhere.\n\n- The symbol # (octothorpe, hash)\n\n- The unit of currency used in the United Kingdom and its dependencies. It is divided into 100 pence.\n\n- Any of various units of currency used in Egypt and Lebanon, and formerly in the Republic of Ireland, Cyprus and Israel.\n\n- Any of various units of currency formerly used in the United States.\nVí dụ: the Rhode Island pound; the New Hampshire pound\n\n- Abbreviation for pound-force, a unit of force/weight. Using this abbreviation to describe pound-force is inaccurate and unscientific.\n\n",
+            "synonyms": [
+                "GBP",
+                "nicker",
+                "pound sterling",
+                "quid",
+                "£",
+                "hash",
+                "sharp",
+                "lb",
+                "lb t",
+                "punt"
+            ],
+            "antonyms": [],
+            "word": "pound",
+            "type": "noun"
+        }
+    },
+    "sharp": {
+        "noun": {
+            "definition": "- The symbol ♯, placed after the name of a note in the key signature or before a note on the staff to indicate that the note is to be played a semitone higher.\nVí dụ: The pitch pipe sounded out a perfect F♯ (F sharp).\n\n- A note that is played a semitone higher than usual; denoted by the name of the note that is followed by the symbol ♯.\n\n- A note that is sharp in a particular key.\nVí dụ: The piece was difficult to read after it had been transposed, since in the new key many notes were sharps.\n\n- The scale having a particular sharp note as its tonic.\nVí dụ: Beethoven's \"Moonlight Sonata\" is written in C♯ minor (C sharp minor.)\n\n- (usually in the plural) Something that is sharp.\nVí dụ: Place sharps in the specially marked red container for safe disposal.\n\n- A dishonest person; a cheater.\nVí dụ: The casino kept in the break room a set of pictures of known sharps for the bouncers to see.\n\n- Part of a stream where the water runs very rapidly.\n\n- A sewing needle with a very slender point, more pointed than a blunt or a between.\n\n- (in the plural) Fine particles of husk mixed with coarse particle of flour of cereals; middlings.\n\n- An expert.\n\n- A sharpie (member of Australian gangs of the 1960s and 1970s).\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "sharp",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To raise the pitch of a note half a step making a natural note a sharp.\nVí dụ: That new musician must be tone deaf: he sharped half the notes of the song!\n\n- To play tricks in bargaining; to act the sharper.\n\n- To sharpen.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "sharp",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Terminating in a point or edge, especially one that can cut easily; not obtuse or rounded.\nVí dụ: A face with sharp features\n\n- Intelligent.\nVí dụ: My nephew is a sharp lad; he can count to 100 in six languages, and he's only five years old.\n\n- Higher than usual by one semitone (denoted by the symbol ♯ after the name of the note).\n\n- Higher in pitch than required.\nVí dụ: The orchestra's third violin several times was sharp about an eighth of a tone.\n\n- Having an intense, acrid flavour.\nVí dụ: Milly couldn't stand sharp cheeses when she was pregnant, because they made her nauseated.\n\n- Sudden and intense.\nVí dụ: A pregnant woman during labor normally experiences a number of sharp contractions.\n\n- Illegal or dishonest.\nVí dụ: Michael had a number of sharp ventures that he kept off the books.\n\n- Keenly or unduly attentive to one's own interests; shrewd.\nVí dụ: a sharp dealer;  a sharp customer\n\n- Exact, precise, accurate; keen.\nVí dụ: You'll need sharp aim to make that shot.\n\n- Offensive, critical, or acrimonious.\nVí dụ: When the two rivals met, first there were sharp words, and then a fight broke out.\n\n- Stylish or attractive.\nVí dụ: You look so sharp in that tuxedo!\n\n- Observant; alert; acute.\nVí dụ: Keep a sharp watch on the prisoners. I don't want them to escape!\n\n- Forming a small angle; especially, forming an angle of less than ninety degrees.\nVí dụ: Drive down Main for three quarters of a mile, then make a sharp right turn onto Pine.\n\n- Steep; precipitous; abrupt.\nVí dụ: a sharp ascent or descent; a sharp turn or curve\n\n- (of a statement) Said of as extreme a value as possible.\nVí dụ: Sure, any planar graph can be five-colored. But that result is not sharp: in fact, any planar graph can be four-colored. That is sharp: the same can't be said for any lower number.\n\n- Tactical; risky.\n\n- Piercing; keen; severe; painful.\nVí dụ: a sharp pain; the sharp and frosty winter air\n\n- Eager or keen in pursuit; impatient for gratification.\nVí dụ: a sharp appetite\n\n- Fierce; ardent; fiery; violent; impetuous.\n\n- Composed of hard, angular grains; gritty.\n\n- Uttered in a whisper, or with the breath alone; aspirated; unvoiced.\n\n- Hungry.\n\n",
+            "synonyms": [
+                "keen",
+                "razor",
+                "razor-sharp",
+                "pointed",
+                "accurate",
+                "exact",
+                "keen",
+                "precise",
+                "acrimonious",
+                "bitter",
+                "cutting",
+                "harsh",
+                "hostile",
+                "nasty",
+                "acrid",
+                "pungent",
+                "dishonest",
+                "dodgy",
+                "illegal",
+                "illicit",
+                "underhand",
+                "brainy",
+                "bright",
+                "intelligent",
+                "keen",
+                "smart",
+                "witty",
+                "acute",
+                "alert",
+                "keen",
+                "observant",
+                "sharp-eyed",
+                "chic",
+                "elegant",
+                "smart",
+                "stylish",
+                "abrupt",
+                "acute",
+                "stabbing"
+            ],
+            "antonyms": [
+                "blunt",
+                "dull",
+                "blunt",
+                "imprecise",
+                "inaccurate",
+                "complimentary",
+                "flattering",
+                "friendly",
+                "kind",
+                "nice",
+                "bland",
+                "insipid",
+                "tasteless",
+                "flat",
+                "above-board",
+                "honest",
+                "legit",
+                "legitimate",
+                "reputable",
+                "dim",
+                "dim-witted",
+                "slow",
+                "slow-witted",
+                "thick",
+                "flat",
+                "unobservant",
+                "inelegant",
+                "scruffy",
+                "shabby",
+                "dull"
+            ],
+            "word": "sharp",
+            "type": "adjective"
+        },
+        "adverb": {
+            "definition": "- To a point or edge; piercingly; eagerly; sharply.\n\n- (notcomp) Exactly.\nVí dụ: I'll see you at twelve o'clock sharp.\n\n- In a higher pitch than is correct or desirable.\nVí dụ: I didn't enjoy the concert much because the tenor kept going sharp on the high notes.\n\n",
+            "synonyms": [
+                "exactly",
+                "on the dot",
+                "precisely"
+            ],
+            "antonyms": [],
+            "word": "sharp",
+            "type": "adverb"
+        }
+    },
+    "h": {
+        "interjection": {
+            "definition": "- (chiefly Internet slang) Used as a filler response when one does not have a response to use. Almost always used by itself.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "h",
+            "type": "interjection"
+        }
+    },
+    "sub": {
+        "noun": {
+            "definition": "- A submarine.\n\n- A submarine sandwich: a sandwich made on a long bun.\nVí dụ: We can get subs at that deli.\n\n- A substitute, often in sports.\nVí dụ: She worked as a sub until she got her teaching certificate.\n\n- (often in plural) A subscription: a payment made for membership of a club, etc.\n\n- A subtitle.\nVí dụ: I've just noticed a mistake in the subs for this film.\n\n- A subroutine (sometimes one that does not return a value, as distinguished from a function, which does).\n\n- A subeditor.\n\n- A subcontractor.\n\n- (BDSM) A submissive.\n\n- A subordinate.\n\n- A subaltern.\n\n- A subscription (or (by extension) a subscriber) to an online channel or feed.\nVí dụ: I'm totally stoked; just got 10 new subs after my last video.\n\n- Subsistence money: part of a worker's wages paid before the work is finished.\n\n",
+            "synonyms": [
+                "grinder",
+                "hero",
+                "hero sandwich",
+                "hoagie",
+                "po' boy",
+                "spuckie",
+                "submarine",
+                "submarine sandwich",
+                "torpedo",
+                "wedge"
+            ],
+            "antonyms": [],
+            "word": "sub",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To substitute for.\n\n- To work as a substitute teacher, especially in primary and secondary education.\n\n- To replace (a player) with a substitute.\nVí dụ: He never really made a contribution to the match, so it was no surprise when he was subbed at half time.\n\n- Less commonly, and often as sub on, to bring on (a player) as a substitute.\nVí dụ: He was subbed on half way through the second half, and scored within minutes.\n\n- To perform the work of a subeditor or copy editor; to subedit.\n\n- To lend.\n\n- To subscribe.\n\n- (BDSM) To take a submissive role.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "sub",
+            "type": "verb"
+        }
+    },
+    "at": {
+        "verb": {
+            "definition": "- To reply to or talk to someone, either online or face-to-face. (from the practice of targeting a message or reply to someone online by writing @name)\nVí dụ: Cars 2 is the most influential film of all time. Don't @ me.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "at",
+            "type": "verb"
+        },
+        "noun": {
+            "definition": "- The at sign (@).\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "at",
+            "type": "noun"
+        },
+        "preposition": {
+            "definition": "- In, near, or in the general vicinity of a particular place.\nVí dụ: Caesar was at Rome;  at the corner of Fourth Street and Vine;  at Jim’s house\n\n- (indicating time) Indicating occurrence in an instant of time or a period of time relatively short in context or from the speaker's perspective.\nVí dụ: at six o’clock;  at closing time;  at night.\n\n- In the direction of (often in an unfocused or uncaring manner).\nVí dụ: He threw the ball at me.  He shouted at her.\n\n- Denotes a price.\nVí dụ: 3 apples at 2¢ (each)   The offer was at $30,000 before negotiations.\n\n- Occupied in (activity).\nVí dụ: men at work\n\n- In a state of.\nVí dụ: She is at sixes and sevens with him.  They are at loggerheads over how best to tackle the fiscal cliff.  The city was at the mercy of the occupying forces.\n\n- Indicates a position on a scale or in a series.\nVí dụ: Sell at 90.  Tiger finished the round at tenth, seven strokes behind the leaders.  I'm offering it—just to select customers—at cost.\n\n- Because of.\nVí dụ: to laugh at a joke   mad at their comments\n\n- Indicates a means, method, or manner.\n\n- Holding a given speed or rate.\nVí dụ: It is growing at the rate of 3% a year.  Cruising along at fifty miles per hour.\n\n- (used for skills (including in activities) or areas of knowledge) On the subject of; regarding.\nVí dụ: He slipped at marksmanship over his extended vacation.\n\n- (stressed pronunciation) Bothering, irritating, causing discomfort to\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "at",
+            "type": "preposition"
+        }
+    },
+    "questionable": {
+        "adjective": {
+            "definition": "- Problematic; open to doubt or challenge.\nVí dụ: It is questionable if the universe is open or closed.\n\n- Of dubious respectability or morality.\nVí dụ: Tiffiny’s behavior is highly questionable.\n\n- Inviting questions; inviting inquiry.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "questionable",
+            "type": "adjective"
+        }
+    },
+    "how": {
+        "noun": {
+            "definition": "- The means by which something is accomplished.\nVí dụ: I am not interested in the why, but in the how.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "how",
+            "type": "noun"
+        },
+        "adverb": {
+            "definition": "- To what degree.\nVí dụ: How often do you practice?\n\n- In what manner.\nVí dụ: How do you solve this puzzle?\n\n- In what state.\nVí dụ: How are you?\n\n- Used as a modifier to indicate surprise, delight, or other strong feelings in an exclamation.\nVí dụ: How very interesting!\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "how",
+            "type": "adverb"
+        },
+        "conjunction": {
+            "definition": "- The manner or way that.\nVí dụ: I remember how I solved this puzzle.\n\n- That, the fact that, the way that.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "how",
+            "type": "conjunction"
+        }
+    },
+    "interconnect": {
+        "verb": {
+            "definition": "- To connect to one another.\nVí dụ: The Internet interconnects a set of networks.\n\n",
+            "synonyms": [
+                "anastomose"
+            ],
+            "antonyms": [],
+            "word": "interconnect",
+            "type": "verb"
+        }
+    },
+    "anastomose": {
+        "verb": {
+            "definition": "- (of streams and rivers, blood vessels, etc) To join (two or more things) by anastomosis, to interconnect forming a network.\n\n- (of rivers, blood vessels, etc) To join by anastomosis.\n\n",
+            "synonyms": [
+                "interconnect",
+                "interjoin"
+            ],
+            "antonyms": [],
+            "word": "anastomose",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Joined or run together. Interconnected\n\n- (of rivers, etc) Joined or run together, ramified, interconnected\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "anastomose",
+            "type": "adjective"
+        }
+    },
+    "nourish": {
+        "noun": {
+            "definition": "- A nurse.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "nourish",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To feed and cause to grow; to supply with matter which increases bulk or supplies waste, and promotes health; to furnish with nutriment.\n\n- To support; to maintain.\n\n- To supply the means of support and increase to; to encourage; to foster\nVí dụ: to nourish rebellion\n\n- To cherish; to comfort.\n\n- To educate; to instruct; to bring up; to nurture; to promote the growth of in attainments.\n\n- To promote growth; to furnish nutriment.\n\n- To gain nourishment.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "nourish",
+            "type": "verb"
+        }
+    },
+    "nourishes": {
+        "noun": {
+            "definition": "- A nurse.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "nourishes",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To feed and cause to grow; to supply with matter which increases bulk or supplies waste, and promotes health; to furnish with nutriment.\n\n- To support; to maintain.\n\n- To supply the means of support and increase to; to encourage; to foster\nVí dụ: to nourish rebellion\n\n- To cherish; to comfort.\n\n- To educate; to instruct; to bring up; to nurture; to promote the growth of in attainments.\n\n- To promote growth; to furnish nutriment.\n\n- To gain nourishment.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "nourishes",
+            "type": "verb"
+        }
+    },
+    "apple": {
+        "noun": {
+            "definition": "- A common, round fruit produced by the tree Malus domestica, cultivated in temperate climates.\n\n- Any of various tree-borne fruits or vegetables especially considered as resembling an apple; also (with qualifying words) used to form the names of other specific fruits such as custard apple, rose apple, thorn apple etc.\n\n- The fruit of the Tree of Knowledge, eaten by Adam and Eve according to post-Biblical Christian tradition; the forbidden fruit.\n\n- A tree of the genus Malus, especially one cultivated for its edible fruit; the apple tree.\n\n- The wood of the apple tree.\n\n- (in the plural) Short for apples and pears, slang for stairs.\n\n- The ball in baseball.\n\n- When smiling, the round, fleshy part of the cheeks between the eyes and the corners of the mouth.\n\n- A Native American or red-skinned person who acts and/or thinks like a white (Caucasian) person.\n\n- (ice hockey slang) An assist.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "apple",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To become apple-like.\n\n- To form buds.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "apple",
+            "type": "verb"
+        }
+    },
+    "icy": {
+        "noun": {
+            "definition": "- Water in frozen (solid) form.\n\n- Any frozen volatile chemical, such as ammonia or carbon dioxide.\n\n- Any volatile chemical, such as water, ammonia, or carbon dioxide, not necessarily in solid form.\n\n- A frozen dessert made of fruit juice, water and sugar.\n\n- An ice cream.\n\n- Any substance having the appearance of ice.\n\n- One or more diamonds and jewelry.\n\n- Crystal form of amphetamine-based drugs.\n\n- The area where a game of ice hockey is played.\n\n- Money paid as a bribe.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "ice",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To cool with ice, as a beverage.\n\n- To become ice; to freeze.\n\n- To make icy; to freeze.\n\n- To murder.\n\n- To cover with icing (frosting made of sugar and milk or white of egg); to frost; as cakes, tarts, etc.\n\n- To put out a team for a match.\nVí dụ: Milton Keynes have yet to ice a team this season\n\n- To shoot the puck the length of the playing surface, causing a stoppage in play called icing.\nVí dụ: If the Bruins ice the puck, the faceoff will be in their own zone.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "ice",
+            "type": "verb"
         }
     }
 }
