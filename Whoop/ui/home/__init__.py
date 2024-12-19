@@ -68,7 +68,6 @@ class home(MDBoxLayout, TouchBehavior):
         self.progress_box.add_widget(self.progress_bar)
 
         self.add_widget(self.label)
-        self.add_widget(self.cautionlabel)
 
         self.one_box=MDBoxLayout(size_hint=(0.85, 0.25), pos_hint={'center_x': 0.5, 'center_y': 0.5}, spacing = 20)
         self.add_widget(self.one_box)
