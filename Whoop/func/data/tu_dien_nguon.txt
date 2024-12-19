@@ -1463,5 +1463,6 @@
             "word": "ice",
             "type": "verb"
         }
-    }
+    },
+    "interjoin": {}
 }
