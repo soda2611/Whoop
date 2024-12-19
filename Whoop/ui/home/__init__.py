@@ -319,10 +319,11 @@ class home(MDBoxLayout, TouchBehavior):
         current_page="search"
         self.box.clear_widgets()
         if self.text_input.input.text.split()!=[]: 
-            self.progress_box.clear_widgets()
-            self.progress_box.height=dp(60)
-            self.progress_box.add_widget(self.progress_bar)
-            self.progress_box.add_widget(self.nav_bar)
+            if len(result)==1:
+                self.progress_box.clear_widgets()
+                self.progress_box.height=dp(60)
+                self.progress_box.add_widget(self.progress_bar)
+                self.progress_box.add_widget(self.nav_bar)
             self.scrollview.scroll_y=1
             self.progress_bar.back_color=(boxbg)
             self.noname.md_bg_color=boxbg
