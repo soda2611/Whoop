@@ -16,7 +16,7 @@ class setting(MDBoxLayout):
         self.overlay.bind(on_touch=self.touch_ignore)
         self.overlay.cancel_button=MDFillRoundFlatButton(text="Huỷ", pos_hint={"center_x": 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=secondarycolor, md_bg_color=btn, on_press=self.cancel_update)
         self.overlay.add_widget(Image(source=settings["banner"], size_hint=(0.9, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, height=dp(50)))
-        self.overlay.add_widget(MDLabel(text="Đang cập nhật...", font_style="H6", halign="center", valign="middle", pos_hint={"center_x": 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=primarycolor))
+        self.overlay.add_widget(MDLabel(text="Đang cập nhật...\nĐiều này có thể kéo dài nhiều phút", font_style="H6", halign="center", valign="middle", pos_hint={"center_x": 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=primarycolor))
         self.overlay.add_widget(self.overlay.cancel_button)
 
         self.success=MDDialog(
@@ -161,10 +161,25 @@ Nhật
         self.overlay.cancel_button.disabled=True
         try:
             if check_connection():
-                download_file("Whoop", "Whoop/func/data/tu_dien_nguon.txt", "func/data/tu_dien_nguon.txt")
+                os.system("mkdir temp_data")
+                download_file('whoop_database', 'users', 'temp_data')
+                download_file('Whoop', 'Whoop/func/data/tu_dien_nguon.txt', 'temp_tu_dien_nguon.txt')
+                with open('func/data/tu_dien_nguon.txt', encoding='utf-8') as fi: dict_=eval(fi.read())
+                for root, dirs, files in os.walk('temp_data'):
+                        for file in files:
+                            if file.endswith(".txt"):
+                                with open(f'temp_data/{file}', encoding="utf-8") as fi:
+                                    dict_.update(eval(fi.read()))
+                                    dict_ = {k: v for k, v in dict_.items() if v!="Không tìm thấy từ"}
+                            os.remove(f'temp_data/{file}')        
+                with open('func/data/tu_dien_nguon.txt', "w", encoding='utf-8') as fo: fo.write(json.dumps(dict_, ensure_ascii=False, indent=4))
+                os.remove('temp_tu_dien_nguon.txt')
+                os.removedirs('temp_data')
+                upload_file('Whoop', 'Whoop/func/data/tu_dien_nguon.txt', 'func/data/tu_dien_nguon.txt')
                 download_file("Whoop", "Whoop/func/data/word.txt", "func/data/word.txt")
                 download_file("Whoop", "Whoop/func/data/grammar.txt", "func/data/grammar.txt")
-        except:
+        except Exception as ex:
+            print(ex)
             Clock.schedule_once(self.failed_)
         else:
             Clock.schedule_once(self.success_)
