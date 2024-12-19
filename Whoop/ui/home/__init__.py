@@ -498,10 +498,12 @@ class home(MDBoxLayout, TouchBehavior):
         self.progress_bar.stop()
 
     def pronounce(self, instance, text):
+        self.result_template.pronunciation_button.disabled=True
         def run():
             engine.say(text)
             engine.runAndWait()
             engine.stop()
+            self.result_template.pronunciation_button.disabled=False
 
         threading.Thread(target=run).start()
 
