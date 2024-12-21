@@ -16,7 +16,7 @@ class setting(MDBoxLayout):
         self.overlay.bind(on_touch=self.touch_ignore)
         self.overlay.cancel_button=MDFillRoundFlatButton(text="Huỷ", pos_hint={"center_x": 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=secondarycolor, md_bg_color=btn, on_press=self.cancel_update)
         self.overlay.add_widget(Image(source=settings["banner"], size_hint=(0.9, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, height=dp(50)))
-        self.overlay.add_widget(Label(text="Đang cập nhật...\n[font=arial][size=12]Điều này có thể kéo dài nhiều phút[/size][/font]", markup=True, font_name=f"{settings['fonts']}.ttf", font_size=20, halign="center", valign="middle", pos_hint={"center_x": 0.5, "center_y": 0.5}, color=primarycolor))
+        self.overlay.add_widget(Label(text=f"Đang cập nhật...\n[font=func/setting/fonts/arial][size={int(dp(12))]Điều này có thể kéo dài nhiều phút[/size][/font]", markup=True, font_name=f"{settings['fonts']}.ttf", font_size=dp(20), halign="center", valign="middle", pos_hint={"center_x": 0.5, "center_y": 0.5}, color=primarycolor))
         self.overlay.add_widget(self.overlay.cancel_button)
 
         self.success=MDDialog(
