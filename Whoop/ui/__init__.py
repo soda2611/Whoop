@@ -121,12 +121,13 @@ def config():
     
     return bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, engine, word__, source, home__, queried, version, data_
 
-set_new_config()
-    file_path = os.path.abspath(__file__)
-    if file_path.endswith('.py'):
-        subprocess.Popen(['py', file_path], start_new_session=True)
-    elif file_path.endswith('.exe'):
-        subprocess.Popen([file_path], start_new_session=True)
+def restart(instance):
+    set_new_config()
+    file_name = os.path.basename(__file__)
+    if file_name.endswith('.py'):
+        subprocess.Popen(['python', "UI.py"], start_new_session=True)
+    elif file_name.endswith('.exe'):
+        subprocess.Popen([file_name], start_new_session=True)
     os.kill(os.getpid(), signal.SIGTERM)
 
 bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, engine, word__, source, home__, queried, version, data_=config()
