@@ -16,7 +16,7 @@ class setting(MDBoxLayout):
         self.overlay.bind(on_touch=self.touch_ignore)
         self.overlay.cancel_button=MDFillRoundFlatButton(text="Huỷ", pos_hint={"center_x": 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=secondarycolor, md_bg_color=btn, on_press=self.cancel_update)
         self.overlay.add_widget(Image(source=settings["banner"], size_hint=(0.9, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, height=dp(50)))
-        self.overlay.add_widget(MDLabel(text="Đang cập nhật...\nĐiều này có thể kéo dài nhiều phút", font_style="H6", halign="center", valign="middle", pos_hint={"center_x": 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=primarycolor))
+        self.overlay.add_widget(Label(text="Đang cập nhật...\n[font=arial][size=12]Điều này có thể kéo dài nhiều phút[/size][/font]", markup=True, font_name=f"{settings['fonts']}.ttf", font_size=20, halign="center", valign="middle", pos_hint={"center_x": 0.5, "center_y": 0.5}, color=primarycolor))
         self.overlay.add_widget(self.overlay.cancel_button)
 
         self.success=MDDialog(
@@ -170,8 +170,9 @@ Nhật
                         for file in files:
                             if file.endswith(".txt"):
                                 with open(f'temp_data/{file}', encoding="utf-8") as fi:
-                                    dict_.update(eval(fi.read()))
-                                    _dict_.update(eval(fi.read()))
+                                    data=fi.read()
+                                    dict_.update(eval(data))
+                                    _dict_.update(eval())
                                     dict_ = {k: v for k, v in dict_.items() if v!="Không tìm thấy từ"}
                                     _dict_ = {k: v for k, v in _dict_.items() if v!="Không tìm thấy từ"}
                             os.remove(f'temp_data/{file}')        
@@ -182,7 +183,8 @@ Nhật
                 download_file("Whoop", "Whoop/func/data/grammar.txt", "func/data/grammar.txt")
                 os.remove('temp_tu_dien_nguon.txt')
                 os.removedirs('temp_data')
-        except:
+        except Exception as ex:
+            print(ex, file)
             Clock.schedule_once(self.failed_)
         else:
             Clock.schedule_once(self.success_)
