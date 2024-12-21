@@ -172,7 +172,7 @@ Nhật
                                 with open(f'temp_data/{file}', encoding="utf-8") as fi:
                                     data=fi.read()
                                     dict_.update(eval(data))
-                                    _dict_.update(eval())
+                                    _dict_.update(eval(data))
                                     dict_ = {k: v for k, v in dict_.items() if v!="Không tìm thấy từ"}
                                     _dict_ = {k: v for k, v in _dict_.items() if v!="Không tìm thấy từ"}
                             os.remove(f'temp_data/{file}')        
