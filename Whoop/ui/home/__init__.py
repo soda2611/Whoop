@@ -237,7 +237,7 @@ class home(MDBoxLayout, TouchBehavior):
     def infinite_homepage(self, instance, unknown):
         if current_page=="home":
             global _temp_
-            if self.scrollview.scroll_y<0:
+            if self.scrollview.scroll_y<-0.05:
                 self.homebox.remove_widget(self.refreshbutton)
                 for i in range(10):
                     word=random.choice(word__)
@@ -245,7 +245,7 @@ class home(MDBoxLayout, TouchBehavior):
                     home__.append(box)
                     self.homebox.add_widget(box)
                 self.homebox.add_widget(self.refreshbutton)
-            elif self.scrollview.scroll_y>1:
+            elif self.scrollview.scroll_y>=1.05:
                 self.refresh(None)
 
     def refresh(self, instance):
