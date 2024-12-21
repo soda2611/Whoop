@@ -1,7 +1,7 @@
 from ui import *
 
-list_=[]
-list__=[]
+synonyms_list=[]
+antonyms_list=[]
 
 class add_data(MDBoxLayout):
     def __init__(self, **kwargs):
@@ -12,13 +12,15 @@ class add_data(MDBoxLayout):
         self.padding=[dp(10), dp(10), dp(10), dp(10)]
         self.bind(minimum_height=self.setter('height'))
         
-        self.container=MDTextField(hint_text="Type here", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
-        self.container.bind(on_text_validate=self.add_)
+        self.synonym_container=MDTextField(hint_text="Type here", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
+        self.synonym_container.bind(on_text_validate=self.add_synonym)
+        self.antonym_container=MDTextField(hint_text="Type here", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
+        self.antonym_container.bind(on_text_validate=self.add_antonym)
 
-        self.add__=MDDialog(
+        self.synonym_dialog=MDDialog(
             title=f"Add synonym",
             type="custom",
-            content_cls=self.container,
+            content_cls=self.synonym_container,
             buttons=[
                 MDFillRoundFlatButton(
                     text="Apply",
@@ -34,16 +36,41 @@ class add_data(MDBoxLayout):
                 )],
             md_bg_color=boxbg
         )
-        self.add__.buttons[0].bind(on_release=self.add_)
-        self.add__.buttons[1].bind(on_release=self.add__.dismiss)
+        self.synonym_dialog.buttons[0].bind(on_release=self.add_synonym)
+        self.synonym_dialog.buttons[1].bind(on_release=self.synonym_dialog.dismiss)
+
+        self.antonym_dialog=MDDialog(
+            title=f"Add antonym",
+            type="custom",
+            content_cls=self.antonym_container,
+            buttons=[
+                MDFillRoundFlatButton(
+                    text="Apply",
+                    md_bg_color=btn,
+                    theme_text_color="Custom",
+                    text_color=secondarycolor
+                ),
+                MDFillRoundFlatButton(
+                    text="Cancel",
+                    md_bg_color=btn,
+                    theme_text_color="Custom",
+                    text_color=secondarycolor
+                )],
+            md_bg_color=boxbg
+        )
+        self.antonym_dialog.buttons[0].bind(on_release=self.add_antonym)
+        self.antonym_dialog.buttons[1].bind(on_release=self.antonym_dialog.dismiss)
         
         self.label=MDLabel(text="Add data", font_style="H6", valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5}, theme_text_color="Custom", text_color=primarycolor, halign='center')
         self.word=MDTextField(hint_text="Word", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
         self.type=MDTextField(hint_text="Type", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
         self.definition=MDTextField(hint_text="Definition", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
         self.add_synonyms=add_synonyms()
-        self.add=MDFillRoundFlatIconButton(text="Add synonym", icon="plus-circle", theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", icon_color=secondarycolor,  text_color=secondarycolor, on_press=self.add__.open)
-        self.add_synonyms.synonyms_list.add_widget(self.add)
+        self.add_synonym_button=MDFillRoundFlatIconButton(text="Add synonym", icon="plus-circle", theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", icon_color=secondarycolor,  text_color=secondarycolor, on_press=self.synonym_dialog.open)
+        self.add_synonyms.synonyms_list.add_widget(self.add_synonym_button)
+        self.add_antonyms=add_antonyms()
+        self.add_antonym_button=MDFillRoundFlatIconButton(text="Add antonym", icon="plus-circle", theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", icon_color=secondarycolor,  text_color=secondarycolor, on_press=self.antonym_dialog.open)
+        self.add_antonyms.antonyms_list.add_widget(self.add_antonym_button)
         
         self.admin_code=MDTextField(hint_text="Administrator code", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
         self.button=MDFillRoundFlatButton(text="Apply",size_hint=(None, None), pos_hint={"center_x":0.5, "center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, on_press=self.add_data)
@@ -53,41 +80,56 @@ class add_data(MDBoxLayout):
         self.add_widget(self.type)
         self.add_widget(self.definition)
         self.add_widget(self.add_synonyms)
+        self.add_widget(self.add_antonyms)
         self.add_widget(self.admin_code)
         self.add_widget(self.button)
         
-    def add_(self, instance):
-        global list_
-        while "  " in self.container.text:
-            self.container.text=self.container.text.replace("  "," ")
-        self.container.text=self.container.text.strip()
-        if self.container.text not in list_ and self.container.text!="":
-            list_.append(self.container.text)
-            self.add_synonyms.synonyms_list.add_widget(self.create_chips(self.container.text, on_press=self.remove))
+    def add_antonym(self, instance):
+        global antonyms_list
+        while "  " in self.antonym_container.text:
+            self.antonym_container.text=self.antonym_container.text.replace("  "," ")
+        self.antonym_container.text=self.antonym_container.text.strip()
+        if self.antonym_container.text not in antonyms_list and self.antonym_container.text!="":
+            antonyms_list.append(self.antonym_container.text)
+            self.add_antonyms.antonyms_list.add_widget(self.create_chips(self.antonym_container.text, on_press=self.remove_antonym))
           
-        self.container.text=""
-        self.add__.dismiss()
-        
-    def remove(self, instance):
-        global list_
-        list_.remove(instance.text)
-        self.add_synonyms.synonyms_list.remove_widget(instance)
+        self.antonym_container.text=""
+        self.antonym_dialog.dismiss()
 
-    def remove_(self, instance):
-        global list__
-        list_.remove(instance.text)
+    def add_synonym(self, instance):
+        global synonyms_list
+        while "  " in self.synonym_container.text:
+            self.synonym_container.text=self.synonym_container.text.replace("  "," ")
+        self.synonym_container.text=self.synonym_container.text.strip()
+        if self.synonym_container.text not in synonyms_list and self.synonym_container.text!="":
+            synonyms_list.append(self.synonym_container.text)
+            self.add_synonyms.synonyms_list.add_widget(self.create_chips(self.synonym_container.text, on_press=self.remove_synonym))
+          
+        self.synonym_container.text=""
+        self.synonym_dialog.dismiss()
+
+    def remove_antonym(self, instance):
+        global antonyms_list
+        antonyms_list.remove(instance.text)
         self.add_antonyms.antonyms_list.remove_widget(instance)
         
+    def remove_synonym(self, instance):
+        global synonyms_list
+        synonyms_list.remove(instance.text)
+        self.add_synonyms.synonyms_list.remove_widget(instance)
+        
     def add_data(self, instance):
-        global list_
-        if self.word.text and self.type.text and self.definition.text and self.cefr_level.text:
-            self.synonyms=', '.join(list_) if len(list_)>0 else 'none'            
-            self.word.text=self.type.text=self.definition.text=self.cefr_level.text=""
+        global synonyms_list, antonyms_list
+        if self.word.text and self.type.text and self.definition.text:
+            self.synonyms=', '.join(synonyms_list) if len(synonyms_list)>0 else 'none'
+            self.antonyms=', '.join(antonyms_list) if len(antonyms_list)>0 else 'none'
+            self.word.text=self.type.text=self.definition.text=""
             self.add_synonyms.synonyms_list.clear_widgets()
-            self.add_synonyms.synonyms_list.add_widget(self.add)
+            self.add_synonyms.synonyms_list.add_widget(self.add_synonym_button)
             self.add_antonyms.antonyms_list.clear_widgets()
-            self.add_antonyms.antonyms_list.add_widget(self._add_)
-            list_=[]
+            self.add_antonyms.antonyms_list.add_widget(self.add_antonym_button)
+            synonyms_list=[]
+            antonyms_list=[]
             
     def create_chips(self, text, on_press):
         return MDFillRoundFlatButton(text=text, theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, on_press=on_press)
@@ -102,3 +144,14 @@ class add_synonyms(ScrollView):
         self.synonyms_list.height=dp(self.synonyms_list.height)
         self.synonyms_list.bind(minimum_width=self.synonyms_list.setter('width'))
         self.add_widget(self.synonyms_list)
+
+class add_antonyms(ScrollView):
+    def __init__(self, **kwargs):
+        super(add_antonyms, self).__init__(**kwargs)
+        self.do_scroll_y=False
+        self.size_hint=(1, None)
+        self.height=dp(50)
+        self.antonyms_list=MDBoxLayout(size_hint=(None, 1), pos_hint={"center_x": 0.5}, spacing=dp(20), padding=[dp(10), dp(10), dp(10), dp(10)])
+        self.antonyms_list.height=dp(self.antonyms_list.height)
+        self.antonyms_list.bind(minimum_width=self.antonyms_list.setter('width'))
+        self.add_widget(self.antonyms_list)
