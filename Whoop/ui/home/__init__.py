@@ -79,9 +79,13 @@ class home(MDBoxLayout, TouchBehavior):
         self.one_box.add_widget(self.noname)
 
         self.recent=recent(self.create_content_box, self.clear_history, self.noname.radius)
-        for i in recent_search:
-            for j in recent_search[i]:
-                self.recent.recent_scrollview_box.add_widget(self.create_content_box(recent_search[i][j]), index=0)
+        if len(recent_search)>0:
+            for i in recent_search:
+                for j in recent_search[i]:
+                    self.recent.recent_scrollview_box.add_widget(self.create_content_box(recent_search[i][j]), index=0)
+            self.recent.container.add_widget(self.recent.recent_scrollview)
+        else:
+            self.recent.container.add_widget(self.recent.label)
 
         self.noname.add_widget(self.progress_box)
 
@@ -145,10 +149,13 @@ class home(MDBoxLayout, TouchBehavior):
         self.antonyms.add_widget(self.antonyms_box)
 
         self.dialog = recent_(self.create_content_box, self.clear_history, self.noname.radius)
-        for i in recent_search:
-            for j in recent_search[i]:
-                self.dialog.recent_scrollview_box.add_widget(self.create_content_box(recent_search[i][j]), index=0)
-
+        if len(recent_search)>0:
+            for i in recent_search:
+                for j in recent_search[i]:
+                    self.dialog.recent_scrollview_box.add_widget(self.create_content_box(recent_search[i][j]), index=0)
+            self.dialog.container.add_widget(self.dialog.recent_scrollview)
+        else:
+            self.dialog.container.add_widget(self.dialog.label)
         try:
             if int(width)>=dp(900):
                 self.one_box.add_widget(self.recent)
@@ -183,6 +190,10 @@ class home(MDBoxLayout, TouchBehavior):
         recent_search={}
         self.dialog.recent_scrollview_box.clear_widgets()
         self.recent.recent_scrollview_box.clear_widgets()
+        self.recent.container.clear_widgets()
+        self.recent.container.add_widget(self.recent.label)
+        self.dialog.container.clear_widgets()
+        self.dialog.container.add_widget(self.dialog.label)
         with open(f"func/setting/{settings['uid']}.txt", "w", encoding="utf-8") as fo:
             fo.write("{}")
 
@@ -463,6 +474,11 @@ class home(MDBoxLayout, TouchBehavior):
                     self.result_box.add_widget(self.create_content_box(result[i]))
                 self.result_box.add_widget(self.structure_box)
             if self.input_text[0] not in recent_search:
+                if len(recent_search)==0:
+                    self.recent.container.clear_widgets()
+                    self.recent.container.add_widget(self.recent.recent_scrollview)
+                    self.dialog.container.clear_widgets()
+                    self.dialog.container.add_widget(self.dialog.recent_scrollview)
                 for i in result:
                     self.recent.recent_scrollview_box.add_widget(self.create_content_box(result[i]), index=0)
                     self.dialog.recent_scrollview_box.add_widget(self.create_content_box(result[i]), index=0)
