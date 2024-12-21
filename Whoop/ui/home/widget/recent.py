@@ -5,7 +5,7 @@ class recent(MDCard):
         super(recent, self).__init__(**kwargs)
         self.orientation='vertical'
         self.md_bg_color=boxbg
-        self.size_hint=(0.5, 1)
+        self.size_hint=(0.45, 1)
         self.width=dp(250)
         self.pos_hint={'center_x': 0.5, 'center_y': 0.5}
         self.padding=[dp(10), dp(10), dp(10), dp(10)]
