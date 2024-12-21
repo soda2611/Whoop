@@ -62,9 +62,9 @@ class add_data(MDBoxLayout):
         self.antonym_dialog.buttons[1].bind(on_release=self.antonym_dialog.dismiss)
         
         self.label=MDLabel(text="Add data", font_style="H6", valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5}, theme_text_color="Custom", text_color=primarycolor, halign='center')
-        self.word=MDTextField(hint_text="Word", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
-        self.type=MDTextField(hint_text="Type", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
-        self.definition=MDTextField(hint_text="Definition", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
+        self.word=MDTextField(hint_text="Word", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, line_color_focus=btn, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
+        self.type=MDTextField(hint_text="Type", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, line_color_focus=btn, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
+        self.definition=MDTextField(hint_text="Definition", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, line_color_focus=btn, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
         self.add_synonyms=add_synonyms()
         self.add_synonym_button=MDFillRoundFlatIconButton(text="Add synonym", icon="plus-circle", theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", icon_color=secondarycolor,  text_color=secondarycolor, on_press=self.synonym_dialog.open)
         self.add_synonyms.synonyms_list.add_widget(self.add_synonym_button)
@@ -72,7 +72,7 @@ class add_data(MDBoxLayout):
         self.add_antonym_button=MDFillRoundFlatIconButton(text="Add antonym", icon="plus-circle", theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", icon_color=secondarycolor,  text_color=secondarycolor, on_press=self.antonym_dialog.open)
         self.add_antonyms.antonyms_list.add_widget(self.add_antonym_button)
         
-        self.admin_code=MDTextField(hint_text="Administrator code", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
+        self.admin_code=MDTextField(hint_text="Administrator code", hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, line_color_focus=btn, size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
         self.button=MDFillRoundFlatButton(text="Apply",size_hint=(None, None), pos_hint={"center_x":0.5, "center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, on_press=self.add_data)
         
         self.add_widget(self.label)
