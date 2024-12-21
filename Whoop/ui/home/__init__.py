@@ -9,6 +9,7 @@ _temp_=[]
 _back_=[]
 _value_=True
 _callback_=False
+result={}
 
 class home(MDBoxLayout, TouchBehavior):
     def __init__(self, **kwargs):
@@ -199,7 +200,7 @@ class home(MDBoxLayout, TouchBehavior):
 
     def morebutton(self, text):
         morebutton=MDFillRoundFlatButton(text="Xem thêm", pos_hint={"center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
-        morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, text))
+        morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, text['type'], value=False, temp=text))
         return morebutton
 
     def create_chips(self, text):
@@ -272,7 +273,7 @@ class home(MDBoxLayout, TouchBehavior):
                 else:
                     home__[i].result_label.text=text["definition"]
                 home__[i].remove_widget(home__[i].morebutton)
-                home__[i].morebutton=self.morebutton([text["word"]])
+                home__[i].morebutton=self.morebutton(text)
                 home__[i].add_widget(home__[i].morebutton)
             except: pass
         for i in range(len(home__[10:])):
@@ -326,7 +327,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.scrollview.add_widget(self.homebox)
 
     def show_input(self, instance):
-        global current_page
+        global current_page, result
         current_page="search"
         self.box.clear_widgets()
         if self.text_input.input.text.split()!=[]: 
