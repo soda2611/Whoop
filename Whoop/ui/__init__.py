@@ -1,212 +1,139 @@
-from ui import *
-from ui.setting.widget.change_palette import change_palette
-from ui.setting.widget.change_fonts import change_fonts
-from ui.setting.widget.update_dialog import update_dialog
+from func.necessary_function import get_config, check_connection
+from func.data_manager import *
+from kivy.config import Config
 
-update_thread=None
+settings=get_config()
 
-class setting(MDBoxLayout):
+try:
+    width, height= settings["size"].split()
+
+    Config.set('graphics', 'width', str(width))
+    Config.set('graphics', 'height', str(height))
+except:
+    pass
+
+import eng_to_ipa, os, random, threading , pyttsx3, subprocess, signal, getpass, sys, datetime, json
+from kivymd.app import MDApp
+from kivymd.uix.behaviors.magic_behavior import MagicBehavior
+from kivymd.uix.dialog import MDDialog
+from kivymd.uix.boxlayout import MDBoxLayout
+from kivymd.uix.relativelayout import MDRelativeLayout
+from kivy.uix.scrollview import ScrollView
+from kivymd.uix.textfield import MDTextField
+from kivymd.uix.button import MDIconButton, MDFillRoundFlatButton, MDFillRoundFlatIconButton
+from kivy.core.text import LabelBase
+from kivymd.font_definitions import theme_font_styles
+from kivymd.uix.label import MDLabel, MDIcon
+from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.uix.image import Image
+from kivymd.uix.behaviors import TouchBehavior
+from kivymd.uix.menu import MDDropdownMenu
+from kivymd.uix.card import MDCard
+from kivymd.uix.selectioncontrol import MDSwitch
+from kivymd.uix.progressbar import MDProgressBar
+from kivymd.uix.snackbar.snackbar import MDSnackbar
+from kivymd.uix.bottomsheet import *
+from kivy.uix.label import Label
+from kivy.metrics import dp
+from kivy.clock import Clock
+from kivy.core.window import Window
+from kivy.core.clipboard import Clipboard as pyperclip
+from func.SOD import *
+from googletrans import Translator
+
+class MDIconButton(MagicBehavior, MDIconButton):
     def __init__(self, **kwargs):
-        super(setting, self).__init__(**kwargs)
-        self.orientation = 'vertical'
-        self.padding = [dp(10), dp(10), dp(10), dp(10)]
-        self.spacing=dp(20)
-        self.md_bg_color=bg
-
-        self.overlay=MDCard(padding=[dp(10), dp(10), dp(10), dp(10)], size_hint=(1, 1), orientation='vertical', md_bg_color=bg)
-        self.overlay.bind(on_touch=self.touch_ignore)
-        self.overlay.cancel_button=MDFillRoundFlatButton(text="Huỷ", pos_hint={"center_x": 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=secondarycolor, md_bg_color=btn, on_press=self.cancel_update)
-        self.overlay.add_widget(Image(source=settings["banner"], size_hint=(0.9, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, height=dp(50)))
-        self.overlay.add_widget(Label(text=f"Đang cập nhật...\n[font=func/setting/fonts/arial][size={int(dp(12))}]Điều này có thể kéo dài nhiều phút[/size][/font]", markup=True, font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(20), halign="center", valign="middle", pos_hint={"center_x": 0.5, "center_y": 0.5}, color=primarycolor))
-        self.overlay.add_widget(self.overlay.cancel_button)
-
-        self.success=MDDialog(
-            title="Cập nhật thành công.",
-            type="alert",
-            text="Khởi động lại để áp dụng dữ liệu mới.",
-            buttons=[
-                MDFillRoundFlatButton(
-                    text="Khởi động lại",
-                    md_bg_color=btn,
-                    theme_text_color="Custom",
-                    text_color=secondarycolor,
-                    on_press=restart
-                ),
-                MDFillRoundFlatButton(
-                    text="Đóng",
-                    md_bg_color=btn,
-                    theme_text_color="Custom",
-                    text_color=secondarycolor
-                )
-            ],
-            md_bg_color=boxbg
-        )
-        self.success.buttons[1].bind(on_release=self.success.dismiss)
-
-        self.failed=MDDialog(
-            title="Cập nhật thất bại",
-            type="alert",
-            buttons=[
-                MDFillRoundFlatButton(
-                    text="Đóng",
-                    md_bg_color=btn,
-                    theme_text_color="Custom",
-                    text_color=secondarycolor
-                )
-            ],
-            md_bg_color=boxbg
-        )
-        self.failed.buttons[0].bind(on_release=self.failed.dismiss)
-
-        self.search_thread=None
-        self.touch_count=0
-        self.timer = None
-        self.back_button=MDIconButton(icon="arrow-left", size_hint=(None, None), pos_hint={"left": 0})
-        self.back_button.bind(on_press=self.back)
-        self.scrollview=ScrollView(size_hint=(1,1), do_scroll_x=False)
-        self.personalize=MDBoxLayout(orientation="vertical", size_hint=(1,None), pos_hint={"center_x": 0.5}, spacing=dp(20))
-        self.personalize.bind(minimum_height=self.personalize.setter('height'))
-        self.scrollview.add_widget(self.personalize)
-        self.changecolor=MDLabel(text="Cá nhân hóa với bảng màu", font_style="H6", halign="left", size_hint=(1,None), height=dp(30), pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
-        self.color_palette_scroll=change_palette()
-        self.change_fonts=MDLabel(text="Fonts", font_style="H6", halign="left", size_hint=(1,None), height=dp(30), pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
-        self.font_scroll=change_fonts()
-        self.info=MDFillRoundFlatButton(text=f"Phiên bản: SOD {version}\nNgày phát hành: Unknown    UID: {settings['uid']}", font_style="Caption", halign="center", size_hint=(0.75,None), height=dp(35), pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=bg)
-        self.info.bind(on_release=self.on_touch)
-
-        '''self.notification=MDLabel(text="Bạn không thể thay đổi bất cứ cài đặt nào của ứng dụng trong phiên bản này. Vui lòng chờ phiên bản cập nhật tiếp theo.", font_style="H6", halign="center", size_hint=(0.75,1), pos_hint={"center_x": 0.5})
-        self.add_widget(self.notification)'''
-
-        self.add_widget(self.back_button)
-        self.add_widget(self.scrollview)
-        self.personalize.add_widget(self.changecolor)
-        self.personalize.add_widget(self.color_palette_scroll)
-        self.personalize.add_widget(self.change_fonts)
-        self.personalize.add_widget(self.font_scroll)
-        self.add_widget(self.info)
-
-    def back(self, instance):
-        sm.transition.direction = "right"
-        sm.current = 'first'
-
-    def on_touch(self, instance):
-        self.screen=sm.get_screen('second')
-        self.screen.update_dialog.official.bind(on_press=lambda instance: self.update_trigger(instance, "official"))
-        self.screen.update_dialog.early_access.bind(on_press=lambda instance: self.update_trigger(instance, "early-access"))
-        self.cre=MDLabel(text=f"""Chào mừng bạn đến với {settings["title"]}!
-
-Là nhà phát triển chính của {settings["title"]}, tôi muốn dành một chút thời gian để cảm ơn bạn đã sử dụng phần mềm của tôi.
-
-{settings["title"]} được xây dựng bằng ngôn ngữ lập trình Python và sử dụng thư viện giao diện KivyMD. Tôi đã dành rất nhiều thời gian và công sức để tạo ra một sản phẩm mà tôi hy vọng sẽ hữu ích cho bạn.
-
-Tôi rất biết ơn sự hỗ trợ và phản hồi của bạn. Những ý kiến đóng góp của bạn giúp tôi cải thiện {settings["title"]} và đảm bảo rằng nó đáp ứng nhu cầu của người dùng.
-
-Nếu bạn có bất kỳ câu hỏi hoặc yêu cầu nào, đừng ngần ngại liên hệ với tôi qua email. Tôi luôn sẵn lòng giúp đỡ và mong muốn nghe ý kiến từ bạn.
-
-Cảm ơn bạn đã sử dụng {settings["title"]}!
-
-Trân trọng,
-Nhật
-                """,
-                  font_style="Body2",
-                  size_hint=(1,None),
-                  height=dp(25),
-                  pos_hint={"center_x": 0.5},
-                  theme_text_color="Custom",
-                  text_color=primarycolor)
-        self.cre.bind(texture_size=self.cre.setter('text_size'))
-        self.cre.bind(texture_size=self.cre.setter('size'))
-        self.temp_scroll_box=ScrollView(size_hint=(1, 1), pos_hint={"center_x": 0.5}, do_scroll_x=False)
-        self.temp_scroll_box.add_widget(self.cre)
-        self.container=MDCard(orientation="vertical", spacing=dp(20), size_hint=(1,None), height=dp(200), padding=[dp(10), dp(10), dp(10), dp(10)])
-        self.container.radius=[dp(i) for i in self.container.radius]
-        self.container.add_widget(self.temp_scroll_box)
-        self.credit=MDDialog(
-        title=f"Thư cảm ơn từ Nhà phát triển {settings['title']}",
-        type="custom",
-        content_cls=self.container,
-        buttons=[
-            MDFillRoundFlatButton(
-                text="Cập nhật dữ liệu",
-                md_bg_color=btn,
-                theme_text_color="Custom",
-                text_color=secondarycolor
-            ),
-            MDFillRoundFlatButton(
-                text="Đóng",
-                md_bg_color=btn,
-                theme_text_color="Custom",
-                text_color=secondarycolor
-            )            
-        ],
-        md_bg_color=boxbg,
-        )
-        self.credit.buttons[0].bind(on_release=self.update_dialog_open)
-        self.credit.buttons[1].bind(on_release=self.credit.dismiss)
-        self.credit.open()
+        super(MDIconButton, self).__init__(**kwargs)
         
-    def update_dialog_open(self, instance):
-        self.credit.dismiss()
-        self.screen.update_dialog.open()
+    def on_release(self, *args):
+        self.grow()
+        
+class MDFillRoundFlatButton(MagicBehavior, MDFillRoundFlatButton):
+    def __init__(self, **kwargs):
+        super(MDFillRoundFlatButton, self).__init__(**kwargs)
+        
+    def on_release(self, *args):
+        self.grow()
+        
+class MDFillRoundFlatIconButton(MagicBehavior, MDFillRoundFlatIconButton):
+    def __init__(self, **kwargs):
+        super(MDFillRoundFlatIconButton, self).__init__(**kwargs)
+        
+    def on_release(self, *args):
+        self.grow()
 
-    def update_trigger(self, instance, _type_):
-        global update_thread
-        print(_type_)
-        self.screen.add_widget(self.overlay)
-        update_thread=threading.Timer(2, self.update_, args=[_type_])
-        update_thread.start()
+def set_new_config():
+    with open("func/setting/setting.txt", "w", encoding="utf-8") as fo:
+        for i in settings:
+            fo.write(f"{i}: {str(settings[i])}\n")
 
-    def touch_ignore():
-        pass
+def track_user_queries(data):
+    download_file("whoop_database", f"users/{settings['uid']}.txt", f"func/data/temp_{settings['uid']}.txt")
+    with open(f"func/data/temp_{settings['uid']}.txt", encoding="utf-8") as fo:
+        _out_=eval(fo.read())
+        _out_.update(data)
+    with open(f"func/data/temp_{settings['uid']}.txt", "w", encoding="utf-8") as fo:
+        fo.write(json.dumps(_out_, ensure_ascii=False, indent=4))
+    upload_file("whoop_database", f"users/{settings['uid']}.txt", f"func/data/temp_{settings['uid']}.txt")
+    os.remove(f"func/data/temp_{settings['uid']}.txt")
 
-    def cancel_update(self, instance):
-        global update_thread
-        sm.get_screen('second').remove_widget(self.overlay)
-        update_thread.cancel()
+def config():
+    if settings['uid']=="none":
+        settings['uid']=datetime.datetime.now().strftime(f"%Y%m%d%H%M%S")
+        with open(f"func/setting/{settings['uid']}.txt", "w", encoding="utf-8") as fo: fo.write("{}")
+        upload_file("whoop_database", f"users/{settings['uid']}.txt", f"func/setting/{settings['uid']}.txt")
+        set_new_config()
+    engine = pyttsx3.init()
+    data_=SOD_word_list()
+    word__=[i for i in data_]
+    source=word_data()
+    home__=[]
+    queried={}
+    version=settings["version"]
 
-    def update_(self, _type_=None):
-        self.overlay.cancel_button.disabled=True
-        try:
-            if check_connection():
-                if _type_=="early-access":
-                    os.system("mkdir temp_data")
-                    download_file('whoop_database', 'users', 'temp_data')
-                    download_file('Whoop', 'Whoop/func/data/tu_dien_nguon.txt', 'temp_tu_dien_nguon.txt')
-                    with open('func/data/tu_dien_nguon.txt', encoding='utf-8') as fi: dict_=eval(fi.read())
-                    with open('temp_tu_dien_nguon.txt', encoding='utf-8') as fi: _dict_=eval(fi.read())
-                    for root, dirs, files in os.walk('temp_data'):
-                            for file in files:
-                                if file.endswith(".txt"):
-                                    with open(f'temp_data/{file}', encoding="utf-8") as fi:
-                                        data=fi.read()
-                                        dict_.update(eval(data))
-                                        _dict_.update(eval(data))
-                                        dict_ = {k: v for k, v in dict_.items() if v!="Không tìm thấy từ"}
-                                        _dict_ = {k: v for k, v in _dict_.items() if v!="Không tìm thấy từ"}
-                                os.remove(f'temp_data/{file}')        
-                    with open('func/data/tu_dien_nguon.txt', "w", encoding='utf-8') as fo: fo.write(json.dumps(dict_, ensure_ascii=False, indent=4))
-                    with open('temp_tu_dien_nguon.txt', "w", encoding='utf-8') as fo: fo.write(json.dumps(_dict_, ensure_ascii=False, indent=4))
-                    upload_file('Whoop', 'Whoop/func/data/tu_dien_nguon.txt', 'temp_tu_dien_nguon.txt')
-                    os.removedirs('temp_data')
-                elif _type_=="official":
-                    download_file('Whoop', 'Whoop/func/data/tu_dien_nguon.txt', 'temp_tu_dien_nguon.txt')
-                    with open('func/data/tu_dien_nguon.txt', encoding='utf-8') as fi: dict_=eval(fi.read())
-                    with open('temp_tu_dien_nguon.txt', encoding='utf-8') as fi: _dict_=eval(fi.read())
-                    with open('func/data/tu_dien_nguon.txt', "w", encoding='utf-8') as fo: fo.write(json.dumps(dict_.update(_dict_), ensure_ascii=False, indent=4))
-                    download_file("Whoop", "Whoop/func/data/word.txt", "func/data/word.txt")
-                    download_file("Whoop", "Whoop/func/data/grammar.txt", "func/data/grammar.txt")
-                os.remove('temp_tu_dien_nguon.txt')
-        except Exception as ex:
-            Clock.schedule_once(self.failed_)
-        else:
-            Clock.schedule_once(self.success_)
+    Window.minimum_width, Window.minimum_height= 406, 374
+    Window.softinput_mode='pan'
+    LabelBase.register(name="main", fn_regular=f"func/setting/fonts/{settings['fonts']}.ttf")
 
-    def success_(self, instance):
-        self.overlay.cancel_button.disabled=False
-        self.screen.remove_widget(self.overlay)
-        self.success.open()
+    color=settings["current palette"].split("; ")
+    bg=[int(i)/255 for i in color[0].split(", ")]+[1]
+    boxbg=[int(i)/255 for i in color[1].split(", ")]+[1]
+    menubg=[int(i)/255 for i in color[2].split(", ")]+[1]
+    btn=[int(i)/255 for i in color[3].split(", ")]+[1]
+    primarycolor=[int(i)/255 for i in color[4].split(", ")]+[1]
+    secondarycolor=[int(i)/255 for i in color[5].split(", ")]+[1]
+    
+    with open("func/setting/colors.txt", "r", encoding="utf-8") as fi:
+        lines=fi.readlines()
+    
+    colors=[]
+    for i in lines:
+        colors.append([k.split(", ") for k in i.strip().split("; ")])
 
-    def failed_(self, instance):
-        self.overlay.cancel_button.disabled=False
-        self.screen.remove_widget(self.overlay)
-        self.failed.open()
+    with open(f"func/setting/{settings['uid']}.txt", "r", encoding="utf-8") as f:
+        lines = f.read()
+        recent_search = eval(lines)
+
+    font_dir = "func/setting/fonts"
+    fonts_name=[]
+    for root, dirs, files in os.walk(font_dir):
+        for file in files:
+            if file.endswith(".ttf"):
+                fonts_name.append(file[:file.find(".ttf")])
+    
+    return bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, engine, word__, source, home__, queried, version, data_
+
+def restart(instance):
+    set_new_config()
+    file_name = os.path.basename(__file__)
+    if file_name.endswith('.py'):
+        subprocess.Popen(['python', "UI.py"], start_new_session=True)
+    elif file_name.endswith('.exe'):
+        subprocess.Popen([file_name], start_new_session=True)
+    os.kill(os.getpid(), signal.SIGTERM)
+
+bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, engine, word__, source, home__, queried, version, data_=config()
+firstscreen=None
+secondscreen=None
+sm = ScreenManager()
+admin_code="nah bro"
