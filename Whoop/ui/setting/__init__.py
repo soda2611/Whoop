@@ -151,8 +151,8 @@ Nhật
 
     def update_trigger(self, instance, _type_):
         global update_thread
-        print(_type_)
-        self.screen.add_widget(self.overlay)
+        try: self.screen.add_widget(self.overlay)
+        except: pass
         update_thread=threading.Timer(2, self.update_, args=[_type_])
         update_thread.start()
 
