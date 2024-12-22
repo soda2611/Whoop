@@ -1,6 +1,7 @@
 from ui import *
 from ui.setting.widget.change_palette import change_palette
 from ui.setting.widget.change_fonts import change_fonts
+from ui.setting.widget.update_dialog import update_dialog
 
 update_thread=None
 
@@ -16,7 +17,7 @@ class setting(MDBoxLayout):
         self.overlay.bind(on_touch=self.touch_ignore)
         self.overlay.cancel_button=MDFillRoundFlatButton(text="Huỷ", pos_hint={"center_x": 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=secondarycolor, md_bg_color=btn, on_press=self.cancel_update)
         self.overlay.add_widget(Image(source=settings["banner"], size_hint=(0.9, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, height=dp(50)))
-        self.overlay.add_widget(Label(text=f"Đang cập nhật...\n[font=func/setting/fonts/arial][size={int(dp(12))]Điều này có thể kéo dài nhiều phút[/size][/font]", markup=True, font_name=f"{settings['fonts']}.ttf", font_size=dp(20), halign="center", valign="middle", pos_hint={"center_x": 0.5, "center_y": 0.5}, color=primarycolor))
+        self.overlay.add_widget(Label(text=f"Đang cập nhật...\n[font=func/setting/fonts/arial][size={int(dp(12))}]Điều này có thể kéo dài nhiều phút[/size][/font]", markup=True, font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(20), halign="center", valign="middle", pos_hint={"center_x": 0.5, "center_y": 0.5}, color=primarycolor))
         self.overlay.add_widget(self.overlay.cancel_button)
 
         self.success=MDDialog(
@@ -89,6 +90,9 @@ class setting(MDBoxLayout):
         sm.current = 'first'
 
     def on_touch(self, instance):
+        self.screen=sm.get_screen('second')
+        self.screen.update_dialog.official.bind(on_press=lambda instance: self.update_trigger(instance, "official"))
+        self.screen.update_dialog.early_access.bind(on_press=lambda instance: self.update_trigger(instance, "early-access"))
         self.cre=MDLabel(text=f"""Chào mừng bạn đến với {settings["title"]}!
 
 Là nhà phát triển chính của {settings["title"]}, tôi muốn dành một chút thời gian để cảm ơn bạn đã sử dụng phần mềm của tôi.
@@ -137,16 +141,19 @@ Nhật
         ],
         md_bg_color=boxbg,
         )
-        self.credit.buttons[0].bind(on_release=self.update_trigger)
+        self.credit.buttons[0].bind(on_release=self.update_dialog_open)
         self.credit.buttons[1].bind(on_release=self.credit.dismiss)
         self.credit.open()
-
-    def update_trigger(self, instance):
-        global update_thread
+        
+    def update_dialog_open(self, instance):
         self.credit.dismiss()
-        self.screen=sm.get_screen('second')
+        self.screen.update_dialog.open()
+
+    def update_trigger(self, instance, _type_):
+        global update_thread
+        print(_type_)
         self.screen.add_widget(self.overlay)
-        update_thread=threading.Timer(1, self.update_)
+        update_thread=threading.Timer(2, self.update_, args=[_type_])
         update_thread.start()
 
     def touch_ignore():
@@ -157,34 +164,39 @@ Nhật
         sm.get_screen('second').remove_widget(self.overlay)
         update_thread.cancel()
 
-    def update_(self):
+    def update_(self, _type_=None):
         self.overlay.cancel_button.disabled=True
         try:
             if check_connection():
-                os.system("mkdir temp_data")
-                download_file('whoop_database', 'users', 'temp_data')
-                download_file('Whoop', 'Whoop/func/data/tu_dien_nguon.txt', 'temp_tu_dien_nguon.txt')
-                with open('func/data/tu_dien_nguon.txt', encoding='utf-8') as fi: dict_=eval(fi.read())
-                with open('temp_tu_dien_nguon.txt', encoding='utf-8') as fi: _dict_=eval(fi.read())
-                for root, dirs, files in os.walk('temp_data'):
-                        for file in files:
-                            if file.endswith(".txt"):
-                                with open(f'temp_data/{file}', encoding="utf-8") as fi:
-                                    data=fi.read()
-                                    dict_.update(eval(data))
-                                    _dict_.update(eval(data))
-                                    dict_ = {k: v for k, v in dict_.items() if v!="Không tìm thấy từ"}
-                                    _dict_ = {k: v for k, v in _dict_.items() if v!="Không tìm thấy từ"}
-                            os.remove(f'temp_data/{file}')        
-                with open('func/data/tu_dien_nguon.txt', "w", encoding='utf-8') as fo: fo.write(json.dumps(dict_, ensure_ascii=False, indent=4))
-                with open('temp_tu_dien_nguon.txt', "w", encoding='utf-8') as fo: fo.write(json.dumps(_dict_, ensure_ascii=False, indent=4))
-                upload_file('Whoop', 'Whoop/func/data/tu_dien_nguon.txt', 'temp_tu_dien_nguon.txt')
-                download_file("Whoop", "Whoop/func/data/word.txt", "func/data/word.txt")
-                download_file("Whoop", "Whoop/func/data/grammar.txt", "func/data/grammar.txt")
+                if _type_=="early-access":
+                    os.system("mkdir temp_data")
+                    download_file('whoop_database', 'users', 'temp_data')
+                    download_file('Whoop', 'Whoop/func/data/tu_dien_nguon.txt', 'temp_tu_dien_nguon.txt')
+                    with open('func/data/tu_dien_nguon.txt', encoding='utf-8') as fi: dict_=eval(fi.read())
+                    with open('temp_tu_dien_nguon.txt', encoding='utf-8') as fi: _dict_=eval(fi.read())
+                    for root, dirs, files in os.walk('temp_data'):
+                            for file in files:
+                                if file.endswith(".txt"):
+                                    with open(f'temp_data/{file}', encoding="utf-8") as fi:
+                                        data=fi.read()
+                                        dict_.update(eval(data))
+                                        _dict_.update(eval(data))
+                                        dict_ = {k: v for k, v in dict_.items() if v!="Không tìm thấy từ"}
+                                        _dict_ = {k: v for k, v in _dict_.items() if v!="Không tìm thấy từ"}
+                                os.remove(f'temp_data/{file}')        
+                    with open('func/data/tu_dien_nguon.txt', "w", encoding='utf-8') as fo: fo.write(json.dumps(dict_, ensure_ascii=False, indent=4))
+                    with open('temp_tu_dien_nguon.txt', "w", encoding='utf-8') as fo: fo.write(json.dumps(_dict_, ensure_ascii=False, indent=4))
+                    upload_file('Whoop', 'Whoop/func/data/tu_dien_nguon.txt', 'temp_tu_dien_nguon.txt')
+                    os.removedirs('temp_data')
+                elif _type_=="official":
+                    download_file('Whoop', 'Whoop/func/data/tu_dien_nguon.txt', 'temp_tu_dien_nguon.txt')
+                    with open('func/data/tu_dien_nguon.txt', encoding='utf-8') as fi: dict_=eval(fi.read())
+                    with open('temp_tu_dien_nguon.txt', encoding='utf-8') as fi: _dict_=eval(fi.read())
+                    with open('func/data/tu_dien_nguon.txt', "w", encoding='utf-8') as fo: fo.write(json.dumps(dict_.update(_dict_), ensure_ascii=False, indent=4))
+                    download_file("Whoop", "Whoop/func/data/word.txt", "func/data/word.txt")
+                    download_file("Whoop", "Whoop/func/data/grammar.txt", "func/data/grammar.txt")
                 os.remove('temp_tu_dien_nguon.txt')
-                os.removedirs('temp_data')
         except Exception as ex:
-            print(ex, file)
             Clock.schedule_once(self.failed_)
         else:
             Clock.schedule_once(self.success_)
