@@ -161,8 +161,9 @@ Nhật
 
     def cancel_update(self, instance):
         global update_thread
-        sm.get_screen('second').remove_widget(self.overlay)
         update_thread.cancel()
+        self.screen.remove_widget(self.overlay)
+        self.screen.update_dialog.dismiss()
 
     def update_(self, _type_=None):
         self.overlay.cancel_button.disabled=True
@@ -192,7 +193,8 @@ Nhật
                     download_file('Whoop', 'Whoop/func/data/tu_dien_nguon.txt', 'temp_tu_dien_nguon.txt')
                     with open('func/data/tu_dien_nguon.txt', encoding='utf-8') as fi: dict_=eval(fi.read())
                     with open('temp_tu_dien_nguon.txt', encoding='utf-8') as fi: _dict_=eval(fi.read())
-                    with open('func/data/tu_dien_nguon.txt', "w", encoding='utf-8') as fo: fo.write(json.dumps(dict_.update(_dict_), ensure_ascii=False, indent=4))
+                    dict_.update(_dict_)
+                    with open('func/data/tu_dien_nguon.txt', "w", encoding='utf-8') as fo: fo.write(json.dumps(dict_, ensure_ascii=False, indent=4))
                     download_file("Whoop", "Whoop/func/data/word.txt", "func/data/word.txt")
                     download_file("Whoop", "Whoop/func/data/grammar.txt", "func/data/grammar.txt")
                 os.remove('temp_tu_dien_nguon.txt')
@@ -204,9 +206,11 @@ Nhật
     def success_(self, instance):
         self.overlay.cancel_button.disabled=False
         self.screen.remove_widget(self.overlay)
+        self.screen.update_dialog.dismiss()
         self.success.open()
 
     def failed_(self, instance):
         self.overlay.cancel_button.disabled=False
         self.screen.remove_widget(self.overlay)
+        self.screen.update_dialog.dismiss()
         self.failed.open()
