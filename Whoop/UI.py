@@ -1,6 +1,7 @@
 from ui import *
 from ui.home import home
-from ui.setting import setting
+from ui.setting import setting, update_dialog
+from kivy.config import Config
 
 class FirstScreen(Screen):
     def __init__(self, **kwargs):
@@ -12,7 +13,9 @@ class SecondScreen(Screen):
     def __init__(self, **kwargs):
         super(SecondScreen, self).__init__(**kwargs)
         setting_layout = setting()
+        self.update_dialog=update_dialog()
         self.add_widget(setting_layout)
+        self.add_widget(self.update_dialog)
 
 class MyApp(MDApp):
     def build(self):
