@@ -162,17 +162,22 @@ class home(MDBoxLayout, TouchBehavior):
                 self.one_box.add_widget(self.recent)
         except: pass
 
-    def copy(self, instance, text: dict):
-        synonyms=', '.join(text['synonyms']) if text['synonyms'] else None
-        antonyms=', '.join(text['antonyms']) if text['antonyms'] else None
-        copy=f"""{text['word'].capitalize()} ({text['type']}):
+    def copy(self, instance, text=None, copy=None):
+        if text:
+            synonyms=', '.join(text['synonyms']) if text['synonyms'] else None
+            antonyms=', '.join(text['antonyms']) if text['antonyms'] else None
+            copy=f"""{text['word'].capitalize()} ({text['type']}):
 /{eng_to_ipa.convert(text['word'])}/
 
 {text["definition"][:1].upper()+text["definition"][1:]}
 *Từ đồng nghĩa: {f'{synonyms}' if synonyms else 'Không có từ đồng nghĩa'}
 
 *Từ trái nghĩa: {f'{antonyms}' if antonyms else 'Không có từ trái nghĩa'}"""
+        elif copy:
+            copy=copy
         pyperclip.copy(copy)
+        
+        Snackbar(MDLabel(text="Đã sao chép nội dung", theme_text_color="Custom", text_color=primarycolor), md_bg_color=menubg, y=dp(10),  size_hint_x=.85, pos_hint={"center_x": 0.5}, radius=[25, 25, 25, 25]).open()
 
     def show_recent(self, *args):
         global current_page
@@ -432,7 +437,7 @@ class home(MDBoxLayout, TouchBehavior):
                         self.progress_box.add_widget(self.nav_bar)
                         self.result_template.word.text=self.input_text[0].capitalize()+f' ({i.lower()})'
                         self.nav_bar.clear_widgets()
-                        self.copy_button=MDIconButton(icon="content-copy", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"x": 1, "center_y": 0.5}, on_press=lambda instance: self.copy(instance, result[i]))
+                        self.copy_button=MDIconButton(icon="content-copy", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"x": 1, "center_y": 0.5}, on_press=lambda instance: self.copy(instance, text=result[i]))
                         self.nav_bar.add_widget(self.back_button)
                         self.nav_bar.add_widget(self.result_template.word)
                         self.nav_bar.add_widget(self.copy_button)
@@ -442,7 +447,7 @@ class home(MDBoxLayout, TouchBehavior):
                         self.result_box.add_widget(self.result_template)
                         self.synonyms_box.clear_widgets()
                         self.synonyms.scroll_x=0
-                        head=MDFillRoundFlatButton(text="Từ đồng nghĩa", font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), size_hint=(None,None),  pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=boxbg, on_press=lambda instance: pyperclip.copy(", ".join(result[i]["synonyms"])))
+                        head=MDFillRoundFlatButton(text="Từ đồng nghĩa", font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), size_hint=(None,None),  pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=boxbg, on_press=lambda instance: self.copy(instance, copy=", ".join(result[i]["synonyms"])))
                         if result[i]["synonyms"]!=[]:
                             self.result_box.add_widget(head)
                             self.result_box.add_widget(self.synonyms)
@@ -451,7 +456,7 @@ class home(MDBoxLayout, TouchBehavior):
 
                         self.antonyms_box.clear_widgets()
                         self.antonyms.scroll_x=0
-                        head=MDFillRoundFlatButton(text="Từ trái nghĩa", font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), size_hint=(None,None),  pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=boxbg, on_press=lambda instance: pyperclip.copy(", ".join(result[i]["antonyms"])))
+                        head=MDFillRoundFlatButton(text="Từ trái nghĩa", font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), size_hint=(None,None),  pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=boxbg, on_press=lambda instance: self.copy(instance, copy=", ".join(result[i]["antonyms"])))
                         if result[i]["antonyms"]!=[]:
                             self.result_box.add_widget(head)
                             self.result_box.add_widget(self.antonyms)
