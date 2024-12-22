@@ -31,6 +31,7 @@ from kivymd.uix.menu import MDDropdownMenu
 from kivymd.uix.card import MDCard
 from kivymd.uix.selectioncontrol import MDSwitch
 from kivymd.uix.progressbar import MDProgressBar
+from kivymd.uix.snackbar import Snackbar
 from kivy.uix.label import Label
 from kivy.metrics import dp
 from kivy.clock import Clock
