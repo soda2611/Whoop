@@ -153,8 +153,9 @@ Nhật
         global update_thread
         try: self.screen.add_widget(self.overlay)
         except: pass
-        update_thread=threading.Timer(2, self.update_, args=[_type_])
-        update_thread.start()
+        else:
+            update_thread=threading.Timer(2, self.update_, args=[_type_])
+            update_thread.start()
 
     def touch_ignore():
         pass
@@ -163,9 +164,9 @@ Nhật
         global update_thread
         update_thread.cancel()
         self.screen.remove_widget(self.overlay)
-        self.screen.update_dialog.dismiss()
 
     def update_(self, _type_=None):
+        print(_type_)
         self.overlay.cancel_button.disabled=True
         try:
             if check_connection():
@@ -199,6 +200,7 @@ Nhật
                     download_file("Whoop", "Whoop/func/data/grammar.txt", "func/data/grammar.txt")
                 os.remove('temp_tu_dien_nguon.txt')
         except Exception as ex:
+            print(ex)
             Clock.schedule_once(self.failed_)
         else:
             Clock.schedule_once(self.success_)
