@@ -177,7 +177,7 @@ class home(MDBoxLayout, TouchBehavior):
             copy=copy
         pyperclip.copy(copy)
         
-        Snackbar(MDLabel(text="Đã sao chép nội dung", theme_text_color="Custom", text_color=primarycolor), md_bg_color=menubg, y=dp(10),  size_hint_x=.85, pos_hint={"center_x": 0.5}, radius=[25, 25, 25, 25]).open()
+        MDSnackbar(MDLabel(text="Đã sao chép nội dung", theme_text_color="Custom", text_color=primarycolor), md_bg_color=menubg, y=dp(10),  size_hint_x=.85, pos_hint={"center_x": 0.5}, radius=[25, 25, 25, 25]).open()
 
     def show_recent(self, *args):
         global current_page
