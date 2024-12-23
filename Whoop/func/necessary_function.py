@@ -1,9 +1,4 @@
 import socket
-import ctypes
-
-def get_scaling_factor():
-    scaleFactor = ctypes.windll.shcore.GetScaleFactorForDevice(0) / 100
-    return scaleFactor
 
 def get_config():
     with open("func/setting/setting.txt", "r", encoding="utf-8") as fi:
