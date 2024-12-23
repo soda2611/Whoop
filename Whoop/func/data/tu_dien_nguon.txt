@@ -1621,5 +1621,26 @@
             "word": "moan",
             "type": "verb"
         }
+    },
+    "gripe": {
+        "noun": {
+            "definition": "- A complaint, often a petty or trivial one.\n\n- A wire rope, often used on davits and other life raft launching systems.\n\n- Grasp; clutch; grip\n\n- That which is grasped; a handle; a grip.\nVí dụ: the gripe of a sword\n\n- A device for grasping or holding anything; a brake to stop a wheel.\n\n- Oppression; cruel exaction; affliction; pinching distress.\nVí dụ: the gripe of poverty\n\n- (chiefly in the plural) Pinching and spasmodic pain in the intestines.\n\n- The piece of timber that terminates the keel at the fore end; the forefoot.\n\n- The compass or sharpness of a ship's stern under the water, having a tendency to make her keep a good wind.\n\n- An assemblage of ropes, dead-eyes, and hocks, fastened to ringbolts in the deck, to secure the boats when hoisted.\n\n- A vulture, Gyps fulvus; the griffin.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gripe",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To complain; to whine.\n\n- To annoy or bother.\nVí dụ: What's griping you?\n\n- To tend to come up into the wind, as a ship which, when sailing close-hauled, requires constant labour at the helm.\n\n- To pinch; to distress. Specifically, to cause pinching and spasmodic pain to the bowels of, as by the effects of certain purgative or indigestible substances.\n\n- To suffer griping pains.\n\n- To make a grab (to, towards, at or upon something).\n\n- To seize or grasp.\n\n",
+            "synonyms": [
+                "bitch",
+                "complain",
+                "whine",
+                "whinge"
+            ],
+            "antonyms": [],
+            "word": "gripe",
+            "type": "verb"
+        }
     }
 }
