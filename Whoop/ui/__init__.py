@@ -91,7 +91,7 @@ def config():
     queried={}
     version=settings["version"]
 
-    Window.minimum_width, Window.minimum_height= 406, 374
+    Window.minimum_width, Window.minimum_height= 500, 500
     Window.softinput_mode='pan'
     LabelBase.register(name="main", fn_regular=f"func/setting/fonts/{settings['fonts']}.ttf")
 
