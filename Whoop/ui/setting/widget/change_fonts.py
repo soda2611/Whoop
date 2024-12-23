@@ -49,7 +49,8 @@ class change_fonts(ScrollView):
         return self.font
 
     def change_font(self, instance, i):
-        self.got_font_check.icon=''
+        try: self.got_font_check.icon=''
+        except: pass
         self.got_font_check=instance
         instance.icon='check-circle'
         instance.icon_color=secondarycolor
