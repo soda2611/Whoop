@@ -1536,5 +1536,90 @@
             "word": "bruh",
             "type": "noun"
         }
+    },
+    "kvetch": {
+        "noun": {
+            "definition": "- A person who endlessly whines or complains; a person who finds fault with anything.\n\n- An instance of kvetching; a complaint or whine.\n\n",
+            "synonyms": [
+                "kvetcher",
+                "whiner"
+            ],
+            "antonyms": [],
+            "word": "kvetch",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To whine or complain, often needlessly and incessantly.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "kvetch",
+            "type": "verb"
+        }
+    },
+    "pain in the ass": {
+        "noun": {
+            "definition": "- Something or someone that causes discomfort or frustration.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "pain in the ass",
+            "type": "noun"
+        }
+    },
+    "doormat": {
+        "noun": {
+            "definition": "- A coarse mat at the entrance to a house, upon which one wipes one's shoes.\nVí dụ: Wipe your shoes on the doormat before you start plodding around in the house.\n\n- Someone who is overly submissive to others' wishes.\nVí dụ: He's such a doormat, he lets everyone walk all over him.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "doormat",
+            "type": "noun"
+        }
+    },
+    "slave": {
+        "noun": {
+            "definition": "- A person who is held in servitude as the property of another person, and whose labor (and often also whose body and life) is subject to the owner's volition and control.\n\n- A drudge; one who labors or is obliged (e.g. by prior contract) to labor like a slave with limited rights, e.g. an indentured servant.\n\n- An abject person.\n\n- One who has no power of resistance (to something), one who surrenders to or is under the domination (of something).\nVí dụ: a slave to passion, to strong drink, or to ambition\n\n- (BDSM) A submissive partner in a BDSM relationship who (consensually) submits to (sexually and/or personally) serving one or more masters or mistresses.\n\n- A sex slave, a person who is forced against their will to perform, for another person or group, sexual acts on a regular or continuing basis.\n\n- A device (such as a secondary flash or hard drive) that is subject to the control of another (a master).\n\n",
+            "synonyms": [
+                "secondary",
+                "worker",
+                "wretch"
+            ],
+            "antonyms": [
+                "master",
+                "primary"
+            ],
+            "word": "slave",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To work as a slaver, to enslave people.\n\n- To work hard.\nVí dụ: I was slaving all day over a hot stove.\n\n- To place a device under the control of another.\nVí dụ: to slave a hard disk\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "slave",
+            "type": "verb"
+        }
+    },
+    "toughie": {
+        "noun": {
+            "definition": "- Something that is tough, or difficult.\nVí dụ: His question is a toughie. I might have to do some more research.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "toughie",
+            "type": "noun"
+        }
+    },
+    "moan": {
+        "noun": {
+            "definition": "- A low, mournful cry of pain, sorrow or pleasure\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "moan",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To complain about; to bemoan, to bewail; to mourn.\n\n- To grieve.\n\n- To distress (someone); to sadden.\n\n- To make a moan or similar sound.\n\n- To say in a moan, or with a moaning voice.\nVí dụ: ‘Please don't leave me,’ he moaned.\n\n- To complain; to grumble.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "moan",
+            "type": "verb"
+        }
     }
 }
