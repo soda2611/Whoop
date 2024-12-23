@@ -49,7 +49,7 @@ def SOD(inp, database_path='default', internet=check_connection()):
                             example = definition.get("example", [])
 
                             if example==[]: example=2*"\n"
-                            else: example=f"\nVí dụ: {example}\n\n"
+                            else: example=f"\nE.g: {example}\n\n"
                             data_[part_of_speech]["definition"]=data_[part_of_speech]["definition"]+f"- {definition_text}{example}"
                             data_[part_of_speech]["word"]=word
                             data_[part_of_speech]["type"]=part_of_speech
