@@ -9,6 +9,7 @@ class update_dialog(MDBottomSheet):
         self.size_hint=(None, None)
         self.height=dp(180)
         self.width=dp(400)
+        self.elevation=4
         self.pos_hint={"center_x": 0.5}
         self.container=MDBoxLayout(spacing=dp(20), pos_hint={"center_x": 0.5})
         self.official=MDCard(orientation="vertical", padding=[dp(10), dp(10), dp(10), dp(10)] , radius=[dp(25), dp(25), dp(25), dp(25)], md_bg_color=boxbg, size_hint=(0.5, 1), pos_hint={"top": 1}, ripple_behavior=True)
