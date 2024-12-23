@@ -7,7 +7,7 @@ class update_dialog(MDBottomSheet):
         self.radius=[25, 25, 25, 25]
         self.bg_color=bg
         self.size_hint=(None, None)
-        self.height=dp(250)
+        self.height=dp(180)
         self.width=dp(450)
         self.pos_hint={"center_x": 0.5}
         self.container=MDBoxLayout(spacing=dp(20), pos_hint={"center_x": 0.5})
