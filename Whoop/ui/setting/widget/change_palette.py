@@ -55,9 +55,10 @@ class change_palette(ScrollView):
         return self.color
 
     def change_color_theme(self, instance, new_bg, new_boxbg, new_menubg, new_btn, new_primarycolor, new_secondarycolor):
-        try: self.got_check.remove_widget(self.icon)
+        try:
+            self.got_check.remove_widget(self.icon)
+            self.got_check.height=dp(200)
         except: pass
-        self.got_check.height=dp(200)
         self.got_check=instance
         instance.height=dp(250)
         instance.add_widget(self.icon)
