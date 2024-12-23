@@ -4,7 +4,7 @@ class update_dialog(MDBottomSheet):
     def __init__(self, **kwargs):
         super(update_dialog, self).__init__(**kwargs)
         self.padding=[dp(20), dp(20), dp(20), dp(20)]
-        self.radius=[dp(25), dp(25), dp(25), dp(25)]
+        self.radius=[25, 25, 25, 25]
         self.bg_color=bg
         self.size_hint=(None, None)
         self.height=dp(250)
