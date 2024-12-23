@@ -73,7 +73,7 @@ class setting(MDBoxLayout):
         self.personalize=MDBoxLayout(orientation="vertical", size_hint=(1,None), pos_hint={"center_x": 0.5}, spacing=dp(20))
         self.personalize.bind(minimum_height=self.personalize.setter('height'))
         self.scrollview.add_widget(self.personalize)
-        self.changecolor=MDLabel(text="Cá nhân hóa với bảng màu", font_style="H6", halign="left", size_hint=(1,None), height=dp(30), pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
+        self.changecolor=MDLabel(text="Palettes", font_style="H6", halign="left", size_hint=(1,None), height=dp(30), pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.color_palette_scroll=change_palette()
         self.change_fonts=MDLabel(text="Fonts", font_style="H6", halign="left", size_hint=(1,None), height=dp(30), pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.font_scroll=change_fonts()
