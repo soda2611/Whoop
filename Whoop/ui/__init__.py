@@ -83,6 +83,8 @@ def config():
         with open(f"func/setting/{settings['uid']}.txt", "w", encoding="utf-8") as fo: fo.write("{}")
         upload_file("whoop_database", f"users/{settings['uid']}.txt", f"func/setting/{settings['uid']}.txt")
         set_new_config()
+    elif settings['uid']!='none' and not os.path.exists(f"func/setting/{settings['uid']}.txt"):
+        download_file("whoop_database", f"users/{settings['uid']}.txt", f"func/setting/{settings['uid']}.txt")
     engine = pyttsx3.init()
     data_=SOD_word_list()
     word__=[i for i in data_]
@@ -91,7 +93,7 @@ def config():
     queried={}
     version=settings["version"]
 
-    Window.minimum_width, Window.minimum_height= 500, 500
+    Window.minimum_width, Window.minimum_height= 406, 400 
     Window.softinput_mode='pan'
     LabelBase.register(name="main", fn_regular=f"func/setting/fonts/{settings['fonts']}.ttf")
 
