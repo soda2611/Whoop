@@ -12,6 +12,12 @@ class setting(MDBoxLayout):
         self.padding = [dp(10), dp(10), dp(10), dp(10)]
         self.spacing=dp(20)
         self.md_bg_color=bg
+        
+        self.no_internet_alert=self.alert=MDDialog(
+            title="Không có kết nối internet",
+            type="alert",
+            md_bg_color=boxbg
+        )
 
         self.overlay=MDCard(padding=[dp(10), dp(10), dp(10), dp(10)], size_hint=(1, 1), orientation='vertical', md_bg_color=bg)
         self.overlay.bind(on_touch=self.touch_ignore)
@@ -199,11 +205,12 @@ Nhật
                     download_file("Whoop", "Whoop/func/data/word.txt", "func/data/word.txt")
                     download_file("Whoop", "Whoop/func/data/grammar.txt", "func/data/grammar.txt")
                 os.remove('temp_tu_dien_nguon.txt')
+                Clock.schedule_once(self.success_)
+            else:
+                Clock.schedule_once(self.no_internet)
         except Exception as ex:
             print(ex)
             Clock.schedule_once(self.failed_)
-        else:
-            Clock.schedule_once(self.success_)
 
     def success_(self, instance):
         self.overlay.cancel_button.disabled=False
@@ -216,3 +223,9 @@ Nhật
         self.screen.remove_widget(self.overlay)
         self.screen.update_dialog.dismiss()
         self.failed.open()
+        
+    def no_internet(self, instance):
+        self.overlay.cancel_button.disabled=False
+        self.screen.remove_widget(self.overlay)
+        self.screen.update_dialog.dismiss()
+        self.no_internet_alert.open()
