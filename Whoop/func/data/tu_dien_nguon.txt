@@ -1,30 +1,17 @@
 {
     "hello": {
         "noun": {
-            "definition": "- \"Hello!\" or an equivalent greeting.\n\n",
+            "definition": "- The conscious production or arrangement of sounds, colours, forms, movements, or other elements in a manner that affects the senses and emotions, usually specifically the production of the beautiful in a graphic or plastic medium.\nVí dụ: There is a debate as to whether graffiti is art or vandalism.\n\n- The creative and emotional expression of mental imagery, such as visual, auditory, social, etc.\n\n- Skillful creative activity, usually with an aesthetic focus.\nVí dụ: She's mastered the art of programming.\n\n- The study and the product of these processes.\nVí dụ: He's at university to study art.\n\n- Aesthetic value.\nVí dụ: Her photographs are nice, but there's no art in them.\n\n- Artwork.\nVí dụ: Sotheby's regularly auctions art for millions.\n\n- A field or category of art, such as painting, sculpture, music, ballet, or literature.\nVí dụ: I'm a great supporter of the arts.\n\n- A nonscientific branch of learning; one of the liberal arts.\n\n- Skill that is attained by study, practice, or observation.\n\n- Contrivance, scheming, manipulation.\n\n",
             "synonyms": [
-                "greeting"
+                "craft"
             ],
-            "antonyms": [],
+            "antonyms": [
+                "mundacity",
+                "nature",
+                "subsistence"
+            ],
             "word": "hello",
             "type": "noun"
-        },
-        "verb": {
-            "definition": "- To greet with \"hello\".\n\n",
-            "synonyms": [],
-            "antonyms": [],
-            "word": "hello",
-            "type": "verb"
-        },
-        "interjection": {
-            "definition": "- A greeting (salutation) said when meeting someone or acknowledging someone’s arrival or presence.\nVí dụ: Hello, everyone.\n\n- A greeting used when answering the telephone.\nVí dụ: Hello? How may I help you?\n\n- A call for response if it is not clear if anyone is present or listening, or if a telephone conversation may have been disconnected.\nVí dụ: Hello? Is anyone there?\n\n- Used sarcastically to imply that the person addressed or referred to has done something the speaker or writer considers to be foolish.\nVí dụ: You just tried to start your car with your cell phone. Hello?\n\n- An expression of puzzlement or discovery.\nVí dụ: Hello! What’s going on here?\n\n",
-            "synonyms": [],
-            "antonyms": [
-                "bye",
-                "goodbye"
-            ],
-            "word": "hello",
-            "type": "interjection"
         }
     },
     "pol": {
@@ -37,12 +24,33 @@
         }
     },
     "gay": {
+        "noun": {
+            "definition": "- (chiefly in plural or attributive) A homosexual, especially a male homosexual; see also lesbian.\n\n- Something which is bright or colorful, such as a picture or a flower.\n\n- An ornament, a knick-knack.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To make happy or cheerful.\n\n- To cause (something, e.g. AIDS) to be associated with homosexual people.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "verb"
+        },
         "adjective": {
             "definition": "- (possibly obsolete) Happy, joyful, and lively.\nVí dụ: The Gay Science\n\n- Quick, fast.\n\n- (possibly obsolete) Festive, bright, or colourful.\nVí dụ: Pennsylvania Dutch include the plain folk and the gay folk.\n\n- Sexually promiscuous (of any gender), (sometimes particularly) engaged in prostitution.\n\n- Homosexual:\n\n- A pejorative:\n\n- (of a dog's tail) Upright or curved over the back.\n\n- (possibly obsolete) Considerable, great, large in number, size, or degree.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "gay",
             "type": "adjective"
+        },
+        "adverb": {
+            "definition": "- (possibly obsolete) Considerably, very.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "adverb"
         }
     },
     "harmony": {
@@ -1751,6 +1759,396 @@
             "synonyms": [],
             "antonyms": [],
             "word": "ineffective",
+            "type": "adjective"
+        }
+    },
+    "restore": {
+        "noun": {
+            "definition": "- The act of recovering data or a system from a backup.\nE.g: We backed up the data successfully, but the restore failed.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "restore",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To reestablish, or bring back into existence.\nE.g: He restored my lost faith in him by doing a good deed.\n\n- To bring back to good condition from a state of decay or ruin.\n\n- To give or bring back (that which has been lost or taken); to bring back to the owner; to replace.\n\n- To give in place of, or as restitution for.\n\n- To recover (data, etc.) from a backup.\nE.g: There was a crash last night, and we're still restoring the file system.\n\n- To bring (a note) back to its original signification.\n\n- To make good; to make amends for.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "restore",
+            "type": "verb"
+        }
+    },
+    "charm": {
+        "noun": {
+            "definition": "- An object, act or words believed to have magic power (usually carries a positive connotation).\nE.g: It works like a charm.\n\n- The ability to persuade, delight or arouse admiration; often constructed in the plural.\nE.g: He had great personal charm.\n\n- A small trinket on a bracelet or chain, etc., traditionally supposed to confer luck upon the wearer.\nE.g: She wears a charm bracelet on her wrist.\n\n- A quantum number of hadrons determined by the number of charm quarks and antiquarks.\n\n- A second-order measure of derivative price sensitivity, expressed as the instantaneous rate of change of delta with respect to time.\n\n",
+            "synonyms": [
+                "DdeltaDtime",
+                "delta decay",
+                "appeal",
+                "attraction",
+                "charisma",
+                "amulet",
+                "incantation",
+                "spell",
+                "talisman",
+                "amulet",
+                "dangle",
+                "ornament"
+            ],
+            "antonyms": [
+                "boredom",
+                "dryness"
+            ],
+            "word": "charm",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To seduce, persuade or fascinate someone or something.\nE.g: He charmed her with his dashing tales of his days as a sailor.\n\n- To use a magical charm upon; to subdue, control, or summon by incantation or supernatural influence.\nE.g: After winning three games while wearing the chain, Dan began to think it had been charmed.\n\n- To protect with, or make invulnerable by, spells, charms, or supernatural influences.\nE.g: She led a charmed life.\n\n- To make music upon.\n\n- To subdue or overcome by some secret power, or by that which gives pleasure; to allay; to soothe.\n\n",
+            "synonyms": [
+                "delight",
+                "enchant",
+                "entrance",
+                "bewitch",
+                "enchant",
+                "ensorcel",
+                "enspell"
+            ],
+            "antonyms": [],
+            "word": "charm",
+            "type": "verb"
+        }
+    },
+    "contemporary": {
+        "noun": {
+            "definition": "- Someone or something living at the same time, or of roughly the same age as another.\nE.g: Cervantes was a contemporary of Shakespeare.\n\n- Something existing at the same time.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "contemporary",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- From the same time period, coexistent in time.\n\n- Modern, of the present age.\n\n",
+            "synonyms": [
+                "contemporaneous",
+                "current"
+            ],
+            "antonyms": [
+                "anachronistic",
+                "archaic",
+                "coming"
+            ],
+            "word": "contemporary",
+            "type": "adjective"
+        }
+    },
+    "convenient": {
+        "adjective": {
+            "definition": "- Serving to reduce a difficulty, or accessible with minimum difficulty; expedient.\nE.g: Fast food might be convenient, but it's also very unhealthy.\n\n- Fit; suitable; appropriate.\n\n",
+            "synonyms": [
+                "easy",
+                "expedient",
+                "simple"
+            ],
+            "antonyms": [
+                "inconvenient"
+            ],
+            "word": "convenient",
+            "type": "adjective"
+        }
+    },
+    "convenience": {
+        "noun": {
+            "definition": "- The quality of being convenient.\nE.g: Fast food is popular because of its cost and convenience.\n\n- Any object that makes life more convenient; a helpful item.\n\n- A convenient time.\nE.g: We will come over and begin the work at your convenience.\n\n- Clipping of public convenience: a public lavatory.\n\n",
+            "synonyms": [
+                "amenity"
+            ],
+            "antonyms": [],
+            "word": "convenience",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To make convenient\nE.g: These are equally viable times and I propose we alternate between the two times in order to convenience as many people as possible.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "convenience",
+            "type": "verb"
+        }
+    },
+    "locate": {
+        "verb": {
+            "definition": "- To place; to set in a particular spot or position.\n\n- To find out where something is located.\n\n- To designate the site or place of; to define the limits of (Note: the designation may be purely descriptive: it need not be prescriptive.)\nE.g: The council must locate the new hospital\n\n- To place oneself; to take up one's residence; to settle.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "locate",
+            "type": "verb"
+        }
+    },
+    "cosy": {
+        "noun": {
+            "definition": "- A padded or knit covering put on an item to keep it warm, especially a teapot or egg.\n\n- A padded or knit covering for any item (often an electronic device such as a laptop computer).\n\n- A work of crime fiction in which sex and violence are downplayed or treated humorously, and the crime and detection take place in a small, socially intimate community.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "cosy",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To become snug and comfortable.\n\n- To become friendly with.\nE.g: He spent all day cosying up to the new boss, hoping for a plum assignment.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "cosy",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Affording comfort and warmth; snug; social\n\n",
+            "synonyms": [
+                "snug"
+            ],
+            "antonyms": [],
+            "word": "cosy",
+            "type": "adjective"
+        }
+    },
+    "cramped": {
+        "verb": {
+            "definition": "- (of a muscle) To contract painfully and uncontrollably.\n\n- To affect with cramps or spasms.\n\n- To prohibit movement or expression of.\nE.g: You're cramping my style.\n\n- To restrain to a specific physical position, as if with a cramp.\nE.g: You're going to need to cramp the wheels on this hill.\n\n- To fasten or hold with, or as if with, a cramp iron.\n\n- (by extension) To bind together; to unite.\n\n- To form on a cramp.\nE.g: to cramp boot legs\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "cramped",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Uncomfortably restricted in size, or financially.\n\n- Overcrowded or congested.\n\n- Tight because of or like suffering a cramp.\n\n- Illegible.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "cramped",
+            "type": "adjective"
+        }
+    },
+    "dilapidate": {
+        "verb": {
+            "definition": "- To fall into ruin or disuse.\n\n- To cause to become ruined or put into disrepair.\n\n- To squander or waste.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "dilapidate",
+            "type": "verb"
+        }
+    },
+    "dilapidated": {
+        "verb": {
+            "definition": "- To fall into ruin or disuse.\n\n- To cause to become ruined or put into disrepair.\n\n- To squander or waste.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "dilapidated",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Having fallen into a state of disrepair or deterioration, especially through neglect.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "dilapidated",
+            "type": "adjective"
+        }
+    },
+    "impress": {
+        "noun": {
+            "definition": "- The act of impressing.\n\n- An impression; an impressed image or copy of something.\n\n- A stamp or seal used to make an impression.\n\n- An impression on the mind, imagination etc.\n\n- Characteristic; mark of distinction; stamp.\n\n- A heraldic device; an impresa.\n\n- The act of impressing, or taking by force for the public service; compulsion to serve; also, that which is impressed.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "impress",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To affect (someone) strongly and often favourably.\nE.g: You impressed me with your command of Urdu.\n\n- To make an impression, to be impressive.\nE.g: Henderson impressed in his first game as captain.\n\n- To produce a vivid impression of (something).\nE.g: That first view of the Eiger impressed itself on my mind.\n\n- To mark or stamp (something) using pressure.\nE.g: We impressed our footprints in the wet cement.\n\n- To produce (a mark, stamp, image, etc.); to imprint (a mark or figure upon something).\n\n- To fix deeply in the mind; to present forcibly to the attention, etc.; to imprint; to inculcate.\n\n- To compel (someone) to serve in a military force.\nE.g: The press gang used to impress people into the Navy.\n\n- To seize or confiscate (property) by force.\nE.g: The liner was impressed as a troop carrier.\n\n",
+            "synonyms": [
+                "pressgang",
+                "cut a figure",
+                "imprint",
+                "print",
+                "stamp",
+                "confiscate",
+                "impound",
+                "seize",
+                "sequester",
+                "make an impression"
+            ],
+            "antonyms": [],
+            "word": "impress",
+            "type": "verb"
+        }
+    },
+    "peace": {
+        "noun": {
+            "definition": "- A state of tranquility, quiet, and harmony; absence of violence. For instance, a state free from civil disturbance.\nE.g: Our lounge strives to maintain an environment of peace for the comfort of our customers.\n\n- A state free of oppressive and unpleasant thoughts and emotions.\nE.g: The safety equipment will give me some peace of mind.\n\n- Harmony in personal relations.\n\n- A state free of war, in particular war between different countries.\nE.g: May there be peace in our time.\n\n",
+            "synonyms": [
+                "frith"
+            ],
+            "antonyms": [
+                "disruption",
+                "violence",
+                "violence",
+                "war"
+            ],
+            "word": "peace",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To make peace; to put at peace; to be at peace.\n\n- To peace out.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "peace",
+            "type": "verb"
+        },
+        "interjection": {
+            "definition": "- Shut up!, silence!; be quiet, be silent.\n\n- Shortened form of peace out; goodbye.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "peace",
+            "type": "interjection"
+        }
+    },
+    "space": {
+        "noun": {
+            "definition": "- (heading) Of time.\n\n- (heading) Unlimited or generalized extent, physical or otherwise.\n\n- (heading) A bounded or specific extent, physical or otherwise.\n\n",
+            "synonyms": [
+                "outer space",
+                "place",
+                "spot",
+                "volume",
+                "break",
+                "gap",
+                "leisure time",
+                "spare time",
+                "blank",
+                "gap",
+                "whitespace",
+                "volume",
+                "quad",
+                "quadrat",
+                "ether",
+                "room",
+                "volume",
+                "duration",
+                "span",
+                "spell",
+                "while"
+            ],
+            "antonyms": [],
+            "word": "space",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To roam, walk, wander.\n\n- To set some distance apart.\n\n- To insert or utilise spaces in a written text.\n\n- To eject into outer space, usually without a space suit.\n\n- To travel into and through outer space.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "space",
+            "type": "verb"
+        }
+    },
+    "substantial": {
+        "noun": {
+            "definition": "- Anything having substance; an essential part.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "substantial",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Having a substance; actually existing.\nE.g: substantial life\n\n- Not imaginary; real; actual; true; veritable.\n\n- Corporeal; material; firm.\n\n- Having good substance; strong; stout; solid; firm.\nE.g: a substantial fence or wall\n\n- Possessed of goods or an estate; moderately wealthy.\nE.g: a substantial freeholder\n\n- Large in size, quantity, or value; ample; significant.\nE.g: A substantial number of people went to the event.\n\n- Most important; essential.\n\n- Satisfying; having sufficient substance to be nourishing or filling.\nE.g: I don't just want a snack; I need something substantial.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "substantial",
+            "type": "adjective"
+        }
+    },
+    "c": {
+        "adverb": {
+            "definition": "- Abbreviation of circa.\nE.g: The document was written in the Middle Ages, c. 1250.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "c",
+            "type": "adverb"
+        }
+    },
+    "comfy": {
+        "adjective": {
+            "definition": "- Comfortable.\nE.g: The robe and slippers were so warm and comfy she just fell asleep in her chair.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "comfy",
+            "type": "adjective"
+        }
+    },
+    "comfort": {
+        "noun": {
+            "definition": "- Contentment, ease.\nE.g: Sleep in comfort with our new mattress.\n\n- Something that offers comfort.\nE.g: the comforts of home\n\n- A consolation; something relieving suffering or worry.\nE.g: We still have the spare tire? That's a comfort at least.\n\n- A cause of relief or satisfaction.\nE.g: The outcome of the peace negotiations in Moscow in 1940 was a heavy blow to the young nation, but in the same time a great comfort: at least the independency was preserved.\n\n",
+            "synonyms": [
+                "liss"
+            ],
+            "antonyms": [
+                "austerity"
+            ],
+            "word": "comfort",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To relieve the distress or suffering of; to provide comfort to.\nE.g: Rob comforted Aaron because he was lost and very sad.\n\n- To make comfortable.\n\n- To make strong; to invigorate; to fortify; to corroborate.\n\n- To assist or help; to aid.\n\n",
+            "synonyms": [
+                "besoothe"
+            ],
+            "antonyms": [],
+            "word": "comfort",
+            "type": "verb"
+        }
+    },
+    "mordent": {
+        "noun": {
+            "definition": "- An ornament consisting of a single alternation between a given pitch and the one immediately below it.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "mordent",
+            "type": "noun"
+        }
+    },
+    "modern": {
+        "noun": {
+            "definition": "- Someone who lives in modern times.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "modern",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Pertaining to a current or recent time and style; not ancient.\nE.g: Our online interactive game is a modern approach to teaching about gum disease.  Although it was built in the 1600s, the building still has a very modern look.\n\n- (history) Pertaining to the modern period (c.1800 to contemporary times), particularly in academic historiography.\n\n",
+            "synonyms": [
+                "contemporary",
+                "current"
+            ],
+            "antonyms": [
+                "ancient",
+                "dated",
+                "former",
+                "historical",
+                "old",
+                "old-fashioned",
+                "premodern"
+            ],
+            "word": "modern",
+            "type": "adjective"
+        }
+    },
+    "spectacular": {
+        "noun": {
+            "definition": "- A spectacular display.\n\n- A pop-up (folded paper element) in material sent by postal mail.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "spectacular",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Amazing or worthy of special notice.\nE.g: The parachutists were spectacular.\n\n- Related to, or having the character of, a spectacle or entertainment.\nE.g: the merely spectacular\n\n- Relating to spectacles, or glasses for the eyes.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "spectacular",
             "type": "adjective"
         }
     }
