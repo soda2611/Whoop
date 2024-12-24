@@ -67,7 +67,7 @@ class setting(MDBoxLayout):
         self.search_thread=None
         self.touch_count=0
         self.timer = None
-        self.back_button=MDIconButton(icon="arrow-left", size_hint=(None, None), pos_hint={"left": 0})
+        self.back_button=MDIconButton(icon="arrow-left", theme_icon_color="Custom", icon_color=primarycolor, size_hint=(None, None), pos_hint={"left": 0, "center_y": 0.5})
         self.back_button.bind(on_press=self.back)
         self.scrollview=ScrollView(size_hint=(1,1), do_scroll_x=False)
         self.personalize=MDBoxLayout(orientation="vertical", size_hint=(1,None), pos_hint={"center_x": 0.5}, spacing=dp(20))
@@ -78,7 +78,7 @@ class setting(MDBoxLayout):
         self.change_fonts=MDLabel(text="Fonts", font_style="H6", halign="left", size_hint=(1,None), height=dp(30), pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.font_scroll=change_fonts()
         self.info=MDFillRoundFlatButton(text=f"Phiên bản: SOD {version}\nNgày phát hành: Unknown    UID: {settings['uid']}", font_style="Caption", halign="center", size_hint=(0.75,None), height=dp(35), pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=bg)
-        self.info.bind(on_release=self.on_touch)
+        self.info.bind(on_release=self.update_dialog_open)
 
         '''self.notification=MDLabel(text="Bạn không thể thay đổi bất cứ cài đặt nào của ứng dụng trong phiên bản này. Vui lòng chờ phiên bản cập nhật tiếp theo.", font_style="H6", halign="center", size_hint=(0.75,1), pos_hint={"center_x": 0.5})
         self.add_widget(self.notification)'''
@@ -94,65 +94,11 @@ class setting(MDBoxLayout):
     def back(self, instance):
         sm.transition.direction = "right"
         sm.current = 'first'
-
-    def on_touch(self, instance):
+        
+    def update_dialog_open(self, instance):
         self.screen=sm.get_screen('second')
         self.screen.update_dialog.official.bind(on_press=lambda instance: self.update_trigger(instance, "official"))
         self.screen.update_dialog.early_access.bind(on_press=lambda instance: self.update_trigger(instance, "early-access"))
-        self.cre=MDLabel(text=f"""Chào mừng bạn đến với {settings["title"]}!
-
-Là nhà phát triển chính của {settings["title"]}, tôi muốn dành một chút thời gian để cảm ơn bạn đã sử dụng phần mềm của tôi.
-
-{settings["title"]} được xây dựng bằng ngôn ngữ lập trình Python và sử dụng thư viện giao diện KivyMD. Tôi đã dành rất nhiều thời gian và công sức để tạo ra một sản phẩm mà tôi hy vọng sẽ hữu ích cho bạn.
-
-Tôi rất biết ơn sự hỗ trợ và phản hồi của bạn. Những ý kiến đóng góp của bạn giúp tôi cải thiện {settings["title"]} và đảm bảo rằng nó đáp ứng nhu cầu của người dùng.
-
-Nếu bạn có bất kỳ câu hỏi hoặc yêu cầu nào, đừng ngần ngại liên hệ với tôi qua email. Tôi luôn sẵn lòng giúp đỡ và mong muốn nghe ý kiến từ bạn.
-
-Cảm ơn bạn đã sử dụng {settings["title"]}!
-
-Trân trọng,
-Nhật
-                """,
-                  font_style="Body2",
-                  size_hint=(1,None),
-                  height=dp(25),
-                  pos_hint={"center_x": 0.5},
-                  theme_text_color="Custom",
-                  text_color=primarycolor)
-        self.cre.bind(texture_size=self.cre.setter('text_size'))
-        self.cre.bind(texture_size=self.cre.setter('size'))
-        self.temp_scroll_box=ScrollView(size_hint=(1, 1), pos_hint={"center_x": 0.5}, do_scroll_x=False)
-        self.temp_scroll_box.add_widget(self.cre)
-        self.container=MDCard(orientation="vertical", spacing=dp(20), size_hint=(1,None), height=dp(200), padding=[dp(10), dp(10), dp(10), dp(10)])
-        self.container.radius=[dp(i) for i in self.container.radius]
-        self.container.add_widget(self.temp_scroll_box)
-        self.credit=MDDialog(
-        title=f"Thư cảm ơn từ Nhà phát triển {settings['title']}",
-        type="custom",
-        content_cls=self.container,
-        buttons=[
-            MDFillRoundFlatButton(
-                text="Cập nhật dữ liệu",
-                md_bg_color=btn,
-                theme_text_color="Custom",
-                text_color=secondarycolor
-            ),
-            MDFillRoundFlatButton(
-                text="Đóng",
-                md_bg_color=btn,
-                theme_text_color="Custom",
-                text_color=secondarycolor
-            )            
-        ],
-        md_bg_color=boxbg,
-        )
-        self.credit.buttons[0].bind(on_release=self.update_dialog_open)
-        self.credit.buttons[1].bind(on_release=self.credit.dismiss)
-        self.credit.open()
-        
-    def update_dialog_open(self, instance):
-        self.credit.dismiss()
         self.screen.update_dialog.open()
 
     def update_trigger(self, instance, _type_):
