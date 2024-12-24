@@ -333,10 +333,10 @@ class home(MDBoxLayout, TouchBehavior):
 
     def show_input(self, instance):
         global current_page, result
-        current_page="search"
         self.box.clear_widgets()
         if self.text_input.input.text.split()!=[]: 
             if len(result)==1:
+                current_page="search"
                 self.progress_box.clear_widgets()
                 self.progress_box.height=dp(60)
                 self.progress_box.add_widget(self.progress_bar)
