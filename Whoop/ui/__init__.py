@@ -94,7 +94,7 @@ def config():
     version=settings["version"]
 
     Window.minimum_width, Window.minimum_height= 500, 500 
-    Window.softinput_mode='pan'
+    Window.softinput_mode='below_target'
     LabelBase.register(name="main", fn_regular=f"func/setting/fonts/{settings['fonts']}.ttf")
 
     color=settings["current palette"].split("; ")
