@@ -74,7 +74,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.add_widget(self.one_box)
 
         self.nav_bar=MDBoxLayout(size_hint=(1, None), height=dp(50))
-        self.back_button=MDIconButton(icon="arrow-left", theme_icon_color="Custom", pos_hint={"center_y": 0.5}, icon_color=primarycolor, md_bg_color=(1,1,1,0), disabled=True,md_bg_color_disabled,  on_press=self.back)
+        self.back_button=MDIconButton(icon="arrow-left", theme_icon_color="Custom", pos_hint={"center_y": 0.5}, icon_color=primarycolor, md_bg_color=(1,1,1,0), disabled=True, md_bg_color_disabled, on_press=self.back)
         self.noname=MDCard(orientation='vertical',md_bg_color=bg, size_hint=(1, 1), pos_hint={'center_x': 0.5, 'center_y': 0.5})
         self.noname.radius=[dp(i) for i in self.noname.radius]
         self.one_box.add_widget(self.noname)
