@@ -24,7 +24,8 @@ from kivymd.uix.button import MDIconButton, MDFillRoundFlatButton, MDFillRoundFl
 from kivy.core.text import LabelBase
 from kivymd.font_definitions import theme_font_styles
 from kivymd.uix.label import MDLabel, MDIcon
-from kivy.uix.screenmanager import ScreenManager, Screen
+from kivymd.uix.screenmanager import MDScreenManager
+from kivymd.uix.screen import MDScreen
 from kivy.uix.image import Image
 from kivymd.uix.behaviors import TouchBehavior
 from kivymd.uix.menu import MDDropdownMenu
@@ -32,6 +33,7 @@ from kivymd.uix.card import MDCard
 from kivymd.uix.selectioncontrol import MDSwitch
 from kivymd.uix.progressbar import MDProgressBar
 from kivymd.uix.snackbar.snackbar import MDSnackbar
+from kivymd.uix.transition.transition import MDFadeSlideTransition
 from kivymd.uix.bottomsheet import *
 from kivy.uix.label import Label
 from kivy.metrics import dp
@@ -137,5 +139,4 @@ def restart(instance):
 bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, engine, word__, source, home__, queried, version, data_=config()
 firstscreen=None
 secondscreen=None
-sm = ScreenManager()
-admin_code="nah bro"
+sm = MDScreenManager(transition=MDFadeSlideTransition())
