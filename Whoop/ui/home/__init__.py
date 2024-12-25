@@ -19,7 +19,6 @@ class home(MDBoxLayout, TouchBehavior):
         self.spacing = dp(25)
         Window.bind(on_resize=self.on_window_resize)
 
-        self.md_bg_color=bg
         self.text=""
         self.signal=False
         self.search_thread = None
