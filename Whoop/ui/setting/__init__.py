@@ -11,8 +11,7 @@ class setting(MDBoxLayout):
         self.orientation = 'vertical'
         self.padding = [dp(10), dp(10), dp(10), dp(10)]
         self.spacing=dp(20)
-        self.md_bg_color=bg
-        
+
         self.no_internet_alert=self.alert=MDDialog(
             title="Không có kết nối internet",
             type="alert",
