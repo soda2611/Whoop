@@ -80,7 +80,6 @@ class add_data(MDBoxLayout):
         self.add_widget(self.definition)
         self.add_widget(self.add_synonyms)
         self.add_widget(self.add_antonyms)
-        self.add_widget(self.admin_code)
         self.add_widget(self.button)
         
     def add_antonym(self, instance):
@@ -119,16 +118,30 @@ class add_data(MDBoxLayout):
         
     def add_data(self, instance):
         global synonyms_list, antonyms_list
-        if self.word.text and self.type.text and self.definition.text:
-            self.synonyms=', '.join(synonyms_list) if len(synonyms_list)>0 else 'none'
-            self.antonyms=', '.join(antonyms_list) if len(antonyms_list)>0 else 'none'
-            self.word.text=self.type.text=self.definition.text=""
+        if self.word.text and self.type.text:
+            with open("func/data/tu_dien_nguon.txt", 'r', encoding="utf-8") as file:
+                data = eval(file.read())
+            if self.definition.text:
+                data[self.word.text][self.type.text]={
+                            "definition": self.definition.text,
+                            "synonyms": synonyms_list,
+                            "antonyms": antonyms_list,
+                            "word": self.word.text,
+                            "type": self.type.text
+                        }
+            else:
+                del data[self.word.text][self.type.text]
+                if not data[self.word.text]:
+                    del data[self.word.text]
+            with open("func/data/tu_dien_nguon.txt", 'w', encoding="utf-8") as file:
+                file.write(json.dumps(data, ensure_ascii=False, indent=4))
+            self.word.text = self.type.text = self.definition.text = ""
             self.add_synonyms.synonyms_list.clear_widgets()
             self.add_synonyms.synonyms_list.add_widget(self.add_synonym_button)
             self.add_antonyms.antonyms_list.clear_widgets()
             self.add_antonyms.antonyms_list.add_widget(self.add_antonym_button)
-            synonyms_list=[]
-            antonyms_list=[]
+            synonyms_list = []
+            antonyms_list = []
             
     def create_chips(self, text, on_press):
         return MDFillRoundFlatButton(text=text, theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, on_press=on_press)
