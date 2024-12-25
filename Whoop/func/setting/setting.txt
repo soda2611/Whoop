@@ -6,4 +6,3 @@ banner: func/setting/img/Logo.png
 icon: func/setting/img/Icon.png
 title: Whoop
 uid: none
-test_value: none
