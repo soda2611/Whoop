@@ -2,6 +2,17 @@ import os, zipfile, io, shutil, sys
 
 print(f"Python {sys.version_info.major}.{sys.version_info.minor}")
 
+def backup_user_data(setting_dir, backup_dir):
+    if os.path.exists(setting_dir):
+        shutil.copytree(setting_dir, os.path.join(backup_dir, 'setting'))
+
+def restore_user_data(setting_dir, backup_dir):
+    if os.path.exists(os.path.join(backup_dir, 'setting')):
+        if os.path.exists(setting_dir):
+            shutil.rmtree(setting_dir)
+            shutil.copytree(os.path.join(backup_dir, 'setting'), setting_dir)
+            shutil.rmtree(backup_dir)
+
 def get_data(setting_dir):
     setting_file = os.path.join(setting_dir, 'setting.txt')
     if os.path.exists(setting_file):
@@ -40,6 +51,7 @@ try:
     backup_dir = os.path.expanduser('~/.whoop_backup')
     
     settings=get_data(setting_dir)
+    backup_user_data(setting_dir, backup_dir)
 
     response = requests.get(repo_url)
 
@@ -60,6 +72,7 @@ try:
     os.system(f"rmdir /S /Q {repo_dir}")
 
     new_setting=get_data(setting_dir)
+    restore_user_data(setting_dir, backup_dir)
 
     for i in settings:
         if i in new_setting:
