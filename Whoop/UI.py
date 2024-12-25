@@ -2,19 +2,21 @@ from ui import *
 from ui.home import home
 from ui.setting import setting, update_dialog
 
-class FirstScreen(Screen):
+class FirstScreen(MDScreen):
     def __init__(self, **kwargs):
         super(FirstScreen, self).__init__(**kwargs)
         layout = home()
         self.add_widget(layout)
+        self.md_bg_color=bg
 
-class SecondScreen(Screen):
+class SecondScreen(MDScreen):
     def __init__(self, **kwargs):
         super(SecondScreen, self).__init__(**kwargs)
         setting_layout = setting()
         self.update_dialog=update_dialog()
         self.add_widget(setting_layout)
         self.add_widget(self.update_dialog)
+        self.md_bg_color=bg
 
 class MyApp(MDApp):
     def build(self):
@@ -25,6 +27,7 @@ class MyApp(MDApp):
         secondscreen=SecondScreen(name='second')
         sm.add_widget(firstscreen)
         sm.add_widget(secondscreen)
+        sm.transition.duration=0.5
         return sm
 
 if __name__ == '__main__':
