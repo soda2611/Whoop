@@ -2,18 +2,23 @@ import os, zipfile, io, shutil, sys
 
 print(f"Python {sys.version_info.major}.{sys.version_info.minor}")
 
-def backup_user_data(setting_dir, backup_dir):
+def get_data(setting_dir):
     setting_file = os.path.join(setting_dir, 'setting.txt')
     if os.path.exists(setting_file):
-        os.makedirs(backup_dir, exist_ok=True)
-        shutil.copy(setting_file, os.path.join(backup_dir, 'setting.txt'))
-
-def restore_user_data(setting_dir, backup_dir):
-    if os.path.exists(os.path.join(backup_dir, 'setting.txt')):
-        if os.path.exists(setting_dir):
-            os.makedirs(setting_dir, exist_ok=True)
-            shutil.copy(os.path.join(backup_dir, 'setting.txt'), setting_dir)
-            shutil.rmtree(backup_dir)
+        with open(setting_file, "r", encoding="utf-8") as fi:
+            setting=fi.readlines()
+        settings={}
+        for index in setting:
+            option, properties=index.strip().split(": ")
+            settings[option]=properties
+        
+        return settings
+    
+def write_data(setting_dir, settings):
+    setting_file = os.path.join(setting_dir, 'setting.txt')
+    with open(setting_file, "w", encoding="utf-8") as fo:
+        for i in settings:
+            fo.write(f"{i}: {str(settings[i])}\n")
 
 try:
     import requests
@@ -34,7 +39,7 @@ try:
     setting_dir = os.path.join(sod_dir, 'func', 'setting')
     backup_dir = os.path.expanduser('~/.whoop_backup')
     
-    backup_user_data(setting_dir, backup_dir)
+    settings=get_data(setting_dir)
 
     response = requests.get(repo_url)
 
@@ -54,7 +59,13 @@ try:
 
     os.system(f"rmdir /S /Q {repo_dir}")
 
-    restore_user_data(setting_dir, backup_dir)
+    new_setting=get_data(setting_dir)
+
+    for i in settings:
+        if i in new_setting:
+            new_setting[i]=settings[i]
+
+    write_data(setting_dir, new_setting)
 
     python_file = os.path.abspath(f"{sod_dir}/UI.py")
 
