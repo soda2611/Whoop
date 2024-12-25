@@ -152,8 +152,9 @@ class home(MDBoxLayout, TouchBehavior):
         self.dialog = recent_(self.create_content_box, self.clear_history, self.noname.radius)
         if len(recent_search)>0:
             for i in recent_search:
-                for j in recent_search[i]:
-                    self.dialog.recent_scrollview_box.add_widget(self.create_content_box(recent_search[i][j]), index=0)
+                if str(type(recent_search[i]))=="<class 'dict'>":
+                    for j in recent_search[i]:
+                        self.dialog.recent_scrollview_box.add_widget(self.create_content_box(recent_search[i][j]), index=0)
             self.dialog.container.add_widget(self.dialog.recent_scrollview)
         else:
             self.dialog.container.add_widget(self.dialog.label)
