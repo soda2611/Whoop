@@ -38,7 +38,7 @@ class change_palette(ScrollView):
         self.dialog.buttons[1].bind(on_release=self.dialog.dismiss)
 
     def create_palette(self, i):
-        self.color=MDCard(md_bg_color=(1,1,1,1), orientation="vertical", size_hint=(None, None), width=dp(50), height=dp(200), pos_hint={"center_x": 0.5}, padding=[dp(10), dp(10), dp(10), dp(10)], ripple_behavior=True)
+        self.color=MDCard(md_bg_color=menubg[:-1]+[0.25], orientation="vertical", size_hint=(None, None), width=dp(50), height=dp(200), pos_hint={"center_x": 0.5}, padding=[dp(10), dp(10), dp(10), dp(10)], ripple_behavior=True)
         self.color.radius=[dp(k) for k in self.color.radius]
         theme=[]
         for j in i:
