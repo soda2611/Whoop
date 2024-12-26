@@ -4,7 +4,7 @@ import ui
 class change_palette(ScrollView):
     def __init__(self, **kwargs):
         super(change_palette, self).__init__(**kwargs)
-        self.icon=MDIconButton(icon="check-circle", theme_icon_color="Custom", icon_color=primarycolor, size_hint=(None, None), pos_hint={"center_x": 0.5})
+        self.icon=MDIconButton(icon="check-circle", theme_icon_color="Custom", disabled_color=primarycolor, size_hint=(None, None), pos_hint={"center_x": 0.5}, disabled=True, md_bg_color_disabled=(1,1,1,0))
         self.got_check=None
         self.do_scroll_y=False
         self.size_hint=(1, None)
