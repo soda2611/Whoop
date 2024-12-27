@@ -2272,5 +2272,118 @@
             "word": "cc",
             "type": "verb"
         }
+    },
+    "ok": {
+        "adjective": {
+            "definition": "- All right, permitted.\nE.g: Do you think it's OK to stay here for the night?\n\n- Satisfactory, reasonably good; not exceptional.\nE.g: The soup was OK, but the dessert was excellent.\n\n- In good health or a good emotional state.\nE.g: He's not feeling well now, but he should be OK after some rest.\n\n",
+            "synonyms": [
+                "all right",
+                "allowed",
+                "permissible",
+                "fine",
+                "well",
+                "adequate",
+                "all right",
+                "not bad",
+                "satisfactory"
+            ],
+            "antonyms": [
+                "forbidden",
+                "ill",
+                "poorly",
+                "sick",
+                "under the weather",
+                "unwell",
+                "bad",
+                "inadequate",
+                "poor",
+                "unsatisfactory"
+            ],
+            "word": "ok",
+            "type": "adjective"
+        }
+    },
+    "forbidden": {
+        "verb": {
+            "definition": "- To disallow; to proscribe.\nE.g: Smoking in the restaurant is forbidden.\n\n- (ditransitive) To deny, exclude from, or warn off, by express command.\n\n- To oppose, hinder, or prevent, as if by an effectual command.\nE.g: An impassable river forbids the approach of the army.\n\n- To accurse; to blast.\n\n- To defy; to challenge.\nE.g: What part of \"no\" do you forbid to understand?\n\n",
+            "synonyms": [
+                "ban",
+                "disallow",
+                "prohibit",
+                "veto"
+            ],
+            "antonyms": [],
+            "word": "forbidden",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Not allowed; specifically disallowed.\n\n",
+            "synonyms": [
+                "prohibited",
+                "verboten"
+            ],
+            "antonyms": [],
+            "word": "forbidden",
+            "type": "adjective"
+        }
+    },
+    "ban": {
+        "noun": {
+            "definition": "- Prohibition.\n\n- A public proclamation or edict; a summons by public proclamation. Chiefly, in early use, a summons to arms.\nE.g: Bans is common and ordinary amongst the Feudists, and signifies a proclamation, or any public notice.\n\n- The gathering of the (French) king's vassals for war; the whole body of vassals so assembled, or liable to be summoned; originally, the same as arrière-ban: in the 16th c., French usage created a distinction between ban and arrière-ban, for which see the latter word.\nE.g: France was at such a Pinch..that they call'd their Ban and Arriere Ban, the assembling whereof had been long discussed, and in a manner antiquated.\n\n- A curse or anathema.\n\n- A pecuniary mulct or penalty laid upon a delinquent for offending against a ban, such as a mulct paid to a bishop by one guilty of sacrilege or other crimes.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "ban",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To summon; to call out.\n\n- To anathematize; to pronounce an ecclesiastical curse upon; to place under a ban.\n\n- To curse; to execrate.\n\n- To prohibit; to interdict; to proscribe; to forbid or block from participation.\nE.g: Bare feet are banned in this establishment.\n\n- To curse; to utter curses or maledictions.\n\n",
+            "synonyms": [
+                "disallow",
+                "forbid",
+                "prohibit"
+            ],
+            "antonyms": [],
+            "word": "ban",
+            "type": "verb"
+        }
+    },
+    "forbid": {
+        "verb": {
+            "definition": "- To disallow; to proscribe.\nE.g: Smoking in the restaurant is forbidden.\n\n- (ditransitive) To deny, exclude from, or warn off, by express command.\n\n- To oppose, hinder, or prevent, as if by an effectual command.\nE.g: An impassable river forbids the approach of the army.\n\n- To accurse; to blast.\n\n- To defy; to challenge.\nE.g: What part of \"no\" do you forbid to understand?\n\n",
+            "synonyms": [
+                "ban",
+                "disallow",
+                "prohibit",
+                "veto"
+            ],
+            "antonyms": [],
+            "word": "forbid",
+            "type": "verb"
+        }
+    },
+    "prohibit": {
+        "verb": {
+            "definition": "- To forbid, disallow, or proscribe officially; to make illegal or illicit.\nE.g: The restaurant prohibits smoking on the patio.\n\n",
+            "synonyms": [
+                "ban",
+                "disallow",
+                "forbid"
+            ],
+            "antonyms": [
+                "allow",
+                "authorize"
+            ],
+            "word": "prohibit",
+            "type": "verb"
+        }
+    },
+    "authorize": {
+        "verb": {
+            "definition": "- To grant (someone) the permission or power necessary to do (something).\nE.g: The General Assembly authorized the Council to take up the matter.\n\n- To permit (something), to sanction or consent to (something).\nE.g: The judge authorized the wiretapping.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "authorize",
+            "type": "verb"
+        }
     }
 }
