@@ -258,11 +258,14 @@ class home(MDBoxLayout, TouchBehavior):
             if self.scrollview.scroll_y<-0.1:
                 self.homebox.remove_widget(self.refreshbutton)
                 for i in range(10):
-                    word=random.choice(word__)
-                    box=self.create_content_box(data_[word][random.choice([i for i in data_[word].keys()])])
-                    home__.append(box)
-                    self.homebox.add_widget(box)
+                    try:
+                        word=random.choice(word__)
+                        box=self.create_content_box(data_[word][random.choice([i for i in data_[word].keys()])])
+                        home__.append(box)
+                        self.homebox.add_widget(box)
+                    except: pass
                 self.homebox.add_widget(self.refreshbutton)
+                   
             elif self.scrollview.scroll_y>=1.05:
                 self.refresh(None)
 
@@ -373,6 +376,9 @@ class home(MDBoxLayout, TouchBehavior):
             try:
                 self.translate_result_template.src_text.text=self.text_input.input.text
                 self.translate_result_template.dest_text.text=translator.translate(self.text_input.input.text, src='en', dest='vi').text
+                self.noname.md_bg_color=boxbg
+                self.progress_box.height=dp(5)
+                self.progress_box.remove_widget(self.nav_bar)
                 self.scrollview.clear_widgets()
                 self.scrollview.add_widget(self.translate_result_template)
             except:
@@ -524,13 +530,29 @@ class home(MDBoxLayout, TouchBehavior):
 
     def pronounce(self, instance, text):
         self.result_template.pronunciation_button.disabled=True
-        def run():
+        threading.Thread(target=self.run, args=[text  ]).start()
+    
+    def run(self, text):
+        if engine:
             engine.say(text)
             engine.runAndWait()
             engine.stop()
-            self.result_template.pronunciation_button.disabled=False
-
-        threading.Thread(target=run).start()
+        else:
+            try: tts = gTTS(text)
+            except:Clock.schedule_once(self.no_internet_alert.open)
+            else:
+                file_name="temp.wav"
+                tts.save(file_name)
+                sound = SoundLoader.load(file_name)
+                if sound:
+                    sound.play()
+                    if os.path.exists(file_name):
+                        os.remove(file_name)
+                        
+        Clock.schedule_once(self.eb)
+                      
+    def eb(self, instance):
+        self.result_template.pronunciation_button.disabled=False
 
     def ignore(self):
         pass
