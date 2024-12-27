@@ -2393,5 +2393,14 @@
             "word": "authorize",
             "type": "verb"
         }
+    },
+    "nonet": {
+        "noun": {
+            "definition": "- A composition for nine instruments or nine voices.\n\n- A group of nine nuclear or subatomic particles.\n\n- A byte of nine bits.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "nonet",
+            "type": "noun"
+        }
     }
 }
