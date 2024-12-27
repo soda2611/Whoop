@@ -12,7 +12,8 @@ try:
 except:
     pass
 
-import eng_to_ipa, os, random, threading , pyttsx3, subprocess, signal, getpass, sys, datetime, json
+import eng_to_ipa, os, random, threading , pyttsx3, subprocess, signal, getpass, sys, datetime, json, shutil
+from gtts import gTTS
 from kivymd.app import MDApp
 from kivymd.uix.behaviors.magic_behavior import MagicBehavior
 from kivymd.uix.dialog import MDDialog
@@ -40,6 +41,7 @@ from kivy.metrics import dp
 from kivy.clock import Clock
 from kivy.core.window import Window
 from kivy.core.clipboard import Clipboard as pyperclip
+from kivy.core.audio import SoundLoader
 from func.SOD import *
 from googletrans import Translator
 
@@ -87,7 +89,8 @@ def config():
         set_new_config()
     elif settings['uid']!='none' and not os.path.exists(f"func/setting/{settings['uid']}.txt"):
         download_file("whoop_database", f"users/{settings['uid']}.txt", f"func/setting/{settings['uid']}.txt")
-    engine = pyttsx3.init()
+    try: engine = pyttsx3.init()
+    except: engine = None
     data_=SOD_word_list()
     word__=[i for i in data_]
     source=word_data()
