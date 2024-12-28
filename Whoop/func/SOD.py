@@ -59,14 +59,6 @@ def SOD(inp, database_path='default', internet=check_connection()):
             data_="Không có kết nối mạng và không có sẵn trong bộ dữ liệu offline"
     return data_ if data_ else "Không tìm thấy từ"
 
-def grammar_structure_detector(inp,file_path):
-    patterns=build_patterns(file_path)
-    result=[]
-    for i in patterns:
-        if len(re.findall(patterns[i], inp))!=0:
-            result.append(i.replace("\n",""))
-    return result
-
 def build_patterns(file_path):
     patterns = {}
     with open(file_path, 'r') as f:
