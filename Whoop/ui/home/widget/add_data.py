@@ -115,8 +115,9 @@ class add_data(MDBoxLayout):
         global synonyms_list
         synonyms_list.remove(instance.text)
         self.add_synonyms.synonyms_list.remove_widget(instance)
-        
-    global synonyms_list, antonyms_list
+
+    def add_data(self, instance):
+        global synonyms_list, antonyms_list
         if self.word.text and self.type.text:
             with open("func/data/tu_dien_nguon.txt", 'r', encoding="utf-8") as file:
                 data = eval(file.read())
