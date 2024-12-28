@@ -514,11 +514,6 @@ class home(MDBoxLayout, TouchBehavior):
                 if len(_back_)>1:
                     self.back_button.disabled=False
             except: pass
-        if result!="Không tìm thấy từ":
-            if grammar_structure_detector(self.text_input.input.text,"func/data/grammar.txt"):
-                self.structure=MDLabel(text="Cấu trúc ngữ pháp đã nhận dạng:\n"+"\n".join(grammar_structure_detector(self.text_input.input.text,"func/data/grammar.txt")), font_style="H6", halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, theme_text_color="Custom", text_color=primarycolor)
-                self.structure.bind(texture_size=self.resultlabel.setter('size'))
-                self.structure_box.add_widget(self.structure)
 
         with open(f"func/setting/{settings['uid']}.txt", "w", encoding="utf-8") as fo:
             fo.write(json.dumps(recent_search, ensure_ascii=False, indent=4))
