@@ -257,7 +257,7 @@ class home(MDBoxLayout, TouchBehavior):
             self.content_box.tilte_and_description_box.add_widget(self.content_box.result_head_label)
             self.content_box.tilte_and_description_box.add_widget(self.content_box.result_label)
             self.content_box.add_widget(self.content_box.tilte_and_description_box)
-        if text["definition"]!="Không có kết quả":
+            if text["definition"]!="Không có kết quả":
                 self.content_box.morebutton=MDFillRoundFlatButton(text="Xem thêm", pos_hint={"center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
                 self.content_box.add_widget(self.content_box.morebutton)
                 self.content_box.morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, [text['word']]))
