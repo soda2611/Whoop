@@ -125,8 +125,11 @@ class setting(MDBoxLayout):
                     os.system("mkdir temp_data")
                     download_file('whoop_database', 'users', 'temp_data')
                     download_file('Whoop', 'Whoop/func/data/tu_dien_nguon.txt', 'temp_tu_dien_nguon.txt')
+                    download_file('Whoop', 'Whoop/func/data/source.txt', 'temp_source.txt')
                     with open('func/data/tu_dien_nguon.txt', encoding='utf-8') as fi: dict_=eval(fi.read())
+                    with open('temp_source.txt', encoding='utf-8') as fi: source=eval(fi.read())
                     with open('temp_tu_dien_nguon.txt', encoding='utf-8') as fi: _dict_=eval(fi.read())
+                    with open('func/data/source.txt', encoding='utf-8') as fi: _source_=eval(fi.read())
                     for root, dirs, files in os.walk('temp_data'):
                             for file in files:
                                 if file.endswith(".txt"):
@@ -139,17 +142,22 @@ class setting(MDBoxLayout):
                                 os.remove(f'temp_data/{file}')        
                     with open('func/data/tu_dien_nguon.txt', "w", encoding='utf-8') as fo: fo.write(json.dumps(dict_, ensure_ascii=False, indent=4))
                     with open('temp_tu_dien_nguon.txt', "w", encoding='utf-8') as fo: fo.write(json.dumps(_dict_, ensure_ascii=False, indent=4))
+                    with open('func/data/source.txt', "w", encoding='utf-8') as fo: fo.write(str(list(set(source+_source_))))
                     upload_file('Whoop', 'Whoop/func/data/tu_dien_nguon.txt', 'temp_tu_dien_nguon.txt')
                     os.removedirs('temp_data')
                 elif _type_=="official":
                     download_file('Whoop', 'Whoop/func/data/tu_dien_nguon.txt', 'temp_tu_dien_nguon.txt')
                     with open('func/data/tu_dien_nguon.txt', encoding='utf-8') as fi: dict_=eval(fi.read())
                     with open('temp_tu_dien_nguon.txt', encoding='utf-8') as fi: _dict_=eval(fi.read())
+                    with open('temp_source.txt', encoding='utf-8') as fi: source=eval(fi.read())
+                    with open('func/data/source.txt', encoding='utf-8') as fi: _source_=eval(fi.read())
+                    with open('func/data/source.txt', "w", encoding='utf-8') as fo: fo.write(str(list(set(source+_source_))))
                     dict_.update(_dict_)
                     with open('func/data/tu_dien_nguon.txt', "w", encoding='utf-8') as fo: fo.write(json.dumps(dict_, ensure_ascii=False, indent=4))
                     download_file("Whoop", "Whoop/func/data/word.txt", "func/data/word.txt")
                     download_file("Whoop", "Whoop/func/data/grammar.txt", "func/data/grammar.txt")
                 os.remove('temp_tu_dien_nguon.txt')
+                os.remove('temp_source.txt')
                 Clock.schedule_once(self.success_)
             else:
                 Clock.schedule_once(self.no_internet)
