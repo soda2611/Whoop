@@ -2485,5 +2485,151 @@
             "word": "damn",
             "type": "interjection"
         }
+    },
+    "aa": {
+        "noun": {
+            "definition": "- A form of lava flow associated with Hawaiian-type volcanoes, consisting of basaltic rock, usually dark-colored with a jagged and loose, clinkery surface. Compare pahoehoe.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "aa",
+            "type": "noun"
+        }
+    },
+    "dammit": {
+        "noun": {
+            "definition": "- The saying of the interjection, used as a general measure of anything.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "dammit",
+            "type": "noun"
+        },
+        "interjection": {
+            "definition": "- (mildly) Expressing anger, irritation, contempt, or disappointment.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "dammit",
+            "type": "interjection"
+        }
+    },
+    "feck": {
+        "noun": {
+            "definition": "- Effect, value; vigor.\n\n- The greater or larger part.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "feck",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To throw.\n\n- To steal.\n\n- To leave hastily.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "feck",
+            "type": "verb"
+        }
+    },
+    "blow out": {
+        "verb": {
+            "definition": "- To extinguish something, especially a flame.\nE.g: He blew out the match.\n\n- To deflate quickly on being punctured.\nE.g: The tire blew out on a corner.\n\n- In a sporting contest, to dominate and defeat an opposing team, especially by a large scoring margin.\nE.g: The No. 1-rated football team proceeded to blow out its undermanned opponent.\n\n- To exhaust; to physically tire\n\n- To be driven out by the expansive force of a gas or vapour.\nE.g: A steam cock or valve sometimes blows out.\n\n- To talk violently or abusively.\n\n- To sing out, sing out loud\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "blow out",
+            "type": "verb"
+        }
+    },
+    "ghosting": {
+        "verb": {
+            "definition": "- To haunt; to appear to in the form of an apparition.\n\n- To die; to expire.\n\n- To ghostwrite.\n\n- To sail seemingly without wind.\n\n- To copy a file or hard drive image.\n\n- To gray out (a visual item) to indicate that it is unavailable.\n\n- To forcibly disconnect an IRC user who is using one's reserved nickname.\n\n- To appear without warning; to move quickly and quietly; to slip.\n\n- To kill.\n\n- To break up with someone without warning or explanation; to perform an act of ghosting.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "ghosting",
+            "type": "verb"
+        },
+        "noun": {
+            "definition": "- The practice of hiding prisoners from inspection from (possibly hostile) outside inspectors.\n\n- The blurry appearance of a television picture resulting from interference caused by multipath reception.\n\n- Ghost imaging.\n\n- A form of identity theft in which someone steals the identity, and sometimes even the role within society, of a specific dead person (the \"ghost\") who is not widely known to be deceased.\n\n- A problem with a keyboard where certain simultaneous keypresses trigger the action of a further key that was not in fact pressed.\n\n- A method of ending a personal relationship by stopping any contact with the other party and not providing an explanation.\nE.g: Stories of ghosting often deal with broken-off romances, but it's worth mentioning that friend ghosting is real, and sometimes necessary.\n\n- The phenomenon of the writing on one side of a page in a notebook being partly visible on the other side.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "ghosting",
+            "type": "noun"
+        }
+    },
+    "pound sterling": {
+        "noun": {
+            "definition": "- The currency of the United Kingdom.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "pound sterling",
+            "type": "noun"
+        }
+    },
+    "nicker": {
+        "noun": {
+            "definition": "- Pound sterling.\nE.g: This coat cost me 50 nicker.\n\n",
+            "synonyms": [
+                "pound",
+                "pound sterling",
+                "quid",
+                "sov"
+            ],
+            "antonyms": [],
+            "word": "nicker",
+            "type": "noun"
+        }
+    },
+    "sov": {
+        "noun": {
+            "definition": "- Pound sterling.\nE.g: That car of his has got to be worth a few sovs.\n\n- A sovereign (former gold coin).\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "sov",
+            "type": "noun"
+        }
+    },
+    "sovereign": {
+        "noun": {
+            "definition": "- A monarch; the ruler of a country.\n\n- One who is not a subject to a ruler or nation.\n\n- A gold coin of the United Kingdom, with a nominal value of one pound sterling but in practice used as a bullion coin.\n\n- A very large champagne bottle with the capacity of about 25 liters, equivalent to 33⅓ standard bottles.\n\n- Any butterfly of the tribe Nymphalini, or genus Basilarchia, as the ursula and the viceroy.\n\n- A large, garish ring; a sovereign ring.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "sovereign",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To rule over as a sovereign.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "sovereign",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Exercising power of rule.\nE.g: sovereign nation\n\n- Exceptional in quality.\nE.g: Her voice was her sovereign talent.\n\n- Extremely potent or effective (of a medicine, remedy etc.).\n\n- Having supreme, ultimate power.\n\n- Princely; royal.\n\n- Predominant; greatest; utmost; paramount.\n\n",
+            "synonyms": [
+                "autonomous",
+                "supreme"
+            ],
+            "antonyms": [],
+            "word": "sovereign",
+            "type": "adjective"
+        }
+    },
+    "i": {
+        "noun": {
+            "definition": "- The name of the Latin-script letter I.\nE.g: the position of an i-dot (the dot of an i)\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "i",
+            "type": "noun"
+        }
+    },
+    "adore": {
+        "verb": {
+            "definition": "- To worship.\n\n- To love with one's entire heart and soul; regard with deep respect and affection.\nE.g: It is obvious to everyone that Gerry adores Heather.\n\n- To be very fond of.\n\n- To adorn.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "disdain",
+                "disdain",
+                "disdain"
+            ],
+            "word": "adore",
+            "type": "verb"
+        }
     }
 }
