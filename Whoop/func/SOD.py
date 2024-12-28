@@ -59,19 +59,6 @@ def SOD(inp, database_path='default', internet=check_connection()):
             data_="Không có kết nối mạng và không có sẵn trong bộ dữ liệu offline"
     return data_ if data_ else "Không tìm thấy từ"
 
-def build_patterns(file_path):
-    patterns = {}
-    with open(file_path, 'r') as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            parts,structure = line.split(": ")
-            parts=parts.split('...')
-            pattern = '\s*.*?'.join(f'({part.strip()})' for part in parts)
-            patterns[structure] = pattern
-    return patterns
-
 def word_detector(inp):
     inp = inp.split()
     list_ = []
