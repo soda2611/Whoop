@@ -116,21 +116,29 @@ class add_data(MDBoxLayout):
         synonyms_list.remove(instance.text)
         self.add_synonyms.synonyms_list.remove_widget(instance)
         
-    def add_data(self, instance):
-        global synonyms_list, antonyms_list
+    global synonyms_list, antonyms_list
         if self.word.text and self.type.text:
             with open("func/data/tu_dien_nguon.txt", 'r', encoding="utf-8") as file:
                 data = eval(file.read())
             with open("func/data/source.txt", 'r', encoding="utf-8") as file:
                 source = eval(file.read())
             if self.definition.text:
-                data[self.word.text][self.type.text]={
-                            "definition": self.definition.text,
-                            "synonyms": synonyms_list,
-                            "antonyms": antonyms_list,
-                            "word": self.word.text,
-                            "type": self.type.text
-                        }
+                if self.word.text not in data:
+                    data[self.word.text]={self.type.text:{
+                        "definition": self.definition.text,
+                        "synonyms": synonyms_list,
+                        "antonyms": antonyms_list,
+                        "word": self.word.text,
+                        "type": self.type.text
+                    }}
+                else:
+                    data[self.word.text][self.type.text]={
+                                "definition": self.definition.text,
+                                "synonyms": synonyms_list,
+                                "antonyms": antonyms_list,
+                                "word": self.word.text,
+                                "type": self.type.text
+                            }
             else:
                 del data[self.word.text][self.type.text]
                 if not data[self.word.text]:
