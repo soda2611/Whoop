@@ -143,6 +143,7 @@ class add_data(MDBoxLayout):
                 del data[self.word.text][self.type.text]
                 if not data[self.word.text]:
                     del data[self.word.text]
+                    source.remove(self.word.text)
             if self.word.text not in source:
                 source.append(self.word.text)
             with open("func/data/tu_dien_nguon.txt", 'w', encoding="utf-8") as file:
