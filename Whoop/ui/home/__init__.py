@@ -240,6 +240,31 @@ class home(MDBoxLayout, TouchBehavior):
 
         return self.content_box
 
+    def _create_content_box_(self, text):
+        try:
+            self.content_box=MDCard(md_bg_color=boxbg, padding=[dp(10),dp(10),dp(10),dp(10)], size_hint=(1, None), pos_hint={"center_x":0.5})
+            self.content_box.radius=[dp(i) for i in self.content_box.radius]
+            self.content_box.bind(minimum_height=self.content_box.setter('height'))
+            self.content_box.tilte_and_description_box=MDBoxLayout(orientation='vertical', size_hint=(0.8,None))
+            self.content_box.tilte_and_description_box.bind(minimum_height=self.content_box.tilte_and_description_box.setter('height'))
+            self.content_box.result_head_label=MDLabel(text=text["word"], font_style="main", font_size=dp(18), size_hint=(0.9,None), pos_hint={"left":0}, theme_text_color="Custom", text_color=primarycolor)
+            self.content_box.result_head_label.bind(texture_size=self.content_box.result_head_label.setter('text_size'))
+            self.content_box.result_head_label.bind(texture_size=self.content_box.result_head_label.setter('size'))
+            self.content_box.result_label=MDLabel(font_size=dp(25), size_hint=(0.9,None), pos_hint={"left":1}, theme_text_color="Custom", text_color=primarycolor)
+            self.content_box.result_label.text=text["definition"]
+            self.content_box.result_label.bind(texture_size=self.content_box.result_label.setter('text_size'))
+            self.content_box.result_label.bind(texture_size=self.content_box.result_label.setter('size'))
+            self.content_box.morebutton=MDFillRoundFlatButton(text="Xem thêm", pos_hint={"center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
+            self.content_box.tilte_and_description_box.add_widget(self.content_box.result_head_label)
+            self.content_box.tilte_and_description_box.add_widget(self.content_box.result_label)
+            self.content_box.add_widget(self.content_box.tilte_and_description_box)
+            self.content_box.add_widget(self.content_box.morebutton)
+            self.content_box.morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, [text['word']]))
+        except:
+            pass
+
+        return self.content_box
+
     def add_data(self):
         global current_page
         current_page="add_data"
@@ -415,14 +440,38 @@ class home(MDBoxLayout, TouchBehavior):
         self.scrollview.do_scroll_x, self.scrollview.do_scroll_y=False, True
         if not temp:
             self.input_text=input_text
-            if len(self.input_text)==1:
-                result=SOD(self.input_text, database_path="func/data/tu_dien_nguon.txt")
+            result=SOD(self.input_text, database_path="func/data/tu_dien_nguon.txt")
+            if len(result)==1:
+                result=result[self.input_text[0]]
                 Clock.schedule_once(self.update_UI)
-            else: Clock.schedule_once(self.translate)
+            else:
+                Clock.schedule_once(self._update_UI_)
         else:
             self.input_text=[temp["word"]]
             result={input_text: temp}
             Clock.schedule_once(self.update_UI)
+
+    def _update_UI_(self, instance):
+        global result, recent_search, _value_, _callback_, current_page
+        current_page="search"
+        self.progress_box.height=dp(5)
+        self.progress_box.remove_widget(self.nav_bar)
+        self.scrollview.scroll_y=1
+        self.progress_bar.back_color=(boxbg)
+        self.noname.md_bg_color=boxbg
+        self.scrollview.do_scroll_x, self.scrollview.do_scroll_y=False, True
+        self.scrollview.clear_widgets()
+        self.scrollview.add_widget(self.result_box)
+        self.result_box.clear_widgets()
+        if str(type(result))=="<class 'dict'>":
+            for rlt in result:
+                temp_value={"word": rlt, "type": "", "definition": "", "synonyms": [], "antonyms": []}
+                if result[rlt]=="Không có kết nối mạng và không có sẵn trong bộ dữ liệu offline": temp_value["definition"]="Không có kết quả"
+                else: temp_value["definition"]=f"Có {len(result[rlt])} kết quả"
+                self.result_box.add_widget(self._create_content_box_(temp_value))
+        self.text_input.input.on_text_validate=lambda instance: self.search_button_pressed(self.text_input.input, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split()))))
+        self.progress_bar.color=self.progress_bar.back_color
+        self.progress_bar.stop()
 
     def update_UI(self, instance):
         global result, recent_search, _value_, _callback_, current_page
