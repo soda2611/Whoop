@@ -23,6 +23,7 @@ with open("func/data/source.txt", encoding="utf-8") as f:
     source=eval(f.read())
 
 def SOD(inp, database_path='default', internet=check_connection()):
+    result={}
     if database_path!='default':
         with open(database_path, encoding="utf-8") as f:
             database=eval(f.read())
@@ -57,7 +58,8 @@ def SOD(inp, database_path='default', internet=check_connection()):
             with open(database_path, "w", encoding="utf-8") as fo: fo.write(json.dumps(database, ensure_ascii=False, indent=4))
         elif not internet:
             data_="Không có kết nối mạng và không có sẵn trong bộ dữ liệu offline"
-    return data_ if data_ else "Không tìm thấy từ"
+        result[word]=data_
+    return result if result else "Không tìm thấy từ"
 
 def word_detector(inp):
     inp = inp.split()
@@ -76,4 +78,4 @@ def word_detector(inp):
     return list_
 
 if __name__=="__main__":
-    print(SOD(["art"]))
+    print(SOD(word_detector("I a student"), database_path="func/data/tu_dien_nguon.txt"))
