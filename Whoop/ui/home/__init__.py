@@ -482,10 +482,8 @@ class home(MDBoxLayout, TouchBehavior):
             else:
                 self.progress_box.height=dp(5)
                 self.progress_box.remove_widget(self.nav_bar)
-                self.structure_box=MDBoxLayout(size_hint=(1, None))
                 for i in result:
                     self.result_box.add_widget(self.create_content_box(result[i]))
-                self.result_box.add_widget(self.structure_box)
             if self.input_text[0] not in recent_search:
                 if len(recent_search)==0:
                     self.recent.container.clear_widgets()
