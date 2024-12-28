@@ -12,9 +12,9 @@ class FirstScreen(MDScreen):
 class SecondScreen(MDScreen):
     def __init__(self, **kwargs):
         super(SecondScreen, self).__init__(**kwargs)
-        setting_layout = setting()
+        self.setting_layout = setting()
         self.update_dialog=update_dialog()
-        self.add_widget(setting_layout)
+        self.add_widget(self.setting_layout)
         self.add_widget(self.update_dialog)
         self.md_bg_color=bg
 
