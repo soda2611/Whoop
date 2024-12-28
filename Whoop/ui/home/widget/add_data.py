@@ -121,6 +121,8 @@ class add_data(MDBoxLayout):
         if self.word.text and self.type.text:
             with open("func/data/tu_dien_nguon.txt", 'r', encoding="utf-8") as file:
                 data = eval(file.read())
+            with open("func/data/source.txt", 'r', encoding="utf-8") as file:
+                source = eval(file.read())
             if self.definition.text:
                 data[self.word.text][self.type.text]={
                             "definition": self.definition.text,
@@ -133,8 +135,12 @@ class add_data(MDBoxLayout):
                 del data[self.word.text][self.type.text]
                 if not data[self.word.text]:
                     del data[self.word.text]
+            if self.word.text not in source:
+                source.append(self.word.text)
             with open("func/data/tu_dien_nguon.txt", 'w', encoding="utf-8") as file:
                 file.write(json.dumps(data, ensure_ascii=False, indent=4))
+            with open("func/data/source.txt", 'w', encoding="utf-8") as file:
+                file.write(str(source))
             self.word.text = self.type.text = self.definition.text = ""
             self.add_synonyms.synonyms_list.clear_widgets()
             self.add_synonyms.synonyms_list.add_widget(self.add_synonym_button)
