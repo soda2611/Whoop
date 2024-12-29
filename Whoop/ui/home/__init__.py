@@ -467,7 +467,7 @@ class home(MDBoxLayout, TouchBehavior):
         if str(type(result))=="<class 'dict'>":
             for rlt in result:
                 temp_value={"word": rlt, "type": "", "definition": "", "synonyms": [], "antonyms": []}
-                if result[rlt]=="Không có kết nối mạng và không có sẵn trong bộ dữ liệu offline": temp_value["definition"]="Không có kết quả"
+                if result[rlt]=="Không có kết nối mạng và không có sẵn trong bộ dữ liệu offline" or result[rlt]=="Không tìm thấy từ": temp_value["definition"]="Không có kết quả"
                 else: temp_value["definition"]=f"Có {len(result[rlt])} kết quả"
                 self.result_box.add_widget(self._create_content_box_(temp_value))
         self.text_input.input.on_text_validate=lambda instance: self.search_button_pressed(self.text_input.input, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split()))))
