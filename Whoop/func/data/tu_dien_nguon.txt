@@ -1,30 +1,17 @@
 {
     "hello": {
         "noun": {
-            "definition": "- \"Hello!\" or an equivalent greeting.\n\n",
+            "definition": "- The conscious production or arrangement of sounds, colours, forms, movements, or other elements in a manner that affects the senses and emotions, usually specifically the production of the beautiful in a graphic or plastic medium.\nVí dụ: There is a debate as to whether graffiti is art or vandalism.\n\n- The creative and emotional expression of mental imagery, such as visual, auditory, social, etc.\n\n- Skillful creative activity, usually with an aesthetic focus.\nVí dụ: She's mastered the art of programming.\n\n- The study and the product of these processes.\nVí dụ: He's at university to study art.\n\n- Aesthetic value.\nVí dụ: Her photographs are nice, but there's no art in them.\n\n- Artwork.\nVí dụ: Sotheby's regularly auctions art for millions.\n\n- A field or category of art, such as painting, sculpture, music, ballet, or literature.\nVí dụ: I'm a great supporter of the arts.\n\n- A nonscientific branch of learning; one of the liberal arts.\n\n- Skill that is attained by study, practice, or observation.\n\n- Contrivance, scheming, manipulation.\n\n",
             "synonyms": [
-                "greeting"
+                "craft"
             ],
-            "antonyms": [],
+            "antonyms": [
+                "mundacity",
+                "nature",
+                "subsistence"
+            ],
             "word": "hello",
             "type": "noun"
-        },
-        "verb": {
-            "definition": "- To greet with \"hello\".\n\n",
-            "synonyms": [],
-            "antonyms": [],
-            "word": "hello",
-            "type": "verb"
-        },
-        "interjection": {
-            "definition": "- A greeting (salutation) said when meeting someone or acknowledging someone’s arrival or presence.\nVí dụ: Hello, everyone.\n\n- A greeting used when answering the telephone.\nVí dụ: Hello? How may I help you?\n\n- A call for response if it is not clear if anyone is present or listening, or if a telephone conversation may have been disconnected.\nVí dụ: Hello? Is anyone there?\n\n- Used sarcastically to imply that the person addressed or referred to has done something the speaker or writer considers to be foolish.\nVí dụ: You just tried to start your car with your cell phone. Hello?\n\n- An expression of puzzlement or discovery.\nVí dụ: Hello! What’s going on here?\n\n",
-            "synonyms": [],
-            "antonyms": [
-                "bye",
-                "goodbye"
-            ],
-            "word": "hello",
-            "type": "interjection"
         }
     },
     "pol": {
@@ -37,12 +24,33 @@
         }
     },
     "gay": {
+        "noun": {
+            "definition": "- (chiefly in plural or attributive) A homosexual, especially a male homosexual; see also lesbian.\n\n- Something which is bright or colorful, such as a picture or a flower.\n\n- An ornament, a knick-knack.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To make happy or cheerful.\n\n- To cause (something, e.g. AIDS) to be associated with homosexual people.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "verb"
+        },
         "adjective": {
             "definition": "- (possibly obsolete) Happy, joyful, and lively.\nVí dụ: The Gay Science\n\n- Quick, fast.\n\n- (possibly obsolete) Festive, bright, or colourful.\nVí dụ: Pennsylvania Dutch include the plain folk and the gay folk.\n\n- Sexually promiscuous (of any gender), (sometimes particularly) engaged in prostitution.\n\n- Homosexual:\n\n- A pejorative:\n\n- (of a dog's tail) Upright or curved over the back.\n\n- (possibly obsolete) Considerable, great, large in number, size, or degree.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "gay",
             "type": "adjective"
+        },
+        "adverb": {
+            "definition": "- (possibly obsolete) Considerably, very.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "adverb"
         }
     },
     "harmony": {
@@ -2630,6 +2638,219 @@
             ],
             "word": "adore",
             "type": "verb"
+        }
+    },
+    "there": {
+        "noun": {
+            "definition": "- That place.\n\n- That status; that position.\nE.g: You rinse and de-string the green beans; I'll take it from there.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "there",
+            "type": "noun"
+        },
+        "adverb": {
+            "definition": "- (location) In a place or location (stated, implied or otherwise indicated) at some distance from the speaker (compare here).\n\n- In that matter, relation, etc.; at that point, stage, etc., regarded as a distinct place.\nE.g: He did not stop there, but continued his speech.\n\n- (location) To or into that place; thither.\n\n- Where, there where, in which place.\n\n- In existence or in this world; see pronoun section below.\n\n",
+            "synonyms": [
+                "away there",
+                "over there",
+                "thither",
+                "yonder",
+                "away there",
+                "over there",
+                "thither",
+                "yonder"
+            ],
+            "antonyms": [],
+            "word": "there",
+            "type": "adverb"
+        },
+        "pronoun": {
+            "definition": "- Used as an expletive subject of be in its sense of “exist”, with the semantic, usually indefinite subject being postponed or (occasionally) implied.\nE.g: Is there an answer? [=Does an answer exist?]\n\n- Used with other intransitive verbs of existence, in the same sense, or with other intransitive verbs, adding a sense of existence.\nE.g: If x is a positive number, then there exists [=there is] a positive number y less than x.\n\n- Used with other verbs, when raised.\nE.g: I expected there to be a simpler solution. [=I expected that there would be a simpler solution.]\n\n- (in combination with certain prepositions, no longer productive) That.\nE.g: therefor, thereat, thereunder\n\n- Used to replace an unknown name, principally in greetings and farewells\nE.g: Hi there, young fellow.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "there",
+            "type": "pronoun"
+        },
+        "interjection": {
+            "definition": "- Used to offer encouragement or sympathy.\nE.g: There, there. Everything is going to turn out all right.\n\n- Used to express victory or completion.\nE.g: There! That knot should hold.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "there",
+            "type": "interjection"
+        }
+    },
+    "my ass": {
+        "interjection": {
+            "definition": "- Indicates disapproval, disagreement, or disbelief, often with a tone of disregard, disdain, or disgust, referring to the buttocks.\nE.g: She'll use my money to buy a new car, my ass!\n\n",
+            "synonyms": [
+                "fiddlesticks",
+                "horsefeathers",
+                "like hell",
+                "pull the other one",
+                "the hell"
+            ],
+            "antonyms": [],
+            "word": "my ass",
+            "type": "interjection"
+        }
+    },
+    "is": {},
+    "unaccessible": {},
+    "am": {
+        "adverb": {
+            "definition": "- Before noon.\n\n",
+            "synonyms": [
+                "forenoon"
+            ],
+            "antonyms": [
+                "afternoon",
+                "p.m."
+            ],
+            "word": "am",
+            "type": "adverb"
+        }
+    },
+    "p.m.": {
+        "adverb": {
+            "definition": "- After noon (used after a time to indicate it is between noon and midnight, i.e., in the afternoon, evening or night as opposed to the morning)\n\n",
+            "synonyms": [
+                "afternoon"
+            ],
+            "antonyms": [
+                "a.m.",
+                "forenoon"
+            ],
+            "word": "p.m.",
+            "type": "adverb"
+        }
+    },
+    "forenoon": {
+        "noun": {
+            "definition": "- The part of the day from dawn to noon.\nE.g: I'll see you tomorrow morning.\n\n- The part of the day between midnight and noon.\n\n- The early part of anything.\n\n- The first alcoholic drink of the day; a morning draught.\n\n",
+            "synonyms": [
+                "forenoon",
+                "yeender",
+                "a.m.",
+                "forenoon",
+                "yeender"
+            ],
+            "antonyms": [],
+            "word": "forenoon",
+            "type": "noun"
+        }
+    },
+    "few": {
+        "pronoun": {
+            "definition": "- Few people, few things.\nE.g: Many are called, but few are chosen.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "many"
+            ],
+            "word": "few",
+            "type": "pronoun"
+        }
+    },
+    "many": {
+        "noun": {
+            "definition": "- A multitude; a great aggregate; a mass of people; the generality; the common herd.\nE.g: Democracy must balance the rights of the few against the will of the many.\n\n- A considerable number.\n\n",
+            "synonyms": [
+                "abundance",
+                "buttload",
+                "deal",
+                "crowd",
+                "mob"
+            ],
+            "antonyms": [],
+            "word": "many",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- A large number of; numerous.\n\n",
+            "synonyms": [
+                "multiple",
+                "several"
+            ],
+            "antonyms": [],
+            "word": "many",
+            "type": "adjective"
+        },
+        "pronoun": {
+            "definition": "- An indefinite large number of people or things.\nE.g: Many are called, but few are chosen.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "few"
+            ],
+            "word": "many",
+            "type": "pronoun"
+        }
+    },
+    "multiple": {
+        "noun": {
+            "definition": "- A whole number that can be divided by another number with no remainder.\nE.g: 14, 21 and 70 are multiples of 7\n\n- Price-earnings ratio.\n\n- One of a set of the same thing; a duplicate.\n\n- A single individual who has multiple personalities.\n\n- One of a set of siblings produced by a multiple birth.\n\n- A chain store.\n\n- A discovery resulting from the work of many people throughout history, not merely the work of the person who makes the final connection.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "multiple",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- More than one (followed by plural).\nE.g: My Swiss Army knife has multiple blades.\n\n- Having more than one element, part, component, or function, having more than one instance, occurring more than once, usually contrary to expectations (can be followed by a singular).\nE.g: It was a multiple pregnancy: the woman had triplets.\n\n",
+            "synonyms": [
+                "manifold",
+                "many",
+                "morefold",
+                "several",
+                "plural"
+            ],
+            "antonyms": [
+                "paucal"
+            ],
+            "word": "multiple",
+            "type": "adjective"
+        }
+    },
+    "manifold": {
+        "noun": {
+            "definition": "- A copy made by the manifold writing process.\n\n- A pipe fitting or similar device that connects multiple inputs or outputs.\n\n- (chiefly in the plural) The third stomach of a ruminant animal, an omasum.\n\n- A topological space that looks locally like the \"ordinary\" Euclidean space \\mathbb{R}^n and is Hausdorff.\n\n- A polygon mesh representing the continuous, closed surface of a solid object\n\n",
+            "synonyms": [
+                "multiple",
+                "numerous",
+                "diverse",
+                "multiplicitous",
+                "varied",
+                "various"
+            ],
+            "antonyms": [
+                "onefold",
+                "singlefold"
+            ],
+            "word": "manifold",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Various in kind or quality; diverse.\nE.g: The manifold meanings of the simple English word set are infamous among dictionary makers.\n\n- Many in number, numerous; multiple, multiplied.\n\n- Complicated.\n\n- Exhibited at diverse times or in various ways.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "manifold",
+            "type": "adjective"
+        },
+        "adverb": {
+            "definition": "- Many times; repeatedly.\n\n",
+            "synonyms": [
+                "multiple",
+                "numerous",
+                "diverse",
+                "multiplicitous",
+                "varied",
+                "various",
+                "frequently",
+                "ofttimes"
+            ],
+            "antonyms": [
+                "onefold",
+                "singlefold"
+            ],
+            "word": "manifold",
+            "type": "adverb"
         }
     }
 }
