@@ -58,8 +58,9 @@ def SOD(inp, database_path='default', internet=check_connection()):
             with open(database_path, "w", encoding="utf-8") as fo: fo.write(json.dumps(database, ensure_ascii=False, indent=4))
         elif not internet:
             data_="Không có kết nối mạng và không có sẵn trong bộ dữ liệu offline"
+        if not data_: data_="Không tìm thấy từ"
         result[word]=data_
-    return result if result else "Không tìm thấy từ"
+    return result
 
 def word_detector(inp):
     inp = inp.split()
