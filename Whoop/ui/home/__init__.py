@@ -420,7 +420,10 @@ class home(MDBoxLayout, TouchBehavior):
 
     def back(self, instance):
         global _back_
-        if len(_back_)>=2: self.search_button_pressed(None, _back_[-2]["type"], value=False, callback=True, temp=_back_[-2])
+        print(_back_)
+        if len(_back_)>=2:
+            if str(type(_back_[-2]))!="<class 'dict'>": self.search_button_pressed(None, _back_[-2], value=False, callback=True)
+            else: self.search_button_pressed(None, _back_[-2]["type"], value=False, callback=True, temp=_back_[-2])
         _back_=_back_[::-1][1:][::-1]
         if len(_back_)<2: 
             self.back_button.disabled=True
@@ -455,8 +458,12 @@ class home(MDBoxLayout, TouchBehavior):
     def _update_UI_(self, instance):
         global result, recent_search, _value_, _callback_, current_page
         current_page="search"
-        self.progress_box.height=dp(5)
-        self.progress_box.remove_widget(self.nav_bar)
+        self.progress_box.clear_widgets()
+        self.progress_box.height=dp(60)
+        self.progress_box.add_widget(self.progress_bar)
+        self.progress_box.add_widget(self.nav_bar)
+        self.nav_bar.clear_widgets()
+        self.nav_bar.add_widget(self.back_button)
         self.scrollview.scroll_y=1
         self.progress_bar.back_color=(boxbg)
         self.noname.md_bg_color=boxbg
@@ -471,6 +478,16 @@ class home(MDBoxLayout, TouchBehavior):
                 else: temp_value["definition"]=f"Có {len(result[rlt])} kết quả"
                 self.result_box.add_widget(self._create_content_box_(temp_value))
         self.text_input.input.on_text_validate=lambda instance: self.search_button_pressed(self.text_input.input, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split()))))
+        if not _callback_:
+            try:
+                if result[i]!=_back_[-1]: _back_.append(result[i])
+            except:
+                _back_.append(self.input_text)
+        else: _callback_=not _callback_
+        try:
+            if len(_back_)>1:
+                self.back_button.disabled=False
+        except: pass
         self.progress_bar.color=self.progress_bar.back_color
         self.progress_bar.stop()
 
@@ -530,10 +547,24 @@ class home(MDBoxLayout, TouchBehavior):
                                 self.back_button.disabled=False
                         except: pass
             else:
-                self.progress_box.height=dp(5)
-                self.progress_box.remove_widget(self.nav_bar)
+                self.progress_box.clear_widgets()
+                self.progress_box.height=dp(60)
+                self.progress_box.add_widget(self.progress_bar)
+                self.progress_box.add_widget(self.nav_bar)
+                self.nav_bar.clear_widgets()
+                self.nav_bar.add_widget(self.back_button)
                 for i in result:
                     self.result_box.add_widget(self.create_content_box(result[i]))
+                if not _callback_:
+                    try:
+                        if result!=_back_[-1]: _back_.append(self.input_text)
+                    except:
+                        _back_.append(self.input_text)
+                else: _callback_=not _callback_
+                try:
+                    if len(_back_)>1:
+                        self.back_button.disabled=False
+                except: pass
             if self.input_text[0] not in recent_search:
                 if len(recent_search)==0:
                     self.recent.container.clear_widgets()
@@ -573,7 +604,7 @@ class home(MDBoxLayout, TouchBehavior):
 
     def pronounce(self, instance, text):
         self.result_template.pronunciation_button.disabled=True
-        threading.Thread(target=self.run, args=[text  ]).start()
+        threading.Thread(target=self.run, args=[text, ]).start()
     
     def run(self, text):
         if engine:
