@@ -591,7 +591,7 @@ class home(MDBoxLayout, TouchBehavior):
                 try:
                     if result!=_back_[-1]: _back_.append(result)
                 except:
-                    _back_.append(result[i])
+                    _back_.append(result)
             else: _callback_=not _callback_
             try:
                 if len(_back_)>1:
