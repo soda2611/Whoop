@@ -365,12 +365,11 @@ class home(MDBoxLayout, TouchBehavior):
         global current_page, result
         self.box.clear_widgets()
         if self.text_input.input.text.split()!=[]: 
-            if len(result)==1:
-                current_page="search"
-                self.progress_box.clear_widgets()
-                self.progress_box.height=dp(60)
-                self.progress_box.add_widget(self.progress_bar)
-                self.progress_box.add_widget(self.nav_bar)
+            current_page="search"
+            self.progress_box.clear_widgets()
+            self.progress_box.height=dp(60)
+            self.progress_box.add_widget(self.progress_bar)
+            self.progress_box.add_widget(self.nav_bar)
             self.scrollview.scroll_y=1
             self.progress_bar.back_color=(boxbg)
             self.noname.md_bg_color=boxbg
@@ -420,10 +419,11 @@ class home(MDBoxLayout, TouchBehavior):
 
     def back(self, instance):
         global _back_
-        print(_back_)
         if len(_back_)>=2:
             if str(type(_back_[-2]))!="<class 'dict'>": self.search_button_pressed(None, _back_[-2], value=False, callback=True)
-            else: self.search_button_pressed(None, _back_[-2]["type"], value=False, callback=True, temp=_back_[-2])
+            else:
+                if 'type' in list(_back_[-2].keys()): self.search_button_pressed(None, _back_[-2]["type"], value=False, callback=True, temp=_back_[-2])
+                else: self.search_button_pressed(None, None, value=False, callback=True, temp=_back_[-2])
         _back_=_back_[::-1][1:][::-1]
         if len(_back_)<2: 
             self.back_button.disabled=True
@@ -451,8 +451,12 @@ class home(MDBoxLayout, TouchBehavior):
             else:
                 Clock.schedule_once(self._update_UI_)
         else:
-            self.input_text=[temp["word"]]
-            result={input_text: temp}
+            if input_text!=None:
+                self.input_text=[temp["word"]]
+                result={input_text: temp}
+            else:
+                self.input_text=[temp[list(temp.keys())[0]]['word']]
+                result=temp
             Clock.schedule_once(self.update_UI)
 
     def _update_UI_(self, instance):
@@ -557,9 +561,9 @@ class home(MDBoxLayout, TouchBehavior):
                     self.result_box.add_widget(self.create_content_box(result[i]))
                 if not _callback_:
                     try:
-                        if result!=_back_[-1]: _back_.append(self.input_text)
+                        if result!=_back_[-1]: _back_.append(result)
                     except:
-                        _back_.append(self.input_text)
+                        _back_.append(result)
                 else: _callback_=not _callback_
                 try:
                     if len(_back_)>1:
