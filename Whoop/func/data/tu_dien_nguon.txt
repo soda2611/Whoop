@@ -2883,5 +2883,73 @@
             "word": "are",
             "type": "noun"
         }
+    },
+    "baby": {
+        "noun": {
+            "definition": "- A very young human, particularly from birth to a couple of years old or until walking is fully mastered.\n\n- Any very young animal, especially a vertebrate; many species have specific names for their babies, such as kittens for the babies of cats, puppies for the babies of dogs, and chickens for the babies of birds. See for more.\n\n- Unborn young; a fetus.\nE.g: When is your baby due?\n\n- A person who is immature, infantile or feeble.\nE.g: Stand up for yourself – don't be such a baby!\n\n- A person who is new to or inexperienced in something.\nE.g: I only qualified as an architect this summer, so I'm still a baby.\n\n- The lastborn of a family; the youngest sibling, irrespective of age.\nE.g: Adam is the baby of the family.\n\n- A term of endearment used to refer to or address one's girlfriend, boyfriend or spouse.\nE.g: Baby, don't cry.\n\n- A form of address to a man or a woman considered to be attractive.\nE.g: Hey baby, what are you doing later?\n\n- A pet project or responsibility.\nE.g: You need to talk to John about that – it's his baby.\n\n- An affectionate term for anything.\nE.g: See my new car here? I can't wait to take this baby for a drive.\n\n- A small image of an infant; a doll.\n\n",
+            "synonyms": [
+                "big baby",
+                "love",
+                "babbie",
+                "babby",
+                "babe",
+                "infant"
+            ],
+            "antonyms": [],
+            "word": "baby",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To coddle; to pamper somebody like an infant.\n\n- To tend (something) with care; to be overly attentive to (something), fuss over.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "baby",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Of a child: very young; of the age when he or she would be termed a baby or infant.\nE.g: a baby boy\n\n- Of an animal: young.\nE.g: a baby elephant\n\n- Intended for babies.\nE.g: baby clothes\n\n- (of vegetables, etc.) Picked when small and immature (as in baby corn, baby potatoes).\n\n",
+            "synonyms": [
+                "little"
+            ],
+            "antonyms": [],
+            "word": "baby",
+            "type": "adjective"
+        }
+    },
+    "fuck you": {
+        "noun": {
+            "definition": "- An insulting and humiliating action against somebody.\nE.g: Humiliating your kid on national television for a short-term profit is one of the biggest fuck yous that a parent can ever give to their own child.\n\n",
+            "synonyms": [
+                "go fuck yourself"
+            ],
+            "antonyms": [],
+            "word": "fuck you",
+            "type": "noun"
+        }
+    },
+    "lo": {
+        "interjection": {
+            "definition": "- Look, see, behold (in an imperative sense).\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "lo",
+            "type": "interjection"
+        }
+    },
+    "hype": {
+        "noun": {
+            "definition": "- Promotion or propaganda; especially exaggerated claims.\nE.g: After all the hype for the diet plan, only the results ended up slim.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "hype",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To promote heavily; to advertise or build up.\nE.g: They started hyping the new magazine months before its release.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "hype",
+            "type": "verb"
+        }
     }
 }
