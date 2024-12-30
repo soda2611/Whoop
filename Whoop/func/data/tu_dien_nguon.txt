@@ -2916,6 +2916,43 @@
             "type": "adjective"
         }
     },
+    "little": {
+        "noun": {
+            "definition": "- A small amount.\nE.g: Can I try a little of that sauce?\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "little",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Small in size.\nE.g: This is a little table.\n\n- Insignificant, trivial.\nE.g: It's of little importance.\n\n- Very young.\nE.g: Did he tell you any embarrassing stories about when she was little?\n\n- (of a sibling) Younger.\nE.g: This is my little sister.\n\n- (also Little) Used with the name of a place, especially of a country or its capital, to denote a neighborhood whose residents or storekeepers are from that place.\n\n- Small in amount or number, having few members.\nE.g: little money;  little herd\n\n- Short in duration; brief.\nE.g: I feel better after my little sleep.\n\n- Small in extent of views or sympathies; narrow; shallow; contracted; mean; illiberal; ungenerous.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "big",
+                "large",
+                "big",
+                "big"
+            ],
+            "word": "little",
+            "type": "adjective"
+        },
+        "adverb": {
+            "definition": "- Not much.\nE.g: This is a little known fact.  She spoke little and listened less.\n\n- Not at all.\nE.g: I was speaking ill of Fred; little did I know that he was right behind me, listening in.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "much"
+            ],
+            "word": "little",
+            "type": "adverb"
+        },
+        "pronoun": {
+            "definition": "- Not much; not a large amount.\nE.g: Little is known about his early life.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "little",
+            "type": "pronoun"
+        }
+    },
     "fuck you": {
         "noun": {
             "definition": "- An insulting and humiliating action against somebody.\nE.g: Humiliating your kid on national television for a short-term profit is one of the biggest fuck yous that a parent can ever give to their own child.\n\n",
