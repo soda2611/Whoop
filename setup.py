@@ -49,6 +49,7 @@ try:
     repo_setup_path = os.path.join(repo_dir, "setup.py")
     setting_dir = os.path.join(sod_dir, 'func', 'setting')
     backup_dir = os.path.expanduser('~/.whoop_backup')
+    static_value=['version', 'released date']
     
     settings=get_data(setting_dir)
     backup_user_data(setting_dir, backup_dir)
@@ -75,7 +76,7 @@ try:
     restore_user_data(setting_dir, backup_dir)
 
     for i in settings:
-        if i in new_setting:
+        if i in new_setting and i not in static_value:
             new_setting[i]=settings[i]
 
     write_data(setting_dir, new_setting)
