@@ -3,6 +3,7 @@ from ui import *
 from ui.home.widget.result_template import *
 from ui.home.widget.add_data import add_data
 from ui.home.widget.recent import *
+from ui.home.widget.content_box import *
 
 current_page="home"
 _temp_=[]
@@ -213,57 +214,18 @@ class home(MDBoxLayout, TouchBehavior):
         return MDFillRoundFlatButton(text=text, theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), on_press=lambda instance: self.search_button_pressed(instance, [text]))
 
     def create_content_box(self, text):
-        try:
-            self.content_box=MDCard(md_bg_color=boxbg, padding=[dp(10),dp(10),dp(10),dp(10)], size_hint=(1, None), pos_hint={"center_x":0.5})
-            self.content_box.radius=[dp(i) for i in self.content_box.radius]
-            self.content_box.bind(minimum_height=self.content_box.setter('height'))
-            self.content_box.tilte_and_description_box=MDBoxLayout(orientation='vertical', size_hint=(0.8,None))
-            self.content_box.tilte_and_description_box.bind(minimum_height=self.content_box.tilte_and_description_box.setter('height'))
-            self.content_box.result_head_label=MDLabel(text=text["word"]+" ("+text["type"].lower()+")"+f'\n/{eng_to_ipa.convert(text["word"])}/', font_style="main", font_size=dp(18), size_hint=(0.9,None), pos_hint={"left":0}, theme_text_color="Custom", text_color=primarycolor)
-            self.content_box.result_head_label.bind(texture_size=self.content_box.result_head_label.setter('text_size'))
-            self.content_box.result_head_label.bind(texture_size=self.content_box.result_head_label.setter('size'))
-            self.content_box.result_label=MDLabel(font_size=dp(25), size_hint=(0.9,None), pos_hint={"left":1}, theme_text_color="Custom", text_color=primarycolor)
-            if len(text["definition"])>50:
-                self.content_box.result_label.text=text["definition"][:50]+"..."
-            else:
-                self.content_box.result_label.text=text["definition"]
-            self.content_box.result_label.bind(texture_size=self.content_box.result_label.setter('text_size'))
-            self.content_box.result_label.bind(texture_size=self.content_box.result_label.setter('size'))
-            self.content_box.morebutton=MDFillRoundFlatButton(text="Xem thêm", pos_hint={"center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
-            self.content_box.tilte_and_description_box.add_widget(self.content_box.result_head_label)
-            self.content_box.tilte_and_description_box.add_widget(self.content_box.result_label)
-            self.content_box.add_widget(self.content_box.tilte_and_description_box)
-            self.content_box.add_widget(self.content_box.morebutton)
-            self.content_box.morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, text['type'], value=False, temp=text))
-        except:
-            pass
-
+        self.content_box=content_box(text)
+        self.content_box.morebutton=MDFillRoundFlatButton(text="Xem thêm", pos_hint={"center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
+        self.content_box.morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, text['type'], value=False, temp=text))
+        self.content_box.add_widget(self.content_box.morebutton)
         return self.content_box
 
     def _create_content_box_(self, text):
-        try:
-            self.content_box=MDCard(md_bg_color=boxbg, padding=[dp(10),dp(10),dp(10),dp(10)], size_hint=(1, None), pos_hint={"center_x":0.5})
-            self.content_box.radius=[dp(i) for i in self.content_box.radius]
-            self.content_box.bind(minimum_height=self.content_box.setter('height'))
-            self.content_box.tilte_and_description_box=MDBoxLayout(orientation='vertical', size_hint=(0.8,None))
-            self.content_box.tilte_and_description_box.bind(minimum_height=self.content_box.tilte_and_description_box.setter('height'))
-            self.content_box.result_head_label=MDLabel(text=text["word"], font_style="main", font_size=dp(18), size_hint=(0.9,None), pos_hint={"left":0}, theme_text_color="Custom", text_color=primarycolor)
-            self.content_box.result_head_label.bind(texture_size=self.content_box.result_head_label.setter('text_size'))
-            self.content_box.result_head_label.bind(texture_size=self.content_box.result_head_label.setter('size'))
-            self.content_box.result_label=MDLabel(font_size=dp(25), size_hint=(0.9,None), pos_hint={"left":1}, theme_text_color="Custom", text_color=primarycolor)
-            self.content_box.result_label.text=text["definition"]
-            self.content_box.result_label.bind(texture_size=self.content_box.result_label.setter('text_size'))
-            self.content_box.result_label.bind(texture_size=self.content_box.result_label.setter('size'))
-            self.content_box.tilte_and_description_box.add_widget(self.content_box.result_head_label)
-            self.content_box.tilte_and_description_box.add_widget(self.content_box.result_label)
-            self.content_box.add_widget(self.content_box.tilte_and_description_box)
-            if text["definition"]!="Không có kết quả":
-                self.content_box.morebutton=MDFillRoundFlatButton(text="Xem thêm", pos_hint={"center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
-                self.content_box.add_widget(self.content_box.morebutton)
-                self.content_box.morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, [text['word']]))
-        except:
-            pass
-
+        self.content_box=content_box_(text)
+        if text["definition"]!="Không có kết quả":
+            self.content_box.morebutton=MDFillRoundFlatButton(text="Xem thêm", pos_hint={"center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
+            self.content_box.add_widget(self.content_box.morebutton)
+            self.content_box.morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, [text['word']]))
         return self.content_box
 
     def add_data(self):
