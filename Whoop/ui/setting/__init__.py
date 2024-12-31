@@ -76,7 +76,7 @@ class setting(MDBoxLayout):
         self.color_palette_scroll=change_palette()
         self.change_fonts=MDLabel(text="Fonts", font_style="H6", halign="left", size_hint=(1,None), height=dp(30), pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.font_scroll=change_fonts()
-        self.info=MDFillRoundFlatButton(text=f"Phiên bản: SOD {version}\nNgày phát hành: {setting['released date']}    UID: {settings['uid']}", font_style="Caption", halign="center", size_hint=(0.75,None), height=dp(35), pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=bg)
+        self.info=MDFillRoundFlatButton(text=f"Phiên bản: SOD {version}\nNgày phát hành: {settings['released date']}    UID: {settings['uid']}", font_style="Caption", halign="center", size_hint=(0.75,None), height=dp(35), pos_hint={"center_x": 0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=bg)
         self.info.bind(on_release=self.update_dialog_open)
 
         '''self.notification=MDLabel(text="Bạn không thể thay đổi bất cứ cài đặt nào của ứng dụng trong phiên bản này. Vui lòng chờ phiên bản cập nhật tiếp theo.", font_style="H6", halign="center", size_hint=(0.75,1), pos_hint={"center_x": 0.5})
