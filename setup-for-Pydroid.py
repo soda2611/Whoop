@@ -45,7 +45,7 @@ try:
     sod_dir = "Whoop"
     setting_dir = os.path.join(sod_dir, 'func', 'setting')
     backup_dir = os.path.expanduser('~/.whoop_backup')
-    static_value=['version', 'released date']
+    static_value=['version', 'released date', 'pattern']
     
     settings=get_data(setting_dir)
     backup_user_data(setting_dir, backup_dir)
