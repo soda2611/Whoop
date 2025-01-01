@@ -42,9 +42,7 @@ else:
 
 try:
     repo_url = "https://github.com/soda2611/Whoop/archive/refs/heads/main.zip"
-
     repo_dir = "Whoop-main"
-
     sod_dir = "Whoop"
     repo_setup_path = os.path.join(repo_dir, "setup.py")
     setting_dir = os.path.join(sod_dir, 'func', 'setting')
