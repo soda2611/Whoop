@@ -1,30 +1,17 @@
 {
     "hello": {
         "noun": {
-            "definition": "- \"Hello!\" or an equivalent greeting.\n\n",
+            "definition": "- The conscious production or arrangement of sounds, colours, forms, movements, or other elements in a manner that affects the senses and emotions, usually specifically the production of the beautiful in a graphic or plastic medium.\nVí dụ: There is a debate as to whether graffiti is art or vandalism.\n\n- The creative and emotional expression of mental imagery, such as visual, auditory, social, etc.\n\n- Skillful creative activity, usually with an aesthetic focus.\nVí dụ: She's mastered the art of programming.\n\n- The study and the product of these processes.\nVí dụ: He's at university to study art.\n\n- Aesthetic value.\nVí dụ: Her photographs are nice, but there's no art in them.\n\n- Artwork.\nVí dụ: Sotheby's regularly auctions art for millions.\n\n- A field or category of art, such as painting, sculpture, music, ballet, or literature.\nVí dụ: I'm a great supporter of the arts.\n\n- A nonscientific branch of learning; one of the liberal arts.\n\n- Skill that is attained by study, practice, or observation.\n\n- Contrivance, scheming, manipulation.\n\n",
             "synonyms": [
-                "greeting"
+                "craft"
             ],
-            "antonyms": [],
+            "antonyms": [
+                "mundacity",
+                "nature",
+                "subsistence"
+            ],
             "word": "hello",
             "type": "noun"
-        },
-        "verb": {
-            "definition": "- To greet with \"hello\".\n\n",
-            "synonyms": [],
-            "antonyms": [],
-            "word": "hello",
-            "type": "verb"
-        },
-        "interjection": {
-            "definition": "- A greeting (salutation) said when meeting someone or acknowledging someone’s arrival or presence.\nVí dụ: Hello, everyone.\n\n- A greeting used when answering the telephone.\nVí dụ: Hello? How may I help you?\n\n- A call for response if it is not clear if anyone is present or listening, or if a telephone conversation may have been disconnected.\nVí dụ: Hello? Is anyone there?\n\n- Used sarcastically to imply that the person addressed or referred to has done something the speaker or writer considers to be foolish.\nVí dụ: You just tried to start your car with your cell phone. Hello?\n\n- An expression of puzzlement or discovery.\nVí dụ: Hello! What’s going on here?\n\n",
-            "synonyms": [],
-            "antonyms": [
-                "bye",
-                "goodbye"
-            ],
-            "word": "hello",
-            "type": "interjection"
         }
     },
     "pol": {
@@ -37,12 +24,33 @@
         }
     },
     "gay": {
+        "noun": {
+            "definition": "- (chiefly in plural or attributive) A homosexual, especially a male homosexual; see also lesbian.\n\n- Something which is bright or colorful, such as a picture or a flower.\n\n- An ornament, a knick-knack.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To make happy or cheerful.\n\n- To cause (something, e.g. AIDS) to be associated with homosexual people.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "verb"
+        },
         "adjective": {
             "definition": "- (possibly obsolete) Happy, joyful, and lively.\nVí dụ: The Gay Science\n\n- Quick, fast.\n\n- (possibly obsolete) Festive, bright, or colourful.\nVí dụ: Pennsylvania Dutch include the plain folk and the gay folk.\n\n- Sexually promiscuous (of any gender), (sometimes particularly) engaged in prostitution.\n\n- Homosexual:\n\n- A pejorative:\n\n- (of a dog's tail) Upright or curved over the back.\n\n- (possibly obsolete) Considerable, great, large in number, size, or degree.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "gay",
             "type": "adjective"
+        },
+        "adverb": {
+            "definition": "- (possibly obsolete) Considerably, very.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "adverb"
         }
     },
     "harmony": {
@@ -2986,6 +2994,300 @@
             "synonyms": [],
             "antonyms": [],
             "word": "hype",
+            "type": "verb"
+        }
+    },
+    "self-confident": {
+        "adjective": {
+            "definition": "- Confident in one's own abilities.\n\n",
+            "synonyms": [
+                "selfsecure"
+            ],
+            "antonyms": [
+                "insecure"
+            ],
+            "word": "self-confident",
+            "type": "adjective"
+        }
+    },
+    "insecure": {
+        "adjective": {
+            "definition": "- Not secure.\n\n- Not comfortable or confident in oneself or in certain situations.\nE.g: He's a nice guy and all, but seems to be rather insecure around other people.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "confident",
+                "self-confident"
+            ],
+            "word": "insecure",
+            "type": "adjective"
+        }
+    },
+    "self-assured": {
+        "adjective": {
+            "definition": "- Confident in one's own abilities\n\n",
+            "synonyms": [
+                "assured"
+            ],
+            "antonyms": [],
+            "word": "self-assured",
+            "type": "adjective"
+        }
+    },
+    "assured": {
+        "verb": {
+            "definition": "- To make sure and secure.\n\n- (followed by that or of) To give (someone) confidence in the trustworthiness of (something).\nE.g: He assured of his commitment to her happiness.\n\n- To guarantee, promise (to do something).\n\n- To reassure.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "assured",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Guaranteed; secure.\n\n- Self-confident; self-assured; sure.\n\n",
+            "synonyms": [
+                "sicker"
+            ],
+            "antonyms": [],
+            "word": "assured",
+            "type": "adjective"
+        }
+    },
+    "sicker": {
+        "adjective": {
+            "definition": "- Having an urge to vomit.\n\n- In poor health.\nE.g: She was sick all day with the flu.\n\n- Mentally unstable, disturbed.\n\n- In bad taste.\nE.g: That's a sick joke.\n\n- Tired of or annoyed by something.\nE.g: I've heard that song on the radio so many times that I'm starting to get sick of it.\n\n- Very good, excellent, awesome, badass.\nE.g: Dude, this car's got a sick subwoofer!\n\n- In poor condition.\nE.g: sick building syndrome; my car is looking pretty sick; my job prospects are pretty sick\n\n- Failing to sustain adequate harvests of crop, usually specified.\n\n",
+            "synonyms": [
+                "disturbed",
+                "twisted",
+                "warped",
+                "ill",
+                "not well",
+                "poorly",
+                "sickly",
+                "unwell",
+                "nauseated",
+                "rad",
+                "wicked"
+            ],
+            "antonyms": [
+                "crap",
+                "naff",
+                "uncool",
+                "fit",
+                "healthy",
+                "well"
+            ],
+            "word": "sicker",
+            "type": "adjective"
+        }
+    },
+    "stupid": {
+        "noun": {
+            "definition": "- A stupid person; a fool.\n\n- The state or condition of being stupid.\nE.g: His stupid knows no bounds.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "stupid",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Lacking in intelligence or exhibiting the quality of having been done by someone lacking in intelligence.\n\n- To the point of stupor.\nE.g: Neurobiology bores me stupid.\n\n- Characterized by or in a state of stupor; paralysed.\n\n- Lacking sensation; inanimate; destitute of consciousness; insensate.\n\n- Dulled in feeling or sensation; torpid\n\n- Amazing.\nE.g: That dunk was stupid! His head was above the rim!\n\n- Darn, annoying.\n\n",
+            "synonyms": [
+                "inept"
+            ],
+            "antonyms": [],
+            "word": "stupid",
+            "type": "adjective"
+        },
+        "adverb": {
+            "definition": "- Extremely.\nE.g: My gear is stupid fly.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "stupid",
+            "type": "adverb"
+        }
+    },
+    "today": {
+        "noun": {
+            "definition": "- A current day or date.\nE.g: Today is the day we'll fix this once and for all.\n\n- From 6am to 6pm on the current day.\n\n",
+            "synonyms": [
+                "current day",
+                "this day"
+            ],
+            "antonyms": [],
+            "word": "today",
+            "type": "noun"
+        },
+        "adverb": {
+            "definition": "- On the current day or date.\nE.g: I want this done today.\n\n- In the current era; nowadays.\nE.g: In the 1500s, people had to do things by hand, but today we have electric can openers.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "today",
+            "type": "adverb"
+        }
+    },
+    "prompt": {
+        "noun": {
+            "definition": "- A reminder or cue.\n\n- A time limit given for payment of an account for produce purchased, this limit varying with different goods.\n\n- A sequence of characters that appears on a monitor to indicate that the computer is ready to receive input.\nE.g: I filled in my name where the prompt appeared on the computer screen but my account wasn't recognized.\n\n- (writing) A suggestion for inspiration given to an author.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "prompt",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To lead (someone) toward what they should say or do.\nE.g: I prompted him to get a new job.\n\n- To show or tell an actor/person the words they should be saying, or actions they should be doing.\nE.g: If he forgets his words I will prompt him.\n\n- To initiate; to cause or lead to.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "prompt",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Quick; acting without delay.\nE.g: He was very prompt at getting a new job.\n\n- On time; punctual.\nE.g: Be prompt for your appointment.\n\n- Ready; willing to act.\n\n",
+            "synonyms": [
+                "hasty",
+                "timely",
+                "good to go",
+                "yare"
+            ],
+            "antonyms": [],
+            "word": "prompt",
+            "type": "adjective"
+        }
+    },
+    "squash": {
+        "noun": {
+            "definition": "- A sport played in a walled court with a soft rubber ball and bats like tennis racquets.\n\n- A soft drink made from a fruit-based concentrate diluted with water.\nE.g: When I'm thirsty I drink squash; it tastes much nicer than plain water.\n\n- A place or a situation where people have limited space to move.\nE.g: It's a bit of a squash in this small room.\n\n- Something soft and easily crushed; especially, an unripe pod of peas.\n\n- Something unripe or soft.\n\n- A sudden fall of a heavy, soft body; also, a shock of soft bodies.\n\n- An extremely one-sided, usually short, match.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "squash",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To beat or press into pulp or a flat mass; to crush.\n\n- To compress or restrict (oneself) into a small space; to squeeze.\nE.g: Somehow, she squashed all her books into her backpack, which was now too heavy to carry.\n\n- To suppress; to force into submission.\n\n",
+            "synonyms": [
+                "condense",
+                "press"
+            ],
+            "antonyms": [],
+            "word": "squash",
+            "type": "verb"
+        }
+    },
+    "bat": {
+        "noun": {
+            "definition": "- Any of the flying mammals of the order Chiroptera, usually small and nocturnal, insectivorous or frugivorous.\n\n- An old woman.\n\n",
+            "synonyms": [
+                "chiropter",
+                "chiropteran",
+                "flindermouse",
+                "flittermouse",
+                "fluttermouse",
+                "flying-mouse",
+                "rearmouse",
+                "reremouse"
+            ],
+            "antonyms": [],
+            "word": "bat",
+            "type": "noun"
+        }
+    },
+    "bats": {
+        "noun": {
+            "definition": "- A packsaddle.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "bats",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To flutter\nE.g: bat one's eyelashes\n\n- To wink.\n\n- To bate or flutter, as a hawk.\n\n- (usually with 'around' or 'about') To flit quickly from place to place.\nE.g: I've spent all week batting around the country.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "bats",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Mad, insane.\nE.g: You must be bats to go out in the cold without a coat on.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "bats",
+            "type": "adjective"
+        }
+    },
+    "packsaddle": {
+        "noun": {
+            "definition": "- A saddle designed to secure and carry goods on the back of an animal.\n\n",
+            "synonyms": [
+                "bat"
+            ],
+            "antonyms": [],
+            "word": "packsaddle",
+            "type": "noun"
+        }
+    },
+    "racquet": {
+        "noun": {
+            "definition": "- An implement with a handle connected to a round frame strung with wire, sinew, or plastic cords, and used to hit a ball, such as in tennis, or a shuttlecock in badminton.\n\n",
+            "synonyms": [
+                "bat",
+                "paddle"
+            ],
+            "antonyms": [],
+            "word": "racquet",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To hit with a racquet.\n\n- To play a game that involves using a racquet.\n\n- To dart about in a manner reminiscent of a ball hit by a racquet.\n\n- To exchange back and forth, similar to the way a tennis ball volleys back and forth.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "racquet",
+            "type": "verb"
+        }
+    },
+    "ex": {
+        "noun": {
+            "definition": "- The name of the Latin-script letter X.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "ex",
+            "type": "noun"
+        }
+    },
+    "expedition": {
+        "noun": {
+            "definition": "- The act of expediting something; prompt execution.\n\n- A military journey; an enterprise against some enemy or into enemy territory.\n\n- The quality of being expedite; speed, quickness.\n\n- An important or long journey, for example a march or a voyage\n\n- A trip, especially a long one, made by a person or a group of people for a specific purpose\nE.g: a naval expedition\n\n- The group of people making such excursion.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "expedition",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To take part in a trip or expedition; to travel.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "expedition",
+            "type": "verb"
+        }
+    },
+    "backgammon": {
+        "noun": {
+            "definition": "- A board game for two players in which each has 15 stones which move between 24 triangular points according to the roll of a pair of dice; the object is to move all of one's pieces around, and bear them off the board.\n\n- A victory in the game when the loser has not borne off a stone, and still has one or more stones in the winner's inner home row or on the bar.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "backgammon",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To win at a backgammon game with the opponent having one or more pieces in the winner’s inner home row or on the bar.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "backgammon",
+            "type": "verb"
+        }
+    },
+    "take it": {
+        "verb": {
+            "definition": "- To start doing\nE.g: I began the project, now you take it from here\n\n- To suppose\nE.g: I take it that she didn't like the cake\n\n- To reluctantly accept or believe; to acquiesce\nE.g: this isn't the best car ever, but I'll take it\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "take it",
             "type": "verb"
         }
     }
