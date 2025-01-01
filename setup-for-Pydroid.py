@@ -39,13 +39,12 @@ else:
     os.system(f"pip install kivymd==1.2.0 googletrans==4.0.0rc1 eng-to-ipa pyttsx3 gtts psutil")
 try:
     repo_url = "https://github.com/soda2611/Whoop/archive/refs/heads/main.zip"
-
     repo_dir = "Whoop-main"
-
     sod_dir = "Whoop"
+    repo_setup_path = os.path.join(repo_dir, "setup-for-Pydroid.py")
     setting_dir = os.path.join(sod_dir, 'func', 'setting')
     backup_dir = os.path.expanduser('~/.whoop_backup')
-    static_value=['version', 'released date', 'pattern']
+    static_value=['version', 'released date']
     
     settings=get_data(setting_dir)
     backup_user_data(setting_dir, backup_dir)
@@ -57,6 +56,12 @@ try:
     zip_file.extractall()
 
     os.system(f"rm -rf {sod_dir}")
+    
+    with open(repo_setup_path, 'r') as repo_setup_file:
+        repo_setup_content = repo_setup_file.read()
+
+    with open("setup-for-Pydroid.py", 'w') as local_setup_file:
+        local_setup_file.write(repo_setup_content)
 
     shutil.move(os.path.join(repo_dir, sod_dir), sod_dir)
 
