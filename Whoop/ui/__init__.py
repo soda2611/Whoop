@@ -34,6 +34,7 @@ from kivymd.uix.card import MDCard
 from kivymd.uix.selectioncontrol import MDSwitch
 from kivymd.uix.progressbar import MDProgressBar
 from kivymd.uix.snackbar.snackbar import MDSnackbar
+from kivymd.uix.fitimage.fitimage import FitImage
 from kivymd.uix.transition.transition import MDFadeSlideTransition
 from kivymd.uix.bottomsheet import *
 from kivy.uix.label import Label
