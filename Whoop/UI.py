@@ -1,7 +1,6 @@
 from ui import *
 from ui.home import home
 from ui.setting import setting, update_dialog
-import kivy
 
 class FirstScreen(MDScreen):
     def __init__(self, **kwargs):
