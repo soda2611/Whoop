@@ -6,11 +6,20 @@ def backup_user_data(setting_dir, backup_dir):
         shutil.copytree(setting_dir, os.path.join(backup_dir, 'setting'))
 
 def restore_user_data(setting_dir, backup_dir):
-    if os.path.exists(os.path.join(backup_dir, 'setting')):
-        if os.path.exists(setting_dir):
-            shutil.rmtree(setting_dir)
-            shutil.copytree(os.path.join(backup_dir, 'setting'), setting_dir)
-            shutil.rmtree(backup_dir)
+    backup_setting_dir = os.path.join(backup_dir, 'setting')
+    if os.path.exists(backup_setting_dir):
+        if not os.path.exists(setting_dir):
+            os.makedirs(setting_dir)
+        for root, dirs, files in os.walk(backup_setting_dir):
+            relative_path = os.path.relpath(root, backup_setting_dir)
+            target_dir = os.path.join(setting_dir, relative_path)
+            if not os.path.exists(target_dir):
+                os.makedirs(target_dir)
+            for file in files:
+                src_file = os.path.join(root, file)
+                dst_file = os.path.join(target_dir, file)
+                shutil.copy2(src_file, dst_file)
+        shutil.rmtree(backup_dir)
 
 def get_data(setting_dir):
     setting_file = os.path.join(setting_dir, 'setting.txt')
