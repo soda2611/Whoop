@@ -446,7 +446,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.text_input.input.on_text_validate=lambda instance: self.search_button_pressed(self.text_input.input, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split()))))
         if not _callback_:
             try:
-                if result[i]!=_back_[-1]: _back_.append(result[i])
+                if self.input_text!=_back_[-1]: _back_.append(self.input_text)
             except:
                 _back_.append(self.input_text)
         else: _callback_=not _callback_
