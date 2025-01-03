@@ -13,7 +13,7 @@ class result_template(MDBoxLayout):
         self.pronunciation_template.bind(minimum_height=self.pronunciation_template.setter('height'))
         self.pronunciation=MDLabel(text="", font_style="main", font_size=dp(18), halign='center', size_hint=(1, None), pos_hint={'center_x': 0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.pronunciation_button=MDIconButton(icon="volume-high", theme_icon_color="Custom", icon_color=primarycolor, size_hint=(1, None), pos_hint={"center_x":0.5, "center_y": 0.25})
-        self.definition=MDLabel(text="", font_style="Body1", halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5}, theme_text_color="Custom", text_color=primarycolor, allow_copy=True)
+        self.definition=MDLabel(text="", font_style="Body1", valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5}, theme_text_color="Custom", text_color=primarycolor, allow_copy=True)
         self.word.bind(texture_size=self.word.setter('text_size'))
         self.word.bind(texture_size=self.word.setter('size'))
         self.pronunciation.bind(texture_size=self.pronunciation.setter('text_size'))
