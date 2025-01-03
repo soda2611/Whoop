@@ -46,6 +46,21 @@ from kivy.core.audio import SoundLoader
 from func.SOD import *
 from googletrans import Translator
 
+class MDLabel(MDLabel, TouchBehavior):
+    def __init__(self, **kwargs):
+        super(MDLabel, self).__init__(**kwargs)
+        self.duration_long_touch=0.208
+        
+    def on_double_tap(self, *args):
+        pass
+        
+    def on_long_touch(self, *args):
+        print("worked")
+        if self.allow_copy:
+            pyperclip.copy(self.text)
+        
+            MDSnackbar(MDLabel(text="Đã sao chép nội dung", theme_text_color="Custom", text_color=primarycolor), md_bg_color=menubg, y=dp(10),  size_hint_x=.85, pos_hint={"center_x": 0.5}, radius=[25, 25, 25, 25]).open()
+
 class MDIconButton(MagicBehavior, MDIconButton):
     def __init__(self, **kwargs):
         super(MDIconButton, self).__init__(**kwargs)
