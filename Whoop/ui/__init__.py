@@ -49,13 +49,11 @@ from googletrans import Translator
 class MDLabel(MDLabel, TouchBehavior):
     def __init__(self, **kwargs):
         super(MDLabel, self).__init__(**kwargs)
-        self.duration_long_touch=0.208
         
     def on_double_tap(self, *args):
         pass
         
-    def on_long_touch(self, *args):
-        print("worked")
+    def on_triple_tap(self, *args):
         if self.allow_copy:
             pyperclip.copy(self.text)
         
