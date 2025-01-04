@@ -17,7 +17,7 @@
             "type": "verb"
         },
         "interjection": {
-            "definition": "- A greeting (salutation) said when meeting someone or acknowledging someone’s arrival or presence.\nE.g: Hello, everyone.\n\n- A greeting used when answering the telephone.\nE.g: Hello? How may I help you?\n\n- A call for response if it is not clear if anyone is present or listening, or if a telephone conversation may have been disconnected.\nE.g: Hello? Is anyone there?\n\n- Used sarcastically to imply that the person addressed or referred to has done something the speaker or writer considers to be foolish.\nE.g: You just tried to start your car with your cell phone. Hello?\n\n- An expression of puzzlement or discovery.\nE.g: Hello! What’s going on here?\n\n",
+            "definition": "- A greeting (salutation) said when meeting someone or acknowledging someone’s arrival or presence.\nVí dụ: Hello, everyone.\n\n- A greeting used when answering the telephone.\nVí dụ: Hello? How may I help you?\n\n- A call for response if it is not clear if anyone is present or listening, or if a telephone conversation may have been disconnected.\nVí dụ: Hello? Is anyone there?\n\n- Used sarcastically to imply that the person addressed or referred to has done something the speaker or writer considers to be foolish.\nVí dụ: You just tried to start your car with your cell phone. Hello?\n\n- An expression of puzzlement or discovery.\nVí dụ: Hello! What’s going on here?\n\n",
             "synonyms": [],
             "antonyms": [
                 "bye",
@@ -38,7 +38,7 @@
     },
     "gay": {
         "adjective": {
-            "definition": "- (possibly obsolete) Happy, joyful, and lively.\nE.g: The Gay Science\n\n- Quick, fast.\n\n- (possibly obsolete) Festive, bright, or colourful.\nE.g: Pennsylvania Dutch include the plain folk and the gay folk.\n\n- Sexually promiscuous (of any gender), (sometimes particularly) engaged in prostitution.\n\n- Homosexual:\n\n- A pejorative:\n\n- (of a dog's tail) Upright or curved over the back.\n\n- (possibly obsolete) Considerable, great, large in number, size, or degree.\n\n",
+            "definition": "- (possibly obsolete) Happy, joyful, and lively.\nVí dụ: The Gay Science\n\n- Quick, fast.\n\n- (possibly obsolete) Festive, bright, or colourful.\nVí dụ: Pennsylvania Dutch include the plain folk and the gay folk.\n\n- Sexually promiscuous (of any gender), (sometimes particularly) engaged in prostitution.\n\n- Homosexual:\n\n- A pejorative:\n\n- (of a dog's tail) Upright or curved over the back.\n\n- (possibly obsolete) Considerable, great, large in number, size, or degree.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "gay",
@@ -47,7 +47,7 @@
     },
     "harmony": {
         "noun": {
-            "definition": "- Physical injury; hurt; damage\nE.g: No harm came to my possessions.\n\n- Emotional or figurative hurt\nE.g: Although not physically injured in the car accident, she received some psychological harm.\n\n- Detriment; misfortune.\nE.g: I wish him no harm.\n\n- That which causes injury, damage, or loss.\n\n",
+            "definition": "- Physical injury; hurt; damage\nVí dụ: No harm came to my possessions.\n\n- Emotional or figurative hurt\nVí dụ: Although not physically injured in the car accident, she received some psychological harm.\n\n- Detriment; misfortune.\nVí dụ: I wish him no harm.\n\n- That which causes injury, damage, or loss.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "harmony",
@@ -63,7 +63,7 @@
     },
     "gravity": {
         "adjective": {
-            "definition": "- Having a color somewhere between white and black, as the ash of an ember.\n\n- Dreary, gloomy.\n\n- Having an indistinct, disputed or uncertain quality.\n\n- Relating to older people.\nE.g: the gray dollar, i.e. the purchasing power of the elderly\n\n",
+            "definition": "- Having a color somewhere between white and black, as the ash of an ember.\n\n- Dreary, gloomy.\n\n- Having an indistinct, disputed or uncertain quality.\n\n- Relating to older people.\nVí dụ: the gray dollar, i.e. the purchasing power of the elderly\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "gravity",
@@ -72,7 +72,7 @@
     },
     "flower": {
         "noun": {
-            "definition": "- A colorful, conspicuous structure associated with angiosperms, frequently scented and attracting various insects, and which may or may not be used for sexual reproduction.\n\n- A reproductive structure in angiosperms (flowering plants), often conspicuously colourful and typically including sepals, petals, and either or both stamens and/or a pistil.\n\n- A plant that bears flowers, especially a plant that is small and lacks wood.\nE.g: We transplanted the flowers to a larger pot.\n\n- (usually with in) Of plants, a state of bearing blooms.\nE.g: The dogwoods are in flower this week.\n\n- (hypocoristic) The vulva, especially the labia majora.\n\n- The best examples or representatives of a group.\nE.g: We selected the flower of the applicants.\n\n- The best state of things; the prime.\nE.g: She was in the flower of her life.\n\n- Flour.\n\n- (in the plural) A substance in the form of a powder, especially when condensed from sublimation.\nE.g: the flowers of sulphur\n\n- A figure of speech; an ornament of style.\n\n- Ornamental type used chiefly for borders around pages, cards, etc.\n\n- (in the plural) Menstrual discharges.\n\n",
+            "definition": "- A colorful, conspicuous structure associated with angiosperms, frequently scented and attracting various insects, and which may or may not be used for sexual reproduction.\n\n- A reproductive structure in angiosperms (flowering plants), often conspicuously colourful and typically including sepals, petals, and either or both stamens and/or a pistil.\n\n- A plant that bears flowers, especially a plant that is small and lacks wood.\nVí dụ: We transplanted the flowers to a larger pot.\n\n- (usually with in) Of plants, a state of bearing blooms.\nVí dụ: The dogwoods are in flower this week.\n\n- (hypocoristic) The vulva, especially the labia majora.\n\n- The best examples or representatives of a group.\nVí dụ: We selected the flower of the applicants.\n\n- The best state of things; the prime.\nVí dụ: She was in the flower of her life.\n\n- Flour.\n\n- (in the plural) A substance in the form of a powder, especially when condensed from sublimation.\nVí dụ: the flowers of sulphur\n\n- A figure of speech; an ornament of style.\n\n- Ornamental type used chiefly for borders around pages, cards, etc.\n\n- (in the plural) Menstrual discharges.\n\n",
             "synonyms": [
                 "cream",
                 "prime",
@@ -84,7 +84,7 @@
             "type": "noun"
         },
         "verb": {
-            "definition": "- To put forth blooms.\nE.g: This plant flowers in June.\n\n- To decorate with pictures of flowers.\n\n- To reach a state of full development or achievement.\n\n- To froth; to ferment gently, as new beer.\n\n- To come off as flowers by sublimation.\n\n",
+            "definition": "- To put forth blooms.\nVí dụ: This plant flowers in June.\n\n- To decorate with pictures of flowers.\n\n- To reach a state of full development or achievement.\n\n- To froth; to ferment gently, as new beer.\n\n- To come off as flowers by sublimation.\n\n",
             "synonyms": [
                 "flourish",
                 "bloom",
@@ -97,7 +97,7 @@
     },
     "pillow": {
         "noun": {
-            "definition": "- The part of the body of an animal or human which contains the brain, mouth and main sense organs.\nE.g: Be careful when you pet that dog on the head; it may bite.\n\n- The topmost, foremost, or leading part.\nE.g: What does it say at the head of the page?\n\n- (social, metonymy) A leader or expert.\n\n- A significant or important part.\n\n- Headway; progress.\nE.g: We are having a difficult time making head against this wind.\n\n- Topic; subject.\nE.g: We will consider performance issues under the head of future improvements.\n\n- Denouement; crisis.\nE.g: These isses are going to come to a head today.\n\n- (fluid dynamics) Pressure and energy.\n\n- Fellatio or cunnilingus; oral sex.\nE.g: She gave great head.\n\n- The glans penis.\n\n- A heavy or habitual user of illicit drugs.\n\n- Power; armed force.\n\n",
+            "definition": "- The part of the body of an animal or human which contains the brain, mouth and main sense organs.\nVí dụ: Be careful when you pet that dog on the head; it may bite.\n\n- The topmost, foremost, or leading part.\nVí dụ: What does it say at the head of the page?\n\n- (social, metonymy) A leader or expert.\n\n- A significant or important part.\n\n- Headway; progress.\nVí dụ: We are having a difficult time making head against this wind.\n\n- Topic; subject.\nVí dụ: We will consider performance issues under the head of future improvements.\n\n- Denouement; crisis.\nVí dụ: These isses are going to come to a head today.\n\n- (fluid dynamics) Pressure and energy.\n\n- Fellatio or cunnilingus; oral sex.\nVí dụ: She gave great head.\n\n- The glans penis.\n\n- A heavy or habitual user of illicit drugs.\n\n- Power; armed force.\n\n",
             "synonyms": [
                 "blow job",
                 "blowjob",
@@ -137,7 +137,7 @@
             "type": "noun"
         },
         "verb": {
-            "definition": "- To be in command of. (See also head up.)\nE.g: Who heads the board of trustees?\n\n- To come at the beginning of; to commence.\nE.g: A group of clowns headed the procession.\n\n- To strike with the head; as in soccer, to head the ball\n\n- To move in a specified direction.\nE.g: How does the ship head?\n\n- To remove the head from a fish.\nE.g: The salmon are first headed and then scaled.\n\n- To originate; to spring; to have its course, as a river.\n\n- To form a head.\nE.g: This kind of cabbage heads early.\n\n- To form a head to; to fit or furnish with a head.\nE.g: to head a nail\n\n- To cut off the top of; to lop off.\nE.g: to head trees\n\n- To behead; to decapitate.\n\n- To go in front of.\nE.g: to head a drove of cattle\n\n- To get in the front of, so as to hinder or stop; to oppose.\nE.g: The wind headed the ship and made progress difficult.\n\n- (by extension) To check or restrain.\n\n- To set on the head.\nE.g: to head a cask\n\n",
+            "definition": "- To be in command of. (See also head up.)\nVí dụ: Who heads the board of trustees?\n\n- To come at the beginning of; to commence.\nVí dụ: A group of clowns headed the procession.\n\n- To strike with the head; as in soccer, to head the ball\n\n- To move in a specified direction.\nVí dụ: How does the ship head?\n\n- To remove the head from a fish.\nVí dụ: The salmon are first headed and then scaled.\n\n- To originate; to spring; to have its course, as a river.\n\n- To form a head.\nVí dụ: This kind of cabbage heads early.\n\n- To form a head to; to fit or furnish with a head.\nVí dụ: to head a nail\n\n- To cut off the top of; to lop off.\nVí dụ: to head trees\n\n- To behead; to decapitate.\n\n- To go in front of.\nVí dụ: to head a drove of cattle\n\n- To get in the front of, so as to hinder or stop; to oppose.\nVí dụ: The wind headed the ship and made progress difficult.\n\n- (by extension) To check or restrain.\n\n- To set on the head.\nVí dụ: to head a cask\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "pillow",
@@ -153,7 +153,7 @@
     },
     "bed": {
         "noun": {
-            "definition": "- A piece of furniture, usually flat and soft, on which to rest or sleep.\nE.g: My cat often sleeps on my bed.\nI keep a glass of water next to my bed when I sleep.\n\n- A place, or flat surface or layer, on which something else rests or is laid.\nE.g: The meats and cheeses lay on a bed of lettuce.\n\n- (heading) A layer or surface.\n\n",
+            "definition": "- A piece of furniture, usually flat and soft, on which to rest or sleep.\nVí dụ: My cat often sleeps on my bed.\nI keep a glass of water next to my bed when I sleep.\n\n- A place, or flat surface or layer, on which something else rests or is laid.\nVí dụ: The meats and cheeses lay on a bed of lettuce.\n\n- (heading) A layer or surface.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "bed",
@@ -180,7 +180,7 @@
     },
     "art": {
         "noun": {
-            "definition": "- The conscious production or arrangement of sounds, colours, forms, movements, or other elements in a manner that affects the senses and emotions, usually specifically the production of the beautiful in a graphic or plastic medium.\nE.g: There is a debate as to whether graffiti is art or vandalism.\n\n- The creative and emotional expression of mental imagery, such as visual, auditory, social, etc.\n\n- Skillful creative activity, usually with an aesthetic focus.\nE.g: She's mastered the art of programming.\n\n- The study and the product of these processes.\nE.g: He's at university to study art.\n\n- Aesthetic value.\nE.g: Her photographs are nice, but there's no art in them.\n\n- Artwork.\nE.g: Sotheby's regularly auctions art for millions.\n\n- A field or category of art, such as painting, sculpture, music, ballet, or literature.\nE.g: I'm a great supporter of the arts.\n\n- A nonscientific branch of learning; one of the liberal arts.\n\n- Skill that is attained by study, practice, or observation.\n\n- Contrivance, scheming, manipulation.\n\n",
+            "definition": "- The conscious production or arrangement of sounds, colours, forms, movements, or other elements in a manner that affects the senses and emotions, usually specifically the production of the beautiful in a graphic or plastic medium.\nVí dụ: There is a debate as to whether graffiti is art or vandalism.\n\n- The creative and emotional expression of mental imagery, such as visual, auditory, social, etc.\n\n- Skillful creative activity, usually with an aesthetic focus.\nVí dụ: She's mastered the art of programming.\n\n- The study and the product of these processes.\nVí dụ: He's at university to study art.\n\n- Aesthetic value.\nVí dụ: Her photographs are nice, but there's no art in them.\n\n- Artwork.\nVí dụ: Sotheby's regularly auctions art for millions.\n\n- A field or category of art, such as painting, sculpture, music, ballet, or literature.\nVí dụ: I'm a great supporter of the arts.\n\n- A nonscientific branch of learning; one of the liberal arts.\n\n- Skill that is attained by study, practice, or observation.\n\n- Contrivance, scheming, manipulation.\n\n",
             "synonyms": [
                 "craft"
             ],
@@ -195,7 +195,7 @@
     },
     "god": {
         "proper noun": {
-            "definition": "- The single deity of various monotheistic religions, especially the deity of Judaism, Christianity, and Islam.\nE.g: Dawn believes in God, but Willow believes in multiple gods and goddesses.\n\n- The single male deity of various bitheistic or duotheistic religions.\n\n",
+            "definition": "- The single deity of various monotheistic religions, especially the deity of Judaism, Christianity, and Islam.\nVí dụ: Dawn believes in God, but Willow believes in multiple gods and goddesses.\n\n- The single male deity of various bitheistic or duotheistic religions.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "god",
@@ -204,7 +204,7 @@
     },
     "bungalow": {
         "noun": {
-            "definition": "- A single-storey house, typically with rooms all on one level, or sometimes also with upper rooms set into the roof space.\nE.g: My aunt can't manage the stairs any more, so she's moving to a bungalow.\n\n- A thatched or tiled one-story house in India surrounded by a wide verandah\n\n",
+            "definition": "- A single-storey house, typically with rooms all on one level, or sometimes also with upper rooms set into the roof space.\nVí dụ: My aunt can't manage the stairs any more, so she's moving to a bungalow.\n\n- A thatched or tiled one-story house in India surrounded by a wide verandah\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "bungalow",
@@ -220,7 +220,7 @@
             "type": "verb"
         },
         "noun": {
-            "definition": "- A conventional phrase used to start a letter or conversation or otherwise to acknowledge a person's arrival or presence.\nE.g: It's polite to begin a letter with a greeting, but this practice is less common in email.\n\n- The action of the verb to greet.\n\n",
+            "definition": "- A conventional phrase used to start a letter or conversation or otherwise to acknowledge a person's arrival or presence.\nVí dụ: It's polite to begin a letter with a greeting, but this practice is less common in email.\n\n- The action of the verb to greet.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "greeting",
@@ -229,7 +229,7 @@
     },
     "to": {
         "adverb": {
-            "definition": "- Toward a closed, touching or engaging position.\nE.g: Please push the door to.\n\n- Into the wind.\n\n",
+            "definition": "- Toward a closed, touching or engaging position.\nVí dụ: Please push the door to.\n\n- Into the wind.\n\n",
             "synonyms": [
                 "closed",
                 "shut"
@@ -292,7 +292,7 @@
     },
     "craft": {
         "noun": {
-            "definition": "- Strength; power; might; force .\n\n- Intellectual power; skill; art.\n\n- (obsolete in the general sense) A work or product of art .\n\n- A device, a means; a magical device, spell or enchantment .\n\n- Learning of the schools, scholarship; a branch of learning or knowledge, a science, especially one of the ‘seven liberal arts’ of the medieval universities .\n\n- Skill, skilfulness, art, especially the skill needed for a particular profession .\nE.g: The craft of writing plays.\n\n- (plural crafts) A branch of skilled work or trade, especially one requiring manual dexterity or artistic skill, but sometimes applied equally to any business, calling or profession; the skilled practice of a practical occupation .\nE.g: He learned his craft as an apprentice.\n\n- A trade or profession as embodied in its practitioners collectively; the members of a trade or handicraft as a body; an association of these; a trade's union, guild, or ‘company’ .\nE.g: She represented the craft of brewers.\n\n- (plural craft) A vehicle designed for navigation in or on water or air or through outer space .\n\n- Implements used in catching fish, such as net, line, or hook. Modern use primarily in whaling, as in harpoons, hand-lances, etc. .\n\n",
+            "definition": "- Strength; power; might; force .\n\n- Intellectual power; skill; art.\n\n- (obsolete in the general sense) A work or product of art .\n\n- A device, a means; a magical device, spell or enchantment .\n\n- Learning of the schools, scholarship; a branch of learning or knowledge, a science, especially one of the ‘seven liberal arts’ of the medieval universities .\n\n- Skill, skilfulness, art, especially the skill needed for a particular profession .\nVí dụ: The craft of writing plays.\n\n- (plural crafts) A branch of skilled work or trade, especially one requiring manual dexterity or artistic skill, but sometimes applied equally to any business, calling or profession; the skilled practice of a practical occupation .\nVí dụ: He learned his craft as an apprentice.\n\n- A trade or profession as embodied in its practitioners collectively; the members of a trade or handicraft as a body; an association of these; a trade's union, guild, or ‘company’ .\nVí dụ: She represented the craft of brewers.\n\n- (plural craft) A vehicle designed for navigation in or on water or air or through outer space .\n\n- Implements used in catching fish, such as net, line, or hook. Modern use primarily in whaling, as in harpoons, hand-lances, etc. .\n\n",
             "synonyms": [
                 "art",
                 "business",
@@ -309,7 +309,7 @@
     },
     "open": {
         "adjective": {
-            "definition": "- Not closed\n\n- Not physically drawn together, closed, folded or contracted; extended\nE.g: an open hand; an open flower\n\n- Actively conducting or prepared to conduct business.\nE.g: Banks are not open on bank holidays.\n\n- Receptive.\nE.g: I am open to new ideas.\n\n- Public\nE.g: He published an open letter to the governor on a full page of the New York Times.\n\n- Candid, ingenuous, not subtle in character.\nE.g: The man is an open book.\n\n- (of a formula) Having a free variable.\n\n- (of a set) Which is part of a predefined collection of subsets of X, that defines a topological space on X.\n\n- (of a walk) Whose first and last vertices are different.\n\n- (of a file, document, etc.) In current use; mapped to part of memory.\nE.g: I couldn't save my changes because another user had the same file open.\n\n- Not fulfilled.\nE.g: I've got open orders for as many containers of red durum as you can get me.\n\n- Not settled or adjusted; not decided or determined; not closed or withdrawn from consideration.\nE.g: an open question\n\n- (stringed instruments) Of a note, played without pressing the string against the fingerboard.\n\n- (wind instruments) Of a note, played without closing any finger-hole, key or valve.\n\n- Not of a quality to prevent communication, as by closing waterways, blocking roads, etc.; hence, not frosty or inclement; mild; used of the weather or the climate.\nE.g: an open winter\n\n- (Of correspondence) Written or sent with the intention that it may made public or referred to at any trial, rather than by way of confidential private negotiation for a settlement. (Opposite of \"without prejudice\")\nE.g: You will observe that this is an open letter and we reserve the right to mention it to the judge should the matter come to trial.\n\n- Uttered with a relatively wide opening of the articulating organs; said of vowels.\n\n- Uttered, as a consonant, with the oral passage simply narrowed without closure.\n\n- (of a syllable) That ends in a vowel; not having a coda.\n\n- Made public, usable with a free licence and without proprietary components.\n\n- Resulting from an incision, puncture or any other process by which the skin no longer protects an internal part of the body.\n\n",
+            "definition": "- Not closed\n\n- Not physically drawn together, closed, folded or contracted; extended\nVí dụ: an open hand; an open flower\n\n- Actively conducting or prepared to conduct business.\nVí dụ: Banks are not open on bank holidays.\n\n- Receptive.\nVí dụ: I am open to new ideas.\n\n- Public\nVí dụ: He published an open letter to the governor on a full page of the New York Times.\n\n- Candid, ingenuous, not subtle in character.\nVí dụ: The man is an open book.\n\n- (of a formula) Having a free variable.\n\n- (of a set) Which is part of a predefined collection of subsets of X, that defines a topological space on X.\n\n- (of a walk) Whose first and last vertices are different.\n\n- (of a file, document, etc.) In current use; mapped to part of memory.\nVí dụ: I couldn't save my changes because another user had the same file open.\n\n- Not fulfilled.\nVí dụ: I've got open orders for as many containers of red durum as you can get me.\n\n- Not settled or adjusted; not decided or determined; not closed or withdrawn from consideration.\nVí dụ: an open question\n\n- (stringed instruments) Of a note, played without pressing the string against the fingerboard.\n\n- (wind instruments) Of a note, played without closing any finger-hole, key or valve.\n\n- Not of a quality to prevent communication, as by closing waterways, blocking roads, etc.; hence, not frosty or inclement; mild; used of the weather or the climate.\nVí dụ: an open winter\n\n- (Of correspondence) Written or sent with the intention that it may made public or referred to at any trial, rather than by way of confidential private negotiation for a settlement. (Opposite of \"without prejudice\")\nVí dụ: You will observe that this is an open letter and we reserve the right to mention it to the judge should the matter come to trial.\n\n- Uttered with a relatively wide opening of the articulating organs; said of vowels.\n\n- Uttered, as a consonant, with the oral passage simply narrowed without closure.\n\n- (of a syllable) That ends in a vowel; not having a coda.\n\n- Made public, usable with a free licence and without proprietary components.\n\n- Resulting from an incision, puncture or any other process by which the skin no longer protects an internal part of the body.\n\n",
             "synonyms": [
                 "free",
                 "accessible",
@@ -389,7 +389,7 @@
     },
     "subsistence": {
         "noun": {
-            "definition": "- Strength; power; might; force .\n\n- Intellectual power; skill; art.\n\n- (obsolete in the general sense) A work or product of art .\n\n- A device, a means; a magical device, spell or enchantment .\n\n- Learning of the schools, scholarship; a branch of learning or knowledge, a science, especially one of the ‘seven liberal arts’ of the medieval universities .\n\n- Skill, skilfulness, art, especially the skill needed for a particular profession .\nE.g: The craft of writing plays.\n\n- (plural crafts) A branch of skilled work or trade, especially one requiring manual dexterity or artistic skill, but sometimes applied equally to any business, calling or profession; the skilled practice of a practical occupation .\nE.g: He learned his craft as an apprentice.\n\n- A trade or profession as embodied in its practitioners collectively; the members of a trade or handicraft as a body; an association of these; a trade's union, guild, or ‘company’ .\nE.g: She represented the craft of brewers.\n\n- (plural craft) A vehicle designed for navigation in or on water or air or through outer space .\n\n- Implements used in catching fish, such as net, line, or hook. Modern use primarily in whaling, as in harpoons, hand-lances, etc. .\n\n",
+            "definition": "- Strength; power; might; force .\n\n- Intellectual power; skill; art.\n\n- (obsolete in the general sense) A work or product of art .\n\n- A device, a means; a magical device, spell or enchantment .\n\n- Learning of the schools, scholarship; a branch of learning or knowledge, a science, especially one of the ‘seven liberal arts’ of the medieval universities .\n\n- Skill, skilfulness, art, especially the skill needed for a particular profession .\nVí dụ: The craft of writing plays.\n\n- (plural crafts) A branch of skilled work or trade, especially one requiring manual dexterity or artistic skill, but sometimes applied equally to any business, calling or profession; the skilled practice of a practical occupation .\nVí dụ: He learned his craft as an apprentice.\n\n- A trade or profession as embodied in its practitioners collectively; the members of a trade or handicraft as a body; an association of these; a trade's union, guild, or ‘company’ .\nVí dụ: She represented the craft of brewers.\n\n- (plural craft) A vehicle designed for navigation in or on water or air or through outer space .\n\n- Implements used in catching fish, such as net, line, or hook. Modern use primarily in whaling, as in harpoons, hand-lances, etc. .\n\n",
             "synonyms": [
                 "art",
                 "business",
@@ -404,7 +404,7 @@
             "type": "noun"
         },
         "verb": {
-            "definition": "- To make by hand and with much skill.\n\n- To construct, develop something (like a skilled craftsman).\nE.g: state crafting; the process of crafting global policing\n\n- To combine multiple items to form a new item, such as armour or medicine.\n\n",
+            "definition": "- To make by hand and with much skill.\n\n- To construct, develop something (like a skilled craftsman).\nVí dụ: state crafting; the process of crafting global policing\n\n- To combine multiple items to form a new item, such as armour or medicine.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "subsistence",
@@ -459,7 +459,7 @@
     },
     "fuck": {
         "noun": {
-            "definition": "- An act of sexual intercourse.\n\n- A sexual partner, especially a casual one.\n\n- A highly contemptible person.\n\n- A thing of no value, a small amount.\nE.g: I don't give a fuck.\n\n",
+            "definition": "- An act of sexual intercourse.\n\n- A sexual partner, especially a casual one.\n\n- A highly contemptible person.\n\n- A thing of no value, a small amount.\nVí dụ: I don't give a fuck.\n\n",
             "synonyms": [
                 "dickhead",
                 "shit"
@@ -469,7 +469,7 @@
             "type": "noun"
         },
         "verb": {
-            "definition": "- To have sexual intercourse, to copulate.\nE.g: Fighting for peace is like fucking for virginity.\n\n- To have sexual intercourse with.\n\n- To insert one’s penis, a dildo or other phallic object, into a specified orifice or cleft.\n\n- To put in an extremely difficult or impossible situation.\nE.g: I'm afraid they're gonna fuck you on this one.\n\n- To defraud, deface or otherwise treat badly.\nE.g: I got fucked at the used car lot.\n\n- Used to express great displeasure with someone or something.\nE.g: Fuck those jerks, and fuck their stupid rules!\n\n- (usually followed by up) To break, to destroy.\n\n- To make a joke at one's expense; to make fun of in an embarrassing manner.\n\n- To throw, to lob something. (angrily)\nE.g: He fucked the dirty cloth out the window.\n\n- To scold\nE.g: The sergeant fucked me upside down.\n\n",
+            "definition": "- To have sexual intercourse, to copulate.\nVí dụ: Fighting for peace is like fucking for virginity.\n\n- To have sexual intercourse with.\n\n- To insert one’s penis, a dildo or other phallic object, into a specified orifice or cleft.\n\n- To put in an extremely difficult or impossible situation.\nVí dụ: I'm afraid they're gonna fuck you on this one.\n\n- To defraud, deface or otherwise treat badly.\nVí dụ: I got fucked at the used car lot.\n\n- Used to express great displeasure with someone or something.\nVí dụ: Fuck those jerks, and fuck their stupid rules!\n\n- (usually followed by up) To break, to destroy.\n\n- To make a joke at one's expense; to make fun of in an embarrassing manner.\n\n- To throw, to lob something. (angrily)\nVí dụ: He fucked the dirty cloth out the window.\n\n- To scold\nVí dụ: The sergeant fucked me upside down.\n\n",
             "synonyms": [
                 "annihilate",
                 "obliterate",
@@ -497,7 +497,7 @@
             "type": "verb"
         },
         "adverb": {
-            "definition": "- Used as an intensifier for the words \"yes\" and \"no\".\nE.g: Do you censor your swearing? – Fuck no.\n\n",
+            "definition": "- Used as an intensifier for the words \"yes\" and \"no\".\nVí dụ: Do you censor your swearing? – Fuck no.\n\n",
             "synonyms": [
                 "god",
                 "heck",
@@ -509,7 +509,7 @@
             "type": "adverb"
         },
         "interjection": {
-            "definition": "- Expressing dismay or discontent.\nE.g: Fuck! Why do you have to be so difficult all the time?\n\n- Expressing surprise.\nE.g: Fuck! That movie was good.\n\n",
+            "definition": "- Expressing dismay or discontent.\nVí dụ: Fuck! Why do you have to be so difficult all the time?\n\n- Expressing surprise.\nVí dụ: Fuck! That movie was good.\n\n",
             "synonyms": [
                 "fark",
                 "feck",
@@ -542,7 +542,7 @@
     },
     "nature": {
         "noun": {
-            "definition": "- The natural world; that which consists of all things unaffected by or predating human technology, production, and design. (Compare ecosystem.)\nE.g: Nature never lies (i.e. tells untruths).\n\n- The innate characteristics of a thing. What something will tend by its own constitution, to be or do. Distinct from what might be expected or intended.\n\n- The summary of everything that has to do with biological, chemical and physical states and events in the physical universe.\n\n- Conformity to that which is natural, as distinguished from that which is artificial, or forced, or remote from actual experience.\n\n- Kind, sort; character; quality.\n\n- Physical constitution or existence; the vital powers; the natural life.\n\n- Natural affection or reverence.\n\n",
+            "definition": "- The natural world; that which consists of all things unaffected by or predating human technology, production, and design. (Compare ecosystem.)\nVí dụ: Nature never lies (i.e. tells untruths).\n\n- The innate characteristics of a thing. What something will tend by its own constitution, to be or do. Distinct from what might be expected or intended.\n\n- The summary of everything that has to do with biological, chemical and physical states and events in the physical universe.\n\n- Conformity to that which is natural, as distinguished from that which is artificial, or forced, or remote from actual experience.\n\n- Kind, sort; character; quality.\n\n- Physical constitution or existence; the vital powers; the natural life.\n\n- Natural affection or reverence.\n\n",
             "synonyms": [
                 "quintessence",
                 "whatness"
@@ -577,7 +577,7 @@
     },
     "accessible": {
         "adjective": {
-            "definition": "- Easy of access or approach.\nE.g: an accessible town or mountain\n\n- (specifically) Built or designed as to be usable by people with disabilities.\nE.g: accessible public transport\n\n- (of a person) Easy to get along with.\n\n- (followed by to) Open to the influence of.\n\n- Obtainable; to be got at.\n\n- Easily understood or appreciated.\n\n- Capable of being used or seen.\n\n",
+            "definition": "- Easy of access or approach.\nVí dụ: an accessible town or mountain\n\n- (specifically) Built or designed as to be usable by people with disabilities.\nVí dụ: accessible public transport\n\n- (of a person) Easy to get along with.\n\n- (followed by to) Open to the influence of.\n\n- Obtainable; to be got at.\n\n- Easily understood or appreciated.\n\n- Capable of being used or seen.\n\n",
             "synonyms": [
                 "approachable",
                 "easy-going",
@@ -593,7 +593,7 @@
     },
     "approachable": {
         "adjective": {
-            "definition": "- Easily approached; easy to talk to.\nE.g: Her boss was very approachable.\n\n",
+            "definition": "- Easily approached; easy to talk to.\nVí dụ: Her boss was very approachable.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "approachable",
@@ -602,7 +602,7 @@
     },
     "sort": {
         "noun": {
-            "definition": "- A general type.\n\n- Manner; form of being or acting.\n\n- Condition above the vulgar; rank.\n\n- A person evaluated in a certain way (bad, good, strange, etc.).\n\n- Group, company.\n\n- A good-looking woman.\n\n- An act of sorting.\nE.g: I had a sort of my cupboard.\n\n- An algorithm for sorting a list of items into a particular sequence.\nE.g: Popular algorithms for sorts include quicksort and heapsort.\n\n- A piece of metal type used to print one letter, character, or symbol in a particular size and style.\n\n- A type.\n\n- Chance; lot; destiny.\n\n- A full set of anything, such as a pair of shoes, or a suit of clothes.\n\n",
+            "definition": "- A general type.\n\n- Manner; form of being or acting.\n\n- Condition above the vulgar; rank.\n\n- A person evaluated in a certain way (bad, good, strange, etc.).\n\n- Group, company.\n\n- A good-looking woman.\n\n- An act of sorting.\nVí dụ: I had a sort of my cupboard.\n\n- An algorithm for sorting a list of items into a particular sequence.\nVí dụ: Popular algorithms for sorts include quicksort and heapsort.\n\n- A piece of metal type used to print one letter, character, or symbol in a particular size and style.\n\n- A type.\n\n- Chance; lot; destiny.\n\n- A full set of anything, such as a pair of shoes, or a suit of clothes.\n\n",
             "synonyms": [
                 "sort-out",
                 "algorithm",
@@ -636,7 +636,7 @@
     },
     "craftsmanship": {
         "noun": {
-            "definition": "- The quality of being a craftsman.\n\n- An example of a craftsman's work.\nE.g: The craftsmanship on the antique chair was exquisite.\n\n",
+            "definition": "- The quality of being a craftsman.\n\n- An example of a craftsman's work.\nVí dụ: The craftsmanship on the antique chair was exquisite.\n\n",
             "synonyms": [
                 "craftwork",
                 "workmanship"
@@ -648,7 +648,7 @@
     },
     "trade": {
         "noun": {
-            "definition": "- Buying and selling of goods and services on a market.\n\n- A particular instance of buying or selling.\nE.g: I did no trades with them once the rumors started.\n\n- An instance of bartering items in exchange for one another.\n\n- Those who perform a particular kind of skilled work.\nE.g: The skilled trades were the first to organize modern labor unions.\n\n- Those engaged in an industry or group of related industries.\nE.g: It is not a retail showroom. It is only for the trade.\n\n- The skilled practice of a practical occupation.\nE.g: He learned his trade as an apprentice.\n\n- An occupation in the secondary sector, as opposed to an agricultural, professional or military one.\nE.g: After failing his entrance exams, he decided to go into a trade.\n\n- The business given to a commercial establishment by its customers.\nE.g: Even before noon there was considerable trade.\n\n- (chiefly in the plural) Steady winds blowing from east to west above and below the equator.\nE.g: They rode the trades going west.\n\n- (only as plural) A publication intended for participants in an industry or related group of industries.\nE.g: Rumors about layoffs are all over the trades.\n\n- A brief sexual encounter.\nE.g: Josh picked up some trade last night.\n\n- Instruments of any occupation.\n\n- Refuse or rubbish from a mine.\n\n- A track or trail; a way; a path; passage.\n\n- Course; custom; practice; occupation.\n\n",
+            "definition": "- Buying and selling of goods and services on a market.\n\n- A particular instance of buying or selling.\nVí dụ: I did no trades with them once the rumors started.\n\n- An instance of bartering items in exchange for one another.\n\n- Those who perform a particular kind of skilled work.\nVí dụ: The skilled trades were the first to organize modern labor unions.\n\n- Those engaged in an industry or group of related industries.\nVí dụ: It is not a retail showroom. It is only for the trade.\n\n- The skilled practice of a practical occupation.\nVí dụ: He learned his trade as an apprentice.\n\n- An occupation in the secondary sector, as opposed to an agricultural, professional or military one.\nVí dụ: After failing his entrance exams, he decided to go into a trade.\n\n- The business given to a commercial establishment by its customers.\nVí dụ: Even before noon there was considerable trade.\n\n- (chiefly in the plural) Steady winds blowing from east to west above and below the equator.\nVí dụ: They rode the trades going west.\n\n- (only as plural) A publication intended for participants in an industry or related group of industries.\nVí dụ: Rumors about layoffs are all over the trades.\n\n- A brief sexual encounter.\nVí dụ: Josh picked up some trade last night.\n\n- Instruments of any occupation.\n\n- Refuse or rubbish from a mine.\n\n- A track or trail; a way; a path; passage.\n\n- Course; custom; practice; occupation.\n\n",
             "synonyms": [
                 "barter",
                 "deal",
@@ -662,7 +662,7 @@
             "type": "noun"
         },
         "verb": {
-            "definition": "- To engage in trade.\nE.g: This company trades (in) precious metal.\n\n- To be traded at a certain price or under certain conditions.\nE.g: Apple is trading at $200.\n\n- To give (something) in exchange for.\nE.g: Will you trade your precious watch for my earring?\n\n- To give someone a plant and receive a different one in return.\n\n- To do business; offer for sale as for one's livelihood.\n\n- To have dealings; to be concerned or associated (with).\n\n",
+            "definition": "- To engage in trade.\nVí dụ: This company trades (in) precious metal.\n\n- To be traded at a certain price or under certain conditions.\nVí dụ: Apple is trading at $200.\n\n- To give (something) in exchange for.\nVí dụ: Will you trade your precious watch for my earring?\n\n- To give someone a plant and receive a different one in return.\n\n- To do business; offer for sale as for one's livelihood.\n\n- To have dealings; to be concerned or associated (with).\n\n",
             "synonyms": [
                 "deal",
                 "do business",
@@ -711,7 +711,7 @@
     },
     "audacity": {
         "noun": {
-            "definition": "- Insolent boldness, especially when imprudent or unconventional.\nE.g: Somebody never pays his loans, yet he has the audacity to ask the bank for money.\n\n- Fearlessness, intrepidity or daring, especially with confident disregard for personal safety, conventional thought, or other restrictions.\n\n",
+            "definition": "- Insolent boldness, especially when imprudent or unconventional.\nVí dụ: Somebody never pays his loans, yet he has the audacity to ask the bank for money.\n\n- Fearlessness, intrepidity or daring, especially with confident disregard for personal safety, conventional thought, or other restrictions.\n\n",
             "synonyms": [
                 "audaciousness",
                 "outdaciousness",
@@ -749,7 +749,7 @@
     },
     "goodbye": {
         "noun": {
-            "definition": "- An utterance of goodbye, the wishing of farewell to someone.\nE.g: They made their good-byes.\n\n",
+            "definition": "- An utterance of goodbye, the wishing of farewell to someone.\nVí dụ: They made their good-byes.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "goodbye",
@@ -807,14 +807,14 @@
     },
     "cheers": {
         "noun": {
-            "definition": "- A cheerful attitude; happiness; a good, happy, or positive mood.\n\n- That which promotes good spirits or cheerfulness; provisions prepared for a feast; entertainment.\nE.g: a table loaded with good cheer\n\n- A cry expressing joy, approval or support such as \"hurray\".\nE.g: A cheer rose from the crowd.\n\n- A chant made in support of a team at a sports event.\n\n- One's facial expression or countenance.\n\n- One's attitude, mood.\n\n",
+            "definition": "- A cheerful attitude; happiness; a good, happy, or positive mood.\n\n- That which promotes good spirits or cheerfulness; provisions prepared for a feast; entertainment.\nVí dụ: a table loaded with good cheer\n\n- A cry expressing joy, approval or support such as \"hurray\".\nVí dụ: A cheer rose from the crowd.\n\n- A chant made in support of a team at a sports event.\n\n- One's facial expression or countenance.\n\n- One's attitude, mood.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "cheers",
             "type": "noun"
         },
         "verb": {
-            "definition": "- To gladden; to make cheerful; often with up.\nE.g: We were cheered by the offer of a cup of tea.\n\n- To infuse life, courage, animation, or hope, into; to inspirit; to solace or comfort.\n\n- To applaud or encourage with cheers or shouts.\nE.g: The crowd cheered in support of the athletes.\n\n",
+            "definition": "- To gladden; to make cheerful; often with up.\nVí dụ: We were cheered by the offer of a cup of tea.\n\n- To infuse life, courage, animation, or hope, into; to inspirit; to solace or comfort.\n\n- To applaud or encourage with cheers or shouts.\nVí dụ: The crowd cheered in support of the athletes.\n\n",
             "synonyms": [],
             "antonyms": [
                 "boo"
@@ -850,7 +850,7 @@
     },
     "next to": {
         "preposition": {
-            "definition": "- Beside, alongside, by, adjacent to, or near.\nE.g: Cleanliness is next to godliness.\n\n- Immediately after, in choice or consideration; aside from.\n\n- Compared to, in comparison with.\n\n",
+            "definition": "- Beside, alongside, by, adjacent to, or near.\nVí dụ: Cleanliness is next to godliness.\n\n- Immediately after, in choice or consideration; aside from.\n\n- Compared to, in comparison with.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "next to",
@@ -927,7 +927,7 @@
     },
     "occupied": {
         "adjective": {
-            "definition": "- Reserved, engaged.\nE.g: The stall on the left is occupied.\n\n- Busy, unavailable.\nE.g: She is occupied at the moment.\n\n- Subjugated, under the control of a foreign military presence.\nE.g: My father travelled to occupied Japan in December 1945.\n\n",
+            "definition": "- Reserved, engaged.\nVí dụ: The stall on the left is occupied.\n\n- Busy, unavailable.\nVí dụ: She is occupied at the moment.\n\n- Subjugated, under the control of a foreign military presence.\nVí dụ: My father travelled to occupied Japan in December 1945.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "occupied",
@@ -979,7 +979,7 @@
     },
     "hi": {
         "noun": {
-            "definition": "- The word \"hi\" used as a greeting.\nE.g: I didn't even get a hi.\n\n",
+            "definition": "- The word \"hi\" used as a greeting.\nVí dụ: I didn't even get a hi.\n\n",
             "synonyms": [
                 "greeting",
                 "hello"
@@ -989,7 +989,7 @@
             "type": "noun"
         },
         "interjection": {
-            "definition": "- A friendly, informal, casual greeting said when meeting someone.\nE.g: Hi, how are you?\n\n- An exclamation to call attention.\n\n- Expressing wonder or derision.\n\n",
+            "definition": "- A friendly, informal, casual greeting said when meeting someone.\nVí dụ: Hi, how are you?\n\n- An exclamation to call attention.\n\n- Expressing wonder or derision.\n\n",
             "synonyms": [
                 "greetings",
                 "hello"
@@ -1001,7 +1001,7 @@
     },
     "path": {
         "noun": {
-            "definition": "- A trail for the use of, or worn by, pedestrians.\n\n- A course taken.\nE.g: the path of a meteor, of a caravan, or of a storm\n\n- A Pagan tradition, for example witchcraft, Wicca, druidism, Heathenry.\n\n- A metaphorical course.\n\n- A method or direction of proceeding.\n\n- A human-readable specification for a location within a hierarchical or tree-like structure, such as a file system or as part of a URL.\n\n- A sequence of vertices from one vertex to another using the arcs (edges). A path does not visit the same vertex more than once (unless it is a closed path, where only the first and the last vertex are the same).\n\n- A continuous map f from the unit interval I = [0,1] to a topological space X.\n\n- A slot available for allocation to a railway train over a given route in between other trains.\n\n",
+            "definition": "- A trail for the use of, or worn by, pedestrians.\n\n- A course taken.\nVí dụ: the path of a meteor, of a caravan, or of a storm\n\n- A Pagan tradition, for example witchcraft, Wicca, druidism, Heathenry.\n\n- A metaphorical course.\n\n- A method or direction of proceeding.\n\n- A human-readable specification for a location within a hierarchical or tree-like structure, such as a file system or as part of a URL.\n\n- A sequence of vertices from one vertex to another using the arcs (edges). A path does not visit the same vertex more than once (unless it is a closed path, where only the first and the last vertex are the same).\n\n- A continuous map f from the unit interval I = [0,1] to a topological space X.\n\n- A slot available for allocation to a railway train over a given route in between other trains.\n\n",
             "synonyms": [
                 "track",
                 "trail"
@@ -1123,7 +1123,7 @@
     },
     "mixture": {
         "noun": {
-            "definition": "- The act of mixing.\n\n- Something produced by mixing.\n\n- Something that consists of diverse elements.\n\n- A medicinal compound, typically a suspension of a solid in a solution\nE.g: A teaspoonful of the mixture to be taken three times daily after meals\n\n- A compound organ stop.\n\n- A cloth of variegated colouring.\n\n- A mix of different dry foods as a snack, especially chevda or Bombay mix.\n\n",
+            "definition": "- The act of mixing.\n\n- Something produced by mixing.\n\n- Something that consists of diverse elements.\n\n- A medicinal compound, typically a suspension of a solid in a solution\nVí dụ: A teaspoonful of the mixture to be taken three times daily after meals\n\n- A compound organ stop.\n\n- A cloth of variegated colouring.\n\n- A mix of different dry foods as a snack, especially chevda or Bombay mix.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "mixture",
@@ -1132,7 +1132,7 @@
     },
     "alloy": {
         "noun": {
-            "definition": "- A metal that is a combination of two or more elements, at least one of which is a metal.\n\n- A metal of lesser value, mixed with a metal of greater value.\nE.g: gold without alloy\n\n- An admixture; something added which stains, taints etc.\n\n- Fusion, marriage, combination.\n\n",
+            "definition": "- A metal that is a combination of two or more elements, at least one of which is a metal.\n\n- A metal of lesser value, mixed with a metal of greater value.\nVí dụ: gold without alloy\n\n- An admixture; something added which stains, taints etc.\n\n- Fusion, marriage, combination.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "alloy",
@@ -1156,7 +1156,7 @@
     },
     "pound": {
         "noun": {
-            "definition": "- A unit of mass equal to 16 avoirdupois ounces (= 453.592 37 g). Today this value is the most common meaning of \"pound\" as a unit of weight.\n\n- A unit of mass equal to 12 troy ounces (≈ 373.242 g). Today, this is a common unit of weight when measuring precious metals, and is little used elsewhere.\n\n- The symbol # (octothorpe, hash)\n\n- The unit of currency used in the United Kingdom and its dependencies. It is divided into 100 pence.\n\n- Any of various units of currency used in Egypt and Lebanon, and formerly in the Republic of Ireland, Cyprus and Israel.\n\n- Any of various units of currency formerly used in the United States.\nE.g: the Rhode Island pound; the New Hampshire pound\n\n- Abbreviation for pound-force, a unit of force/weight. Using this abbreviation to describe pound-force is inaccurate and unscientific.\n\n",
+            "definition": "- A unit of mass equal to 16 avoirdupois ounces (= 453.592 37 g). Today this value is the most common meaning of \"pound\" as a unit of weight.\n\n- A unit of mass equal to 12 troy ounces (≈ 373.242 g). Today, this is a common unit of weight when measuring precious metals, and is little used elsewhere.\n\n- The symbol # (octothorpe, hash)\n\n- The unit of currency used in the United Kingdom and its dependencies. It is divided into 100 pence.\n\n- Any of various units of currency used in Egypt and Lebanon, and formerly in the Republic of Ireland, Cyprus and Israel.\n\n- Any of various units of currency formerly used in the United States.\nVí dụ: the Rhode Island pound; the New Hampshire pound\n\n- Abbreviation for pound-force, a unit of force/weight. Using this abbreviation to describe pound-force is inaccurate and unscientific.\n\n",
             "synonyms": [
                 "GBP",
                 "nicker",
@@ -1176,21 +1176,21 @@
     },
     "sharp": {
         "noun": {
-            "definition": "- The symbol ♯, placed after the name of a note in the key signature or before a note on the staff to indicate that the note is to be played a semitone higher.\nE.g: The pitch pipe sounded out a perfect F♯ (F sharp).\n\n- A note that is played a semitone higher than usual; denoted by the name of the note that is followed by the symbol ♯.\n\n- A note that is sharp in a particular key.\nE.g: The piece was difficult to read after it had been transposed, since in the new key many notes were sharps.\n\n- The scale having a particular sharp note as its tonic.\nE.g: Beethoven's \"Moonlight Sonata\" is written in C♯ minor (C sharp minor.)\n\n- (usually in the plural) Something that is sharp.\nE.g: Place sharps in the specially marked red container for safe disposal.\n\n- A dishonest person; a cheater.\nE.g: The casino kept in the break room a set of pictures of known sharps for the bouncers to see.\n\n- Part of a stream where the water runs very rapidly.\n\n- A sewing needle with a very slender point, more pointed than a blunt or a between.\n\n- (in the plural) Fine particles of husk mixed with coarse particle of flour of cereals; middlings.\n\n- An expert.\n\n- A sharpie (member of Australian gangs of the 1960s and 1970s).\n\n",
+            "definition": "- The symbol ♯, placed after the name of a note in the key signature or before a note on the staff to indicate that the note is to be played a semitone higher.\nVí dụ: The pitch pipe sounded out a perfect F♯ (F sharp).\n\n- A note that is played a semitone higher than usual; denoted by the name of the note that is followed by the symbol ♯.\n\n- A note that is sharp in a particular key.\nVí dụ: The piece was difficult to read after it had been transposed, since in the new key many notes were sharps.\n\n- The scale having a particular sharp note as its tonic.\nVí dụ: Beethoven's \"Moonlight Sonata\" is written in C♯ minor (C sharp minor.)\n\n- (usually in the plural) Something that is sharp.\nVí dụ: Place sharps in the specially marked red container for safe disposal.\n\n- A dishonest person; a cheater.\nVí dụ: The casino kept in the break room a set of pictures of known sharps for the bouncers to see.\n\n- Part of a stream where the water runs very rapidly.\n\n- A sewing needle with a very slender point, more pointed than a blunt or a between.\n\n- (in the plural) Fine particles of husk mixed with coarse particle of flour of cereals; middlings.\n\n- An expert.\n\n- A sharpie (member of Australian gangs of the 1960s and 1970s).\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "sharp",
             "type": "noun"
         },
         "verb": {
-            "definition": "- To raise the pitch of a note half a step making a natural note a sharp.\nE.g: That new musician must be tone deaf: he sharped half the notes of the song!\n\n- To play tricks in bargaining; to act the sharper.\n\n- To sharpen.\n\n",
+            "definition": "- To raise the pitch of a note half a step making a natural note a sharp.\nVí dụ: That new musician must be tone deaf: he sharped half the notes of the song!\n\n- To play tricks in bargaining; to act the sharper.\n\n- To sharpen.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "sharp",
             "type": "verb"
         },
         "adjective": {
-            "definition": "- Terminating in a point or edge, especially one that can cut easily; not obtuse or rounded.\nE.g: A face with sharp features\n\n- Intelligent.\nE.g: My nephew is a sharp lad; he can count to 100 in six languages, and he's only five years old.\n\n- Higher than usual by one semitone (denoted by the symbol ♯ after the name of the note).\n\n- Higher in pitch than required.\nE.g: The orchestra's third violin several times was sharp about an eighth of a tone.\n\n- Having an intense, acrid flavour.\nE.g: Milly couldn't stand sharp cheeses when she was pregnant, because they made her nauseated.\n\n- Sudden and intense.\nE.g: A pregnant woman during labor normally experiences a number of sharp contractions.\n\n- Illegal or dishonest.\nE.g: Michael had a number of sharp ventures that he kept off the books.\n\n- Keenly or unduly attentive to one's own interests; shrewd.\nE.g: a sharp dealer;  a sharp customer\n\n- Exact, precise, accurate; keen.\nE.g: You'll need sharp aim to make that shot.\n\n- Offensive, critical, or acrimonious.\nE.g: When the two rivals met, first there were sharp words, and then a fight broke out.\n\n- Stylish or attractive.\nE.g: You look so sharp in that tuxedo!\n\n- Observant; alert; acute.\nE.g: Keep a sharp watch on the prisoners. I don't want them to escape!\n\n- Forming a small angle; especially, forming an angle of less than ninety degrees.\nE.g: Drive down Main for three quarters of a mile, then make a sharp right turn onto Pine.\n\n- Steep; precipitous; abrupt.\nE.g: a sharp ascent or descent; a sharp turn or curve\n\n- (of a statement) Said of as extreme a value as possible.\nE.g: Sure, any planar graph can be five-colored. But that result is not sharp: in fact, any planar graph can be four-colored. That is sharp: the same can't be said for any lower number.\n\n- Tactical; risky.\n\n- Piercing; keen; severe; painful.\nE.g: a sharp pain; the sharp and frosty winter air\n\n- Eager or keen in pursuit; impatient for gratification.\nE.g: a sharp appetite\n\n- Fierce; ardent; fiery; violent; impetuous.\n\n- Composed of hard, angular grains; gritty.\n\n- Uttered in a whisper, or with the breath alone; aspirated; unvoiced.\n\n- Hungry.\n\n",
+            "definition": "- Terminating in a point or edge, especially one that can cut easily; not obtuse or rounded.\nVí dụ: A face with sharp features\n\n- Intelligent.\nVí dụ: My nephew is a sharp lad; he can count to 100 in six languages, and he's only five years old.\n\n- Higher than usual by one semitone (denoted by the symbol ♯ after the name of the note).\n\n- Higher in pitch than required.\nVí dụ: The orchestra's third violin several times was sharp about an eighth of a tone.\n\n- Having an intense, acrid flavour.\nVí dụ: Milly couldn't stand sharp cheeses when she was pregnant, because they made her nauseated.\n\n- Sudden and intense.\nVí dụ: A pregnant woman during labor normally experiences a number of sharp contractions.\n\n- Illegal or dishonest.\nVí dụ: Michael had a number of sharp ventures that he kept off the books.\n\n- Keenly or unduly attentive to one's own interests; shrewd.\nVí dụ: a sharp dealer;  a sharp customer\n\n- Exact, precise, accurate; keen.\nVí dụ: You'll need sharp aim to make that shot.\n\n- Offensive, critical, or acrimonious.\nVí dụ: When the two rivals met, first there were sharp words, and then a fight broke out.\n\n- Stylish or attractive.\nVí dụ: You look so sharp in that tuxedo!\n\n- Observant; alert; acute.\nVí dụ: Keep a sharp watch on the prisoners. I don't want them to escape!\n\n- Forming a small angle; especially, forming an angle of less than ninety degrees.\nVí dụ: Drive down Main for three quarters of a mile, then make a sharp right turn onto Pine.\n\n- Steep; precipitous; abrupt.\nVí dụ: a sharp ascent or descent; a sharp turn or curve\n\n- (of a statement) Said of as extreme a value as possible.\nVí dụ: Sure, any planar graph can be five-colored. But that result is not sharp: in fact, any planar graph can be four-colored. That is sharp: the same can't be said for any lower number.\n\n- Tactical; risky.\n\n- Piercing; keen; severe; painful.\nVí dụ: a sharp pain; the sharp and frosty winter air\n\n- Eager or keen in pursuit; impatient for gratification.\nVí dụ: a sharp appetite\n\n- Fierce; ardent; fiery; violent; impetuous.\n\n- Composed of hard, angular grains; gritty.\n\n- Uttered in a whisper, or with the breath alone; aspirated; unvoiced.\n\n- Hungry.\n\n",
             "synonyms": [
                 "keen",
                 "razor",
@@ -1268,7 +1268,7 @@
             "type": "adjective"
         },
         "adverb": {
-            "definition": "- To a point or edge; piercingly; eagerly; sharply.\n\n- (notcomp) Exactly.\nE.g: I'll see you at twelve o'clock sharp.\n\n- In a higher pitch than is correct or desirable.\nE.g: I didn't enjoy the concert much because the tenor kept going sharp on the high notes.\n\n",
+            "definition": "- To a point or edge; piercingly; eagerly; sharply.\n\n- (notcomp) Exactly.\nVí dụ: I'll see you at twelve o'clock sharp.\n\n- In a higher pitch than is correct or desirable.\nVí dụ: I didn't enjoy the concert much because the tenor kept going sharp on the high notes.\n\n",
             "synonyms": [
                 "exactly",
                 "on the dot",
@@ -1290,7 +1290,7 @@
     },
     "sub": {
         "noun": {
-            "definition": "- A submarine.\n\n- A submarine sandwich: a sandwich made on a long bun.\nE.g: We can get subs at that deli.\n\n- A substitute, often in sports.\nE.g: She worked as a sub until she got her teaching certificate.\n\n- (often in plural) A subscription: a payment made for membership of a club, etc.\n\n- A subtitle.\nE.g: I've just noticed a mistake in the subs for this film.\n\n- A subroutine (sometimes one that does not return a value, as distinguished from a function, which does).\n\n- A subeditor.\n\n- A subcontractor.\n\n- (BDSM) A submissive.\n\n- A subordinate.\n\n- A subaltern.\n\n- A subscription (or (by extension) a subscriber) to an online channel or feed.\nE.g: I'm totally stoked; just got 10 new subs after my last video.\n\n- Subsistence money: part of a worker's wages paid before the work is finished.\n\n",
+            "definition": "- A submarine.\n\n- A submarine sandwich: a sandwich made on a long bun.\nVí dụ: We can get subs at that deli.\n\n- A substitute, often in sports.\nVí dụ: She worked as a sub until she got her teaching certificate.\n\n- (often in plural) A subscription: a payment made for membership of a club, etc.\n\n- A subtitle.\nVí dụ: I've just noticed a mistake in the subs for this film.\n\n- A subroutine (sometimes one that does not return a value, as distinguished from a function, which does).\n\n- A subeditor.\n\n- A subcontractor.\n\n- (BDSM) A submissive.\n\n- A subordinate.\n\n- A subaltern.\n\n- A subscription (or (by extension) a subscriber) to an online channel or feed.\nVí dụ: I'm totally stoked; just got 10 new subs after my last video.\n\n- Subsistence money: part of a worker's wages paid before the work is finished.\n\n",
             "synonyms": [
                 "grinder",
                 "hero",
@@ -1308,7 +1308,7 @@
             "type": "noun"
         },
         "verb": {
-            "definition": "- To substitute for.\n\n- To work as a substitute teacher, especially in primary and secondary education.\n\n- To replace (a player) with a substitute.\nE.g: He never really made a contribution to the match, so it was no surprise when he was subbed at half time.\n\n- Less commonly, and often as sub on, to bring on (a player) as a substitute.\nE.g: He was subbed on half way through the second half, and scored within minutes.\n\n- To perform the work of a subeditor or copy editor; to subedit.\n\n- To lend.\n\n- To subscribe.\n\n- (BDSM) To take a submissive role.\n\n",
+            "definition": "- To substitute for.\n\n- To work as a substitute teacher, especially in primary and secondary education.\n\n- To replace (a player) with a substitute.\nVí dụ: He never really made a contribution to the match, so it was no surprise when he was subbed at half time.\n\n- Less commonly, and often as sub on, to bring on (a player) as a substitute.\nVí dụ: He was subbed on half way through the second half, and scored within minutes.\n\n- To perform the work of a subeditor or copy editor; to subedit.\n\n- To lend.\n\n- To subscribe.\n\n- (BDSM) To take a submissive role.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "sub",
@@ -1317,7 +1317,7 @@
     },
     "at": {
         "verb": {
-            "definition": "- To reply to or talk to someone, either online or face-to-face. (from the practice of targeting a message or reply to someone online by writing @name)\nE.g: Cars 2 is the most influential film of all time. Don't @ me.\n\n",
+            "definition": "- To reply to or talk to someone, either online or face-to-face. (from the practice of targeting a message or reply to someone online by writing @name)\nVí dụ: Cars 2 is the most influential film of all time. Don't @ me.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "at",
@@ -1331,7 +1331,7 @@
             "type": "noun"
         },
         "preposition": {
-            "definition": "- In, near, or in the general vicinity of a particular place.\nE.g: Caesar was at Rome;  at the corner of Fourth Street and Vine;  at Jim’s house\n\n- (indicating time) Indicating occurrence in an instant of time or a period of time relatively short in context or from the speaker's perspective.\nE.g: at six o’clock;  at closing time;  at night.\n\n- In the direction of (often in an unfocused or uncaring manner).\nE.g: He threw the ball at me.  He shouted at her.\n\n- Denotes a price.\nE.g: 3 apples at 2¢ (each)   The offer was at $30,000 before negotiations.\n\n- Occupied in (activity).\nE.g: men at work\n\n- In a state of.\nE.g: She is at sixes and sevens with him.  They are at loggerheads over how best to tackle the fiscal cliff.  The city was at the mercy of the occupying forces.\n\n- Indicates a position on a scale or in a series.\nE.g: Sell at 90.  Tiger finished the round at tenth, seven strokes behind the leaders.  I'm offering it—just to select customers—at cost.\n\n- Because of.\nE.g: to laugh at a joke   mad at their comments\n\n- Indicates a means, method, or manner.\n\n- Holding a given speed or rate.\nE.g: It is growing at the rate of 3% a year.  Cruising along at fifty miles per hour.\n\n- (used for skills (including in activities) or areas of knowledge) On the subject of; regarding.\nE.g: He slipped at marksmanship over his extended vacation.\n\n- (stressed pronunciation) Bothering, irritating, causing discomfort to\n\n",
+            "definition": "- In, near, or in the general vicinity of a particular place.\nVí dụ: Caesar was at Rome;  at the corner of Fourth Street and Vine;  at Jim’s house\n\n- (indicating time) Indicating occurrence in an instant of time or a period of time relatively short in context or from the speaker's perspective.\nVí dụ: at six o’clock;  at closing time;  at night.\n\n- In the direction of (often in an unfocused or uncaring manner).\nVí dụ: He threw the ball at me.  He shouted at her.\n\n- Denotes a price.\nVí dụ: 3 apples at 2¢ (each)   The offer was at $30,000 before negotiations.\n\n- Occupied in (activity).\nVí dụ: men at work\n\n- In a state of.\nVí dụ: She is at sixes and sevens with him.  They are at loggerheads over how best to tackle the fiscal cliff.  The city was at the mercy of the occupying forces.\n\n- Indicates a position on a scale or in a series.\nVí dụ: Sell at 90.  Tiger finished the round at tenth, seven strokes behind the leaders.  I'm offering it—just to select customers—at cost.\n\n- Because of.\nVí dụ: to laugh at a joke   mad at their comments\n\n- Indicates a means, method, or manner.\n\n- Holding a given speed or rate.\nVí dụ: It is growing at the rate of 3% a year.  Cruising along at fifty miles per hour.\n\n- (used for skills (including in activities) or areas of knowledge) On the subject of; regarding.\nVí dụ: He slipped at marksmanship over his extended vacation.\n\n- (stressed pronunciation) Bothering, irritating, causing discomfort to\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "at",
@@ -1340,7 +1340,7 @@
     },
     "questionable": {
         "adjective": {
-            "definition": "- Problematic; open to doubt or challenge.\nE.g: It is questionable if the universe is open or closed.\n\n- Of dubious respectability or morality.\nE.g: Tiffiny’s behavior is highly questionable.\n\n- Inviting questions; inviting inquiry.\n\n",
+            "definition": "- Problematic; open to doubt or challenge.\nVí dụ: It is questionable if the universe is open or closed.\n\n- Of dubious respectability or morality.\nVí dụ: Tiffiny’s behavior is highly questionable.\n\n- Inviting questions; inviting inquiry.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "questionable",
@@ -1349,21 +1349,21 @@
     },
     "how": {
         "noun": {
-            "definition": "- The means by which something is accomplished.\nE.g: I am not interested in the why, but in the how.\n\n",
+            "definition": "- The means by which something is accomplished.\nVí dụ: I am not interested in the why, but in the how.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "how",
             "type": "noun"
         },
         "adverb": {
-            "definition": "- To what degree.\nE.g: How often do you practice?\n\n- In what manner.\nE.g: How do you solve this puzzle?\n\n- In what state.\nE.g: How are you?\n\n- Used as a modifier to indicate surprise, delight, or other strong feelings in an exclamation.\nE.g: How very interesting!\n\n",
+            "definition": "- To what degree.\nVí dụ: How often do you practice?\n\n- In what manner.\nVí dụ: How do you solve this puzzle?\n\n- In what state.\nVí dụ: How are you?\n\n- Used as a modifier to indicate surprise, delight, or other strong feelings in an exclamation.\nVí dụ: How very interesting!\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "how",
             "type": "adverb"
         },
         "conjunction": {
-            "definition": "- The manner or way that.\nE.g: I remember how I solved this puzzle.\n\n- That, the fact that, the way that.\n\n",
+            "definition": "- The manner or way that.\nVí dụ: I remember how I solved this puzzle.\n\n- That, the fact that, the way that.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "how",
@@ -1372,7 +1372,7 @@
     },
     "interconnect": {
         "verb": {
-            "definition": "- To connect to one another.\nE.g: The Internet interconnects a set of networks.\n\n",
+            "definition": "- To connect to one another.\nVí dụ: The Internet interconnects a set of networks.\n\n",
             "synonyms": [
                 "anastomose"
             ],
@@ -1409,7 +1409,7 @@
             "type": "noun"
         },
         "verb": {
-            "definition": "- To feed and cause to grow; to supply with matter which increases bulk or supplies waste, and promotes health; to furnish with nutriment.\n\n- To support; to maintain.\n\n- To supply the means of support and increase to; to encourage; to foster\nE.g: to nourish rebellion\n\n- To cherish; to comfort.\n\n- To educate; to instruct; to bring up; to nurture; to promote the growth of in attainments.\n\n- To promote growth; to furnish nutriment.\n\n- To gain nourishment.\n\n",
+            "definition": "- To feed and cause to grow; to supply with matter which increases bulk or supplies waste, and promotes health; to furnish with nutriment.\n\n- To support; to maintain.\n\n- To supply the means of support and increase to; to encourage; to foster\nVí dụ: to nourish rebellion\n\n- To cherish; to comfort.\n\n- To educate; to instruct; to bring up; to nurture; to promote the growth of in attainments.\n\n- To promote growth; to furnish nutriment.\n\n- To gain nourishment.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "nourish",
@@ -1425,7 +1425,7 @@
             "type": "noun"
         },
         "verb": {
-            "definition": "- To feed and cause to grow; to supply with matter which increases bulk or supplies waste, and promotes health; to furnish with nutriment.\n\n- To support; to maintain.\n\n- To supply the means of support and increase to; to encourage; to foster\nE.g: to nourish rebellion\n\n- To cherish; to comfort.\n\n- To educate; to instruct; to bring up; to nurture; to promote the growth of in attainments.\n\n- To promote growth; to furnish nutriment.\n\n- To gain nourishment.\n\n",
+            "definition": "- To feed and cause to grow; to supply with matter which increases bulk or supplies waste, and promotes health; to furnish with nutriment.\n\n- To support; to maintain.\n\n- To supply the means of support and increase to; to encourage; to foster\nVí dụ: to nourish rebellion\n\n- To cherish; to comfort.\n\n- To educate; to instruct; to bring up; to nurture; to promote the growth of in attainments.\n\n- To promote growth; to furnish nutriment.\n\n- To gain nourishment.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "nourishes",
@@ -3280,6 +3280,416 @@
             "synonyms": [],
             "antonyms": [],
             "word": "take it",
+            "type": "verb"
+        }
+    },
+    "distant": {
+        "adjective": {
+            "definition": "- Far off (physically, logically or mentally).\nE.g: We heard a distant rumbling but didn't pay any more attention to it.   She was surprised to find that her fiancé was a distant relative of hers.   His distant look showed that he was not listening to me.\n\n- Emotionally unresponsive or unwilling to express genuine feelings.\nE.g: Ever since our argument, she has been totally distant toward me.\n\n",
+            "synonyms": [
+                "aloof",
+                "cold",
+                "faraway"
+            ],
+            "antonyms": [],
+            "word": "distant",
+            "type": "adjective"
+        }
+    },
+    "love": {
+        "noun": {
+            "definition": "- Strong affection.\n\n- A person who is the object of romantic feelings; a darling, a sweetheart, a beloved.\n\n- A term of friendly address, regardless of feelings.\nE.g: Hello love, how can I help you?\n\n- A thing, activity etc which is the object of one's deep liking or enthusiasm.\n\n- Sexual desire; attachment based on sexual attraction.\n\n- Sexual activity.\n\n- An instance or episode of being in love; a love affair.\n\n- Used as the closing, before the signature, of a letter, especially between good friends or family members, or by the young.\n\n- Alternative letter-case form of Love.\n\n- A thin silk material.\n\n- A climbing plant, Clematis vitalba.\n\n",
+            "synonyms": [
+                "baby",
+                "darling",
+                "honey",
+                "love bird",
+                "lover",
+                "pet",
+                "sweetheart",
+                "romance",
+                "coitus",
+                "sex",
+                "the beast with two backs",
+                "aphrodisia",
+                "carnality",
+                "darling",
+                "lover",
+                "mate",
+                "sweetheart",
+                "sweetie"
+            ],
+            "antonyms": [
+                "indifference",
+                "angst",
+                "hate",
+                "hatred",
+                "malice",
+                "spite"
+            ],
+            "word": "love",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- (usually transitive, sometimes intransitive, stative) To have a strong affection for (someone or something).\nE.g: I love my spouse.   I love you!\n\n- To need, thrive on.\nE.g: Mold loves moist, dark places.\n\n- To be strongly inclined towards something; an emphatic form of like.\nE.g: I love walking barefoot on wet grass;  I'd love to join the team;  I love what you've done with your hair\n\n- (usually transitive, sometimes intransitive) To care deeply about, to be dedicated to (someone or something).\n\n- To derive delight from a fact or situation.\nE.g: I love the fact that the coffee shop now offers fat-free chai latte.\n\n- To have sex with (perhaps from make love).\nE.g: I wish I could love her all night long.\n\n",
+            "synonyms": [
+                "adore",
+                "cherish",
+                "enjoy",
+                "go to bed with",
+                "sleep with"
+            ],
+            "antonyms": [
+                "despise",
+                "hate"
+            ],
+            "word": "love",
+            "type": "verb"
+        }
+    },
+    "cherry": {
+        "noun": {
+            "definition": "- A small fruit, usually red, black or yellow, with a smooth hard seed and a short hard stem.\n\n- Prunus subg. Cerasus, trees or shrubs that bear cherries.\n\n- The wood of a cherry tree.\n\n- (color) Cherry red.\n\n- Virginity, especially female virginity as embodied by a hymen.\n\n- A subtree consisting of a node with exactly two leaves.\n\n- A cricket ball.\n\n- Cherrytop.\n\n- Burning tip of a cigarette.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "cherry",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Containing or having the taste of cherries.\n\n- Of a bright red colour; cherry red.\n\n- (often of cars) In excellent condition; mint condition.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "cherry",
+            "type": "adjective"
+        }
+    },
+    "robber": {
+        "noun": {
+            "definition": "- A person who robs.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "robber",
+            "type": "noun"
+        }
+    },
+    "beat": {
+        "noun": {
+            "definition": "- A stroke; a blow.\n\n- A pulsation or throb.\nE.g: a beat of the heart; the beat of the pulse\n\n- A pulse on the beat level, the metric level at which pulses are heard as the basic unit. Thus a beat is the basic time unit of a piece.\n\n- A rhythm.\n\n- The interference between two tones of almost equal frequency\n\n- (authorship) A short pause in a play, screenplay, or teleplay, for dramatic or comedic effect; a plot point or story development.\n\n- The route patrolled by a police officer or a guard.\n\n- (by extension) An area of a person's responsibility, especially\n\n- An act of reporting news or scientific results before a rival; a scoop.\n\n- That which beats, or surpasses, another or others.\nE.g: the beat of him\n\n- A precinct.\n\n- A place of habitual or frequent resort.\n\n- A low cheat or swindler.\nE.g: a dead beat\n\n- The instrumental portion of a piece of hip-hop music.\n\n- The act of scouring, or ranging over, a tract of land to rouse or drive out game; also, those so engaged, collectively.\n\n- A smart tap on the adversary's blade.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "beat",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To hit; strike\nE.g: As soon as she heard that her father had died, she went into a rage and beat the wall with her fists until her knuckles bled.\n\n- To strike or pound repeatedly, usually in some sort of rhythm.\nE.g: He danced hypnotically while she beat the atabaque.\n\n- To strike repeatedly; to inflict repeated blows; to knock vigorously or loudly.\n\n- To move with pulsation or throbbing.\n\n- To win against; to defeat or overcome; to do better than, outdo, or excel (someone) in a particular, competitive event.\nE.g: I just can't seem to beat the last level of this video game.\n\n- To sail to windward using a series of alternate tacks across the wind.\n\n- To strike (water, foliage etc.) in order to drive out game; to travel through (a forest etc.) for hunting.\n\n- To mix food in a rapid fashion. Compare whip.\nE.g: Beat the eggs and whip the cream.\n\n- (In haggling for a price) of a buyer, to persuade the seller to reduce a price\nE.g: He wanted $50 for it, but I managed to beat him down to $35.\n\n- To indicate by beating or drumming.\nE.g: to beat a retreat; to beat to quarters\n\n- To tread, as a path.\n\n- To exercise severely; to perplex; to trouble.\n\n- To be in agitation or doubt.\n\n- To make a sound when struck.\nE.g: The drums beat.\n\n- To make a succession of strokes on a drum.\nE.g: The drummers beat to call soldiers to their quarters.\n\n- To sound with more or less rapid alternations of greater and less intensity, so as to produce a pulsating effect; said of instruments, tones, or vibrations, not perfectly in unison.\n\n- To arrive at a place before someone.\nE.g: He beat me there.\n\n- To have sexual intercourse.\nE.g: Bruv, she came in just as we started to beat.\n\n- To rob.\nE.g: He beat me out of 12 bucks last night.\n\n",
+            "synonyms": [
+                "do it",
+                "get it on",
+                "have sex",
+                "shag",
+                "hammer",
+                "knock",
+                "pound",
+                "strike",
+                "whack",
+                "negotiate"
+            ],
+            "antonyms": [],
+            "word": "beat",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Exhausted\nE.g: After the long day, she was feeling completely beat.\n\n- Dilapidated, beat up\nE.g: Dude, you drive a beat car like that and you ain’t gonna get no honeys.\n\n- Fabulous\nE.g: Her makeup was beat!\n\n- Boring\n\n- (of a person) ugly\n\n",
+            "synonyms": [
+                "fantabulosa"
+            ],
+            "antonyms": [],
+            "word": "beat",
+            "type": "adjective"
+        }
+    },
+    "election": {
+        "noun": {
+            "definition": "- A process of choosing a leader, members of parliament, councillors or other representatives by popular vote.\nE.g: How did you vote in (UK also: at) the last election?\n\n- The choice of a leader or representative by popular vote.\nE.g: The election of John Smith was due to his broad appeal.\n\n- An option that is selected.\nE.g: W-4 election\n\n- Any conscious choice.\n\n- In Calvinism, God's predestination of saints including all of the elect.\n\n- Those who are elected.\n\n",
+            "synonyms": [
+                "chosenness"
+            ],
+            "antonyms": [],
+            "word": "election",
+            "type": "noun"
+        }
+    },
+    "board game": {
+        "noun": {
+            "definition": "- Any of many games of strategy or chance played on a specially designed board; often involves one or more players moving pieces and using dice or cards.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "board game",
+            "type": "noun"
+        }
+    },
+    "captain": {
+        "noun": {
+            "definition": "- A chief or leader.\n\n- The person lawfully in command of a ship or other vessel.\nE.g: The captain is the last man to leave a sinking ship.\n\n- An army officer with a rank between the most senior grade of lieutenant and major.\n\n- A naval officer with a rank between commander and commodore.\n\n- A commissioned officer in the United States Navy, Coast Guard, NOAA Corps, or PHS Corps of a grade superior to a commander and junior to a rear admiral (lower half). A captain is equal in grade or rank to an Army, Marine Corps, or Air Force colonel.\n\n- One of the athletes on a sports team who is designated to make decisions, and is allowed to speak for his team with a referee or official.\n\n- The leader of a group of workers.\nE.g: John Henry said to the captain, \"A man ain't nothing but a man.\"\n\n- The head boy of a school.\n\n- A maître d', a headwaiter.\n\n- An honorific title given to a prominent person. See colonel.\n\n",
+            "synonyms": [
+                "master",
+                "skipper",
+                "foreman",
+                "straw boss",
+                "supervisor",
+                "CAPT",
+                "CAPT.",
+                "CPT",
+                "Capt",
+                "Capt.",
+                "pilot",
+                "pilot in command"
+            ],
+            "antonyms": [],
+            "word": "captain",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To act as captain\n\n- To exercise command of a ship, aircraft or sports team.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "captain",
+            "type": "verb"
+        }
+    },
+    "challenge": {
+        "noun": {
+            "definition": "- A confrontation; a dare.\n\n- A difficult task, especially one that the person making the attempt finds more enjoyable because of that difficulty.\n\n- A procedure or action.\n\n- The opening and crying of hounds at first finding the scent of their game.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "challenge",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To invite (someone) to take part in a competition.\nE.g: We challenged the boys next door to a game of football.\n\n- To dare (someone).\n\n- To dispute (something).\nE.g: to challenge the accuracy of a statement or of a quotation\n\n- To make a formal objection to a juror.\n\n- To claim as due; to demand as a right.\n\n- To censure; to blame.\n\n- To question or demand the countersign from (one who attempts to pass the lines).\nE.g: The sentinel challenged us with \"Who goes there?\"\n\n- To object to the reception of the vote of, e.g. on the ground that the person is not qualified as a voter.\n\n- To take (a final exam) in order to get credit for a course without taking it.\n\n",
+            "synonyms": [
+                "becall",
+                "call out"
+            ],
+            "antonyms": [],
+            "word": "challenge",
+            "type": "verb"
+        }
+    },
+    "champion": {
+        "noun": {
+            "definition": "- An ongoing winner in a game or contest.\nE.g: The defending champion is expected to defeat his challenger.\n\n- Someone who is chosen to represent a group of people in a contest.\nE.g: Barcelona is eligible to play in FIFA Club World Cup as the champion of Europe.\n\n- Someone who fights for a cause or status.\nE.g: champion of women's suffrage\n\n- Someone who fights on another's behalf.\nE.g: champion of the poor\n\n",
+            "synonyms": [
+                "paladin"
+            ],
+            "antonyms": [],
+            "word": "champion",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To promote, advocate, or act as a champion for (a cause, etc.).\n\n- To challenge.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "champion",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Acting as a champion; that has defeated all one's competitors.\n\n- Excellent; beyond compare.\n\n- (predicative) Excellent; brilliant; superb; deserving of high praise.\nE.g: \"That rollercoaster was champion,\" laughed Vinny.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "champion",
+            "type": "adjective"
+        }
+    },
+    "cheat": {
+        "verb": {
+            "definition": "- To violate rules in order to gain advantage from a situation.\nE.g: My brother flunked biology because he cheated on his mid-term.\n\n- To be unfaithful to one's spouse or partner.\nE.g: After he found out his wife cheated, he left her.\n\n- To manage to avoid something even though it seemed unlikely.\nE.g: He cheated death when his car collided with a moving train.\n\n- To deceive; to fool; to trick.\nE.g: He cheated his way into office.\n\n",
+            "synonyms": [
+                "belirt",
+                "blench",
+                "break the rules",
+                "lirt"
+            ],
+            "antonyms": [],
+            "word": "cheat",
+            "type": "verb"
+        }
+    },
+    "muss": {
+        "noun": {
+            "definition": "- A mess (disagreeable mixture or confusion of things; disorder)\n\n- A scramble, as when small objects are thrown down, to be taken by those who can seize them; a confused struggle.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "muss",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To rumple, tousle or make (something) untidy.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "muss",
+            "type": "verb"
+        }
+    },
+    "classical music": {
+        "noun": {
+            "definition": "- Music of the classical period; the music of Mozart, Haydn, etc; the musical period before the romantic.\n\n- The more serious forms of music, taught through formal education and performed according to strict rules, as opposed to folk music or popular music.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "classical music",
+            "type": "noun"
+        }
+    },
+    "club": {
+        "noun": {
+            "definition": "- An association of members joining together for some common purpose, especially sports or recreation.\n\n- A heavy stick intended for use as a weapon or plaything.\n\n- A joint charge of expense, or any person's share of it; a contribution to a common fund.\n\n- An establishment that provides staged entertainment, often with food and drink, such as a nightclub.\nE.g: She was sitting in a jazz club, sipping wine and listening to a bass player's solo.\n\n- A black clover shape (♣), one of the four symbols used to mark the suits of playing cards.\n\n- Any set of people with a shared characteristic.\nE.g: Michael stood you up?  Welcome to the club.\n\n- A club sandwich.\n\n- The slice of bread in the middle of a club sandwich.\n\n",
+            "synonyms": [
+                "team",
+                "cudgel"
+            ],
+            "antonyms": [],
+            "word": "club",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To hit with a club.\nE.g: He clubbed the poor dog.\n\n- To join together to form a group.\n\n- To combine into a club-shaped mass.\nE.g: a medical condition with clubbing of the fingers and toes\n\n- To go to nightclubs.\nE.g: We went clubbing in Ibiza.\n\n- To pay an equal or proportionate share of a common charge or expense.\n\n- To raise, or defray, by a proportional assessment.\nE.g: to club the expense\n\n- To drift in a current with an anchor out.\n\n- To throw, or allow to fall, into confusion.\n\n- To unite, or contribute, for the accomplishment of a common end.\nE.g: to club exertions\n\n- To turn the breech of (a musket) uppermost, so as to use it as a club.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "club",
+            "type": "verb"
+        }
+    },
+    "coach": {
+        "noun": {
+            "definition": "- A wheeled vehicle, generally drawn by horse power.\n\n- A passenger car, either drawn by a locomotive or part of a multiple unit.\n\n- (originally Oxford University slang) A trainer or instructor.\n\n- A single-decked long-distance, or privately hired, bus.\n\n- The forward part of the cabin space under the poop deck of a sailing ship; the fore-cabin under the quarter deck.\n\n- (chiefly US) The part of a commercial passenger airplane or train reserved for those paying the lower standard fares; the economy section.\nE.g: John flew coach to Vienna, but first-class back home.\n\n",
+            "synonyms": [
+                "carriage",
+                "carriage"
+            ],
+            "antonyms": [],
+            "word": "coach",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To train.\n\n- To instruct; to train.\nE.g: She has coached many opera stars.\n\n- To study under a tutor.\n\n- To travel in a coach (sometimes coach it).\n\n- To convey in a coach.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "coach",
+            "type": "verb"
+        }
+    },
+    "competition": {
+        "noun": {
+            "definition": "- The action of competing.\nE.g: The competition for this job is strong.\n\n- A contest for a prize or award.\nE.g: The newspaper is featuring a competition to win a car.\n\n- The competitors in such a contest.\nE.g: The new stain remover was ten times more effective than the competition.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "cooperation"
+            ],
+            "word": "competition",
+            "type": "noun"
+        }
+    },
+    "concert": {
+        "noun": {
+            "definition": "- Agreement in a design or plan; union formed by mutual communication of opinions and views; accordance in a scheme; harmony; simultaneous action.\n\n- Musical accordance or harmony; concord.\n\n- A musical entertainment in which several voices or instruments take part.\nE.g: I'm going to the rock concert on Friday.\n\n",
+            "synonyms": [
+                "gig"
+            ],
+            "antonyms": [],
+            "word": "concert",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To plan together; to settle or adjust by conference, agreement, or consultation.\n\n- To plan; to devise; to arrange.\n\n- To act in harmony or conjunction; to form combined plans.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "concert",
+            "type": "verb"
+        }
+    },
+    "defeat": {
+        "verb": {
+            "definition": "- To overcome in battle or contest.\nE.g: Wellington defeated Napoleon at Waterloo.\n\n- To reduce, to nothing, the strength of.\n\n- To nullify\n\n",
+            "synonyms": [
+                "beat",
+                "overcome",
+                "vanquish"
+            ],
+            "antonyms": [],
+            "word": "defeat",
+            "type": "verb"
+        }
+    },
+    "death": {
+        "noun": {
+            "definition": "- The cessation of life and all associated processes; the end of an organism's existence as an entity independent from its environment and its return to an inert, nonliving state.\nE.g: The death of my grandmother saddened the whole family.\n\n- (often capitalized) The personification of death as a hooded figure with a scythe; the Grim Reaper. The pronoun he is not the only option, but probably the most traditional one, as it matches with the male grammatical gender of Old English dēaþ, also with cognate German der Tod. The fourth apocalyptic rider (Bible, revelations 6:8) is male θᾰ́νᾰτος (thanatos) in Greek. It has the female name Mors in Latin, but is referred to with male forms qui and eum. The following quotes show this rider on a pale horse is his in the English Bible and she in Peter Gabriel's lyrics.\nE.g: When death walked in, a chill spread through the room.\n\n- (the death) The collapse or end of something.\nE.g: England scored a goal at the death to even the score at one all.\n\n- Spiritual lifelessness.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "death",
+            "type": "noun"
+        }
+    },
+    "entertaining": {
+        "verb": {
+            "definition": "- To amuse (someone); to engage the attention of agreeably.\nE.g: The motivational speaker not only instructed but also entertained the audience.\n\n- To have someone over at one's home for a party or visit.\nE.g: They enjoy entertaining a lot.\n\n- To receive and take into consideration; to have a thought in mind.\nE.g: The committee would like to entertain the idea of reducing the budget figures.\n\n- To take or keep in one's service; to maintain; to support; to harbour; to keep.\n\n- To meet or encounter, as an enemy.\n\n- To lead on; to bring along; to introduce.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "entertaining",
+            "type": "verb"
+        },
+        "noun": {
+            "definition": "- Entertainment.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "entertaining",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Very amusing; that entertains.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "entertaining",
+            "type": "adjective"
+        }
+    },
+    "get rid of": {
+        "verb": {
+            "definition": "- To rid oneself of; dispose (of); to remove; to abolish; to lose\nE.g: I want to get rid of your influence over my life!\n\n",
+            "synonyms": [
+                "dismiss",
+                "drop",
+                "lose",
+                "shed"
+            ],
+            "antonyms": [],
+            "word": "get rid of",
+            "type": "verb"
+        }
+    },
+    "dismiss": {
+        "verb": {
+            "definition": "- To discharge; to end the employment or service of.\nE.g: The company dismissed me after less than a year.\n\n- To order to leave.\nE.g: The soldiers were dismissed after the parade.\n\n- To dispel; to rid one’s mind of.\nE.g: He dismissed all thoughts of acting again.\n\n- To reject; to refuse to accept.\nE.g: The court dismissed the case.\n\n- To send or put away, to discard with disregard, contempt or disdain. (sometimes followed by as).\nE.g: She dismissed him with a wave of the hand.\n\n- To get a batsman out.\nE.g: He was dismissed for 99 runs.\n\n- To give someone a red card; to send off.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "dismiss",
+            "type": "verb"
+        }
+    },
+    "drop": {
+        "noun": {
+            "definition": "- A small quantity of liquid, just large enough to hold its own round shape via surface tension, especially one that falls from a source of liquid.\nE.g: Put three drops of oil into the mixture.\n\n- A very small quantity of liquid, or (by extension) of anything.\nE.g: asked for just a drop more tea; she was thirsty and there wasn't a drop of water to be found\n\n- (now especially with \"the\") Alcoholic spirits in general.\nE.g: It doesn't matter where you're from; anyone who enjoys the drop is a friend of mine.\n\n- That which resembles or hangs like a liquid globule: a hanging diamond ornament or earring, a glass pendant on a chandelier, etc.\n\n- A thing which drops or hangs down:\n\n- A fall, descent; an act or instance of dropping.\nE.g: That was a long drop, but fortunately I didn't break any bones.\n\n- A release (of music, a vdeo game, etc).\n\n- A decline in quantity, quality, rate, or degree; a decline (when going from one value to another).\nE.g: a drop in demand for oil resulted in a drop in prices\n\n- A thing, person, etc which is dropped:\n\n- An unsolicited credit card issue.\n\n- The amount of money that a gambler exchanges for chips in a casino.\n\n- The distance below a cliff or other high position into which someone or something could fall; the distance to which someone or something drops; a steep slope.\nE.g: On one side of the road was a 50-foot drop.\n\n- The vertical length of a hanging curtain.\n\n- The depth of a (square) sail (generally applied to the courses only); the vertical dimension of a sail.\n\n- The distance of the axis of a shaft below the base of a hanger.\n\n- A place where items or supplies may be left for others to collect, whether openly (as with a mail drop) or secretly or illegaly (as in espionage or crime); a drop-off point.\nE.g: I left the plans at the drop, like you asked.\n\n- A drop-back.\nE.g: The Tiger quarterback took a one-step drop, expecting his tight end to be open.\n\n- (Rugby football) A drop-kick.\n\n- A drop target.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "drop",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To fall in droplets (of a liquid).\n\n- To drip (a liquid).\nE.g: The equipment shows how much the glacier has moved and the amount it dropped in height over the summer.\n\n- Generally, to fall (straight down).\nE.g: A single shot was fired and the bird dropped from the sky.\n\n- To let fall; to allow to fall (either by releasing hold of, or losing one's grip on).\nE.g: Don't drop that plate!   The police ordered the men to drop their weapons.\n\n- To let drops fall; to discharge itself in drops.\n\n- To lower; to move to a lower position.\n\n- To set down from a vehicle; to deliver or deposit by stopping.\nE.g: Could you drop me at the airport on your way to work tomorrow?\n\n- To sink quickly to the ground.\nE.g: Drop and give me thirty push-ups, private!\n\n- To fall dead, or to fall in death.\n\n- To come to an end (by not being kept up); to stop.\n\n- To mention casually or incidentally, usually in conversation.\nE.g: The moderator would drop hints whenever the students struggled.\n\n- To part with or spend (money).\n\n- To cease concerning oneself over; to have nothing more to do with (a subject, discussion etc.).\nE.g: I'm tired of this subject. Will you just drop it?\n\n- To lessen, decrease, or diminish in value, condition, degree, etc.\nE.g: The stock dropped 1.5% yesterday.   We can take our vacation when the price of fuel drops.   Watch for the temperature to drop sharply, then you'll know the reaction is complete.\n\n- To let (a letter etc.) fall into a postbox; to send (a letter or message) in an offhand manner.\nE.g: Drop me a note when you get to the city.\n\n- To make (someone or something) fall to the ground from a blow, gunshot etc.; to bring down, to shoot down.\nE.g: Make any sudden movements and I will drop you!\n\n- To fail to write, or (especially) to pronounce (a syllable, letter etc.).\nE.g: Cockneys drop their aitches.\n\n- (of a fielder) To fail to make a catch from a batted ball that would have led to the batsman being out.\nE.g: Warne dropped Tendulkar on 99. Tendulkar went on to get a century next ball\n\n- To swallow (a drug), particularly LSD.\nE.g: They had never dropped acid.\n\n- To dispose (of); get rid of; to remove; to lose.\nE.g: I dropped ten pounds and an obnoxious fiancée.\n\n- To eject; to dismiss; to cease to include, as if on a list.\nE.g: I've been dropped from the football team.\n\n- To drop out of the betting.\n\n- (rugby football) To score (a goal) by means of a drop kick.\n\n- To impart.\nE.g: I drop knowledge wherever I go.\n\n- To release to the public.\nE.g: That hacker has been threatening to drop my docs [i.e. publish my personal information].\n\n- To play a portion of music in the manner of a disc jockey.\nE.g: I love it when he drops his funky beats.\n\n- To enter public distribution.\nE.g: \"Hip-Hop Xmas\" dropped in time for the holidays.\n\n- To tune (a guitar string, etc.) to a lower note.\n\n- To cancel or end a scheduled event, project or course.\nE.g: I had to drop calculus because it was taking up too much of my time and I couldn't go anymore.\n\n- (fast food) To cook, especially by deep-frying or grilling.\nE.g: Drop a basket of fries.\n\n- (of a voice) To lower in timbre, often relating to puberty.\nE.g: Billy's voice dropped suddenly when he turned 12.\n\n- (of a sound or song) To lower in pitch, tempo, key, or other quality.\nE.g: My synthesizer makes the notes sound funny when they drop below C2.\n\n- (of people) To visit informally; used with in or by.\nE.g: Do drop by soon and I'll lend you that book.\n\n- To give birth to.\nE.g: to drop a lamb\n\n- To cover with drops; to variegate; to bedrop.\n\n- (of the testicles) To hang lower and begin producing sperm due to puberty.\n\n",
+            "synonyms": [
+                "drop off"
+            ],
+            "antonyms": [],
+            "word": "drop",
             "type": "verb"
         }
     }
