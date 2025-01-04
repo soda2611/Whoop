@@ -4279,5 +4279,83 @@
             "word": "clued",
             "type": "verb"
         }
+    },
+    "this": {
+        "noun": {
+            "definition": "- Something being indicated that is here; one of these.\n\n- Referring to the current context in a programming environment in C-like languages.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "this",
+            "type": "noun"
+        },
+        "adverb": {
+            "definition": "- To the degree or extent indicated.\nE.g: Do we need this many recommendations?\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "this",
+            "type": "adverb"
+        },
+        "pronoun": {
+            "definition": "- The thing, item, etc. being indicated.\nE.g: This isn't the item that I ordered.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "this",
+            "type": "pronoun"
+        },
+        "interjection": {
+            "definition": "- Indicates the speaker's strong approval or agreement with the previous material.\n\n",
+            "synonyms": [
+                "+1",
+                "IAWTP",
+                "QFT"
+            ],
+            "antonyms": [],
+            "word": "this",
+            "type": "interjection"
+        }
+    },
+    "thumbs up": {
+        "noun": {
+            "definition": "- A gesture signifying approval or okay; a thumb pointing up out of a fist.\nE.g: He smiled and gave a big thumbs up.\n\n- An approval or okay.\nE.g: We got the thumbs-up to go ahead with the project.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "thumbs down"
+            ],
+            "word": "thumbs up",
+            "type": "noun"
+        }
+    },
+    "thumbs down": {
+        "verb": {
+            "definition": "- To get (a passing vehicle) to stop and give one a ride, signalling to the driver by holding out one's thumb (as a hitchhiker)\nE.g: I was stranded in the middle of nowhere, but luckily I managed to thumb down a passing car.\n\n- To disapprove or reject\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "thumbs down",
+            "type": "verb"
+        },
+        "noun": {
+            "definition": "- A gesture signifying disapproval; a thumb pointing down out of a fist.\nE.g: He shook his head and gave a thumbs down.\n\n- A rejection or refusal.\nE.g: We requested permission but got a thumbs-down.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "thumbs up"
+            ],
+            "word": "thumbs down",
+            "type": "noun"
+        }
+    },
+    "okay": {
+        "noun": {
+            "definition": "- Endorsement; approval.\nE.g: We can start as soon as we get the OK.\n\n",
+            "synonyms": [
+                "approval",
+                "endorsement",
+                "go-ahead",
+                "green light",
+                "thumbs up"
+            ],
+            "antonyms": [],
+            "word": "okay",
+            "type": "noun"
+        }
     }
 }
