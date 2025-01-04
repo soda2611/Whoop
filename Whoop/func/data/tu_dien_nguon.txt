@@ -1,30 +1,17 @@
 {
     "hello": {
         "noun": {
-            "definition": "- \"Hello!\" or an equivalent greeting.\n\n",
+            "definition": "- The conscious production or arrangement of sounds, colours, forms, movements, or other elements in a manner that affects the senses and emotions, usually specifically the production of the beautiful in a graphic or plastic medium.\nVí dụ: There is a debate as to whether graffiti is art or vandalism.\n\n- The creative and emotional expression of mental imagery, such as visual, auditory, social, etc.\n\n- Skillful creative activity, usually with an aesthetic focus.\nVí dụ: She's mastered the art of programming.\n\n- The study and the product of these processes.\nVí dụ: He's at university to study art.\n\n- Aesthetic value.\nVí dụ: Her photographs are nice, but there's no art in them.\n\n- Artwork.\nVí dụ: Sotheby's regularly auctions art for millions.\n\n- A field or category of art, such as painting, sculpture, music, ballet, or literature.\nVí dụ: I'm a great supporter of the arts.\n\n- A nonscientific branch of learning; one of the liberal arts.\n\n- Skill that is attained by study, practice, or observation.\n\n- Contrivance, scheming, manipulation.\n\n",
             "synonyms": [
-                "greeting"
+                "craft"
             ],
-            "antonyms": [],
+            "antonyms": [
+                "mundacity",
+                "nature",
+                "subsistence"
+            ],
             "word": "hello",
             "type": "noun"
-        },
-        "verb": {
-            "definition": "- To greet with \"hello\".\n\n",
-            "synonyms": [],
-            "antonyms": [],
-            "word": "hello",
-            "type": "verb"
-        },
-        "interjection": {
-            "definition": "- A greeting (salutation) said when meeting someone or acknowledging someone’s arrival or presence.\nVí dụ: Hello, everyone.\n\n- A greeting used when answering the telephone.\nVí dụ: Hello? How may I help you?\n\n- A call for response if it is not clear if anyone is present or listening, or if a telephone conversation may have been disconnected.\nVí dụ: Hello? Is anyone there?\n\n- Used sarcastically to imply that the person addressed or referred to has done something the speaker or writer considers to be foolish.\nVí dụ: You just tried to start your car with your cell phone. Hello?\n\n- An expression of puzzlement or discovery.\nVí dụ: Hello! What’s going on here?\n\n",
-            "synonyms": [],
-            "antonyms": [
-                "bye",
-                "goodbye"
-            ],
-            "word": "hello",
-            "type": "interjection"
         }
     },
     "pol": {
@@ -37,12 +24,33 @@
         }
     },
     "gay": {
+        "noun": {
+            "definition": "- (chiefly in plural or attributive) A homosexual, especially a male homosexual; see also lesbian.\n\n- Something which is bright or colorful, such as a picture or a flower.\n\n- An ornament, a knick-knack.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To make happy or cheerful.\n\n- To cause (something, e.g. AIDS) to be associated with homosexual people.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "verb"
+        },
         "adjective": {
             "definition": "- (possibly obsolete) Happy, joyful, and lively.\nVí dụ: The Gay Science\n\n- Quick, fast.\n\n- (possibly obsolete) Festive, bright, or colourful.\nVí dụ: Pennsylvania Dutch include the plain folk and the gay folk.\n\n- Sexually promiscuous (of any gender), (sometimes particularly) engaged in prostitution.\n\n- Homosexual:\n\n- A pejorative:\n\n- (of a dog's tail) Upright or curved over the back.\n\n- (possibly obsolete) Considerable, great, large in number, size, or degree.\n\n",
             "synonyms": [],
             "antonyms": [],
             "word": "gay",
             "type": "adjective"
+        },
+        "adverb": {
+            "definition": "- (possibly obsolete) Considerably, very.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "adverb"
         }
     },
     "harmony": {
@@ -3690,6 +3698,585 @@
             ],
             "antonyms": [],
             "word": "drop",
+            "type": "verb"
+        }
+    },
+    "die": {
+        "verb": {
+            "definition": "- To stop living; to become dead; to undergo death.\n\n- To (stop living and) undergo (a specified death).\nE.g: He died a hero's death.\n\n- To yearn intensely.\nE.g: I'm dying for a packet of crisps.\n\n- To be or become hated or utterly ignored or cut off, as if dead.\nE.g: The day our sister eloped, she died to our mother.\n\n- To become spiritually dead; to lose hope.\nE.g: He died a little inside each time she refused to speak to him.\n\n- To be mortified or shocked by a situation.\nE.g: If anyone sees me wearing this ridiculous outfit, I'll die.\n\n- To be so overcome with emotion or laughter as to be incapacitated.\nE.g: When I found out my two favorite musicians would be recording an album together, I literally planned my own funeral arrangements and died.\n\n- (of a machine) To stop working, to break down.\nE.g: My car died in the middle of the freeway this morning.\n\n- (of a computer program) To abort, to terminate (as an error condition).\n\n- To perish; to cease to exist; to become lost or extinct.\n\n- To sink; to faint; to pine; to languish, with weakness, discouragement, love, etc.\n\n- (often with \"to\") To become indifferent; to cease to be subject.\nE.g: to die to pleasure or to sin\n\n- To disappear gradually in another surface, as where mouldings are lost in a sloped or curved face.\n\n- To become vapid, flat, or spiritless, as liquor.\n\n- (of a stand-up comedian or a joke) To fail to evoke laughter from the audience.\nE.g: Then there was that time I died onstage in Montreal...\n\n",
+            "synonyms": [
+                "be no more",
+                "bite the big one",
+                "bite the dust",
+                "buy the farm",
+                "cease to be",
+                "check out",
+                "cross over",
+                "cross the river",
+                "expire",
+                "give up the ghost",
+                "go to meet one's maker",
+                "hop off the twig",
+                "join the choir invisible",
+                "kick the bucket",
+                "pass",
+                "pass away",
+                "pass on",
+                "push up the daisies",
+                "shuffle off this mortal coil",
+                "stiff",
+                "succumb"
+            ],
+            "antonyms": [],
+            "word": "die",
+            "type": "verb"
+        }
+    },
+    "auxiliary": {
+        "noun": {
+            "definition": "- A person or group that acts in an auxiliary manner.\n\n- A sailing vessel equipped with an engine.\n\n- (grammar) An auxiliary verb.\n\n- A marching band colorguard.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "auxiliary",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Helping; giving assistance or support.\nE.g: auxiliary troops\n\n- Supplementary or subsidiary.\n\n- Held in reserve for exceptional circumstances.\n\n- Of a ship, having both sails and an engine.\n\n- (grammar) Relating to an auxiliary verb.\n\n",
+            "synonyms": [
+                "motorsailer",
+                "accessory",
+                "accessory",
+                "ancillary"
+            ],
+            "antonyms": [],
+            "word": "auxiliary",
+            "type": "adjective"
+        }
+    },
+    "temporary": {
+        "noun": {
+            "definition": "- One serving for a limited time; short-term employee.\n\n",
+            "synonyms": [
+                "temp"
+            ],
+            "antonyms": [],
+            "word": "temporary",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Not permanent; existing only for a period or periods of time.\n\n- Existing only for a short time or short times; transient, ephemeral.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "temporary",
+            "type": "adjective"
+        }
+    },
+    "permanent": {
+        "noun": {
+            "definition": "- A chemical hair treatment imparting or removing curliness, whose effects typically last for a period of weeks; a perm.\n\n- Given an n \\times n matrix a_{ij} \\,, the sum over all permutations \\pi \\, of \\prod_{i=1}^n{a_{i\\pi(i)}}.\n\n- (trading card games) A card whose effects persist beyond the turn on which it is played.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "permanent",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To perm (the hair).\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "permanent",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Without end, eternal.\nE.g: Nothing in this world is truly permanent.\n\n- Lasting for an indefinitely long time.\nE.g: The countries are now locked in a permanent state of conflict.\n\n",
+            "synonyms": [
+                "durable",
+                "intransient",
+                "everlasting",
+                "neverending",
+                "unending"
+            ],
+            "antonyms": [
+                "impermanent",
+                "temporary"
+            ],
+            "word": "permanent",
+            "type": "adjective"
+        }
+    },
+    "eternal": {
+        "noun": {
+            "definition": "- One who lives forever; an immortal.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "eternal",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Lasting forever; unending.\n\n- Existing outside time; as opposed to sempiternal, existing within time but everlastingly\n\n- Exceedingly great or bad; used as an intensifier.\nE.g: some eternal villain\n\n",
+            "synonyms": [
+                "agelong",
+                "endless",
+                "everlasting",
+                "permanent",
+                "sempiternal",
+                "unending",
+                "atemporal",
+                "timeless",
+                "awful"
+            ],
+            "antonyms": [
+                "ephemeral",
+                "momentary",
+                "transient"
+            ],
+            "word": "eternal",
+            "type": "adjective"
+        }
+    },
+    "folk music": {
+        "noun": {
+            "definition": "- Any genre of music originating from the ethnic community of a specific region, often passed down through oral tradition, without recorded songwriters and possessing a clear purpose or social function.\n\n- Any contemporary music in the style of traditional folk music, especially a specific genre of originally American popular music that draws on Anglo-American musical forms.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "folk music",
+            "type": "noun"
+        }
+    },
+    "group": {
+        "noun": {
+            "definition": "- A number of things or persons being in some relation to one another.\nE.g: A group of people gathered in front of the Parliament to demonstrate against the Prime Minister's proposals.\n\n- A set with an associative binary operation, under which there exists an identity element, and such that each element has an inverse.\n\n- An effective divisor on a curve.\n\n- A (usually small) group of people who perform music together.\nE.g: Did you see the new jazz group?\n\n- A small number (up to about fifty) of galaxies that are near each other.\n\n- A column in the periodic table of chemical elements.\n\n- A functional group.\nE.g: Nitro is an electron-withdrawing group.\n\n- A subset of a culture or of a society.\n\n- An air force formation.\n\n- A collection of formations or rock strata.\n\n- A number of users with same rights with respect to accession, modification, and execution of files, computers and peripherals.\n\n- An element of an espresso machine from which hot water pours into the portafilter.\n\n- A number of eighth, sixteenth, etc., notes joined at the stems; sometimes rather indefinitely applied to any ornament made up of a few short notes.\n\n- A set of teams playing each other in the same division, while not during the same period playing any teams that belong to other sets in the division.\n\n- A commercial organization.\n\n",
+            "synonyms": [
+                "collection",
+                "set",
+                "band",
+                "ensemble"
+            ],
+            "antonyms": [],
+            "word": "group",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To put together to form a group.\nE.g: group the dogs by hair colour\n\n- To come together to form a group.\n\n",
+            "synonyms": [
+                "assemble",
+                "begather",
+                "foregather",
+                "throng",
+                "amass",
+                "categorise",
+                "categorize",
+                "classify",
+                "collect",
+                "collect up",
+                "gather",
+                "gather up"
+            ],
+            "antonyms": [],
+            "word": "group",
+            "type": "verb"
+        }
+    },
+    "gym": {
+        "noun": {
+            "definition": "- A sport involving the performance of sequences of movements requiring physical strength, flexibility, and kinesthetic awareness.\nE.g: Gymnastics was a significant part of the physical education curriculum.\n\n- Complex intellectual or artistic exercises or feats of physical agility.\nE.g: His mental gymnastics are legendary.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gym",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To go to the gym.\nE.g: On Wednesdays I hike; on Fridays I gym.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gym",
+            "type": "verb"
+        }
+    },
+    "member": {
+        "noun": {
+            "definition": "- One who officially belongs to a group.\n\n- A part of a whole.\nE.g: The I-beams were to become structural members of a pedestrian bridge.\n\n- Part of an animal capable of performing a distinct office; an organ; a limb.\n\n- The penis.\n\n- One of the propositions making up a syllogism.\n\n- An element of a set.\n\n- A function or piece of data associated with each separate instance of a class.\n\n- The judge or adjudicator in a consumer court.\n\n- A part of a discourse or of a period, sentence, or verse; a clause.\n\n- Either of the two parts of an algebraic equation, connected by the equality sign.\n\n- A file stored within an archive file.\nE.g: The zip file holding the source code of this application has 245 members.\n\n",
+            "synonyms": [
+                "element",
+                "limb",
+                "lith",
+                "pintle",
+                "tarse",
+                "premise",
+                "premiss"
+            ],
+            "antonyms": [],
+            "word": "member",
+            "type": "noun"
+        }
+    },
+    "o": {
+        "noun": {
+            "definition": "- The name of the Latin-script letter O.\n\n- A zero (used in reading out numbers).\nE.g: It is currently two-o-five in the afternoon (2:05 PM).\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "o",
+            "type": "noun"
+        }
+    },
+    "spokesmen": {
+        "noun": {
+            "definition": "- One who speaks as the voice of a group of people.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "spokesmen",
+            "type": "noun"
+        }
+    },
+    "opponent": {
+        "noun": {
+            "definition": "- One who opposes another; one who works or takes a position against someone or something; one who attempts to stop the progress of someone or something.\nE.g: During the crackdown, many opponents of the regime were arrested.\n\n",
+            "synonyms": [
+                "adversary",
+                "antagonist"
+            ],
+            "antonyms": [
+                "advocate",
+                "proponent",
+                "supporter",
+                "respondent"
+            ],
+            "word": "opponent",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Opposing; adverse; antagonistic.\n\n- Situated in front; opposite.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "opponent",
+            "type": "adjective"
+        }
+    },
+    "organise": {
+        "verb": {
+            "definition": "- To arrange in working order.\n\n- To constitute in parts, each having a special function, act, office, or relation; to systematize.\n\n- (chiefly used in the past participle) To furnish with organs; to give an organic structure to; to endow with capacity for the functions of life\nE.g: an organized being\n\n- To sing in parts.\nE.g: to organize an anthem\n\n- To band together into a group or union that can bargain and act collectively; to unionize.\nE.g: the workers decided to organize; their next task was to organize the workers at the steel mill\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "organise",
+            "type": "verb"
+        }
+    },
+    "pleasure": {
+        "noun": {
+            "definition": "- A state of being pleased or contented; gratification.\nE.g: He remembered with pleasure his home and family.\n\n- A person, thing or action that causes enjoyment.\nE.g: Having a good night's sleep is one of life's little pleasures.\n\n- One's preference.\nE.g: What is your pleasure: coffee or tea?\n\n- The will or desire of someone or some agency in power.\nE.g: at Congress's pleasure: whenever or as long as Congress desires\n\n",
+            "synonyms": [
+                "delight",
+                "gladness",
+                "gratification",
+                "happiness",
+                "indulgence",
+                "satisfaction",
+                "delight",
+                "joy",
+                "desire",
+                "fancy",
+                "want",
+                "will",
+                "wish",
+                "discretion"
+            ],
+            "antonyms": [
+                "displeasure",
+                "pain"
+            ],
+            "word": "pleasure",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To give or afford pleasure to.\n\n- To give sexual pleasure to.\nE.g: Johnny pleasured Jackie orally last night.\n\n- To take pleasure; to seek or pursue pleasure.\nE.g: to go pleasuring\n\n",
+            "synonyms": [
+                "gratify",
+                "please"
+            ],
+            "antonyms": [],
+            "word": "pleasure",
+            "type": "verb"
+        },
+        "interjection": {
+            "definition": "- Pleased to meet you, \"It's my pleasure\"\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "pleasure",
+            "type": "interjection"
+        }
+    },
+    "ref": {
+        "noun": {
+            "definition": "- A relationship or relation (to something).\n\n- A measurement one can compare to.\n\n- Information about a person, provided by someone (a referee) with whom they are well acquainted.\n\n- A person who provides this information; a referee.\n\n- A reference work.\n\n- That which serves as a reference work.\n\n- The act of referring: a submitting for information or decision.\n\n- A relation between objects in which one object designates, or acts as a means by which to connect to or link to, another object.\n\n- (academic writing) A short written identification of a previously published work which is used as a source for a text.\n\n- (academic writing) A previously published written work thus indicated; a source.\n\n- An object containing information which refers to data stored elsewhere, as opposed to containing the data itself.\n\n- (character entity) A special sequence used to represent complex characters in markup languages, such as ™ for the ™ symbol.\n\n- Appeal.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "ref",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To referee; to act as a referee in a sport or game.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "ref",
+            "type": "verb"
+        }
+    },
+    "referee": {
+        "noun": {
+            "definition": "- An umpire or judge; an official who makes sure the rules are followed during a game.\nE.g: The referee kicked Jim out of the game for fighting.\n\n- A person who settles a dispute.\n\n- A person who writes a letter of reference or provides a reference by phone call for someone.\nE.g: Your application, along with letters from three referees, should be received by January 31.\n\n- An expert who judges the manuscript of an article or book to decide if it should be published.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "referee",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To act as a referee.\nE.g: He has to referee three hockey games this weekend.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "referee",
+            "type": "verb"
+        }
+    },
+    "rhythm": {
+        "noun": {
+            "definition": "- The variation of strong and weak elements (such as duration, accent) of sounds, notably in speech or music, over time; a beat or meter.\nE.g: Dance to the rhythm of the music.\n\n- A specifically defined pattern of such variation.\nE.g: Most dances have a rhythm as distinctive as the Iambic verse in poetry\n\n- A flow, repetition or regularity.\nE.g: Once you get the rhythm of it, the job will become easy.\n\n- The tempo or speed of a beat, song or repetitive event.\nE.g: We walked with a quick, even rhythm.\n\n- The musical instruments which provide rhythm (mainly; not or less melody) in a musical ensemble.\nE.g: The Baroque term basso continuo is virtually equivalent to rhythm\n\n- A regular quantitative change in a variable (notably natural) process.\nE.g: The rhythm of the seasons dominates agriculture as well as wildlife\n\n- Controlled repetition of a phrase, incident or other element as a stylistic figure in literature and other narrative arts; the effect it creates.\nE.g: The running gag is a popular rhythm in motion pictures and theater comedy\n\n",
+            "synonyms": [
+                "meter",
+                "metre",
+                "prosody",
+                "rhythm section"
+            ],
+            "antonyms": [],
+            "word": "rhythm",
+            "type": "noun"
+        }
+    },
+    "risk": {
+        "noun": {
+            "definition": "- A possible adverse event or outcome\n\n- The probability of a negative outcome to a decision or event.\nE.g: 2006, Trever Ramsey on BBC News website, Exercise 'cuts skin cancer risk' read at http//news.bbc.co.uk/1/hi/health/4764535.stm on 14 May 2006\n\n- The magnitude of possible loss consequent to a decision or event.\n\n- (formal use in business, engineering, etc.) The potential (conventionally negative) effect of an event, determined by combining the likelihood of the event occurring with the effect should it occur.\n\n- An entity insured by an insurer or the specific uncertain events that the insurer underwrites.\n\n",
+            "synonyms": [
+                "danger",
+                "hazard",
+                "peril"
+            ],
+            "antonyms": [],
+            "word": "risk",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To incur risk of (something).\n\n- To incur risk of harming or jeopardizing.\n\n- To incur risk as a result of (doing something).\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "risk",
+            "type": "verb"
+        }
+    },
+    "score": {
+        "noun": {
+            "definition": "- The total number of goals, points, runs, etc. earned by a participant in a game.\nE.g: The player with the highest score is the winner.\n\n- The number of points accrued by each of the participants in a game, expressed as a ratio or a series of numbers.\nE.g: The score is 8-1 even though it's not even half-time!\n\n- The performance of an individual or group on an examination or test, expressed by a number, letter, or other symbol; a grade.\nE.g: The test scores for this class were high.\n\n- Twenty, 20 (number).\nE.g: Some words have scores of meanings.\n\n- A distance of twenty yards, in ancient archery and gunnery.\n\n- A weight of twenty pounds.\n\n- The written form of a musical composition showing all instrumental and vocal parts below each other.\n\n- The music of a movie or play.\n\n- Subject.\n\n- Account; reason; motive; sake; behalf.\n\n- A notch or incision; especially, one that is made as a tally mark; hence, a mark, or line, made for the purpose of account.\n\n- An account or reckoning; account of dues; bill; debt.\n\n- A criminal act, especially:\n\n- A sexual conquest.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "score",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To cut a notch or a groove in a surface.\nE.g: The baker scored the cake so that the servers would know where to slice it.\n\n- To record the tally of points for a game, a match, or an examination.\n\n- To obtain something desired.\n\n- To provide (a film, etc.) with a musical score.\n\n",
+            "synonyms": [
+                "come by",
+                "earn",
+                "obtain",
+                "groove",
+                "notch",
+                "shake down",
+                "pull",
+                "soundtrack",
+                "keep",
+                "score",
+                "tally"
+            ],
+            "antonyms": [],
+            "word": "score",
+            "type": "verb"
+        },
+        "interjection": {
+            "definition": "- Acknowledgement of success\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "score",
+            "type": "interjection"
+        }
+    },
+    "support": {
+        "noun": {
+            "definition": "- A position in which a gymnast is holding their body above the rings (or high bar, parallel bars...) usually with straight arms.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "support",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To keep from falling.\nE.g: Don’t move that beam! It supports the whole platform.\n\n- To answer questions and resolve problems regarding something sold.\nE.g: Sure they sell the product, but do they support it?\n\n- To back a cause, party, etc., mentally or with concrete aid.\nE.g: I support France in the World Cup.\n\n- To help, particularly financially.\nE.g: The government supports the arts in several ways.\n\n- To verify; to make good; to substantiate; to establish; to sustain.\nE.g: The evidence will not support the statements or allegations.\n\n- To serve, as in a customer-oriented mindset; to give support to.\nE.g: I don't make decisions, but I support those who do.\n\n- To be designed (said of machinery, electronics, or computers, or their parts, accessories, peripherals, or programming) to function compatibly with or provide the capacity for.\nE.g: Early personal computers did not support voice-recognition hardware or software.\n\n- To be accountable for, or involved with, but not responsible for.\nE.g: I support the administrative activities of the executive branch of the organization.\n\n- To endure without being overcome; bear; undergo; to tolerate.\n\n- To assume and carry successfully, as the part of an actor; to represent or act; to sustain.\nE.g: to support the character of King Lear\n\n",
+            "synonyms": [
+                "stut",
+                "underprop",
+                "uphold"
+            ],
+            "antonyms": [
+                "oppose"
+            ],
+            "word": "support",
+            "type": "verb"
+        }
+    },
+    "rt": {
+        "noun": {
+            "definition": "- A course or way which is traveled or passed.\nE.g: The route was used so much that it formed a rut.\n\n- A regular itinerary of stops, or the path followed between these stops, such as for delivery or passenger transportation.\nE.g: Here is a map of our delivery routes.\n\n- A road or path; often specifically a highway.\nE.g: Follow Route 49 out of town.\n\n- One of multiple methods or approaches to doing something.\n\n- One of the major provinces of imperial China from the Later Jin to the Song, corresponding to the Tang and early Yuan circuits.\n\n- A specific entry in a router that tells the router how to transmit the data it receives.\n\n",
+            "synonyms": [
+                "circuit",
+                "lu",
+                "province"
+            ],
+            "antonyms": [],
+            "word": "rt",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Straight, not bent.\nE.g: a right line\n\n- Of an angle, having a size of 90 degrees, or one quarter of a complete rotation; the angle between two perpendicular lines.\nE.g: The kitchen counter formed a right angle with the back wall.\n\n- Of a geometric figure, incorporating a right angle between edges, faces, axes, etc.\nE.g: a right triangle, a right prism, a right cone\n\n- Complying with justice, correctness or reason; correct, just, true.\nE.g: I thought you'd made a mistake, but it seems you were right all along.\n\n- Appropriate, perfectly suitable; fit for purpose.\nE.g: Is this the right software for my computer?\n\n- Healthy, sane, competent.\nE.g: I'm afraid my father is no longer in his right mind.\n\n- Real; veritable (used emphatically).\nE.g: You've made a right mess of the kitchen!\n\n- All right; not requiring assistance.\n\n- Most favourable or convenient; fortunate.\n\n- Designating the side of the body which is positioned to the east if one is facing north. This arrow points to the reader's right: →\nE.g: After the accident, her right leg was slightly shorter than her left.\n\n- Designed to be placed or worn outward.\nE.g: the right side of a piece of cloth\n\n- Pertaining to the political right; conservative.\n\n",
+            "synonyms": [
+                "correct",
+                "just",
+                "conservative",
+                "right-wing",
+                "dexter",
+                "dextral",
+                "right-hand"
+            ],
+            "antonyms": [
+                "wrong",
+                "left",
+                "bowed",
+                "crooked",
+                "curved"
+            ],
+            "word": "rt",
+            "type": "adjective"
+        }
+    },
+    "team": {
+        "noun": {
+            "definition": "- A set of draught animals, such as two horses in front of a carriage.\n\n- Any group of people involved in the same activity, especially sports or work.\nE.g: The IT manager leads a team of three software developers.\n\n- A group of animals moving together, especially young ducks.\n\n- A royalty or privilege granted by royal charter to a lord of a manor, of having, keeping, and judging in his court, his bondmen, neifes, and villains, and their offspring, or suit, that is, goods and chattels, and appurtenances thereto.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "team",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To form a group, as for sports or work.\nE.g: They teamed to complete the project.\n\n- (by extension) To go together well; to harmonize.\n\n- To convey or haul with a team.\nE.g: to team lumber\n\n- To form together into a team.\nE.g: to team oxen\n\n- To give work to a gang under a subcontractor.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "team",
+            "type": "verb"
+        }
+    },
+    "video game": {
+        "noun": {
+            "definition": "- A type of game existing as and controlled by software, usually run by a video game console or a computer, played on a video terminal or television screen, and controlled by a paddle, joystick, joypad, mouse, or keyboard.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "video game",
+            "type": "noun"
+        }
+    },
+    "athlete": {
+        "noun": {
+            "definition": "- A participant in a group of sporting activities which includes track and field, road running, cross country running and racewalking.\nE.g: She's the first athlete in her sport to obtain a corporate sponsor.\n\n- A person who actively participates in physical sports, especially with great skill; a sportsperson.\n\n- An exceptionally physically fit person.\n\n",
+            "synonyms": [
+                "sportsperson"
+            ],
+            "antonyms": [],
+            "word": "athlete",
+            "type": "noun"
+        }
+    },
+    "athletic": {
+        "adjective": {
+            "definition": "- Having to do with athletes.\nE.g: Are you a member of the American Athletic Association?\n\n- Physically active.\nE.g: Since you're such an athletic person, you may wish to consider joining.\n\n- Having a muscular, well developed body, being in shape.\nE.g: You have such an athletic build—you must work out regularly.\n\n- An attribute of a motion or play which requires fine physical ability.\nE.g: The center fielder made an athletic play to snatch the ball from over the fence.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "athletic",
+            "type": "adjective"
+        }
+    },
+    "stamina": {
+        "noun": {
+            "definition": "- The energy and strength for continuing to do something over a long period of time; power of sustained exertion, or resistance to hardship, illness etc.\nE.g: He has a lot of stamina. I suppose that's why he can run for a long time.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "stamina",
+            "type": "noun"
+        }
+    },
+    "heroic": {
+        "noun": {
+            "definition": "- A heroic verse.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "heroic",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Of or relating to a hero or heroine; supremely noble\nE.g: heroic deeds\n\n- Courageous; displaying heroism.\n\n- Of a size larger than life, but less than colossal.\n\n",
+            "synonyms": [
+                "herolike"
+            ],
+            "antonyms": [
+                "cowardly"
+            ],
+            "word": "heroic",
+            "type": "adjective"
+        }
+    },
+    "heroine": {
+        "noun": {
+            "definition": "- A female hero.\n\n- A female lead character.\n\n",
+            "synonyms": [
+                "hera",
+                "shero"
+            ],
+            "antonyms": [],
+            "word": "heroine",
+            "type": "noun"
+        }
+    },
+    "playful": {
+        "adjective": {
+            "definition": "- Liking play, prone to play frequently, such as a child or kitten; rather sportive.\nE.g: Actually, we are pretty playful in our romantic life.\n\n- Funny, humorous, jesting, frolicsome.\nE.g: A party hat is a playful conical hat people wear at parties.\n\n- Fun, recreational, not serious.\nE.g: A brainteaser is a playful puzzle posed as a test of intelligence.\n\n- Experimental.\nE.g: He was a rather playful artist.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "playful",
+            "type": "adjective"
+        }
+    },
+    "prone": {
+        "adjective": {
+            "definition": "- Lying face downward.\nE.g: prone position\n\n- Having a downward inclination or slope.\n\n- Predisposed, liable, inclined.\nE.g: prone to failure\n\n",
+            "synonyms": [
+                "neveling",
+                "nuel",
+                "prostrate"
+            ],
+            "antonyms": [
+                "supine"
+            ],
+            "word": "prone",
+            "type": "adjective"
+        }
+    },
+    "clued": {
+        "verb": {
+            "definition": "- To provide with a clue.\nE.g: The crossword compiler wasn't sure how to clue the word \"should\".\n\n- To provide someone with information which he or she lacks (often used with \"in\" or \"up\").\nE.g: Smith, clue Jones in on what's been happening.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "clued",
             "type": "verb"
         }
     }
