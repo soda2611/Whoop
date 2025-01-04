@@ -6,7 +6,7 @@ class FirstScreen(MDScreen):
     def __init__(self, **kwargs):
         super(FirstScreen, self).__init__(**kwargs)
         layout = home()
-        self.add_widget(FitImage(source=settings["pattern"], pos_hint={"center_x": 0.5, "bottom": 0}, size_hint_y=None, height=dp(80)))
+        self.add_widget(FitImage(source=settings["pattern"], pos_hint={"center_x": 0.5, "bottom": 0}, size_hint_y=None, height=dp(50)))
         self.add_widget(layout)
         self.md_bg_color=bg
 
