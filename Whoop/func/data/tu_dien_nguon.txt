@@ -4358,6 +4358,114 @@
             "type": "noun"
         }
     },
+    "layout": {
+        "noun": {
+            "definition": "- A structured arrangement of items within certain limits.\n\n- A plan for such arrangement.\n\n- The act of laying out something.\n\n- The process of arranging editorial content, advertising, graphics and other information to fit within certain constraints.\n\n- A map or a drawing of a construction site showing the position of roads, buildings or other constructions.\n\n- A specification of an integrated circuit showing the position of the physical components that will implement the schematic in silicon.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "layout",
+            "type": "noun"
+        }
+    },
+    "stitch-up": {
+        "noun": {
+            "definition": "- An act designed to maliciously or dishonestly incriminate someone.\nE.g: The police planted the gun in my car. It was a stitch-up.\n\n- Something arranged deceitfully and in secret.\nE.g: Wilson's election as leader was a stitch-up by the committee.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "stitch-up",
+            "type": "noun"
+        }
+    },
+    "frameup": {
+        "noun": {
+            "definition": "- A false incrimination of an innocent person; a scheme to frame an innocent person for a crime.\n\n",
+            "synonyms": [
+                "put-up",
+                "setup"
+            ],
+            "antonyms": [],
+            "word": "frameup",
+            "type": "noun"
+        }
+    },
+    "put-up": {
+        "noun": {
+            "definition": "- Something prearranged or faked in order to trick someone or to advance one's own interests.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "put-up",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- (of an event) Secretly arranged in advance, especially in order to defraud someone or to advance one's own interests.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "put-up",
+            "type": "adjective"
+        }
+    },
+    "apparatus": {
+        "noun": {
+            "definition": "- The entirety of means whereby a specific production is made existent or task accomplished.\n\n- A complex machine or instrument.\n\n- An assortment of tools and instruments.\n\n- A bureaucratic organization, especially one influenced by political patronage.\n\n- A vehicle used for emergency response.\n\n- Any of the equipment on which the gymnasts perform their movements.\n\n- A complex, highly modified weapon (typically not a firearm); a weaponized “Rube Goldberg machine.”\n\n",
+            "synonyms": [
+                "device",
+                "instrument",
+                "machinery",
+                "dynamic",
+                "mechanism",
+                "setup",
+                "equipment",
+                "gear",
+                "tools",
+                "machine"
+            ],
+            "antonyms": [],
+            "word": "apparatus",
+            "type": "noun"
+        }
+    },
+    "device": {
+        "noun": {
+            "definition": "- Any piece of equipment made for a particular purpose, especially a mechanical or electrical one.\nE.g: There are a number of household devices in a kitchen such as a dishwasher, a garbage disposal, or an electric can opener.\n\n- A peripheral device; an item of hardware.\n\n- A project or scheme, often designed to deceive; a stratagem; an artifice.\n\n- An improvised explosive device, home-made bomb\n\n- A technique that an author or speaker uses to evoke an emotional response in the audience; a rhetorical device.\n\n- A motto, emblem, or other mark used to distinguish the bearer from others. A device differs from a badge or cognizance primarily because as it is a personal distinction, and not a badge borne by members of the same house successively.\n\n- Power of devising; invention; contrivance.\n\n- An image used in whole or in part as a trademark or service mark.\n\n- An image or logo denoting official or proprietary authority or provenience.\n\n- A spectacle or show.\n\n- Opinion; decision.\n\n",
+            "synonyms": [
+                "contrivance",
+                "invention",
+                "apparatus",
+                "appliance",
+                "contrivance",
+                "design",
+                "equipment",
+                "gadget",
+                "artifice",
+                "project",
+                "scheme",
+                "stratagem"
+            ],
+            "antonyms": [],
+            "word": "device",
+            "type": "noun"
+        }
+    },
+    "invention": {
+        "noun": {
+            "definition": "- Something invented.\nE.g: I'm afraid there was no burglar. It was all the housekeeper's invention.\n\n- The act of inventing.\nE.g: The invention of the printing press was probably the most significant innovation of the medieval ages.\n\n- The capacity to invent.\nE.g: It took quite a bit of invention to come up with a plan, but we did it.\n\n- A small, self-contained composition, particularly those in J.S. Bach’s Two- and Three-part Inventions.\nE.g: I particularly like the inventions in C-minor.\n\n- The act of discovering or finding; the act of finding out; discovery.\nE.g: That judicial method which serveth best for the invention of truth.\n\n",
+            "synonyms": [
+                "discovery"
+            ],
+            "antonyms": [],
+            "word": "invention",
+            "type": "noun"
+        }
+    },
+    "discovery": {
+        "noun": {
+            "definition": "- Something discovered.\nE.g: This latest discovery should eventually lead to much better treatments for disease.\n\n- The discovering of new things.\nE.g: Automatic discovery of RSS feeds by a Web browser.\n\n- An act of uncovering or revealing something; a revelation.\n\n- A pre-trial phase in which evidence is gathered.\nE.g: The prosecution moved to suppress certain items turned up during discovery.\n\n- Materials revealed to the opposing party during the pre-trial phase in which evidence is gathered.\nE.g: The defense argued that the plaintiff's discovery was inadequate.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "discovery",
+            "type": "noun"
+        }
+    },
     "network": {
         "noun": {
             "definition": "- A fabric or structure of fibrous elements attached to each other at regular intervals.\n\n- Any interconnected group or system\nE.g: A network of roads crisscrossed the country.\n\n- A directory of people maintained for their advancement\nE.g: To get a job in today's economy, it is important to have a strong network.\n\n- A group of affiliated television stations that broadcast common programs from a parent company.\n\n- Multiple computers and other devices connected together to share information\nE.g: The copy machine is connected to the network so it can now serve as a printer.\n\n",
