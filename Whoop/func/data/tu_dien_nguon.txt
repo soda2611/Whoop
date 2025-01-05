@@ -4357,5 +4357,296 @@
             "word": "okay",
             "type": "noun"
         }
+    },
+    "network": {
+        "noun": {
+            "definition": "- A fabric or structure of fibrous elements attached to each other at regular intervals.\n\n- Any interconnected group or system\nE.g: A network of roads crisscrossed the country.\n\n- A directory of people maintained for their advancement\nE.g: To get a job in today's economy, it is important to have a strong network.\n\n- A group of affiliated television stations that broadcast common programs from a parent company.\n\n- Multiple computers and other devices connected together to share information\nE.g: The copy machine is connected to the network so it can now serve as a printer.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "network",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To interact socially for the purpose of getting connections or personal advancement.\nE.g: Many people find it worthwhile to network for jobs and information.\n\n- To connect two or more computers or other computerized devices.\nE.g: If we network his machine to the server, he will be able to see all the files.\n\n- To interconnect a group or system.\n\n- To broadcast across an entire network of stations and affiliates at the same time.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "network",
+            "type": "verb"
+        }
+    },
+    "comment": {
+        "noun": {
+            "definition": "- A spoken or written remark.\nE.g: I have no comment on that.\n\n- A remark embedded in source code in such a way that it will be ignored by the compiler or interpreter, typically to help people to understand the code.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "comment",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To remark.\n\n- (with \"on\" or \"about\") To make remarks or notes.\n\n- To comment or remark on.\n\n- (of code) To insert comments into (source code).\nE.g: I wish I'd commented this complicated algorithm back when I remembered how it worked.\n\n- (of code) To comment out (code); to disable by converting into a comment.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "comment",
+            "type": "verb"
+        }
+    },
+    "remark": {
+        "noun": {
+            "definition": "- (engraving) A small design etched on the margin of a plate and supposed to be removed after the earliest proofs have been taken.\n\n- (engraving) Any feature distinguishing a particular stage of the plate.\n\n- (engraving) A print or proof distinguished by such a mark.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "remark",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To make a remark or remarks; to comment.\n\n- To express in words or writing; to state; to make a comment\nE.g: He remarked that it was getting late.\n\n- To pay heed to; notice; to take notice of\n\n- To mark in a notable manner; to distinguish clearly; to make noticeable or conspicuous; to point out.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "remark",
+            "type": "verb"
+        }
+    },
+    "forward": {
+        "noun": {
+            "definition": "- One of the eight players (comprising two props, one hooker, two locks, two flankers and one number eight, collectively known as the pack) whose primary task is to gain and maintain possession of the ball (compare back).\n\n- A player on a team in football (soccer) in the row nearest to the opposing team's goal, who are therefore principally responsible for scoring goals.\n\n- An umbrella term for a centre or winger in ice hockey.\n\n- The small forward or power forward position; two frontcourt positions that are taller than guards but shorter than centers.\n\n- The front part of a vessel.\n\n- An e-mail message that is forwarded to another recipient or recipients; an electronic chain letter.\n\n- A direct agreement between two parties to buy or sell an asset at a specific point in the future; distinguished from a futures contract in that the latter is standardized and traded on an exchange.\n\n",
+            "synonyms": [
+                "attacker",
+                "centre forward",
+                "striker",
+                "forward contract"
+            ],
+            "antonyms": [],
+            "word": "forward",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To advance, promote.\n\n- To send (a letter, email etc.) to a third party.\nE.g: I'll be glad to forward your mail to you while you're gone.\n\n- To assemble (a book) by sewing sections, attaching cover boards, and so on.\n\n",
+            "synonyms": [
+                "pass on"
+            ],
+            "antonyms": [],
+            "word": "forward",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Toward the front or at the front.\nE.g: The fire was confined to the forward portion of the store.\n\n- Without customary restraint or modesty; bold, cheeky, pert, presumptuous or pushy.\n\n- Expected in the future.\nE.g: The stock price is currently 12 times forward earnings.\n\n- Ready; prompt; ardently inclined; in a bad sense, eager or hasty.\n\n- Advanced beyond the usual degree; advanced for the season; precocious.\nE.g: The grass is forward, or forward for the season. We have a forward spring.\n\n",
+            "synonyms": [
+                "anterior",
+                "front",
+                "forecast",
+                "predicted",
+                "bold",
+                "brazen",
+                "fresh",
+                "impertinent"
+            ],
+            "antonyms": [
+                "back",
+                "posterior",
+                "rear",
+                "past",
+                "restrained"
+            ],
+            "word": "forward",
+            "type": "adjective"
+        },
+        "adverb": {
+            "definition": "- Towards the front or from the front.\nE.g: The bus driver told everyone standing up to move forward.\n\n- In the usual direction of travel.\nE.g: After spending an hour stuck in the mud, we could once again move forward.\n\n- Into the future.\nE.g: From this day forward, there will be no more brussels sprouts at the cafeteria.\n\n",
+            "synonyms": [
+                "ahead",
+                "forth",
+                "on",
+                "onward",
+                "onwards",
+                "forth",
+                "forwards",
+                "hereon",
+                "on",
+                "onward",
+                "onwards",
+                "forwards"
+            ],
+            "antonyms": [
+                "backward",
+                "backwards",
+                "past",
+                "back",
+                "backward",
+                "backwards",
+                "rearwards",
+                "reverse",
+                "back",
+                "backward",
+                "backwards",
+                "rearwards"
+            ],
+            "word": "forward",
+            "type": "adverb"
+        }
+    },
+    "set up": {
+        "verb": {
+            "definition": "- To ready something for use.\nE.g: We set up the sprinkler.\n\n- To arrange logically.\nE.g: Set up my CD collection.\n\n- To cause to happen.\nE.g: Even a minor change can set up new bugs.\n\n- To trap or ensnare.\nE.g: I've got to set up that tasty rabbit.\n\n- To arrange for an outcome; to tamper or rig.\nE.g: The election was set up!\n\n- To gel or harden.\nE.g: Give the cement 24 hours to set up before walking on it.\n\n- Level to rise in one part of a body of water, especially a shallow one, because of a storm surge caused by persistent wind.\nE.g: The level set up at the south end of the lake after a day of north winds.\n\n- To provide the money or other support that someone needs for an important task or activity.\nE.g: A good breakfast really sets you up for the day.\n\n- To establish someone in a business or position.\nE.g: After he left college, his father set him up in the family business.\n\n- To trick someone in order to make them do something.\nE.g: They claimed that they weren't selling drugs, but that they'd been set up by the police.\n\n- To make (someone) proud or conceited (often in passive).\n\n- To matchmake; to arrange a date between two people.\n\n- To create a goalscoring opportunity (for).\n\n- To begin business or a scheme of life.\nE.g: to set up in trade; to set up for oneself\n\n- To profess openly; to make pretensions.\n\n- To found; to start (a business, scheme)\n\n",
+            "synonyms": [
+                "assemble",
+                "configure",
+                "install",
+                "prepare",
+                "put in",
+                "ready"
+            ],
+            "antonyms": [],
+            "word": "set up",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- In a position to function; ready.\nE.g: Now that I'm set up, this will take moments!\n\n",
+            "synonyms": [
+                "prepared",
+                "ready"
+            ],
+            "antonyms": [],
+            "word": "set up",
+            "type": "adjective"
+        }
+    },
+    "savvy": {
+        "noun": {
+            "definition": "- Shrewdness.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "savvy",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To understand.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "savvy",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Shrewd, well-informed and perceptive.\n\n",
+            "synonyms": [
+                "canny"
+            ],
+            "antonyms": [],
+            "word": "savvy",
+            "type": "adjective"
+        }
+    },
+    "peccavi": {
+        "noun": {
+            "definition": "- An act of saying ‘peccavi’; an admission of guilt or responsibility.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "peccavi",
+            "type": "noun"
+        },
+        "interjection": {
+            "definition": "- An expression of guilt or culpability.\n\n",
+            "synonyms": [
+                "mea culpa"
+            ],
+            "antonyms": [],
+            "word": "peccavi",
+            "type": "interjection"
+        }
+    },
+    "tech-savvy": {
+        "adjective": {
+            "definition": "- Proficient in the use of technology, especially computers.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "tech-savvy",
+            "type": "adjective"
+        }
+    },
+    "hotspot": {
+        "noun": {
+            "definition": "- A place notable for a high level of activity or danger.\n\n- A part of an application that consumes a significant amount of execution time.\n\n- Part of a control that responds dynamically as the user moves the pointer over it, as for example in an image map.\n\n- A location in which WiFi Internet access is available.\n\n- The region of a gene in which there is higher than normal rate of mutation.\n\n- The surface manifestation of a plume that rises from deep in the celestial body's mantle.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "notspot"
+            ],
+            "word": "hotspot",
+            "type": "noun"
+        }
+    },
+    "hotpots": {
+        "noun": {
+            "definition": "- A stew of beef or lamb and potatoes.\n\n- A communal meal, popular in China, where diners share a bowl of hot broth or stock into which uncooked foods such as mushrooms, vegetables, and cuts of meat are dipped until they are cooked enough to be eaten.\n\n- A jacuzzi or hot tub.\n\n",
+            "synonyms": [
+                "casserole",
+                "stew"
+            ],
+            "antonyms": [],
+            "word": "hotpots",
+            "type": "noun"
+        }
+    },
+    "geek": {
+        "noun": {
+            "definition": "- A carnival performer specializing in bizarre and unappetizing behavior.\nE.g: I once saw a geek bite the head off a live chicken.\n\n- A person who is intensely interested in a particular field or hobby and often having limited or nonstandard social skills. Often used with an attributive noun.\nE.g: I was a complete computer geek in high school, but I get out a lot more now.\n\n- (by extension) An expert in a technical field, particularly one having to do with computers.\nE.g: Do you need a hardware geek or a software geek?\n\n- The subculture of geeks; an esoteric subject of interest that is marginal to the social mainstream; the philosophy, events, and physical artifacts of geeks; geekness.\n\n- An unfashionable or socially undesirable person.\nE.g: Why do you hang around with them? They’re just geeks.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "geek",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To behave geekishly or in a socially awkward manner, especially when under the influence of drugs or other psycho-active substances, and exhibiting such marked characteristics as hyperactivity, repetitiveness, talkativeness, nervousness, irritability, or paranoia.\nE.g: Hey, check out that guy...he's really geeking out pretty bad.\n\n",
+            "synonyms": [
+                "freak",
+                "freak",
+                "guru",
+                "hacker",
+                "dork",
+                "nerd",
+                "propeller head",
+                "loser",
+                "nonce",
+                "waste of space"
+            ],
+            "antonyms": [],
+            "word": "geek",
+            "type": "verb"
+        }
+    },
+    "handle": {
+        "noun": {
+            "definition": "- The part of an object which is (designed to be) held in the hand when used or moved.\n\n- An instrument for effecting a purpose (either literally or figuratively); a tool, or an opportunity or pretext.\n\n- The gross amount of wagering within a given period of time or for a given event at one of more establishments.\nE.g: The daily handle of a Las Vegas casino is typically millions of dollars.\n\n- The tactile qualities of a fabric, e.g., softness, firmness, elasticity, fineness, resilience, and other qualities perceived by touch.\n\n- A name, nickname or pseudonym.\n\n- A title attached to one's name, such as Doctor or Colonel.\nE.g: The successful businessman was knighted and acquired a handle to his name.\n\n- A reference to an object or structure that can be stored in a variable.\nE.g: This article describes how to find the module name from the window handle.\n\n- A 10 fl oz (285 ml) glass of beer in the Northern Territory. (See also pot and middy for other regional variations.)\n\n- A half-gallon (1.75-liter) bottle of alcohol. (Called a sixty in Canada.)\n\n- A point, an extremity of land.\nE.g: the Handle of the Sug in Newfoundland\n\n- A topological space homeomorphic to a ball but viewed as a product of two lower-dimensional balls.\n\n- The smooth, irreducible subcurve of a comb which connects to each of the other components in exactly one point.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "handle",
+            "type": "noun"
+        }
+    },
+    "icon": {
+        "noun": {
+            "definition": "- An image, symbol, picture, or other representation usually as an object of religious devotion.\n\n- (especially Eastern Christianity) A type of religious painting portraying a saint or scene from Scripture, often done on wooden panels.\n\n- (by extension) A person or thing that is the best example of a certain profession or some doing.\nE.g: That man is an icon in the business; he personifies loyalty and good business sense.\n\n- A small picture that represents something (such as an icon on a computer screen which when clicked performs some function.)\n\n- A word, character, or sign whose form reflects and is determined by the referent; onomatopoeic words are necessarily all icons.\n\n",
+            "synonyms": [
+                "graven image",
+                "idol"
+            ],
+            "antonyms": [],
+            "word": "icon",
+            "type": "noun"
+        }
+    },
+    "assemble": {
+        "verb": {
+            "definition": "- To put together.\nE.g: He assembled the model ship.\n\n- To gather as a group.\nE.g: The parents assembled in the school hall.\n\n- To translate from assembly language to machine code\n\n",
+            "synonyms": [
+                "begather",
+                "collect",
+                "build",
+                "construct",
+                "produce",
+                "put together"
+            ],
+            "antonyms": [],
+            "word": "assemble",
+            "type": "verb"
+        }
     }
 }
