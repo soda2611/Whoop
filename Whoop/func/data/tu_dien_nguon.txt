@@ -4781,5 +4781,30 @@
             "word": "life",
             "type": "noun"
         }
+    },
+    "me": {
+        "pronoun": {
+            "definition": "- As the direct object of a verb.\nE.g: Can you hear me?\n\n- Myself; as a reflexive direct object of a verb.\n\n- As the object of a preposition.\nE.g: Come with me.\n\n- As the indirect object of a verb.\nE.g: He gave me this.\n\n- Myself; as a reflexive indirect object of a verb; the ethical dative.\n\n- As the complement of the copula (be or is).\nE.g: It wasn't me.\n\n- (with and) As the subject of a verb.\nE.g: Me and my friends played a game.\n\n- (not with and) As the subject of a verb.\n\n",
+            "synonyms": [
+                "I",
+                "us",
+                "mine",
+                "my",
+                "I",
+                "my ass"
+            ],
+            "antonyms": [],
+            "word": "me",
+            "type": "pronoun"
+        }
+    },
+    "lead on": {
+        "verb": {
+            "definition": "- To mislead, to try to make someone believe a lie.\n\n- To encourage with the illusion of a romantic relationship.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "lead on",
+            "type": "verb"
+        }
     }
 }
