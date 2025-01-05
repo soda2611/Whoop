@@ -4806,5 +4806,44 @@
             "word": "lead on",
             "type": "verb"
         }
+    },
+    "inconsistency": {
+        "noun": {
+            "definition": "- The state of being inconsistent.\n\n- An incompatibility between two propositions that cannot both be true.\n\n",
+            "synonyms": [
+                "contrariety",
+                "deviation",
+                "difference",
+                "disagreement",
+                "disparity",
+                "disproportion",
+                "disproportionateness",
+                "dissimilarity",
+                "dissonance",
+                "divergence",
+                "incongruity",
+                "inconsonance",
+                "inequality",
+                "paradox",
+                "unlikeness",
+                "variance"
+            ],
+            "antonyms": [
+                "consistency"
+            ],
+            "word": "inconsistency",
+            "type": "noun"
+        }
+    },
+    "consistency": {
+        "noun": {
+            "definition": "- Local coherence.\n\n- Correspondence or compatibility.\n\n- Reliability or uniformity; the quality of being consistent.\nE.g: They want to achieve a high degree of consistency in their process and their product.\n\n- The degree of viscosity of something.\nE.g: Mix it until it has the consistency of a thick paste.\n\n- Freedom from contradiction; the state of a system of axioms such that none of the propositions deduced from them are mutually contradictory.\n\n- Firmness of constitution or character; substantiality; durability; persistency.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "inconsistency"
+            ],
+            "word": "consistency",
+            "type": "noun"
+        }
     }
 }
