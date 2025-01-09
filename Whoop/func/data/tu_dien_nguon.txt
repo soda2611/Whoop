@@ -4845,5 +4845,265 @@
             "word": "consistency",
             "type": "noun"
         }
+    },
+    "technology": {
+        "noun": {
+            "definition": "- The organization of knowledge for practical purposes.\n\n- All the different and usable technologies developed by a culture or people.\n\n- A discourse or treatise on the arts.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "technology",
+            "type": "noun"
+        }
+    },
+    "contribute": {
+        "verb": {
+            "definition": "- To give something that is or becomes part of a larger whole.\nE.g: to contribute articles to a journal\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "contribute",
+            "type": "verb"
+        }
+    },
+    "technique": {
+        "noun": {
+            "definition": "- The practical aspects of a given art, occupation etc.; formal requirements.\n\n- Practical ability in some given field or practice, often as opposed to creativity or imaginative skill.\n\n- A method of achieving something or carrying something out, especially one requiring some skill or knowledge.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "technique",
+            "type": "noun"
+        }
+    },
+    "re": {
+        "preposition": {
+            "definition": "- About, regarding, with reference to; especially in letters, documents and emails.\n\n",
+            "synonyms": [
+                "about",
+                "apropos",
+                "as for"
+            ],
+            "antonyms": [],
+            "word": "re",
+            "type": "preposition"
+        }
+    },
+    "recipient": {
+        "noun": {
+            "definition": "- One who receives.\nE.g: My e-mail never reached the intended recipient.\n\n- An individual receiving donor organs or tissues.\n\n- The portion of an alembic or other still in which the distilled liquid is collected.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "recipient",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Receiving\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "recipient",
+            "type": "adjective"
+        }
+    },
+    "obsess": {
+        "verb": {
+            "definition": "- (passive, constructed with \"with\") To be preoccupied with a single topic or emotion.\nE.g: Some people are obsessed with sports.\n\n- To dominate the thoughts of someone.\nE.g: Thoughts of her obsess my every waking moment.\n\n- (construed with over) To think or talk obsessively about.\nE.g: Stop obsessing over it, will you!\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "obsess",
+            "type": "verb"
+        }
+    },
+    "sense": {
+        "noun": {
+            "definition": "- Any of the manners by which living beings perceive the physical world: for humans sight, smell, hearing, touch, taste.\n\n- Perception through the intellect; apprehension; awareness.\nE.g: a sense of security\n\n- Sound practical or moral judgment.\nE.g: It's common sense not to put metal objects in a microwave oven.\n\n- The meaning, reason, or value of something.\nE.g: You don’t make any sense.\n\n- A natural appreciation or ability.\nE.g: A keen musical sense\n\n- The way that a referent is presented.\n\n- A single conventional use of a word; one of the entries for a word in a dictionary.\nE.g: The definition of sense in this context, is given in sense 7 of its definition.\n\n- One of two opposite directions in which a vector (especially of motion) may point. See also polarity.\n\n- One of two opposite directions of rotation, clockwise versus anti-clockwise.\n\n- Referring to the strand of a nucleic acid that directly specifies the product.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "sense",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To use biological senses: to either see, hear, smell, taste, or feel.\n\n- To instinctively be aware.\nE.g: She immediately sensed her disdain.\n\n- To comprehend.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "sense",
+            "type": "verb"
+        }
+    },
+    "aware": {
+        "adjective": {
+            "definition": "- Vigilant or on one's guard against danger or difficulty.\nE.g: Stay aware! Don't let your guard down.\n\n- Conscious or having knowledge of something.\nE.g: Are you aware of what is being said about you?\n\n",
+            "synonyms": [
+                "apprised",
+                "cognizant",
+                "conscious",
+                "informed",
+                "mindful",
+                "alert",
+                "attentive",
+                "observant",
+                "sensitive",
+                "wary",
+                "watchful"
+            ],
+            "antonyms": [
+                "unaware"
+            ],
+            "word": "aware",
+            "type": "adjective"
+        }
+    },
+    "humane": {
+        "adjective": {
+            "definition": "- Having or showing concern for the pain or suffering of another; compassionate.\nE.g: As methods of execution go, beheading is more humane than drawing and quartering.\n\n- Pertaining to branches of learning concerned with human affairs or the humanities, especially classical literature or rhetoric.\n\n",
+            "synonyms": [
+                "mankindly"
+            ],
+            "antonyms": [
+                "inhuman",
+                "inhumane"
+            ],
+            "word": "humane",
+            "type": "adjective"
+        }
+    },
+    "typical": {
+        "noun": {
+            "definition": "- Anything that is typical, normal, or standard.\nE.g: Among the moths, typicals were more common than melanics.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "typical",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Capturing the overall sense of a thing.\n\n- Characteristically representing something by form, group, idea or type.\n\n- Normal, average; to be expected.\n\n- Of a lower taxon, containing the type of the higher taxon.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "atypical"
+            ],
+            "word": "typical",
+            "type": "adjective"
+        }
+    },
+    "impair": {
+        "verb": {
+            "definition": "- To weaken; to affect negatively; to have a diminishing effect on.\n\n- To grow worse; to deteriorate.\n\n",
+            "synonyms": [
+                "blunt",
+                "diminish",
+                "hurt",
+                "lessen",
+                "mar",
+                "reduce",
+                "weaken",
+                "worsen"
+            ],
+            "antonyms": [],
+            "word": "impair",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Not fit or appropriate; unsuitable.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "impair",
+            "type": "adjective"
+        }
+    },
+    "dedicate": {
+        "verb": {
+            "definition": "- To set apart for a deity or for religious purposes; consecrate.\n\n- To set apart for a special use\nE.g: dedicated their money to scientific research.\n\n- To commit (oneself) to a particular course of thought or action\nE.g: dedicated ourselves to starting our own business.\n\n- To address or inscribe (a literary work, for example) to another as a mark of respect or affection.\n\n- To open (a building, for example) to public use.\n\n- To show to the public for the first time\nE.g: dedicate a monument.\n\n",
+            "synonyms": [
+                "devote",
+                "allocate",
+                "earmark",
+                "behallow",
+                "hallow"
+            ],
+            "antonyms": [],
+            "word": "dedicate",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Dedicated; set apart; devoted; consecrated.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "dedicate",
+            "type": "adjective"
+        }
+    },
+    "direct": {
+        "verb": {
+            "definition": "- To manage, control, steer.\nE.g: to direct the affairs of a nation or the movements of an army\n\n- To aim (something) at (something else).\nE.g: He directed his question to the room in general.\n\n- To point out or show to (somebody) the right course or way; to guide, as by pointing out the way.\nE.g: He directed me to the left-hand road.\n\n- To point out to with authority; to instruct as a superior; to order.\nE.g: She directed them to leave immediately.\n\n- To put a direction or address upon; to mark with the name and residence of the person to whom anything is sent.\nE.g: to direct a letter\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "direct",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Proceeding without deviation or interruption.\n\n- Straight; not crooked, oblique, or circuitous; leading by the short or shortest way to a point or end.\nE.g: the most direct route between two buildings\n\n- Straightforward; sincere.\n\n- Immediate; express; plain; unambiguous.\n\n- In the line of descent; not collateral.\nE.g: a descendant in the direct line\n\n- In the direction of the general planetary motion, or from west to east; in the order of the signs; not retrograde; said of the motion of a celestial body.\n\n- Pertaining to, or effected immediately by, action of the people through their votes instead of through one or more representatives or delegates.\nE.g: direct nomination; direct legislation\n\n- (travel) having a single flight number.\n\n",
+            "synonyms": [
+                "explicit",
+                "patent",
+                "univocal",
+                "immediate"
+            ],
+            "antonyms": [
+                "indirect"
+            ],
+            "word": "direct",
+            "type": "adjective"
+        },
+        "adverb": {
+            "definition": "- Directly.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "direct",
+            "type": "adverb"
+        }
+    },
+    "disable": {
+        "verb": {
+            "definition": "- To render unable; to take away an ability of, as by crippling.\n\n- (chiefly of a person) To impair the physical or mental abilities of; to cause a serious, permanent injury.\nE.g: Falling off the horse disabled him.\n\n- To deactivate, to make inoperational (especially of a function of an electronic or mechanical device).\nE.g: The pilot had to disable the autopilot of his airplane.\n\n",
+            "synonyms": [
+                "deactivate",
+                "non-standard",
+                "unable"
+            ],
+            "antonyms": [
+                "enable"
+            ],
+            "word": "disable",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Lacking ability; unable.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "disable",
+            "type": "adjective"
+        }
+    },
+    "vibrate": {
+        "noun": {
+            "definition": "- The setting, on a portable electronic device, that causes it to vibrate rather than sound any (or most) needed alarms.\nE.g: Please put your cellphones on vibrate for the duration of the meeting.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "vibrate",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To shake with small, rapid movements to and fro.\n\n- To resonate.\nE.g: Her mind was vibrating with excitement.\n\n- To brandish; to swing to and fro.\nE.g: to vibrate a sword or a staff\n\n- To mark or measure by moving to and fro.\nE.g: a pendulum vibrating seconds\n\n- To affect with vibratory motion; to set in vibration.\n\n- To please or impress someone.\n\n- To use vibrato.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "vibrate",
+            "type": "verb"
+        }
+    },
+    "mine": {
+        "pronoun": {
+            "definition": "- My; belonging to me; that which belongs to me.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "mine",
+            "type": "pronoun"
+        }
     }
 }
