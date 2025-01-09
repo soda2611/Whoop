@@ -406,7 +406,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.scrollview.do_scroll_x, self.scrollview.do_scroll_y=False, True
         if not temp:
             self.input_text=input_text
-            result=SOD(self.input_text, database_path="func/data/tu_dien_nguon.txt")
+            result=SOD(self.input_text, database_path="func/data/tu_dien_nguon.txt", internet=check_connection())
             if len(result)==1:
                 result=result[self.input_text[0]]
                 Clock.schedule_once(self.update_UI)
