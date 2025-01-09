@@ -5105,5 +5105,29 @@
             "word": "mine",
             "type": "pronoun"
         }
+    },
+    "accomplish": {
+        "verb": {
+            "definition": "- To finish successfully.\n\n- To complete, as time or distance.\n\n- To execute fully; to fulfill; to complete successfully.\nE.g: to accomplish a design, an object, a promise\n\n- To equip or furnish thoroughly; hence, to complete in acquirements; to render accomplished; to polish.\n\n- To gain; to obtain.\n\n- (Philippine English) to fill out a form\n\n",
+            "synonyms": [
+                "achieve",
+                "carry out",
+                "complete",
+                "consummate",
+                "do",
+                "effect",
+                "effectuate",
+                "equip",
+                "execute",
+                "fulfill",
+                "furnish",
+                "perfect",
+                "perform",
+                "realize"
+            ],
+            "antonyms": [],
+            "word": "accomplish",
+            "type": "verb"
+        }
     }
 }
