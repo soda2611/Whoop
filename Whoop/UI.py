@@ -1,3 +1,4 @@
+#import kivy
 from ui import *
 from ui.home import home
 from ui.setting import setting, update_dialog
