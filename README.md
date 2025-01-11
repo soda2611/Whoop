@@ -6,22 +6,22 @@
 
 ## Cài đặt
 
-- Trên Windows, macOS, Linux:
+- Trên **Windows**, **macOS**, **Linux**:
   + Tải xuống file setup.py, sau đó chạy file để tiến hành thiết lập cho nhà phát triển.
-- Trên Pydroid 3:
-  + Trên Google Play Store, cài đặt Pydroid reposistory plugin
-  + Tải xuống file setup-for-Pydroid.py, sau đó chạy file để tiến hành thiết lập cho nhà phát triển.
+- Trên **Pydroid 3**:
+  + Trên **Google Play Store**, cài đặt **Pydroid reposistory plugin**
+  + Tải xuống file *setup-for-Pydroid.py*, sau đó chạy file để tiến hành thiết lập cho nhà phát triển.
 
 ## Yêu cầu hệ thống:
-- Phiên bản Python: 3.8.0 trở lên (khuyến nghị 3.12.8)
+- Phiên bản **Python**: **3.8.0** trở lên (khuyến nghị **3.12.8**)
 - Phiên bản hệ điều hành:
-  + Windows: Windows 7 trở lên (khuyến nghị Windows 10)
-  + Linux: các phiên bản hỗ trợ Python 3.8.0 trở lên
-  + macOS: các phiên bản hỗ trợ Python 3.8.0 trở lên
-- Phiên bản Pydroid 3: các phiên bản hỗ trợ Python 3.11 trở lên
+  + **Windows**: **Windows 7** trở lên (khuyến nghị **Windows 10**)
+  + **Linux**: các phiên bản hỗ trợ **Python 3.8.0** trở lên
+  + **macOS**: các phiên bản hỗ trợ **Python 3.8.0** trở lên
+- Phiên bản **Pydroid 3**: các phiên bản hỗ trợ **Python 3.11.0** trở lên
 - Phần cứng:
-  + RAM: 2GB trở lên
-  + Ổ cứng: còn trống ít nhất 100MB
+  + **RAM**: **2GB** trở lên
+  + **Ổ cứng**: còn trống ít nhất **50MB**
 
 ## Đóng góp
 
