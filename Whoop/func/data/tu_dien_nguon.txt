@@ -5129,5 +5129,153 @@
             "word": "accomplish",
             "type": "verb"
         }
+    },
+    "my": {
+        "interjection": {
+            "definition": "- Used to express surprise, shock or amazement.\nE.g: My, what big teeth you have!\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "my",
+            "type": "interjection"
+        }
+    },
+    "not": {
+        "noun": {
+            "definition": "- A unary operation on logical values that changes true to false, and false to true.\n\n",
+            "synonyms": [
+                "!",
+                "~",
+                "¬",
+                "ˈ"
+            ],
+            "antonyms": [],
+            "word": "not",
+            "type": "noun"
+        },
+        "adverb": {
+            "definition": "- Negates the meaning of the modified verb.\nE.g: Did you take out the trash? No, I did not.\n\n- To no degree.\nE.g: It's not you, it's me.\n\n- (understatement, litotes) Used to modify superlatives to indicate the opposite or near opposite, often in a form of understatement.\nE.g: It was not my favorite movie of all time.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "not",
+            "type": "adverb"
+        },
+        "conjunction": {
+            "definition": "- And not.\nE.g: He painted the car blue and black, not solid purple.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "not",
+            "type": "conjunction"
+        },
+        "interjection": {
+            "definition": "- (1990s) Used to indicate that the previous phrase was meant sarcastically or ironically.\nE.g: I really like hanging out with my little brother watching Barney... not!\n\n",
+            "synonyms": [
+                "I don't think",
+                "bender"
+            ],
+            "antonyms": [],
+            "word": "not",
+            "type": "interjection"
+        }
+    },
+    "beyond": {
+        "noun": {
+            "definition": "- The unknown.\n\n- The hereafter.\n\n- Something that is far beyond.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "beyond",
+            "type": "noun"
+        },
+        "adverb": {
+            "definition": "- Farther along or away.\n\n- In addition; more.\n\n- Extremely, more than\nE.g: 2017 July 13, Joseph Gamp \"Marvel release stirring new set images of Black Panther and we are BEYOND excited\" Metro (UK)\n\n",
+            "synonyms": [
+                "ayond",
+                "ayont"
+            ],
+            "antonyms": [],
+            "word": "beyond",
+            "type": "adverb"
+        },
+        "preposition": {
+            "definition": "- Further away than.\nE.g: She had no reason for the conviction beyond the very inadequate one that she had seen him around London.\n\n- On the far side of.\nE.g: No swimming beyond this point.\n\n- Later than; after.\n\n- Greater than; so as to exceed or surpass.\nE.g: Your staff went beyond my expectations in refunding my parking ticket.\n\n- In addition to.\n\n- Past, or out of reach of.\nE.g: The patient was beyond medical help.\n\n- Not within the comprehension of.\nE.g: He understood geometry well, but algebraic topology was beyond him.\n\n",
+            "synonyms": [
+                "ayond",
+                "ayont"
+            ],
+            "antonyms": [
+                "before",
+                "earlier"
+            ],
+            "word": "beyond",
+            "type": "preposition"
+        }
+    },
+    "create": "Không có kết nối mạng và không có sẵn trong bộ dữ liệu offline",
+    "horizontal": {
+        "noun": {
+            "definition": "- A horizontal component of a structure\n\n- Horizon\n\n- A Tasmanian shrub or small tree whose main trunk tends to lean over and grow horizontally, Anodopetalum biglandulosum\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "horizontal",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Perpendicular to the vertical; parallel to the plane of the horizon; level, flat\n\n- Relating to horizontal markets\n\n- Pertaining to the horizon\nE.g: 1667: As when the Sun new ris'n / Looks through the Horizontal misty Air — John Milton, Paradise Lost, Book 1, ll. 594-5\n\n- (wine tasting) involving wines of the same vintages but from different wineries\n\n- Of an interval: having the two notes sound successively.\n\n",
+            "synonyms": [
+                "linear",
+                "melodic"
+            ],
+            "antonyms": [
+                "vertical",
+                "vertical"
+            ],
+            "word": "horizontal",
+            "type": "adjective"
+        }
+    },
+    "vertical": {
+        "noun": {
+            "definition": "- A vertex or zenith.\n\n- A vertical geometrical figure; a perpendicular.\n\n- An individual slat in a set of vertical blinds.\n\n- A vertical component of a structure.\n\n- A vertical market.\nE.g: We offer specialised accounting software targeting various verticals.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "vertical",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Standing, pointing, or moving straight up or down; along the direction of a plumb line; perpendicular to something horizontal.\n\n- In a two-dimensional Cartesian co-ordinate system, describing the axis y oriented normal (perpendicular, at right angles) to the horizontal axis x.\n\n- In a three-dimensional co-ordinate system, describing the axis z oriented normal (perpendicular, orthogonal) to the basic plane xy.\n\n- Of or pertaining to vertical markets.\n\n- (wine tasting) Involving different vintages of the same wine type from the same winery.\n\n- Of an interval: having the two notes sound simultaneously.\n\n",
+            "synonyms": [
+                "harmonic"
+            ],
+            "antonyms": [
+                "horizontal",
+                "horizontal"
+            ],
+            "word": "vertical",
+            "type": "adjective"
+        }
+    },
+    "harmonic": {
+        "noun": {
+            "definition": "- A component frequency of the signal of a wave that is an integer multiple of the fundamental frequency.\n\n- The place where, on a bowed string instrument, a note in the harmonic series of a particular string can be played without the fundamental present.\n\n- One of a class of functions that enter into the development of the potential of a nearly spherical mass due to its attraction.\n\n- One's child.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "harmonic",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Pertaining to harmony\n\n- Pleasant to hear; harmonious; melodious\n\n- Used to characterize various mathematical entities or relationships supposed to bear some resemblance to musical consonance\nE.g: The harmonic polar line of an inflection point of a cubic curve is the component of the polar conic other than the tangent line.\n\n- Recurring periodically\n\n- Exhibiting or applying constraints on what vowels (e.g. front/back vowels only) may be found near each other and sometimes in the entire word.\n\n- Of or relating to a generation an even number of generations distant from a particular person.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "harmonic",
+            "type": "adjective"
+        }
+    },
+    "melodic": {
+        "adjective": {
+            "definition": "- Of, relating to, or having melody.\n\n- Melodious, tuneful.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "melodic",
+            "type": "adjective"
+        }
     }
 }
