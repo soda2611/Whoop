@@ -6,7 +6,10 @@
 
 ## Cài đặt
 
-Để cài đặt dự án này, hãy tải xuống file setup.py, sau đó chạy file để tiến hành thiết lập cho nhà phát triển. 
+- Trên Windows, macOS, Linux:
+  + Tải xuống file setup.py, sau đó chạy file để tiến hành thiết lập cho nhà phát triển.
+- Trên Pydroid 3:
+  + Tải xuống file setup-for-Pydroid.py, sau đó chạy file để tiến hành thiết lập cho nhà phát triển.
 
 ## Yêu cầu hệ thống:
 - Phiên bản Python: 3.8.0 trở lên (khuyến nghị 3.12.8)
