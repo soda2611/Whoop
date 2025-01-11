@@ -36,9 +36,10 @@ def get_data(setting_dir):
     
 def write_data(setting_dir, settings):
     setting_file = os.path.join(setting_dir, 'setting.txt')
-    with open(setting_file, "w", encoding="utf-8") as fo:
-        for i in settings:
-            fo.write(f"{i}: {str(settings[i])}\n")
+    if os.path.exists(setting_file):
+        with open(setting_file, "w", encoding="utf-8") as fo:
+            for i in settings:
+                fo.write(f"{i}: {str(settings[i])}\n")
 
 try:
     import requests
