@@ -15,7 +15,7 @@
 ## Yêu cầu hệ thống:
 - Phiên bản **Python**: **3.8.0** trở lên (khuyến nghị **3.12.8**)
 - Phiên bản hệ điều hành:
-  + **Windows**: **Windows 7** trở lên (khuyến nghị **Windows 10**)
+  + **Windows**: Từ **Windows 7** trở lên (khuyến nghị **Windows 10**)
   + **Linux**: các phiên bản hỗ trợ **Python 3.8.0** trở lên
   + **macOS**: các phiên bản hỗ trợ **Python 3.8.0** trở lên
 - Phiên bản **Pydroid 3**: các phiên bản hỗ trợ **Python 3.11.0** trở lên
