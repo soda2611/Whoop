@@ -37,23 +37,24 @@ def SOD(inp, database_path='default', internet=check_connection()):
             if response.status_code == 200:
                 data = response.json()
                 if isinstance(data, list):
-                    word_data = data[0]
-                    meanings = word_data.get("meanings", "none")
-                    for meaning in meanings:
-                        part_of_speech = meaning.get("partOfSpeech", "none")
-                        synonyms = meaning.get("synonyms", "none")
-                        antonyms = meaning.get("antonyms", "none")
-                        data_[part_of_speech] = {"definition": "", "synonyms": synonyms, "antonyms": antonyms}
-                        for definition in meaning.get("definitions", "none"):
-                            definition_text = definition.get("definition", "none")
-                            example = definition.get("example", [])
-                            if example == []:
-                                example = 2 * "\n"
-                            else:
-                                example = f"\nE.g: {example}\n\n"
-                            data_[part_of_speech]["definition"] = data_[part_of_speech]["definition"] + f"- {definition_text}{example}"
-                            data_[part_of_speech]["word"] = word
-                            data_[part_of_speech]["type"] = part_of_speech
+                    for i in data:
+                        word_data = i
+                        meanings = word_data.get("meanings", "none")
+                        for meaning in meanings:
+                            part_of_speech = meaning.get("partOfSpeech", "none")
+                            synonyms = meaning.get("synonyms", "none")
+                            antonyms = meaning.get("antonyms", "none")
+                            data_[part_of_speech] = {"definition": "", "synonyms": synonyms, "antonyms": antonyms}
+                            for definition in meaning.get("definitions", "none"):
+                                definition_text = definition.get("definition", "none")
+                                example = definition.get("example", [])
+                                if example == []:
+                                    example = 2 * "\n"
+                                else:
+                                    example = f"\nE.g: {example}\n\n"
+                                data_[part_of_speech]["definition"] = data_[part_of_speech]["definition"] + f"- {definition_text}{example}"
+                                data_[part_of_speech]["word"] = word
+                                data_[part_of_speech]["type"] = part_of_speech
             with lock:
                 database.update({word: data_})
                 with open(database_path, "w", encoding="utf-8") as fo:
@@ -68,6 +69,7 @@ def SOD(inp, database_path='default', internet=check_connection()):
     if database_path != 'default':
         with open(database_path, encoding="utf-8") as f:
             database = eval(f.read())
+    else: database={}
 
     threads = []
     for word in inp:
@@ -95,6 +97,3 @@ def word_detector(inp):
             list_.append(max_len_phrase)
         i += len(max_len_phrase.split())
     return list_
-
-if __name__=="__main__":
-    print(SOD(word_detector("I a student"), database_path="func/data/tu_dien_nguon.txt"))
