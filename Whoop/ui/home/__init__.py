@@ -399,7 +399,7 @@ class home(MDBoxLayout, TouchBehavior):
         threading.Thread(target=self.search, args=(instance, input_text, temp)).start()
         self.progress_bar.color=btn
         self.progress_bar.start()
-        self.text_input.input.on_text_validate=self.ignore
+        self.text_input.input.bind(on_text_validate=self.ignore)
 
     def search(self, instance, input_text, temp):
         global result
@@ -562,9 +562,9 @@ class home(MDBoxLayout, TouchBehavior):
 
         with open(f"func/setting/{settings['uid']}.txt", "w", encoding="utf-8") as fo:
             fo.write(json.dumps(recent_search, ensure_ascii=False, indent=4))
-        if _value_ and not self.input_text[0] in data_: threading.Thread(target=track_user_queries, args=({self.input_text[0]: result},)).start()
+        if _value_ and check_connection(): threading.Thread(target=track_user_queries, args=({self.input_text[0]: result},)).start()
         else: _value_=not _value_
-        self.text_input.input.on_text_validate=lambda instance: self.search_button_pressed(self.text_input.input, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split()))))
+        self.text_input.input.bind(on_text_validate=lambda instance: self.search_button_pressed(self.text_input.input, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split())))))
         self.progress_bar.color=self.progress_bar.back_color
         self.progress_bar.stop()
 
@@ -594,7 +594,7 @@ class home(MDBoxLayout, TouchBehavior):
     def eb(self, instance):
         self.result_template.pronunciation_button.disabled=False
 
-    def ignore(self):
+    def ignore(self, instance):
         pass
 
     def go_to_page_2(self, instance):
