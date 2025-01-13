@@ -116,9 +116,9 @@ class setting(MDBoxLayout):
         update_thread.cancel()
         self.screen.remove_widget(self.overlay)
 
-    def update_(self, _type_=None):
+    def update_(self, _type_=None, _dialog_=True):
         print(_type_)
-        self.overlay.cancel_button.disabled=True
+        if _dialog_: self.overlay.cancel_button.disabled=True
         try:
             if check_connection():
                 if _type_=="early-access":
@@ -158,12 +158,12 @@ class setting(MDBoxLayout):
                     download_file("Whoop", "Whoop/func/data/word.txt", "func/data/word.txt")
                 os.remove('temp_tu_dien_nguon.txt')
                 os.remove('temp_source.txt')
-                Clock.schedule_once(self.success_)
+                if _dialog_: Clock.schedule_once(self.success_)
             else:
-                Clock.schedule_once(self.no_internet)
+                if _dialog_: Clock.schedule_once(self.no_internet)
         except Exception as ex:
             print(ex)
-            Clock.schedule_once(self.failed_)
+            if _dialog_: Clock.schedule_once(self.failed_)
 
     def success_(self, instance):
         self.overlay.cancel_button.disabled=False
