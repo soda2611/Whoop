@@ -29,6 +29,7 @@ class MyApp(MDApp):
         secondscreen=SecondScreen(name='second')
         secondscreen.setting_layout.color_palette_scroll.scroll_to(secondscreen.setting_layout.color_palette_scroll.got_check)
         secondscreen.setting_layout.font_scroll.scroll_to(secondscreen.setting_layout.font_scroll.got_font_check)
+        threading.Thread(target=secondscreen.setting_layout.update_, args=["official", False]).start()
         sm.add_widget(firstscreen)
         sm.add_widget(secondscreen)
         sm.transition.duration=0.5
@@ -37,3 +38,4 @@ class MyApp(MDApp):
 if __name__ == '__main__':
     MyApp().run()
     set_new_config()
+    os.kill(int(os.getpid()), signal.SIGTERM)
