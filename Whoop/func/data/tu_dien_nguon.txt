@@ -1,1 +1,32 @@
-{}
+{
+    "a": {
+        "noun": {
+            "definition": "- The name of the Latin script letter A/a.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "a",
+            "type": "noun"
+        },
+        "adverb": {
+            "definition": "- All.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "a",
+            "type": "adverb"
+        },
+        "preposition": {
+            "definition": "- Of.\nE.g: The name of John a Gaunt.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "a",
+            "type": "preposition"
+        },
+        "adjective": {
+            "definition": "- All.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "a",
+            "type": "adjective"
+        }
+    }
+}
