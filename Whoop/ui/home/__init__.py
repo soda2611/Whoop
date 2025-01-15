@@ -261,9 +261,12 @@ class home(MDBoxLayout, TouchBehavior):
         global home__
         if home__: self.scrollview.scroll_to(home__[0])
         for i in range(len(home__[:10])):
+            if not home__[i]._state_:
+                home__[i].viewstate()
             try:
                 word=random.choice(word__)
                 text=data_[word][random.choice([i for i in data_[word].keys()])]
+                home__[i]._text_=text["definition"]
                 home__[i].result_head_label.text=text["word"]+" ("+text["type"].lower()+")"+f'\n/{eng_to_ipa.convert(text["word"])}/'
                 if len(text["definition"])>50:
                     home__[i].result_label.text=text["definition"][:50]+"..."
