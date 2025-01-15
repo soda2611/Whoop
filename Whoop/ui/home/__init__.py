@@ -206,7 +206,7 @@ class home(MDBoxLayout, TouchBehavior):
             fo.write("{}")
 
     def morebutton(self, text):
-        morebutton=MDFillRoundFlatButton(text="Xem thêm", pos_hint={"center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
+        morebutton=MDFillRoundFlatButton(text="Xem thêm", pos_hint={"center_x":0.5, "center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
         morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, text['type'], value=False, temp=text))
         return morebutton
 
@@ -215,7 +215,7 @@ class home(MDBoxLayout, TouchBehavior):
 
     def create_content_box(self, text):
         self.content_box=content_box(text)
-        self.content_box.morebutton=MDFillRoundFlatButton(text="Xem thêm", pos_hint={"center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
+        self.content_box.morebutton=MDFillRoundFlatButton(text="Xem thêm", pos_hint={"center_x":0.5, "center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
         self.content_box.morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, text['type'], value=False, temp=text))
         self.content_box.add_widget(self.content_box.morebutton)
         return self.content_box
