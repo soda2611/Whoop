@@ -56,5 +56,71 @@
             "word": "needle",
             "type": "verb"
         }
+    },
+    "art": {
+        "noun": {
+            "definition": "- The conscious production or arrangement of sounds, colours, forms, movements, or other elements in a manner that affects the senses and emotions, usually specifically the production of the beautiful in a graphic or plastic medium.\nE.g: There is a debate as to whether graffiti is art or vandalism.\n\n- The creative and emotional expression of mental imagery, such as visual, auditory, social, etc.\n\n- Skillful creative activity, usually with an aesthetic focus.\nE.g: She's mastered the art of programming.\n\n- The study and the product of these processes.\nE.g: He's at university to study art.\n\n- Aesthetic value.\nE.g: Her photographs are nice, but there's no art in them.\n\n- Artwork.\nE.g: Sotheby's regularly auctions art for millions.\n\n- A field or category of art, such as painting, sculpture, music, ballet, or literature.\nE.g: I'm a great supporter of the arts.\n\n- A nonscientific branch of learning; one of the liberal arts.\n\n- Skill that is attained by study, practice, or observation.\n\n- Contrivance, scheming, manipulation.\n\n",
+            "synonyms": [
+                "craft"
+            ],
+            "antonyms": [
+                "mundacity",
+                "nature",
+                "subsistence"
+            ],
+            "word": "art",
+            "type": "noun"
+        }
+    },
+    "subsistence": {
+        "noun": {
+            "definition": "- Real being; existence.\n\n- The act of maintaining oneself at a minimum level.\n\n- Inherency.\nE.g: the subsistence of qualities in bodies\n\n- Something (food, water, money, etc.) that is required to stay alive.\n\n- Embodiment or personification or hypostasis of an underlying principle or quality.\n\n",
+            "synonyms": [
+                "sustenance",
+                "hypostasis"
+            ],
+            "antonyms": [],
+            "word": "subsistence",
+            "type": "noun"
+        }
+    },
+    "sustenance": {
+        "noun": {
+            "definition": "- Something that provides support or nourishment.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "sustenance",
+            "type": "noun"
+        }
+    },
+    "hypostasis": {
+        "noun": {
+            "definition": "- A sedimentary deposit, especially in urine.\n\n- The essential person, specifically the single person of Christ (as distinguished from his two ‘natures’, human and divine), or of the three ‘persons’ of the Trinity (sharing a single ‘essence’).\n\n- The underlying reality or substance of something.\n\n- The effect of one gene preventing another from expressing.\n\n- Postmortem lividity; livor mortis; suggillation.\n\n",
+            "synonyms": [
+                "subsistence"
+            ],
+            "antonyms": [],
+            "word": "hypostasis",
+            "type": "noun"
+        }
+    },
+    "nature": {
+        "noun": {
+            "definition": "- The natural world; that which consists of all things unaffected by or predating human technology, production, and design. (Compare ecosystem.)\nE.g: Nature never lies (i.e. tells untruths).\n\n- The innate characteristics of a thing. What something will tend by its own constitution, to be or do. Distinct from what might be expected or intended.\n\n- The summary of everything that has to do with biological, chemical and physical states and events in the physical universe.\n\n- Conformity to that which is natural, as distinguished from that which is artificial, or forced, or remote from actual experience.\n\n- Kind, sort; character; quality.\n\n- Physical constitution or existence; the vital powers; the natural life.\n\n- Natural affection or reverence.\n\n",
+            "synonyms": [
+                "quintessence",
+                "whatness"
+            ],
+            "antonyms": [],
+            "word": "nature",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To endow with natural qualities.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "nature",
+            "type": "verb"
+        }
     }
 }
