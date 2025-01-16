@@ -28,5 +28,33 @@
             "word": "a",
             "type": "adjective"
         }
+    },
+    "lp": {
+        "noun": {
+            "definition": "- Loop\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "lp",
+            "type": "noun"
+        }
+    },
+    "needle": {
+        "noun": {
+            "definition": "- A fine, sharp implement usually for piercing such as sewing, or knitting, acupuncture, tattooing, body piercing, medical injections, etc.\nE.g: The seamstress threaded the needle to sew on a button.\n\n- Any slender, pointed object resembling a needle, such as a pointed crystal, a sharp pinnacle of rock, an obelisk, etc.\n\n- A fine measurement indicator on a dial or graph, e.g. a compass needle.\nE.g: The needle on the fuel gauge pointed to empty.\n\n- A sensor for playing phonograph records, a phonograph stylus.\nE.g: Ziggy bought some diamond needles for his hi-fi phonograph.\n\n- A needle-like leaf found on some conifers.\n\n- A strong beam resting on props, used as a temporary support during building repairs.\n\n- (usually preceded by the) The death penalty carried out by lethal injection.\n\n- A text string that is searched for within another string. (see: needle in a haystack)\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "needle",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To pierce with a needle, especially for sewing or acupuncture.\n\n- To tease in order to provoke; to poke fun at.\nE.g: Billy needled his sister incessantly about her pimples.\n\n- To form, or be formed, in the shape of a needle.\nE.g: to needle crystals\n\n",
+            "synonyms": [
+                "goad",
+                "tease"
+            ],
+            "antonyms": [],
+            "word": "needle",
+            "type": "verb"
+        }
     }
 }
