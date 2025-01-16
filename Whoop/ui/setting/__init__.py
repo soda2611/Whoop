@@ -18,7 +18,7 @@ class setting(MDBoxLayout):
             md_bg_color=boxbg
         )
 
-        self.overlay=MDCard(padding=[dp(10), dp(10), dp(10), dp(10)], size_hint=(1, 1), orientation='vertical', md_bg_color=bg)
+        self.overlay=MDCard(padding=[dp(10), dp(10), dp(10), dp(10)], size_hint=(1, 1), orientation='vertical', md_bg_color=bg, radius=[0, 0, 0, 0])
         self.overlay.bind(on_touch=self.touch_ignore)
         self.overlay.cancel_button=MDFillRoundFlatButton(text="Huỷ", pos_hint={"center_x": 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=secondarycolor, md_bg_color=btn, on_press=self.cancel_update)
         self.overlay.add_widget(Image(source=settings["banner"], size_hint=(0.9, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, height=dp(50)))
