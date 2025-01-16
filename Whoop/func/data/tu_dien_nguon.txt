@@ -155,5 +155,133 @@
             "word": "craft",
             "type": "verb"
         }
+    },
+    "stop": {
+        "noun": {
+            "definition": "- A small well-bucket; a milk-pail.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "stop",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To cease moving.\nE.g: I stopped at the traffic lights.\n\n- To not continue.\nE.g: Soon the rain will stop.\n\n- To cause (something) to cease moving or progressing.\nE.g: The sight of the armed men stopped him in his tracks.\n\n- To cease; to no longer continue (doing something).\nE.g: One of the wrestlers suddenly stopped fighting.\n\n- To cause (something) to come to an end.\nE.g: The referees stopped the fight.\n\n- To close or block an opening.\nE.g: He stopped the wound with gauze.\n\n- (often with \"up\" or \"down\") To adjust the aperture of a camera lens.\nE.g: To achieve maximum depth of field, he stopped down to an f-stop of 22.\n\n- To stay; to spend a short time; to reside or tarry temporarily.\nE.g: He stopped at his friend's house before continuing with his drive.\n\n- To regulate the sounds of (musical strings, etc.) by pressing them against the fingerboard with the finger, or otherwise shortening the vibrating part.\n\n- To punctuate.\n\n- To make fast; to stopper.\n\n",
+            "synonyms": [
+                "arrest",
+                "freeze",
+                "halt",
+                "blin",
+                "cancel",
+                "cease",
+                "discontinue",
+                "halt",
+                "terminate",
+                "brake",
+                "desist",
+                "halt",
+                "blin",
+                "cease",
+                "desist",
+                "discontinue",
+                "halt",
+                "terminate",
+                "lodge",
+                "stop over",
+                "hang about",
+                "hang around",
+                "linger",
+                "loiter",
+                "pause"
+            ],
+            "antonyms": [
+                "continue",
+                "move",
+                "continue",
+                "move",
+                "continue",
+                "go",
+                "move",
+                "proceed",
+                "continue",
+                "proceed"
+            ],
+            "word": "stop",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Being or relating to the squark that is the superpartner of a top quark.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "stop",
+            "type": "adjective"
+        }
+    },
+    "mine": {
+        "pronoun": {
+            "definition": "- My; belonging to me; that which belongs to me.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "mine",
+            "type": "pronoun"
+        },
+        "noun": {
+            "definition": "- Demeanor; facial expression or attitude, especially one which is intended by its bearer.\n\n- A specific facial expression.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "mine",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To remove (ore) from the ground.\n\n- To dig into, for ore or metal.\n\n- To sow mines (the explosive devices) in (an area).\n\n- To damage (a vehicle or ship) with a mine (an explosive device).\n\n- To dig a tunnel or hole; to burrow in the earth.\n\n- To dig away, or otherwise remove, the substratum or foundation of; to lay a mine under; to sap; to undermine.\n\n- (by extension) To ruin or destroy by slow degrees or secret means.\n\n- To pick one's nose.\n\n- To earn new units of cryptocurrency by doing certain calculations.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "mine",
+            "type": "verb"
+        }
+    },
+    "my ass": {
+        "interjection": {
+            "definition": "- Indicates disapproval, disagreement, or disbelief, often with a tone of disregard, disdain, or disgust, referring to the buttocks.\nE.g: She'll use my money to buy a new car, my ass!\n\n",
+            "synonyms": [
+                "fiddlesticks",
+                "horsefeathers",
+                "like hell",
+                "pull the other one",
+                "the hell"
+            ],
+            "antonyms": [],
+            "word": "my ass",
+            "type": "interjection"
+        },
+        "pronoun": {
+            "definition": "- I, myself; oneself in the third person.\nE.g: My boss screwed up again, and of course it's my ass that has to deal with it.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "my ass",
+            "type": "pronoun"
+        }
+    },
+    "fiddlesticks": {
+        "noun": {
+            "definition": "- A bow used to play the fiddle.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "fiddlesticks",
+            "type": "noun"
+        },
+        "interjection": {
+            "definition": "- Nonsense! Expresses dismissal or disdain.\nE.g: Fiddlesticks! It's nothing but smoke and mirrors!\n\n- Darn! Expresses mild dismay or annoyance.\nE.g: Oh, fiddlesticks! I locked my keys in the car.\n\n",
+            "synonyms": [
+                "consarn it",
+                "good grief",
+                "rats",
+                "fiddlesticks",
+                "horsefeathers",
+                "pull the other one"
+            ],
+            "antonyms": [],
+            "word": "fiddlesticks",
+            "type": "interjection"
+        }
     }
 }
