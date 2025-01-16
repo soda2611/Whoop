@@ -122,5 +122,38 @@
             "word": "nature",
             "type": "verb"
         }
+    },
+    "my": {
+        "interjection": {
+            "definition": "- Used to express surprise, shock or amazement.\nE.g: My, what big teeth you have!\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "my",
+            "type": "interjection"
+        }
+    },
+    "craft": {
+        "noun": {
+            "definition": "- Strength; power; might; force .\n\n- Intellectual power; skill; art.\n\n- (obsolete in the general sense) A work or product of art .\n\n- A device, a means; a magical device, spell or enchantment .\n\n- Learning of the schools, scholarship; a branch of learning or knowledge, a science, especially one of the ‘seven liberal arts’ of the medieval universities .\n\n- Skill, skilfulness, art, especially the skill needed for a particular profession .\nE.g: The craft of writing plays.\n\n- (plural crafts) A branch of skilled work or trade, especially one requiring manual dexterity or artistic skill, but sometimes applied equally to any business, calling or profession; the skilled practice of a practical occupation .\nE.g: He learned his craft as an apprentice.\n\n- A trade or profession as embodied in its practitioners collectively; the members of a trade or handicraft as a body; an association of these; a trade's union, guild, or ‘company’ .\nE.g: She represented the craft of brewers.\n\n- (plural craft) A vehicle designed for navigation in or on water or air or through outer space .\n\n- Implements used in catching fish, such as net, line, or hook. Modern use primarily in whaling, as in harpoons, hand-lances, etc. .\n\n",
+            "synonyms": [
+                "art",
+                "business",
+                "handicraft",
+                "profession",
+                "trade",
+                "craftsmanship",
+                "workmanship"
+            ],
+            "antonyms": [],
+            "word": "craft",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To make by hand and with much skill.\n\n- To construct, develop something (like a skilled craftsman).\nE.g: state crafting; the process of crafting global policing\n\n- To combine multiple items to form a new item, such as armour or medicine.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "craft",
+            "type": "verb"
+        }
     }
 }
