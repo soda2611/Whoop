@@ -33,6 +33,7 @@ def get_data(setting_dir):
             settings[option]=properties
         
         return settings
+    return {}
     
 def write_data(setting_dir, settings):
     setting_file = os.path.join(setting_dir, 'setting.txt')
