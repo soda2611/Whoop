@@ -242,7 +242,10 @@ class home(MDBoxLayout, TouchBehavior):
                 else:
                     _folder_=folder(i, f"Không có từ vựng")
                     self.favlist.fav_scrollview_box.add_widget(_folder_)
-                if choose_mode: _folder_.add_widget(MDIconButton(icon="check", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5}, on_press=lambda instance: self.addfav(instance, i)))
+                if choose_mode:
+                    check=MDIconButton(icon="check", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
+                    check.bind(on_press=partial(self.addfav, folder=i))
+                    _folder_.add_widget(check)
                 elif len(fav_list[i])>0:
                     _folder_.morebutton=MDFillRoundFlatButton(text="Xem thêm", pos_hint={"center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
                     _folder_.morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, _data_))
@@ -296,7 +299,10 @@ class home(MDBoxLayout, TouchBehavior):
             fav_list[self.fav_container.text]=[]
             folder_name=self.fav_container.text
             _folder_=folder(self.fav_container.text, "Không có từ vựng")
-            if choose_mode: _folder_.add_widget(MDIconButton(icon="check", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5}, on_press=lambda instance: self.addfav(instance, folder_name)))
+            if choose_mode:
+                check=MDIconButton(icon="check", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
+                check.bind(on_press=partial(self.addfav, folder=folder_name))
+                _folder_.add_widget(check)
             _folder_.add_widget(MDIconButton(icon="delete", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5}, on_press=lambda instance: self.remove_fav(instance)))
             self.favlist.fav_scrollview_box.add_widget(_folder_)
         with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
