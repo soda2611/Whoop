@@ -4,12 +4,15 @@ from ui.home.widget.result_template import *
 from ui.home.widget.add_data import add_data
 from ui.home.widget.recent import *
 from ui.home.widget.content_box import *
+from ui.home.widget.fav_word_list import *
 
 current_page="home"
 _temp_=[]
 _back_=[]
 _value_=True
 _callback_=False
+choose_mode=False
+_key_=None
 result={}
 
 class home(MDBoxLayout, TouchBehavior):
@@ -42,6 +45,30 @@ class home(MDBoxLayout, TouchBehavior):
         self.no_internet_alert=self.alert=MDDialog(
             title="Không có kết nối internet",
             type="alert",
+            md_bg_color=boxbg
+        )
+        
+        self.fav_container=MDTextField(hint_text="Tên danh mục", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
+        self.fav_container.bind(on_text_validate=self.add_fav)
+        
+        self.fav_dialog=MDDialog(
+            title=f"Thêm danh mục yêu thích",
+            type="custom",
+            content_cls=self.fav_container,
+            buttons=[
+                MDFillRoundFlatButton(
+                    text="Xác nhận",
+                    md_bg_color=btn,
+                    theme_text_color="Custom",
+                    text_color=secondarycolor,
+                    on_press=self.add_fav
+                ),
+                MDFillRoundFlatButton(
+                    text="Huỷ",
+                    md_bg_color=btn,
+                    theme_text_color="Custom",
+                    text_color=secondarycolor
+                )],
             md_bg_color=boxbg
         )
 
@@ -78,6 +105,9 @@ class home(MDBoxLayout, TouchBehavior):
         self.noname=MDCard(orientation='vertical',md_bg_color=bg, size_hint=(1, 1), pos_hint={'center_x': 0.5, 'center_y': 0.5})
         self.noname.radius=[dp(i) for i in self.noname.radius]
         self.one_box.add_widget(self.noname)
+
+        self.fav_nav_bar=MDBoxLayout(size_hint=(1, None), height=dp(50))
+        self.fav_back_button=MDIconButton(icon="arrow-left", theme_icon_color="Custom", pos_hint={"center_y": 0.5}, icon_color=primarycolor, md_bg_color=(1,1,1,0), disabled=True, md_bg_color_disabled=(1,1,1,0), on_press=self.back)
 
         self.recent=recent(self.create_content_box, self.clear_history, self.noname.radius)
         if len(recent_search)>0:
@@ -190,8 +220,102 @@ class home(MDBoxLayout, TouchBehavior):
         self.noname.md_bg_color=bg
         self.progress_box.height=dp(5)
         self.progress_box.remove_widget(self.nav_bar)
+        self.progress_box.remove_widget(self.fav_nav_bar)
         self.scrollview.clear_widgets()
         self.scrollview.add_widget(self.dialog)
+
+    def show_fav(self, *args):
+        global current_page, choose_mode
+        current_page="favorite word list"
+        self.menu.dismiss()
+        self.progress_box.clear_widgets()
+        self.progress_box.height=dp(60)
+        self.progress_box.add_widget(self.progress_bar)
+        self.progress_box.add_widget(self.fav_nav_bar)
+        self.favlist=favwordlist()
+        if len(fav_list)>0:
+            for i in fav_list:
+                if len(fav_list[i])>0:
+                    _data_=fav_list[i]
+                    _folder_=folder(i, f"Có {len(fav_list[i])} từ vựng")
+                    self.favlist.fav_scrollview_box.add_widget(_folder_)
+                else:
+                    _folder_=folder(i, f"Không có từ vựng")
+                    self.favlist.fav_scrollview_box.add_widget(_folder_)
+                if choose_mode: _folder_.add_widget(MDIconButton(icon="check", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5}, on_press=lambda instance: self.addfav(instance, i)))
+                elif len(fav_list[i])>0:
+                    _folder_.morebutton=MDFillRoundFlatButton(text="Xem thêm", pos_hint={"center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
+                    _folder_.morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, _data_))
+                    _folder_.add_widget(_folder_.morebutton)
+                _folder_.add_widget(MDIconButton(icon="delete", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5}, on_press=lambda instance: self.remove_fav(instance)))
+            self.favlist.container.add_widget(self.favlist.fav_scrollview)
+        else:
+            self.favlist.container.add_widget(self.favlist.label)
+        self.fav_nav_bar.clear_widgets()
+        self.fav_nav_bar.add_widget(self.fav_back_button)
+        if not choose_mode: self.fav_nav_bar.add_widget(MDLabel(text="Yêu thích", font_style="main", font_size=dp(20), halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=primarycolor))
+        else: self.fav_nav_bar.add_widget(MDLabel(text="Chọn danh mục", font_style="main", font_size=dp(20), halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=primarycolor))
+        self.add_button=MDIconButton(icon="plus", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"x": 1, "center_y": 0.5})
+        self.add_button.bind(on_press=self.fav_dialog.open)
+        self.fav_nav_bar.add_widget(self.add_button)
+        self.scrollview.scroll_y=1
+        self.progress_bar.back_color=(boxbg)
+        self.noname.md_bg_color=boxbg
+        self.scrollview.do_scroll_x, self.scrollview.do_scroll_y=False, True
+        self.scrollview.clear_widgets()
+        self.scrollview.add_widget(self.favlist)
+        
+    def choose_folder(self, instance, word):
+        global choose_mode, _key_
+        choose_mode=True
+        _key_=word
+        self.show_fav()
+        
+    def addfav(self, instance, folder):
+        global choose_mode, _key_
+        self.menu.dismiss()
+        if _key_ not in fav:
+            fav_list[folder].append(_key_)
+            fav[_key_]=folder
+            with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
+                fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
+            self.search_button_pressed(instance, [_key_])
+        else:
+            fav_list[folder].remove(_key_)
+            del fav[_key_]
+            with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
+                fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
+        choose_mode=False
+        _key_=None
+        
+    def add_fav(self, *args):
+        global choose_mode
+        self.fav_dialog.dismiss()
+        self.fav_container.text=self.fav_container.text.strip()
+        if self.fav_container.text not in fav_list and self.fav_container.text!="":
+            fav_list[self.fav_container.text]=[]
+            folder_name=self.fav_container.text
+            _folder_=folder(self.fav_container.text, "Không có từ vựng")
+            if choose_mode: _folder_.add_widget(MDIconButton(icon="check", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5}, on_press=lambda instance: self.addfav(instance, folder_name)))
+            _folder_.add_widget(MDIconButton(icon="delete", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5}, on_press=lambda instance: self.remove_fav(instance)))
+            self.favlist.fav_scrollview_box.add_widget(_folder_)
+        with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
+            fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
+        if len(fav_list)>0:
+            self.favlist.container.clear_widgets()
+            self.favlist.container.add_widget(self.favlist.fav_scrollview)
+        self.fav_container.text=""
+        
+    def remove_fav(self, instance):
+        global fav_list, fav
+        self.favlist.fav_scrollview_box.remove_widget(instance.parent)
+        del fav_list[instance.parent.result_head_label.text]
+        with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
+            fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
+        if len(fav_list)==0:
+            self.favlist.container.clear_widgets()
+            self.favlist.container.add_widget(self.favlist.label)
+        fav=remove_keys_by_value(fav, instance.parent.result_head_label.text)
 
     def clear_history(self, instance):
         global recent_search
@@ -233,6 +357,8 @@ class home(MDBoxLayout, TouchBehavior):
         current_page="add_data"
         self.progress_box.height=dp(5)
         self.progress_box.remove_widget(self.nav_bar)
+        self.progress_box.remove_widget(self.fav_nav_bar)
+        self.progress_box.remove_widget(self.fav_nav_bar)
         self.menu.dismiss()
         self.progress_bar.back_color=bg
         self.progress_bar.color=self.progress_bar.back_color
@@ -297,10 +423,18 @@ class home(MDBoxLayout, TouchBehavior):
                 "theme_trailing_icon_color": "Custom",
                 "trailing_icon_color": primarycolor,
                 "on_release": self.add_data
+            },
+            {
+                "text": "Yêu thích",
+                "text_color": primarycolor,
+                "trailing_icon": "heart",
+                "theme_trailing_icon_color": "Custom",
+                "trailing_icon_color": primarycolor,
+                "on_release": self.show_fav
             }
         ]
         if Window.width<dp(900):
-            menu_items.insert(2,{"text": "Gần đây",
+            menu_items.insert(3,{"text": "Gần đây",
                                 "text_color": primarycolor,
                                 "trailing_icon": "history",
                                 "theme_trailing_icon_color": "Custom",
@@ -314,6 +448,39 @@ class home(MDBoxLayout, TouchBehavior):
             position="top"
         )
         self.menu.open()
+        
+    def word_option(self, instance):
+        global _key_
+        word=result[list(result.keys())[0]]['word']
+        menu_items = [
+            {
+                "text_color": primarycolor,
+                "theme_trailing_icon_color": "Custom",
+                "trailing_icon_color": primarycolor,
+            },
+            {
+                "text": "Sao chép",
+                "text_color": primarycolor,
+                "trailing_icon": "content-copy",
+                "theme_trailing_icon_color": "Custom",
+                "trailing_icon_color": primarycolor,
+                "on_release": lambda instance=instance: self.copy(instance, text=result[list(result.keys())[0]])
+            }
+        ]
+        menu_items[0]["trailing_icon"]="heart-outline"  if word not in fav else "heart"
+        menu_items[0]["text"]="Yêu thích"  if word not in fav else "Bỏ yêu thích"
+        if word not in fav: menu_items[0]["on_release"]=lambda instance=instance: self.choose_folder(instance, word)
+        else:
+            _key_=word
+            menu_items[0]["on_release"]=lambda instance=instance: self.addfav(instance, fav[_key_])
+        self.menu=MDDropdownMenu(
+            caller=self.copy_button,
+            items=menu_items,               
+            ver_growth="down",
+            md_bg_color=menubg,
+            position="bottom"
+        )
+        self.menu.open()
 
     def home(self, instance):
         global _back_, current_page
@@ -323,6 +490,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.progress_bar.color=self.progress_bar.back_color
         self.noname.md_bg_color=bg
         self.progress_box.remove_widget(self.nav_bar)
+        self.progress_box.remove_widget(self.fav_nav_bar)
         self.scrollview.clear_widgets()
         self.scrollview.add_widget(self.homebox)
 
@@ -369,6 +537,7 @@ class home(MDBoxLayout, TouchBehavior):
                 self.noname.md_bg_color=boxbg
                 self.progress_box.height=dp(5)
                 self.progress_box.remove_widget(self.nav_bar)
+                self.progress_box.remove_widget(self.fav_nav_bar)
                 self.scrollview.clear_widgets()
                 self.scrollview.add_widget(self.translate_result_template)
             except:
@@ -480,7 +649,7 @@ class home(MDBoxLayout, TouchBehavior):
                         self.progress_box.add_widget(self.nav_bar)
                         self.result_template.word.text=self.input_text[0].capitalize()+f' ({i.lower()})'
                         self.nav_bar.clear_widgets()
-                        self.copy_button=MDIconButton(icon="content-copy", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"x": 1, "center_y": 0.5}, on_press=lambda instance: self.copy(instance, text=result[i]))
+                        self.copy_button=MDIconButton(icon="dots-vertical", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"x": 1, "center_y": 0.5}, on_press=self.word_option)
                         self.nav_bar.add_widget(self.back_button)
                         self.nav_bar.add_widget(self.result_template.word)
                         self.nav_bar.add_widget(self.copy_button)
