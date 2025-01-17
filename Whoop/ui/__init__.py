@@ -45,6 +45,7 @@ from kivy.core.clipboard import Clipboard as pyperclip
 from kivy.core.audio import SoundLoader
 from func.SOD import *
 from googletrans import Translator
+from functools import partial
 
 class MDLabel(MDLabel, TouchBehavior):
     def __init__(self, **kwargs):
@@ -80,6 +81,15 @@ class MDFillRoundFlatIconButton(MagicBehavior, MDFillRoundFlatIconButton):
     def on_release(self, *args):
         self.grow()
 
+class check_button(MDIconButton):
+    def __init__(self, folder, **kwargs):
+        super(check_button, self).__init__(**kwargs)
+        self.folder=folder
+        self.icon="check"
+        self.theme_icon_color="Custom"
+        self.icon_color=primarycolor
+        self.pos_hint={"center_x": 0.5, "center_y": 0.5}
+        
 def set_new_config():
     with open("func/setting/setting.txt", "w", encoding="utf-8") as fo:
         for i in settings:
