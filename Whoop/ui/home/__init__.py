@@ -67,7 +67,8 @@ class home(MDBoxLayout, TouchBehavior):
                     text="Huỷ",
                     md_bg_color=btn,
                     theme_text_color="Custom",
-                    text_color=secondarycolor
+                    text_color=secondarycolor,
+                    on_press=self.fav_dialog.dismiss
                 )],
             md_bg_color=boxbg
         )
