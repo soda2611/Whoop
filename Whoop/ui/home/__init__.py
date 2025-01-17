@@ -68,10 +68,10 @@ class home(MDBoxLayout, TouchBehavior):
                     md_bg_color=btn,
                     theme_text_color="Custom",
                     text_color=secondarycolor,
-                    on_press=self.fav_dialog.dismiss
                 )],
             md_bg_color=boxbg
         )
+        self.fav_dialog.buttons[1].bind(on_press=self.fav_dialog.dismiss)
 
         self.label = Image(source=settings["banner"], size_hint=(0.9, None), pos_hint={'center_x': 0.5}, height=dp(55))
 
