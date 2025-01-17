@@ -123,6 +123,14 @@ def config():
     btn=[int(i)/255 for i in color[3].split(", ")]+[1]
     primarycolor=[int(i)/255 for i in color[4].split(", ")]+[1]
     secondarycolor=[int(i)/255 for i in color[5].split(", ")]+[1]
+
+    with open(settings["favlist"], encoding="utf-8") as fi:
+        favlist=eval(fi.read())
+        
+    fav={}
+    for i in favlist:
+        for j in favlist[i]:
+            fav[j]=i
     
     with open("func/setting/colors.txt", "r", encoding="utf-8") as fi:
         lines=fi.readlines()
@@ -142,7 +150,7 @@ def config():
             if file.endswith(".ttf"):
                 fonts_name.append(file[:file.find(".ttf")])
     
-    return bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, engine, word__, source, home__, queried, version, data_
+    return bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, engine, word__, source, home__, queried, version, data_, favlist, fav
 
 def restart(instance):
     set_new_config()
@@ -152,8 +160,14 @@ def restart(instance):
     elif file_name.endswith('.exe'):
         subprocess.Popen([file_name], start_new_session=True)
     os.kill(os.getpid(), signal.SIGTERM)
+    
+def remove_keys_by_value(d, value):
+    keys_to_remove = [key for key, val in d.items() if val == value]
+    for key in keys_to_remove:
+        del d[key]
+    return d
 
-bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, engine, word__, source, home__, queried, version, data_=config()
+bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, engine, word__, source, home__, queried, version, data_, fav_list, fav=config()
 firstscreen=None
 secondscreen=None
 sm = MDScreenManager(transition=MDFadeSlideTransition())
