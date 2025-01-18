@@ -251,6 +251,10 @@ class home(MDBoxLayout, TouchBehavior):
                     _folder_.morebutton=MDFillRoundFlatButton(text="Xem thêm", pos_hint={"center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
                     _folder_.morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, _data_))
                     _folder_.add_widget(_folder_.morebutton)
+                if not choose_mode:
+                    rename=MDIconButton(icon="rename", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
+                    rename.bind(on_press=partial(self.renamefav, folder=i))
+                    _folder_.add_widget(rename)
                 _folder_.add_widget(MDIconButton(icon="delete", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5}, on_press=lambda instance: self.remove_fav(instance)))
             self.favlist.container.add_widget(self.favlist.fav_scrollview)
         else:
@@ -304,6 +308,10 @@ class home(MDBoxLayout, TouchBehavior):
                 check=MDIconButton(icon="check", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
                 check.bind(on_press=partial(self.addfav, folder=folder_name))
                 _folder_.add_widget(check)
+            else:
+                rename=MDIconButton(icon="rename", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
+                rename.bind(on_press=partial(self.renamefav, folder=folder_name))
+                _folder_.add_widget(rename)
             _folder_.add_widget(MDIconButton(icon="delete", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5}, on_press=lambda instance: self.remove_fav(instance)))
             self.favlist.fav_scrollview_box.add_widget(_folder_)
         with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
@@ -323,6 +331,49 @@ class home(MDBoxLayout, TouchBehavior):
             self.favlist.container.clear_widgets()
             self.favlist.container.add_widget(self.favlist.label)
         fav=remove_keys_by_value(fav, instance.parent.result_head_label.text)
+        
+    def renamefav(self, instance, folder):
+        self.fav_rename_container=MDTextField(hint_text="Tên danh mục mới", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
+        self.fav_container.bind(on_text_validate=lambda instance: self.rename_fav(instance, folder))
+        
+        self.fav_rename_dialog=MDDialog(
+            title="Đổi tên danh mục",
+            type="custom",
+            content_cls=self.fav_rename_container,
+            buttons=[
+                MDFillRoundFlatButton(
+                    text="Xác nhận",
+                    md_bg_color=btn,
+                    theme_text_color="Custom",
+                    text_color=secondarycolor,
+                    on_press=lambda instance=instance: self.rename_fav(instance, folder)
+                ),
+                MDFillRoundFlatButton(
+                    text="Huỷ",
+                    md_bg_color=btn,
+                    theme_text_color="Custom",
+                    text_color=secondarycolor,
+                )],
+            md_bg_color=boxbg
+        )
+        self.fav_dialog.buttons[1].bind(on_press=self.fav_rename_dialog.dismiss)
+        self.fav_rename_dialog.open()
+        
+    def rename_fav(self, instance, folder):
+        new_name = self.fav_rename_container.text.strip()
+        if new_name and new_name != folder and new_name not in fav_list:
+            items = list(fav_list.items())
+            index = items.index((folder, fav_list[folder]))
+            fav_list[new_name] = fav_list.pop(folder)
+            updated_items = items[:index] + [(new_name, fav_list[new_name])] + items[index + 1:]
+            fav_list.clear()
+            fav_list.update(updated_items)
+            for word in fav_list[new_name]:
+                fav[word] = new_name
+            with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
+                fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
+            self.show_fav()
+        self.fav_rename_dialog.dismiss()
 
     def clear_history(self, instance):
         global recent_search
