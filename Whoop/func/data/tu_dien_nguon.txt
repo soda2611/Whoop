@@ -283,5 +283,34 @@
             "word": "fiddlesticks",
             "type": "interjection"
         }
+    },
+    "opposition": {
+        "noun": {
+            "definition": "- The action of opposing or of being in conflict.\n\n- An opposite or contrasting position.\n\n- The apparent relative position of two celestial bodies when one is at an angle of 180 degrees from the other as seen from the Earth.\n\n- A political party or movement opposed to the party or government in power.\n\n- In United States intellectual property law, a proceeding in which an interested party seeks to prevent the registration of a trademark or patent.\n\n- A position in which the player on the move must yield with his king allowing his opponent to advance with his own king.\n\n- The difference of quantity or quality between two propositions having the same subject and predicate.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "apposition"
+            ],
+            "word": "opposition",
+            "type": "noun"
+        }
+    },
+    "helix": {
+        "noun": {
+            "definition": "- A curve on the surface of a cylinder or cone such that its angle to a plane perpendicular to the axis is constant; the three-dimensional curve seen in a screw or a spiral staircase.\n\n- A small volute under the abacus of a Corinthian capital.\n\n- The incurved rim of the external ear.\n\n- An upside down midair 360° spin in playboating.\n\n",
+            "synonyms": [
+                "spiral"
+            ],
+            "antonyms": [],
+            "word": "helix",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To form or cause to form a helix.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "helix",
+            "type": "verb"
+        }
     }
 }
