@@ -247,15 +247,17 @@ class home(MDBoxLayout, TouchBehavior):
                     check=MDIconButton(icon="check", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
                     check.bind(on_press=partial(self.addfav, folder=i))
                     _folder_.add_widget(check)
-                elif len(fav_list[i])>0:
-                    _folder_.morebutton=MDFillRoundFlatButton(text="Xem thêm", pos_hint={"center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
-                    _folder_.morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, _data_))
-                    _folder_.add_widget(_folder_.morebutton)
+                    
                 if not choose_mode:
                     rename=MDIconButton(icon="rename", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
                     rename.bind(on_press=partial(self.renamefav, folder=i))
                     _folder_.add_widget(rename)
                 _folder_.add_widget(MDIconButton(icon="delete", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5}, on_press=lambda instance: self.remove_fav(instance)))
+                
+                if not choose_mode and len(fav_list[i])>0:
+                    _folder_.morebutton=MDIconButton(icon="chevron-right", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
+                    _folder_.morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, _data_))
+                    _folder_.add_widget(_folder_.morebutton)
             self.favlist.container.add_widget(self.favlist.fav_scrollview)
         else:
             self.favlist.container.add_widget(self.favlist.label)
@@ -282,18 +284,19 @@ class home(MDBoxLayout, TouchBehavior):
     def addfav(self, instance, folder):
         global choose_mode, _key_
         self.menu.dismiss()
+        choose_mode=False
         if _key_ not in fav:
             fav_list[folder].append(_key_)
             fav[_key_]=folder
             with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
                 fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
-            self.search_button_pressed(instance, [_key_])
+            self.show_fav()
         else:
             fav_list[folder].remove(_key_)
             del fav[_key_]
             with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
                 fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
-        choose_mode=False
+        
         _key_=None
         
     def add_fav(self, *args):
