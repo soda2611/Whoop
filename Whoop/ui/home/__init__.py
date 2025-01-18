@@ -638,7 +638,7 @@ class home(MDBoxLayout, TouchBehavior):
             self.input_text=input_text
             result=SOD(self.input_text, database_path="func/data/tu_dien_nguon.txt", internet=check_connection())
             if len(result)==1:
-                result=result[self.input_text[0]]
+                result=result[input_text[0]]
                 Clock.schedule_once(self.update_UI)
             else:
                 Clock.schedule_once(self._update_UI_)
