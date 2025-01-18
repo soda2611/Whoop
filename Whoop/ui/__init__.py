@@ -46,6 +46,7 @@ from kivy.core.audio import SoundLoader
 from func.SOD import *
 from googletrans import Translator
 from functools import partial
+from collections import OrderedDict
 
 class MDLabel(MDLabel, TouchBehavior):
     def __init__(self, **kwargs):
@@ -135,7 +136,7 @@ def config():
     secondarycolor=[int(i)/255 for i in color[5].split(", ")]+[1]
 
     with open(settings["favlist"], encoding="utf-8") as fi:
-        favlist=eval(fi.read())
+        favlist=OrderedDict(eval(fi.read()))
         
     fav={}
     for i in favlist:
