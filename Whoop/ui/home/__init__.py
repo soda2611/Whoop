@@ -337,7 +337,7 @@ class home(MDBoxLayout, TouchBehavior):
         
     def renamefav(self, instance, folder):
         self.fav_rename_container=MDTextField(hint_text="Tên danh mục mới", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False)
-        self.fav_container.bind(on_text_validate=lambda instance: self.rename_fav(instance, folder))
+        self.fav_rename_container.bind(on_text_validate=lambda instance: self.rename_fav(instance, folder))
         
         self.fav_rename_dialog=MDDialog(
             title="Đổi tên danh mục",
