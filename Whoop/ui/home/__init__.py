@@ -238,9 +238,15 @@ class home(MDBoxLayout, TouchBehavior):
         print(value)
         if value>0:
             instance.result_label.text=f"Có {value} từ vựng"
-            instance.morebutton=MDIconButton(icon="chevron-right", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
-            instance.morebutton.bind(on_press=lambda nah: self.search_button_pressed(nah, fav_list[instance.result_head_label.text]))
-            instance.add_widget(instance.morebutton)
+            try:
+                if instance.children[0]!=instance.morebutton:
+                    instance.morebutton=MDIconButton(icon="chevron-right", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
+                    instance.morebutton.bind(on_press=lambda nah: self.search_button_pressed(nah, fav_list[instance.result_head_label.text]))
+                    instance.add_widget(instance.morebutton)
+            except:
+                instance.morebutton=MDIconButton(icon="chevron-right", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
+                instance.morebutton.bind(on_press=lambda nah: self.search_button_pressed(nah, fav_list[instance.result_head_label.text]))
+                instance.add_widget(instance.morebutton)
         else:
             instance.result_label.text=f"Không có từ vựng"
             instance.remove_widget(instance.children[0])
