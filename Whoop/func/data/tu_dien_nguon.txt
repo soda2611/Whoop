@@ -312,5 +312,316 @@
             "word": "helix",
             "type": "verb"
         }
+    },
+    "hello": {
+        "noun": {
+            "definition": "- \"Hello!\" or an equivalent greeting.\n\n",
+            "synonyms": [
+                "greeting"
+            ],
+            "antonyms": [],
+            "word": "hello",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To greet with \"hello\".\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "hello",
+            "type": "verb"
+        },
+        "interjection": {
+            "definition": "- A greeting (salutation) said when meeting someone or acknowledging someone’s arrival or presence.\nE.g: Hello, everyone.\n\n- A greeting used when answering the telephone.\nE.g: Hello? How may I help you?\n\n- A call for response if it is not clear if anyone is present or listening, or if a telephone conversation may have been disconnected.\nE.g: Hello? Is anyone there?\n\n- Used sarcastically to imply that the person addressed or referred to has done something the speaker or writer considers to be foolish.\nE.g: You just tried to start your car with your cell phone. Hello?\n\n- An expression of puzzlement or discovery.\nE.g: Hello! What’s going on here?\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "bye",
+                "goodbye"
+            ],
+            "word": "hello",
+            "type": "interjection"
+        }
+    },
+    "nah": {
+        "interjection": {
+            "definition": "- No\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "nah",
+            "type": "interjection"
+        }
+    },
+    "bruh": {
+        "noun": {
+            "definition": "- Brother; a male sibling\n\n- Brother; a male comrade or friend; one who shares one’s ideals.\n\n- Brother; usually used to address a male\n\n- Fratboy or someone that espouses the fraternity bro culture\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "bruh",
+            "type": "noun"
+        }
+    },
+    "dc": {
+        "noun": {
+            "definition": "- District court\n\n- Direct current\n\n- (degree) doctor of chiropractic\n\n- Debit card\n\n- (law enforcement) detective constable, a police rank used in Commonwealth countries\n\n- Initialism of defined contributions.\n\n- Initialism of device context.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "dc",
+            "type": "noun"
+        }
+    },
+    "fuck": {
+        "noun": {
+            "definition": "- An act of sexual intercourse.\n\n- A sexual partner, especially a casual one.\n\n- A highly contemptible person.\n\n- A thing of no value, a small amount.\nE.g: I don't give a fuck.\n\n",
+            "synonyms": [
+                "dickhead",
+                "shit"
+            ],
+            "antonyms": [],
+            "word": "fuck",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To have sexual intercourse, to copulate.\nE.g: Fighting for peace is like fucking for virginity.\n\n- To have sexual intercourse with.\n\n- To insert one’s penis, a dildo or other phallic object, into a specified orifice or cleft.\n\n- To put in an extremely difficult or impossible situation.\nE.g: I'm afraid they're gonna fuck you on this one.\n\n- To defraud, deface or otherwise treat badly.\nE.g: I got fucked at the used car lot.\n\n- Used to express great displeasure with someone or something.\nE.g: Fuck those jerks, and fuck their stupid rules!\n\n- (usually followed by up) To break, to destroy.\n\n- To make a joke at one's expense; to make fun of in an embarrassing manner.\n\n- To throw, to lob something. (angrily)\nE.g: He fucked the dirty cloth out the window.\n\n- To scold\nE.g: The sergeant fucked me upside down.\n\n",
+            "synonyms": [
+                "annihilate",
+                "obliterate",
+                "ruin",
+                "bang",
+                "do it",
+                "eff",
+                "have sex",
+                "hump",
+                "screw",
+                "shag",
+                "bang",
+                "eff",
+                "give someone one",
+                "hump",
+                "ream",
+                "screw",
+                "shag",
+                "bugger",
+                "eff",
+                "feck"
+            ],
+            "antonyms": [],
+            "word": "fuck",
+            "type": "verb"
+        },
+        "adverb": {
+            "definition": "- Used as an intensifier for the words \"yes\" and \"no\".\nE.g: Do you censor your swearing? – Fuck no.\n\n",
+            "synonyms": [
+                "god",
+                "heck",
+                "hell",
+                "shit"
+            ],
+            "antonyms": [],
+            "word": "fuck",
+            "type": "adverb"
+        },
+        "interjection": {
+            "definition": "- Expressing dismay or discontent.\nE.g: Fuck! Why do you have to be so difficult all the time?\n\n- Expressing surprise.\nE.g: Fuck! That movie was good.\n\n",
+            "synonyms": [
+                "fark",
+                "feck",
+                "fook",
+                "frick"
+            ],
+            "antonyms": [],
+            "word": "fuck",
+            "type": "interjection"
+        }
+    },
+    "damn": {
+        "noun": {
+            "definition": "- The use of \"damn\" as a curse.\nE.g: He said a few damns and left.\n\n- A small, negligible quantity, being of little value; a whit or jot.\nE.g: The new hires aren't worth a damn.\n\n- The smallest amount of concern or consideration.\nE.g: I don't give a damn.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "damn",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To condemn to hell.\nE.g: I damn you eternally, fiend!\n\n- To condemn; to declare guilty; to doom; to adjudge to punishment.\n\n- To put out of favor; to ruin; to label negatively.\nE.g: I’m afraid that if I speak out on this, I’ll be damned as a troublemaker.\n\n- To condemn as unfit, harmful, invalid, immoral or illegal.\n\n- To curse; put a curse upon.\nE.g: That man stole my wallet. Damn him!\n\n- To invoke damnation; to curse.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "damn",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Generic intensifier. Fucking; bloody.\nE.g: Shut the damn door!\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "damn",
+            "type": "adjective"
+        },
+        "adverb": {
+            "definition": "- Very; extremely.\nE.g: That car was going damn fast!\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "damn",
+            "type": "adverb"
+        },
+        "interjection": {
+            "definition": "- Used to express anger, irritation, disappointment, annoyance, contempt or suprise, etc. See also dammit.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "damn",
+            "type": "interjection"
+        }
+    },
+    "vibrate": {
+        "noun": {
+            "definition": "- The setting, on a portable electronic device, that causes it to vibrate rather than sound any (or most) needed alarms.\nE.g: Please put your cellphones on vibrate for the duration of the meeting.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "vibrate",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To shake with small, rapid movements to and fro.\n\n- To resonate.\nE.g: Her mind was vibrating with excitement.\n\n- To brandish; to swing to and fro.\nE.g: to vibrate a sword or a staff\n\n- To mark or measure by moving to and fro.\nE.g: a pendulum vibrating seconds\n\n- To affect with vibratory motion; to set in vibration.\n\n- To please or impress someone.\n\n- To use vibrato.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "vibrate",
+            "type": "verb"
+        }
+    },
+    "fro": {
+        "adverb": {
+            "definition": "- From; away; back or backward.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "fro",
+            "type": "adverb"
+        },
+        "noun": {
+            "definition": "- A hairstyle characterized by a tightly curled locks and a rounded shape.\n\n",
+            "synonyms": [
+                "'fro"
+            ],
+            "antonyms": [],
+            "word": "fro",
+            "type": "noun"
+        }
+    },
+    "basis": {
+        "noun": {
+            "definition": "- A physical base or foundation.\n\n- A starting point, base or foundation for an argument or hypothesis.\n\n- An underlying condition or circumstance.\n\n- A regular frequency.\nE.g: Cars must be checked on a yearly basis.\n\n- In a vector space, a linearly independent set of vectors spanning the whole vector space.\n\n- Amount paid for an investment, including commissions and other expenses.\n\n- A collection of subsets (\"basis elements\") of a set, such that this collection covers the set, and for any two basis elements which both contain an element of the set, there is a third basis element contained in the intersection of the first two, which also contains that element.\nE.g: The collection of all possible unions of basis elements of a basis is said to be the topology generated by that basis.\n\n",
+            "synonyms": [
+                "base"
+            ],
+            "antonyms": [],
+            "word": "basis",
+            "type": "noun"
+        }
+    },
+    "immense": {
+        "noun": {
+            "definition": "- Immense extent or expanse; immensity\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "immense",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Huge, gigantic, very large.\n\n- Supremely good.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "immense",
+            "type": "adjective"
+        }
+    },
+    "supremely": {
+        "adverb": {
+            "definition": "- To the greatest, highest, or utmost degree.\nE.g: They were supremely confident at the beginning of the season.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "supremely",
+            "type": "adverb"
+        }
+    },
+    "adapt": {
+        "verb": {
+            "definition": "- To make suitable; to make to correspond; to fit or suit\n\n- To fit by alteration; to modify or remodel for a different purpose; to adjust\nE.g: to adapt a story for the stage\n\n- To make by altering or fitting something else; to produce by change of form or character\nE.g: a word of an adapted form\n\n- To make oneself comfortable to a new thing.\nE.g: They could not adapt to the new climate and so perished.\n\n",
+            "synonyms": [
+                "proportion"
+            ],
+            "antonyms": [],
+            "word": "adapt",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Adapted; fit; suited; suitable.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "adapt",
+            "type": "adjective"
+        }
+    },
+    "persist": {
+        "verb": {
+            "definition": "- To go on stubbornly or resolutely.\n\n- To repeat an utterance.\n\n- To continue to exist.\n\n- To continue to be; to remain.\n\n- To cause to persist; make permanent.\n\n",
+            "synonyms": [
+                "last",
+                "remain",
+                "persevere"
+            ],
+            "antonyms": [],
+            "word": "persist",
+            "type": "verb"
+        }
+    },
+    "utterance": {
+        "noun": {
+            "definition": "- The utmost extremity (of a fight etc.).\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "utterance",
+            "type": "noun"
+        }
+    },
+    "furry": {
+        "noun": {
+            "definition": "- An animal character with human-like characteristics; most commonly refers to such characters created by members of the furry subculture.\nE.g: What percentage of furries are wolves?\n\n- A member of the furry fandom.\nE.g: The furry had designed an elaborate costume.\n\n- Someone who roleplays or identifies with a furry character. (Compare therianthrope.)\n\n",
+            "synonyms": [
+                "fursona"
+            ],
+            "antonyms": [],
+            "word": "furry",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Covered with fur, or with something resembling fur.\nE.g: His treatment of our furry friends was nothing short of appalling.\n\n- Of or related to the furry subculture.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "furry",
+            "type": "adjective"
+        }
+    },
+    "fond": {
+        "verb": {
+            "definition": "- To have a foolish affection for, to be fond of.\n\n- To caress; to fondle.\n\n",
+            "synonyms": [
+                "grope",
+                "pet",
+                "touch up"
+            ],
+            "antonyms": [],
+            "word": "fond",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- (chiefly with of) Having a liking or affection (for).\n\n- Affectionate.\nE.g: a fond farewell\n\n- Indulgent.\nE.g: I have fond grandparents who spoil me.\n\n- Outlandish; foolish; silly.\n\n- Foolish; simple; weak.\n\n- Doted on; regarded with affection.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "fond",
+            "type": "adjective"
+        },
+        "noun": {
+            "definition": "- The background design in lace-making.\n\n- Brown residue in pans from cooking meats and vegetables.\nE.g: He used the fond to make a classic French pan sauce.\n\n- A group of records having shared provenance.\n\n- Foundation; bottom; groundwork.\n\n- Fund, stock, or store.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "fond",
+            "type": "noun"
+        }
     }
 }
