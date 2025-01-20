@@ -13,6 +13,7 @@ _value_=True
 _callback_=False
 _key_=None
 result={}
+folders=OrderedDict({})
 
 class home(MDBoxLayout, TouchBehavior):
     def __init__(self, **kwargs):
@@ -126,6 +127,9 @@ class home(MDBoxLayout, TouchBehavior):
                 else:
                     _folder_=folder(i, f"Không có từ vựng")
                     self.favlist.fav_scrollview_box.add_widget(_folder_)
+                _folder_.folder_len=len(fav_list[i])
+                _folder_.bind(folder_len=self.on_folder_len)
+                folders.update([(i, _folder_)])
                 if self.favlist.choose_mode:
                     check=MDIconButton(icon="check", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
                     check.bind(on_press=self.addfav)
@@ -230,6 +234,17 @@ class home(MDBoxLayout, TouchBehavior):
                 self.one_box.add_widget(self.recent)
         except: pass
         
+    def on_folder_len(self, instance, value):
+        print(value)
+        if value>0:
+            instance.result_label.text=f"Có {value} từ vựng"
+            instance.morebutton=MDIconButton(icon="chevron-right", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
+            instance.morebutton.bind(on_press=lambda nah: self.search_button_pressed(nah, fav_list[instance.result_head_label.text]))
+            instance.add_widget(instance.morebutton)
+        else:
+            instance.result_label.text=f"Không có từ vựng"
+            instance.remove_widget(instance.children[0])
+        
     def on_choose_mode(self, instance, value):
         for child in self.favlist.fav_scrollview_box.children:
             if value:
@@ -243,10 +258,6 @@ class home(MDBoxLayout, TouchBehavior):
                 child.children[-2].unbind(on_press=self.addfav)
                 child.children[-2].bind(on_press=self.renamefav)
                 self.fav_label.text="Yêu thích"
-                if len(fav_list[child.result_head_label.text])>0:
-                    child.morebutton=MDIconButton(icon="chevron-right", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
-                    child.morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, fav_list[child.result_head_label.text]))
-                    child.add_widget(child.morebutton)
                 
     def copy(self, instance, text=None, copy=None):
         if text:
@@ -279,7 +290,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.scrollview.add_widget(self.dialog)
 
     def show_fav(self, *args):
-        global current_page, choose_mode
+        global current_page
         current_page="favorite word list"
         self.menu.dismiss()
         self.progress_box.clear_widgets()
@@ -294,29 +305,27 @@ class home(MDBoxLayout, TouchBehavior):
         self.scrollview.add_widget(self.favlist)
         
     def choose_folder(self, instance, word):
-        global choose_mode, _key_
+        global  _key_
         self.favlist.choose_mode=True
         _key_=word
         self.show_fav()
         
     def addfav(self, instance):
-        global choose_mode, _key_
+        global _key_
         self.menu.dismiss()
         if _key_ not in fav:
             folder=instance.parent.result_head_label.text
             fav_list[folder].append(_key_)
             fav[_key_]=folder
-            with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
-                fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
-            if len(fav_list[folder])>0:
-                instance.parent.result_label.text=f"Có {len(fav_list[folder])} từ vựng"
             self.show_fav()
         else:
-            fav_list[fav[_key_]].remove(_key_)
+            folder=fav[_key_]
+            fav_list[folder].remove(_key_)
             del fav[_key_]
             with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
                 fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
         
+        folders[folder].folder_len=len(fav_list[folder])
         self.favlist.choose_mode=False
         _key_=None
         
@@ -327,6 +336,8 @@ class home(MDBoxLayout, TouchBehavior):
             fav_list[self.fav_container.text]=[]
             folder_name=self.fav_container.text
             _folder_=folder(self.fav_container.text, "Không có từ vựng")
+            _folder_.bind(folder_len=self.on_folder_len)
+            folders.update([(self.fav_container.text, _folder_)])
             if self.favlist.choose_mode:
                 check=MDIconButton(icon="check", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
                 check.bind(on_press=self.addfav)
