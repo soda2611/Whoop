@@ -130,15 +130,9 @@ class home(MDBoxLayout, TouchBehavior):
                 _folder_.folder_len=len(fav_list[i])
                 _folder_.bind(folder_len=self.on_folder_len)
                 folders.update([(i, _folder_)])
-                if self.favlist.choose_mode:
-                    check=MDIconButton(icon="check", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
-                    check.bind(on_press=self.addfav)
-                    _folder_.add_widget(check)
-                    
-                if not self.favlist.choose_mode:
-                    rename=MDIconButton(icon="rename", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
-                    rename.bind(on_press=self.renamefav)
-                    _folder_.add_widget(rename)
+                rename=MDIconButton(icon="rename", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
+                rename.bind(on_press=self.renamefav)
+                _folder_.add_widget(rename)
                 _folder_.add_widget(MDIconButton(icon="delete", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5}, on_press=lambda instance: self.remove_fav(instance)))
                 
                 if not self.favlist.choose_mode and len(fav_list[i])>0:
@@ -235,7 +229,6 @@ class home(MDBoxLayout, TouchBehavior):
         except: pass
         
     def on_folder_len(self, instance, value):
-        print(value)
         if value>0:
             instance.result_label.text=f"Có {value} từ vựng"
             try:
@@ -330,9 +323,9 @@ class home(MDBoxLayout, TouchBehavior):
             folder=fav[_key_]
             fav_list[folder].remove(_key_)
             del fav[_key_]
-            with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
-                fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
-        
+            
+        with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
+            fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
         folders[folder].folder_len=len(fav_list[folder])
         self.favlist.choose_mode=False
         _key_=None
