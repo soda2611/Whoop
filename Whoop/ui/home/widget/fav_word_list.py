@@ -22,6 +22,7 @@ class favwordlist(MDCard):
         self.fav_scrollview.add_widget(self.fav_scrollview_box)
 
 class folder(MDCard):
+    folder_len=NumericProperty(0)
     def __init__(self, text, folder_len, **kwargs):
         super(folder, self).__init__(**kwargs)
         self.md_bg_color=boxbg
