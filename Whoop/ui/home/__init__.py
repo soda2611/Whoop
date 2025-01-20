@@ -260,6 +260,8 @@ class home(MDBoxLayout, TouchBehavior):
                 self.fav_label.text="Chọn danh mục"
                 if len(fav_list[child.result_head_label.text])>0: child.remove_widget(child.children[0])
             else:
+                child.folder_len+=1
+                child.folder_len-=1
                 child.children[-2].icon="rename"
                 child.children[-2].unbind(on_press=self.addfav)
                 child.children[-2].bind(on_press=self.renamefav)
