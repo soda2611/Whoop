@@ -77,9 +77,7 @@ class home(MDBoxLayout, TouchBehavior):
 
         self.resultlabel = MDLabel(text='', font_style="H6", halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=30)
 
-        self.caplabel = MDLabel(text='', font_style="Caption", halign="center", size_hint=(0.75, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=dp(30), theme_text_color="Custom", text_color=primarycolor)
-
-        self.text_input=MDRelativeLayout(size_hint=(0.75, None), height=dp(30), pos_hint={'center_x': 0.5, "center_y": 0.5})
+        self.text_input=MDRelativeLayout(size_hint=(1, None), height=dp(30), pos_hint={'center_x': 0.5, "center_y": 0.5})
         self.text_input.input=MDTextField(icon_left="magnify", icon_left_color_focus=btn, hint_text="Nhập từ cần tìm", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False, on_text_validate=lambda instance: self.search_button_pressed(instance, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split())))))        
         self.text_input.button=MDIconButton(icon='translate', theme_icon_color="Custom", icon_color=btn, size_hint=(None, None), pos_hint={"right": 1, "center_y":0.6}, on_press=self.translate)
         self.text_input.add_widget(self.text_input.input)
@@ -182,11 +180,11 @@ class home(MDBoxLayout, TouchBehavior):
         self.resultlabel.bind(texture_size=self.resultlabel.setter('text_size'))
         self.resultlabel.bind(texture_size=self.resultlabel.setter('size'))
 
-        self.box = MDBoxLayout(size_hint=(0.9, 0.02), pos_hint={"center_x":0.5})
+        self.box = MDBoxLayout(size_hint=(0.9, None), pos_hint={"center_x":0.5}, height=dp(50))
         self.add_widget(self.box)
         self.box.add_widget(self.text_input)
 
-        self.taskbar=MDCard(md_bg_color=btn, radius=[25, 25, 25, 25], size_hint=(1, None), height=dp(50), pos_hint={"center_x":0.5, "center_y": 0.25})
+        self.taskbar=MDCard(md_bg_color=btn, radius=[25, 25, 25, 25], size_hint=(1, None), height=dp(50), pos_hint={"center_x":0.5, "center_y": 0.5})
         self.taskbar.radius=[dp(i) for i in self.taskbar.radius]
         self.button.bind(on_press=self.show_input)
         self.homebutton.bind(on_press=self.home)
@@ -199,7 +197,6 @@ class home(MDBoxLayout, TouchBehavior):
         self.text_input.input.bind(focus=self.hide_input)
         self.text_input.input.bind(text=self.quick_search)
         self.hide_input(1,False)
-        self.add_widget(self.caplabel)
 
         self.result_template=result_template()
         self.translate_result_template=translate_result_template()
