@@ -623,5 +623,70 @@
             "word": "fond",
             "type": "noun"
         }
+    },
+    "need": {
+        "noun": {
+            "definition": "- A requirement for something; something needed.\nE.g: I've always tried to have few needs beyond food, clothing and shelter.\n\n- Lack of means of subsistence; poverty; indigence; destitution.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "need",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To have an absolute requirement for.\nE.g: Living things need water to survive.\n\n- To want strongly; to feel that one must have something.\nE.g: After ten days of hiking, I needed a shower and a shave.\n\n- (modal verb) To be obliged or required (to do something).\nE.g: You need not go if you don't want to.\n\n- To be required; to be necessary.\n\n- To be necessary (to someone).\n\n",
+            "synonyms": [
+                "desire",
+                "want",
+                "will",
+                "wish",
+                "would like",
+                "be",
+                "lack",
+                "without",
+                "in need of",
+                "require"
+            ],
+            "antonyms": [],
+            "word": "need",
+            "type": "verb"
+        }
+    },
+    "not": {
+        "noun": {
+            "definition": "- A unary operation on logical values that changes true to false, and false to true.\n\n",
+            "synonyms": [
+                "!",
+                "~",
+                "¬",
+                "ˈ"
+            ],
+            "antonyms": [],
+            "word": "not",
+            "type": "noun"
+        },
+        "adverb": {
+            "definition": "- Negates the meaning of the modified verb.\nE.g: Did you take out the trash? No, I did not.\n\n- To no degree.\nE.g: It's not you, it's me.\n\n- (understatement, litotes) Used to modify superlatives to indicate the opposite or near opposite, often in a form of understatement.\nE.g: It was not my favorite movie of all time.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "not",
+            "type": "adverb"
+        },
+        "conjunction": {
+            "definition": "- And not.\nE.g: He painted the car blue and black, not solid purple.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "not",
+            "type": "conjunction"
+        },
+        "interjection": {
+            "definition": "- (1990s) Used to indicate that the previous phrase was meant sarcastically or ironically.\nE.g: I really like hanging out with my little brother watching Barney... not!\n\n",
+            "synonyms": [
+                "I don't think",
+                "bender"
+            ],
+            "antonyms": [],
+            "word": "not",
+            "type": "interjection"
+        }
     }
 }
