@@ -44,6 +44,7 @@ from kivy.clock import Clock
 from kivy.core.window import Window
 from kivy.core.clipboard import Clipboard as pyperclip
 from kivy.core.audio import SoundLoader
+from kivy.animation import Animation
 from kivy.properties import *
 from func.SOD import *
 from googletrans import Translator
