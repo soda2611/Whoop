@@ -483,8 +483,7 @@ class home(MDBoxLayout, TouchBehavior):
                     for i in range(30):
                         try:
                             word=random.choice(word__)
-                            box=self.create_content_box(data_[word][random.choice([i for i in data_[word].keys()])])
-                            generated.append(box)
+                            generated.append(self.create_content_box(data_[word][random.choice([i for i in data_[word].keys()])]))
                         except: pass
                 for i in range(random.randint(1, 10)):
                     try:
@@ -498,9 +497,11 @@ class home(MDBoxLayout, TouchBehavior):
                 self.refresh(None)
 
     def refresh(self, instance):
-        global home__
+        global home__, generated
+        word=random.choice(word__)
+        generated.append(self.create_content_box(data_[word][random.choice([i for i in data_[word].keys()])]))
         if home__: self.scrollview.scroll_to(home__[0])
-        for i in range(len(home__[:10])):
+        for i in range(len(home__)):
             if not home__[i]._state_:
                 home__[i].viewstate()
             try:
@@ -516,9 +517,6 @@ class home(MDBoxLayout, TouchBehavior):
                 home__[i].morebutton=self.morebutton(text)
                 home__[i].add_widget(home__[i].morebutton)
             except: pass
-        for i in range(len(home__[10:])):
-            self.homebox.remove_widget(home__[10:][i])
-        home__=home__[:10]
 
     def menu_open(self, instance):
         menu_items = [
