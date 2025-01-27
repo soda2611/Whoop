@@ -88,6 +88,14 @@ class FlowLayout(Layout):
     spacing = ListProperty([0, 0])
     padding = ListProperty([0, 0, 0, 0])
     line_spacing = NumericProperty(0)
+    
+    def __init__(self, **kwargs):
+        super(FlowLayout, self).__init__(**kwargs)
+        self.bind(size=self._trigger_layout)
+        self.bind(pos=self._trigger_layout)
+    
+    def _trigger_layout(self, *args):
+        self.do_layout()
 
     def do_layout(self, *args):
         width, height = self.size
