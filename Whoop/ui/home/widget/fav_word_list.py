@@ -43,3 +43,12 @@ class folder(MDCard):
         self.tilte_and_description_box.add_widget(self.result_head_label)
         self.tilte_and_description_box.add_widget(self.result_label)
         self.add_widget(self.tilte_and_description_box)
+        
+class content(FlowLayout):
+    def __init__(self, **kwargs):
+        super(content, self).__init__(**kwargs)
+        self.size_hint_y=None
+        self.height=dp(100)
+        self.padding=[dp(10), dp(10), dp(10), dp(10)]
+        self.spacing=[dp(10), dp(10)]
+        self.line_spacing=dp(10)
