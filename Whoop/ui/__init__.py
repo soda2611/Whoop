@@ -38,6 +38,7 @@ from kivymd.uix.fitimage.fitimage import FitImage
 from kivymd.uix.transition.transition import MDFadeSlideTransition
 from kivymd.uix.bottomsheet import *
 from kivy.uix.label import Label
+from kivy.uix.layout import Layout
 from kivy.metrics import dp
 from kivy.clock import Clock
 from kivy.core.window import Window
@@ -82,6 +83,35 @@ class MDFillRoundFlatIconButton(MagicBehavior, MDFillRoundFlatIconButton):
         
     def on_release(self, *args):
         self.grow()
+ 
+class FlowLayout(Layout):
+    spacing = ListProperty([0, 0])
+    padding = ListProperty([0, 0, 0, 0])
+    line_spacing = NumericProperty(0)
+
+    def do_layout(self, *args):
+        width, height = self.size
+        x, y = self.padding[0], height - self.padding[1]
+        line_height = 0
+        max_line_height = 0
+        for child in reversed(self.children):
+            if child.size_hint_x:
+                child.width = width * child.size_hint_x
+            if child.size_hint_y:
+                child.height = height * child.size_hint_y
+
+            if x + child.width > width:
+                x = self.padding[0]
+                y -= line_height + self.spacing[1] + self.line_spacing
+                line_height = 0
+
+            child.pos = x, y - child.height
+            x += child.width + self.spacing[0]
+
+            line_height = max(line_height, child.height)
+            max_line_height = max(max_line_height, y - line_height)
+
+        self.height = max(self.height, height - (y - self.padding[1]) + self.padding[3])
 
 class check_button(MDIconButton):
     def __init__(self, folder, **kwargs):
