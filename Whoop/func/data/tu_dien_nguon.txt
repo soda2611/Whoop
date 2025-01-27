@@ -688,5 +688,35 @@
             "word": "not",
             "type": "interjection"
         }
+    },
+    "at": {
+        "verb": {
+            "definition": "- To reply to or talk to someone, either online or face-to-face. (from the practice of targeting a message or reply to someone online by writing @name)\nE.g: Cars 2 is the most influential film of all time. Don't @ me.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "at",
+            "type": "verb"
+        },
+        "noun": {
+            "definition": "- A subdivision of currency, equal to one hundredth of a Lao kip.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "at",
+            "type": "noun"
+        },
+        "preposition": {
+            "definition": "- In, near, or in the general vicinity of a particular place.\nE.g: Caesar was at Rome;  at the corner of Fourth Street and Vine;  at Jim’s house\n\n- (indicating time) Indicating occurrence in an instant of time or a period of time relatively short in context or from the speaker's perspective.\nE.g: at six o’clock;  at closing time;  at night.\n\n- In the direction of (often in an unfocused or uncaring manner).\nE.g: He threw the ball at me.  He shouted at her.\n\n- Denotes a price.\nE.g: 3 apples at 2¢ (each)   The offer was at $30,000 before negotiations.\n\n- Occupied in (activity).\nE.g: men at work\n\n- In a state of.\nE.g: She is at sixes and sevens with him.  They are at loggerheads over how best to tackle the fiscal cliff.  The city was at the mercy of the occupying forces.\n\n- Indicates a position on a scale or in a series.\nE.g: Sell at 90.  Tiger finished the round at tenth, seven strokes behind the leaders.  I'm offering it—just to select customers—at cost.\n\n- Because of.\nE.g: to laugh at a joke   mad at their comments\n\n- Indicates a means, method, or manner.\n\n- Holding a given speed or rate.\nE.g: It is growing at the rate of 3% a year.  Cruising along at fifty miles per hour.\n\n- (used for skills (including in activities) or areas of knowledge) On the subject of; regarding.\nE.g: He slipped at marksmanship over his extended vacation.\n\n- (stressed pronunciation) Bothering, irritating, causing discomfort to\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "at",
+            "type": "preposition"
+        },
+        "pronoun": {
+            "definition": "- Reduced form of that.\nE.g: I've never seen anything like ’at.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "at",
+            "type": "pronoun"
+        }
     }
 }
