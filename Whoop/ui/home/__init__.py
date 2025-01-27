@@ -13,13 +13,14 @@ _value_=True
 _callback_=False
 _key_=None
 result={}
+generated=[]
 folders=OrderedDict({})
 
 class home(MDBoxLayout, TouchBehavior):
     def __init__(self, **kwargs):
         super(home, self).__init__(**kwargs)
         self.orientation = 'vertical'
-        self.padding = [dp(10), dp(10), dp(10), dp(10)]
+        self.padding = [dp(10), dp(10), dp(10), dp(35)]
         self.spacing = dp(25)
         Window.bind(on_resize=self.on_window_resize)
 
@@ -77,11 +78,14 @@ class home(MDBoxLayout, TouchBehavior):
 
         self.resultlabel = MDLabel(text='', font_style="H6", halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=30)
 
-        self.text_input=MDRelativeLayout(size_hint=(1, None), height=dp(30), pos_hint={'center_x': 0.5, "center_y": 0.5})
-        self.text_input.input=MDTextField(icon_left="magnify", icon_left_color_focus=btn, hint_text="Nhập từ cần tìm", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_x': 0.5}, height=dp(30), multiline=False, on_text_validate=lambda instance: self.search_button_pressed(instance, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split())))))        
-        self.text_input.button=MDIconButton(icon='translate', theme_icon_color="Custom", icon_color=btn, size_hint=(None, None), pos_hint={"right": 1, "center_y":0.6}, on_press=self.translate)
+        self.text_input=MDRelativeLayout(size_hint=(1, None), height=dp(50), pos_hint={'center_x': 0.5, "center_y": 0.5})
+        self.text_input.input=MDTextField(icon_left="magnify", icon_left_color_focus=btn, hint_text="Nhập từ cần tìm", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_y': 0.5}, height=dp(30), multiline=False, on_text_validate=lambda instance: self.search_button_pressed(instance, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split())))))        
+        self.text_input.button=MDIconButton(icon='translate', theme_icon_color="Custom", icon_color=btn, size_hint=(None, None), pos_hint={"right": 1, "center_y":0.5}, on_press=self.translate)
         self.text_input.add_widget(self.text_input.input)
         self.text_input.add_widget(self.text_input.button)
+        
+        self.hib=MDIconButton(icon='close', theme_icon_color="Custom", icon_color=primarycolor, size_hint=(None, None), pos_hint={"center_x": 0.5, "center_y":0.5})
+        self.hib.bind(on_press=self.on_double_tap)
 
         self.button = MDIconButton(icon='magnify', theme_icon_color="Custom", icon_color=secondarycolor, size_hint=(1, None), pos_hint={"center_x":0.5})
 
@@ -110,9 +114,6 @@ class home(MDBoxLayout, TouchBehavior):
         self.fav_label=MDLabel(text="Yêu thích", font_style="main", font_size=dp(20), halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, theme_text_color="Custom", text_color=primarycolor)
         self.add_button=MDIconButton(icon="plus", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"x": 1, "center_y": 0.5})
         self.add_button.bind(on_press=self.fav_dialog.open)
-        self.fav_nav_bar.add_widget(self.fav_back_button)
-        self.fav_nav_bar.add_widget(self.fav_label)
-        self.fav_nav_bar.add_widget(self.add_button)
         
         self.favlist=favwordlist()
         self.favlist.bind(choose_mode=self.on_choose_mode)
@@ -135,7 +136,7 @@ class home(MDBoxLayout, TouchBehavior):
                 
                 if not self.favlist.choose_mode and len(fav_list[i])>0:
                     _folder_.morebutton=MDIconButton(icon="chevron-right", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
-                    _folder_.morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, _data_))
+                    _folder_.morebutton.bind(on_press=partial(self.show_fav_folder, folder=i))
                     _folder_.add_widget(_folder_.morebutton)
             self.favlist.container.add_widget(self.favlist.fav_scrollview)
         else:
@@ -231,11 +232,11 @@ class home(MDBoxLayout, TouchBehavior):
             try:
                 if instance.children[0]!=instance.morebutton:
                     instance.morebutton=MDIconButton(icon="chevron-right", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
-                    instance.morebutton.bind(on_press=lambda nah: self.search_button_pressed(nah, fav_list[instance.result_head_label.text]))
+                    instance.morebutton.bind(on_press=lambda nah: self.show_fav_folder(nah, instance.result_head_label.text))
                     instance.add_widget(instance.morebutton)
             except:
                 instance.morebutton=MDIconButton(icon="chevron-right", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5})
-                instance.morebutton.bind(on_press=lambda nah: self.search_button_pressed(nah, fav_list[instance.result_head_label.text]))
+                instance.morebutton.bind(on_press=lambda nah: self.show_fav_folder(nah, instance.result_head_label.text))
                 instance.add_widget(instance.morebutton)
         else:
             instance.result_label.text=f"Không có từ vựng"
@@ -286,6 +287,16 @@ class home(MDBoxLayout, TouchBehavior):
         self.progress_box.remove_widget(self.fav_nav_bar)
         self.scrollview.clear_widgets()
         self.scrollview.add_widget(self.dialog)
+        
+    def show_fav_folder(self, instance, folder):
+        self.fav_label.text=folder
+        self.fav_nav_bar.clear_widgets()
+        self.fav_nav_bar.add_widget(self.fav_label)
+        _content_=content()
+        for i in fav_list[folder]:
+            _content_.add_widget(self.create_chips(i))
+        self.scrollview.clear_widgets()
+        self.scrollview.add_widget(_content_)
 
     def show_fav(self, *args):
         global current_page
@@ -295,6 +306,11 @@ class home(MDBoxLayout, TouchBehavior):
         self.progress_box.height=dp(60)
         self.progress_box.add_widget(self.progress_bar)
         self.progress_box.add_widget(self.fav_nav_bar)
+        self.fav_nav_bar.clear_widgets()
+        self.fav_nav_bar.add_widget(self.fav_back_button)
+        self.fav_nav_bar.add_widget(self.fav_label)
+        self.fav_nav_bar.add_widget(self.add_button)
+        self.fav_label.text="Yêu thích"
         self.scrollview.scroll_y=1
         self.progress_bar.back_color=(boxbg)
         self.noname.md_bg_color=boxbg
@@ -458,16 +474,23 @@ class home(MDBoxLayout, TouchBehavior):
         self.scrollview.add_widget(add_data())
 
     def infinite_homepage(self, instance, unknown):
+        global generated
         if current_page=="home":
             global _temp_
             if self.scrollview.scroll_y<-0.1:
                 self.homebox.remove_widget(self.refreshbutton)
-                for i in range(10):
+                if len(generated)<5:
+                    for i in range(30):
+                        try:
+                            word=random.choice(word__)
+                            box=self.create_content_box(data_[word][random.choice([i for i in data_[word].keys()])])
+                            generated.append(box)
+                        except: pass
+                for i in range(random.randint(1, 10)):
                     try:
-                        word=random.choice(word__)
-                        box=self.create_content_box(data_[word][random.choice([i for i in data_[word].keys()])])
-                        home__.append(box)
-                        self.homebox.add_widget(box)
+                        home__.append(generated[0])
+                        self.homebox.add_widget(generated[0])
+                        generated=generated[1:]
                     except: pass
                 self.homebox.add_widget(self.refreshbutton)
                    
@@ -601,6 +624,7 @@ class home(MDBoxLayout, TouchBehavior):
             self.scrollview.clear_widgets()
             self.scrollview.add_widget(self.result_box)
         self.box.add_widget(self.text_input)
+        self.box.add_widget(self.hib)
 
     def hide_input(self, instance, value):
         if ((len(self.text_input.input.text)==0) and (not value)) or self.signal:
