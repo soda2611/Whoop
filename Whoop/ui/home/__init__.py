@@ -436,18 +436,13 @@ class home(MDBoxLayout, TouchBehavior):
         with open(f"func/setting/{settings['uid']}.txt", "w", encoding="utf-8") as fo:
             fo.write("{}")
 
-    def morebutton(self, text):
-        morebutton=MDFillRoundFlatButton(text="Xem thêm", pos_hint={"center_x":0.5, "center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
-        morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, text['type'], value=False, temp=text))
-        return morebutton
-
     def create_chips(self, text):
         return MDFillRoundFlatButton(text=text, theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), on_press=lambda instance: self.search_button_pressed(instance, [text]))
 
     def create_content_box(self, text):
         self.content_box=content_box(text)
         self.content_box.morebutton=MDFillRoundFlatButton(text="Xem thêm", pos_hint={"center_x":0.5, "center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
-        self.content_box.morebutton.bind(on_press=lambda instance: self.search_button_pressed(instance, text['type'], value=False, temp=text))
+        self.content_box.morebutton.on_press=partial(self.search_button_pressed, instance=None, input_text=text['type'], value=False, temp=text)
         self.content_box.add_widget(self.content_box.morebutton)
         return self.content_box
 
@@ -513,9 +508,7 @@ class home(MDBoxLayout, TouchBehavior):
                     home__[i].result_label.text=text["definition"][:50]+"..."
                 else:
                     home__[i].result_label.text=text["definition"]
-                home__[i].remove_widget(home__[i].morebutton)
-                home__[i].morebutton=self.morebutton(text)
-                home__[i].add_widget(home__[i].morebutton)
+                home__[i].morebutton.on_press=partial(self.search_button_pressed, instance=None, input_text=text['type'], value=False, temp=text)
             except: pass
 
     def menu_open(self, instance):
@@ -589,6 +582,7 @@ class home(MDBoxLayout, TouchBehavior):
             caller=self.copy_button,
             items=menu_items,               
             ver_growth="down",
+            hor_growth="left",
             md_bg_color=menubg,
             position="bottom"
         )
@@ -719,7 +713,6 @@ class home(MDBoxLayout, TouchBehavior):
         self.noname.md_bg_color=boxbg
         self.scrollview.do_scroll_x, self.scrollview.do_scroll_y=False, True
         self.scrollview.clear_widgets()
-        self.scrollview.add_widget(self.result_box)
         self.result_box.clear_widgets()
         if str(type(result))=="<class 'dict'>":
             for rlt in result:
@@ -727,7 +720,6 @@ class home(MDBoxLayout, TouchBehavior):
                 if result[rlt]=="Không có kết nối mạng và không có sẵn trong bộ dữ liệu offline" or result[rlt]=="Không tìm thấy từ": temp_value["definition"]="Không có kết quả"
                 else: temp_value["definition"]=f"Có {len(result[rlt])} kết quả"
                 self.result_box.add_widget(self._create_content_box_(temp_value))
-        self.text_input.input.on_text_validate=lambda instance: self.search_button_pressed(self.text_input.input, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split()))))
         if not _callback_:
             try:
                 if self.input_text!=_back_[-1]: _back_.append(self.input_text)
@@ -738,6 +730,9 @@ class home(MDBoxLayout, TouchBehavior):
             if len(_back_)>1:
                 self.back_button.disabled=False
         except: pass
+        self.set_opacity_recursive(self.result_box)
+        self.scrollview.add_widget(self.result_box)
+        self.animate_opacity_recursive(self.result_box)
         self.progress_bar.color=self.progress_bar.back_color
         self.progress_bar.stop()
 
@@ -749,7 +744,6 @@ class home(MDBoxLayout, TouchBehavior):
         self.noname.md_bg_color=boxbg
         self.scrollview.do_scroll_x, self.scrollview.do_scroll_y=False, True
         self.scrollview.clear_widgets()
-        self.scrollview.add_widget(self.result_box)
         self.result_box.clear_widgets()
         if str(type(result))=="<class 'dict'>":
             if len(result)==1:
@@ -765,7 +759,7 @@ class home(MDBoxLayout, TouchBehavior):
                         self.nav_bar.add_widget(self.back_button)
                         self.nav_bar.add_widget(self.result_template.word)
                         self.nav_bar.add_widget(self.copy_button)
-                        self.result_template.pronunciation_button.bind(on_release=lambda instance: self.pronounce(instance, self.input_text[0]))
+                        self.result_template.pronunciation_button.on_release=partial(self.pronounce, instance, self.input_text[0])
                         self.result_template.pronunciation.text=f'/{eng_to_ipa.convert(self.input_text[0])}/'
                         self.result_template.definition.text=result[i]["definition"][:1].upper()+result[i]["definition"][1:]
                         self.result_box.add_widget(self.result_template)
@@ -848,6 +842,9 @@ class home(MDBoxLayout, TouchBehavior):
             fo.write(json.dumps(recent_search, ensure_ascii=False, indent=4))
         if _value_ and check_connection(): threading.Thread(target=track_user_queries, args=({self.input_text[0]: result},)).start()
         else: _value_=not _value_
+        self.set_opacity_recursive(self.result_box)
+        self.scrollview.add_widget(self.result_box)
+        self.animate_opacity_recursive(self.result_box)
         self.progress_bar.color=self.progress_bar.back_color
         self.progress_bar.stop()
 
@@ -900,3 +897,14 @@ class home(MDBoxLayout, TouchBehavior):
                 self.one_box.remove_widget(self.recent)
 
         ui.settings["size"] = f"{Window.width} {Window.height}"
+
+    def set_opacity_recursive(self, w, value=0):
+        w.opacity = value
+        for child in w.children:
+            self.set_opacity_recursive(child)
+
+    def animate_opacity_recursive(self, w):
+        Animation(opacity=1, duration=0.5).start(w)
+        if w.children:
+            for child in w.children:
+                self.animate_opacity_recursive(child)
