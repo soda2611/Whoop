@@ -158,7 +158,7 @@ class home(MDBoxLayout, TouchBehavior):
 
         self.result_box=MDBoxLayout(orientation='vertical', size_hint=(1,None), spacing=dp(20), padding=[dp(10), dp(10), dp(10), dp(10)])
         self.result_box.bind(minimum_height=self.result_box.setter('height'))
-
+        
         self.homebox=MDBoxLayout(spacing=dp(20))
         self.scrollview.do_scroll_x=False
         self.homebox.orientation="vertical"
@@ -901,17 +901,10 @@ class home(MDBoxLayout, TouchBehavior):
         
     def set_opacity_recursive(self, w, value=0):
         w.opacity = value
-        for child in w.children:
-            self.set_opacity_recursive(child)
 
     def set_y(self, w):
-        w.y=w.y-w.parent.height
+        w.y=w.y-w.parent.height*0.5
         
     def animate_opacity_recursive(self, w, parallel_anim=True):
-        if not parallel_anim: Animation(opacity=1, duration=0.5).start(w)
-        else:
-            anim=Animation(opacity=1, duration=0.5)&Animation(y=w.y+w.parent.height, duration=1, transition='out_quad')
-            anim.start(w)
-        if w.children:
-            for child in w.children:
-                self.animate_opacity_recursive(child, False)
+        anim=Animation(opacity=1, duration=0.5)&Animation(y=w.y+w.parent.height*0.5, duration=0.75, transition='out_quad')
+        anim.start(w)
