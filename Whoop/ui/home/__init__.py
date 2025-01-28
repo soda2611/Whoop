@@ -730,8 +730,8 @@ class home(MDBoxLayout, TouchBehavior):
             if len(_back_)>1:
                 self.back_button.disabled=False
         except: pass
-        self.set_opacity_recursive(self.result_box)
         self.scrollview.add_widget(self.result_box)
+        self.set_y(self.result_box)
         self.animate_opacity_recursive(self.result_box)
         self.progress_bar.color=self.progress_bar.back_color
         self.progress_bar.stop()
@@ -842,8 +842,9 @@ class home(MDBoxLayout, TouchBehavior):
             fo.write(json.dumps(recent_search, ensure_ascii=False, indent=4))
         if _value_ and check_connection(): threading.Thread(target=track_user_queries, args=({self.input_text[0]: result},)).start()
         else: _value_=not _value_
-        self.set_opacity_recursive(self.result_box)
         self.scrollview.add_widget(self.result_box)
+        self.set_opacity_recursive(self.result_box)
+        self.set_y(self.result_box)
         self.animate_opacity_recursive(self.result_box)
         self.progress_bar.color=self.progress_bar.back_color
         self.progress_bar.stop()
@@ -897,14 +898,20 @@ class home(MDBoxLayout, TouchBehavior):
                 self.one_box.remove_widget(self.recent)
 
         ui.settings["size"] = f"{Window.width} {Window.height}"
-
+        
     def set_opacity_recursive(self, w, value=0):
         w.opacity = value
         for child in w.children:
             self.set_opacity_recursive(child)
 
-    def animate_opacity_recursive(self, w):
-        Animation(opacity=1, duration=0.5).start(w)
+    def set_y(self, w):
+        w.y=w.y-w.parent.height
+        
+    def animate_opacity_recursive(self, w, parallel_anim=True):
+        if not parallel_anim: Animation(opacity=1, duration=0.5).start(w)
+        else:
+            anim=Animation(opacity=1, duration=0.5)&Animation(y=w.y+w.parent.height, duration=1, transition='out_quad')
+            anim.start(w)
         if w.children:
             for child in w.children:
-                self.animate_opacity_recursive(child)
+                self.animate_opacity_recursive(child, False)
