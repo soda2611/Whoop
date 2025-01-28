@@ -183,7 +183,6 @@ class home(MDBoxLayout, TouchBehavior):
 
         self.box = MDBoxLayout(size_hint=(0.9, None), pos_hint={"center_x":0.5}, height=dp(50))
         self.add_widget(self.box)
-        self.box.add_widget(self.text_input)
 
         self.taskbar=MDCard(md_bg_color=btn, radius=[25, 25, 25, 25], size_hint=(1, None), height=dp(50), pos_hint={"center_x":0.5, "center_y": 0.5})
         self.taskbar.radius=[dp(i) for i in self.taskbar.radius]
@@ -197,7 +196,6 @@ class home(MDBoxLayout, TouchBehavior):
 
         self.text_input.input.bind(focus=self.hide_input)
         self.text_input.input.bind(text=self.quick_search)
-        self.hide_input(1,False)
 
         self.result_template=result_template()
         self.translate_result_template=translate_result_template()
@@ -297,9 +295,9 @@ class home(MDBoxLayout, TouchBehavior):
             _content_.add_widget(self.create_chips(i))
         self.scrollview.clear_widgets()
         self.scrollview.add_widget(_content_)
-        self.set_opacity_recursive(_content_)
-        self.set_y(_content_)
-        self.animate_opacity_recursive(_content_)
+        set_opacity_recursive(_content_)
+        set_y(_content_)
+        fade_in_vertical(_content_)
 
     def show_fav(self, *args):
         global current_page
@@ -320,6 +318,9 @@ class home(MDBoxLayout, TouchBehavior):
         self.scrollview.do_scroll_x, self.scrollview.do_scroll_y=False, True
         self.scrollview.clear_widgets()
         self.scrollview.add_widget(self.favlist)
+        set_opacity_recursive(self.favlist)
+        set_y(self.favlist)
+        fade_in_vertical(self.favlist)
         
     def choose_folder(self, instance, word):
         global  _key_
@@ -365,6 +366,9 @@ class home(MDBoxLayout, TouchBehavior):
                 _folder_.add_widget(rename)
             _folder_.add_widget(MDIconButton(icon="delete", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5}, on_press=lambda instance: self.remove_fav(instance)))
             self.favlist.fav_scrollview_box.add_widget(_folder_)
+            set_opacity_recursive(_folder_)
+            set_y(_folder_)
+            fade_in_vertical(_folder_)
         with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
             fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
         if len(fav_list)>0:
@@ -381,6 +385,9 @@ class home(MDBoxLayout, TouchBehavior):
         if len(fav_list)==0:
             self.favlist.container.clear_widgets()
             self.favlist.container.add_widget(self.favlist.label)
+            set_opacity_recursive(self.favlist.label)
+            set_y(self.favlist.label)
+            fade_in_vertical(self.favlist.label)
         fav=remove_keys_by_value(fav, instance.parent.result_head_label.text)
         
     def renamefav(self, instance):
@@ -618,13 +625,22 @@ class home(MDBoxLayout, TouchBehavior):
             self.scrollview.do_scroll_x, self.scrollview.do_scroll_y=False, True
             self.scrollview.clear_widgets()
             self.scrollview.add_widget(self.result_box)
+            set_opacity_recursive(self.result_box)
+            set_y(self.result_box)
+            fade_in_vertical(self.result_box)
         self.box.add_widget(self.text_input)
         self.box.add_widget(self.hib)
+        set_opacity_recursive(self.box)
+        set_y(self.box)
+        fade_in_vertical(self.box)
 
     def hide_input(self, instance, value):
-        if ((len(self.text_input.input.text)==0) and (not value)) or self.signal:
+        if (((len(self.text_input.input.text)==0) and (not value)) or self.signal) and self.text_input in self.box.children:
             self.box.clear_widgets()
             self.box.add_widget(self.taskbar)
+            set_opacity_recursive(self.box)
+            set_y(self.box)
+            fade_in_vertical(self.box)
         self.signal=False
 
     def quick_search(self, instance, value):
@@ -734,9 +750,9 @@ class home(MDBoxLayout, TouchBehavior):
                 self.back_button.disabled=False
         except: pass
         self.scrollview.add_widget(self.result_box)
-        self.set_opacity_recursive(self.result_box)
-        self.set_y(self.result_box)
-        self.animate_opacity_recursive(self.result_box)
+        set_opacity_recursive(self.result_box)
+        set_y(self.result_box)
+        fade_in_vertical(self.result_box)
         self.progress_bar.color=self.progress_bar.back_color
         self.progress_bar.stop()
 
@@ -847,9 +863,9 @@ class home(MDBoxLayout, TouchBehavior):
         if _value_ and check_connection(): threading.Thread(target=track_user_queries, args=({self.input_text[0]: result},)).start()
         else: _value_=not _value_
         self.scrollview.add_widget(self.result_box)
-        self.set_opacity_recursive(self.result_box)
-        self.set_y(self.result_box)
-        self.animate_opacity_recursive(self.result_box)
+        set_opacity_recursive(self.result_box)
+        set_y(self.result_box)
+        fade_in_vertical(self.result_box)
         self.progress_bar.color=self.progress_bar.back_color
         self.progress_bar.stop()
 
@@ -903,12 +919,4 @@ class home(MDBoxLayout, TouchBehavior):
 
         ui.settings["size"] = f"{Window.width} {Window.height}"
         
-    def set_opacity_recursive(self, w, value=0):
-        w.opacity = value
-
-    def set_y(self, w):
-        w.y=w.y-w.parent.height*0.5
-        
-    def animate_opacity_recursive(self, w, parallel_anim=True):
-        anim=Animation(opacity=1, duration=0.5)&Animation(y=w.y+w.parent.height*0.5, duration=0.75, transition='out_quad')
-        anim.start(w)
+    
