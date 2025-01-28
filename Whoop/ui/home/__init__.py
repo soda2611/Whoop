@@ -297,6 +297,9 @@ class home(MDBoxLayout, TouchBehavior):
             _content_.add_widget(self.create_chips(i))
         self.scrollview.clear_widgets()
         self.scrollview.add_widget(_content_)
+        self.set_opacity_recursive(_content_)
+        self.set_y(_content_)
+        self.animate_opacity_recursive(_content_)
 
     def show_fav(self, *args):
         global current_page
