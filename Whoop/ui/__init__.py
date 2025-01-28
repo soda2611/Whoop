@@ -51,6 +51,22 @@ from googletrans import Translator
 from functools import partial
 from collections import OrderedDict
 
+class MDCard(MDCard):
+    opacity = NumericProperty(1)
+
+    def add_widget(self, widget, *args, **kwargs):
+        super().add_widget(widget, *args, **kwargs)
+        widget.opacity = self.opacity
+        self.bind(opacity=lambda instance, value: setattr(widget, 'opacity', value))
+
+class MDBoxLayout(MDBoxLayout):
+    opacity = NumericProperty(1)
+
+    def add_widget(self, widget, *args, **kwargs):
+        super().add_widget(widget, *args, **kwargs)
+        widget.opacity = self.opacity
+        self.bind(opacity=lambda instance, value: setattr(widget, 'opacity', value))
+
 class MDLabel(MDLabel, TouchBehavior):
     def __init__(self, **kwargs):
         super(MDLabel, self).__init__(**kwargs)
