@@ -734,6 +734,7 @@ class home(MDBoxLayout, TouchBehavior):
                 self.back_button.disabled=False
         except: pass
         self.scrollview.add_widget(self.result_box)
+        self.set_opacity_recursive(self.result_box)
         self.set_y(self.result_box)
         self.animate_opacity_recursive(self.result_box)
         self.progress_bar.color=self.progress_bar.back_color
