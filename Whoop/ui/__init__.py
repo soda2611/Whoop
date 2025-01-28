@@ -435,6 +435,9 @@ class home(MDBoxLayout, TouchBehavior):
             with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
                 fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
             self.instance.text=new_name
+            set_opacity_recursive(self.instance)
+            set_y(self.instance)
+            fade_in_vertical(self.instance)
         self.fav_rename_dialog.dismiss()
 
     def clear_history(self, instance):
