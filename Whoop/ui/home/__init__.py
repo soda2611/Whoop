@@ -158,6 +158,8 @@ class home(MDBoxLayout, TouchBehavior):
 
         self.result_box=MDBoxLayout(orientation='vertical', size_hint=(1,None), spacing=dp(20), padding=[dp(10), dp(10), dp(10), dp(10)])
         self.result_box.bind(minimum_height=self.result_box.setter('height'))
+        
+        self.add_data_=add_data()
 
         self.homebox=MDBoxLayout(spacing=dp(20))
         self.scrollview.do_scroll_x=False
@@ -488,7 +490,10 @@ class home(MDBoxLayout, TouchBehavior):
         self.progress_bar.color=self.progress_bar.back_color
         self.noname.md_bg_color=bg
         self.scrollview.clear_widgets()
-        self.scrollview.add_widget(add_data())
+        self.scrollview.add_widget(self.add_data_)
+        set_opacity_recursive(self.add_data_)
+        set_y(self.add_data_)
+        fade_in_vertical(self.add_data_)
 
     def infinite_homepage(self, instance, unknown):
         global generated
@@ -629,7 +634,7 @@ class home(MDBoxLayout, TouchBehavior):
     def show_input(self, instance):
         global current_page, result
         self.box.clear_widgets()
-        if self.text_input.input.text.split()!=[]: 
+        if self.text_input.input.text.split()!=[] and (self.result_box not in self.scrollview.children): 
             current_page="search"
             self.progress_box.clear_widgets()
             self.progress_box.height=dp(60)
