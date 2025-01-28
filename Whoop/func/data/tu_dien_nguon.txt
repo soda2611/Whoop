@@ -718,5 +718,51 @@
             "word": "at",
             "type": "pronoun"
         }
+    },
+    "remain": {
+        "noun": {
+            "definition": "- (chiefly in the plural) That which is left; relic; remainder.\n\n- (in the plural) That which is left of a human being after the life is gone; relics; a dead body.\n\n- Posthumous works or productions, especially literary works.\n\n- State of remaining; stay.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "remain",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To stay behind while others withdraw; to be left after others have been removed or destroyed; to be left after a number or quantity has been subtracted or cut off; to be left as not included or comprised.\n\n- To continue unchanged in place, form, or condition, or undiminished in quantity; to abide; to stay; to endure; to last.\nE.g: There was no food in the house, so I had to remain hungry.\n\n- To await; to be left to.\n\n- To continue in a state of being.\nE.g: The light remained red for two full minutes.\n\n",
+            "synonyms": [
+                "await",
+                "bide",
+                "wait",
+                "rest",
+                "stay",
+                "stay",
+                "endure",
+                "last",
+                "stay",
+                "linger",
+                "stay",
+                "tarry",
+                "belave"
+            ],
+            "antonyms": [],
+            "word": "remain",
+            "type": "verb"
+        }
+    },
+    "artist": {
+        "noun": {
+            "definition": "- A person who creates art.\n\n- A person who is skilled at some activity.\n\n- A recording artist.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "artist",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Artistic.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "artist",
+            "type": "adjective"
+        }
     }
 }
