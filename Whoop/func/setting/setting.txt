@@ -4,7 +4,7 @@ fonts: segoeuib
 version: Whoop 1.0.0dev
 released date: 17/1/2025
 favlist: func/setting/fav_word_list.txt
-pattern: func/setting/img/pattern/pattern01.png
+pattern: none
 banner: func/setting/img/Logo.png
 icon: func/setting/img/Icon.png
 title: Whoop
