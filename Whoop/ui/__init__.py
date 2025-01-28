@@ -146,6 +146,31 @@ class check_button(MDIconButton):
         self.theme_icon_color="Custom"
         self.icon_color=primarycolor
         self.pos_hint={"center_x": 0.5, "center_y": 0.5}
+
+def set_opacity_recursive(w, value=0):
+        w.opacity = value
+
+def set_y(w):
+    w.y=w.y-w.parent.height*0.5
+
+def set_x(w):
+    w.x=w.x-w.parent.width*0.5
+    
+def fade_in_vertical(w):
+    anim=Animation(opacity=1, duration=0.5)&Animation(y=w.y+w.parent.height*0.5, duration=0.75, transition='out_quad')
+    anim.start(w)
+
+def fade_out_vertical(w):
+    anim=Animation(opacity=0, duration=0.5)&Animation(y=w.y-w.parent.height*0.5, duration=0.75, transition='out_quad')
+    anim.start(w)
+
+def fade_in_horizontal(w):
+    anim=Animation(opacity=1, duration=0.5)&Animation(x=w.x+w.parent.width*0.5, duration=0.75, transition='out_quad')
+    anim.start(w)
+
+def fade_out_horizontal(w):
+    anim=Animation(opacity=0, duration=0.5)&Animation(x=w.x-w.parent.width*0.5, duration=0.75, transition='out_quad')
+    anim.start(w)
         
 def set_new_config():
     with open("func/setting/setting.txt", "w", encoding="utf-8") as fo:
