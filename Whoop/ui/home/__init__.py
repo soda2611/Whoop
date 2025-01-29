@@ -538,8 +538,7 @@ class home(MDBoxLayout, TouchBehavior):
                 home__[i].morebutton.on_press=partial(self.search_button_pressed, instance=None, input_text=text['type'], value=False, temp=text)
             except: pass
         set_opacity_recursive(self.homebox)
-        set_y(self.homebox)
-        fade_in_vertical(self.homebox)
+        Animation(opacity=1, duration=0.5).start(self.homebox)
 
     def menu_open(self, instance):
         menu_items = [
@@ -630,8 +629,7 @@ class home(MDBoxLayout, TouchBehavior):
             self.scrollview.clear_widgets()
             self.scrollview.add_widget(self.homebox)
             set_opacity_recursive(self.homebox)
-            set_y(self.homebox)
-            fade_in_vertical(self.homebox)
+            Animation(opacity=1, duration=0.5).start(self.homebox)
         current_page="home"
 
     def show_input(self, instance):
