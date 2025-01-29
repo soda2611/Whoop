@@ -84,7 +84,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.text_input.add_widget(self.text_input.input)
         self.text_input.add_widget(self.text_input.button)
 
-        self.hib=MDIconButton(icon='close', theme_icon_color="Custom", icon_color=primarycolor, size_hint=(None, None), pos_hint={"center_x": 0.5, "center_y":0.5})
+        self.hib=MDIconButton(icon='close', theme_icon_color="Custom", icon_color=btn, size_hint=(None, None), pos_hint={"center_x": 0.5, "center_y":0.5})
         self.hib.bind(on_press=self.on_double_tap)
 
         self.button = MDIconButton(icon='magnify', theme_icon_color="Custom", icon_color=secondarycolor, size_hint=(1, None), pos_hint={"center_x":0.5})
