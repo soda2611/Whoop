@@ -84,7 +84,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.text_input.add_widget(self.text_input.input)
         self.text_input.add_widget(self.text_input.button)
 
-        self.hib=MDIconButton(icon='close', theme_icon_color="Custom", icon_color=btn, size_hint=(None, None), pos_hint={"center_x": 0.5, "center_y":0.5})
+        self.hib=MDIconButton(icon='close', theme_icon_color="Custom", icon_color=primarycolor, size_hint=(None, None), pos_hint={"center_x": 0.5, "center_y":0.5})
         self.hib.bind(on_press=self.on_double_tap)
 
         self.button = MDIconButton(icon='magnify', theme_icon_color="Custom", icon_color=secondarycolor, size_hint=(1, None), pos_hint={"center_x":0.5})
@@ -537,6 +537,9 @@ class home(MDBoxLayout, TouchBehavior):
                     home__[i].result_label.text=text["definition"]
                 home__[i].morebutton.on_press=partial(self.search_button_pressed, instance=None, input_text=text['type'], value=False, temp=text)
             except: pass
+        set_opacity_recursive(self.homebox)
+        set_y(self.homebox)
+        fade_in_vertical(self.homebox)
 
     def menu_open(self, instance):
         menu_items = [
@@ -884,8 +887,10 @@ class home(MDBoxLayout, TouchBehavior):
         if _value_ and check_connection(): threading.Thread(target=track_user_queries, args=({self.input_text[0]: result},)).start()
         else: _value_=not _value_
         self.scrollview.add_widget(self.result_box)
+        set_opacity_recursive(self.result_template.word)
         set_opacity_recursive(self.result_box)
         set_y(self.result_box)
+        Animation(opacity=1, duration=0.5).start(self.result_template.word)
         fade_in_vertical(self.result_box)
         self.progress_bar.color=self.progress_bar.back_color
         self.progress_bar.stop()
