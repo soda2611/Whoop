@@ -935,5 +935,35 @@
             "word": "handcraft",
             "type": "verb"
         }
+    },
+    "gay": {
+        "noun": {
+            "definition": "- The letter —, which stands for the sound /ɡ/, in Pitman shorthand.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To make happy or cheerful.\n\n- To cause (something, e.g. AIDS) to be associated with homosexual people.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- (possibly obsolete) Happy, joyful, and lively.\nE.g: The Gay Science\n\n- Quick, fast.\n\n- (possibly obsolete) Festive, bright, or colourful.\nE.g: Pennsylvania Dutch include the plain folk and the gay folk.\n\n- Sexually promiscuous (of any gender), (sometimes particularly) engaged in prostitution.\n\n- Homosexual:\n\n- A pejorative:\n\n- (of a dog's tail) Upright or curved over the back.\n\n- (possibly obsolete) Considerable, great, large in number, size, or degree.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "adjective"
+        },
+        "adverb": {
+            "definition": "- (possibly obsolete) Considerably, very.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "gay",
+            "type": "adverb"
+        }
     }
 }
