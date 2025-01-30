@@ -764,5 +764,176 @@
             "word": "artist",
             "type": "adjective"
         }
+    },
+    "attract": {
+        "verb": {
+            "definition": "- To pull toward without touching.\nE.g: A magnet attracts iron filings.\n\n- To arouse interest.\nE.g: Advertising is designed to attract customers.\n\n- To draw by moral, emotional or sexual influence; to engage or fix, as the mind, attention, etc.; to invite or allure.\nE.g: to attract admirers;   His big smile and brown eyes instantly attracted me.\n\n",
+            "synonyms": [
+                "allure"
+            ],
+            "antonyms": [
+                "repel"
+            ],
+            "word": "attract",
+            "type": "verb"
+        }
+    },
+    "allure": {
+        "noun": {
+            "definition": "- The power to attract, entice; the quality causing attraction.\n\n- Gait; bearing\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "allure",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To entice; to attract.\n\n",
+            "synonyms": [
+                "attract",
+                "decoy",
+                "entice",
+                "seduce",
+                "tempt"
+            ],
+            "antonyms": [],
+            "word": "allure",
+            "type": "verb"
+        }
+    },
+    "handicraft": {
+        "noun": {
+            "definition": "- A trade requiring skill of hand; manual occupation; handcraft.\n\n- An artifact produced by handicraft.\n\n- A man who earns his living by handicraft; a handicraftsman.\n\n",
+            "synonyms": [
+                "handcraft"
+            ],
+            "antonyms": [],
+            "word": "handicraft",
+            "type": "noun"
+        }
+    },
+    "bide": {
+        "verb": {
+            "definition": "- To bear; to endure; to tolerate.\n\n- To dwell or reside in a location; to abide.\n\n- To wait; to be in expectation; to stay; to remain.\n\n- To wait for; to await.\n\n",
+            "synonyms": [
+                "put up with",
+                "live",
+                "stand by",
+                "await"
+            ],
+            "antonyms": [],
+            "word": "bide",
+            "type": "verb"
+        }
+    },
+    "put up with": {
+        "verb": {
+            "definition": "- To endure, tolerate, suffer through, or allow, especially something annoying.\nE.g: I put up with a lot of nonsense, but this is too much.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "put up with",
+            "type": "verb"
+        }
+    },
+    "stand by": {
+        "verb": {
+            "definition": "- To wait in expectation of some event; to make ready.\nE.g: Please stand by for more instructions.\n\n- To remain loyal or faithful to.\nE.g: Even though money is scarce sometimes, Ann stands by her decision to be a full-time mother.\n\n- To support; to continue to support despite things being bad.\nE.g: They stood by us all along and it's awesome to see them out here to support us today.\n\n- To do nothing. To be inactive in a situation.\nE.g: I can't simply stand by and watch you ruin your life.\n\n- To be ready to provide assistance if required.\nE.g: The tug stood by in case it was needed.\n\n",
+            "synonyms": [
+                "lallygag",
+                "waste time",
+                "go to the wall for someone",
+                "keep faith",
+                "uphold",
+                "hang on",
+                "stay"
+            ],
+            "antonyms": [],
+            "word": "stand by",
+            "type": "verb"
+        }
+    },
+    "lallygag": {
+        "noun": {
+            "definition": "- Horseplay, fooling around.\n\n- A layabout, one who lallygags.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "lallygag",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- (See lollygag.) To dawdle; to be lazy or idle; to avoid necessary work or effort.\n\n- To pet, kiss, or otherwise demonstrate overt affection, generally in public.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "lallygag",
+            "type": "verb"
+        }
+    },
+    "wait": {
+        "noun": {
+            "definition": "- A delay.\nE.g: I had a very long wait at the airport security check.\n\n- An ambush.\nE.g: They lay in wait for the patrol.\n\n- One who watches; a watchman.\n\n- (in the plural) Hautboys, or oboes, played by town musicians.\n\n- (in the plural) Musicians who sing or play at night or in the early morning, especially at Christmas time; serenaders; musical watchmen. [formerly waites, wayghtes.]\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "wait",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To delay movement or action until the arrival or occurrence of; to await. (Now generally superseded by “wait for”.)\n\n- To delay movement or action until some event or time; to remain neglected or in readiness.\nE.g: Wait here until your car arrives.\n\n- To wait tables; to serve customers in a restaurant or other eating establishment.\nE.g: She used to wait down at the Dew Drop Inn.\n\n- To attend on; to accompany; especially, to attend with ceremony or respect.\n\n- To attend as a consequence; to follow upon; to accompany.\n\n- To defer or postpone (especially a meal).\nE.g: to wait dinner\n\n- To remain chaste while one's lover is unavailable.\n\n",
+            "synonyms": [
+                "attend",
+                "escort",
+                "go with",
+                "bestand",
+                "serve",
+                "tend",
+                "defer",
+                "postpone",
+                "await",
+                "wait for",
+                "hold one's breath",
+                "serve",
+                "wait on",
+                "wait upon"
+            ],
+            "antonyms": [],
+            "word": "wait",
+            "type": "verb"
+        }
+    },
+    "await": {
+        "noun": {
+            "definition": "- A waiting for; ambush.\n\n- Watching, watchfulness, suspicious observation.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "await",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To wait for.\nE.g: I await your reply to my letter.\n\n- To expect.\n\n- To be in store for; to be ready or in waiting for.\nE.g: Glorious rewards await the good in heaven; eternal suffering awaits mortal sinners in hell.\n\n- To serve or attend; to wait on, wait upon.\n\n- To watch, observe.\n\n- To wait; to stay in waiting.\n\n",
+            "synonyms": [
+                "attend to",
+                "service",
+                "anticipate",
+                "listen",
+                "wait for"
+            ],
+            "antonyms": [],
+            "word": "await",
+            "type": "verb"
+        }
+    },
+    "handcraft": {
+        "noun": {
+            "definition": "- Handicraft\n\n- The class of subjects for study that rely upon experimentation and observation.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "handcraft",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To engage in handcraft or handicraft.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "handcraft",
+            "type": "verb"
+        }
     }
 }
