@@ -1,4 +1,5 @@
 #import kivy
+import ui
 from ui import *
 from ui.home import home
 from ui.setting import setting, update_dialog
@@ -34,6 +35,10 @@ class MyApp(MDApp):
         sm.add_widget(secondscreen)
         sm.transition.duration=0.5
         return sm
+    
+    def on_stop(self):
+        ui.settings["size"] = f"{Window.width} {Window.height}"
+        return super().on_stop()
 
 if __name__ == '__main__':
     MyApp().run()
