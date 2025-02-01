@@ -150,13 +150,19 @@ class check_button(MDIconButton):
 def set_opacity_recursive(w, value=0):
         w.opacity = value
 
-def set_y(w):
-    w.y=w.y-w.parent.height*0.5
+def set_y(w, y=None):
+    if y==None:
+        w.y=w.y-w.parent.height*0.5
+    else: w.y=y
 
-def set_x(w):
-    w.x=w.x-w.parent.width*0.5
+def set_x(w, x=None):
+    if x==None:
+        w.x=w.x-w.parent.width*0.5
+    else: w.x=x
     
 def fade_in_vertical(w):
+    set_opacity_recursive(w)
+    set_y(w)
     anim=Animation(opacity=1, duration=0.5)&Animation(y=w.y+w.parent.height*0.5, duration=0.75, transition='out_quad')
     anim.start(w)
 
@@ -165,6 +171,8 @@ def fade_out_vertical(w):
     anim.start(w)
 
 def fade_in_horizontal(w):
+    set_opacity_recursive(w)
+    set_x(w)
     anim=Animation(opacity=1, duration=0.5)&Animation(x=w.x+w.parent.width*0.5, duration=0.75, transition='out_quad')
     anim.start(w)
 
