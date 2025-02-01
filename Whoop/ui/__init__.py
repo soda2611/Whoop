@@ -151,33 +151,44 @@ def set_opacity_recursive(w, value=0):
         w.opacity = value
 
 def set_y(w, y=None):
-    if y==None:
-        w.y=w.y-w.parent.height*0.5
+    orginal_y=w.y
+    if y==None: w.y=w.y-w.parent.height/2
     else: w.y=y
+    return orginal_y
 
 def set_x(w, x=None):
-    if x==None:
-        w.x=w.x-w.parent.width*0.5
+    orginal_x=w.x
+    if x==None: w.x=w.x-w.parent.width/2
     else: w.x=x
+    return orginal_x
     
-def fade_in_vertical(w):
+def fade_in_vertical(w, start_pos=None, on_complete=None):
     set_opacity_recursive(w)
-    set_y(w)
-    anim=Animation(opacity=1, duration=0.5)&Animation(y=w.y+w.parent.height*0.5, duration=0.75, transition='out_quad')
+    if start_pos==None:
+        end_pos=set_y(w)
+    else:
+        end_pos=set_y(w, start_pos)
+    anim=Animation(opacity=1, duration=0.5)&Animation(y=end_pos, duration=0.75, transition='out_quad')
     anim.start(w)
 
-def fade_out_vertical(w):
-    anim=Animation(opacity=0, duration=0.5)&Animation(y=w.y-w.parent.height*0.5, duration=0.75, transition='out_quad')
+def fade_out_vertical(w, on_complete=None):
+    anim=Animation(opacity=0, duration=0.5)&Animation(y=w.y-w.parent.height/2, duration=0.25, transition='out_quad')
+    if on_complete==None: anim.on_complete=lambda *args: w.parent.remove_widget(w)
+    else: anim.on_complete=on_complete
     anim.start(w)
 
-def fade_in_horizontal(w):
+def fade_in_horizontal(w, start_pos=None):
     set_opacity_recursive(w)
-    set_x(w)
-    anim=Animation(opacity=1, duration=0.5)&Animation(x=w.x+w.parent.width*0.5, duration=0.75, transition='out_quad')
+    if start_pos==None:
+        end_pos=set_x(w)
+    else:
+        end_pos=set_x(w, start_pos)
+    anim=Animation(opacity=1, duration=0.5)&Animation(x=end_pos, duration=0.75, transition='out_quad')
     anim.start(w)
 
 def fade_out_horizontal(w):
-    anim=Animation(opacity=0, duration=0.5)&Animation(x=w.x-w.parent.width*0.5, duration=0.75, transition='out_quad')
+    anim=Animation(opacity=0, duration=0.5)&Animation(x=w.x-w.parent.width/2, duration=0.25, transition='out_quad')
+    anim.on_complete=lambda *args: w.parent.remove_widget(w)
     anim.start(w)
         
 def set_new_config():
