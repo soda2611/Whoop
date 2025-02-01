@@ -1,4 +1,3 @@
-import ui
 from ui import *
 from ui.home.widget.result_template import *
 from ui.home.widget.add_data import add_data
@@ -22,7 +21,6 @@ class home(MDBoxLayout, TouchBehavior):
         self.orientation = 'vertical'
         self.padding = [dp(10), dp(10), dp(10), dp(35)]
         self.spacing = dp(25)
-        Window.bind(on_resize=self.on_window_resize)
 
         self.text=""
         self.signal=False
@@ -81,8 +79,6 @@ class home(MDBoxLayout, TouchBehavior):
         self.text_input=MDRelativeLayout(size_hint=(1, None), height=dp(50), pos_hint={'center_x': 0.5, "center_y": 0.5})
         self.text_input.input=MDTextField(icon_left="magnify", icon_left_color_focus=btn, hint_text="Nhập từ cần tìm", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_y': 0.5}, height=dp(30), multiline=False, on_text_validate=lambda instance: self.search_button_pressed(instance, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split())))))        
         self.text_input.button=MDIconButton(icon='translate', theme_icon_color="Custom", icon_color=btn, size_hint=(None, None), pos_hint={"right": 1, "center_y":0.5}, on_press=self.translate)
-        self.text_input.add_widget(self.text_input.input)
-        self.text_input.add_widget(self.text_input.button)
 
         self.hib=MDIconButton(icon='close', theme_icon_color="Custom", icon_color=primarycolor, size_hint=(None, None), pos_hint={"center_x": 0.5, "center_y":0.5})
         self.hib.bind(on_press=self.on_double_tap)
@@ -96,18 +92,13 @@ class home(MDBoxLayout, TouchBehavior):
         self.progress_box=MDBoxLayout(orientation='vertical', size_hint=(0.95,None), height=dp(5), pos_hint={"center_x":0.5})
 
         self.progress_bar = MDProgressBar(radius=[5,5,5,5], type="indeterminate", pos_hint={"center_x":0.5}, running_duration=0.75, catching_duration=0.5, color=btn, back_color=bg)
-        self.progress_box.add_widget(self.progress_bar)
-
-        self.add_widget(self.label)
 
         self.one_box=MDBoxLayout(size_hint=(0.85, 0.25), pos_hint={'center_x': 0.5, 'center_y': 0.5}, spacing = 20)
-        self.add_widget(self.one_box)
 
         self.nav_bar=MDBoxLayout(size_hint=(1, None), height=dp(50))
         self.back_button=MDIconButton(icon="arrow-left", theme_icon_color="Custom", pos_hint={"center_y": 0.5}, icon_color=primarycolor, md_bg_color=(1,1,1,0), disabled=True, md_bg_color_disabled=(1,1,1,0), on_press=self.back)
         self.noname=MDCard(orientation='vertical',md_bg_color=bg, size_hint=(1, 1), pos_hint={'center_x': 0.5, 'center_y': 0.5})
         self.noname.radius=[dp(i) for i in self.noname.radius]
-        self.one_box.add_widget(self.noname)
 
         self.fav_nav_bar=MDBoxLayout(size_hint=(1, None), height=dp(50))
         self.fav_back_button=MDIconButton(icon="arrow-left", theme_icon_color="Custom", pos_hint={"center_y": 0.5}, icon_color=primarycolor, md_bg_color=(1,1,1,0), disabled=True, md_bg_color_disabled=(1,1,1,0), on_press=self.back)
@@ -142,18 +133,6 @@ class home(MDBoxLayout, TouchBehavior):
         else:
             self.favlist.container.add_widget(self.favlist.label)
 
-        self.recent=recent(self.create_content_box, self.clear_history, self.noname.radius)
-        if len(recent_search)>0:
-            for i in recent_search:
-                if str(type(recent_search[i]))=="<class 'dict'>":
-                    for j in recent_search[i]:
-                        self.recent.recent_scrollview_box.add_widget(self.create_content_box(recent_search[i][j]), index=0)
-            self.recent.container.add_widget(self.recent.recent_scrollview)
-        else:
-            self.recent.container.add_widget(self.recent.label)
-
-        self.noname.add_widget(self.progress_box)
-
         self.scrollview = ScrollView(size_hint=(1, 1), pos_hint={'center_x': 0.5, 'center_y': 0.5}, on_scroll_stop=self.infinite_homepage)
 
         self.result_box=MDBoxLayout(orientation='vertical', size_hint=(1,None), spacing=dp(20), padding=[dp(10), dp(10), dp(10), dp(10)])
@@ -174,27 +153,19 @@ class home(MDBoxLayout, TouchBehavior):
                 self.homebox.add_widget(box__)
             except: pass
 
-        self.noname.add_widget(self.scrollview)
-        self.scrollview.add_widget(self.homebox)
         self.refreshbutton=MDFillRoundFlatButton(text="Làm mới",size_hint=(None, None), pos_hint={"center_x":0.5, "center_y":0.5}, md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor)
         self.refreshbutton.bind(on_press=self.refresh)
-        self.homebox.add_widget(self.refreshbutton)
 
         self.resultlabel.bind(texture_size=self.resultlabel.setter('text_size'))
         self.resultlabel.bind(texture_size=self.resultlabel.setter('size'))
 
         self.box = MDBoxLayout(size_hint=(0.9, None), pos_hint={"center_x":0.5}, height=dp(50))
-        self.add_widget(self.box)
 
         self.taskbar=MDCard(md_bg_color=btn, radius=[25, 25, 25, 25], size_hint=(1, None), height=dp(50), pos_hint={"center_x":0.5, "center_y": 0.5})
         self.taskbar.radius=[dp(i) for i in self.taskbar.radius]
         self.button.bind(on_press=self.show_input)
         self.homebutton.bind(on_press=self.home)
         self.menubutton.bind(on_press=self.menu_open)
-        self.taskbar.add_widget(self.homebutton)
-        self.taskbar.add_widget(self.button)
-        self.taskbar.add_widget(self.menubutton)
-        self.box.add_widget(self.taskbar)
 
         self.text_input.input.bind(focus=self.hide_input)
         self.text_input.input.bind(text=self.quick_search)
@@ -205,26 +176,38 @@ class home(MDBoxLayout, TouchBehavior):
         self.synonyms_box=MDBoxLayout(size_hint_x=None, spacing=dp(20), padding=[dp(10),dp(10),dp(10),dp(10)], pos_hint={'center_y': 0.5})
         self.synonyms=ScrollView(do_scroll_y=False, size_hint=(1,None), height=dp(50))
         self.synonyms_box.bind(minimum_width=self.synonyms_box.setter('width'))
-        self.synonyms.add_widget(self.synonyms_box)
 
         self.antonyms_box=MDBoxLayout(size_hint_x=None, spacing=dp(20), padding=[dp(10),dp(10),dp(10),dp(10)], pos_hint={'center_y': 0.5})
         self.antonyms=ScrollView(do_scroll_y=False, size_hint=(1,None), height=dp(50))
         self.antonyms_box.bind(minimum_width=self.antonyms_box.setter('width'))
-        self.antonyms.add_widget(self.antonyms_box)
 
-        self.dialog = recent_(self.create_content_box, self.clear_history, self.noname.radius)
+        self.recent = recent(self.create_content_box, self.clear_history, self.noname.radius)
         if len(recent_search)>0:
             for i in recent_search:
                 if str(type(recent_search[i]))=="<class 'dict'>":
                     for j in recent_search[i]:
-                        self.dialog.recent_scrollview_box.add_widget(self.create_content_box(recent_search[i][j]), index=0)
-            self.dialog.container.add_widget(self.dialog.recent_scrollview)
+                        self.recent.recent_scrollview_box.add_widget(self.create_content_box(recent_search[i][j]), index=0)
+            self.recent.container.add_widget(self.recent.recent_scrollview)
         else:
-            self.dialog.container.add_widget(self.dialog.label)
-        try:
-            if int(width)>=dp(900):
-                self.one_box.add_widget(self.recent)
-        except: pass
+            self.recent.container.add_widget(self.recent.label)
+
+        self.text_input.add_widget(self.text_input.input)
+        self.text_input.add_widget(self.text_input.button)
+        self.progress_box.add_widget(self.progress_bar)
+        self.add_widget(self.label)
+        self.add_widget(self.one_box)
+        self.one_box.add_widget(self.noname)
+        self.noname.add_widget(self.progress_box)
+        self.noname.add_widget(self.scrollview)
+        self.scrollview.add_widget(self.homebox)
+        self.homebox.add_widget(self.refreshbutton)
+        self.add_widget(self.box)
+        self.taskbar.add_widget(self.homebutton)
+        self.taskbar.add_widget(self.button)
+        self.taskbar.add_widget(self.menubutton)
+        self.box.add_widget(self.taskbar)
+        self.synonyms.add_widget(self.synonyms_box)
+        self.antonyms.add_widget(self.antonyms_box)
 
     def on_folder_len(self, instance, value):
         if value>0:
@@ -269,11 +252,19 @@ class home(MDBoxLayout, TouchBehavior):
 *Từ đồng nghĩa: {f'{synonyms}' if synonyms else 'Không có từ đồng nghĩa'}
 
 *Từ trái nghĩa: {f'{antonyms}' if antonyms else 'Không có từ trái nghĩa'}"""
-        elif copy:
-            copy=copy
+        elif copy: copy=copy
         pyperclip.copy(copy)
 
         MDSnackbar(MDLabel(text="Đã sao chép nội dung", theme_text_color="Custom", text_color=primarycolor), md_bg_color=menubg, y=dp(10),  size_hint_x=.85, pos_hint={"center_x": 0.5}, radius=[dp(25), dp(25), dp(25), dp(25)]).open()
+
+    def remove_nav_bar(self):
+        self.progress_box.height=dp(5)
+        self.progress_box.remove_widget(self.nav_bar)
+        self.progress_box.remove_widget(self.fav_nav_bar)
+
+    def refresh_nav_bar(self):
+        self.progress_box.height=dp(60)
+        self.progress_box.add_widget(self.progress_bar)
 
     def show_recent(self, *args):
         global current_page
@@ -282,12 +273,10 @@ class home(MDBoxLayout, TouchBehavior):
         self.progress_bar.back_color=bg
         self.progress_bar.color=self.progress_bar.back_color
         self.noname.md_bg_color=bg
-        self.progress_box.height=dp(5)
-        self.progress_box.remove_widget(self.nav_bar)
-        self.progress_box.remove_widget(self.fav_nav_bar)
+        self.remove_nav_bar()
         self.scrollview.clear_widgets()
-        self.scrollview.add_widget(self.dialog)
-        fade_in_vertical(self.dialog.container)
+        self.scrollview.add_widget(self.recent)
+        fade_in_vertical(self.recent.container)
 
     def show_fav_folder(self, instance, folder):
         self.fav_label.text=folder
@@ -305,8 +294,7 @@ class home(MDBoxLayout, TouchBehavior):
         current_page="favorite word list"
         self.menu.dismiss()
         self.progress_box.clear_widgets()
-        self.progress_box.height=dp(60)
-        self.progress_box.add_widget(self.progress_bar)
+        self.refresh_nav_bar()
         self.progress_box.add_widget(self.fav_nav_bar)
         self.fav_nav_bar.clear_widgets()
         self.fav_nav_bar.add_widget(self.fav_back_button)
@@ -437,14 +425,10 @@ class home(MDBoxLayout, TouchBehavior):
     def clear_history(self, instance):
         global recent_search
         recent_search={}
-        self.dialog.recent_scrollview_box.clear_widgets()
         self.recent.recent_scrollview_box.clear_widgets()
         self.recent.container.clear_widgets()
         self.recent.container.add_widget(self.recent.label)
-        self.dialog.container.clear_widgets()
-        self.dialog.container.add_widget(self.dialog.label)
         fade_in_vertical(self.recent.container)
-        fade_in_vertical(self.dialog.container)
         with open(f"func/setting/{settings['uid']}.txt", "w", encoding="utf-8") as fo:
             fo.write("{}")
 
@@ -469,10 +453,7 @@ class home(MDBoxLayout, TouchBehavior):
     def add_data(self):
         global current_page
         current_page="add_data"
-        self.progress_box.height=dp(5)
-        self.progress_box.remove_widget(self.nav_bar)
-        self.progress_box.remove_widget(self.fav_nav_bar)
-        self.progress_box.remove_widget(self.fav_nav_bar)
+        self.remove_nav_baṛ()
         self.menu.dismiss()
         self.progress_bar.back_color=bg
         self.progress_bar.color=self.progress_bar.back_color
@@ -510,17 +491,14 @@ class home(MDBoxLayout, TouchBehavior):
         generated.append(self.create_content_box(data_[word][random.choice([i for i in data_[word].keys()])]))
         if home__: self.scrollview.scroll_to(home__[0])
         for i in range(len(home__)):
-            if not home__[i]._state_:
-                home__[i].viewstate()
+            if not home__[i]._state_: home__[i].viewstate()
             try:
                 word=random.choice(word__)
                 text=data_[word][random.choice([i for i in data_[word].keys()])]
                 home__[i]._text_=text["definition"]
                 home__[i].result_head_label.text=text["word"]+" ("+text["type"].lower()+")"+f'\n/{eng_to_ipa.convert(text["word"])}/'
-                if len(text["definition"])>50:
-                    home__[i].result_label.text=text["definition"][:50]+"..."
-                else:
-                    home__[i].result_label.text=text["definition"]
+                if len(text["definition"])>50: home__[i].result_label.text=text["definition"][:50]+"..."
+                else: home__[i].result_label.text=text["definition"]
                 home__[i].morebutton.on_press=partial(self.search_button_pressed, instance=None, input_text=text['type'], value=False, temp=text)
             except: pass
         set_opacity_recursive(self.homebox)
@@ -551,15 +529,16 @@ class home(MDBoxLayout, TouchBehavior):
                 "theme_trailing_icon_color": "Custom",
                 "trailing_icon_color": primarycolor,
                 "on_release": self.show_fav
+            },
+            {
+                "text": "Gần đây",
+                "text_color": primarycolor,
+                "trailing_icon": "history",
+                "theme_trailing_icon_color": "Custom",
+                "trailing_icon_color": primarycolor,
+                "on_release": self.show_recent
             }
         ]
-        if Window.width<dp(900):
-            menu_items.insert(3,{"text": "Gần đây",
-                                "text_color": primarycolor,
-                                "trailing_icon": "history",
-                                "theme_trailing_icon_color": "Custom",
-                                "trailing_icon_color": primarycolor,
-                                "on_release": self.show_recent})
         self.menu=MDDropdownMenu(
             caller=self.menubutton,
             items=menu_items,               
@@ -606,11 +585,9 @@ class home(MDBoxLayout, TouchBehavior):
     def home(self, instance):
         global _back_, current_page
         if current_page!="home":
-            self.progress_box.height=dp(5)
             self.progress_bar.back_color=bg
             self.noname.md_bg_color=bg
-            self.progress_box.remove_widget(self.nav_bar)
-            self.progress_box.remove_widget(self.fav_nav_bar)
+            self.remove_nav_bar()
             self.scrollview.clear_widgets()
             self.scrollview.add_widget(self.homebox)
             set_opacity_recursive(self.homebox)
@@ -627,8 +604,7 @@ class home(MDBoxLayout, TouchBehavior):
         if self.text_input.input.text.split()!=[] and (self.result_box not in self.scrollview.children): 
             current_page="search"
             self.progress_box.clear_widgets()
-            self.progress_box.height=dp(60)
-            self.progress_box.add_widget(self.progress_bar)
+            self.refresh_nav_bar()
             self.progress_box.add_widget(self.nav_bar)
             self.scrollview.scroll_y=1
             self.progress_bar.back_color=(boxbg)
@@ -670,9 +646,7 @@ class home(MDBoxLayout, TouchBehavior):
                 self.translate_result_template.src_text.text=self.text_input.input.text
                 self.translate_result_template.dest_text.text=translator.translate(self.text_input.input.text, src='en', dest='vi').text
                 self.noname.md_bg_color=boxbg
-                self.progress_box.height=dp(5)
-                self.progress_box.remove_widget(self.nav_bar)
-                self.progress_box.remove_widget(self.fav_nav_bar)
+                self.remove_nav_bar()
                 self.scrollview.clear_widgets()
                 self.scrollview.add_widget(self.translate_result_template)
             except:
@@ -701,7 +675,7 @@ class home(MDBoxLayout, TouchBehavior):
         global _value_, _callback_
         if not value: _value_=value
         if callback: _callback_=callback
-        try: self.dialog.dismiss()
+        try: self.recent.dismiss()
         except: pass
         threading.Thread(target=self.search, args=(instance, input_text, temp)).start()
         self.progress_bar.color=btn
@@ -731,8 +705,7 @@ class home(MDBoxLayout, TouchBehavior):
         global result, recent_search, _value_, _callback_, current_page
         current_page="search"
         self.progress_box.clear_widgets()
-        self.progress_box.height=dp(60)
-        self.progress_box.add_widget(self.progress_bar)
+        self.refresh_nav_bar()
         self.progress_box.add_widget(self.nav_bar)
         self.nav_bar.clear_widgets()
         self.nav_bar.add_widget(self.back_button)
@@ -777,8 +750,7 @@ class home(MDBoxLayout, TouchBehavior):
                 for i in result:
                     if len(result)==1:
                         self.progress_box.clear_widgets()
-                        self.progress_box.height=dp(60)
-                        self.progress_box.add_widget(self.progress_bar)
+                        self.refresh_nav_bar()
                         self.progress_box.add_widget(self.nav_bar)
                         self.result_template.word.text=self.input_text[0].capitalize()+f' ({i.lower()})'
                         self.nav_bar.clear_widgets()
@@ -819,8 +791,7 @@ class home(MDBoxLayout, TouchBehavior):
                         except: pass
             else:
                 self.progress_box.clear_widgets()
-                self.progress_box.height=dp(60)
-                self.progress_box.add_widget(self.progress_bar)
+                self.refresh_nav_bar()
                 self.progress_box.add_widget(self.nav_bar)
                 self.nav_bar.clear_widgets()
                 self.nav_bar.add_widget(self.back_button)
@@ -840,11 +811,8 @@ class home(MDBoxLayout, TouchBehavior):
                 if len(recent_search)==0:
                     self.recent.container.clear_widgets()
                     self.recent.container.add_widget(self.recent.recent_scrollview)
-                    self.dialog.container.clear_widgets()
-                    self.dialog.container.add_widget(self.dialog.recent_scrollview)
                 for i in result:
                     self.recent.recent_scrollview_box.add_widget(self.create_content_box(result[i]), index=0)
-                    self.dialog.recent_scrollview_box.add_widget(self.create_content_box(result[i]), index=0)
                 recent_search[self.input_text[0]]=result
         else:
             self.nav_bar.clear_widgets()
@@ -904,6 +872,7 @@ class home(MDBoxLayout, TouchBehavior):
 
     def go_to_page_2(self, instance):
         self.menu.dismiss()
+        sm.transition.direction = "left"
         sm.current = 'second'
 
     def on_double_tap(self, instance, *args):
@@ -913,17 +882,3 @@ class home(MDBoxLayout, TouchBehavior):
             self.hide_input(instance, False)
         else:
             self.show_input(instance)
-
-    def on_window_resize(self, window, width, height):
-        last_width = int(settings["size"].split()[0])
-        is_large_screen = width >= dp(900)
-        was_large_screen = last_width >= dp(900)
-        recent_in_children = self.recent in self.one_box.children
-
-        if is_large_screen != was_large_screen:
-            if is_large_screen:
-                self.one_box.add_widget(self.recent)
-            elif recent_in_children:
-                self.one_box.remove_widget(self.recent)
-
-        ui.settings["size"] = f"{Window.width} {Window.height}"
