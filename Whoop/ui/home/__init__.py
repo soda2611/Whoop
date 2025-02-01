@@ -908,9 +908,12 @@ class home(MDBoxLayout, TouchBehavior):
         sm.current = 'second'
 
     def on_double_tap(self, instance, *args):
-        self.text=self.text_input.input.text
-        self.signal=True
-        self.hide_input(instance, False)
+        if self.text_input in self.box.children:    
+            self.text=self.text_input.input.text
+            self.signal=True
+            self.hide_input(instance, False)
+        else:
+            self.show_input(instance)
 
     def on_window_resize(self, window, width, height):
         last_width = int(settings["size"].split()[0])
