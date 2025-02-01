@@ -168,7 +168,7 @@ def fade_in_vertical(w, start_pos=None, on_complete=None):
         end_pos=set_y(w)
     else:
         end_pos=set_y(w, start_pos)
-    anim=Animation(opacity=1, duration=0.5)&Animation(y=end_pos, duration=0.75, transition='out_quad')
+    anim=Animation(opacity=1, duration=0.5)&Animation(y=end_pos, duration=0.65, transition='out_quad')
     anim.start(w)
 
 def fade_out_vertical(w, on_complete=None):
@@ -183,7 +183,7 @@ def fade_in_horizontal(w, start_pos=None):
         end_pos=set_x(w)
     else:
         end_pos=set_x(w, start_pos)
-    anim=Animation(opacity=1, duration=0.5)&Animation(x=end_pos, duration=0.75, transition='out_quad')
+    anim=Animation(opacity=1, duration=0.5)&Animation(x=end_pos, duration=0.65, transition='out_quad')
     anim.start(w)
 
 def fade_out_horizontal(w):
