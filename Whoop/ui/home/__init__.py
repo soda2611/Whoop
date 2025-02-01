@@ -380,7 +380,7 @@ class home(MDBoxLayout, TouchBehavior):
     def _remove_fav_(self, instance):
         global fav_list, fav
         del fav_list[instance.result_head_label.text]
-        self.favlist.fav_scrollview_box.remove_widget(instance.parent)
+        self.favlist.fav_scrollview_box.remove_widget(instance)
         with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
             fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
         if len(fav_list)==0:
@@ -608,7 +608,6 @@ class home(MDBoxLayout, TouchBehavior):
         if current_page!="home":
             self.progress_box.height=dp(5)
             self.progress_bar.back_color=bg
-            self.progress_bar.color=self.progress_bar.back_color
             self.noname.md_bg_color=bg
             self.progress_box.remove_widget(self.nav_bar)
             self.progress_box.remove_widget(self.fav_nav_bar)
@@ -619,6 +618,7 @@ class home(MDBoxLayout, TouchBehavior):
         current_page="home"
 
     def show_input(self, instance):
+        self.hib.disabled=False
         fade_out_vertical(self.taskbar, on_complete=self._show_input_)
 
     def _show_input_(self, instance):
@@ -643,6 +643,7 @@ class home(MDBoxLayout, TouchBehavior):
 
     def hide_input(self, instance, value):
         if (((len(self.text_input.input.text)==0) and (not value)) or self.signal) and self.text_input in self.box.children:
+            self.hib.disabled=True
             fade_out_vertical(self.text_input, on_complete=lambda instance: self._hide_input_(instance, value))
         self.signal=False
 
