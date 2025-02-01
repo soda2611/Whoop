@@ -375,15 +375,19 @@ class home(MDBoxLayout, TouchBehavior):
 
     def remove_fav(self, instance):
         global fav_list, fav
+        fade_out_vertical(instance.parent, on_complete=self._remove_fav_)
+
+    def _remove_fav_(self, instance):
+        global fav_list, fav
+        del fav_list[instance.result_head_label.text]
         self.favlist.fav_scrollview_box.remove_widget(instance.parent)
-        del fav_list[instance.parent.result_head_label.text]
         with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
             fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
         if len(fav_list)==0:
             self.favlist.container.clear_widgets()
             self.favlist.container.add_widget(self.favlist.label)
             fade_in_vertical(self.favlist.label)
-        fav=remove_keys_by_value(fav, instance.parent.result_head_label.text)
+        fav=remove_keys_by_value(fav, instance.result_head_label.text)
 
     def renamefav(self, instance):
         self.instance=instance.parent.result_head_label
@@ -615,6 +619,9 @@ class home(MDBoxLayout, TouchBehavior):
         current_page="home"
 
     def show_input(self, instance):
+        fade_out_vertical(self.taskbar, on_complete=self._show_input_)
+
+    def _show_input_(self, instance):
         global current_page, result
         self.box.clear_widgets()
         if self.text_input.input.text.split()!=[] and (self.result_box not in self.scrollview.children): 
@@ -636,10 +643,13 @@ class home(MDBoxLayout, TouchBehavior):
 
     def hide_input(self, instance, value):
         if (((len(self.text_input.input.text)==0) and (not value)) or self.signal) and self.text_input in self.box.children:
-            self.box.clear_widgets()
-            self.box.add_widget(self.taskbar)
-            fade_in_vertical(self.box)
+            fade_out_vertical(self.text_input, on_complete=lambda instance: self._hide_input_(instance, value))
         self.signal=False
+
+    def _hide_input_(self, instance, value):
+        self.box.clear_widgets()
+        self.box.add_widget(self.taskbar)
+        fade_in_vertical(self.box)
 
     def quick_search(self, instance, value):
         if self.search_thread:
