@@ -965,5 +965,22 @@
             "word": "gay",
             "type": "adverb"
         }
+    },
+    "life": {
+        "noun": {
+            "definition": "- The state of organisms preceding their death, characterized by biological processes such as metabolism and reproduction and distinguishing them from inanimate objects; the state of being alive and living.\nE.g: Having experienced both, the vampire decided that he preferred (un)death to life.  He gave up on life.\n\n- The animating principle or force that keeps an inorganic thing or concept metaphorically alive (dynamic, relevant, etc) and makes it a \"living document\", \"living constitution\", etc.\n\n- Lifeforms, generally or collectively.\nE.g: It's life, but not as we know it.   She discovered plant life on the planet.   The rover discovered signs of life on the alien world.\n\n- A living individual; the fact of a particular individual being alive. (Chiefly when indicating individuals were lost (died) or saved.)\nE.g: Many lives were lost during the war.   Her quick thinking saved many dogs' lives.\n\n- Existence.\nE.g: Man's life on this planet has been marked by continual conflict.   the eternal life of the soul\n\n- A period of time during which something has existence.\n\n- Animation; spirit; vivacity.\n\n- A biography.\nE.g: His life of the founder is finished, except for the title.\n\n- Nature, reality, and the forms that exist in it.\n\n- An opportunity for existence.\n\n- The life insurance industry.\nE.g: I work in life.\n\n- A life assured under a life assurance policy (equivalent to the policy itself for a single life contract).\n\n",
+            "synonyms": [
+                "existence",
+                "experience",
+                "time"
+            ],
+            "antonyms": [
+                "coma",
+                "void",
+                "death"
+            ],
+            "word": "life",
+            "type": "noun"
+        }
     }
 }
