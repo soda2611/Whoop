@@ -904,7 +904,6 @@ class home(MDBoxLayout, TouchBehavior):
 
     def go_to_page_2(self, instance):
         self.menu.dismiss()
-        sm.transition.direction = "left"
         sm.current = 'second'
 
     def on_double_tap(self, instance, *args):
