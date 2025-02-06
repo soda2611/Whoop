@@ -148,7 +148,7 @@ class check_button(MDIconButton):
         self.pos_hint={"center_x": 0.5, "center_y": 0.5}
 
 def set_opacity_recursive(w, value=0):
-        w.opacity = value
+    w.opacity = value
 
 def set_y(w, y=None):
     orginal_y=w.y
