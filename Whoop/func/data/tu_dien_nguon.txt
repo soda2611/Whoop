@@ -982,5 +982,42 @@
             "word": "life",
             "type": "noun"
         }
+    },
+    "laid": {
+        "adjective": {
+            "definition": "- (of paper) Marked with parallel lines, as if ribbed, from wires in the mould.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "laid",
+            "type": "adjective"
+        },
+        "verb": {
+            "definition": "- To don or put on (tefillin (phylacteries)).\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "laid",
+            "type": "verb"
+        }
+    },
+    "desire": {
+        "noun": {
+            "definition": "- Someone or something wished for.\nE.g: It is my desire to speak with you.\n\n- Strong attraction, particularly romantic or sexual.\nE.g: His desire for her kept him awake at night.\n\n- The feeling of desiring; an eager longing for something.\nE.g: Too much desire can seriously affect one’s judgment.\n\n- Motivation.\n\n",
+            "synonyms": [
+                "wanna",
+                "want-to",
+                "wanna",
+                "want-to"
+            ],
+            "antonyms": [],
+            "word": "desire",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To want; to wish for earnestly.\nE.g: I desire to speak with you.\n\n- To put a request to (someone); to entreat.\n\n- To want emotionally or sexually.\nE.g: She has desired him since they first met.\n\n- To express a wish for; to entreat; to request.\n\n- To require; to demand; to claim.\n\n- To miss; to regret.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "desire",
+            "type": "verb"
+        }
     }
 }
