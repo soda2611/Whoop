@@ -457,7 +457,7 @@ class home(MDBoxLayout, TouchBehavior):
     def add_data(self):
         global current_page
         current_page="add_data"
-        self.remove_nav_baṛ()
+        self.remove_nav_bar()
         self.menu.dismiss()
         self.progress_bar.back_color=bg
         self.progress_bar.color=self.progress_bar.back_color
