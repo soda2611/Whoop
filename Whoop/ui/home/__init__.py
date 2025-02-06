@@ -310,7 +310,7 @@ class home(MDBoxLayout, TouchBehavior):
         fade_in_vertical(self.favlist)
 
     def choose_folder(self, instance, word):
-        global  _key_
+        global _key_
         self.favlist.choose_mode=True
         _key_=word
         self.show_fav()
@@ -541,7 +541,7 @@ class home(MDBoxLayout, TouchBehavior):
         ]
         self.menu=MDDropdownMenu(
             caller=self.menubutton,
-            items=menu_items,               
+            items=menu_items,
             ver_growth="up",
             md_bg_color=menubg,
             position="top"
@@ -566,15 +566,15 @@ class home(MDBoxLayout, TouchBehavior):
                 "on_release": lambda instance=instance: self.copy(instance, text=result[list(result.keys())[0]])
             }
         ]
-        menu_items[0]["trailing_icon"]="heart-outline"  if word not in fav else "heart"
-        menu_items[0]["text"]="Yêu thích"  if word not in fav else "Bỏ yêu thích"
+        menu_items[0]["trailing_icon"]="heart-outline" if word not in fav else "heart"
+        menu_items[0]["text"]="Yêu thích" if word not in fav else "Bỏ yêu thích"
         if word not in fav: menu_items[0]["on_release"]=lambda instance=instance: self.choose_folder(instance, word)
         else:
             _key_=word
             menu_items[0]["on_release"]=lambda instance=instance: self.addfav(instance)
         self.menu=MDDropdownMenu(
             caller=self.copy_button,
-            items=menu_items,               
+            items=menu_items,
             ver_growth="down",
             hor_growth="left",
             md_bg_color=menubg,
@@ -876,7 +876,7 @@ class home(MDBoxLayout, TouchBehavior):
         sm.current = 'second'
 
     def on_double_tap(self, instance, *args):
-        if self.text_input in self.box.children:    
+        if self.text_input in self.box.children:
             self.text=self.text_input.input.text
             self.signal=True
             self.hide_input(instance, False)
