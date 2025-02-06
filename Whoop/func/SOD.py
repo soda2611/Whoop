@@ -56,9 +56,10 @@ def SOD(inp, database_path='default', internet=check_connection()):
                                 data_[part_of_speech]["word"] = word
                                 data_[part_of_speech]["type"] = part_of_speech
             with lock:
-                database.update({word: data_})
-                with open(database_path, "w", encoding="utf-8") as fo:
-                    fo.write(json.dumps(database, ensure_ascii=False, indent=4))
+                if data_:
+                    database.update({word: data_})
+                    with open(database_path, "w", encoding="utf-8") as fo:
+                        fo.write(json.dumps(database, ensure_ascii=False, indent=4))
         elif not internet:
             data_ = "Không có kết nối mạng và không có sẵn trong bộ dữ liệu offline"
         if not data_:
