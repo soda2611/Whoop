@@ -147,6 +147,11 @@ class check_button(MDIconButton):
         self.icon_color=primarycolor
         self.pos_hint={"center_x": 0.5, "center_y": 0.5}
 
+def set_height(w, height):
+    original_height=w.minimum_height
+    w.height=height
+    return original_height
+
 def set_opacity_recursive(w, value=0):
     w.opacity = value
 
@@ -161,6 +166,12 @@ def set_x(w, x=None):
     if x==None: w.x=w.x-w.parent.width/2
     else: w.x=x
     return orginal_x
+
+def expand(w, height):
+    end_height=set_height(w, height)
+    anim=Animation(height=end_height, duration=0.5, transition='out_quad')
+    anim.start(w)
+    return end_height
     
 def fade_in_vertical(w, start_pos=None, on_complete=None):
     set_opacity_recursive(w)
