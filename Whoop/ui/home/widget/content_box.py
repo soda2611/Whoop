@@ -9,8 +9,10 @@ class content_box(MDCard):
         self.pos_hint={"center_x":0.5}
         self.radius=[dp(i) for i in self.radius]
         self.bind(minimum_height=self.setter('height'))
-        self._state_=True
         self.morebutton=None
+        self.before_expand=0
+        self.after_expand=0
+        self._state_=True
         self._text_=text["definition"]
         self.on_release=self.viewstate
         self.tilte_and_description_box=MDBoxLayout(orientation='vertical', size_hint=(0.8,None), spacing=dp(10))
@@ -41,8 +43,25 @@ class content_box(MDCard):
             self.result_label.text=self._text_
             self.remove_widget(self.morebutton)
             self.tilte_and_description_box.add_widget(self.morebutton)
-            
+        self.height_before=expand(self, self.height_before)
         self._state_=not self._state_
+
+    def set_afex_value(self):
+        self._state_=not self._state_
+        self.result_label.text=self._text_
+        self.remove_widget(self.morebutton)
+        self.tilte_and_description_box.add_widget(self.morebutton)
+
+    def set_beex_value(self):
+        if len(self._text_)>50:
+            self.result_label.text=self._text_[:50]+"..."
+        else:
+            self.result_label.text=self._text_
+        self.tilte_and_description_box.remove_widget(self.morebutton)
+        self.add_widget(self.morebutton)
+
+    def get_height(self):
+        self.height_before=self.height
         
 class content_box_(MDCard):
     def __init__(self, text, **kwargs):
