@@ -147,39 +147,38 @@ class check_button(MDIconButton):
         self.icon_color=primarycolor
         self.pos_hint={"center_x": 0.5, "center_y": 0.5}
 
-def set_height(w, height):
-    original_height=w.minimum_height
-    w.height=height
-    return original_height
-
 def set_opacity_recursive(w, value=0):
     w.opacity = value
 
-def set_y(w, y=None):
-    orginal_y=w.y
-    if y==None: w.y=w.y-w.parent.height/2
-    else: w.y=y
-    return orginal_y
+def set_y(w, y_start=None, y_end=None):
+    if y_end==None: y=w.y
+    else: y=y_end
+    if y_start==None: w.y=w.y-w.parent.height/2
+    else: w.y=y_start
+    return y
 
-def set_x(w, x=None):
-    orginal_x=w.x
-    if x==None: w.x=w.x-w.parent.width/2
-    else: w.x=x
-    return orginal_x
+def set_x(w, x_start=None, x_end=None):
+    if x_end==None: x=w.x
+    else: x=x_end
+    if x_start==None: w.x=w.x+w.parent.width/2
+    else: w.x=x_start
+    return x
 
-def expand(w, height):
-    end_height=set_height(w, height)
-    anim=Animation(height=end_height, duration=0.5, transition='out_quad')
+def expand(w):
+    w.on_release=w.ignore
+    anim=Animation(height=w.height-w.shrink_result_label.height+w.expand_result_label.height+w.morebutton.height, duration=0.5, transition='out_quad')
+    anim.bind(on_complete=w.set_afex_value)
     anim.start(w)
-    return end_height
+
+def shrink(w):
+    w.on_release=w.ignore
+    anim=Animation(height=w.height+w.shrink_result_label.height-w.expand_result_label.height-w.morebutton.height, duration=0.5, transition='out_quad')
+    anim.bind(on_complete=w.set_beex_value)
+    anim.start(w)
     
-def fade_in_vertical(w, start_pos=None, on_complete=None):
+def fade_in_vertical(w, start_pos=None, end_pos=None, on_complete=None):
     set_opacity_recursive(w)
-    if start_pos==None:
-        end_pos=set_y(w)
-    else:
-        end_pos=set_y(w, start_pos)
-    anim=Animation(opacity=1, duration=0.5)&Animation(y=end_pos, duration=0.65, transition='out_quad')
+    anim=Animation(opacity=1, duration=0.5)&Animation(y=set_y(w, start_pos, end_pos), duration=0.65, transition='out_quad')
     anim.start(w)
 
 def fade_out_vertical(w, on_complete=None):
@@ -197,9 +196,10 @@ def fade_in_horizontal(w, start_pos=None):
     anim=Animation(opacity=1, duration=0.5)&Animation(x=end_pos, duration=0.65, transition='out_quad')
     anim.start(w)
 
-def fade_out_horizontal(w):
-    anim=Animation(opacity=0, duration=0.5)&Animation(x=w.x-w.parent.width/2, duration=0.25, transition='out_quad')
-    anim.on_complete=lambda *args: w.parent.remove_widget(w)
+def fade_out_horizontal(w, on_complete=None):
+    anim=Animation(opacity=0, duration=0.5)&Animation(x=w.x+w.parent.width/2, duration=0.25, transition='out_quad')
+    if on_complete==None: anim.on_complete=lambda *args: w.parent.remove_widget(w)
+    else: anim.on_complete=on_complete
     anim.start(w)
         
 def set_new_config():
