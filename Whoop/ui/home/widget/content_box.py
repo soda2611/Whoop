@@ -4,7 +4,7 @@ class content_box(MDCard):
     def __init__(self, text, **kwargs):
         super(content_box, self).__init__(**kwargs)
         self.md_bg_color=boxbg
-        self.padding=[dp(10), dp(10), dp(10), dp(10)]
+        self.padding=[dp(15), dp(15), dp(15), dp(15)]
         self.size_hint=(1, None)
         self.pos_hint={"center_x":0.5}
         self.radius=[dp(i) for i in self.radius]
