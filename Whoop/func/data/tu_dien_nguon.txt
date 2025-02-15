@@ -1060,5 +1060,1732 @@
             "word": "last",
             "type": "noun"
         }
+    },
+    "avoid": {
+        "verb": {
+            "definition": "- To try not to meet or communicate with (a person); to shun\n\n- To keep away from; to keep clear of; to stay away from\nE.g: I try to avoid the company of gamblers.\n\n- To try not to do something or to have something happen\n\n- To make empty; to clear.\n\n- To make void, to annul; to refute (especially a contract).\n\n- To defeat or evade; to invalidate.\n\n- To emit or throw out; to void.\n\n- To leave, evacuate; to leave as empty, to withdraw or come away from.\n\n- To get rid of.\n\n- To retire; to withdraw, depart, go away.\n\n- To become void or vacant.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "avoid",
+            "type": "verb"
+        }
+    },
+    "resistance": {
+        "noun": {
+            "definition": "- The act of resisting, or the capacity to resist.\nE.g: the resistance of bacteria to certain antibiotics\n\n- A force that tends to oppose motion.\n\n- Electrical resistance.\n\n- An underground organisation engaged in a struggle for liberation from forceful occupation; a resistance movement.\n\n",
+            "synonyms": [
+                "opposition"
+            ],
+            "antonyms": [],
+            "word": "resistance",
+            "type": "noun"
+        }
+    },
+    "bangs": {
+        "noun": {
+            "definition": "- Brucellosis, a bacterial disease.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "bangs",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To make sudden loud noises, and often repeatedly, especially by exploding or hitting something.\nE.g: My head was banging after drinking all night at the concert.\n\n- To hit hard.\nE.g: David and Mary banged into each other.\n\n- To engage in sexual intercourse.\nE.g: We can hear the couple banging upstairs.\n\n- (with \"in\") To hammer or to hit anything hard.\nE.g: Hold the picture while I bang in this nail.\n\n- To cut squarely across, as the tail of a horse, or a person's forelock; to cut (the hair).\n\n- To inject intravenously.\nE.g: Do you smoke meth? No, I bang it.\n\n",
+            "synonyms": [
+                "do it",
+                "have sex",
+                "nail"
+            ],
+            "antonyms": [],
+            "word": "bangs",
+            "type": "verb"
+        }
+    },
+    "transformational grammar": {
+        "noun": {
+            "definition": "- A generative grammar, especially of a natural language, developed in the Chomskyan tradition of phrase structure grammars (as opposed to dependency grammars), and involving the use of defined operations called transformations to produce new sentences from existing ones.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "transformational grammar",
+            "type": "noun"
+        }
+    },
+    "parastatal": {
+        "noun": {
+            "definition": "- A company, agency, or intergovernmental organization that possesses political clout and is separate from the government, but whose activities serve the state, either directly or indirectly.\n\n",
+            "synonyms": [
+                "quango"
+            ],
+            "antonyms": [],
+            "word": "parastatal",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Pertaining to such a company or group.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "parastatal",
+            "type": "adjective"
+        }
+    },
+    "bryony": {
+        "noun": {
+            "definition": "- A perennial herb, of genus Bryonia, especially the common wild species, Bryonia dioica.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "bryony",
+            "type": "noun"
+        }
+    },
+    "intermedin": {
+        "noun": {
+            "definition": "- A melanocyte-stimulating hormone\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "intermedin",
+            "type": "noun"
+        }
+    },
+    "ciabatta": {
+        "noun": {
+            "definition": "- A broad, flat, white Italian bread.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "ciabatta",
+            "type": "noun"
+        }
+    },
+    "eristic": {
+        "noun": {
+            "definition": "- One who makes specious arguments; one who is disputatious.\n\n- A type of dialogue or argument where the participants do not have any reasonable goal. The aim is to argue for the sake of conflict, and often to see who can yell the loudest.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "eristic",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Provoking strife, controversy or discord.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "eristic",
+            "type": "adjective"
+        }
+    },
+    "skegs": {
+        "noun": {
+            "definition": "- A fin-like structure to the rear of the keel of a vessel that supports the rudder and protects a propeller.\n\n- A similar construction on a boat that acts as a keel.\n\n- A fin that serves to stabilize a surfboard.\n\n- A surfer; a person who leads a surfing lifestyle.\n\n- A sort of wild plum (Prunus spinosa or Prunus domestica subsp. insititia (syn. Prunus institia)).\n\n- A kind of oat.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "skegs",
+            "type": "noun"
+        }
+    },
+    "matrons of honor": {
+        "noun": {
+            "definition": "- A married woman who assists the bride at a wedding.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "matrons of honor",
+            "type": "noun"
+        }
+    },
+    "derrière": {
+        "noun": {
+            "definition": "- Bottom, bum, backside.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "derrière",
+            "type": "noun"
+        }
+    },
+    "non-members": {
+        "noun": {
+            "definition": "- Someone who is not a member (of a club, institution, etc.)\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "non-members",
+            "type": "noun"
+        }
+    },
+    "chorusing": {
+        "verb": {
+            "definition": "- To sing or recite in chorus.\n\n- To say in unison; to express in unison.\n\n- To echo (a particular sentiment).\n\n- To sing the chorus (of a song).\n\n- To speak as if in chorus (about something).\n\n- To echo in unison another person's words.\n\n- (of animals) To make their cry together.\n\n",
+            "synonyms": [
+                "duet"
+            ],
+            "antonyms": [],
+            "word": "chorusing",
+            "type": "verb"
+        }
+    },
+    "wrestling": {
+        "verb": {
+            "definition": "- To contend, with an opponent, by grappling and attempting to throw, immobilize or otherwise defeat him, depending on the specific rules of the contest\n\n- To struggle or strive\n\n- To take part in a wrestling match with someone\n\n- To move or lift something with difficulty\n\n- To throw a calf etc in order to brand it\n\n- To fight.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "wrestling",
+            "type": "verb"
+        },
+        "noun": {
+            "definition": "- A sport where two opponents attempt to subdue each other in bare-handed grappling using techniques of leverage, holding, and pressure points.\n\n- A professional tumbling act that emulates the sport of wrestling. Also called \"professional wrestling\". It is distinguished from sport wrestling — which has strict internationally recognized rules and is conducted on a mat — by being scripted, rehearsed, conducted in a boxing ring rather than on a mat, and televised as entertainment.\n\n- The act of one who wrestles; a struggle to achieve something.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "wrestling",
+            "type": "noun"
+        }
+    },
+    "arterial": {
+        "noun": {
+            "definition": "- A through road.\nE.g: Arterial ends here.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "arterial",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Of or relating to an artery.\n\n- (of a route, road or street) Major, important.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "arterial",
+            "type": "adjective"
+        }
+    },
+    "wash one's hands of": {
+        "verb": {
+            "definition": "- To absolve oneself of responsibility or future blame for; to refuse to have any further involvement with.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "wash one's hands of",
+            "type": "verb"
+        }
+    },
+    "perfect storm": {
+        "noun": {
+            "definition": "- (by extension) A situation whereby several problems come together and make everyhing worse.\n\n- A powerful hurricane or other major weather disturbance, especially as produced by a combination of meteorological conditions.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "perfect storm",
+            "type": "noun"
+        }
+    },
+    "zigzagged": {
+        "verb": {
+            "definition": "- To move or to twist in a zigzag manner.\n\n",
+            "synonyms": [
+                "zig and zag"
+            ],
+            "antonyms": [],
+            "word": "zigzagged",
+            "type": "verb"
+        }
+    },
+    "co-operatively": {
+        "adverb": {
+            "definition": "- In a cooperative manner; working with others on a task as part of a team.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "co-operatively",
+            "type": "adverb"
+        }
+    },
+    "milords": {
+        "noun": {
+            "definition": "- An English nobleman, especially one traveling Europe in grand style; a wealthy British gentleman.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "milords",
+            "type": "noun"
+        }
+    },
+    "schmear": {
+        "noun": {
+            "definition": "- A spread that goes on a bagel.\n\n- A batch of things that go together.\n\n- An aggregate.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "schmear",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To spread something, often a bagel spread.\n\n- To bribe.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "schmear",
+            "type": "verb"
+        }
+    },
+    "particolored": {
+        "adjective": {
+            "definition": "- Made up of sections having different, often bright, colours.\n\n",
+            "synonyms": [
+                "motley",
+                "multicolored",
+                "polychromatic"
+            ],
+            "antonyms": [],
+            "word": "particolored",
+            "type": "adjective"
+        }
+    },
+    "recently": {
+        "adverb": {
+            "definition": "- In the recent past\nE.g: a recently published book\n\n",
+            "synonyms": [
+                "freshly",
+                "lately",
+                "newly"
+            ],
+            "antonyms": [
+                "long ago",
+                "long since"
+            ],
+            "word": "recently",
+            "type": "adverb"
+        }
+    },
+    "submenus": {
+        "noun": {
+            "definition": "- A secondary menu available through another menu, especially one that branches off the first.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "submenus",
+            "type": "noun"
+        }
+    },
+    "buccaneer": {
+        "noun": {
+            "definition": "- Any of a group of seamen who cruised on their own account on the Spanish Main and in the Pacific in the 17th century, who were similar to pirates but did not prey on ships of their own nation.\n\n- A pirate.\n\n",
+            "synonyms": [
+                "pirate",
+                "privateer"
+            ],
+            "antonyms": [],
+            "word": "buccaneer",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To engage in piracy against any but one's own nation's ships.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "buccaneer",
+            "type": "verb"
+        }
+    },
+    "in memoriam": {
+        "noun": {
+            "definition": "- An announcement or composition etc. in memory of a deceased person.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "in memoriam",
+            "type": "noun"
+        },
+        "adverb": {
+            "definition": "- In memory (of); as a memorial.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "in memoriam",
+            "type": "adverb"
+        }
+    },
+    "bandsaws": {
+        "noun": {
+            "definition": "- A powered saw whose blade is a continuous band of metal with teeth along one edge.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "bandsaws",
+            "type": "noun"
+        }
+    },
+    "pisky": {
+        "noun": {
+            "definition": "- (fantasy literature, fairy tales) A playful sprite or elflike or fairy-like creature.\n\n- A cute, petite woman with short hair.\n\n- An upper-atmospheric optical phenomenon associated with thunderstorms, a short-lasting pinpoint of light on the surface of convective domes that produces a gnome.\n\n",
+            "synonyms": [
+                "brownie",
+                "fair",
+                "gnome",
+                "imp",
+                "sprite"
+            ],
+            "antonyms": [],
+            "word": "pisky",
+            "type": "noun"
+        }
+    },
+    "halloo": {
+        "noun": {
+            "definition": "- A shout of halloo.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "halloo",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To shout halloo.\n\n- To encourage with shouts; to egg (someone) on.\n\n- To chase with shouts or outcries.\n\n- To call or shout to; to hail.\n\n- To shout (something).\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "halloo",
+            "type": "verb"
+        },
+        "interjection": {
+            "definition": "- Used to greet someone, or to catch their attention.\n\n- Used in hunting to urge on the pursuers.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "halloo",
+            "type": "interjection"
+        }
+    },
+    "racial profiling": {
+        "noun": {
+            "definition": "- (public policy, law enforcement) The practice (usually considered discreditable), by some police and other officials, of treating members of certain racial groups as more likely to be involved in criminal or other antisocial behavior than members of other racial groups.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "racial profiling",
+            "type": "noun"
+        }
+    },
+    "wind roses": {
+        "noun": {
+            "definition": "- A diagram in which the speed and direction of the winds at a particular location are represented by lines of varying thickness and length superimposed on a compass rose.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "wind roses",
+            "type": "noun"
+        }
+    },
+    "steeping": {
+        "verb": {
+            "definition": "- (middle voice) To soak or wet thoroughly.\nE.g: The tea is steeping.\n\n- To imbue with something; to be deeply immersed in.\nE.g: The learned of the nation were steeped in Latin.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "steeping",
+            "type": "verb"
+        },
+        "noun": {
+            "definition": "- A 13th-century coin circulated in Ireland as a debased sterling silver penny, outlawed under King Edward I.\n\n",
+            "synonyms": [
+                "Bishop",
+                "money",
+                "scalding",
+                "stalding"
+            ],
+            "antonyms": [],
+            "word": "steeping",
+            "type": "noun"
+        }
+    },
+    "transmogrified": {
+        "adjective": {
+            "definition": "- Altered, transformed, or mutated into a form that is grotesque or amusing.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "transmogrified",
+            "type": "adjective"
+        },
+        "verb": {
+            "definition": "- To completely alter the form of.\n\n- To completely alter one's form.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "transmogrified",
+            "type": "verb"
+        }
+    },
+    "crofter": {
+        "noun": {
+            "definition": "- One who has the tenure of a croft, usually also the occupant and user.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "crofter",
+            "type": "noun"
+        }
+    },
+    "conduce": {
+        "verb": {
+            "definition": "- To contribute or lead to a specific result.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "conduce",
+            "type": "verb"
+        }
+    },
+    "irked": {
+        "verb": {
+            "definition": "- To irritate; annoy; bother\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "irked",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Annoyed.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "irked",
+            "type": "adjective"
+        }
+    },
+    "mended": {
+        "verb": {
+            "definition": "- To repair, as anything that is torn, broken, defaced, decayed, or the like; to restore from partial decay, injury, or defacement.\nE.g: My trousers have a big rip in them and need mending.\n\n- To alter for the better; to set right; to reform; hence, to quicken; as, to mend one's manners or pace.\nE.g: Her stutter was mended by a speech therapist.\n\n- To help, to advance, to further; to add to.\n\n- To grow better; to advance to a better state; to become improved.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "mended",
+            "type": "verb"
+        }
+    },
+    "propionates": {
+        "noun": {
+            "definition": "- Any salt or ester of propionic acid\n\n",
+            "synonyms": [
+                "propanoate"
+            ],
+            "antonyms": [],
+            "word": "propionates",
+            "type": "noun"
+        }
+    },
+    "smoke bombs": {
+        "noun": {
+            "definition": "- A firework designed to produce smoke upon ignition.\n\n- An explosive or incendiary device designed to produce smoke in order to mark a position or produce a smokescreen.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "smoke bombs",
+            "type": "noun"
+        }
+    },
+    "browsed": {
+        "verb": {
+            "definition": "- To scan, to casually look through in order to find items of interest, especially without knowledge of what to look for beforehand.\n\n- To move about while sampling, such as with food or products on display.\n\n- To navigate through hyperlinked documents on a computer, usually with a browser.\n\n- (of an animal) To move about while eating parts of plants, especially plants other than pasture, such as shrubs or trees.\n\n- To feed on, as pasture; to pasture on; to graze.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "browsed",
+            "type": "verb"
+        }
+    },
+    "enamored": {
+        "verb": {
+            "definition": "- (mostly in the passive, followed by \"of\" or \"with\") To cause to be in love.\n\n- (mostly in the passive) To captivate.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "disenamor",
+                "disenamour"
+            ],
+            "word": "enamored",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- In love, amorous.\nE.g: She's enamored of [or with] her new boyfriend.\n\n",
+            "synonyms": [
+                "head over heels",
+                "twitterpated"
+            ],
+            "antonyms": [],
+            "word": "enamored",
+            "type": "adjective"
+        }
+    },
+    "marvelled": {
+        "verb": {
+            "definition": "- To become filled with wonderment or admiration; to be amazed at something.\n\n- To marvel at.\n\n- (used impersonally) To cause to marvel or be surprised.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "marvelled",
+            "type": "verb"
+        }
+    },
+    "diorama": {
+        "noun": {
+            "definition": "- A three-dimensional display of a scenery, often having a painted background in front of which models are arranged, e.g. in a museum where stuffed animals are presented against a painted landscape.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "diorama",
+            "type": "noun"
+        }
+    },
+    "exhibitionists": {
+        "noun": {
+            "definition": "- One who attempts to draw attention to himself or herself by his or her behaviour.\n\n- One who exposes his or her genitalia (or female nipples) in public.\n\n",
+            "synonyms": [
+                "flasher"
+            ],
+            "antonyms": [],
+            "word": "exhibitionists",
+            "type": "noun"
+        }
+    },
+    "soft palate": {
+        "noun": {
+            "definition": "- The soft tissue at the back of the roof of the mouth.\n\n",
+            "synonyms": [
+                "muscular palate",
+                "velum"
+            ],
+            "antonyms": [],
+            "word": "soft palate",
+            "type": "noun"
+        }
+    },
+    "protrude": {
+        "verb": {
+            "definition": "- To extend from, above or beyond a surface or boundary; to bulge outward; to stick out.\n\n- To cause to extend from a surface or boundary; to cause to stick out.\n\n- To thrust forward; to drive or force along.\n\n",
+            "synonyms": [
+                "jut",
+                "project",
+                "protuberate"
+            ],
+            "antonyms": [],
+            "word": "protrude",
+            "type": "verb"
+        }
+    },
+    "colour-blind": {
+        "adjective": {
+            "definition": "- (of a person or animal) Unable to distinguish between two or more primary colors (usually red and green).\n\n- (of a person or process) Holding no prejudice based on skin color or race; not paying attention to skin color.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "colour-blind",
+            "type": "adjective"
+        }
+    },
+    "hysterics": {
+        "noun": {
+            "definition": "- A hysterical person.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "hysterics",
+            "type": "noun"
+        }
+    },
+    "dashpot": {
+        "noun": {
+            "definition": "- A mechanical damping device consisting of a piston that moves through a viscous fluid (usually oil); used, in conjunction with a spring, in shock absorbers.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "dashpot",
+            "type": "noun"
+        }
+    },
+    "exaptation": {
+        "noun": {
+            "definition": "- The use of a biological structure or function for a purpose other than that for which it initially evolved.\nE.g: Birds initially developed wings and feathers as a means of heat regulation. The use of wings for flight is an example of exaptation.\n\n- (by extension) The promotion of meaningless or redundant material so that it does new grammatical (morphosyntactic or phonological) or semantic work.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "exaptation",
+            "type": "noun"
+        }
+    },
+    "shoot the messenger": {
+        "verb": {
+            "definition": "- To blame a problem on whoever reported it; to hold somebody accountable for a problem because they brought attention to it.\nE.g: I know you won't like this news, but please don't shoot the messenger.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "shoot the messenger",
+            "type": "verb"
+        }
+    },
+    "hall": {
+        "noun": {
+            "definition": "- A corridor; a hallway.\nE.g: The drinking fountain was out in the hall.\n\n- A meeting room.\nE.g: The hotel had three halls for conferences, and two were in use by the convention.\n\n- A manor house (originally because a magistrate's court was held in the hall of his mansion).\nE.g: The duke lived in a great hall overlooking the sea.\n\n- A building providing student accommodation at a university.\nE.g: The student government hosted several social events so that students from different halls would intermingle.\n\n- The principal room of a secular medieval building.\n\n- Cleared passageway through a crowd, as for dancing.\n\n- A place for special professional education, or for conferring professional degrees or licences.\nE.g: a Divinity Hall; Apothecaries' Hall\n\n- A living room.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "hall",
+            "type": "noun"
+        }
+    },
+    "bossies": {
+        "noun": {
+            "definition": "- A cow or calf.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "bossies",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Bosbefok; shell-shocked\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "bossies",
+            "type": "adjective"
+        }
+    },
+    "abominating": {
+        "verb": {
+            "definition": "- To feel disgust towards; to loathe or detest thoroughly; to hate in the highest degree, as if with religious dread.\n\n- To dislike strongly.\n\n",
+            "synonyms": [
+                "abhor",
+                "detest",
+                "loathe",
+                "abhor"
+            ],
+            "antonyms": [],
+            "word": "abominating",
+            "type": "verb"
+        }
+    },
+    "marooners": {
+        "noun": {
+            "definition": "- Someone marooned.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "marooners",
+            "type": "noun"
+        }
+    },
+    "barrel organ": {
+        "noun": {
+            "definition": "- A musical instrument in which air from a bellows is admitted to a set of pipes by means of pins inserted into a revolving barrel (typically turned by a crank)\n\n",
+            "synonyms": [
+                "roller organ",
+                "street organ"
+            ],
+            "antonyms": [],
+            "word": "barrel organ",
+            "type": "noun"
+        }
+    },
+    "spud cocky": {
+        "noun": {
+            "definition": "- A potato farmer.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "spud cocky",
+            "type": "noun"
+        }
+    },
+    "multiplications": {
+        "noun": {
+            "definition": "- The process of computing the sum of a number with itself a specified number of times, or any other analogous binary operation that combines other mathematical objects.\n\n- A calculation involving multiplication.\n\n- The process of multiplying or increasing in number; increase.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "multiplications",
+            "type": "noun"
+        }
+    },
+    "oversimplifies": {
+        "verb": {
+            "definition": "- To explain or present something in a way that excludes important information for the sake of brevity, or of making the explanation or presentation easy to understand.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "oversimplifies",
+            "type": "verb"
+        }
+    },
+    "thermosphere": {
+        "noun": {
+            "definition": "- The layer of the Earth's atmosphere directly above the mesosphere and directly below the exosphere.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "thermosphere",
+            "type": "noun"
+        }
+    },
+    "trackbed": {
+        "noun": {
+            "definition": "- The foundation of a railway track.\n\n- The land on which a railway was built (especially one that has been closed or dismantled).\n\n",
+            "synonyms": [
+                "roadbed"
+            ],
+            "antonyms": [],
+            "word": "trackbed",
+            "type": "noun"
+        }
+    },
+    "call centre": {
+        "noun": {
+            "definition": "- A business location where phone calls are handled, often regarding customer service, sales and telemarketing.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "call centre",
+            "type": "noun"
+        }
+    },
+    "presidentships": {
+        "noun": {
+            "definition": "- The office and dignity of president; presidency.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "presidentships",
+            "type": "noun"
+        }
+    },
+    "dot products": {
+        "noun": {
+            "definition": "- A scalar product.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "dot products",
+            "type": "noun"
+        }
+    },
+    "imbeciles": {
+        "noun": {
+            "definition": "- A person with limited mental capacity who can perform tasks and think only like a young child, in medical circles meaning a person who lacks the capacity to develop beyond the mental age of a normal five to seven-year-old child.\n\n- A fool, an idiot.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "imbeciles",
+            "type": "noun"
+        }
+    },
+    "syrup": {
+        "noun": {
+            "definition": "- Any thick liquid that has a high sugar content and which is added to or poured over food as a flavouring.\nE.g: maple syrup\n\n- (by extension) Any viscous liquid.\nE.g: cough syrup\n\n- (shortened from \"syrup of figs\") A wig.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "syrup",
+            "type": "noun"
+        }
+    },
+    "plans": {
+        "noun": {
+            "definition": "- A drawing showing technical details of a building, machine, etc., with unwanted details omitted, and often using symbols rather than detailed drawing to represent doors, valves, etc.\nE.g: The plans for many important buildings were once publicly available.\n\n- A set of intended actions, usually mutually related, through which one expects to achieve a goal.\nE.g: He didn't really have a plan; he had a goal and a habit of control.\n\n- A two-dimensional drawing of a building as seen from above with obscuring or irrelevant details such as roof removed, or of a floor of a building, revealing the internal layout; as distinct from the elevation.\nE.g: Seen in plan, the building had numerous passageways not apparent to visitors.\n\n- A method; a way of procedure; a custom.\n\n- A subscription to a service.\nE.g: a phone plan\n\n",
+            "synonyms": [
+                "floor plan"
+            ],
+            "antonyms": [],
+            "word": "plans",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To design (a building, machine, etc.).\nE.g: The architect planned the building for the client.\n\n- To create a plan for.\nE.g: They jointly planned the project in phases, with good detail for the first month.\n\n- To intend.\nE.g: He planned to go, but work intervened.\n\n- To make a plan.\nE.g: They planned for the worst, bringing lots of emergency supplies.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "plans",
+            "type": "verb"
+        }
+    },
+    "sexfoil": {
+        "noun": {
+            "definition": "- A stylized flower or leaf with six lobes.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "sexfoil",
+            "type": "noun"
+        }
+    },
+    "pacey": {
+        "adjective": {
+            "definition": "- Fast, rapid, speedy.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "pacey",
+            "type": "adjective"
+        }
+    },
+    "publicising": {
+        "verb": {
+            "definition": "- To make widely known to the public.\nE.g: The scandal was so publicised that he lost the next election.\n\n- To advertise, create publicity for.\nE.g: They're already publicising next month's concert.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "publicising",
+            "type": "verb"
+        }
+    },
+    "uncooked": {
+        "verb": {
+            "definition": "- To undo the act of cooking\n\n- To repair a file (specifically an MP3 audio file) that has been damaged (\"cooked\") by being converted through a text format and having line breaks applied to it.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "uncooked",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Raw and not cooked, especially of something that should be, or is sometimes cooked\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "uncooked",
+            "type": "adjective"
+        }
+    },
+    "thornbills": {
+        "noun": {
+            "definition": "- Any of the passerine birds of the genus Acanthiza, native to Australia.\n\n- Any of the hummingbirds of the genera Chalcostigma and Ramphomicron, native to the Americas.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "thornbills",
+            "type": "noun"
+        }
+    },
+    "afforce": {
+        "verb": {
+            "definition": "- To reinforce (a team etc.) with extra people\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "afforce",
+            "type": "verb"
+        }
+    },
+    "authorities": {
+        "noun": {
+            "definition": "- The power to enforce rules or give orders.\nE.g: I have the authority to penalise the staff in my department, but not the authority to sack them.\n\n- (used in singular or plural form) Persons in command; specifically, government.\n\n- A person accepted as a source of reliable information on a subject.\nE.g: the world's foremost authority on orangutans\n\n- Government-owned agency which runs a revenue-generating activity.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "authorities",
+            "type": "noun"
+        }
+    },
+    "exultant": {
+        "adjective": {
+            "definition": "- Very happy, especially at someone else's defeat or failure.\n\n",
+            "synonyms": [
+                "cheerful",
+                "content",
+                "ecstatic",
+                "gay",
+                "happy",
+                "jovial",
+                "joyful",
+                "jubilant",
+                "merry",
+                "pleased",
+                "triumphant"
+            ],
+            "antonyms": [
+                "downcast",
+                "miserable",
+                "unhappy"
+            ],
+            "word": "exultant",
+            "type": "adjective"
+        }
+    },
+    "calcimine": {
+        "noun": {
+            "definition": "- A form of whitewash (inexpensive white paint) made from calcium carbonate, glue and water, used to coat wooden or plaster surfaces.\n\n",
+            "synonyms": [
+                "kalsomine"
+            ],
+            "antonyms": [],
+            "word": "calcimine",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To coat with this substance.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "calcimine",
+            "type": "verb"
+        }
+    },
+    "support group": {
+        "noun": {
+            "definition": "- A group of nonprofessional people who support each other over a problem which all members share.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "support group",
+            "type": "noun"
+        }
+    },
+    "tabulated": {
+        "verb": {
+            "definition": "- To arrange in tabular form; to arrange into a table.\n\n- To set out as a list; to enumerate, to list.\n\n- To enter into an official register or roll.\n\n- To shape with a flat surface.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "tabulated",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Having been counted or summed.\n\n- Formatted as a table.\n\n- Flattened.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "tabulated",
+            "type": "adjective"
+        }
+    },
+    "auto.": {
+        "adjective": {
+            "definition": "- Capable of operating without external control or intervention.\nE.g: The automatic clothes washer was a great labor-saving device.\n\n- Done out of habit or without conscious thought.\nE.g: Absent-minded doodling is a form of automatic art.\n\n- Necessary, inevitable, prescribed by logic, law, etc.\nE.g: Spitting at another player means an automatic red card.\n\n- (of a firearm such as a machine gun) Firing continuously as long as the trigger is pressed until ammunition is exhausted.\nE.g: Fully automatic weapons cannot be legally owned by private citizens in the US, except in very special circumstances, as by private security companies.\n\n- (of a handgun) An autoloader; a semi-automatic or self-loading pistol, as opposed to a revolver or other manually actuated handgun, which fires one shot per pull of the trigger; distinct from machine guns.\nE.g: The US Army adopted John Browning's M1911 pistol as its sidearm, chambered in .45 ACP (Automatic Colt Pistol).\n\n- (of a local variable) Automatically added to and removed from the stack during the course of function calls.\n\n- (of a group) Having one or more finite-state automata\n\n",
+            "synonyms": [
+                "instinctive",
+                "perfunctory",
+                "thoughtless"
+            ],
+            "antonyms": [
+                "manual",
+                "non-automatic",
+                "voluntary"
+            ],
+            "word": "auto.",
+            "type": "adjective"
+        }
+    },
+    "rabbitting": {
+        "verb": {
+            "definition": "- To hunt rabbits.\n\n- To flee.\nE.g: The informant seemed skittish, as if he was about to rabbit.\n\n",
+            "synonyms": [
+                "bolt",
+                "run off",
+                "scamper"
+            ],
+            "antonyms": [],
+            "word": "rabbitting",
+            "type": "verb"
+        }
+    },
+    "forewoman": {
+        "noun": {
+            "definition": "- A female leader of a work crew (a female foreperson or female foreman).\n\n- A female foreman of a jury.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "forewoman",
+            "type": "noun"
+        }
+    },
+    "paintings": {
+        "noun": {
+            "definition": "- An illustration or artwork done with the use of paint.\nE.g: The Mona Lisa is one of the most famous paintings.\n\n- The action of applying paint to a surface.\nE.g: The outside of the old house would benefit from some painting.\n\n- The same activity as an art form.\nE.g: Some artists, like Michelangelo, excel in both painting and sculpture.\n\n",
+            "synonyms": [
+                "third art"
+            ],
+            "antonyms": [],
+            "word": "paintings",
+            "type": "noun"
+        }
+    },
+    "tossing": {
+        "verb": {
+            "definition": "- To throw with an initial upward direction.\nE.g: Toss it over here!\n\n- To lift with a sudden or violent motion.\nE.g: to toss the head\n\n- To agitate; to make restless.\n\n- To subject to trials; to harass.\n\n- To flip a coin, to decide a point of contention.\nE.g: I'll toss you for it.\n\n- To discard: to toss out\nE.g: I don't need it any more; you can just toss it.\n\n- To stir or mix (a salad).\nE.g: to toss a salad; a tossed salad.\n\n- (British slang) To masturbate\n\n- To search (a room or a cell), sometimes leaving visible disorder, as for valuables or evidence of a crime.\nE.g: \"Someone tossed just his living room and bedroom.\" / \"They probably found what they were looking for.\"\n\n- To roll and tumble; to be in violent commotion.\nE.g: tossing and turning in bed, unable to sleep\n\n- To be tossed, as a fleet on the ocean, or as a ship in heavy seas.\n\n- To keep in play; to tumble over.\nE.g: to spend four years in tossing the rules of grammar\n\n- To peak (the oars), to lift them from the rowlocks and hold them perpendicularly, the handle resting on the bottom of the boat.\n\n- (British slang) To drink in large draughts; to gulp.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "tossing",
+            "type": "verb"
+        },
+        "noun": {
+            "definition": "- The motion of something that tosses; a throwing or sudden rising and falling.\n\n- The process of washing ores by violent agitation in water, in order to separate the lighter or earthy particles; tozing.\n\n- A process for refining tin by dropping it through the air while melted.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "tossing",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Used to disparage or curse someone or something.\nE.g: I can't get this tossing program to work.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "tossing",
+            "type": "adjective"
+        }
+    },
+    "muppets": {
+        "noun": {
+            "definition": "- (Eastern US) An incompetent or foolish person.\nE.g: Sally is such a muppet, the way she always misses the train.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "muppets",
+            "type": "noun"
+        }
+    },
+    "prog.": {
+        "adjective": {
+            "definition": "- Favouring or promoting progress; advanced.\n\n- Gradually advancing in extent; increasing.\n\n- Promoting or favoring progress towards improved conditions or new policies, ideas or methods.\nE.g: a progressive politician\n\n- Liberal.\n\n- Of or relating to progressive education.\nE.g: a progressive school\n\n- (of an income tax or other tax) Increasing in rate as the taxable amount increases.\n\n- Advancing in severity.\nE.g: progressive paralysis\n\n- (grammar) Continuous.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "non-progressive",
+                "conservative",
+                "reactionary",
+                "regressive"
+            ],
+            "word": "prog.",
+            "type": "adjective"
+        }
+    },
+    "mucilage": {
+        "noun": {
+            "definition": "- A thick gluey substance (gum) produced by many plants and some microorganisms.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "mucilage",
+            "type": "noun"
+        }
+    },
+    "truckload": {
+        "noun": {
+            "definition": "- The contents of a full truck or lorry.\n\n- A large number.\nE.g: We were expecting just a handful of people to come to the festival, but then a truckload of revellers started arriving at the festival gates\n\n",
+            "synonyms": [
+                "truckful",
+                "busload"
+            ],
+            "antonyms": [],
+            "word": "truckload",
+            "type": "noun"
+        }
+    },
+    "supersaturated": {
+        "verb": {
+            "definition": "- To cause a solution to have more solute dissolved in it than it can stably contain at current conditions.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "supersaturated",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- (of a solution) More concentrated than is normally possible.\n\n- (of a vapor) Having a vapor pressure higher than is normally possible.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "supersaturated",
+            "type": "adjective"
+        }
+    },
+    "yoyos": {
+        "noun": {
+            "definition": "- A toy consisting of a spheroidal or cylindrical spindle having a circular groove in which string is wound; it is used by holding the string in the fingers and reeling the spindle up and down by movements of the wrist.\nE.g: I bought a yo-yo from the toy store yesterday.\n\n- A volatile market that moves up and down.\n\n- Someone who vacillates.\n\n- A cloth rosette formed by gathering the outside edge of a circle of fabric in toward the centre using a running stitch.\n\n- A foolish, annoying or incompetent person.\nE.g: It is hard to watch the management for very long and not conclude that the place is run by a bunch of yo-yos.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "yoyos",
+            "type": "noun"
+        }
+    },
+    "tarka dal": {
+        "noun": {
+            "definition": "- An Indian dish of lentils cooked with tarka.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "tarka dal",
+            "type": "noun"
+        }
+    },
+    "youse": {
+        "pronoun": {
+            "definition": "- You (plural).\n\n- You (singular).\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "youse",
+            "type": "pronoun"
+        }
+    },
+    "outdoor": {
+        "verb": {
+            "definition": "- (in some African communities) To publicly display a child after it has been named\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "outdoor",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Situated in, designed to be used in, or carried on in the open air.\n\n- Pertaining to charity administered or received away from, or independently from, a workhouse or other institution.\n\n",
+            "synonyms": [
+                "out-of-door",
+                "outside"
+            ],
+            "antonyms": [
+                "indoor",
+                "inside"
+            ],
+            "word": "outdoor",
+            "type": "adjective"
+        }
+    },
+    "saponified": {
+        "adjective": {
+            "definition": "- Treated by saponification\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "saponified",
+            "type": "adjective"
+        },
+        "verb": {
+            "definition": "- To convert (a fat or oil) into soap.\n\n- To be converted into soap.\n\n- To hydrolyze (an ester) using an alkali.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "saponified",
+            "type": "verb"
+        }
+    },
+    "pivotal": {
+        "adjective": {
+            "definition": "- Of, relating to, or being a pivot.\n\n- Being of crucial importance; central, key.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "pivotal",
+            "type": "adjective"
+        }
+    },
+    "boy wonders": {
+        "noun": {
+            "definition": "- A male child prodigy.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "boy wonders",
+            "type": "noun"
+        }
+    },
+    "thought pattern": {
+        "noun": {
+            "definition": "- The way a person is used to thinking.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "thought pattern",
+            "type": "noun"
+        }
+    },
+    "purvey": {
+        "verb": {
+            "definition": "- To prepare in advance (for or to do something); to plan, make provision.\n\n- To furnish or provide.\n\n- To procure; to get.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "purvey",
+            "type": "verb"
+        }
+    },
+    "motions": {
+        "noun": {
+            "definition": "- A state of progression from one place to another.\n\n- A change of position with respect to time.\n\n- A change from one place to another.\n\n- A parliamentary action to propose something. A similar procedure in any official or business meeting.\nE.g: The motion to amend is now open for discussion.\n\n- An entertainment or show, especially a puppet show.\n\n- From κίνησις (kinesis); any change. Traditionally of four types: generation and corruption, alteration, augmentation and diminution, and change of place.\n\n- Movement of the mind, desires, or passions; mental act, or impulse to any action; internal activity.\n\n- A formal request, oral or written, made to a judge or court of law to obtain an official court ruling or order for a legal action to be taken by, or on behalf of, the movant.\n\n- A movement of the bowels; the product of such movement.\n\n- Change of pitch in successive sounds, whether in the same part or in groups of parts. (Conjunct motion is that by single degrees of the scale. Contrary motion is when parts move in opposite directions. Disjunct motion is motion by skips. Oblique motion is when one part is stationary while another moves. Similar or direct motion is when parts move in the same direction.)\n\n- A puppet, or puppet show.\n\n- A piece of moving mechanism, such as on a steam locomotive.\n\n",
+            "synonyms": [
+                "move",
+                "movement",
+                "movement"
+            ],
+            "antonyms": [
+                "rest",
+                "rest"
+            ],
+            "word": "motions",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To gesture indicating a desired movement.\nE.g: He motioned for me to come closer.\n\n- To introduce a motion in parliamentary procedure.\n\n- To make a proposal; to offer plans.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "motions",
+            "type": "verb"
+        }
+    },
+    "nemeses": {
+        "noun": {
+            "definition": "- An archenemy\nE.g: Batman is in constant conflict with his nemesis, The Joker.\n\n- (chiefly non-North American usage) A person or character who specifically brings about the downfall of another person or character.\n\n- The principle of retributive justice.\n\n- (usually in the singular) A punishment or defeat that is deserved and cannot be avoided.\n\n- The polar opposite of a character.\n\n- A righteous infliction of retribution manifested by an appropriate agent.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "nemeses",
+            "type": "noun"
+        }
+    },
+    "overtaxing": {
+        "verb": {
+            "definition": "- To tax to an excessive degree\n\n- To overburden\nE.g: The overtaxed shaft snapped.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "overtaxing",
+            "type": "verb"
+        }
+    },
+    "tracings": {
+        "noun": {
+            "definition": "- The reproduction of an image made by copying it through translucent paper.\n\n- A record in the form of a graph made by a device such as a seismograph.\n\n- The process of finding something that is lost by studying evidence.\n\n- A regular path or track; a course.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "tracings",
+            "type": "noun"
+        }
+    },
+    "shortlist": {
+        "noun": {
+            "definition": "- A list of candidates selected from a longer list, and from which one or more successful candidates are in turn selected.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "shortlist",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To place something on a short list\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "shortlist",
+            "type": "verb"
+        }
+    },
+    "twites": {
+        "noun": {
+            "definition": "- A small passerine bird, Linaria flavirostris (syn. Carduelis flavirostris), that breeds in northern Europe and across central Asia.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "twites",
+            "type": "noun"
+        }
+    },
+    "endemic": {
+        "noun": {
+            "definition": "- An individual or species that is endemic to a region.\n\n- A disease affecting a number of people simultaneously, so as to show a distinct connection with certain localities.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "endemic",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- Native to a particular area or culture; originating where it occurs.\nE.g: The endemic religion of Easter Island arrived with the Polynesian settlers.\n\n- (especially of plants and animals) Peculiar to a particular area or region; not found in other places.\nE.g: Kangaroos are endemic to Australia.\n\n- (especially of diseases) Prevalent in a particular area or region.\nE.g: Malaria is endemic to the tropics.\n\n",
+            "synonyms": [
+                "native",
+                "indigenous"
+            ],
+            "antonyms": [
+                "systemic",
+                "alien",
+                "introduced"
+            ],
+            "word": "endemic",
+            "type": "adjective"
+        }
+    },
+    "lookalike": {
+        "noun": {
+            "definition": "- Someone who physically resembles (looks like) someone else.\nE.g: The cousins were such close lookalikes they could impersonate each other, and sometimes did.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "lookalike",
+            "type": "noun"
+        }
+    },
+    "jackrabbit": {
+        "noun": {
+            "definition": "- Any of several large North American hares of the genus Lepus\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "jackrabbit",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To make a sudden, rapid movement\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "jackrabbit",
+            "type": "verb"
+        }
+    },
+    "common carp": {
+        "noun": {
+            "definition": "- A species of fish in the carp family, Cyprinus carpio.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "common carp",
+            "type": "noun"
+        }
+    },
+    "homo": {
+        "noun": {
+            "definition": "- A human.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "homo",
+            "type": "noun"
+        }
+    },
+    "encamping": {
+        "verb": {
+            "definition": "- To establish a camp or temporary shelter.\n\n- To form into a camp.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "encamping",
+            "type": "verb"
+        }
+    },
+    "antinutrients": {
+        "noun": {
+            "definition": "- Any substance that interferes with the absorption or metabolism of a nutrient\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "antinutrients",
+            "type": "noun"
+        }
+    },
+    "collembola": {
+        "noun": {
+            "definition": "- Any of many minute wingless arthropods of subclass Collembola; a springtail\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "collembola",
+            "type": "noun"
+        }
+    },
+    "realisations": {
+        "noun": {
+            "definition": "- The act of realizing.\n\n- The result of an artistic effort.\nE.g: The painter's realization of her concept was breathtaking.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "realisations",
+            "type": "noun"
+        }
+    },
+    "chatbots": {
+        "noun": {
+            "definition": "- A computer program that holds conversations through a chat room.\nE.g: The chatbot was quite simple yet informative.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "chatbots",
+            "type": "noun"
+        }
+    },
+    "dejunk": {
+        "verb": {
+            "definition": "- To remove junk from; declutter.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "dejunk",
+            "type": "verb"
+        }
+    },
+    "using": {
+        "verb": {
+            "definition": "- To utilize or employ.\n\n- To accustom; to habituate. (Now common only in participial form. Uses the same pronunciation as the noun; see usage notes.)\nE.g: soldiers who are used to hardships and danger\n\n- (except in past tense) To habitually do; to be wont to do. (Now chiefly in past-tense forms; see used to.)\nE.g: I used to get things done.\n\n- To behave toward; to act with regard to; to treat.\nE.g: to use an animal cruelly\n\n- To behave, act, comport oneself.\n\n",
+            "synonyms": [
+                "apply",
+                "employ",
+                "engage",
+                "utilise",
+                "utilize",
+                "exploit",
+                "take advantage of"
+            ],
+            "antonyms": [],
+            "word": "using",
+            "type": "verb"
+        },
+        "noun": {
+            "definition": "- Use; utilization\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "using",
+            "type": "noun"
+        }
+    },
+    "retinues": {
+        "noun": {
+            "definition": "- A group of servants or attendants, especially of someone considered important.\nE.g: the queen’s retinues\n\n- A group of warriors or nobles accompanying a king or other leader; comitatus.\n\n- A service relationship.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "retinues",
+            "type": "noun"
+        }
+    },
+    "constipates": {
+        "verb": {
+            "definition": "- To cause constipation in.\n\n- To pack or crowd together.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "constipates",
+            "type": "verb"
+        }
+    },
+    "photostories": {
+        "noun": {
+            "definition": "- A story illustrated with sequential photographs in the manner of a comic strip.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "photostories",
+            "type": "noun"
+        }
+    },
+    "quantiles": {
+        "noun": {
+            "definition": "- One of the class of values of a variate which divides the members of a batch or sample into equal-sized subgroups of adjacent values or a probability distribution into distributions of equal probability.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "quantiles",
+            "type": "noun"
+        }
+    },
+    "vacuum brake": {
+        "noun": {
+            "definition": "- A brake used on trains, working on the principle of keeping up a vacuum in a continuous pipe or pipes extending under the train, and in brake-cylinders connected to them under each vehicle, the air being sucked out by ejectors or pumps on the locomotive.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "vacuum brake",
+            "type": "noun"
+        }
+    },
+    "linstocks": {
+        "noun": {
+            "definition": "- A pointed forked staff, shod with iron at the foot, to hold a lighted match for firing cannon.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "linstocks",
+            "type": "noun"
+        }
+    },
+    "periphrases": {
+        "noun": {
+            "definition": "- The use of a longer expression instead of a shorter one with a similar meaning, for example \"I am going to\" instead of \"I will\".\n\n- Expressing a grammatical meaning (such as a tense) using a syntactic construction rather than morphological marking.\nE.g: Language learners sometimes use periphrases like \"did go\" where a native speaker would use \"went\".\n\n- The substitution of a descriptive word or phrase for a proper name (a species of circumlocution).\n\n- The use of a proper name as a shorthand to stand for qualities associated with it.\n\n",
+            "synonyms": [
+                "beating around the bush",
+                "circumlocution"
+            ],
+            "antonyms": [],
+            "word": "periphrases",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To express by periphrase or circumlocution.\n\n- To use circumlocution.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "periphrases",
+            "type": "verb"
+        }
+    },
+    "sideslips": {
+        "noun": {
+            "definition": "- A flight manoeuvre that moves the aircraft sideways without turning it.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "sideslips",
+            "type": "noun"
+        }
+    },
+    "explanatory": {
+        "adjective": {
+            "definition": "- Intended to serve as an explanation.\nE.g: Below the diagram is an explanatory text.\n\n- (of a person) Disposed to explain.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "explanatory",
+            "type": "adjective"
+        }
+    },
+    "spoonies": {
+        "noun": {
+            "definition": "- A foolish, simple, or silly person.\n\n- A foolishly amorous person.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "spoonies",
+            "type": "noun"
+        }
+    },
+    "radiotherapy": {
+        "noun": {
+            "definition": "- The therapeutic use of ionizing radiation, almost exclusively used for the treatment of malignant disease.\n\n",
+            "synonyms": [
+                "radiation therapy"
+            ],
+            "antonyms": [],
+            "word": "radiotherapy",
+            "type": "noun"
+        }
+    },
+    "morning coat": {
+        "noun": {
+            "definition": "- (often hyphenated) A man's formal coat worn as the principal item in morning dress.\n\n",
+            "synonyms": [
+                "cutaway"
+            ],
+            "antonyms": [],
+            "word": "morning coat",
+            "type": "noun"
+        }
+    },
+    "sightseer": {
+        "noun": {
+            "definition": "- One who goes sightseeing; one who goes around to look at sights or see things of interest; a tourist.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "sightseer",
+            "type": "noun"
+        }
+    },
+    "bates": {
+        "verb": {
+            "definition": "- To masturbate.\nE.g: I could go out and take a walk in the park, but I'd rather stay home and bate all day.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "bates",
+            "type": "verb"
+        }
+    },
+    "werewolf": {
+        "noun": {
+            "definition": "- A person who is transformed or can transform into a wolf or a wolflike human, often said to transform during a full moon.\n\n",
+            "synonyms": [
+                "lycanthrope",
+                "man-wolf",
+                "wolfman"
+            ],
+            "antonyms": [],
+            "word": "werewolf",
+            "type": "noun"
+        }
+    },
+    "oximeter": {
+        "noun": {
+            "definition": "- A device that measures the quantity of oxygen in something, particularly air in the atmosphere.\n\n- (specifically) A device that measures the oxygen saturation of arterial blood.\n\n",
+            "synonyms": [
+                "eudiometer"
+            ],
+            "antonyms": [],
+            "word": "oximeter",
+            "type": "noun"
+        }
+    },
+    "abigail": {
+        "noun": {
+            "definition": "- A lady's maid.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "abigail",
+            "type": "noun"
+        }
+    },
+    "bluenoses": {
+        "noun": {
+            "definition": "- A prude.\n\n- A person from Nova Scotia, Canada.\n\n- A variety of potato from Nova Scotia, Canada.\n\n- A follower of Everton Football Club.\n\n- A follower of Birmingham City Football Club.\n\n- A trout cod (Maccullochella macquariensis)\n\n- Antarctic butterfish (Hyperoglyphe antarctica)\n\n- Blue-throated wrasse (Notolabrus tetricus)\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "bluenoses",
+            "type": "noun"
+        }
+    },
+    "octocopter": {
+        "noun": {
+            "definition": "- An unmanned rotorcraft having eight rotors.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "octocopter",
+            "type": "noun"
+        }
+    },
+    "elliptical": {
+        "noun": {
+            "definition": "- An elliptical galaxy.\n\n- An elliptical trainer.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "elliptical",
+            "type": "noun"
+        },
+        "adjective": {
+            "definition": "- In a shape of, or reminding of, an ellipse; oval.\n\n- Of, or showing ellipsis; having a word or words omitted.\n\n- (of speech) Concise, condensed.\n\n- Elliptic.\n\n",
+            "synonyms": [
+                "elliptic"
+            ],
+            "antonyms": [],
+            "word": "elliptical",
+            "type": "adjective"
+        }
+    },
+    "ret": {
+        "verb": {
+            "definition": "- To prepare (flax, hemp etc.) for further processing by soaking, which facilitates separation of fibers from the woody parts of the stem.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "ret",
+            "type": "verb"
+        },
+        "adjective": {
+            "definition": "- Retired\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "ret",
+            "type": "adjective"
+        }
+    },
+    "ice shelf": {
+        "noun": {
+            "definition": "- A thick, floating platform of ice that forms where a glacier or ice sheet flows down to a coastline and onto the ocean surface. Ice shelves are found in Antarctica, Greenland, and Canada only.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "ice shelf",
+            "type": "noun"
+        }
+    },
+    "flying phalangers": {
+        "noun": {
+            "definition": "- Petaurist\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "flying phalangers",
+            "type": "noun"
+        }
+    },
+    "cecropia": {
+        "noun": {
+            "definition": "- A large saturniid moth native to North America, Hyalophora cecropia, having distinctive red, white and black markings on the wings\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "cecropia",
+            "type": "noun"
+        }
+    },
+    "break points": {
+        "noun": {
+            "definition": "- A situation in which if the receiver wins the next point, (s)he will win the game (but not the set or match).\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "break points",
+            "type": "noun"
+        }
+    },
+    "lodgements": {
+        "noun": {
+            "definition": "- An area used for lodging; a place in which a person or thing is or can be lodged.\n\n- The condition of being lodged.\n\n- The act of lodging or depositing.\n\n- The occupation of a position by a besieging party, and the works thrown up to maintain it.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "lodgements",
+            "type": "noun"
+        }
+    },
+    "amen": {
+        "noun": {
+            "definition": "- An instance of saying ‘amen’.\n\n- A title of Christ; the Faithful One (especially with reference to Revelation 3:14)\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "amen",
+            "type": "noun"
+        },
+        "verb": {
+            "definition": "- To say amen.\n\n- To say amen to; to ratify solemnly.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "amen",
+            "type": "verb"
+        },
+        "adverb": {
+            "definition": "- At the end of religious prayers: so be it.\n\n- In many Abrahamic religious texts and creeds: truly, verily.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "amen",
+            "type": "adverb"
+        },
+        "interjection": {
+            "definition": "- An expression of strong agreement. Often, though dated, in the phrase \"Amen to that\".\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "amen",
+            "type": "interjection"
+        }
+    },
+    "parsers": {
+        "noun": {
+            "definition": "- A computer program that parses.\n\n- One who parses.\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "parsers",
+            "type": "noun"
+        }
+    },
+    "starkers": {
+        "adjective": {
+            "definition": "- Completely nude.\nE.g: Entering the bathroom, I found Bill there, still starkers after his bath.\n\n- Stark raving mad.\n\n",
+            "synonyms": [],
+            "antonyms": [
+                "dressed"
+            ],
+            "word": "starkers",
+            "type": "adjective"
+        }
+    },
+    "adenosine triphosphate": {
+        "noun": {
+            "definition": "- A nucleotide that is used as a source of energy in cellular reactions, in the synthesis of nucleic acids and as a neurotransmitter recognised by purinergic receptors\n\n",
+            "synonyms": [],
+            "antonyms": [],
+            "word": "adenosine triphosphate",
+            "type": "noun"
+        }
+    },
+    ,
+    "immediate": {
+        "adjective": {
+            "definition": "- Happening right away, instantly, with no delay.\nE.g: Computer users these days expect immediate results when they click on a link.\n\n- Very close; direct or adjacent.\nE.g: immediate family;  immediate vicinity\n\n- Manifestly true; requiring no argument.\n\n- (of an instruction operand) embedded as part of the instruction itself, rather than stored elsewhere (such as a register or memory location)\n\n- (procedure word) Used to denote that a transmission is urgent.\nE.g: Bravo Three, this Bravo Six. Immediate! We are coming under fire from the north from an unknown enemy, over!\n\n- (procedure word) An artillery fire mission modifier for to types of fire mission to denote an immediate need for fire: Immediate smoke, all guns involved must reload smoke and fire. Immediate suppression, all guns involved fire the rounds currently loaded and then switch to high explosive with impact fused (unless fuses are specified).\nE.g: Hotel Two-Niner, this is Bravo Six. Immediate suppression at grid November-Kilo four-five-three two-one-five. Danger Close. I authenticate Golf Echo, over.\n\n",
+            "synonyms": [
+                "instant",
+                "present",
+                "indubitable",
+                "self-evident",
+                "close",
+                "nearby"
+            ],
+            "antonyms": [],
+            "word": "immediate",
+            "type": "adjective"
+        }
     }
 }
