@@ -4,7 +4,7 @@ class content_box(MDCard):
     def __init__(self, text, **kwargs):
         super(content_box, self).__init__(**kwargs)
         self.md_bg_color=boxbg
-        self.padding=[dp(17), dp(17), dp(17), dp(17)]
+        self.padding=[dp(20), dp(20), dp(20), dp(20)]
         self.size_hint=(1, None)
         self.pos_hint={"center_x":0.5}
         self.radius=[dp(i) for i in self.radius]
@@ -20,14 +20,11 @@ class content_box(MDCard):
         self.result_head_label.bind(texture_size=self.result_head_label.setter('size'))
         self.expand_result_label=MDLabel(text=text["definition"], font_size=dp(25), size_hint=(0.9,None), pos_hint={"left":1}, theme_text_color="Custom", text_color=primarycolor)
         self.shrink_result_label=MDLabel(font_size=dp(25), size_hint=(0.9,None), pos_hint={"left":1}, theme_text_color="Custom", text_color=primarycolor)
-        if len(text["definition"])>50:
-            pos=text["definition"].find("\n")
-            if pos<=50:
-                self.shrink_result_label.text=text["definition"][:pos]+"..."
-            else:
-                self.shrink_result_label.text=text["definition"][:50]+"..."
+        pos=text["definition"].find("\n")
+        if pos<=50 and pos!=-1: self.shrink_result_label.text=text["definition"][:pos]+"..."
         else:
-            self.shrink_result_label.text=text["definition"]
+            self.shrink_result_label.text=text["definition"][:50]
+            if len(text["definition"])>=50: self.shrink_result_label.text+="..."
         self.expand_result_label.bind(texture_size=self.expand_result_label.setter('text_size'))
         self.expand_result_label.bind(texture_size=self.expand_result_label.setter('size'))
         self.shrink_result_label.bind(texture_size=self.shrink_result_label.setter('text_size'))
@@ -37,13 +34,8 @@ class content_box(MDCard):
         self.add_widget(self.tilte_and_description_box)
     
     def viewstate(self):
-        fade_out_vertical(self.tilte_and_description_box)
-        fade_out_vertical(self.morebutton)
-        if not self._state_:
-            shrink(self)
-        else:
-            self.morebutton_pre_expand_y=self.morebutton.y
-            expand(self)
+        fade_out(self.tilte_and_description_box, on_complete=self.morph_start)
+        fade_out(self.morebutton)
         self._state_=not self._state_
 
     def set_afex_value(self, instance, value):
@@ -62,6 +54,14 @@ class content_box(MDCard):
         fade_in_vertical(self.tilte_and_description_box)
         fade_in_vertical(self.morebutton, end_pos=self.morebutton_pre_expand_y)
         self.on_release=self.viewstate
+
+    def morph_start(self, instance):
+        self.remove_widget(self.tilte_and_description_box)
+        if not self._state_:
+            self.morebutton_pre_expand_y=self.morebutton.y
+            self.expand_result_label.width=self.shrink_result_label.width
+            morph(self, "expand")
+        else: morph(self, "shrink")
 
     def ignore(self):
         pass
