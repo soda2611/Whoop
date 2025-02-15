@@ -164,16 +164,14 @@ def set_x(w, x_start=None, x_end=None):
     else: w.x=x_start
     return x
 
-def expand(w):
+def morph(w, state):
     w.on_release=w.ignore
-    anim=Animation(height=w.height-w.shrink_result_label.height+w.expand_result_label.height+w.morebutton.height, duration=0.5, transition='out_quad')
-    anim.bind(on_complete=w.set_afex_value)
-    anim.start(w)
-
-def shrink(w):
-    w.on_release=w.ignore
-    anim=Animation(height=w.height+w.shrink_result_label.height-w.expand_result_label.height-w.morebutton.height, duration=0.5, transition='out_quad')
-    anim.bind(on_complete=w.set_beex_value)
+    if state=="expand":
+        anim=Animation(height=w.height-w.shrink_result_label.height+w.expand_result_label.height+w.morebutton.height, duration=0.5, transition='out_quad')
+        anim.bind(on_complete=w.set_afex_value)
+    else:    
+        anim=Animation(height=w.height+w.shrink_result_label.height-w.expand_result_label.height-w.morebutton.height, duration=0.5, transition='out_quad')
+        anim.bind(on_complete=w.set_beex_value)
     anim.start(w)
     
 def fade_in_vertical(w, start_pos=None, end_pos=None, on_complete=None):
@@ -198,6 +196,12 @@ def fade_in_horizontal(w, start_pos=None):
 
 def fade_out_horizontal(w, on_complete=None):
     anim=Animation(opacity=0, duration=0.5)&Animation(x=w.x+w.parent.width/2, duration=0.25, transition='out_quad')
+    if on_complete==None: anim.on_complete=lambda *args: w.parent.remove_widget(w)
+    else: anim.on_complete=on_complete
+    anim.start(w)
+
+def fade_out(w, on_complete=None):
+    anim=Animation(opacity=0, duration=0.5)
     if on_complete==None: anim.on_complete=lambda *args: w.parent.remove_widget(w)
     else: anim.on_complete=on_complete
     anim.start(w)
