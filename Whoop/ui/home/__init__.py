@@ -821,10 +821,7 @@ class home(MDBoxLayout, TouchBehavior):
                 recent_search[self.input_text[0]]=result
         else:
             self.nav_bar.clear_widgets()
-            self.copy_button=MDIconButton(icon="content-copy", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"x": 1, "center_y": 0.5}, disabled=True)
             self.nav_bar.add_widget(self.back_button)
-            self.nav_bar.add_widget(MDLabel(text="", size_hint=(1, None)))
-            self.nav_bar.add_widget(self.copy_button)
             self.resultlabel.text = "".join(result)
             self.result_box.add_widget(self.resultlabel)
             if not _callback_:
