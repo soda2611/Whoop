@@ -9,6 +9,8 @@ class content_box(MDCard):
         self.pos_hint={"center_x":0.5}
         self.radius=[dp(i) for i in self.radius]
         self.bind(minimum_height=self.setter('height'))
+        self.bind(size=self.set_current_height)
+        self.current_height=None
         self.morebutton=None
         self.morebutton_pre_expand_y=None
         self._state_=True
@@ -32,14 +34,15 @@ class content_box(MDCard):
         self.tilte_and_description_box.add_widget(self.result_head_label)
         self.tilte_and_description_box.add_widget(self.shrink_result_label)
         self.add_widget(self.tilte_and_description_box)
+        
+    def set_current_height(self, instance, value):
+        self.current_height=self.height
     
     def viewstate(self):
         fade_out(self.tilte_and_description_box, on_complete=self.morph_start)
-        fade_out(self.morebutton)
         self._state_=not self._state_
 
     def set_afex_value(self, instance, value):
-        self.add_widget(self.tilte_and_description_box)
         self.tilte_and_description_box.remove_widget(self.shrink_result_label)
         self.tilte_and_description_box.add_widget(self.expand_result_label)
         self.tilte_and_description_box.add_widget(self.morebutton)
@@ -47,7 +50,6 @@ class content_box(MDCard):
         self.on_release=self.viewstate
 
     def set_beex_value(self, instance, value):
-        self.add_widget(self.tilte_and_description_box)
         self.tilte_and_description_box.remove_widget(self.expand_result_label)
         self.tilte_and_description_box.add_widget(self.shrink_result_label)
         self.add_widget(self.morebutton)
@@ -56,7 +58,7 @@ class content_box(MDCard):
         self.on_release=self.viewstate
 
     def morph_start(self, instance):
-        self.remove_widget(self.tilte_and_description_box)
+        fade_out(self.morebutton)
         if not self._state_:
             self.morebutton_pre_expand_y=self.morebutton.y
             self.expand_result_label.width=self.shrink_result_label.width
