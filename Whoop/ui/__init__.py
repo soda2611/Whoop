@@ -55,6 +55,7 @@ class MDCard(MDCard):
     opacity = NumericProperty(1)
 
     def add_widget(self, widget, *args, **kwargs):
+        if widget.parent: widget.parent.remove_widget(widget)
         super().add_widget(widget, *args, **kwargs)
         widget.opacity = self.opacity
         self.bind(opacity=lambda instance, value: setattr(widget, 'opacity', value))
@@ -63,6 +64,7 @@ class MDBoxLayout(MDBoxLayout):
     opacity = NumericProperty(1)
 
     def add_widget(self, widget, *args, **kwargs):
+        if widget.parent: widget.parent.remove_widget(widget)
         super().add_widget(widget, *args, **kwargs)
         widget.opacity = self.opacity
         self.bind(opacity=lambda instance, value: setattr(widget, 'opacity', value))
@@ -167,10 +169,10 @@ def set_x(w, x_start=None, x_end=None):
 def morph(w, state):
     w.on_release=w.ignore
     if state=="expand":
-        anim=Animation(height=w.current_height-w.shrink_result_label.height+w.expand_result_label.height+w.morebutton.height+dp(10), duration=0.5, transition='out_quad')
+        anim=Animation(height=w.current_height-w.shrink_result_label.height+w.expand_result_label.height+w.morebutton.height+dp(10), duration=0.5, transition='in_quart')
         anim.bind(on_complete=w.set_afex_value)
     else:
-        anim=Animation(height=w.current_height+w.shrink_result_label.height-w.expand_result_label.height-w.morebutton.height-dp(10), duration=0.5, transition='out_quad')
+        anim=Animation(height=w.current_height+w.shrink_result_label.height-w.expand_result_label.height-w.morebutton.height-dp(10), duration=0.5, transition='out_quart')
         anim.bind(on_complete=w.set_beex_value)
     anim.start(w)
     
@@ -202,8 +204,7 @@ def fade_out_horizontal(w, on_complete=None):
 
 def fade_out(w, on_complete=None):
     anim=Animation(opacity=0, duration=0.5)
-    if on_complete==None: anim.on_complete=lambda *args: w.parent.remove_widget(w)
-    else: anim.on_complete=on_complete
+    if on_complete!=None: anim.on_complete=on_complete
     anim.start(w)
         
 def set_new_config():
