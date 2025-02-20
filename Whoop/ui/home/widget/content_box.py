@@ -20,8 +20,8 @@ class content_box(MDCard):
         self.result_head_label=MDLabel(text=text["word"]+" ("+text["type"].lower()+")"+f'\n/{eng_to_ipa.convert(text["word"])}/', font_style="main", font_size=dp(18), size_hint=(0.9,None), pos_hint={"left":0}, theme_text_color="Custom", text_color=primarycolor)
         self.result_head_label.bind(texture_size=self.result_head_label.setter('text_size'))
         self.result_head_label.bind(texture_size=self.result_head_label.setter('size'))
-        self.expand_result_label=MDLabel(text=text["definition"], font_size=dp(25), size_hint=(0.9,None), pos_hint={"left":1}, theme_text_color="Custom", text_color=primarycolor)
-        self.shrink_result_label=MDLabel(font_size=dp(25), size_hint=(0.9,None), pos_hint={"left":1}, theme_text_color="Custom", text_color=primarycolor)
+        self.expand_result_label=MDLabel(text=text["definition"], font_size=dp(25), size_hint=(None, None), pos_hint={"left":1}, theme_text_color="Custom", text_color=primarycolor)
+        self.shrink_result_label=MDLabel(font_size=dp(25), size_hint=(0.9, None), width=self.expand_result_label.width, pos_hint={"left":1}, theme_text_color="Custom", text_color=primarycolor)
         pos=text["definition"].find("\n")
         if pos<=50 and pos!=-1: self.shrink_result_label.text=text["definition"][:pos]+"..."
         else:
@@ -31,17 +31,21 @@ class content_box(MDCard):
         self.expand_result_label.bind(texture_size=self.expand_result_label.setter('size'))
         self.shrink_result_label.bind(texture_size=self.shrink_result_label.setter('text_size'))
         self.shrink_result_label.bind(texture_size=self.shrink_result_label.setter('size'))
+        self.shrink_result_label.bind(width=self.set_width)
         self.tilte_and_description_box.add_widget(self.result_head_label)
         self.tilte_and_description_box.add_widget(self.shrink_result_label)
         self.add_widget(self.tilte_and_description_box)
         
-    def set_current_height(self, instance, value):
-        self.current_height=self.height
-    
     def viewstate(self):
         fade_out(self.tilte_and_description_box, on_complete=self.morph_start)
         self._state_=not self._state_
 
+    def set_current_height(self, instance, value):
+        instance.current_height=instance.height
+    
+    def set_width(self, instance, value):
+        self.expand_result_label.width=self.shrink_result_label.width
+    
     def set_afex_value(self, instance, value):
         self.tilte_and_description_box.remove_widget(self.shrink_result_label)
         self.tilte_and_description_box.add_widget(self.expand_result_label)
