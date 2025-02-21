@@ -169,10 +169,10 @@ def set_x(w, x_start=None, x_end=None):
 def morph(w, state):
     w.on_release=w.ignore
     if state=="expand":
-        anim=Animation(height=w.current_height-w.shrink_result_label.height+w.expand_result_label.height+w.morebutton.height+dp(10), duration=0.5, transition='in_quart')
+        anim=Animation(height=dp(60)+w.expand_result_head_label.height+w.expand_result_label.height+w.morebutton.height, duration=0.5, transition='in_quart')
         anim.bind(on_complete=w.set_afex_value)
     else:
-        anim=Animation(height=w.current_height+w.shrink_result_label.height-w.expand_result_label.height-w.morebutton.height-dp(10), duration=0.5, transition='out_quart')
+        anim=Animation(height=dp(50)+w.shrink_result_head_label.height+w.shrink_result_label.height, duration=0.5, transition='out_quart')
         anim.bind(on_complete=w.set_beex_value)
     anim.start(w)
     
@@ -239,7 +239,7 @@ def config():
     queried={}
     version=settings["version"]
 
-    Window.minimum_width, Window.minimum_height= 500, 500 
+    Window.minimum_width, Window.minimum_height= 400, 400 
     Window.softinput_mode='below_target'
     LabelBase.register(name="main", fn_regular=f"func/setting/fonts/{settings['fonts']}.ttf")
 
