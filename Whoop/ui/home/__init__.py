@@ -500,9 +500,12 @@ class home(MDBoxLayout, TouchBehavior):
                 word=random.choice(word__)
                 text=data_[word][random.choice([i for i in data_[word].keys()])]
                 home__[i]._text_=text["definition"]
-                home__[i].result_head_label.text=text["word"]+" ("+text["type"].lower()+")"+f'\n/{eng_to_ipa.convert(text["word"])}/'
-                if len(text["definition"])>50: home__[i].shrink_result_label.text=text["definition"][:50]+"..."
-                else: home__[i].shrink_result_label.text=text["definition"]
+                home__[i].expand_result_head_label.text=text["word"]+" ("+text["type"].lower()+")"+f'\n/{eng_to_ipa.convert(text["word"])}/'
+                pos=text["definition"].find("\n")
+                if pos<=50 and pos!=-1: self.shrink_result_label.text=text["definition"][:pos]+"..."
+                else:
+                    self.shrink_result_label.text=text["definition"][:50]
+                    if len(text["definition"])>=50: self.shrink_result_label.text+="..."
                 home__[i].expand_result_label.text=text["definition"]
                 home__[i].morebutton.on_press=partial(self.search_button_pressed, instance=None, input_text=text['type'], value=False, temp=text)
             except: pass
@@ -691,7 +694,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.scrollview.do_scroll_x, self.scrollview.do_scroll_y=False, True
         if not temp:
             self.input_text=input_text
-            result=SOD(self.input_text,database=data_,  database_path="func/data/tu_dien_nguon.txt", get_from_database_path=False,  internet=check_connection())
+            result=SOD(self.input_text, database=data_, database_path="func/data/tu_dien_nguon.txt", get_database_from_path=False, internet=check_connection())
             if len(result)==1:
                 result=result[input_text[0]]
                 Clock.schedule_once(self.update_UI)
