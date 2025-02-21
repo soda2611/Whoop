@@ -25,9 +25,6 @@ with open("func/data/source.txt", encoding="utf-8") as f:
 def SOD(inp, database='default', database_path='default', get_database_from_path=True, internet=check_connection()):
     result = {}
     lock = threading.Lock()
-    total_words = len(inp)
-    completed = 0
-    start_time = time.time()
 
     def fetch_word_data(word):
         nonlocal completed
