@@ -27,7 +27,6 @@ def SOD(inp, database='default', database_path='default', get_database_from_path
     lock = threading.Lock()
 
     def fetch_word_data(word):
-        nonlocal completed
         data_ = {}
 
         if database_path != 'default' and word in _database_:
