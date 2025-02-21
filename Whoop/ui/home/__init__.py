@@ -502,13 +502,13 @@ class home(MDBoxLayout, TouchBehavior):
                 home__[i]._text_=text["definition"]
                 home__[i].expand_result_head_label.text=text["word"]+" ("+text["type"].lower()+")"+f'\n/{eng_to_ipa.convert(text["word"])}/'
                 pos=text["definition"].find("\n")
-                if pos<=50 and pos!=-1: self.shrink_result_label.text=text["definition"][:pos]+"..."
+                if pos<=50 and pos!=-1: home__[i].shrink_result_label.text=text["definition"][:pos]+"..."
                 else:
-                    self.shrink_result_label.text=text["definition"][:50]
-                    if len(text["definition"])>=50: self.shrink_result_label.text+="..."
+                    home__[i].shrink_result_label.text=text["definition"][:50]
+                    if len(text["definition"])>=50: home__[i].shrink_result_label.text+="..."
                 home__[i].expand_result_label.text=text["definition"]
                 home__[i].morebutton.on_press=partial(self.search_button_pressed, instance=None, input_text=text['type'], value=False, temp=text)
-            except: pass
+            except Exception as e: print(e)
         set_opacity_recursive(self.homebox)
         Animation(opacity=1, duration=0.5).start(self.homebox)
 
