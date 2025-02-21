@@ -20,6 +20,7 @@ class content_box(MDCard):
         self.expand_result_head_label=MDLabel(text=text["word"]+" ("+text["type"].lower()+")"+f'\n/{eng_to_ipa.convert(text["word"])}/', font_style="main", font_size=dp(18), size_hint=(0.9,None), pos_hint={"left":0}, theme_text_color="Custom", text_color=primarycolor)
         self.expand_result_head_label.bind(texture_size=self.expand_result_head_label.setter('text_size'))
         self.expand_result_head_label.bind(texture_size=self.expand_result_head_label.setter('size'))
+        self.expand_result_head_label.bind(text=self.set_text)
         self.shrink_result_head_label=MDLabel(text=text["word"]+" ("+text["type"].lower()+")"+f'\n/{eng_to_ipa.convert(text["word"])}/', font_style="main", font_size=dp(18), size_hint=(0.9,None), pos_hint={"left":0}, theme_text_color="Custom", text_color=primarycolor)
         self.shrink_result_head_label.bind(texture_size=self.shrink_result_head_label.setter('text_size'))
         self.shrink_result_head_label.bind(texture_size=self.shrink_result_head_label.setter('size'))
@@ -42,6 +43,9 @@ class content_box(MDCard):
     def viewstate(self):
         fade_out(self.tilte_and_description_box, on_complete=self.morph_start)
         self._state_=not self._state_
+
+    def set_text(self, instance, value):
+        self.shrink_result_head_label.text=value
 
     def set_current_height(self, instance, value):
         instance.current_height=instance.height
