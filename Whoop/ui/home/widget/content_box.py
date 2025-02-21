@@ -17,10 +17,13 @@ class content_box(MDCard):
         self.on_release=self.viewstate
         self.tilte_and_description_box=MDBoxLayout(orientation='vertical', size_hint=(0.8,None), spacing=dp(10))
         self.tilte_and_description_box.bind(minimum_height=self.tilte_and_description_box.setter('height'))
-        self.result_head_label=MDLabel(text=text["word"]+" ("+text["type"].lower()+")"+f'\n/{eng_to_ipa.convert(text["word"])}/', font_style="main", font_size=dp(18), size_hint=(0.9,None), pos_hint={"left":0}, theme_text_color="Custom", text_color=primarycolor)
-        self.result_head_label.bind(texture_size=self.result_head_label.setter('text_size'))
-        self.result_head_label.bind(texture_size=self.result_head_label.setter('size'))
-        self.expand_result_label=MDLabel(text=text["definition"], font_size=dp(25), size_hint=(None, None), pos_hint={"left":1}, theme_text_color="Custom", text_color=primarycolor)
+        self.expand_result_head_label=MDLabel(text=text["word"]+" ("+text["type"].lower()+")"+f'\n/{eng_to_ipa.convert(text["word"])}/', font_style="main", font_size=dp(18), size_hint=(0.9,None), pos_hint={"left":0}, theme_text_color="Custom", text_color=primarycolor)
+        self.expand_result_head_label.bind(texture_size=self.expand_result_head_label.setter('text_size'))
+        self.expand_result_head_label.bind(texture_size=self.expand_result_head_label.setter('size'))
+        self.shrink_result_head_label=MDLabel(text=text["word"]+" ("+text["type"].lower()+")"+f'\n/{eng_to_ipa.convert(text["word"])}/', font_style="main", font_size=dp(18), size_hint=(0.9,None), pos_hint={"left":0}, theme_text_color="Custom", text_color=primarycolor)
+        self.shrink_result_head_label.bind(texture_size=self.shrink_result_head_label.setter('text_size'))
+        self.shrink_result_head_label.bind(texture_size=self.shrink_result_head_label.setter('size'))
+        self.expand_result_label=MDLabel(text=text["definition"], font_size=dp(25), size_hint=(0.9, None), pos_hint={"left":1}, theme_text_color="Custom", text_color=primarycolor)
         self.shrink_result_label=MDLabel(font_size=dp(25), size_hint=(0.9, None), width=self.expand_result_label.width, pos_hint={"left":1}, theme_text_color="Custom", text_color=primarycolor)
         pos=text["definition"].find("\n")
         if pos<=50 and pos!=-1: self.shrink_result_label.text=text["definition"][:pos]+"..."
@@ -31,8 +34,8 @@ class content_box(MDCard):
         self.expand_result_label.bind(texture_size=self.expand_result_label.setter('size'))
         self.shrink_result_label.bind(texture_size=self.shrink_result_label.setter('text_size'))
         self.shrink_result_label.bind(texture_size=self.shrink_result_label.setter('size'))
-        self.shrink_result_label.bind(width=self.set_width)
-        self.tilte_and_description_box.add_widget(self.result_head_label)
+        self.shrink_result_label.bind(opacity=self.set_width)
+        self.tilte_and_description_box.add_widget(self.shrink_result_head_label)
         self.tilte_and_description_box.add_widget(self.shrink_result_label)
         self.add_widget(self.tilte_and_description_box)
         
@@ -44,17 +47,22 @@ class content_box(MDCard):
         instance.current_height=instance.height
     
     def set_width(self, instance, value):
-        self.expand_result_label.width=self.shrink_result_label.width
+        self.expand_result_label.width=self.width
+        self.expand_result_head_label.width=self.width
     
     def set_afex_value(self, instance, value):
+        self.tilte_and_description_box.remove_widget(self.shrink_result_head_label)
         self.tilte_and_description_box.remove_widget(self.shrink_result_label)
+        self.tilte_and_description_box.add_widget(self.expand_result_head_label)
         self.tilte_and_description_box.add_widget(self.expand_result_label)
         self.tilte_and_description_box.add_widget(self.morebutton)
         fade_in_vertical(self.tilte_and_description_box)
         self.on_release=self.viewstate
 
     def set_beex_value(self, instance, value):
+        self.tilte_and_description_box.remove_widget(self.expand_result_head_label)
         self.tilte_and_description_box.remove_widget(self.expand_result_label)
+        self.tilte_and_description_box.add_widget(self.shrink_result_head_label)
         self.tilte_and_description_box.add_widget(self.shrink_result_label)
         self.add_widget(self.morebutton)
         fade_in_vertical(self.tilte_and_description_box)
