@@ -25,6 +25,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.text=""
         self.signal=False
         self.search_thread = None
+        self.search_event = threading.Event()
 
         theme_font_styles.append('main')
         self.theme_cls.font_styles["main"] = ["main", 16, False, 0.15]
@@ -638,13 +639,21 @@ class home(MDBoxLayout, TouchBehavior):
 
     def quick_search(self, instance, value):
         if self.search_thread:
-            self.search_thread.cancel()
+            self.search_event.set()
+            self.search_thread.join()
         if self.text_input.input.text!="":
-            self.search_thread = threading.Timer(1, self.search_button_pressed, args=(instance, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split())))))
+            self.search_event.clear() 
+            self.search_thread = threading.Thread(target=self.delay)
             self.search_thread.start()
         else:
+            self.progress_bar.color=self.progress_bar.back_color
+            self.progress_bar.stop()
             self.home(instance)
         self.text=self.text_input.input.text
+        
+    def delay(self):
+        if not self.search_event.wait(1):  # Wait for 1 second or until the event is set
+            self.search_button_pressed(None, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split()))))
 
     def translate(self, instance):
         global current_page
