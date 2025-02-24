@@ -26,8 +26,8 @@ class content_box(MDCard):
         self.shrink_result_head_label.bind(texture_size=self.shrink_result_head_label.setter('size'))
         self.expand_result_label=MDLabel(text=text["definition"], font_size=dp(25), size_hint=(0.9, None), pos_hint={"left":1}, theme_text_color="Custom", text_color=primarycolor)
         self.shrink_result_label=MDLabel(font_size=dp(25), size_hint=(0.9, None), width=self.expand_result_label.width, pos_hint={"left":1}, theme_text_color="Custom", text_color=primarycolor)
-        pos=text["definition"].find("\n")
-        if pos<=50 and pos!=-1: self.shrink_result_label.text=text["definition"][:pos]+"..."
+        pos=text["definition"].strip().find('\n')
+        if pos!=-1 and pos<=50: self.shrink_result_label.text=text["definition"][:pos]+"..."
         else:
             self.shrink_result_label.text=text["definition"][:50]
             if len(text["definition"])>=50: self.shrink_result_label.text+="..."
