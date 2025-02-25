@@ -19,15 +19,13 @@ from kivymd.uix.behaviors.magic_behavior import MagicBehavior
 from kivymd.uix.dialog import MDDialog
 from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.uix.relativelayout import MDRelativeLayout
-from kivy.uix.scrollview import ScrollView
+from kivymd.uix.pickers import MDColorPicker
 from kivymd.uix.textfield import MDTextField
 from kivymd.uix.button import MDIconButton, MDFillRoundFlatButton, MDFillRoundFlatIconButton
-from kivy.core.text import LabelBase
 from kivymd.font_definitions import theme_font_styles
 from kivymd.uix.label import MDLabel, MDIcon
 from kivymd.uix.screenmanager import MDScreenManager
 from kivymd.uix.screen import MDScreen
-from kivy.uix.image import Image
 from kivymd.uix.behaviors import TouchBehavior
 from kivymd.uix.menu import MDDropdownMenu
 from kivymd.uix.card import MDCard
@@ -37,6 +35,9 @@ from kivymd.uix.snackbar.snackbar import MDSnackbar
 from kivymd.uix.fitimage.fitimage import FitImage
 from kivymd.uix.transition.transition import MDFadeSlideTransition
 from kivymd.uix.bottomsheet import *
+from kivy.uix.scrollview import ScrollView
+from kivy.core.text import LabelBase
+from kivy.uix.image import Image
 from kivy.uix.label import Label
 from kivy.uix.layout import Layout
 from kivy.metrics import dp
