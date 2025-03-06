@@ -660,24 +660,21 @@ class home(MDBoxLayout, TouchBehavior):
     def translate(self, instance):
         global current_page
         current_page="translate"
-        if check_connection():
-            try:
-                self.translate_result_template.src_text.text=self.text_input.input.text
-                self.translate_result_template.dest_text.text=translator.translate(self.text_input.input.text, src='en', dest='vi').text
-                self.noname.md_bg_color=boxbg
-                self.remove_nav_bar()
-                self.scrollview.clear_widgets()
-                self.scrollview.add_widget(self.translate_result_template)
-            except:
-                if len(self.text_input.input.text.replace(" ",""))==0:
-                    self.empty_alert.open()
-                else:
+        self.signal=True
+        self.hide_input(None, True)
+        self.progress_bar.back_color=bg
+        self.scrollview.clear_widgets()
+        self.scrollview.add_widget(self.translate_result_template)
+        self.noname.md_bg_color=bg
+        self.remove_nav_bar()
+        if self.text_input.input.text.strip()!="":
+            if check_connection():
+                try:
+                    self.translate_result_template.src_text.text=self.text_input.input.text
+                except:
                     self.alert.open()
-        else:
-             self.no_internet_alert.open()
-
-        self.progress_bar.color=self.progress_bar.back_color
-        self.progress_bar.stop()
+            else:
+                self.no_internet_alert.open()
 
     def back(self, instance):
         global _back_
