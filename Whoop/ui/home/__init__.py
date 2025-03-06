@@ -36,12 +36,6 @@ class home(MDBoxLayout, TouchBehavior):
             md_bg_color=boxbg
         )
 
-        self.empty_alert=MDDialog(
-            title="Không có đầu vào để dịch",
-            type="alert",
-            md_bg_color=boxbg
-        )
-
         self.no_internet_alert=self.alert=MDDialog(
             title="Không có kết nối internet",
             type="alert",
