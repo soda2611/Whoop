@@ -112,7 +112,7 @@ class translate_result_template(MDCard):
         self.src_text.focus=True
 
     def update_scroll(self, instance, value):
-        if self.src_text.height>=self.src_scroll.height: Animation(scroll_y=1-(value[1]+1)/len(self.src_text._lines)).start(self.src_scroll)
+        if self.src_text.height>=self.src_scroll.height and self.src_scroll.height!=0: Animation(scroll_y=1-(value[1]+1)/len(self.src_text._lines)).start(self.src_scroll)
         
     def update_dest_text(self, instance, value):
         if self.translate_thread:
