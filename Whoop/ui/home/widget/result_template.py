@@ -137,3 +137,4 @@ class translate_result_template(MDCard):
 
     def update_dest_text_ui(self, translated_text):
         self.dest_text.text=translated_text
+        fade_in_vertical(self.dest_text)
