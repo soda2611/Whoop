@@ -656,10 +656,9 @@ class home(MDBoxLayout, TouchBehavior):
         global current_page
         current_page="translate"
         self.signal=True
-        self.translate_result_template.src_text.focus=True
-        self.hide_input(None, True)
         self.progress_bar.back_color=bg
         self.scrollview.clear_widgets()
+        self.hide_input(None, True)
         self.scrollview.add_widget(self.translate_result_template)
         self.noname.md_bg_color=bg
         self.remove_nav_bar()
