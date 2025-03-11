@@ -73,7 +73,7 @@ class home(MDBoxLayout, TouchBehavior):
 
         self.text_input=MDRelativeLayout(size_hint=(1, None), height=dp(50), pos_hint={'center_x': 0.5, "center_y": 0.5})
         self.text_input.input=MDTextField(icon_left="magnify", icon_left_color_focus=btn, hint_text="Nhập từ cần tìm", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_y': 0.5}, height=dp(30), multiline=False, on_text_validate=lambda instance: self.search_button_pressed(instance, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split())))))        
-        self.text_input.button=MDIconButton(icon='translate', theme_icon_color="Custom", icon_color=btn, size_hint=(None, None), pos_hint={"right": 1, "center_y":0.5}, on_press=self.translate)
+        self.text_input.button=MDIconButton(icon='translate', theme_icon_color="Custom", icon_color=btn, size_hint=(None, None), pos_hint={"right": 1, "center_y":0.5}, on_release=self.translate)
 
         self.hib=MDIconButton(icon='close', theme_icon_color="Custom", icon_color=primarycolor, size_hint=(None, None), pos_hint={"center_x": 0.5, "center_y":0.5})
         self.hib.bind(on_press=self.on_double_tap)
@@ -158,9 +158,9 @@ class home(MDBoxLayout, TouchBehavior):
 
         self.taskbar=MDCard(md_bg_color=btn, radius=[25, 25, 25, 25], size_hint=(1, None), height=dp(50), pos_hint={"center_x":0.5, "center_y": 0.5})
         self.taskbar.radius=[dp(i) for i in self.taskbar.radius]
-        self.button.bind(on_press=self.show_input)
-        self.homebutton.bind(on_press=self.home)
-        self.menubutton.bind(on_press=self.menu_open)
+        self.button.bind(on_release=self.show_input)
+        self.homebutton.bind(on_release=self.home)
+        self.menubutton.bind(on_release=self.menu_open)
 
         self.text_input.input.bind(focus=self.hide_input)
         self.text_input.input.bind(text=self.quick_search)
@@ -600,6 +600,7 @@ class home(MDBoxLayout, TouchBehavior):
         current_page="home"
 
     def show_input(self, instance):
+        self.text_input.input.focus=True
         self.hib.disabled=False
         fade_out_vertical(self.taskbar, on_complete=self._show_input_)
 
@@ -655,6 +656,7 @@ class home(MDBoxLayout, TouchBehavior):
         global current_page
         current_page="translate"
         self.signal=True
+        self.translate_result_template.src_text.focus=True
         self.hide_input(None, True)
         self.progress_bar.back_color=bg
         self.scrollview.clear_widgets()
