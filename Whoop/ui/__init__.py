@@ -18,6 +18,7 @@ from kivymd.app import MDApp
 from kivymd.uix.behaviors.magic_behavior import MagicBehavior
 from kivymd.uix.dialog import MDDialog
 from kivymd.uix.boxlayout import MDBoxLayout
+from kivymd.uix.floatlayout import MDFloatLayout
 from kivymd.uix.relativelayout import MDRelativeLayout
 from kivymd.uix.pickers import MDColorPicker
 from kivymd.uix.textfield import MDTextField
@@ -240,7 +241,7 @@ def config():
     queried={}
     version=settings["version"]
 
-    Window.minimum_width, Window.minimum_height= 400, 400 
+    Window.minimum_width, Window.minimum_height= 400, 660
     Window.softinput_mode='below_target'
     LabelBase.register(name="main", fn_regular=f"func/setting/fonts/{settings['fonts']}.ttf")
 
