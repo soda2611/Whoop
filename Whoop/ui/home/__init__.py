@@ -520,6 +520,14 @@ class home(MDBoxLayout, TouchBehavior):
                 "on_release": lambda x="Setting": self.go_to_page_2(x)
             },
             {
+                "text": "Whoop AI",
+                "text_color": primarycolor,
+                "trailing_icon": "creation",
+                "theme_trailing_icon_color": "Custom",
+                "trailing_icon_color": primarycolor,
+                "on_release": lambda x="Setting": self.go_to_page_3(x)
+            },
+            {
                 "text": "Thêm từ vựng",
                 "text_color": primarycolor,
                 "trailing_icon": "plus-circle",
@@ -658,10 +666,10 @@ class home(MDBoxLayout, TouchBehavior):
         self.signal=True
         self.progress_bar.back_color=bg
         self.scrollview.clear_widgets()
-        self.hide_input(None, True)
         self.scrollview.add_widget(self.translate_result_template)
         self.noname.md_bg_color=bg
         self.remove_nav_bar()
+        self.hide_input(None, True)
         if self.text_input.input.text.strip()!="":
             if check_connection():
                 try:
@@ -880,8 +888,11 @@ class home(MDBoxLayout, TouchBehavior):
 
     def go_to_page_2(self, instance):
         self.menu.dismiss()
-        sm.transition.direction = "left"
         sm.current = 'second'
+        
+    def go_to_page_3(self, instance):
+        self.menu.dismiss()
+        sm.current = 'third'
 
     def on_double_tap(self, instance, *args):
         if self.text_input in self.box.children:    
