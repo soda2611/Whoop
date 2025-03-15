@@ -49,9 +49,11 @@ from kivy.core.audio import SoundLoader
 from kivy.animation import Animation
 from kivy.properties import *
 from func.SOD import *
+from func.whoop_ai import *
 from googletrans import Translator
 from functools import partial
 from collections import OrderedDict
+from md2bbcode.main import process_readme
 
 class MDCard(MDCard):
     opacity = NumericProperty(1)
@@ -178,9 +180,10 @@ def morph(w, state):
         anim.bind(on_complete=w.set_beex_value)
     anim.start(w)
     
-def fade_in_vertical(w, start_pos=None, end_pos=None):
+def fade_in_vertical(w, start_pos=None, end_pos=None, on_complete=None):
     set_opacity_recursive(w)
     anim=Animation(opacity=1, duration=0.5)&Animation(y=set_y(w, start_pos, end_pos), duration=0.65, transition='out_quad')
+    if on_complete!=None: anim.on_complete=on_complete
     anim.start(w)
 
 def fade_out_vertical(w, on_complete=None):
@@ -189,13 +192,14 @@ def fade_out_vertical(w, on_complete=None):
     else: anim.on_complete=on_complete
     anim.start(w)
 
-def fade_in_horizontal(w, start_pos=None):
+def fade_in_horizontal(w, start_pos=None, on_complete=None):
     set_opacity_recursive(w)
     if start_pos==None:
         end_pos=set_x(w)
     else:
         end_pos=set_x(w, start_pos)
     anim=Animation(opacity=1, duration=0.5)&Animation(x=end_pos, duration=0.65, transition='out_quad')
+    if on_complete!=None: anim.on_complete=on_complete
     anim.start(w)
 
 def fade_out_horizontal(w, on_complete=None):
@@ -209,6 +213,12 @@ def fade_out(w, on_complete=None):
     if on_complete!=None: anim.on_complete=on_complete
     anim.start(w)
         
+def fade_in(w, on_complete=None):
+    set_opacity_recursive(w)
+    anim=Animation(opacity=1, duration=0.5)
+    if on_complete!=None: anim.on_complete=on_complete
+    anim.start(w)
+
 def set_new_config():
     with open("func/setting/setting.txt", "w", encoding="utf-8") as fo:
         for i in settings:
