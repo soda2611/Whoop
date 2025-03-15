@@ -3,6 +3,7 @@ import ui
 from ui import *
 from ui.home import home
 from ui.setting import setting, update_dialog
+from ui.chat import chat
 
 class FirstScreen(MDScreen):
     def __init__(self, **kwargs):
@@ -19,6 +20,13 @@ class SecondScreen(MDScreen):
         self.update_dialog=update_dialog()
         self.add_widget(self.setting_layout)
         self.add_widget(self.update_dialog)
+        self.md_bg_color=bg
+
+class ThirdScreen(MDScreen):
+    def __init__(self, **kwargs):
+        super(ThirdScreen, self).__init__(**kwargs)
+        layout = chat()
+        self.add_widget(layout)
         self.md_bg_color=bg
 
 class MyApp(MDApp):
