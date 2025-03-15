@@ -91,7 +91,6 @@ class setting(MDBoxLayout):
         self.add_widget(self.info)
 
     def back(self, instance):
-        sm.transition.direction = "right"
         sm.current = 'first'
         
     def update_dialog_open(self, instance):
