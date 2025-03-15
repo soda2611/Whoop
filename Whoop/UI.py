@@ -36,7 +36,7 @@ class MyApp(MDApp):
         self.title=settings["title"]
         firstscreen=FirstScreen(name='first')
         secondscreen=SecondScreen(name='second')
-        thirdcreen=ThirdScreen(name='third')
+        thirdscreen=ThirdScreen(name='third')
         secondscreen.setting_layout.color_palette_scroll.scroll_to(secondscreen.setting_layout.color_palette_scroll.got_check)
         secondscreen.setting_layout.font_scroll.scroll_to(secondscreen.setting_layout.font_scroll.got_font_check)
         threading.Thread(target=secondscreen.setting_layout.update_, args=["official", False]).start()
