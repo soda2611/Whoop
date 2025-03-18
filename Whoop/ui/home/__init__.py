@@ -72,7 +72,8 @@ class home(MDBoxLayout, TouchBehavior):
         self.resultlabel = MDLabel(text='', font_style="H6", halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=30)
 
         self.text_input=MDRelativeLayout(size_hint=(1, None), height=dp(50), pos_hint={'center_x': 0.5, "center_y": 0.5})
-        self.text_input.input=MDTextField(icon_left="magnify", icon_left_color_focus=btn, hint_text="Nhập từ cần tìm", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_y': 0.5}, height=dp(30), multiline=False, on_text_validate=lambda instance: self.search_button_pressed(instance, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split())))))        
+        self.text_input.input=MDTextField(icon_left="magnify", icon_right="bruh", icon_left_color_focus=btn, hint_text="Nhập từ cần tìm", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_y': 0.5}, height=dp(30), multiline=False, on_text_validate=lambda instance: self.search_button_pressed(instance, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split())))))        
+        self.text_input.left_icon=MDIconButton(icon='magnify', theme_icon_color="Custom", disabled_color=btn, disabled=True, size_hint=(None, None), pos_hint={"left": 0, "center_y":0.5})
         self.text_input.button=MDIconButton(icon='translate', theme_icon_color="Custom", icon_color=btn, size_hint=(None, None), pos_hint={"right": 1, "center_y":0.5}, on_release=self.translate)
 
         self.hib=MDIconButton(icon='close', theme_icon_color="Custom", icon_color=primarycolor, size_hint=(None, None), pos_hint={"center_x": 0.5, "center_y":0.5})
@@ -187,6 +188,7 @@ class home(MDBoxLayout, TouchBehavior):
             self.recent.container.add_widget(self.recent.label)
 
         self.text_input.add_widget(self.text_input.input)
+        self.text_input.add_widget(self.text_input.left_icon)
         self.text_input.add_widget(self.text_input.button)
         self.progress_box.add_widget(self.progress_bar)
         self.add_widget(self.label)
@@ -327,7 +329,7 @@ class home(MDBoxLayout, TouchBehavior):
             fav_list[folder].remove(_key_)
             del fav[_key_]
 
-        with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
+        with open(f"{current_dir}/func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
             fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
         folders[folder].folder_len=len(fav_list[folder])
         self.favlist.choose_mode=False
@@ -353,7 +355,7 @@ class home(MDBoxLayout, TouchBehavior):
             _folder_.add_widget(MDIconButton(icon="delete", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5}, on_press=lambda instance: self.remove_fav(instance)))
             self.favlist.fav_scrollview_box.add_widget(_folder_)
             fade_in_vertical(_folder_)
-        with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
+        with open(f"{current_dir}/func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
             fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
         if len(fav_list)>0:
             self.favlist.container.clear_widgets()
@@ -368,7 +370,7 @@ class home(MDBoxLayout, TouchBehavior):
         global fav_list, fav
         del fav_list[instance.result_head_label.text]
         self.favlist.fav_scrollview_box.remove_widget(instance)
-        with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
+        with open(f"{current_dir}/func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
             fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
         if len(fav_list)==0:
             self.favlist.container.clear_widgets()
@@ -415,7 +417,7 @@ class home(MDBoxLayout, TouchBehavior):
             fav_list.update(updated_items)
             for word in fav_list[new_name]:
                 fav[word] = new_name
-            with open("func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
+            with open(f"{current_dir}/func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
                 fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
             self.instance.text=new_name
             fade_in_vertical(self.instance)
@@ -428,11 +430,11 @@ class home(MDBoxLayout, TouchBehavior):
         self.recent.container.clear_widgets()
         self.recent.container.add_widget(self.recent.label)
         fade_in_vertical(self.recent.container)
-        with open(f"func/setting/{settings['uid']}.txt", "w", encoding="utf-8") as fo:
+        with open(f"{current_dir}/func/setting/{settings['uid']}.txt", "w", encoding="utf-8") as fo:
             fo.write("{}")
 
     def create_chips(self, text):
-        return MDFillRoundFlatButton(text=text, theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), on_press=lambda instance: self.search_button_pressed(instance, [text]))
+        return MDFillRoundFlatButton(text=text, theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, font_name=f"{current_dir}/func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), on_press=lambda instance: self.search_button_pressed(instance, [text]))
 
     def create_content_box(self, text):
         self.content_box=content_box(text)
@@ -705,7 +707,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.scrollview.do_scroll_x, self.scrollview.do_scroll_y=False, True
         if not temp:
             self.input_text=input_text
-            result=SOD(self.input_text, database=data_, database_path="func/data/tu_dien_nguon.txt", get_database_from_path=False, internet=check_connection())
+            result=SOD(self.input_text, database=data_, database_path=f"{current_dir}/func/data/tu_dien_nguon.txt", get_database_from_path=False, internet=check_connection())
             if len(result)==1:
                 result=result[input_text[0]]
                 Clock.schedule_once(self.update_UI)
@@ -737,7 +739,7 @@ class home(MDBoxLayout, TouchBehavior):
         if str(type(result))=="<class 'dict'>":
             for rlt in result:
                 temp_value={"word": rlt, "type": "", "definition": "", "synonyms": [], "antonyms": []}
-                if result[rlt]=="Không có kết nối mạng và không có sẵn trong bộ dữ liệu offline" or result[rlt]=="Không tìm thấy từ": temp_value["definition"]="Không có kết quả"
+                if result[rlt]=="Không có kết nối mạng và không có sẵn trong bộ dữ liệu ofline" or result[rlt]=="Không tìm thấy từ": temp_value["definition"]="Không có kết quả"
                 else: temp_value["definition"]=f"Có {len(result[rlt])} kết quả"
                 self.result_box.add_widget(self._create_content_box_(temp_value))
         if not _callback_:
@@ -783,7 +785,7 @@ class home(MDBoxLayout, TouchBehavior):
                         self.result_box.add_widget(self.result_template)
                         self.synonyms_box.clear_widgets()
                         self.synonyms.scroll_x=0
-                        head=MDFillRoundFlatButton(text="Từ đồng nghĩa", font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), size_hint=(None,None),  pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=boxbg, on_press=lambda instance: self.copy(instance, copy=", ".join(result[i]["synonyms"])))
+                        head=MDFillRoundFlatButton(text="Từ đồng nghĩa", font_name=f"{current_dir}/func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), size_hint=(None,None),  pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=boxbg, on_press=lambda instance: self.copy(instance, copy=", ".join(result[i]["synonyms"])))
                         if result[i]["synonyms"]!=[]:
                             self.result_box.add_widget(head)
                             self.result_box.add_widget(self.synonyms)
@@ -792,7 +794,7 @@ class home(MDBoxLayout, TouchBehavior):
 
                         self.antonyms_box.clear_widgets()
                         self.antonyms.scroll_x=0
-                        head=MDFillRoundFlatButton(text="Từ trái nghĩa", font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), size_hint=(None,None),  pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=boxbg, on_press=lambda instance: self.copy(instance, copy=", ".join(result[i]["antonyms"])))
+                        head=MDFillRoundFlatButton(text="Từ trái nghĩa", font_name=f"{current_dir}/func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), size_hint=(None,None),  pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=boxbg, on_press=lambda instance: self.copy(instance, copy=", ".join(result[i]["antonyms"])))
                         if result[i]["antonyms"]!=[]:
                             self.result_box.add_widget(head)
                             self.result_box.add_widget(self.antonyms)
@@ -849,7 +851,7 @@ class home(MDBoxLayout, TouchBehavior):
                     self.back_button.disabled=False
             except: pass
 
-        with open(f"func/setting/{settings['uid']}.txt", "w", encoding="utf-8") as fo:
+        with open(f"{current_dir}/func/setting/{settings['uid']}.txt", "w", encoding="utf-8") as fo:
             fo.write(json.dumps(recent_search, ensure_ascii=False, indent=4))
         if _value_ and check_connection(): threading.Thread(target=track_user_queries, args=({self.input_text[0]: result},)).start()
         else: _value_=not _value_

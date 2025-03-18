@@ -13,6 +13,7 @@ except:
     pass
 
 import eng_to_ipa, os, random, threading , pyttsx3, subprocess, signal, getpass, sys, datetime, json, shutil
+from plyer import filechooser
 from gtts import gTTS
 from kivymd.app import MDApp
 from kivymd.uix.behaviors.magic_behavior import MagicBehavior
@@ -38,7 +39,7 @@ from kivymd.uix.transition.transition import MDFadeSlideTransition
 from kivymd.uix.bottomsheet import *
 from kivy.uix.scrollview import ScrollView
 from kivy.core.text import LabelBase
-from kivy.uix.image import Image
+from kivy.uix.image import Image, AsyncImage
 from kivy.uix.label import Label
 from kivy.uix.layout import Layout
 from kivy.metrics import dp
