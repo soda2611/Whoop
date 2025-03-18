@@ -1,10 +1,17 @@
-import requests
+import requests, base64
 
 GEMINI_API_KEY = "AIzaSyDcpFwp8JuuYoUkYvmmz0yyw2wbPCjqdzc"
 API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
 
-def whoop_ai(user_input, conversation_history):
+def encode_image(image_path):
+    with open(image_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode("utf-8")
+
+def whoop_ai(user_input, conversation_history, image=None):
     conversation_history.append({"role": "user" ,"parts": [{"text": user_input}]})
+    if image:
+        image_data = encode_image(image)
+        conversation_history[-1]["parts"].append({"inline_data": {"mime_type": "image/jpeg", "data": image_data}})
     data = {"contents": conversation_history}
     headers = {"Content-Type": "application/json"}
     response = requests.post(API_URL, json=data, headers=headers)
