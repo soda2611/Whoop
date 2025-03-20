@@ -31,7 +31,7 @@ class chat(MDBoxLayout):
         self.message=""
         self.img_path=None
         self.cwd=os.getcwd()
-        Window.bind(on_keyboard=self.events)
+        self.manager_open = False
         
         self.top_bar=MDFloatLayout(size_hint=(1, None), height=dp(70))
         
@@ -207,6 +207,7 @@ class chat(MDBoxLayout):
         if platform=="android":
             self.manager_open = False
             self.file_manager=MDFileManager(exit_manager=self.exit_manager, select_path=self.select_path, ext=[".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff"], preview=True, background_color_selection_button=btn, background_color_toolbar=btn, icon_color=primarycolor)
+            self.file_manager.bind(back=self.previous_folder)
             self.file_manager.show(os.path.expanduser("/storage/emulated/0/Pictures/"))
         else:
             root = tk.Tk()
@@ -231,14 +232,15 @@ class chat(MDBoxLayout):
                 
     def exit_manager(self, *args):
         self.file_manager.close()
+        self.manager_open = False
         
     def select_path(self, path):
         self.exit_manager()
         self.image_selected(path)
         
-    def events(self, instance, keyboard, keycode, text, modifiers):
-        if keyboard in (1001, 27):
-            if self.manager_open:
-                self.file_manager.back()
-        return True
+    def previous_folder(self):
+        if self.manager_open:
+            self.file_manager.back()
+        else:
+            self.exit_manager()
             
