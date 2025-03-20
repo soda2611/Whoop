@@ -55,6 +55,11 @@ from functools import partial
 from collections import OrderedDict
 from md2bbcode.main import process_readme
 from kivy.utils import platform
+if platform=="android":
+    from kivymd.uix.filemanager import MDFileManager
+else:
+    import tkinter as tk
+    from tkinter import filedialog
 
 class MDCard(MDCard):
     opacity = NumericProperty(1)
@@ -311,9 +316,3 @@ bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fon
 firstscreen=None
 secondscreen=None
 sm = MDScreenManager(transition=MDFadeSlideTransition())
-if platform=="android":
-    from kivymd.uix.filemanager import MDFileManager
-    filechooser=MDFileManager(ext=[".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff"], preview=True, background_color_selection_button=btn, background_color_toolbar=btn, icon_color=primarycolor)
-else:
-    import tkinter as tk
-    from tkinter import filedialog
