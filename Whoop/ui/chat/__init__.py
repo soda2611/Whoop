@@ -122,6 +122,11 @@ class chat(MDBoxLayout):
             padding=[dp(10), dp(10), dp(10), dp(10)],
             spacing=dp(20)
         )
+        
+        user_image_touchbox=MDCard(size_hint=(None, None), height=dp(90), width=dp(90), padding=[dp(10), dp(10), dp(10), dp(10)])
+        user_image = AsyncImage(source=self.img_path, size_hint=(1, None), height=dp(70))
+        user_image_touchbox.add_widget(user_image)
+        
         user_content.bind(minimum_height=user_content.setter('height'))
         user_content.add_widget(MDIcon(icon="account", pos_hint={"top": 1}))
         user_content.add_widget(box)
@@ -129,8 +134,8 @@ class chat(MDBoxLayout):
         self.message_box.add_widget(user_content)
         if self.img_path:
             self.img_slider.remove_widget(self.user_image_touchbox)
-            box.add_widget(self.user_image_touchbox)
-            self.user_image_touchbox.md_bg_color=boxbg
+            box.add_widget(user_image_touchbox)
+            user_image_touchbox.md_bg_color=boxbg
         fade_in(user_content, on_complete=lambda instance: threading.Thread(target=self.get_respond).start())
         if self.message_box.height>self.message_scroll.height and self.message_scroll.height!=0: Animation(scroll_y=0, transition="out_quad").start(self.message_scroll)
         self.message=self.text_input.input.text
@@ -198,15 +203,25 @@ class chat(MDBoxLayout):
 
     def select_image(self):
         self.menu.dismiss()
-        filechooser.open_file(filters=["*.png", "*.jpg", "*.jpeg"], on_selection=self.image_selected)
+        root = tk.Tk()
+        root.withdraw()  # Ẩn cửa sổ chính
+
+        # Mở trình duyệt thư mục mặc định
+        folder_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png *.jpg *.jpeg *.gif *.bmp *.tiff")])
+        if folder_path:
+            self.image_selected(folder_path)
 
     def image_selected(self, selection):
         os.chdir(self.cwd)
         if selection:
-            self.img_path = selection[0]
-        self.user_image_touchbox=MDCard(size_hint=(None, None), height=dp(90), width=dp(90), padding=[dp(10), dp(10), dp(10), dp(10)])
-        self.user_image = AsyncImage(source=self.img_path, size_hint=(1, None), height=dp(70))
-        self.user_image_touchbox.bind(on_release=self.remove_path)
-        self.img_slider.add_widget(self.user_image_touchbox)
-        self.user_image_touchbox.add_widget(self.user_image)
+            if self.img_path:
+                self.user_image.source = selection
+                self.img_path = selection
+            else:
+                self.img_path = selection
+                self.user_image_touchbox=MDCard(size_hint=(None, None), height=dp(90), width=dp(90), padding=[dp(10), dp(10), dp(10), dp(10)])
+                self.user_image = AsyncImage(source=self.img_path, size_hint=(1, None), height=dp(70))
+                self.user_image_touchbox.bind(on_release=self.remove_path)
+                self.img_slider.add_widget(self.user_image_touchbox)
+                self.user_image_touchbox.add_widget(self.user_image)
             
