@@ -8,7 +8,7 @@ from ui.chat import chat
 class FirstScreen(MDScreen):
     def __init__(self, **kwargs):
         super(FirstScreen, self).__init__(**kwargs)
-        layout = home()
+        layout=home()
         self.add_widget(FitImage(source=settings["pattern"], pos_hint={"center_x": 0.5, "bottom": 0}, size_hint_y=None, height=dp(50)))
         self.add_widget(layout)
         self.md_bg_color=bg
@@ -16,7 +16,7 @@ class FirstScreen(MDScreen):
 class SecondScreen(MDScreen):
     def __init__(self, **kwargs):
         super(SecondScreen, self).__init__(**kwargs)
-        self.setting_layout = setting()
+        self.setting_layout=setting()
         self.update_dialog=update_dialog()
         self.add_widget(self.setting_layout)
         self.add_widget(self.update_dialog)
@@ -25,16 +25,11 @@ class SecondScreen(MDScreen):
 class ThirdScreen(MDScreen):
     def __init__(self, **kwargs):
         super(ThirdScreen, self).__init__(**kwargs)
-        layout = chat()
+        layout=chat()
         self.add_widget(layout)
         self.md_bg_color=bg
 
-class MyApp(MDApp):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-        Window.bind(on_keyboard=self.events)
-        self.manager_open = False
-        
+class MyApp(MDApp):        
     def build(self):
         global firstscreen, secondscreen
         self.icon=settings["icon"]
@@ -54,18 +49,6 @@ class MyApp(MDApp):
     def on_stop(self):
         ui.settings["size"] = f"{Window.width} {Window.height}"
         return super().on_stop()
-    
-    def events(self, instance, keyboard, keycode, text, modifiers):
-        if keyboard in (1001, 27):
-            if self.manager_open:
-                if keyboard in (1001, 27):
-                    filechooser.back()
-            else:
-                if sm.current_screen.name=="first":
-                    self.stop()
-                else:
-                    sm.current="first"
-        return True
 
 if __name__ == '__main__':
     MyApp().run()
