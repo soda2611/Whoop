@@ -203,13 +203,15 @@ class chat(MDBoxLayout):
 
     def select_image(self):
         self.menu.dismiss()
-        root = tk.Tk()
-        root.withdraw()  # Ẩn cửa sổ chính
-
-        # Mở trình duyệt thư mục mặc định
-        folder_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png *.jpg *.jpeg *.gif *.bmp *.tiff")])
-        if folder_path:
-            self.image_selected(folder_path)
+        if platform=="android":
+            self.file_manager=MDFileManager(exit_manager=self.exit_manager, select_path=self.select_path)
+            self.file_manager.show(os.path.expanduser("/storage/emulated/0/Pictures/"))
+        else:
+            root = tk.Tk()
+            root.withdraw()
+            folder_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png *.jpg *.jpeg *.gif *.bmp *.tiff")])
+            if folder_path:
+                self.image_selected(folder_path)
 
     def image_selected(self, selection):
         os.chdir(self.cwd)
@@ -224,4 +226,11 @@ class chat(MDBoxLayout):
                 self.user_image_touchbox.bind(on_release=self.remove_path)
                 self.img_slider.add_widget(self.user_image_touchbox)
                 self.user_image_touchbox.add_widget(self.user_image)
+                
+    def exit_manager(self, *args):
+        self.file_manager.close()
+        
+    def select_path(self, path):
+        self.exit_manager()
+        self.image_selected(path)
             
