@@ -30,6 +30,11 @@ class ThirdScreen(MDScreen):
         self.md_bg_color=bg
 
 class MyApp(MDApp):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        Window.bind(on_keyboard=self.events)
+        self.manager_open = False
+        
     def build(self):
         global firstscreen, secondscreen
         self.icon=settings["icon"]
@@ -49,6 +54,18 @@ class MyApp(MDApp):
     def on_stop(self):
         ui.settings["size"] = f"{Window.width} {Window.height}"
         return super().on_stop()
+    
+    def events(self, instance, keyboard, keycode, text, modifiers):
+        if keyboard in (1001, 27):
+            if self.manager_open:
+                if keyboard in (1001, 27):
+                    filechooser.back()
+            else:
+                if sm.current_screen.name=="first":
+                    self.stop()
+                else:
+                    sm.current="first"
+        return True
 
 if __name__ == '__main__':
     MyApp().run()
