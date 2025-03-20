@@ -13,9 +13,8 @@ except:
     pass
 
 import eng_to_ipa, os, random, threading , pyttsx3, subprocess, signal, getpass, sys, datetime, json, shutil
-import tkinter as tk
+from plyer import filechooser
 from gtts import gTTS
-from tkinter import filedialog
 from kivymd.app import MDApp
 from kivymd.uix.behaviors.magic_behavior import MagicBehavior
 from kivymd.uix.dialog import MDDialog
@@ -49,6 +48,7 @@ from kivy.core.window import Window
 from kivy.core.clipboard import Clipboard as pyperclip
 from kivy.core.audio import SoundLoader
 from kivy.animation import Animation
+from kivy.utils import platform
 from kivy.properties import *
 from func.SOD import *
 from func.whoop_ai import *
@@ -57,6 +57,12 @@ from functools import partial
 from collections import OrderedDict
 from md2bbcode.main import process_readme
 
+if platform=="android":
+    from kivymd.uix.filemanager import MDFileManager
+else:
+    import tkinter as tk
+    from tkinter import filedialog
+    
 class MDCard(MDCard):
     opacity = NumericProperty(1)
 
