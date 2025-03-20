@@ -329,7 +329,7 @@ class home(MDBoxLayout, TouchBehavior):
             fav_list[folder].remove(_key_)
             del fav[_key_]
 
-        with open(f"{current_dir}/func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
+        with open(f"func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
             fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
         folders[folder].folder_len=len(fav_list[folder])
         self.favlist.choose_mode=False
@@ -355,7 +355,7 @@ class home(MDBoxLayout, TouchBehavior):
             _folder_.add_widget(MDIconButton(icon="delete", theme_icon_color="Custom", icon_color=primarycolor, pos_hint={"center_x": 0.5, "center_y": 0.5}, on_press=lambda instance: self.remove_fav(instance)))
             self.favlist.fav_scrollview_box.add_widget(_folder_)
             fade_in_vertical(_folder_)
-        with open(f"{current_dir}/func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
+        with open(f"func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
             fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
         if len(fav_list)>0:
             self.favlist.container.clear_widgets()
@@ -370,7 +370,7 @@ class home(MDBoxLayout, TouchBehavior):
         global fav_list, fav
         del fav_list[instance.result_head_label.text]
         self.favlist.fav_scrollview_box.remove_widget(instance)
-        with open(f"{current_dir}/func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
+        with open(f"func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
             fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
         if len(fav_list)==0:
             self.favlist.container.clear_widgets()
@@ -417,7 +417,7 @@ class home(MDBoxLayout, TouchBehavior):
             fav_list.update(updated_items)
             for word in fav_list[new_name]:
                 fav[word] = new_name
-            with open(f"{current_dir}/func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
+            with open(f"func/setting/fav_word_list.txt", "w", encoding="utf-8") as fo:
                 fo.write(json.dumps(fav_list, ensure_ascii=False, indent=4))
             self.instance.text=new_name
             fade_in_vertical(self.instance)
@@ -430,11 +430,11 @@ class home(MDBoxLayout, TouchBehavior):
         self.recent.container.clear_widgets()
         self.recent.container.add_widget(self.recent.label)
         fade_in_vertical(self.recent.container)
-        with open(f"{current_dir}/func/setting/{settings['uid']}.txt", "w", encoding="utf-8") as fo:
+        with open(f"func/setting/{settings['uid']}.txt", "w", encoding="utf-8") as fo:
             fo.write("{}")
 
     def create_chips(self, text):
-        return MDFillRoundFlatButton(text=text, theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, font_name=f"{current_dir}/func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), on_press=lambda instance: self.search_button_pressed(instance, [text]))
+        return MDFillRoundFlatButton(text=text, theme_icon_color='Custom', md_bg_color=btn, theme_text_color="Custom", text_color=secondarycolor, font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), on_press=lambda instance: self.search_button_pressed(instance, [text]))
 
     def create_content_box(self, text):
         self.content_box=content_box(text)
@@ -707,7 +707,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.scrollview.do_scroll_x, self.scrollview.do_scroll_y=False, True
         if not temp:
             self.input_text=input_text
-            result=SOD(self.input_text, database=data_, database_path=f"{current_dir}/func/data/tu_dien_nguon.txt", get_database_from_path=False, internet=check_connection())
+            result=SOD(self.input_text, database=data_, database_path=f"func/data/tu_dien_nguon.txt", get_database_from_path=False, internet=check_connection())
             if len(result)==1:
                 result=result[input_text[0]]
                 Clock.schedule_once(self.update_UI)
@@ -785,7 +785,7 @@ class home(MDBoxLayout, TouchBehavior):
                         self.result_box.add_widget(self.result_template)
                         self.synonyms_box.clear_widgets()
                         self.synonyms.scroll_x=0
-                        head=MDFillRoundFlatButton(text="Từ đồng nghĩa", font_name=f"{current_dir}/func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), size_hint=(None,None),  pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=boxbg, on_press=lambda instance: self.copy(instance, copy=", ".join(result[i]["synonyms"])))
+                        head=MDFillRoundFlatButton(text="Từ đồng nghĩa", font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), size_hint=(None,None),  pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=boxbg, on_press=lambda instance: self.copy(instance, copy=", ".join(result[i]["synonyms"])))
                         if result[i]["synonyms"]!=[]:
                             self.result_box.add_widget(head)
                             self.result_box.add_widget(self.synonyms)
@@ -794,7 +794,7 @@ class home(MDBoxLayout, TouchBehavior):
 
                         self.antonyms_box.clear_widgets()
                         self.antonyms.scroll_x=0
-                        head=MDFillRoundFlatButton(text="Từ trái nghĩa", font_name=f"{current_dir}/func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), size_hint=(None,None),  pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=boxbg, on_press=lambda instance: self.copy(instance, copy=", ".join(result[i]["antonyms"])))
+                        head=MDFillRoundFlatButton(text="Từ trái nghĩa", font_name=f"func/setting/fonts/{settings['fonts']}.ttf", font_size=dp(15), size_hint=(None,None),  pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor, md_bg_color=boxbg, on_press=lambda instance: self.copy(instance, copy=", ".join(result[i]["antonyms"])))
                         if result[i]["antonyms"]!=[]:
                             self.result_box.add_widget(head)
                             self.result_box.add_widget(self.antonyms)
@@ -851,7 +851,7 @@ class home(MDBoxLayout, TouchBehavior):
                     self.back_button.disabled=False
             except: pass
 
-        with open(f"{current_dir}/func/setting/{settings['uid']}.txt", "w", encoding="utf-8") as fo:
+        with open(f"func/setting/{settings['uid']}.txt", "w", encoding="utf-8") as fo:
             fo.write(json.dumps(recent_search, ensure_ascii=False, indent=4))
         if _value_ and check_connection(): threading.Thread(target=track_user_queries, args=({self.input_text[0]: result},)).start()
         else: _value_=not _value_
