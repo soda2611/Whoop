@@ -13,7 +13,9 @@ except:
     pass
 
 import eng_to_ipa, os, random, threading , pyttsx3, subprocess, signal, getpass, sys, datetime, json, shutil
+import tkinter as tk
 from gtts import gTTS
+from tkinter import filedialog
 from kivymd.app import MDApp
 from kivymd.uix.behaviors.magic_behavior import MagicBehavior
 from kivymd.uix.dialog import MDDialog
