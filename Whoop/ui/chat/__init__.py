@@ -205,8 +205,7 @@ class chat(MDBoxLayout):
         self.menu.dismiss()
         if platform=="android":
             self.manager_open = False
-            filechooser.exit_manager=self.exit_manager
-            filechooser.select_path=self.select_path
+            self.file_manager=MDFileManager(exit_manager=self.exit_manager, select_path=self.select_path, ext=[".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff"], preview=True, background_color_selection_button=btn, background_color_toolbar=btn, icon_color=primarycolor)
             self.file_manager.show(os.path.expanduser("/storage/emulated/0/Pictures/"))
         else:
             root = tk.Tk()
