@@ -13,7 +13,6 @@ except:
     pass
 
 import eng_to_ipa, os, random, threading , pyttsx3, subprocess, signal, getpass, sys, datetime, json, shutil
-from plyer import filechooser
 from gtts import gTTS
 from kivymd.app import MDApp
 from kivymd.uix.behaviors.magic_behavior import MagicBehavior
