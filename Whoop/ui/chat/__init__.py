@@ -110,9 +110,9 @@ class chat(MDBoxLayout):
         
     def on_text(self, instance, value):
         self.text_input.button.disabled=False if value.strip()!="" else True
-        self.text_input.input.on_text_validate=self.send_message if value.strip()!="" else self.unfocus
+        self.text_input.input.on_text_validate=partial(self.send_message, instance) if value.strip()!="" else self.unfocus
         
-    def send_message(self):
+    def send_message(self, instance):
         box=MDBoxLayout(orientation="vertical", size_hint=(1, None), spacing=dp(10))
         box.bind(minimum_height=box.setter("height"))
         user_message = MDLabel(
