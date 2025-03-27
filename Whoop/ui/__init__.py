@@ -275,7 +275,7 @@ def config():
     Window.minimum_width, Window.minimum_height= 400, 660
     Window.softinput_mode='below_target'
     LabelBase.register(name="main", fn_regular=f"func/setting/fonts/{settings['fonts']}.ttf")
-    LabelBase.register(name="chat", fn_regular=f"func/setting/fonts/SEGUIEMJ.ttf")
+    LabelBase.register(name="chat", fn_regular=f"func/setting/default_fonts/seguiemj.ttf")
 
     color=settings["current palette"].split("; ")
     bg=[int(i)/255 for i in color[0].split(", ")]+[1]
