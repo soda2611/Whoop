@@ -53,7 +53,7 @@ from func.whoop_ai import *
 from googletrans import Translator
 from functools import partial
 from collections import OrderedDict
-from md2bbcode.main import process_readme
+from md2bbcode.main import process_readme as md2bbcode
 from kivy.utils import platform
 if platform=="android":
     from kivymd.uix.filemanager import MDFileManager
@@ -158,6 +158,21 @@ class check_button(MDIconButton):
         self.theme_icon_color="Custom"
         self.icon_color=primarycolor
         self.pos_hint={"center_x": 0.5, "center_y": 0.5}
+        
+def process_readme(data):
+    _=md2bbcode(data)
+    md={"[*]": "◉ ",
+    "[/quote]": "[/i]'", 
+    "[quote]": "'[i]", 
+    "[/code]": "", 
+    "[code]": "", 
+    "[/list]": "", 
+    "[list]": "",}
+
+    for i in md:
+        _=_.replace(i, md[i])
+        
+    return _.strip()
 
 def set_opacity_recursive(w, value=0):
     w.opacity = value
@@ -260,6 +275,7 @@ def config():
     Window.minimum_width, Window.minimum_height= 400, 660
     Window.softinput_mode='below_target'
     LabelBase.register(name="main", fn_regular=f"func/setting/fonts/{settings['fonts']}.ttf")
+    LabelBase.register(name="chat", fn_regular=f"func/setting/fonts/SEGUIEMJ.ttf")
 
     color=settings["current palette"].split("; ")
     bg=[int(i)/255 for i in color[0].split(", ")]+[1]
