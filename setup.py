@@ -3,8 +3,11 @@ import os, zipfile, io, shutil, sys
 print(f"Python {sys.version_info.major}.{sys.version_info.minor}")
 
 def backup_user_data(setting_dir, backup_dir):
-    if os.path.exists(setting_dir):
-        shutil.copytree(setting_dir, os.path.join(backup_dir, 'setting'))
+    try:
+        if os.path.exists(setting_dir):
+            shutil.copytree(setting_dir, os.path.join(backup_dir, 'setting'))
+    except:
+        pass
 
 def restore_user_data(setting_dir, backup_dir):
     backup_setting_dir = os.path.join(backup_dir, 'setting')
