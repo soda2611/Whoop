@@ -12,6 +12,7 @@ conversation_history = [
                     "Your goal is to help users learn English by providing clear and concise explanations. "
                     "You must follow these rules:\n"
                     "- Always respond in English.\n"
+                    "- Use emojis to make the conversation more engaging.\n"
                     "- Use simple and understandable language when explaining concepts.\n"
                     "- Provide grammar explanations with real-life examples.\n"
                     "- Suggest effective learning methods like flashcards, sentence practice, and memory techniques.\n"
@@ -31,6 +32,9 @@ class chat(MDBoxLayout):
         self.message=""
         self.img_path=None
         self.cwd=os.getcwd()
+        
+        theme_font_styles.append('chat')
+        self.theme_cls.font_styles["chat"] = ["chat", dp(16), False, 0.15]
         
         self.top_bar=MDFloatLayout(size_hint=(1, None), height=dp(70))
         
@@ -52,7 +56,7 @@ class chat(MDBoxLayout):
             icon_left="bruh",
             hint_text="What can I help you?",
             line_color_normal=boxbg,
-            line_color_focus=menubg,
+            line_color_focus=boxbg,
             hint_text_color=[0.75 - i for i in primarycolor],
             hint_text_color_focus=primarycolor,
             text_color_focus=primarycolor,
@@ -62,7 +66,6 @@ class chat(MDBoxLayout):
             pos_hint={'center_y': 0.5},
             height=dp(30),
             multiline=False,
-            on_text_validate=self.send_message
         )
         
         self.text_input.left_icon=MDIconButton(
@@ -95,21 +98,29 @@ class chat(MDBoxLayout):
         self.text_input.add_widget(self.text_input.button)
         self.card.add_widget(self.img_slider)
         self.card.add_widget(self.text_input)
+        self.card.bind(on_release=self.focus)
         self.text_input.input.bind(text=self.on_text)
         self.text_input.left_icon.bind(on_release=self.menu_open)
         
+    def focus(self, instance):
+        self.text_input.input.focus = True
+        
+    def unfocus(self):
+        self.text_input.input.focus = False
+        
     def on_text(self, instance, value):
         self.text_input.button.disabled=False if value.strip()!="" else True
+        self.text_input.input.on_text_validate=self.send_message if value.strip()!="" else self.unfocus
         
-    def send_message(self, instance):
+    def send_message(self):
         box=MDBoxLayout(orientation="vertical", size_hint=(1, None), spacing=dp(10))
         box.bind(minimum_height=box.setter("height"))
         user_message = MDLabel(
-            text=self.text_input.input.text,
+            text=process_readme(self.text_input.input.text),
             halign="left",
             theme_text_color="Custom",
             text_color=primarycolor,
-            font_style="Body1",
+            font_style="chat",
             size_hint=(1, None),
             markup=True,
         )
@@ -120,7 +131,8 @@ class chat(MDBoxLayout):
             radius=[dp(10), dp(10), dp(10), dp(10)], 
             size_hint=(1, None), 
             padding=[dp(10), dp(10), dp(10), dp(10)],
-            spacing=dp(20)
+            spacing=dp(20),
+            md_bg_color=bg
         )
         
         user_image_touchbox=MDCard(size_hint=(None, None), height=dp(90), width=dp(90), padding=[dp(10), dp(10), dp(10), dp(10)])
@@ -154,7 +166,7 @@ class chat(MDBoxLayout):
             halign="left",
             theme_text_color="Custom",
             text_color=primarycolor,
-            font_style="Body1",
+            font_style="chat",
             size_hint=(1, None),
             markup=True,
         )
@@ -165,7 +177,8 @@ class chat(MDBoxLayout):
             radius=[dp(10), dp(10), dp(10), dp(10)], 
             size_hint=(1, None), 
             padding=[dp(10), dp(10), dp(10), dp(10)],
-            spacing=dp(20)
+            spacing=dp(20),
+            md_bg_color=bg
         )
         content.bind(minimum_height=content.setter('height'))
         content.add_widget(MDIcon(icon="creation", pos_hint={"top": 1}))
