@@ -39,7 +39,7 @@ class MyApp(MDApp):
         thirdscreen=ThirdScreen(name='third')
         secondscreen.setting_layout.color_palette_scroll.scroll_to(secondscreen.setting_layout.color_palette_scroll.got_check)
         secondscreen.setting_layout.font_scroll.scroll_to(secondscreen.setting_layout.font_scroll.got_font_check)
-        threading.Thread(target=secondscreen.setting_layout.update_, args=["official", False]).start()
+        if settings["auto_update"]=="True": threading.Thread(target=secondscreen.setting_layout.update_, args=["official", False]).start()
         sm.add_widget(firstscreen)
         sm.add_widget(secondscreen)
         sm.add_widget(thirdscreen)
