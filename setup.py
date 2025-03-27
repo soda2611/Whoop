@@ -3,11 +3,8 @@ import os, zipfile, io, shutil, sys
 print(f"Python {sys.version_info.major}.{sys.version_info.minor}")
 
 def backup_user_data(setting_dir, backup_dir):
-    try:
-        if os.path.exists(setting_dir):
-            shutil.copytree(setting_dir, os.path.join(backup_dir, 'setting'))
-    except:
-        pass
+    if os.path.exists(setting_dir):
+        shutil.copytree(setting_dir, os.path.join(backup_dir, 'setting'))
 
 def restore_user_data(setting_dir, backup_dir):
     backup_setting_dir = os.path.join(backup_dir, 'setting')
@@ -60,7 +57,8 @@ try:
     sod_dir = "Whoop"
     repo_setup_path = os.path.join(repo_dir, "setup.py")
     setting_dir = os.path.join(sod_dir, 'func', 'setting')
-    backup_dir = os.path.expanduser('~/.whoop_backup')
+    try: backup_dir = os.path.expanduser('~/.whoop_backup')
+    except: pass
     static_value=['version', 'released date', 'pattern']
     
     settings=get_data(setting_dir)
