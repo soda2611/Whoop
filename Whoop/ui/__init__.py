@@ -1,14 +1,15 @@
 from func.necessary_function import get_config, check_connection
 from func.data_manager import *
 from kivy.config import Config
+from kivy.metrics import dp
 
 settings=get_config()
 
 try:
     width, height= settings["size"].split()
 
-    Config.set('graphics', 'width', str(width))
-    Config.set('graphics', 'height', str(height))
+    Config.set('graphics', 'width', str(dp(width)))
+    Config.set('graphics', 'height', str(dp(height)))
 except:
     pass
 
@@ -41,7 +42,6 @@ from kivy.core.text import LabelBase
 from kivy.uix.image import Image, AsyncImage
 from kivy.uix.label import Label
 from kivy.uix.layout import Layout
-from kivy.metrics import dp
 from kivy.clock import Clock
 from kivy.core.window import Window
 from kivy.core.clipboard import Clipboard as pyperclip
