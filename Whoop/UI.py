@@ -47,7 +47,7 @@ class MyApp(MDApp):
         return sm
     
     def on_stop(self):
-        ui.settings["size"] = f"{Window.width} {Window.height}"
+        ui.settings["size"] = f"{int(Window.width/dp(1))} {int(Window.height/dp(1))}"
         return super().on_stop()
 
 if __name__ == '__main__':
