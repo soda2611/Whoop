@@ -2,6 +2,7 @@ from ui import *
 from ui.setting.widget.change_palette import change_palette
 from ui.setting.widget.change_fonts import change_fonts
 from ui.setting.widget.update_dialog import update_dialog
+from ui.setting.widget.input_feature import InputFeature
 
 update_thread=None
 
@@ -69,6 +70,8 @@ class setting(MDBoxLayout):
         self.back_button=MDIconButton(icon="arrow-left", theme_icon_color="Custom", icon_color=primarycolor, size_hint=(None, None), pos_hint={"left": 0, "center_y": 0.5})
         self.back_button.bind(on_press=self.back)
         self.scrollview=ScrollView(size_hint=(1,1), do_scroll_x=False)
+        self.input_feature=MDLabel(text="Thiết lập hành vi thanh tìm kiếm", font_style="H6", halign="left", size_hint=(1,None), height=dp(30), pos_hint={"center_x":0.5}, theme_text_color="Custom", text_color=primarycolor)
+        self.input_feature.choose=InputFeature()
         self.personalize=MDBoxLayout(orientation="vertical", size_hint=(1,None), pos_hint={"center_x": 0.5}, spacing=dp(20))
         self.personalize.bind(minimum_height=self.personalize.setter('height'))
         self.scrollview.add_widget(self.personalize)
@@ -84,11 +87,20 @@ class setting(MDBoxLayout):
 
         self.add_widget(self.back_button)
         self.add_widget(self.scrollview)
+        self.personalize.add_widget(self.input_feature)
+        self.personalize.add_widget(self.input_feature.choose)
         self.personalize.add_widget(self.changecolor)
         self.personalize.add_widget(self.color_palette_scroll)
         self.personalize.add_widget(self.change_fonts)
         self.personalize.add_widget(self.font_scroll)
         self.add_widget(self.info)
+        
+    def on_choose(self, instance, *args):
+        print(instance.text)
+        if instance.text=="Tìm kiếm từ":
+            settings["input feature"]="search"
+        else:
+            settings["input feature"]="suggest"
 
     def back(self, instance):
         sm.current = 'first'
