@@ -10,3 +10,4 @@ icon: func/setting/img/Icon.png
 title: Whoop
 uid: none
 auto update: False
+input feature: suggest
