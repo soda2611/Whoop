@@ -1,4 +1,4 @@
-from func.necessary_function import get_config, check_connection
+from func.necessary_function import get_config, check_connection, possible
 from func.data_manager import *
 from kivy.config import Config
 from kivy.metrics import dp
@@ -8,8 +8,8 @@ settings=get_config()
 try:
     width, height= settings["size"].split()
 
-    Config.set('graphics', 'width', str(dp(width)))
-    Config.set('graphics', 'height', str(dp(height)))
+    Config.set('graphics', 'width', str(width))
+    Config.set('graphics', 'height', str(height))
 except:
     pass
 
@@ -31,7 +31,8 @@ from kivymd.uix.screen import MDScreen
 from kivymd.uix.behaviors import TouchBehavior
 from kivymd.uix.menu import MDDropdownMenu
 from kivymd.uix.card import MDCard
-from kivymd.uix.selectioncontrol import MDSwitch
+from kivymd.uix.selectioncontrol import MDCheckbox
+from kivymd.uix.segmentedcontrol import MDSegmentedControl, MDSegmentedControlItem
 from kivymd.uix.progressbar import MDProgressBar
 from kivymd.uix.snackbar.snackbar import MDSnackbar
 from kivymd.uix.fitimage.fitimage import FitImage
