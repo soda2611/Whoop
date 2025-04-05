@@ -4,6 +4,7 @@ from ui.home.widget.add_data import add_data
 from ui.home.widget.recent import *
 from ui.home.widget.content_box import *
 from ui.home.widget.fav_word_list import *
+from ui.home.widget.suggest import *
 
 current_page="home"
 _temp_=[]
@@ -26,6 +27,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.signal=False
         self.search_thread = None
         self.search_event = threading.Event()
+        self.possible_word = []
 
         theme_font_styles.append('main')
         self.theme_cls.font_styles["main"] = ["main", 16, False, 0.15]
@@ -71,6 +73,9 @@ class home(MDBoxLayout, TouchBehavior):
 
         self.resultlabel = MDLabel(text='', font_style="H6", halign='center', valign='middle', size_hint=(1, None), pos_hint={'center_x': 0.5, 'center_y': 0.5}, height=30)
 
+        self.combine_box=MDBoxLayout(orientation='vertical', size_hint=(0.9, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, spacing=dp(10))
+        self.combine_box.suggest_box=MDBoxLayout(orientation='vertical', size_hint=(1, None), height=dp(0), pos_hint={'center_x': 0.5, "center_y": 0.5})
+        self.combine_box.suggest_scroll=suggest([])
         self.text_input=MDRelativeLayout(size_hint=(1, None), height=dp(50), pos_hint={'center_x': 0.5, "center_y": 0.5})
         self.text_input.input=MDTextField(icon_left="magnify", icon_right="bruh", icon_left_color_focus=btn, hint_text="Nhập từ cần tìm", line_color_normal=boxbg, line_color_focus=menubg, hint_text_color=[0.75-i for i in primarycolor], hint_text_color_focus=primarycolor, text_color_focus=primarycolor, fill_color_normal=boxbg, mode="round", size_hint=(1, None), pos_hint={'center_y': 0.5}, height=dp(30), multiline=False, on_text_validate=lambda instance: self.search_button_pressed(instance, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split())))))        
         self.text_input.left_icon=MDIconButton(icon='magnify', theme_icon_color="Custom", disabled_color=btn, disabled=True, size_hint=(None, None), pos_hint={"left": 0, "center_y":0.5})
@@ -155,7 +160,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.resultlabel.bind(texture_size=self.resultlabel.setter('text_size'))
         self.resultlabel.bind(texture_size=self.resultlabel.setter('size'))
 
-        self.box = MDBoxLayout(size_hint=(0.9, None), pos_hint={"center_x":0.5}, height=dp(50))
+        self.box = MDBoxLayout(size_hint=(1, None), pos_hint={"center_x":0.5}, height=dp(50))
 
         self.taskbar=MDCard(md_bg_color=btn, radius=[25, 25, 25, 25], size_hint=(1, None), height=dp(50), pos_hint={"center_x":0.5, "center_y": 0.5})
         self.taskbar.radius=[dp(i) for i in self.taskbar.radius]
@@ -163,6 +168,8 @@ class home(MDBoxLayout, TouchBehavior):
         self.homebutton.bind(on_release=self.home)
         self.menubutton.bind(on_release=self.menu_open)
 
+        self.combine_box.bind(minimum_height=self.combine_box.setter('height'))
+        self.combine_box.suggest_box.bind(minimum_height=self.combine_box.suggest_box.setter('height'))
         self.text_input.input.bind(focus=self.hide_input)
         self.text_input.input.bind(text=self.quick_search)
 
@@ -198,10 +205,12 @@ class home(MDBoxLayout, TouchBehavior):
         self.noname.add_widget(self.scrollview)
         self.scrollview.add_widget(self.homebox)
         self.homebox.add_widget(self.refreshbutton)
-        self.add_widget(self.box)
+        self.add_widget(self.combine_box)
         self.taskbar.add_widget(self.homebutton)
         self.taskbar.add_widget(self.button)
         self.taskbar.add_widget(self.menubutton)
+        self.combine_box.add_widget(self.combine_box.suggest_box)
+        self.combine_box.add_widget(self.box)
         self.box.add_widget(self.taskbar)
         self.synonyms.add_widget(self.synonyms_box)
         self.antonyms.add_widget(self.antonyms_box)
@@ -530,6 +539,14 @@ class home(MDBoxLayout, TouchBehavior):
                 "on_release": lambda x="Setting": self.go_to_page_3(x)
             },
             {
+                "text": "Dịch thuật",
+                "text_color": primarycolor,
+                "trailing_icon": "translate",
+                "theme_trailing_icon_color": "Custom",
+                "trailing_icon_color": primarycolor,
+                "on_release": lambda x=None: self.translate(x)
+            },
+            {
                 "text": "Thêm từ vựng",
                 "text_color": primarycolor,
                 "trailing_icon": "plus-circle",
@@ -617,7 +634,8 @@ class home(MDBoxLayout, TouchBehavior):
     def _show_input_(self, instance):
         global current_page, result
         self.box.clear_widgets()
-        if self.text_input.input.text.split()!=[] and (self.result_box not in self.scrollview.children): 
+        if self.possible_word: self.combine_box.suggest_box.add_widget(self.combine_box.suggest_scroll)
+        if self.text_input.input.text.split()!=[] and (self.result_box not in self.scrollview.children) and self.result_box.children: 
             current_page="search"
             self.progress_box.clear_widgets()
             self.refresh_nav_bar()
@@ -640,6 +658,7 @@ class home(MDBoxLayout, TouchBehavior):
         self.signal=False
 
     def _hide_input_(self, instance, value):
+        self.combine_box.suggest_box.clear_widgets()
         self.box.clear_widgets()
         self.box.add_widget(self.taskbar)
         fade_in_vertical(self.box)
@@ -659,20 +678,31 @@ class home(MDBoxLayout, TouchBehavior):
         self.text=self.text_input.input.text
         
     def delay(self):
-        if not self.search_event.wait(1):  # Wait for 1 second or until the event is set
-            self.search_button_pressed(None, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split()))))
+        if not self.search_event.wait(1): # Wait for 1 second or until the event is set
+            if settings["input feature"]=="suggest":
+                Clock.schedule_once(self.suggest)
+            elif settings["input feature"]=="search":
+                self.search_button_pressed(None, word_detector(spelling_checker_for_SOD(" ".join(self.text_input.input.text.lower().split()))))
 
+    def suggest(self, instance):
+        self.possible_word=possible(self.text_input.input.text.lower().split()[-1])
+        self.combine_box.suggest_box.clear_widgets()
+        self.combine_box.suggest_scroll=suggest(self.possible_word)
+        if self.possible_word:
+            self.combine_box.suggest_box.add_widget(self.combine_box.suggest_scroll)
+        
     def translate(self, instance):
         global current_page
         current_page="translate"
-        self.signal=True
         self.progress_bar.back_color=bg
         self.scrollview.clear_widgets()
         self.scrollview.add_widget(self.translate_result_template)
         self.noname.md_bg_color=bg
         self.remove_nav_bar()
-        self.hide_input(None, True)
-        if self.text_input.input.text.strip()!="":
+        if self.text_input.input.text!="":
+            self.signal=True
+            self.hide_input(None, None)
+        if instance!=None:
             if check_connection():
                 try:
                     self.translate_result_template.src_text.text=self.text_input.input.text
@@ -680,6 +710,8 @@ class home(MDBoxLayout, TouchBehavior):
                     self.alert.open()
             else:
                 self.no_internet_alert.open()
+        else: self.menu.dismiss()
+                
 
     def back(self, instance):
         global _back_
@@ -897,9 +929,10 @@ class home(MDBoxLayout, TouchBehavior):
         sm.current = 'third'
 
     def on_double_tap(self, instance, *args):
-        if self.text_input in self.box.children:    
-            self.text=self.text_input.input.text
-            self.signal=True
-            self.hide_input(instance, False)
-        else:
-            self.show_input(instance)
+        if self.text_input.input.text.strip()!="":
+            if self.text_input in self.box.children:    
+                self.text=self.text_input.input.text
+                self.signal=True
+                self.hide_input(instance, False)
+            else:
+                self.show_input(instance)
