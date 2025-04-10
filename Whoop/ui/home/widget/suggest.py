@@ -1,5 +1,4 @@
 from ui import *
-import ui
 
 class suggest(ScrollView):
     def __init__(self, suggest_list, **kwargs):
@@ -24,3 +23,4 @@ class suggest(ScrollView):
         self.parent.parent.parent.text_input.input.text=" ".join(self.parent.parent.parent.text_input.input.text.split()[:-1]+[i])
         self.parent.parent.parent.text_input.input.focus=True
         self.parent.parent.parent.possible_word=[]
+        self.parent.remove_widget(self)
