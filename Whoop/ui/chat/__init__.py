@@ -45,9 +45,12 @@ class chat(MDBoxLayout):
         
         self.back_button=MDIconButton(icon="arrow-left", theme_icon_color="Custom", icon_color=primarycolor, size_hint=(None, None), pos_hint={"left": 0, "center_y": 0.5})
         self.back_button.bind(on_press=self.back)
+        self.new_chat_button=MDIconButton(icon="pencil-plus", theme_icon_color="Custom", icon_color=primarycolor, size_hint=(None, None), pos_hint={"right": 1, "center_y": 0.5})
+        self.new_chat_button.bind(on_press=self.new_chat)
         self.label = Image(source="func/setting/img/whoop_ai.png", size_hint=(1, None), pos_hint={'center_x': 0.5, "center_y": 0.5}, height=dp(50))
         self.top_bar.add_widget(self.label)
         self.top_bar.add_widget(self.back_button)
+        self.top_bar.add_widget(self.new_chat_button)
         
         self.text_input = MDRelativeLayout(size_hint=(1, None), height=dp(50), pos_hint={'center_x': 0.5, "center_y": 0.5})
         self.text_input.input = MDTextField(
@@ -65,6 +68,7 @@ class chat(MDBoxLayout):
             pos_hint={'center_y': 0.5},
             height=dp(30),
             multiline=False,
+            font_name="func/setting/default_fonts/seguiemj.ttf",
         )
         
         self.text_input.left_icon=MDIconButton(
@@ -115,11 +119,10 @@ class chat(MDBoxLayout):
         box=MDBoxLayout(orientation="vertical", size_hint=(1, None), spacing=dp(10))
         box.bind(minimum_height=box.setter("height"))
         user_message = MDLabel(
-            text=process_readme(self.text_input.input.text),
+            text=process_readme(self.process_text_with_fonts(self.text_input.input.text)),
             halign="left",
             theme_text_color="Custom",
             text_color=primarycolor,
-            font_style="chat",
             size_hint=(1, None),
             markup=True,
         )
@@ -161,7 +164,7 @@ class chat(MDBoxLayout):
         
     def show_message(self, instance):
         bot_message = MDLabel(
-            text=respond,
+            text=self.process_text_with_fonts(respond),
             halign="left",
             theme_text_color="Custom",
             text_color=primarycolor,
@@ -206,6 +209,11 @@ class chat(MDBoxLayout):
         )
         self.menu.open()
         
+    def new_chat(self, instance):
+        global conversation_history
+        self.message_box.clear_widgets()
+        conversation_history = conversation_history[:1]
+        
     def back(self, instance):
         sm.current = 'first'
         
@@ -247,3 +255,32 @@ class chat(MDBoxLayout):
     def select_path(self, path):
         self.exit_manager()
         self.image_selected(path)
+        
+    def process_text_with_fonts(self, text):
+        symbol_font = "func/setting/default_fonts/seguiemj.ttf"
+        emoji_font = "func/setting/default_fonts/seguiemj.ttf"
+        text_font = "func/setting/default_fonts/arial.ttf"
+        
+        processed_text = ""
+        current=None
+        for char in text:
+            if emoji.is_emoji(char):
+                if current!="emoji":
+                    if current is not None: processed_text += "[/font]"
+                    current="emoji"
+                    processed_text += f"[font={emoji_font}]"
+                processed_text+=char
+            elif unicodedata.category(char).startswith("S"):
+                if current!="symbol":
+                    if current is not None: processed_text += "[/font]"
+                    current="symbol"
+                    processed_text += f"[font={symbol_font}]"
+                processed_text+=char
+            else:
+                if current!="text":
+                    if current is not None: processed_text += "[/font]"
+                    current="text"
+                    processed_text += f"[font={text_font}]"
+                processed_text+=char
+        processed_text += "[/font]"
+        return processed_text
