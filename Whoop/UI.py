@@ -25,8 +25,8 @@ class SecondScreen(MDScreen):
 class ThirdScreen(MDScreen):
     def __init__(self, **kwargs):
         super(ThirdScreen, self).__init__(**kwargs)
-        layout=chat()
-        self.add_widget(layout)
+        self.layout=chat()
+        self.add_widget(self.layout)
         self.md_bg_color=bg
 
 class MyApp(MDApp):        
