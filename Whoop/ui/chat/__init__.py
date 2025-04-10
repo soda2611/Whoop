@@ -168,7 +168,6 @@ class chat(MDBoxLayout):
             halign="left",
             theme_text_color="Custom",
             text_color=primarycolor,
-            font_style="chat",
             size_hint=(1, None),
             markup=True,
         )
