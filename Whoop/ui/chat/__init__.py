@@ -119,7 +119,7 @@ class chat(MDBoxLayout):
         box=MDBoxLayout(orientation="vertical", size_hint=(1, None), spacing=dp(10))
         box.bind(minimum_height=box.setter("height"))
         user_message = MDLabel(
-            text=process_readme(self.process_text_with_fonts(self.text_input.input.text)),
+            text=self.process_text_with_fonts(selfprocess_readme(.text_input.input.text)),
             halign="left",
             theme_text_color="Custom",
             text_color=primarycolor,
