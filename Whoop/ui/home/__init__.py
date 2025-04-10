@@ -590,6 +590,14 @@ class home(MDBoxLayout, TouchBehavior):
                 "trailing_icon_color": primarycolor,
             },
             {
+                "text": "Gửi đến Whoop AI",
+                "text_color": primarycolor,
+                "trailing_icon": "creation",
+                "theme_trailing_icon_color": "Custom",
+                "trailing_icon_color": primarycolor,
+                "on_release": self.ai_explain
+            },
+            {
                 "text": "Sao chép",
                 "text_color": primarycolor,
                 "trailing_icon": "content-copy",
@@ -676,6 +684,25 @@ class home(MDBoxLayout, TouchBehavior):
             self.progress_bar.stop()
             self.home(instance)
         self.text=self.text_input.input.text
+        
+    def ai_explain(self):
+        self.menu.dismiss()
+        sm.current = 'third'
+        _=sm.get_screen('third')
+        text=result[list(result.keys())[0]]
+        synonyms=', '.join(text['synonyms']) if text['synonyms'] else None
+        antonyms=', '.join(text['antonyms']) if text['antonyms'] else None
+        _.layout.text_input.input.multiline=True
+        _.layout.text_input.input.text=f"""Explain this:\n
+{text['word'].capitalize()} ({text['type']}):
+
+{text["definition"][:1].upper()+text["definition"][1:]}
+[*]Synonyms: {f'{synonyms}' if synonyms else 'No synonyms'}
+
+[*]Antonyms: {f'{antonyms}' if antonyms else 'No antonyms'}"""
+        _.layout.send_message(None)
+        _.layout.text_input.input.multiline=False
+        pass
         
     def delay(self):
         if not self.search_event.wait(1): # Wait for 1 second or until the event is set
