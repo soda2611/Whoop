@@ -45,7 +45,7 @@ except:
     os.system(f"pip install requests psutil")
     os.system(f"python setup.py")
 else:
-    os.system(f"pip install kivymd==1.2.0 googletrans==4.0.0rc1 eng-to-ipa pyttsx3 gtts psutil md2bbcode")
+    os.system(f"pip install kivymd==1.2.0 googletrans==4.0.0rc1 eng-to-ipa pyttsx3 gtts psutil md2bbcode emoji")
 try:
     repo_url = "https://github.com/soda2611/Whoop/archive/refs/heads/main.zip"
     repo_dir = "Whoop-main"
