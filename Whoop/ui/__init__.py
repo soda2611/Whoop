@@ -201,7 +201,7 @@ class check_button(MDIconButton):
         
 def process_readme(data):
     _=md2bbcode(data)
-    md={"[*]": "◉ ",
+    md={"[*]": "• ",
     "[/quote]": "[/i]'", 
     "[quote]": "'[i]", 
     "[/code]": "", 
