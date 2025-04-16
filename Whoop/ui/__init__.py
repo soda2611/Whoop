@@ -2,6 +2,45 @@ from func.necessary_function import get_config, check_connection, possible
 from func.data_manager import *
 from kivy.config import Config
 from kivy.metrics import dp
+import os
+
+if os.path.exists("func"):
+    required_files=[
+    'data',
+    'setting',
+    'setting/img',
+    'setting/fonts',
+    'setting/default_fonts',
+    'setting/img/pattern',
+    'data/source.txt',
+    'data/tu_dien_nguon.txt',
+    'data/word.txt',
+    'setting/colors.txt',
+    'setting/fav_word_list.txt',
+    'setting/setting.txt',
+    'setting/default_fonts/seguiemj.ttf',
+    'setting/default_fonts/arial.ttf',
+    'setting/fonts/arial.ttf',
+    'setting/fonts/arialbd.ttf',
+    'setting/fonts/calibri.ttf',
+    'setting/fonts/calibrib.ttf',
+    'setting/fonts/segoeuib.ttf',
+    'setting/fonts/SEGUIEMJ.ttf',
+    'setting/fonts/SegUIVar.ttf',
+    'setting/fonts/times.ttf',
+    'setting/fonts/timesbd.ttf',
+    'setting/img/Icon.png',
+    'setting/img/Logo.ico',
+    'setting/img/Logo.png',
+    'setting/img/whoop_ai.png',
+    'setting/img/pattern/pattern00.png',
+    'setting/img/pattern/pattern01.png']
+    
+    for file in required_files:
+        file_path = f"func/{file}"
+        if not os.path.exists(file_path):
+            download_file("Whoop", f"Whoop/{file_path}", file_path)
+
 
 settings=get_config()
 
@@ -13,7 +52,7 @@ try:
 except:
     pass
 
-import emoji, unicodedata, eng_to_ipa, os, random, threading , pyttsx3, subprocess, signal, getpass, sys, datetime, json, shutil
+import emoji, unicodedata, eng_to_ipa, random, threading , pyttsx3, subprocess, signal, getpass, sys, datetime, json, shutil
 from gtts import gTTS
 from kivymd.app import MDApp
 from kivymd.uix.behaviors.magic_behavior import MagicBehavior
