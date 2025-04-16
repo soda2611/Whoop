@@ -10,13 +10,15 @@ def download_file(repo, file_path, name):
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
         contents = response.json()
-        if str(type(contents))!="<class 'list'>":
+        if not isinstance(contents, list):
             download_url = contents["download_url"]
             response = requests.get(download_url)
             with open(name, 'wb') as f:
                 f.write(response.content)
         else:
             for content in contents:
+                if not os.path.exists(name):
+                    os.makedirs(name)
                 download_url = content["download_url"]
                 response = requests.get(download_url)
                 with open(f'{name}/{content["name"]}', 'wb') as f:
