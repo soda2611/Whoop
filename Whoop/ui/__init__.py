@@ -3,7 +3,6 @@ from tkinter import messagebox, filedialog
 
 root = tkinter.Tk()
 root.withdraw()
-root.iconbitmap("func/setting/img/Logo.ico")
 
 try:
     from func.necessary_function import get_config, check_connection, possible
@@ -369,6 +368,7 @@ try:
             del d[key]
         return d
 
+    root.iconbitmap("func/setting/img/Logo.ico")
     bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, engine, word__, source, home__, queried, version, data_, fav_list, fav=config()
     firstscreen=None
     secondscreen=None
