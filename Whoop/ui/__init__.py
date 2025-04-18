@@ -1,9 +1,13 @@
-import os, tkinter, signal
-from tkinter import messagebox, filedialog
+import os, signal
+from kivy.utils import platform
 
-root = tkinter.Tk()
-root.withdraw()
+if platform!="android":
+    import tkinter
+    from tkinter import messagebox, filedialog
 
+    root = tkinter.Tk()
+    root.withdraw()
+    
 try:
     from func.necessary_function import get_config, check_connection, possible
     from func.data_manager import *
@@ -97,7 +101,6 @@ try:
     from functools import partial
     from collections import OrderedDict
     from md2bbcode.main import process_readme as md2bbcode
-    from kivy.utils import platform
     if platform=="android":
         from kivymd.uix.filemanager import MDFileManager
 
@@ -368,14 +371,15 @@ try:
             del d[key]
         return d
 
-    root.iconbitmap("func/setting/img/Logo.ico")
     bg, boxbg, menubg, btn, primarycolor, secondarycolor, colors, recent_search, fonts_name, engine, word__, source, home__, queried, version, data_, fav_list, fav=config()
     firstscreen=None
     secondscreen=None
     sm = MDScreenManager(transition=MDFadeSlideTransition())
+    if platform!="android": root.iconbitmap("func/setting/img/Logo.ico")
 except:
-    if __name__ == "__main__":
-        messagebox.showerror("Lỗi file khởi động", "Đây không phải file khởi động. Vui lòng mở file UI.py trong folder chính của ứng dụng.")
-    else:
-        messagebox.showerror("Lỗi tài nguyên", "Không thể khởi tạo tài nguyên. Vui lòng cài đặt lại ứng dụng.")
-        os.kill(int(os.getpid()), signal.SIGTERM)
+    if platform!="android":
+        if __name__ == "__main__":
+            messagebox.showerror("Lỗi file khởi động", "Đây không phải file khởi động. Vui lòng mở file UI.py trong folder chính của ứng dụng.")
+        else:
+            messagebox.showerror("Lỗi tài nguyên", "Không thể khởi tạo tài nguyên. Vui lòng cài đặt lại ứng dụng.")
+            os.kill(int(os.getpid()), signal.SIGTERM)
