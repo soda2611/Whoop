@@ -1,12 +1,5 @@
 import os, signal
-from kivy.utils import platform
-
-if platform!="android":
-    import tkinter
-    from tkinter import messagebox, filedialog
-
-    root = tkinter.Tk()
-    root.withdraw()
+from kivy.utils import platform`
     
 try:
     from func.necessary_function import get_config, check_connection, possible
@@ -101,8 +94,11 @@ try:
     from functools import partial
     from collections import OrderedDict
     from md2bbcode.main import process_readme as md2bbcode
-    if platform=="android":
-        from kivymd.uix.filemanager import MDFileManager
+    import tkinter
+    from tkinter import messagebox, filedialog
+    
+    root = tkinter.Tk()
+    root.withdraw()
 
     class MDCard(MDCard):
         opacity = NumericProperty(1)
@@ -375,11 +371,10 @@ try:
     firstscreen=None
     secondscreen=None
     sm = MDScreenManager(transition=MDFadeSlideTransition())
-    if platform!="android": root.iconbitmap("func/setting/img/Logo.ico")
+    root.iconbitmap("func/setting/img/Logo.ico")
 except:
-    if platform!="android":
-        if __name__ == "__main__":
-            messagebox.showerror("Lỗi file khởi động", "Đây không phải file khởi động. Vui lòng mở file UI.py trong folder chính của ứng dụng.")
-        else:
-            messagebox.showerror("Lỗi tài nguyên", "Không thể khởi tạo tài nguyên. Vui lòng cài đặt lại ứng dụng.")
-            os.kill(int(os.getpid()), signal.SIGTERM)
+    if __name__ == "__main__":
+        messagebox.showerror("Lỗi file khởi động", "Đây không phải file khởi động. Vui lòng mở file UI.py trong folder chính của ứng dụng.")
+    else:
+        messagebox.showerror("Lỗi tài nguyên", "Không thể khởi tạo tài nguyên. Vui lòng cài đặt lại ứng dụng.")
+        os.kill(int(os.getpid()), signal.SIGTERM)
