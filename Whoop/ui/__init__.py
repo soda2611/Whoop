@@ -1,5 +1,5 @@
 import os, signal
-from kivy.utils import platform`
+from kivy.utils import platform
     
 try:
     from func.necessary_function import get_config, check_connection, possible
