@@ -222,14 +222,9 @@ class chat(MDBoxLayout):
 
     def select_image(self):
         self.menu.dismiss()
-        if platform=="android":
-            self.manager_open = False
-            self.file_manager=MDFileManager(exit_manager=self.exit_manager, select_path=self.select_path, ext=[".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff"], preview=True, background_color_selection_button=btn, background_color_toolbar=btn, icon_color=primarycolor)
-            self.file_manager.show(os.path.expanduser("/storage/emulated/0/Pictures/"))
-        else:
-            folder_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png *.jpg *.jpeg *.gif *.bmp *.tiff")])
-            if folder_path:
-                self.image_selected(folder_path)
+        folder_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png *.jpg *.jpeg *.gif *.bmp *.tiff")])
+        if folder_path:
+            self.image_selected(folder_path)
 
     def image_selected(self, selection):
         os.chdir(self.cwd)
