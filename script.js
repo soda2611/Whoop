@@ -7,8 +7,8 @@ searchInput.addEventListener('keydown', async function(e) {
         const word = searchInput.value.trim().toLowerCase();
         if (!word) return;
 
-        headDiv.innerText = "Đang tìm kiếm...";
-        resultDiv.innerText = "";
+        headDiv.innerText = "";
+        resultDiv.innerText = "Đang tìm kiếm...";
 
         try {
             const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
