@@ -1,0 +1,36 @@
+#topbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: white;
+}
+
+#search-bar {
+    position: absolute;
+    background-color: #e6e6e6;
+    width: 300px;
+    height: 60px;
+    border-radius: 10cm;
+    bottom: 25px;
+    left: calc(50% - 150px);
+    display: flex;
+    align-items: center;
+}
+
+#textfield {
+    position: absolute;
+    left: 50px;
+    width: 220px;
+    height: 15px;
+    border: none;
+    background-color: #e6e6e6;
+    font-family: 'Segoe UI';
+    font-size: 16px;
+}
+
+#textfield:focus {
+    outline: none;
+    border: none;
+}
