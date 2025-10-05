@@ -46,9 +46,24 @@
 
 #display-zone {
     position: relative;
-    width: inherit;
     left: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
+    width: 80%;
+}
+
+#title {
+    position: relative;
+    font-family: 'Segoe UI';
+    font-size: 50px;
+    width: 100%;
+}
+
+#result {
+    position: absolute;
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    height: 40px;
+    width: 100%;
+    top: 100px;
 }

@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-    <div style="position: absolute; width: 100%; height: calc(100% - 180px); top: 90px; left: 0; display: flex; justify-content: center;">
+    <div style="position: absolute; width: 100%; height: calc(100% - 200px); top: 90px; left: 0; display: flex; justify-content: center; overflow: auto">
         <div id="display-zone">
-            <p style="font-family: 'Segoe UI'; font-size: 25px; height: 40px; width: 90%; position: absolute; text-align: center;"><b>Coming soon...</b></p>
+            <h1 id="title"></h1>
+            <p id="result"><b></b></p>
         </div>
     </div>
     <div id="content">
@@ -23,7 +24,7 @@
             <div id="search-bar">
                 <i class="material-icons" style="position: absolute; font-size: 25px; left: 15px; cursor: default;">search</i>
                 <input id="textfield" placeholder="Nhập từ cần tìm">
-                <i class="material-icons" style="position: absolute; font-size: 25px; right: 15px; cursor: pointer;">close</i>
+                <a style="position: absolute; font-size: 25px; right: 15px; cursor: pointer; height: 25px;"><i class="material-icons">close</i></a>
             </div>
         </div>
     </div>
