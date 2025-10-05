@@ -25,7 +25,7 @@ searchInput.addEventListener('keydown', async function(e) {
                     meaning.definitions.forEach(def => {
                         html += `- ${def.definition}<br>`;
                         if (def.example) html += `<span style="color:#0e42d3">• ${def.example}</span><br><br>`;
-                        else html += `<br><br>`
+                        else html += `<br>`
                     });
                     html += `<br><hr><br>`
                 });
