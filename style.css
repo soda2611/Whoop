@@ -47,15 +47,6 @@
     border: none;
 }
 
-#display-zone {
-    position: relative;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    width: 80%;
-    background-color: red;
-}
-
 #title {
     position: relative;
     font-family: 'Segoe UI';
