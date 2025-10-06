@@ -20,6 +20,7 @@ searchInput.addEventListener('keydown', async function(e) {
             let html = "";
             data.forEach(entry => {
                 headDiv.innerText = capitalizeFirst(`${entry.word}`)
+                html += `<span style="font-size: 15px">US: <b>${entry.phonetics[1].text}</b><br>UK: <b>${entry.phonetics[0].text}</b><br><br></span>`
                 entry.meanings.forEach(meaning => {
                     html += `<b>${meaning.partOfSpeech}</b>:<br>`;
                     meaning.definitions.forEach(def => {
