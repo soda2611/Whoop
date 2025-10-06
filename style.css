@@ -73,7 +73,6 @@
     font-family: "Segoe UI", "system-ui";
     color: #ffffff;
     text-align: center;
-    transition: color 0.5s, text-shadow 0.5s;
     position: fixed;
     display: flex;
     align-items: center;
@@ -82,3 +81,4 @@
     height: 40px;
     padding: 15px;
 }
+
