@@ -18,9 +18,12 @@ searchInput.addEventListener('keydown', async function(e) {
             }
             const data = await response.json();
             let html = "";
+            data = data[0];
             data.forEach(entry => {
                 headDiv.innerText = capitalizeFirst(`${entry.word}`)
-                html += `<span style="font-size: 15px">US: <b>${entry.phonetics[1].text}</b><br>UK: <b>${entry.phonetics[0].text}</b><br><br></span>`
+                html += `<span style="font-size: 15px">US: <b>${entry.phonetics[1].text}</b><br></span>`
+                if (entry.phonetics[0].text) html += `<span style="font-size: 15px">US: <b>${entry.phonetics[0].text}</b><br></span>`
+                html += `<br>`
                 entry.meanings.forEach(meaning => {
                     html += `<b>${meaning.partOfSpeech}</b>:<br>`;
                     meaning.definitions.forEach(def => {
