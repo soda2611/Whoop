@@ -1,3 +1,10 @@
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 #logo-container {
     position: fixed;
     display: flex;
@@ -29,6 +36,14 @@
     left: calc(50% - 150px);
     display: flex;
     align-items: center;
+    transition: all 0.5s;
+}
+
+#search-bar:hover {
+    width: 350px;
+    height: 70px;
+    left: calc(50% - 170px);
+    transition: all 0.5s;
 }
 
 #textfield {
@@ -53,6 +68,7 @@
     font-size: 50px;
     width: 100%;
     height: 55px;
+    top: 0px;
 }
 
 #result {
@@ -82,3 +98,12 @@
     padding: 15px;
 }
 
+.fade_in {
+    animation: fade_in 0.5s;
+    animation-timing-function: cubic-bezier();
+}
+
+@keyframes fade_in {
+    from {top: 50%; height:50%; opacity: 0%;};
+    to {top: 0px; height: 100%; opacity: 100%;}
+}

@@ -1,6 +1,7 @@
 const searchInput = document.getElementById('textfield');
 const resultDiv = document.getElementById('result');
-const headDiv = document.getElementById('title')
+const headDiv = document.getElementById('title');
+const displayDiv = document.getElementById('display-zone');
 
 searchInput.addEventListener('keydown', async function(e) {
     if (e.key === 'Enter') {
@@ -35,6 +36,10 @@ searchInput.addEventListener('keydown', async function(e) {
             });
             html = html.slice(0, -12);
             resultDiv.innerHTML = html;
+            displayDiv.classList.add("fade_in");
+            displayDiv.addEventListener("animationend", () => {
+                displayDiv.classList.remove("fade_in");
+            });
         } catch (e) {
             resultDiv.innerText = "Lỗi vô định";
         }
