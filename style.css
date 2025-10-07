@@ -39,13 +39,6 @@ body {
     transition: all 0.5s;
 }
 
-#search-bar:hover {
-    width: 350px;
-    height: 70px;
-    left: calc(50% - 170px);
-    transition: all 0.5s;
-}
-
 #textfield {
     position: absolute;
     left: 50px;
@@ -56,7 +49,6 @@ body {
     font-family: 'Segoe UI';
     font-size: 16px;
 }
-
 #textfield:focus {
     outline: none;
     border: none;
@@ -96,6 +88,7 @@ body {
     gap: 5px;
     height: 40px;
     padding: 15px;
+    transition: all 0.5s;
 }
 
 .fade_in {
