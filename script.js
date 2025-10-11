@@ -27,8 +27,8 @@ searchInput.addEventListener('keydown', async function(e) {
             html += `<br>`;
             entry.meanings.forEach(meaning => {
             html += `<b>${meaning.partOfSpeech}</b>:<br>`;
-            meaning.definitions.forEach(def => {
-                html += `- ${def.definition}<br>`;
+            meaning.definitions.forEach((def, idx) => {
+                html += `${idx + 1}. ${def.definition}<br>`;
                 if (def.example) html += `<span style="color:#0e42d3">• ${def.example}</span><br><br>`;
                 else html += `<br>`;
             });
