@@ -1,11 +1,18 @@
-const searchInput = document.getElementById('textfield');
+const searchbar = document.getElementById('search-bar');
 const resultDiv = document.getElementById('result');
 const headDiv = document.getElementById('title');
 const displayDiv = document.getElementById('display-zone');
 
-searchInput.addEventListener('keydown', async function(e) {
+searchbar.addEventListener('mouseenter', () => {
+    searchbar.innerHTML += `<input id="textfield" placeholder="Nhập từ cần tìm"></input>
+                            <a style="position: absolute; font-size: 25px; right: 15px; cursor: pointer; height: 25px;" onclick="cleartext()"><i class="material-icons">close</i></a>`;
+    
+    const textfield = document.getElementById('textfield');
+    textfield.focus();
+
+    textfield.addEventListener('keydown', async function(e) {
     if (e.key === 'Enter') {
-        const word = searchInput.value.trim().toLowerCase();
+        const word = textfield.value.trim().toLowerCase();
         if (!word) return;
 
         headDiv.innerText = "";
@@ -44,6 +51,12 @@ searchInput.addEventListener('keydown', async function(e) {
             resultDiv.innerText = "Lỗi vô định";
         }
     }
+    });
+});
+
+searchbar.addEventListener('mouseleave', () => {
+    searchbar.innerHTML = '';
+    searchbar.innerHTML += `<i class="material-icons" style="position: absolute; font-size: 25px; left: 18px; cursor: default;">search</i>`;
 });
 
 function capitalizeFirst(str) {
@@ -51,5 +64,5 @@ function capitalizeFirst(str) {
 }
 
 function cleartext(){
-    searchInput.value = "";
+    document.getElementById('textfield').value = "";
 }
