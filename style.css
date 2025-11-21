@@ -64,12 +64,12 @@ body {
     position: absolute;
     left: 50px;
     width: 190px;
-    height: 55px;
+    height: 16px;
     border: none;
     background-color: #e6e6e6;
     color: black;
     font-family: 'Segoe UI';
-    font-size: 16px;
+    font-size: 18px;
     animation-name: wider;
     animation-play-state: running;
     animation-duration: 0.5s;
