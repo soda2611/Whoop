@@ -66,7 +66,7 @@ body {
     width: 190px;
     height: 16px;
     border: none;
-    background-color: #e6e6e6;
+    background-color: #e6e6e600;
     color: black;
     font-family: 'Segoe UI';
     font-size: 18px;
@@ -133,6 +133,6 @@ body {
 }
 
 @keyframes wider {
-    from {width: 0; background-color: #000000; opacity: 0%;};
-    to {width: 190px; background-color: #e6e6e6; opacity: 100%;}
+    from {width: 0; opacity: 0%;};
+    to {width: 190px; opacity: 100%;}
 }
