@@ -118,6 +118,7 @@ body {
 }
 
 .download-button:hover {
+    transform: scale(110%);
     transition: all 0.5s;
 }
 
