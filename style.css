@@ -161,6 +161,18 @@ body {
   opacity: 0;
 }
 
+#progress-overlay {
+  overflow: hidden;
+  position: absolute;
+  width: 80%;
+  height: 5px;
+  bottom: 90px;
+  border-radius: 10cm;
+  align-items: center;
+  z-index: 10;
+  opacity: 0;
+}
+
 #fof-overlay {
   position: absolute;
   width: 100%;
@@ -220,22 +232,32 @@ body {
 }
 
 .loader {
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid black;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  position: relative;
+  width: 200px;
+  height: inherit;
+  background-color: black;
+  border-radius: 10cm;
   animation: spin 2s linear infinite;
   animation-play-state: running;
-  transform: translate(-50%, -50%);
 }
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg);
+    width: 100px;
+    left: -105%;
+  }
+  25% {
+    width: 150px;
+  }
+  50% {
+    width: 275px;
+  }
+  75% {
+    width: 150px;
   }
   100% {
-    transform: rotate(360deg);
+    width: 100px;
+    left: 120%;
   }
 }
 

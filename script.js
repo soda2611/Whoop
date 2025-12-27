@@ -4,6 +4,7 @@ const headDiv = document.getElementById('title');
 const displayDiv = document.getElementById('display-zone');
 const toolbar = document.getElementById('toolbar');
 const loadingOverlay = document.getElementById('loading-overlay');
+const loadingBar = document.getElementById('progress-overlay');
 const fofOverlay = document.getElementById('fof-overlay');
 
 searchbar.addEventListener('mouseenter', () => {
@@ -15,6 +16,7 @@ searchbar.addEventListener('mouseenter', () => {
     textfield.addEventListener('keydown', async function(e) {
         if (e.key === 'Enter') {
         loadingOverlay.style.opacity = '1';
+        loadingBar.style.opacity = '1';
         const word = textfield.value.trim().toLowerCase();
         if (!word) return;
 
@@ -26,6 +28,7 @@ searchbar.addEventListener('mouseenter', () => {
             fofOverlay.style.opacity = '1';
             toolbar.style.opacity = '1';
             loadingOverlay.style.opacity = '0';
+            loadingBar.style.opacity = '0';
             return;
             }
             const data = await response.json();
@@ -58,6 +61,7 @@ searchbar.addEventListener('mouseenter', () => {
         fofOverlay.style.opacity = '0';
         toolbar.style.opacity = '1';
         loadingOverlay.style.opacity = '0';
+        loadingBar.style.opacity = '0';
     }
 });
 });
