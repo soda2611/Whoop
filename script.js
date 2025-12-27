@@ -2,6 +2,7 @@ const searchbar = document.getElementById('search-bar');
 const resultDiv = document.getElementById('result');
 const headDiv = document.getElementById('title');
 const displayDiv = document.getElementById('display-zone');
+const toolbar = document.getElementById('toolbar');
 
 searchbar.addEventListener('mouseenter', () => {
     searchbar.innerHTML += `<input id="textfield" placeholder="Nhập từ cần tìm"></input>
@@ -30,7 +31,7 @@ searchbar.addEventListener('mouseenter', () => {
             if (entry.phonetics[1] && entry.phonetics[1].text)
             html += `<span style="font-size: 15px">US: <b>${entry.phonetics[1].text}</b><br></span>`;
             if (entry.phonetics[0] && entry.phonetics[0].text)
-            html += `<span style="font-size: 15px">US: <b>${entry.phonetics[0].text}</b><br></span>`;
+            html += `<span style="font-size: 15px">UK: <b>${entry.phonetics[0].text}</b><br></span>`;
             html += `<br>`;
             entry.meanings.forEach(meaning => {
             html += `<b>${meaning.partOfSpeech}</b>:<br>`;
@@ -50,6 +51,7 @@ searchbar.addEventListener('mouseenter', () => {
         } catch (e) {
             resultDiv.innerText = "Lỗi vô định";
         }
+        toolbar.style.opacity = '1';
     }
     });
 });
