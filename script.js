@@ -3,6 +3,8 @@ const resultDiv = document.getElementById('result');
 const headDiv = document.getElementById('title');
 const displayDiv = document.getElementById('display-zone');
 const toolbar = document.getElementById('toolbar');
+const loadingOverlay = document.getElementById('loading-overlay');
+const fofOverlay = document.getElementById('fof-overlay');
 
 searchbar.addEventListener('mouseenter', () => {
     searchbar.innerHTML += `<input id="textfield" placeholder="Nhập từ cần tìm"></input>
@@ -10,18 +12,20 @@ searchbar.addEventListener('mouseenter', () => {
     
     const textfield = document.getElementById('textfield');
     textfield.focus();
-
     textfield.addEventListener('keydown', async function(e) {
-    if (e.key === 'Enter') {
+        if (e.key === 'Enter') {
+        loadingOverlay.style.opacity = '1';
         const word = textfield.value.trim().toLowerCase();
         if (!word) return;
 
         headDiv.innerText = "";
-        resultDiv.innerText = "Đang tìm kiếm...";
+        resultDiv.innerText = "";
         try {
             const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
             if (!response.ok) {
-            resultDiv.innerText = "Không tìm thấy từ.";
+            fofOverlay.style.opacity = '1';
+            toolbar.style.opacity = '1';
+            loadingOverlay.style.opacity = '0';
             return;
             }
             const data = await response.json();
@@ -51,9 +55,11 @@ searchbar.addEventListener('mouseenter', () => {
         } catch (e) {
             resultDiv.innerText = "Lỗi vô định";
         }
+        fofOverlay.style.opacity = '0';
         toolbar.style.opacity = '1';
+        loadingOverlay.style.opacity = '0';
     }
-    });
+});
 });
 
 searchbar.addEventListener('mouseleave', () => {
